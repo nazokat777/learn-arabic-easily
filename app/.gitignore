@@ -46,3 +46,5 @@ app.*.map.json
 
 # Rendered PDF pages & book-2 transcription scratch
 app/.qiroat_render/
+.qiroat_render/
+.deploy/

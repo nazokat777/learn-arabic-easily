@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../main.dart';
 import '../content.dart';
 import '../theme.dart';
+import '../widgets/entrance.dart';
 import 'qiroat_drill.dart';
 import 'qiroat_match.dart';
 
@@ -44,7 +45,10 @@ class QiroatBooksHome extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
-            ...bookNums.map((b) => _bookTile(context, b, books[b]!)),
+            ...bookNums.asMap().entries.map((e) => EntranceFade(
+                  delay: Duration(milliseconds: 60 + e.key * 80),
+                  child: _bookTile(context, e.value, books[e.value]!),
+                )),
           ],
         ),
       ),
@@ -124,7 +128,11 @@ class QiroatLessonsList extends StatelessWidget {
           children: [
             _intro(),
             const SizedBox(height: 16),
-            ...lessons.map((l) => _lessonTile(context, l)),
+            ...lessons.asMap().entries.map((e) => EntranceFade(
+                  // ilk ~12 karta ketma-ket, keyingilari birga (uzun quyruq bo'lmasin)
+                  delay: Duration(milliseconds: 40 + (e.key < 12 ? e.key : 12) * 45),
+                  child: _lessonTile(context, e.value),
+                )),
           ],
         ),
       ),
@@ -285,7 +293,8 @@ class QiroatLessonDetail extends StatelessWidget {
       required IconData icon,
       required String label,
       required Widget page}) {
-    return Material(
+    return PressableScale(
+      child: Material(
       color: color,
       borderRadius: BorderRadius.circular(14),
       child: InkWell(
@@ -304,6 +313,7 @@ class QiroatLessonDetail extends StatelessWidget {
             ],
           ),
         ),
+      ),
       ),
     );
   }

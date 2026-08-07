@@ -52,6 +52,12 @@ class _LessonFlowState extends State<LessonFlow> {
       appBar: AppBar(
         title: Text('${widget.lesson.num}-dars'),
         actions: [
+          IconButton(
+            tooltip: 'To\'liq dars (matn + lug\'at)',
+            icon: const Icon(Icons.menu_book_rounded),
+            onPressed: () => Navigator.push(context,
+                MaterialPageRoute(builder: (_) => QiroatLessonDetail(lesson: widget.lesson))),
+          ),
           Center(
             child: Container(
               margin: const EdgeInsets.only(right: 12),
@@ -232,13 +238,20 @@ class _IntroView extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 12),
-        Center(
-          child: TextButton.icon(
+        SizedBox(
+          width: double.infinity,
+          child: OutlinedButton.icon(
             onPressed: () => Navigator.push(context,
                 MaterialPageRoute(builder: (_) => QiroatLessonDetail(lesson: lesson))),
-            icon: const Icon(Icons.article_outlined, size: 18, color: Colors.black45),
-            label: const Text('Kitob ko\'rinishi (matn + lug\'at)',
-                style: TextStyle(color: Colors.black45)),
+            icon: const Icon(Icons.menu_book_rounded, size: 20),
+            label: const Text('To\'liq darsni ko\'rish (matn + lug\'at)',
+                style: TextStyle(fontWeight: FontWeight.w700)),
+            style: OutlinedButton.styleFrom(
+              foregroundColor: AppColors.emerald,
+              side: const BorderSide(color: AppColors.emerald),
+              padding: const EdgeInsets.symmetric(vertical: 14),
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+            ),
           ),
         ),
       ],

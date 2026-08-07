@@ -5,6 +5,7 @@ import '../theme.dart';
 import '../widgets/entrance.dart';
 import 'qiroat_drill.dart';
 import 'qiroat_match.dart';
+import 'lesson/lesson_flow.dart';
 
 /// «Mabdaul qiroat» — kitob tanlash ekrani (1-kitob, 2-kitob, ...).
 class QiroatBooksHome extends StatelessWidget {
@@ -169,7 +170,7 @@ class QiroatLessonsList extends StatelessWidget {
         child: InkWell(
           borderRadius: BorderRadius.circular(18),
           onTap: () => Navigator.push(context,
-              MaterialPageRoute(builder: (_) => QiroatLessonDetail(lesson: l))),
+              MaterialPageRoute(builder: (_) => LessonFlow(lesson: l))),
           child: Padding(
             padding: const EdgeInsets.all(14),
             child: Row(

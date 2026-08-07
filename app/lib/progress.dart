@@ -1,13 +1,20 @@
+import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-/// Foydalanuvchi taraqqiyoti: XP, olov (streak), tugatilgan darslar.
+/// Foydalanuvchi taraqqiyoti: XP, olov (streak), tugatilgan darslar,
+/// va har bir so'z uchun yodlash darajasi.
 /// Mahalliy saqlanadi (shared_preferences) — offline ishlaydi.
 class Progress extends ChangeNotifier {
+  /// So'z «yodlangan» hisoblanishi uchun nechta marta to'g'ri javob kerak.
+  static const int masteryGoal = 5;
+
   int xp = 0;
   int streak = 0;
   String? _lastActiveDay; // 'YYYY-MM-DD'
   final Set<String> _completed = {};
+  // Har bir so'z uchun to'g'ri javoblar soni (0..masteryGoal). Kalit: darsId::arabcha
+  final Map<String, int> _mastery = {};
 
   SharedPreferences? _prefs;
 
@@ -27,8 +34,28 @@ class Progress extends ChangeNotifier {
     streak = _prefs!.getInt('streak') ?? 0;
     _lastActiveDay = _prefs!.getString('lastDay');
     _completed.addAll(_prefs!.getStringList('completed') ?? []);
+    final ms = _prefs!.getString('mastery');
+    if (ms != null) {
+      (json.decode(ms) as Map).forEach((k, v) => _mastery[k as String] = (v as num).toInt());
+    }
     _refreshStreak();
     notifyListeners();
+  }
+
+  /// So'zning yodlash darajasi (0..masteryGoal).
+  int wordMastery(String key) => _mastery[key] ?? 0;
+
+  /// So'z to'liq yodlanganmi (masteryGoal marta to'g'ri).
+  bool isWordLearned(String key) => (_mastery[key] ?? 0) >= masteryGoal;
+
+  /// To'g'ri javobda +1, xatoda -1 (0..masteryGoal orasida). Yangi darajani qaytaradi.
+  Future<int> bumpWord(String key, bool correct) async {
+    final cur = _mastery[key] ?? 0;
+    final next = (correct ? cur + 1 : cur - 1).clamp(0, masteryGoal);
+    _mastery[key] = next;
+    await _save();
+    notifyListeners();
+    return next;
   }
 
   String _today() {
@@ -73,5 +100,6 @@ class Progress extends ChangeNotifier {
     await p.setInt('streak', streak);
     if (_lastActiveDay != null) await p.setString('lastDay', _lastActiveDay!);
     await p.setStringList('completed', _completed.toList());
+    await p.setString('mastery', json.encode(_mastery));
   }
 }

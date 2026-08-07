@@ -3,6 +3,7 @@ import '../main.dart';
 import '../content.dart';
 import '../theme.dart';
 import 'qiroat_drill.dart';
+import 'qiroat_match.dart';
 
 /// «Mabdaul qiroat» — kitob tanlash ekrani (1-kitob, 2-kitob, ...).
 class QiroatBooksHome extends StatelessWidget {
@@ -251,32 +252,57 @@ class QiroatLessonDetail extends StatelessWidget {
             const SizedBox(height: 8),
             ...lesson.vocab.map(_vocabRow),
             const SizedBox(height: 24),
-            // «So'zlarni yodlash» — interaktiv mashq (Duolingo uslubida)
-            Material(
+            const Text('🎮 Mashqlar',
+                style: TextStyle(fontWeight: FontWeight.w800, fontSize: 15, color: AppColors.ink)),
+            const SizedBox(height: 10),
+            // «So'zlarni yodlash» — ko'p variantli mashq (Duolingo uslubida)
+            _exerciseButton(
+              context,
               color: AppColors.gold,
-              borderRadius: BorderRadius.circular(14),
-              child: InkWell(
-                borderRadius: BorderRadius.circular(14),
-                onTap: () => Navigator.push(context,
-                    MaterialPageRoute(builder: (_) => QiroatVocabDrill(lesson: lesson))),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 16),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Icon(Icons.psychology_alt, color: Colors.white),
-                      const SizedBox(width: 10),
-                      Text('So\'zlarni yodlash (${lesson.vocab.length} so\'z)',
-                          style: const TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.w800, fontSize: 16)),
-                    ],
-                  ),
-                ),
-              ),
+              icon: Icons.psychology_alt,
+              label: 'So\'zlarni yodlash (${lesson.vocab.length} so\'z)',
+              page: QiroatVocabDrill(lesson: lesson),
             ),
-            const SizedBox(height: 12),
+            const SizedBox(height: 10),
+            // «Juftlash o'yini» — arabcha↔o'zbekcha moslashtirish
+            _exerciseButton(
+              context,
+              color: AppColors.emerald,
+              icon: Icons.extension,
+              label: 'Juftlash o\'yini',
+              page: QiroatMatchGame(lesson: lesson),
+            ),
+            const SizedBox(height: 16),
             _CompleteButton(lessonId: lesson.completionId),
           ],
+        ),
+      ),
+    );
+  }
+
+  Widget _exerciseButton(BuildContext context,
+      {required Color color,
+      required IconData icon,
+      required String label,
+      required Widget page}) {
+    return Material(
+      color: color,
+      borderRadius: BorderRadius.circular(14),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(14),
+        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => page)),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 16),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(icon, color: Colors.white),
+              const SizedBox(width: 10),
+              Text(label,
+                  style: const TextStyle(
+                      color: Colors.white, fontWeight: FontWeight.w800, fontSize: 16)),
+            ],
+          ),
         ),
       ),
     );

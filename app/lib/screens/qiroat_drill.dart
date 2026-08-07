@@ -2,10 +2,13 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import '../main.dart';
 import '../content.dart';
+import '../progress.dart';
 import '../theme.dart';
 
 /// «So'zlarni yodlash» — Duolingo uslubidagi interaktiv mashq.
-/// Darsning har bir so'zini to'g'ri javob berilgunicha qayta-qayta so'raydi.
+/// So'z YODLANGAN hisoblanishi uchun kamida [Progress.masteryGoal] (5) marta
+/// to'g'ri javob berilishi kerak — bitta to'g'ri javob yetarli emas (tahmin
+/// bilan o'tib ketmasin). Daraja saqlanadi (offline), sessiyalar aro to'planadi.
 class QiroatVocabDrill extends StatefulWidget {
   final QiroatLesson lesson;
   const QiroatVocabDrill({super.key, required this.lesson});
@@ -14,42 +17,42 @@ class QiroatVocabDrill extends StatefulWidget {
   State<QiroatVocabDrill> createState() => _QiroatVocabDrillState();
 }
 
-/// Bitta savol: arabcha so'z ko'rsatiladi, o'zbekcha ma'no tanlanadi;
-/// yoki aksincha (o'zbekcha ko'rsatiladi, arabcha tanlanadi).
 class _Question {
   final QiroatVocab word;
-  final bool arToUz; // true: arabcha berilgan → o'zbekcha tanlanadi
-  final List<String> options; // tanlov variantlari
-  final int correct; // to'g'ri variant indeksi
+  final bool arToUz;
+  final List<String> options;
+  final int correct;
   _Question(this.word, this.arToUz, this.options, this.correct);
 }
 
 class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
   final _rnd = Random();
-  late List<QiroatVocab> _pool; // takrorlanmas so'zlar
-  late List<QiroatVocab> _queue; // hali yodlanmagan so'zlar (navbat)
-  late int _total;
-  int _mastered = 0;
+  late List<QiroatVocab> _pool; // takrorlanmas so'zlar (jami)
+  late List<QiroatVocab> _queue; // shu sessiyada hali yodlanmagan so'zlar
   int _correctStreak = 0;
   int _xpEarned = 0;
 
   _Question? _q;
-  int? _picked; // tanlangan variant
+  int? _picked;
   bool _answered = false;
+
+  String _key(QiroatVocab v) => '${widget.lesson.completionId}::${v.ar}';
 
   @override
   void initState() {
     super.initState();
-    // uz bo'yicha takrorlanmas so'zlarni olamiz (chalg'ituvchi to'g'ri bo'lib qolmasin).
     final seen = <String>{};
     _pool = [];
     for (final v in widget.lesson.vocab) {
       if (v.uz.trim().isEmpty || v.ar.trim().isEmpty) continue;
       if (seen.add(v.uz)) _pool.add(v);
     }
-    _queue = List<QiroatVocab>.from(_pool)..shuffle(_rnd);
-    _total = _queue.length;
+    _buildQueue();
     _next();
+  }
+
+  void _buildQueue() {
+    _queue = _pool.where((v) => !progress.isWordLearned(_key(v))).toList()..shuffle(_rnd);
   }
 
   void _next() {
@@ -58,12 +61,9 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
       return;
     }
     final word = _queue.first;
-    // Yo'nalish: qisqa (bir so'zli) arabcha bo'lsa gohida teskari ham so'raymiz.
     final canReverse = !word.ar.contains('،') && word.ar.characters.length <= 10;
     final arToUz = !canReverse || _rnd.nextBool();
-
     final correctVal = arToUz ? word.uz : word.ar;
-    // Chalg'ituvchilar: bir xil yo'nalishdagi boshqa so'zlardan.
     final distractPool = _pool
         .where((v) => v != word)
         .map((v) => arToUz ? v.uz : v.ar)
@@ -77,55 +77,50 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
     _answered = false;
   }
 
-  void _answer(int i) {
+  Future<void> _answer(int i) async {
     if (_answered) return;
     final correct = i == _q!.correct;
+    final word = _q!.word;
     setState(() {
       _picked = i;
       _answered = true;
-      if (correct) {
-        _correctStreak++;
-        _mastered++;
-        _xpEarned += 2;
-        _queue.removeAt(0); // yodlandi
-      } else {
-        _correctStreak = 0;
-        // xato — so'zni navbat oxiriga qaytaramiz (qayta so'raladi)
-        final w = _queue.removeAt(0);
-        _queue.add(w);
-      }
+      _correctStreak = correct ? _correctStreak + 1 : 0;
     });
-    // Avtomatik keyingi savolga o'tish (tugma bosish shart emas).
-    // To'g'ri javobda tez, xatoda biroz uzunroq (to'g'risini ko'rish uchun).
+    if (correct) {
+      await progress.addXp(2);
+      _xpEarned += 2;
+    }
+    final lvl = await progress.bumpWord(_key(word), correct);
+    // Navbatni yangilaymiz: yodlanmagan so'z oxiriga qaytadi (qayta so'raladi).
+    if (_queue.isNotEmpty) _queue.removeAt(0);
+    if (!(correct && lvl >= Progress.masteryGoal)) _queue.add(word);
+    if (mounted) setState(() {});
     Future.delayed(Duration(milliseconds: correct ? 650 : 1300), () {
-      if (mounted && _answered) _continue();
+      if (mounted && _answered) _advance();
     });
   }
 
-  Future<void> _continue() async {
+  Future<void> _advance() async {
     if (_queue.isEmpty) {
-      // tugadi — XP beramiz va belgilaymiz
-      await progress.addXp(_xpEarned);
       await progress.markCompleted('drill_${widget.lesson.completionId}');
       if (mounted) setState(() => _q = null);
-      return;
+    } else {
+      setState(_next);
     }
-    setState(() => _next());
   }
+
+  int get _learned => _pool.where((v) => progress.isWordLearned(_key(v))).length;
 
   @override
   Widget build(BuildContext context) {
-    final done = _queue.isEmpty;
     return Scaffold(
       appBar: AppBar(title: Text('${widget.lesson.num}-dars — so\'zlarni yodlash')),
-      body: SafeArea(
-        child: done ? _doneView() : _questionView(),
-      ),
+      body: SafeArea(child: _q == null ? _doneView() : _questionView()),
     );
   }
 
-  // --- Tugallash ekrani ---
   Widget _doneView() {
+    final allLearned = _learned >= _pool.length;
     return Center(
       child: Padding(
         padding: const EdgeInsets.all(28),
@@ -137,33 +132,34 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
             const Text('Barakalla!',
                 style: TextStyle(fontSize: 26, fontWeight: FontWeight.w800, color: AppColors.emerald)),
             const SizedBox(height: 8),
-            Text('$_total ta so\'zni yodladingiz. +$_xpEarned XP',
-                textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 16, color: AppColors.ink)),
-            const SizedBox(height: 28),
-            SizedBox(
-              width: double.infinity,
-              child: FilledButton(
-                onPressed: () {
-                  // qayta boshlash
-                  setState(() {
-                    _mastered = 0;
-                    _correctStreak = 0;
-                    _xpEarned = 0;
-                    _queue = List<QiroatVocab>.from(_pool)..shuffle(_rnd);
-                    _next();
-                  });
-                },
-                style: FilledButton.styleFrom(
-                  backgroundColor: AppColors.gold,
-                  padding: const EdgeInsets.symmetric(vertical: 15),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-                ),
-                child: const Text('Yana mashq qilish',
-                    style: TextStyle(fontWeight: FontWeight.w800, fontSize: 16)),
-              ),
+            Text(
+              allLearned
+                  ? 'Bu darsning barcha ${_pool.length} so\'zi yodlandi (har biri ${Progress.masteryGoal} marta)! +$_xpEarned XP'
+                  : 'Zo\'r! +$_xpEarned XP. Yodlangan: $_learned / ${_pool.length} so\'z.',
+              textAlign: TextAlign.center,
+              style: const TextStyle(fontSize: 15, color: AppColors.ink, height: 1.4),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 28),
+            if (!allLearned)
+              SizedBox(
+                width: double.infinity,
+                child: FilledButton(
+                  onPressed: () => setState(() {
+                    _xpEarned = 0;
+                    _correctStreak = 0;
+                    _buildQueue();
+                    _next();
+                  }),
+                  style: FilledButton.styleFrom(
+                    backgroundColor: AppColors.gold,
+                    padding: const EdgeInsets.symmetric(vertical: 15),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                  ),
+                  child: const Text('Davom etish',
+                      style: TextStyle(fontWeight: FontWeight.w800, fontSize: 16)),
+                ),
+              ),
+            if (!allLearned) const SizedBox(height: 10),
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(
@@ -183,13 +179,14 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
     );
   }
 
-  // --- Savol ekrani ---
   Widget _questionView() {
     final q = _q!;
-    final progressValue = _total == 0 ? 0.0 : _mastered / _total;
+    final total = _pool.length;
+    final masterySum = _pool.fold<int>(0, (s, w) => s + progress.wordMastery(_key(w)));
+    final value = total == 0 ? 0.0 : masterySum / (total * Progress.masteryGoal);
+    final wordLvl = progress.wordMastery(_key(q.word));
     return Column(
       children: [
-        // Progress + streak
         Padding(
           padding: const EdgeInsets.fromLTRB(20, 12, 20, 4),
           child: Row(
@@ -198,7 +195,7 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8),
                   child: LinearProgressIndicator(
-                    value: progressValue,
+                    value: value,
                     minHeight: 12,
                     backgroundColor: AppColors.softGreen,
                     valueColor: const AlwaysStoppedAnimation(AppColors.success),
@@ -215,14 +212,17 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Align(
-            alignment: Alignment.centerLeft,
-            child: Text('$_mastered / $_total yodlandi',
-                style: const TextStyle(fontSize: 12, color: Colors.black45)),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text('Yodlangan: $_learned / $total so\'z',
+                  style: const TextStyle(fontSize: 12, color: Colors.black45)),
+              // Shu so'zning yodlash darajasi (nuqtalar): ●●●○○
+              _masteryDots(wordLvl),
+            ],
           ),
         ),
         const Spacer(),
-        // Savol matni
         Text(q.arToUz ? 'Bu so\'z nima degani?' : 'Qaysi so\'z «${q.word.uz}» degani?',
             style: const TextStyle(fontSize: 14, color: Colors.black54)),
         const SizedBox(height: 16),
@@ -247,21 +247,30 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
                       fontSize: 26, fontWeight: FontWeight.w800, color: AppColors.emerald)),
         ),
         const Spacer(),
-        // Variantlar
         Padding(
           padding: const EdgeInsets.fromLTRB(20, 0, 20, 8),
-          child: Column(
-            children: List.generate(q.options.length, (i) => _optionTile(q, i)),
-          ),
+          child: Column(children: List.generate(q.options.length, (i) => _optionTile(q, i))),
         ),
-        // Feedback + davom
         _feedbackBar(q),
       ],
     );
   }
 
+  Widget _masteryDots(int lvl) {
+    return Row(
+      children: List.generate(Progress.masteryGoal, (i) {
+        final on = i < lvl;
+        return Padding(
+          padding: const EdgeInsets.only(left: 3),
+          child: Icon(on ? Icons.circle : Icons.circle_outlined,
+              size: 9, color: on ? AppColors.success : Colors.black26),
+        );
+      }),
+    );
+  }
+
   Widget _optionTile(_Question q, int i) {
-    final isArabic = !q.arToUz; // variantlar arabcha bo'lsa
+    final isArabic = !q.arToUz;
     Color border = Colors.black12;
     Color bg = Colors.white;
     if (_answered) {
@@ -291,8 +300,7 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
             child: isArabic
                 ? Directionality(
                     textDirection: TextDirection.rtl,
-                    child: Text(q.options[i],
-                        style: AppTheme.arabic(size: 24, color: AppColors.ink)),
+                    child: Text(q.options[i], style: AppTheme.arabic(size: 24, color: AppColors.ink)),
                   )
                 : Text(q.options[i],
                     style: const TextStyle(
@@ -304,7 +312,6 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
   }
 
   Widget _feedbackBar(_Question q) {
-    // Tugmasiz — faqat qisqa fikr-mulohaza; keyingi savolga avtomatik o'tadi.
     if (!_answered) return const SizedBox(height: 56);
     final ok = _picked == q.correct;
     return Container(
@@ -315,8 +322,7 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Text(ok ? '✅ To\'g\'ri! +2 XP' : '❌ To\'g\'ri javob: ${q.options[q.correct]}',
           style: TextStyle(
-              fontWeight: FontWeight.w800,
-              color: ok ? AppColors.success : AppColors.coral)),
+              fontWeight: FontWeight.w800, color: ok ? AppColors.success : AppColors.coral)),
     );
   }
 }

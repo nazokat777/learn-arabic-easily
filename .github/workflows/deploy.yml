@@ -31,13 +31,14 @@ jobs:
         run: flutter build web --release
 
       - name: Install Vercel CLI
-        run: npm install -g vercel@latest
+        # Mahalliy sinovda ishlagan aniq versiyaga qadaymiz (latest CI'da qotib qoldi).
+        run: npm install -g vercel@56.3.2
 
       - name: Deploy to Vercel (production)
         working-directory: app/build/web
-        # --archive=tgz: fayllarni tgz arxiv qilib yuklaydi (CI'da tez, bittalab
-        # yuklashda qotib qolmaydi).
-        run: vercel deploy --prod --yes --archive=tgz --token="$VERCEL_TOKEN"
+        # --archive=tgz: fayllarni tgz arxiv qilib yuklaydi (CI'da tez).
+        # < /dev/null: interaktiv so'rovlar bo'lsa ham qotib qolmasin.
+        run: vercel deploy --prod --yes --archive=tgz --token="$VERCEL_TOKEN" < /dev/null
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}

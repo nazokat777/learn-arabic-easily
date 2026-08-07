@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "title": "Arab alifbosi — 28 harf",
+    "source": "Standart arab alifbosi + tajvid махраж (Мабдаул қироат darsliklari)",
+    "note": "Harf holatlari ZWJ (U+200D) orqali shrift bilan shakllantiriladi — 100% aniq."
+  },
+  "letters": [
+    { "id": 1,  "ar": "ا", "name_uz": "Alif",  "name_ar": "أَلِف",  "translit": "a/oo", "makhraj_uz": "Bo'sh havo harfi (madd harfi)", "connectsLeft": false },
+    { "id": 2,  "ar": "ب", "name_uz": "Baa",   "name_ar": "بَاء",   "translit": "b",    "makhraj_uz": "Ikki lab bir-biriga tegib chiqadi", "connectsLeft": true },
+    { "id": 3,  "ar": "ت", "name_uz": "Taa",   "name_ar": "تَاء",   "translit": "t",    "makhraj_uz": "Til uchi yuqori tishlar tagiga tegadi", "connectsLeft": true },
+    { "id": 4,  "ar": "ث", "name_uz": "Saa",   "name_ar": "ثَاء",   "translit": "s (tishli)", "makhraj_uz": "Til uchi ikki old tish uchiga tegadi", "connectsLeft": true },
+    { "id": 5,  "ar": "ج", "name_uz": "Jiim",  "name_ar": "جِيم",   "translit": "j",    "makhraj_uz": "Tilning o'rtasi tanglayga tegadi", "connectsLeft": true },
+    { "id": 6,  "ar": "ح", "name_uz": "Haa",   "name_ar": "حَاء",   "translit": "h (bo'g'iz)", "makhraj_uz": "Halqumning o'rtasidan chiqadi", "connectsLeft": true },
+    { "id": 7,  "ar": "خ", "name_uz": "Xoo",   "name_ar": "خَاء",   "translit": "x",    "makhraj_uz": "Halqumning yuqori (og'izga yaqin) qismidan", "connectsLeft": true },
+    { "id": 8,  "ar": "د", "name_uz": "Daal",  "name_ar": "دَال",   "translit": "d",    "makhraj_uz": "Til uchi yuqori tishlar tagiga tegadi", "connectsLeft": false },
+    { "id": 9,  "ar": "ذ", "name_uz": "Zaal",  "name_ar": "ذَال",   "translit": "z (tishli)", "makhraj_uz": "Til uchi old tishlar uchiga tegadi", "connectsLeft": false },
+    { "id": 10, "ar": "ر", "name_uz": "Roo",   "name_ar": "رَاء",   "translit": "r",    "makhraj_uz": "Til uchi tanglayga yaqin, biroz titraydi", "connectsLeft": false },
+    { "id": 11, "ar": "ز", "name_uz": "Zaay",  "name_ar": "زَاي",   "translit": "z",    "makhraj_uz": "Til uchi pastki tishlar orqasiga yaqin", "connectsLeft": false },
+    { "id": 12, "ar": "س", "name_uz": "Siin",  "name_ar": "سِين",   "translit": "s",    "makhraj_uz": "Til uchi pastki tishlar tagiga, hushtaksimon", "connectsLeft": true },
+    { "id": 13, "ar": "ش", "name_uz": "Shiin", "name_ar": "شِين",   "translit": "sh",   "makhraj_uz": "Tilning o'rtasi tanglayga, havo tarqaladi", "connectsLeft": true },
+    { "id": 14, "ar": "ص", "name_uz": "Sood",  "name_ar": "صَاد",   "translit": "s (yo'g'on)", "makhraj_uz": "Sin makhraji, ammo til yo'g'onlashadi (tafxim)", "connectsLeft": true },
+    { "id": 15, "ar": "ض", "name_uz": "Dood",  "name_ar": "ضَاد",   "translit": "d (yo'g'on)", "makhraj_uz": "Tilning yon tomoni yuqori tishlarga", "connectsLeft": true },
+    { "id": 16, "ar": "ط", "name_uz": "Too",   "name_ar": "طَاء",   "translit": "t (yo'g'on)", "makhraj_uz": "Ta makhraji, til yo'g'onlashib bosiladi", "connectsLeft": true },
+    { "id": 17, "ar": "ظ", "name_uz": "Zoo",   "name_ar": "ظَاء",   "translit": "z (yo'g'on)", "makhraj_uz": "Zaal makhraji, til yo'g'onlashadi (tafxim)", "connectsLeft": true },
+    { "id": 18, "ar": "ع", "name_uz": "Ayn",   "name_ar": "عَيْن",  "translit": "' (bo'g'iz)", "makhraj_uz": "Halqumning o'rtasidan (Ha bilan bir joy)", "connectsLeft": true },
+    { "id": 19, "ar": "غ", "name_uz": "G'ayn", "name_ar": "غَيْن",  "translit": "g'",   "makhraj_uz": "Halqumning yuqori qismidan (Xo bilan)", "connectsLeft": true },
+    { "id": 20, "ar": "ف", "name_uz": "Faa",   "name_ar": "فَاء",   "translit": "f",    "makhraj_uz": "Pastki lab yuqori tishlar uchiga tegadi", "connectsLeft": true },
+    { "id": 21, "ar": "ق", "name_uz": "Qoof",  "name_ar": "قَاف",   "translit": "q",    "makhraj_uz": "Tilning eng orqasi yumshoq tanglayga", "connectsLeft": true },
+    { "id": 22, "ar": "ك", "name_uz": "Kaaf",  "name_ar": "كَاف",   "translit": "k",    "makhraj_uz": "Tilning orqasi (Qofdan biroz oldinroq)", "connectsLeft": true },
+    { "id": 23, "ar": "ل", "name_uz": "Laam",  "name_ar": "لَام",   "translit": "l",    "makhraj_uz": "Til uchi va yon tomoni tanglayga", "connectsLeft": true },
+    { "id": 24, "ar": "م", "name_uz": "Miim",  "name_ar": "مِيم",   "translit": "m",    "makhraj_uz": "Ikki lab yopiladi, burundan g'unna", "connectsLeft": true },
+    { "id": 25, "ar": "ن", "name_uz": "Nuun",  "name_ar": "نُون",   "translit": "n",    "makhraj_uz": "Til uchi tanglayga, burundan g'unna", "connectsLeft": true },
+    { "id": 26, "ar": "ه", "name_uz": "Haa",   "name_ar": "هَاء",   "translit": "h",    "makhraj_uz": "Halqumning eng tubidan (ء bilan)", "connectsLeft": true },
+    { "id": 27, "ar": "و", "name_uz": "Voov",  "name_ar": "وَاو",   "translit": "v/oo", "makhraj_uz": "Ikki lab yumaloqlanadi (madd harfi)", "connectsLeft": false },
+    { "id": 28, "ar": "ي", "name_uz": "Yaa",   "name_ar": "يَاء",   "translit": "y/ii", "makhraj_uz": "Tilning o'rtasi tanglayga (madd harfi)", "connectsLeft": true }
+  ]
+}

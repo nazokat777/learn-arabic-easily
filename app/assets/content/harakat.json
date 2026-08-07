@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "title": "Harakatlar va belgilar",
+    "source": "Standart tajvid (Ҳаракат ва белгилар darsi)"
+  },
+  "harakat": [
+    { "id": 1, "name_uz": "Fatha",  "name_ar": "فَتْحَة",   "sign": "َ", "example_ar": "بَ", "sound_uz": "a",  "desc_uz": "Harf ustidagi qiya chiziq — 'a' tovushini beradi" },
+    { "id": 2, "name_uz": "Kasra",  "name_ar": "كَسْرَة",   "sign": "ِ", "example_ar": "بِ", "sound_uz": "i",  "desc_uz": "Harf ostidagi qiya chiziq — 'i' tovushini beradi" },
+    { "id": 3, "name_uz": "Zamma",  "name_ar": "ضَمَّة",    "sign": "ُ", "example_ar": "بُ", "sound_uz": "u",  "desc_uz": "Harf ustidagi kichik 'voov' — 'u' tovushini beradi" },
+    { "id": 4, "name_uz": "Sukun",  "name_ar": "سُكُون",    "sign": "ْ", "example_ar": "بْ", "sound_uz": "-",  "desc_uz": "Harf ustidagi kichik doira — harakatsizlik, harf jarangsiz" },
+    { "id": 5, "name_uz": "Shadda", "name_ar": "شَدَّة",    "sign": "ّ", "example_ar": "بَّ", "sound_uz": "bb", "desc_uz": "Harf ikki marta o'qiladi (kuchaytiruvchi belgi)" },
+    { "id": 6, "name_uz": "Tanvin fatha", "name_ar": "تَنْوِين فَتْح", "sign": "ً", "example_ar": "بًا", "sound_uz": "an", "desc_uz": "So'z oxirida 'an' tovushi (ikki fatha)" },
+    { "id": 7, "name_uz": "Tanvin kasra", "name_ar": "تَنْوِين كَسْر", "sign": "ٍ", "example_ar": "بٍ", "sound_uz": "in", "desc_uz": "So'z oxirida 'in' tovushi (ikki kasra)" },
+    { "id": 8, "name_uz": "Tanvin zamma", "name_ar": "تَنْوِين ضَمّ", "sign": "ٌ", "example_ar": "بٌ", "sound_uz": "un", "desc_uz": "So'z oxirida 'un' tovushi (ikki zamma)" }
+  ]
+}

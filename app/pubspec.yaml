@@ -1,0 +1,27 @@
+name: learn_arabic
+description: "Arab tilini oson o'rganamiz — o'zbeklar uchun gamifikatsiyalangan arab tili ilovasi."
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.11.5
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  shared_preferences: ^2.3.2
+  google_fonts: ^6.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/content/letters.json
+    - assets/content/harakat.json
+    - assets/content/vocabulary.json
+    - assets/content/qiroat_lessons.json

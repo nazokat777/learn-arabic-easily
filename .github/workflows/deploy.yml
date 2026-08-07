@@ -9,6 +9,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     defaults:
       run:
         working-directory: app
@@ -34,7 +35,9 @@ jobs:
 
       - name: Deploy to Vercel (production)
         working-directory: app/build/web
-        run: vercel deploy --prod --yes --token="$VERCEL_TOKEN"
+        # --archive=tgz: fayllarni tgz arxiv qilib yuklaydi (CI'da tez, bittalab
+        # yuklashda qotib qolmaydi).
+        run: vercel deploy --prod --yes --archive=tgz --token="$VERCEL_TOKEN"
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../main.dart';
 import '../content.dart';
 import '../theme.dart';
+import 'qiroat_drill.dart';
 
 /// «Mabdaul qiroat» — kitob tanlash ekrani (1-kitob, 2-kitob, ...).
 class QiroatBooksHome extends StatelessWidget {
@@ -250,6 +251,30 @@ class QiroatLessonDetail extends StatelessWidget {
             const SizedBox(height: 8),
             ...lesson.vocab.map(_vocabRow),
             const SizedBox(height: 24),
+            // «So'zlarni yodlash» — interaktiv mashq (Duolingo uslubida)
+            Material(
+              color: AppColors.gold,
+              borderRadius: BorderRadius.circular(14),
+              child: InkWell(
+                borderRadius: BorderRadius.circular(14),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => QiroatVocabDrill(lesson: lesson))),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Icon(Icons.psychology_alt, color: Colors.white),
+                      const SizedBox(width: 10),
+                      Text('So\'zlarni yodlash (${lesson.vocab.length} so\'z)',
+                          style: const TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.w800, fontSize: 16)),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 12),
             _CompleteButton(lessonId: lesson.completionId),
           ],
         ),

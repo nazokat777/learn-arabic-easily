@@ -39,10 +39,15 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
 
   void _choose(int i) {
     if (_answered) return;
+    final correct = i == _q.correct;
     setState(() {
       _selected = i;
       _answered = true;
-      if (i == _q.correct) _correctCount++;
+      if (correct) _correctCount++;
+    });
+    // Avtomatik keyingi savolga o'tish — tugma bosish shart emas.
+    Future.delayed(Duration(milliseconds: correct ? 650 : 1300), () {
+      if (mounted && _answered) _next();
     });
   }
 
@@ -125,20 +130,19 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
             const SizedBox(height: 24),
             ...List.generate(_q.options.length, (i) => _option(i)),
             const Spacer(),
-            if (_answered)
-              SizedBox(
-                width: double.infinity,
-                child: FilledButton(
-                  style: FilledButton.styleFrom(
-                    backgroundColor: AppColors.emerald,
-                    padding: const EdgeInsets.symmetric(vertical: 16),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-                  ),
-                  onPressed: _next,
-                  child: Text(_index < widget.questions.length - 1 ? 'Keyingi' : 'Yakunlash',
-                      style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w800)),
-                ),
-              ),
+            // Tugmasiz — javobdan so'ng qisqa fikr, keyin avtomatik keyingi savol.
+            SizedBox(
+              height: 32,
+              child: _answered
+                  ? Text(
+                      _selected == _q.correct ? '✅ To\'g\'ri!' : '❌ To\'g\'ri javob belgilandi',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w800,
+                          fontSize: 16,
+                          color: _selected == _q.correct ? AppColors.success : AppColors.coral),
+                    )
+                  : null,
+            ),
           ],
         ),
       ),

@@ -64,12 +64,12 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: 12),
               ModuleCard(
                 title: 'Mabdaul qiroat',
-                subtitle: 'O\'qish asosi (1-kitob) — 52 dars, to\'liq',
+                subtitle: 'O\'qish asosi — 1 va 2-kitob',
                 arabic: 'اِقْرَأْ',
                 color: AppColors.emerald,
                 enabled: true,
                 onTap: () => Navigator.push(context,
-                    MaterialPageRoute(builder: (_) => const QiroatLessonsList())),
+                    MaterialPageRoute(builder: (_) => const QiroatBooksHome())),
               ),
               const SizedBox(height: 12),
               ModuleCard(

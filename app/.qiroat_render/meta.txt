@@ -1,0 +1,5 @@
+{
+  "title": "Mabdaul qiroat — 1-kitob",
+  "source": "«Мабдаул қироа» (Ўқиш асоси), 1-қисм. Нашрга: Анвар Аҳмад, arabic.uz, Тошкент 2014.",
+  "note": "Arabcha matn kitob rasmlaridan aniq ko'chirildi (harakatlari bilan). Har dars: o'qish matni + lug'at."
+}

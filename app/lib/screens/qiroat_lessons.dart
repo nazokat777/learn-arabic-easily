@@ -3,15 +3,118 @@ import '../main.dart';
 import '../content.dart';
 import '../theme.dart';
 
-/// «Mabdaul qiroat» — darslar ro'yxati (1-kitob: Dars 1..N).
-class QiroatLessonsList extends StatelessWidget {
-  const QiroatLessonsList({super.key});
+/// «Mabdaul qiroat» — kitob tanlash ekrani (1-kitob, 2-kitob, ...).
+class QiroatBooksHome extends StatelessWidget {
+  const QiroatBooksHome({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final lessons = repo.qiroatLessons;
+    // Mavjud kitoblarni aniqlaymiz (dars soni bilan).
+    final books = <int, int>{}; // kitob -> darslar soni
+    for (final l in repo.qiroatLessons) {
+      books[l.book] = (books[l.book] ?? 0) + 1;
+    }
+    final bookNums = books.keys.toList()..sort();
     return Scaffold(
       appBar: AppBar(title: const Text('Mabdaul qiroat')),
+      body: AnimatedBuilder(
+        animation: progress,
+        builder: (context, _) => ListView(
+          padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
+          children: [
+            Container(
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: AppColors.softGreen,
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: Row(
+                children: [
+                  Text('اِقْرَأْ', style: AppTheme.arabic(size: 32, color: AppColors.emerald)),
+                  const SizedBox(width: 14),
+                  const Expanded(
+                    child: Text(
+                      '«Mabdaul qiroa» (o\'qish asosi). Kitobni tanlang.',
+                      style: TextStyle(color: AppColors.ink, height: 1.35),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 16),
+            ...bookNums.map((b) => _bookTile(context, b, books[b]!)),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _bookTile(BuildContext context, int book, int count) {
+    // Kitobdagi tugatilgan darslar soni.
+    final done = repo.qiroatLessons
+        .where((l) => l.book == book && progress.isCompleted(l.completionId))
+        .length;
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 12),
+      child: Material(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(18),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(18),
+          onTap: () => Navigator.push(context,
+              MaterialPageRoute(builder: (_) => QiroatLessonsList(book: book))),
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Row(
+              children: [
+                Container(
+                  width: 56,
+                  height: 56,
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                        colors: [AppColors.emerald, AppColors.emeraldDark]),
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Center(
+                    child: Text('$book',
+                        style: const TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.w800, fontSize: 26)),
+                  ),
+                ),
+                const SizedBox(width: 14),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('$book-kitob',
+                          style: const TextStyle(
+                              fontWeight: FontWeight.w800, fontSize: 17, color: AppColors.ink)),
+                      const SizedBox(height: 4),
+                      Text('$count dars · $done tugatildi',
+                          style: const TextStyle(color: Colors.black54, fontSize: 13)),
+                    ],
+                  ),
+                ),
+                const Icon(Icons.chevron_right, color: AppColors.emerald),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// «Mabdaul qiroat» — bitta kitobning darslar ro'yxati (Dars 1..N).
+class QiroatLessonsList extends StatelessWidget {
+  final int book;
+  const QiroatLessonsList({super.key, this.book = 1});
+
+  @override
+  Widget build(BuildContext context) {
+    final lessons = repo.qiroatLessons.where((l) => l.book == book).toList();
+    return Scaffold(
+      appBar: AppBar(title: Text('$book-kitob')),
       body: AnimatedBuilder(
         animation: progress,
         builder: (context, _) => ListView(
@@ -36,10 +139,10 @@ class QiroatLessonsList extends StatelessWidget {
           children: [
             Text('اِقْرَأْ', style: AppTheme.arabic(size: 32, color: AppColors.emerald)),
             const SizedBox(width: 14),
-            const Expanded(
+            Expanded(
               child: Text(
-                '«Mabdaul qiroa» (o\'qish asosi) — 1-kitob. Har bir darsda o\'qish matni va lug\'at bor.',
-                style: TextStyle(color: AppColors.ink, height: 1.35),
+                '«Mabdaul qiroa» $book-kitob. Har bir darsda o\'qish matni va lug\'at bor.',
+                style: const TextStyle(color: AppColors.ink, height: 1.35),
               ),
             ),
           ],
@@ -47,7 +150,7 @@ class QiroatLessonsList extends StatelessWidget {
       );
 
   Widget _lessonTile(BuildContext context, QiroatLesson l) {
-    final done = progress.isCompleted('qiroat_${l.num}');
+    final done = progress.isCompleted(l.completionId);
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
       child: Material(
@@ -147,7 +250,7 @@ class QiroatLessonDetail extends StatelessWidget {
             const SizedBox(height: 8),
             ...lesson.vocab.map(_vocabRow),
             const SizedBox(height: 24),
-            _CompleteButton(lessonId: 'qiroat_${lesson.num}'),
+            _CompleteButton(lessonId: lesson.completionId),
           ],
         ),
       ),

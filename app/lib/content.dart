@@ -110,19 +110,25 @@ class QiroatVocab {
 
 /// «Mabdaul qiroat» kitobining bitta darsi: o'qish matni + lug'at.
 class QiroatLesson {
+  final int book; // qaysi kitob (1, 2, 3)
   final int num;
   final String titleAr;
   final String reading;
   final List<QiroatVocab> vocab;
 
   const QiroatLesson({
+    required this.book,
     required this.num,
     required this.titleAr,
     required this.reading,
     required this.vocab,
   });
 
+  /// Dars tugatilganini belgilash uchun noyob id (kitob + dars).
+  String get completionId => book == 1 ? 'qiroat_$num' : 'qiroat_b${book}_$num';
+
   factory QiroatLesson.fromJson(Map<String, dynamic> j) => QiroatLesson(
+        book: j['book'] ?? 1,
         num: j['num'],
         titleAr: j['titleAr'],
         reading: j['reading'],

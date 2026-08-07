@@ -33,6 +33,16 @@ class AppTheme {
         foregroundColor: AppColors.ink,
         centerTitle: true,
       ),
+      // Barcha sahifa o'tishlari uchun zamonaviy, silliq zoom-fade (Material 3).
+      pageTransitionsTheme: const PageTransitionsTheme(
+        builders: {
+          TargetPlatform.android: ZoomPageTransitionsBuilder(),
+          TargetPlatform.iOS: ZoomPageTransitionsBuilder(),
+          TargetPlatform.macOS: ZoomPageTransitionsBuilder(),
+          TargetPlatform.windows: ZoomPageTransitionsBuilder(),
+          TargetPlatform.linux: ZoomPageTransitionsBuilder(),
+        },
+      ),
     );
   }
 

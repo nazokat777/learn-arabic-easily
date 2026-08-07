@@ -5,6 +5,7 @@ import 'theme.dart';
 import 'screens/alifbo_home.dart';
 import 'screens/qiroat_lessons.dart';
 import 'screens/mashqlar_home.dart';
+import 'widgets/entrance.dart';
 
 late final ContentRepository repo;
 late final Progress progress;
@@ -44,60 +45,78 @@ class HomeScreen extends StatelessWidget {
           builder: (context, _) => ListView(
             padding: const EdgeInsets.fromLTRB(20, 16, 20, 32),
             children: [
-              const _Header(),
+              const EntranceFade(child: _Header()),
               const SizedBox(height: 20),
-              const XpPanel(),
+              const EntranceFade(delay: Duration(milliseconds: 60), child: XpPanel()),
               const SizedBox(height: 24),
-              Text('Bo\'limlar',
-                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                      fontWeight: FontWeight.w800, color: AppColors.ink)),
-              const SizedBox(height: 12),
-              ModuleCard(
-                title: 'Alifbo (Harflar)',
-                subtitle: 'Harf va talaffuz: 28 harf, махраж, harakatlar',
-                arabic: 'أ ب ت',
-                color: AppColors.emerald,
-                enabled: true,
-                onTap: () => Navigator.push(context,
-                    MaterialPageRoute(builder: (_) => const AlifboHome())),
+              EntranceFade(
+                delay: const Duration(milliseconds: 120),
+                child: Text('Bo\'limlar',
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                        fontWeight: FontWeight.w800, color: AppColors.ink)),
               ),
               const SizedBox(height: 12),
-              ModuleCard(
-                title: 'Mabdaul qiroat',
-                subtitle: 'O\'qish asosi — 1 va 2-kitob',
-                arabic: 'اِقْرَأْ',
-                color: AppColors.emerald,
-                enabled: true,
-                onTap: () => Navigator.push(context,
-                    MaterialPageRoute(builder: (_) => const QiroatBooksHome())),
+              EntranceFade(
+                delay: const Duration(milliseconds: 180),
+                child: ModuleCard(
+                  title: 'Alifbo (Harflar)',
+                  subtitle: 'Harf va talaffuz: 28 harf, махраж, harakatlar',
+                  arabic: 'أ ب ت',
+                  color: AppColors.emerald,
+                  enabled: true,
+                  onTap: () => Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => const AlifboHome())),
+                ),
               ),
               const SizedBox(height: 12),
-              ModuleCard(
-                title: 'Mashqlar',
-                subtitle: 'Lug\'at testi va so\'z yasash o\'yini',
-                arabic: 'تَمَارِين',
-                color: AppColors.gold,
-                enabled: true,
-                onTap: () => Navigator.push(context,
-                    MaterialPageRoute(builder: (_) => const MashqlarHome())),
+              EntranceFade(
+                delay: const Duration(milliseconds: 240),
+                child: ModuleCard(
+                  title: 'Mabdaul qiroat',
+                  subtitle: 'O\'qish asosi — 1 va 2-kitob',
+                  arabic: 'اِقْرَأْ',
+                  color: AppColors.emerald,
+                  enabled: true,
+                  onTap: () => Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => const QiroatBooksHome())),
+                ),
               ),
               const SizedBox(height: 12),
-              ModuleCard(
-                title: 'Sarf',
-                subtitle: 'So\'z tuzilishi — vazn, tasrif, fe\'l boblari',
-                arabic: 'صَرْف',
-                color: AppColors.gold,
-                enabled: false,
-                onTap: () {},
+              EntranceFade(
+                delay: const Duration(milliseconds: 300),
+                child: ModuleCard(
+                  title: 'Mashqlar',
+                  subtitle: 'Lug\'at testi va so\'z yasash o\'yini',
+                  arabic: 'تَمَارِين',
+                  color: AppColors.gold,
+                  enabled: true,
+                  onTap: () => Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => const MashqlarHome())),
+                ),
               ),
               const SizedBox(height: 12),
-              ModuleCard(
-                title: 'Nahv',
-                subtitle: 'Jumla tuzilishi — i\'rob, amil-ma\'mul',
-                arabic: 'نَحْو',
-                color: AppColors.coral,
-                enabled: false,
-                onTap: () {},
+              EntranceFade(
+                delay: const Duration(milliseconds: 360),
+                child: ModuleCard(
+                  title: 'Sarf',
+                  subtitle: 'So\'z tuzilishi — vazn, tasrif, fe\'l boblari',
+                  arabic: 'صَرْف',
+                  color: AppColors.gold,
+                  enabled: false,
+                  onTap: () {},
+                ),
+              ),
+              const SizedBox(height: 12),
+              EntranceFade(
+                delay: const Duration(milliseconds: 420),
+                child: ModuleCard(
+                  title: 'Nahv',
+                  subtitle: 'Jumla tuzilishi — i\'rob, amil-ma\'mul',
+                  arabic: 'نَحْو',
+                  color: AppColors.coral,
+                  enabled: false,
+                  onTap: () {},
+                ),
               ),
             ],
           ),
@@ -232,7 +251,8 @@ class ModuleCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Opacity(
       opacity: enabled ? 1 : 0.55,
-      child: Material(
+      child: PressableScale(
+        child: Material(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
         child: InkWell(
@@ -277,6 +297,7 @@ class ModuleCard extends StatelessWidget {
             ),
           ),
         ),
+      ),
       ),
     );
   }

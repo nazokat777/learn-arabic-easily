@@ -29,6 +29,7 @@ class VocabTest extends StatelessWidget {
         ),
         options: options,
         correct: options.indexOf(w.uz),
+        speak: w.ar,
       );
     }).toList();
 

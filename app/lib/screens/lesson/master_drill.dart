@@ -43,6 +43,7 @@ class _MasterDrillState extends State<MasterDrill> {
   int _correct = 0;
   int? _picked;
   bool _answered = false;
+  bool _dk = false; // «Bilmadim» bosildimi (jazolamaymiz, o'rgatamiz)
 
   // Tartiblash (harflar/gap) holati
   List<String> _tiles = [];
@@ -137,6 +138,7 @@ class _MasterDrillState extends State<MasterDrill> {
     _mode = _nextMode(v);
     _picked = null;
     _answered = false;
+    _dk = false;
     _arrangeOk = null;
     _built.clear();
     if (_mode <= 3) {
@@ -216,6 +218,29 @@ class _MasterDrillState extends State<MasterDrill> {
     }
     await progress.markMode(_key(v), _mode, ok);
     await _afterAnswer(v, ok);
+  }
+
+  /// «Bilmadim» — to'g'ri javobni ko'rsatamiz, audio o'qiymiz, o'rgatamiz.
+  /// Bu usul «bajarilmagan» qoladi, so'z keyin yana keladi (jazolamaymiz).
+  Future<void> _dontKnow() async {
+    final v = _word!;
+    if (_mode <= 3) {
+      if (_answered) return;
+      setState(() {
+        _picked = null;
+        _answered = true;
+        _dk = true;
+      });
+    } else {
+      if (_arrangeOk != null) return;
+      setState(() {
+        _arrangeOk = false;
+        _dk = true;
+      });
+    }
+    Tts.instance.speak(_head(v), id: 'q');
+    await progress.markMode(_key(v), _mode, false);
+    await _afterAnswer(v, false);
   }
 
   Future<void> _afterAnswer(QiroatVocab v, bool ok) async {
@@ -682,26 +707,40 @@ class _MasterDrillState extends State<MasterDrill> {
       );
 
   Widget _feedbackBar() {
-    final show = _answered || _arrangeOk != null;
-    if (!show) return const SizedBox(height: 58);
-    final v = _word!;
-    final ok = _mode <= 3 ? _picked == _correct : (_arrangeOk ?? false);
+    final answered = _answered || _arrangeOk != null;
+    final v = _word;
+    if (!answered) {
+      // Javobdan oldin — «Bilmadim» tugmasi (bilmaganni o'rgatamiz).
+      return Container(
+        width: double.infinity,
+        height: 58,
+        alignment: Alignment.center,
+        child: TextButton.icon(
+          onPressed: _dontKnow,
+          icon: const Text('🤔', style: TextStyle(fontSize: 18)),
+          label: const Text('Bilmadim — javobni ko\'rsat',
+              style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w700)),
+        ),
+      );
+    }
+    if (v == null) return const SizedBox(height: 58);
+    final ok = !_dk && (_mode <= 3 ? _picked == _correct : (_arrangeOk ?? false));
+    final answer = _mode <= 3 ? _options[_correct] : _target.join(_mode == 5 ? ' ' : '');
+    final color = _dk ? AppColors.gold : (ok ? AppColors.success : AppColors.coral);
+    final msg = _dk
+        ? '📖 To\'g\'ri javob: $answer — yodlang'
+        : ok
+            ? (_mastered(v) ? '🏆 «${_head(v)}» to\'liq yodlandi!' : '✅ To\'g\'ri!')
+            : '❌ To\'g\'ri javob: $answer';
     return Container(
       width: double.infinity,
       constraints: const BoxConstraints(minHeight: 58),
       alignment: Alignment.centerLeft,
-      color: (ok ? AppColors.success : AppColors.coral).withValues(alpha: 0.12),
+      color: color.withValues(alpha: 0.12),
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
       child: Row(
         children: [
-          Expanded(
-            child: Text(
-              ok
-                  ? (_mastered(v) ? '🏆 «${_head(v)}» to\'liq yodlandi!' : '✅ To\'g\'ri!')
-                  : '❌ To\'g\'ri javob: ${_mode <= 3 ? _options[_correct] : _target.join(_mode == 5 ? ' ' : '')}',
-              style: TextStyle(fontWeight: FontWeight.w800, color: ok ? AppColors.success : AppColors.coral),
-            ),
-          ),
+          Expanded(child: Text(msg, style: TextStyle(fontWeight: FontWeight.w800, color: color))),
           IconButton(
             onPressed: () => showWordSheet(context, v, reading: widget.lesson.reading),
             icon: const Icon(Icons.info_outline, color: AppColors.emerald),

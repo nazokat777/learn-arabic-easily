@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../main.dart';
 import '../theme.dart';
+import '../services/tts.dart';
 
 /// Bitta test savoli.
 class Question {
@@ -8,7 +9,14 @@ class Question {
   final String promptLabel; // savol ustidagi ko'rsatma
   final List<String> options; // javob variantlari (matn)
   final int correct; // to'g'ri javob indeksi
-  Question({required this.prompt, required this.promptLabel, required this.options, required this.correct});
+  final String? speak; // ixtiyoriy: audio uchun arabcha matn
+  Question({
+    required this.prompt,
+    required this.promptLabel,
+    required this.options,
+    required this.correct,
+    this.speak,
+  });
 }
 
 /// Ko'p variantli interaktiv test — feedback, XP va yakuniy natija bilan.
@@ -45,8 +53,24 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
       _answered = true;
       if (correct) _correctCount++;
     });
+    // To'g'ri talaffuzni eshittiramiz.
+    if (_q.speak != null) Tts.instance.speak(_q.speak!, id: 'q');
     // Avtomatik keyingi savolga o'tish — tugma bosish shart emas.
-    Future.delayed(Duration(milliseconds: correct ? 650 : 1300), () {
+    Future.delayed(Duration(milliseconds: correct ? 700 : 1500), () {
+      if (mounted && _answered) _next();
+    });
+  }
+
+  /// «Bilmadim» — bilmagan odamni jazolamaymiz, balki O'RGATAMIZ:
+  /// to'g'ri javobni ko'rsatamiz, audio o'qiymiz, keyin sekinroq o'tamiz.
+  void _dontKnow() {
+    if (_answered) return;
+    setState(() {
+      _selected = null; // hech bir variant xato deb belgilanmaydi
+      _answered = true;
+    });
+    if (_q.speak != null) Tts.instance.speak(_q.speak!, id: 'q');
+    Future.delayed(const Duration(milliseconds: 2100), () {
       if (mounted && _answered) _next();
     });
   }
@@ -127,26 +151,46 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
               ),
               child: Center(child: _q.prompt),
             ),
-            const SizedBox(height: 24),
+            if (_q.speak != null) ...[
+              const SizedBox(height: 10),
+              _ListenButton(text: _q.speak!),
+            ],
+            const SizedBox(height: 20),
             ...List.generate(_q.options.length, (i) => _option(i)),
             const Spacer(),
-            // Tugmasiz — javobdan so'ng qisqa fikr, keyin avtomatik keyingi savol.
+            // Javobdan oldin — «Bilmadim»; javobdan keyin — qisqa fikr.
             SizedBox(
-              height: 32,
-              child: _answered
-                  ? Text(
-                      _selected == _q.correct ? '✅ To\'g\'ri!' : '❌ To\'g\'ri javob belgilandi',
-                      style: TextStyle(
-                          fontWeight: FontWeight.w800,
-                          fontSize: 16,
-                          color: _selected == _q.correct ? AppColors.success : AppColors.coral),
-                    )
-                  : null,
+              height: 48,
+              child: _answered ? _feedback() : _dontKnowButton(),
             ),
           ],
         ),
       ),
     );
+  }
+
+  Widget _dontKnowButton() => OutlinedButton.icon(
+        onPressed: _dontKnow,
+        icon: const Text('🤔', style: TextStyle(fontSize: 18)),
+        label: const Text('Bilmadim — javobni ko\'rsat',
+            style: TextStyle(fontWeight: FontWeight.w700)),
+        style: OutlinedButton.styleFrom(
+          foregroundColor: AppColors.gold,
+          side: const BorderSide(color: AppColors.gold),
+          padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+        ),
+      );
+
+  Widget _feedback() {
+    if (_selected == null) {
+      return const Text('📖 Mana to\'g\'ri javob — yodlab oling',
+          style: TextStyle(fontWeight: FontWeight.w800, fontSize: 15, color: AppColors.gold));
+    }
+    final ok = _selected == _q.correct;
+    return Text(ok ? '✅ To\'g\'ri!' : '❌ To\'g\'ri javob belgilandi',
+        style: TextStyle(
+            fontWeight: FontWeight.w800, fontSize: 16, color: ok ? AppColors.success : AppColors.coral));
   }
 
   Widget _option(int i) {
@@ -190,6 +234,26 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
           ),
         ),
       ),
+    );
+  }
+}
+
+/// Kichik «Eshitish» tugmasi — arabcha so'zni ovoz bilan o'qiydi.
+class _ListenButton extends StatelessWidget {
+  final String text;
+  const _ListenButton({required this.text});
+  @override
+  Widget build(BuildContext context) {
+    return ValueListenableBuilder<String?>(
+      valueListenable: Tts.instance.speakingId,
+      builder: (context, s, _) {
+        final on = s == text || s == 'q';
+        return TextButton.icon(
+          onPressed: () => Tts.instance.speak(text, id: text),
+          icon: Icon(on ? Icons.volume_up_rounded : Icons.volume_up_outlined, color: AppColors.emerald),
+          label: const Text('Eshitish', style: TextStyle(color: AppColors.emerald, fontWeight: FontWeight.w700)),
+        );
+      },
     );
   }
 }

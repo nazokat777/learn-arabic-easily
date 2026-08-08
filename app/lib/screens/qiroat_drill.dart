@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../main.dart';
 import '../content.dart';
 import '../progress.dart';
+import '../services/tts.dart';
 import '../theme.dart';
 
 /// «So'zlarni yodlash» — Duolingo uslubidagi interaktiv mashq.
@@ -35,6 +36,7 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
   _Question? _q;
   int? _picked;
   bool _answered = false;
+  bool _dk = false; // «Bilmadim» bosildimi
 
   String _key(QiroatVocab v) => '${widget.lesson.completionId}::${v.ar}';
 
@@ -75,6 +77,7 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
     _q = _Question(word, arToUz, options, options.indexOf(correctVal));
     _picked = null;
     _answered = false;
+    _dk = false;
   }
 
   Future<void> _answer(int i) async {
@@ -96,6 +99,27 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
     if (!(correct && lvl >= Progress.masteryGoal)) _queue.add(word);
     if (mounted) setState(() {});
     Future.delayed(Duration(milliseconds: correct ? 650 : 1300), () {
+      if (mounted && _answered) _advance();
+    });
+  }
+
+  /// «Bilmadim» — to'g'ri javobni ko'rsatamiz, o'qib beramiz, jazolamaymiz.
+  /// So'z darajasi oshmaydi va u yana qayta so'raladi.
+  void _dontKnow() {
+    if (_answered) return;
+    setState(() {
+      _picked = null;
+      _answered = true;
+      _dk = true;
+      _correctStreak = 0;
+    });
+    Tts.instance.speak(_q!.word.ar, id: 'q');
+    // so'z navbat oxiriga qaytadi (keyinroq qayta so'raladi)
+    if (_queue.isNotEmpty) {
+      final w = _queue.removeAt(0);
+      _queue.add(w);
+    }
+    Future.delayed(const Duration(milliseconds: 1800), () {
       if (mounted && _answered) _advance();
     });
   }
@@ -312,17 +336,33 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
   }
 
   Widget _feedbackBar(_Question q) {
-    if (!_answered) return const SizedBox(height: 56);
-    final ok = _picked == q.correct;
+    if (!_answered) {
+      return SizedBox(
+        height: 56,
+        child: Center(
+          child: TextButton.icon(
+            onPressed: _dontKnow,
+            icon: const Text('🤔', style: TextStyle(fontSize: 18)),
+            label: const Text('Bilmadim — javobni ko\'rsat',
+                style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w700)),
+          ),
+        ),
+      );
+    }
+    final ok = !_dk && _picked == q.correct;
+    final color = _dk ? AppColors.gold : (ok ? AppColors.success : AppColors.coral);
+    final msg = _dk
+        ? '📖 To\'g\'ri javob: ${q.options[q.correct]} — yodlang'
+        : ok
+            ? '✅ To\'g\'ri! +2 XP'
+            : '❌ To\'g\'ri javob: ${q.options[q.correct]}';
     return Container(
       width: double.infinity,
       height: 56,
       alignment: Alignment.centerLeft,
-      color: (ok ? AppColors.success : AppColors.coral).withValues(alpha: 0.12),
+      color: color.withValues(alpha: 0.12),
       padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: Text(ok ? '✅ To\'g\'ri! +2 XP' : '❌ To\'g\'ri javob: ${q.options[q.correct]}',
-          style: TextStyle(
-              fontWeight: FontWeight.w800, color: ok ? AppColors.success : AppColors.coral)),
+      child: Text(msg, style: TextStyle(fontWeight: FontWeight.w800, color: color)),
     );
   }
 }

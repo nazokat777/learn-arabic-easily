@@ -1,0 +1,54 @@
+# Flutter web ilovasini GitHub Pages'ga avtomatik yuklaydi.
+# Vercel tokeni kabi tashqi maxfiy kalit KERAK EMAS — GitHub o'zining
+# ichki GITHUB_TOKEN'idan foydalanadi (muddati tugamaydi). Har push'da ishlaydi.
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Bir vaqtda faqat bitta deploy
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Flutter o'rnatish
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 3.41.9
+          cache: true
+
+      - name: Web build (project-page base-href bilan)
+        working-directory: app
+        run: |
+          flutter pub get
+          flutter build web --release --base-href "/learn-arabic-easily/"
+
+      - name: Pages sozlash
+        uses: actions/configure-pages@v5
+
+      - name: Artefaktni yuklash
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: app/build/web
+
+      - name: Pages'ga deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

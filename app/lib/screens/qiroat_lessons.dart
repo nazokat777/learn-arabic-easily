@@ -6,6 +6,7 @@ import '../widgets/entrance.dart';
 import 'qiroat_drill.dart';
 import 'qiroat_match.dart';
 import 'lesson/lesson_flow.dart';
+import 'lesson/master_drill.dart';
 
 /// «Mabdaul qiroat» — kitob tanlash ekrani (1-kitob, 2-kitob, ...).
 class QiroatBooksHome extends StatelessWidget {
@@ -264,12 +265,21 @@ class QiroatLessonDetail extends StatelessWidget {
             const Text('🎮 Mashqlar',
                 style: TextStyle(fontWeight: FontWeight.w800, fontSize: 15, color: AppColors.ink)),
             const SizedBox(height: 10),
-            // «So'zlarni yodlash» — ko'p variantli mashq (Duolingo uslubida)
+            // «So'zlarni chuqur yodlash» — 6 usulli master drill (har so'z 6 xil usulda)
             _exerciseButton(
               context,
               color: AppColors.gold,
               icon: Icons.psychology_alt,
-              label: 'So\'zlarni yodlash (${lesson.vocab.length} so\'z)',
+              label: 'So\'zlarni chuqur yodlash (6 usul)',
+              page: MasterDrill(lesson: lesson),
+            ),
+            const SizedBox(height: 10),
+            // Oddiy tez mashq (ko'p variantli)
+            _exerciseButton(
+              context,
+              color: AppColors.coral,
+              icon: Icons.bolt,
+              label: 'Tezkor mashq',
               page: QiroatVocabDrill(lesson: lesson),
             ),
             const SizedBox(height: 10),

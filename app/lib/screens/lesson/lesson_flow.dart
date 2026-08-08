@@ -5,6 +5,7 @@ import '../../main.dart';
 import '../../services/tts.dart';
 import '../../theme.dart';
 import '../qiroat_lessons.dart' show QiroatLessonDetail;
+import 'master_drill.dart';
 import 'quiz_flow.dart';
 import 'read_flow.dart';
 import 'vocab_flow.dart';
@@ -360,7 +361,24 @@ class _DoneViewState extends State<_DoneView> with SingleTickerProviderStateMixi
                 ],
               ),
             ),
-            const SizedBox(height: 32),
+            const SizedBox(height: 28),
+            SizedBox(
+              width: double.infinity,
+              child: OutlinedButton.icon(
+                onPressed: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => MasterDrill(lesson: widget.lesson))),
+                icon: const Icon(Icons.psychology_alt, size: 20),
+                label: const Text('So\'zlarni chuqur yodlash (6 usul)',
+                    style: TextStyle(fontWeight: FontWeight.w700)),
+                style: OutlinedButton.styleFrom(
+                  foregroundColor: AppColors.gold,
+                  side: const BorderSide(color: AppColors.gold),
+                  padding: const EdgeInsets.symmetric(vertical: 14),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                ),
+              ),
+            ),
+            const SizedBox(height: 10),
             SizedBox(
               width: double.infinity,
               child: FilledButton(

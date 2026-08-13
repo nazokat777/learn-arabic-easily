@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
@@ -34,15 +36,25 @@ class Tts {
     _ready = true;
   }
 
+  /// Ilova ishga tushganda chaqiriladi — sozlashni oldindan bajarib qo'yadi.
+  ///
+  /// Bu muhim: telefon brauzerlari ovozni faqat foydalanuvchi bosgan paytda
+  /// ruxsat beradi. Agar tugma bosilganda oldin `await` qilsak, o'sha «bosish
+  /// oynasi» yopilib, ovoz jimgina bloklanadi. Shuning uchun sozlash oldindan
+  /// bajariladi va [speak] hech narsa kutmasdan darrov gapiradi.
+  Future<void> init() => _ensure();
+
   /// Arabcha matnni o'qiydi. [id] — UI'da qaysi element «o'qilyapti»ni ko'rsatish uchun.
   Future<void> speak(String text, {String? id}) async {
     final clean = text.trim();
     if (clean.isEmpty) return;
-    await _ensure();
+    if (!_ready) await _ensure(); // odatda init() tufayli bu yerga tushmaydi
     if (!_available) return;
+    speakingId.value = id ?? clean;
     try {
-      await _tts.stop();
-      speakingId.value = id ?? clean;
+      // stop() ni KUTMAYMIZ: bosish oynasidan chiqib ketmaslik uchun.
+      // Web Speech API'da cancel() darhol bajariladi.
+      unawaited(_tts.stop());
       await _tts.speak(clean);
     } catch (_) {
       speakingId.value = null;

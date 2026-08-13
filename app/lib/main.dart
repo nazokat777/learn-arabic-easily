@@ -1,6 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'content.dart';
 import 'progress.dart';
+import 'services/tts.dart';
 import 'theme.dart';
 import 'screens/alifbo_home.dart';
 import 'screens/qiroat_lessons.dart';
@@ -16,6 +19,9 @@ Future<void> main() async {
   progress = Progress();
   await repo.load();
   await progress.load();
+  // Ovozni oldindan sozlaymiz — tugma bosilganda kutish bo'lmasin
+  // (telefon brauzerlari kutishdan keyingi ovozni bloklaydi).
+  unawaited(Tts.instance.init());
   runApp(const ArabApp());
 }
 
@@ -73,7 +79,7 @@ class HomeScreen extends StatelessWidget {
                 delay: const Duration(milliseconds: 240),
                 child: ModuleCard(
                   title: 'Mabdaul qiroat',
-                  subtitle: 'O\'qish asosi — 1 va 2-kitob',
+                  subtitle: 'O\'qish asosi — 1, 2 va 3-kitob (169 dars)',
                   arabic: 'اِقْرَأْ',
                   color: AppColors.emerald,
                   enabled: true,

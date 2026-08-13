@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<title>Ovoz tekshiruvi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body { margin:0; padding:20px; font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+         background:#f6faf7; color:#123; line-height:1.5; }
+  h1 { font-size:20px; margin:0 0 4px; }
+  p.sub { margin:0 0 18px; color:#567; font-size:14px; }
+  button { width:100%; padding:16px; font-size:17px; font-weight:700; border:0;
+           border-radius:14px; background:#0b7a56; color:#fff; margin-bottom:10px; }
+  button.alt { background:#b7791f; }
+  .box { background:#fff; border-radius:14px; padding:14px; margin-top:14px;
+         box-shadow:0 1px 6px rgba(0,0,0,.06); }
+  .k { font-weight:700; }
+  .ok { color:#0b7a56; font-weight:700; }
+  .bad { color:#c0392b; font-weight:700; }
+  code { background:#eef3f0; padding:1px 5px; border-radius:5px; font-size:13px; }
+  ul { padding-inline-start:20px; margin:6px 0; }
+  .ar { font-size:26px; direction:rtl; text-align:right; margin:6px 0 0; }
+</style>
+</head>
+<body>
+<h1>Ovoz tekshiruvi</h1>
+<p class="sub">Bu sahifa telefoningiz arabcha gapira oladimi-yo'qligini aniqlaydi.
+Pastdagi tugmani bosing.</p>
+
+<button id="go">🔊 Arabchani o'qib ko'rish</button>
+<button id="go2" class="alt">🔈 Oddiy matnni o'qib ko'rish (nazorat)</button>
+
+<div class="box">
+  <div class="ar" id="sample">هَذَا كِتَابٌ جَمِيلٌ</div>
+</div>
+
+<div class="box" id="out">Tugmani bosing…</div>
+
+<script>
+(function () {
+  var out = document.getElementById('out');
+  var log = [];
+  function render(extra) {
+    var v = [];
+    try { v = speechSynthesis.getVoices(); } catch (e) {}
+    var ar = v.filter(function (x) { return (x.lang || '').toLowerCase().indexOf('ar') === 0; });
+    out.innerHTML =
+      '<div><span class="k">Brauzer ovoz tizimi:</span> ' +
+        ('speechSynthesis' in window ? '<span class="ok">bor</span>' : '<span class="bad">YO\'Q</span>') + '</div>' +
+      '<div><span class="k">Jami ovozlar:</span> ' + v.length + '</div>' +
+      '<div><span class="k">Arabcha ovoz:</span> ' +
+        (ar.length ? '<span class="ok">' + ar.length + ' ta</span>' : '<span class="bad">YO\'Q</span>') + '</div>' +
+      (ar.length ? '<ul>' + ar.map(function (x) { return '<li>' + x.name + ' [' + x.lang + ']</li>'; }).join('') + '</ul>'
+                 : '<p>Telefoningizda arabcha ovoz o\'rnatilmagan. Android'
+                   + 'da: <code>Sozlamalar → Til va kiritish → Matndan nutqqa</code> '
+                   + '→ Google TTS → tillar → <b>Arabcha</b> yuklab oling. '
+                   + 'Keyin brauzerni butunlay yopib qayta oching.</p>') +
+      '<div style="margin-top:10px"><span class="k">Hodisalar:</span></div>' +
+      '<ul>' + (log.length ? log.map(function (l) { return '<li>' + l + '</li>'; }).join('')
+                           : '<li>hali yo\'q</li>') + '</ul>' +
+      (extra || '');
+  }
+
+  function say(text, lang) {
+    log = [];
+    render();
+    if (!('speechSynthesis' in window)) return;
+    try { speechSynthesis.cancel(); } catch (e) {}
+    var u = new SpeechSynthesisUtterance(text);
+    u.lang = lang;
+    u.rate = 0.9;
+    var voices = speechSynthesis.getVoices();
+    var match = voices.filter(function (x) {
+      return (x.lang || '').toLowerCase().indexOf(lang.slice(0, 2)) === 0;
+    })[0];
+    if (match) u.voice = match;
+    var t0 = Date.now();
+    u.onstart = function () { log.push('boshlandi (' + (Date.now() - t0) + ' ms)'); render(); };
+    u.onend = function () { log.push('tugadi (' + (Date.now() - t0) + ' ms)'); render(); };
+    u.onerror = function (e) { log.push('<span class="bad">xato: ' + e.error + '</span>'); render(); };
+    speechSynthesis.speak(u);
+    setTimeout(function () {
+      if (!log.length) {
+        log.push('<span class="bad">hech qanday hodisa bo\'lmadi — ovoz bloklangan yoki mos ovoz yo\'q</span>');
+        render();
+      }
+    }, 2500);
+  }
+
+  document.getElementById('go').onclick = function () { say('هَذَا كِتَابٌ جَمِيلٌ', 'ar-SA'); };
+  document.getElementById('go2').onclick = function () { say('Test, one two three', 'en-US'); };
+
+  if ('speechSynthesis' in window) speechSynthesis.onvoiceschanged = function () { render(); };
+  render();
+})();
+</script>
+</body>
+</html>

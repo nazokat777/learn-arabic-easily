@@ -22,7 +22,11 @@ import edge_tts
 
 sys.path.insert(0, str(Path(__file__).parent))
 # Bu import stdout'ni UTF-8 ga o'raydi — ikkinchi marta o'ramang.
-from gen_sentence_audio import FFMPEG_TRIM, VOICE, RATE, RETRIES, WORKERS
+from gen_sentence_audio import FFMPEG_TRIM, VOICE, RETRIES, WORKERS
+
+# Alifbo bo'g'inlari sekinroq o'qiladi - bu yerda harf tovushining
+# o'zi o'rgatiladi, shoshilishning ma'nosi yo'q.
+RATE = "-25%"
 
 OUT_DIR = Path("assets/audio/alifbo")
 MANIFEST = Path("assets/audio/alifbo_manifest.json")

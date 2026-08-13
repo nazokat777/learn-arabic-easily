@@ -31,10 +31,17 @@ RETRIES = 4
 TERM = ".؟!؛?"      # splitSentences ASCII '?' ni ham ajratuvchi deb biladi
 RUN_ON = ".؟!؛"     # ketma-ket ajratuvchilar bir jumlaga qo'shiladi ('?' dan tashqari)
 
+# Boshdagi jimlikni qat'iy olib tashlaymiz, OXIRIDA esa tabiiy so'nishni
+# qoldiramiz.
+#
+# Nega: avval ikkala tomon ham -45 dB bilan kesilardi va bu so'z oxiridagi
+# qisqa unlini yeb qo'yardi. Eng ko'p zarar damma («u») ga tegardi - u eng
+# jim tugaydi, shuning uchun «بُ» klipi 0.29 s bo'lib, unli deyarli
+# eshitilmasdi (yumshoq kesuvda o'sha klip 0.51 s).
 FFMPEG_TRIM = (
     "silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.05,"
     "areverse,"
-    "silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.05,"
+    "silenceremove=start_periods=1:start_threshold=-60dB:start_silence=0.25,"
     "areverse"
 )
 

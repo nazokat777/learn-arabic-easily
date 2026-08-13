@@ -18,8 +18,8 @@ class VocabAudio {
 
   final AudioPlayer _player = AudioPlayer();
 
-  /// Matn → asset yo'li (`audio/vocab/0001.mp3` yoki `audio/sentences/s0001.mp3`).
-  /// Lug'at so'zlari ham, o'qish matnining jumlalari ham shu yerda.
+  /// Matn → asset yo'li. Uchala to'plam shu yerda: lug'at so'zlari, o'qish
+  /// matnining jumlalari va matn ichida bosiladigan alohida so'zlar.
   Map<String, String> _manifest = const {};
   bool _loaded = false;
 
@@ -33,6 +33,7 @@ class VocabAudio {
     for (final entry in const {
       'assets/audio/vocab_manifest.json': 'audio/vocab',
       'assets/audio/sentence_manifest.json': 'audio/sentences',
+      'assets/audio/word_manifest.json': 'audio/words',
     }.entries) {
       try {
         final raw = await rootBundle.loadString(entry.key);

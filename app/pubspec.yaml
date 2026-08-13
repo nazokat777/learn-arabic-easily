@@ -33,3 +33,5 @@ flutter:
     - assets/audio/vocab/
     - assets/audio/sentence_manifest.json
     - assets/audio/sentences/
+    - assets/audio/word_manifest.json
+    - assets/audio/words/

@@ -109,12 +109,53 @@ class QiroatVocab {
 }
 
 /// «Mabdaul qiroat» kitobining bitta darsi: o'qish matni + lug'at.
+/// Darsdagi grammatika jadvali (masalan zamirlar va o'tgan zamon fe'li).
+///
+/// Kitobda bu jadvallar dars matnidan keyin keladi va lug'atga kirmaydi -
+/// shuning uchun ular ilovaga uzoq vaqt umuman tushmagan edi.
+class QiroatTable {
+  final String title;
+  final String titleAr;
+  final List<String> columns;
+  final List<QiroatTableRow> rows;
+
+  const QiroatTable({
+    required this.title,
+    required this.titleAr,
+    required this.columns,
+    required this.rows,
+  });
+
+  factory QiroatTable.fromJson(Map<String, dynamic> j) => QiroatTable(
+        title: j['title'] ?? '',
+        titleAr: j['titleAr'] ?? '',
+        columns: (j['columns'] as List).cast<String>(),
+        rows: (j['rows'] as List)
+            .map((e) => QiroatTableRow.fromJson(e as Map<String, dynamic>))
+            .toList(),
+      );
+}
+
+/// Jadvalning bitta qatori. [group] - qatorlar bo'linadigan bo'lim
+/// (III-shaxs, II-shaxs, I-shaxs), kitobdagi chekka ustunga mos keladi.
+class QiroatTableRow {
+  final String group;
+  final List<String> cells;
+  const QiroatTableRow({required this.group, required this.cells});
+
+  factory QiroatTableRow.fromJson(Map<String, dynamic> j) => QiroatTableRow(
+        group: j['group'] ?? '',
+        cells: (j['cells'] as List).cast<String>(),
+      );
+}
+
 class QiroatLesson {
   final int book; // qaysi kitob (1, 2, 3)
   final int num;
   final String titleAr;
   final String reading;
   final List<QiroatVocab> vocab;
+  final List<QiroatTable> tables;
 
   const QiroatLesson({
     required this.book,
@@ -122,6 +163,7 @@ class QiroatLesson {
     required this.titleAr,
     required this.reading,
     required this.vocab,
+    this.tables = const [],
   });
 
   /// Dars tugatilganini belgilash uchun noyob id (kitob + dars).
@@ -133,6 +175,9 @@ class QiroatLesson {
         titleAr: j['titleAr'],
         reading: j['reading'],
         vocab: (j['vocab'] as List).map((e) => QiroatVocab.fromJson(e)).toList(),
+        tables: ((j['tables'] as List?) ?? const [])
+            .map((e) => QiroatTable.fromJson(e as Map<String, dynamic>))
+            .toList(),
       );
 }
 

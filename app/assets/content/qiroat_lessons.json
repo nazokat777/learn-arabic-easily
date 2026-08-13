@@ -278,6 +278,176 @@
           "pl": "",
           "uz": "kim?"
         }
+      ],
+      "tables": [
+        {
+          "title": "O'tgan zamon fe'li va zamirlar",
+          "titleAr": "الجَدْوَلُ فِي فِعْلِ الْمَاضِي وَالضَّمَائِرِ",
+          "columns": [
+            "المنفصلة",
+            "الماضي",
+            "Ma'nosi",
+            "الأسماء",
+            "المتصلة",
+            "Ma'nosi"
+          ],
+          "rows": [
+            {
+              "group": "III-shaxs (g'oyib)",
+              "cells": [
+                "هُوَ",
+                "كَتَبَ",
+                "(u) yozdi",
+                "اِسْمُهُ",
+                "ـهُ",
+                "Uning ismi"
+              ]
+            },
+            {
+              "group": "III-shaxs (g'oyib)",
+              "cells": [
+                "هُمَا",
+                "كَتَبَا",
+                "(u) ikkisi yozdi",
+                "اِسْمُهُمَا",
+                "ـهُمَا",
+                "U ikkovining"
+              ]
+            },
+            {
+              "group": "III-shaxs (g'oyib)",
+              "cells": [
+                "هُمْ",
+                "كَتَبُوا",
+                "(ular) yozdilar",
+                "اِسْمُهُمْ",
+                "ـهُمْ",
+                "Ularning ismlari"
+              ]
+            },
+            {
+              "group": "III-shaxs (g'oyib)",
+              "cells": [
+                "هِيَ",
+                "كَتَبَتْ",
+                "(u) yozdi (ayol)",
+                "اِسْمُهَا",
+                "ـهَا",
+                "U ayolning ismi"
+              ]
+            },
+            {
+              "group": "III-shaxs (g'oyib)",
+              "cells": [
+                "هُمَا",
+                "كَتَبَتَا",
+                "(u) ikkisi yozdi (ayol)",
+                "اِسْمُهُمَا",
+                "ـهُمَا",
+                "U ikki ayolning"
+              ]
+            },
+            {
+              "group": "III-shaxs (g'oyib)",
+              "cells": [
+                "هُنَّ",
+                "كَتَبْنَ",
+                "(ular) yozdilar (ayol)",
+                "اِسْمُهُنَّ",
+                "ـهُنَّ",
+                "U ayollarning"
+              ]
+            },
+            {
+              "group": "II-shaxs (xozir)",
+              "cells": [
+                "أَنْتَ",
+                "كَتَبْتَ",
+                "(sen) yozding",
+                "اِسْمُكَ",
+                "ـكَ",
+                "Sening isming"
+              ]
+            },
+            {
+              "group": "II-shaxs (xozir)",
+              "cells": [
+                "أَنْتُمَا",
+                "كَتَبْتُمَا",
+                "ikkingiz yozdingiz",
+                "اِسْمُكُمَا",
+                "ـكُمَا",
+                "Siz ikkovingizni"
+              ]
+            },
+            {
+              "group": "II-shaxs (xozir)",
+              "cells": [
+                "أَنْتُمْ",
+                "كَتَبْتُمْ",
+                "(sizlar) yozdingiz",
+                "اِسْمُكُمْ",
+                "ـكُمْ",
+                "Sizlarning"
+              ]
+            },
+            {
+              "group": "II-shaxs (xozir)",
+              "cells": [
+                "أَنْتِ",
+                "كَتَبْتِ",
+                "(sen) yozding (ayol)",
+                "اِسْمُكِ",
+                "ـكِ",
+                "Sen ayolning"
+              ]
+            },
+            {
+              "group": "II-shaxs (xozir)",
+              "cells": [
+                "أَنْتُمَا",
+                "كَتَبْتُمَا",
+                "ikkingiz yozdingiz (ayol)",
+                "اِسْمُكُمَا",
+                "ـكُمَا",
+                "Siz ikkovingizni"
+              ]
+            },
+            {
+              "group": "II-shaxs (xozir)",
+              "cells": [
+                "أَنْتُنَّ",
+                "كَتَبْتُنَّ",
+                "(sizlar) yozdingiz (ayol)",
+                "اِسْمُكُنَّ",
+                "ـكُنَّ",
+                "Siz ayollarning"
+              ]
+            },
+            {
+              "group": "I-shaxs (mutakallim)",
+              "cells": [
+                "أَنَا",
+                "كَتَبْتُ",
+                "(men) yozdim (erkak+ayol)",
+                "اِسْمِي",
+                "ي",
+                "Mening ismim"
+              ]
+            },
+            {
+              "group": "I-shaxs (mutakallim)",
+              "cells": [
+                "نَحْنُ",
+                "كَتَبْنَا",
+                "(biz) yozdik (erkak+ayol)",
+                "اِسْمُنَا",
+                "نَا",
+                "Bizning ismimiz"
+              ]
+            }
+          ]
+        }
       ]
     },
     {

@@ -250,6 +250,12 @@ class QiroatLessonDetail extends StatelessWidget {
             _sectionLabel('📚', 'Lug\'at (${lesson.vocab.length} so\'z)'),
             const SizedBox(height: 8),
             ...lesson.vocab.map((v) => _VocabRow(v: v)),
+            for (final t in lesson.tables) ...[
+              const SizedBox(height: 24),
+              _sectionLabel('🧾', t.title),
+              const SizedBox(height: 8),
+              _GrammarTable(table: t),
+            ],
             const SizedBox(height: 24),
             const Text('🎮 Mashqlar',
                 style: TextStyle(fontWeight: FontWeight.w800, fontSize: 15, color: AppColors.ink)),
@@ -500,4 +506,77 @@ class _CompleteButton extends StatelessWidget {
           style: TextStyle(fontWeight: FontWeight.w800, fontSize: 16)),
     );
   }
+}
+
+/// Grammatika jadvali — kitobdagi katakli jadvalning ilovadagi ko'rinishi.
+///
+/// Telefon ekraniga oltita ustun sig'magani uchun har bir qator alohida karta
+/// bo'lib chiqadi: arabcha katak + uning o'zbekcha ma'nosi. Shu bilan jadval
+/// mazmuni to'liq saqlanadi va har bir arabcha shaklni tinglash mumkin.
+class _GrammarTable extends StatelessWidget {
+  final QiroatTable table;
+  const _GrammarTable({required this.table});
+
+  @override
+  Widget build(BuildContext context) {
+    final groups = <String, List<QiroatTableRow>>{};
+    for (final r in table.rows) {
+      groups.putIfAbsent(r.group, () => []).add(r);
+    }
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Center(
+          child: Text(table.titleAr,
+              textDirection: TextDirection.rtl,
+              style: AppTheme.arabic(size: 20, color: AppColors.emerald)),
+        ),
+        const SizedBox(height: 10),
+        for (final g in groups.entries) ...[
+          Padding(
+            padding: const EdgeInsets.only(top: 10, bottom: 6),
+            child: Text(g.key,
+                style: const TextStyle(
+                    fontWeight: FontWeight.w800, color: AppColors.gold, fontSize: 13)),
+          ),
+          ...g.value.map(_row),
+        ],
+      ],
+    );
+  }
+
+  Widget _row(QiroatTableRow r) => Container(
+        width: double.infinity,
+        margin: const EdgeInsets.only(bottom: 8),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(14),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            for (var i = 0; i < r.cells.length; i += 2) _pair(r.cells[i], r.cells[i + 1]),
+          ],
+        ),
+      );
+
+  /// Bitta juftlik: arabcha shakl (tinglash tugmasi bilan) va ma'nosi.
+  Widget _pair(String ar, String uz) => Padding(
+        padding: const EdgeInsets.symmetric(vertical: 3),
+        child: Row(
+          children: [
+            SpeakButton(text: ar, id: 'jadval-$ar', size: 18),
+            const SizedBox(width: 6),
+            Text(ar,
+                textDirection: TextDirection.rtl,
+                style: AppTheme.arabic(size: 20, color: AppColors.ink)),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Text(uz,
+                  style: const TextStyle(color: Colors.black54, fontSize: 13)),
+            ),
+          ],
+        ),
+      );
 }

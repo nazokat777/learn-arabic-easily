@@ -73,6 +73,12 @@ def needed() -> dict:
                 want.setdefault(w, f"{where} so'z")
         for v in L["vocab"]:
             want.setdefault(head(v["ar"]), f"{where} lug'at")
+        # Grammatika jadvallari - har bir arabcha katak tinglanadi.
+        for t in L.get("tables", []):
+            for row in t["rows"]:
+                for cell in row["cells"]:
+                    if ARABIC.search(cell):
+                        want.setdefault(cell.strip(), f"{where} jadval")
 
     letters = json.loads(Path("assets/content/letters.json").read_text(encoding="utf-8"))["letters"]
     for L in letters:

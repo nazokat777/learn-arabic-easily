@@ -19,6 +19,7 @@ from gen_sentence_audio import FFMPEG_TRIM, VOICE, RATE, RETRIES, WORKERS
 OUT_DIR = Path("assets/audio/extra")
 MANIFEST = Path("assets/audio/extra_manifest.json")
 COVERED = ["vocab", "sentence", "word", "alifbo"]
+ARABIC = re.compile(r"[؀-ۿݐ-ݿ]")
 
 
 def head(s: str) -> str:
@@ -31,12 +32,23 @@ def collect() -> list[str]:
         p = Path(f"assets/audio/{m}_manifest.json")
         if p.exists():
             covered |= set(json.loads(p.read_text(encoding="utf-8")))
-    words = json.loads(Path("assets/content/vocabulary.json").read_text(encoding="utf-8"))["words"]
     out = {}
-    for w in words:
-        t = head(w["ar"])
-        if t and t not in covered:
+
+    def want(t: str) -> None:
+        t = t.strip()
+        if t and t not in covered and ARABIC.search(t):
             out.setdefault(t, True)
+
+    for w in json.loads(Path("assets/content/vocabulary.json").read_text(encoding="utf-8"))["words"]:
+        want(head(w["ar"]))
+
+    # Grammatika jadvallarining arabcha kataklari - ular lug'atga kirmaydi,
+    # shuning uchun boshqa hech qaysi to'plamda uchramaydi.
+    for L in json.loads(Path("assets/content/qiroat_lessons.json").read_text(encoding="utf-8"))["lessons"]:
+        for t in L.get("tables", []):
+            for row in t["rows"]:
+                for cell in row["cells"]:
+                    want(cell)
     return list(out)
 
 

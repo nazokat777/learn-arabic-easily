@@ -10,12 +10,22 @@ class Question {
   final List<String> options; // javob variantlari (matn)
   final int correct; // to'g'ri javob indeksi
   final String? speak; // ixtiyoriy: audio uchun arabcha matn
+
+  /// Ovoz javobni oshkor qiladimi.
+  ///
+  /// Harflar testida variantlar harf NOMLARI, ovoz esa aynan o'sha nom —
+  /// uni javobdan oldin eshittirish testni ma'nosiz qiladi. Bunday savolda
+  /// tinglash tugmasi faqat javobdan keyin ko'rinadi (talaffuzni o'rganish
+  /// uchun baribir foydali).
+  final bool speakRevealsAnswer;
+
   Question({
     required this.prompt,
     required this.promptLabel,
     required this.options,
     required this.correct,
     this.speak,
+    this.speakRevealsAnswer = false,
   });
 }
 
@@ -151,7 +161,7 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
               ),
               child: Center(child: _q.prompt),
             ),
-            if (_q.speak != null) ...[
+            if (_q.speak != null && (!_q.speakRevealsAnswer || _answered)) ...[
               const SizedBox(height: 10),
               _ListenButton(text: _q.speak!),
             ],

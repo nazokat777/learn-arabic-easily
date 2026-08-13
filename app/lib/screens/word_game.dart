@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../main.dart';
 import '../content.dart';
 import '../theme.dart';
+import '../widgets/speak_button.dart';
 
 /// Harakatlarni (diakritik belgilarni) olib tashlab, faqat asosiy harflarni qaytaradi.
 List<String> baseLetters(String ar) {
@@ -179,9 +180,18 @@ class _WordGameState extends State<WordGame> {
               Column(
                 children: [
                   if (_result!)
-                    Directionality(
-                      textDirection: TextDirection.rtl,
-                      child: Text(_word.ar, style: AppTheme.arabic(size: 40, color: AppColors.gold)),
+                    // To'g'ri yig'ilgan so'zni eshitib ham ko'radi.
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Directionality(
+                          textDirection: TextDirection.rtl,
+                          child: Text(_word.ar,
+                              style: AppTheme.arabic(size: 40, color: AppColors.gold)),
+                        ),
+                        const SizedBox(width: 8),
+                        SpeakButton(text: _word.ar, id: 'oyin-${_word.ar}', size: 24),
+                      ],
                     ),
                   const SizedBox(height: 12),
                   Row(

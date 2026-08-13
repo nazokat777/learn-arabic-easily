@@ -27,6 +27,10 @@ class LetterTest extends StatelessWidget {
         prompt: Text(L.ar, style: AppTheme.arabic(size: 96, color: AppColors.emerald)),
         options: options,
         correct: options.indexOf(L.nameUz),
+        // Javobdan KEYIN harf nomi o'qiladi — nomning o'zi javob bo'lgani
+        // uchun oldin eshittirib bo'lmaydi.
+        speak: L.nameAr,
+        speakRevealsAnswer: true,
       );
     }).toList();
 

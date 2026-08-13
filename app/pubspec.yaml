@@ -35,3 +35,5 @@ flutter:
     - assets/audio/sentences/
     - assets/audio/word_manifest.json
     - assets/audio/words/
+    - assets/audio/alifbo_manifest.json
+    - assets/audio/alifbo/

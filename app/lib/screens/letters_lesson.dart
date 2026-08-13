@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../main.dart';
 import '../content.dart';
 import '../theme.dart';
+import '../widgets/speak_button.dart';
 
 class LettersLesson extends StatelessWidget {
   const LettersLesson({super.key});
@@ -67,8 +68,18 @@ class LettersLesson extends StatelessWidget {
             const SizedBox(height: 16),
             Text(L.ar, style: AppTheme.arabic(size: 90, color: AppColors.emerald)),
             const SizedBox(height: 4),
-            Text('${L.nameUz}  ·  ${L.nameAr}',
-                style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 20, color: AppColors.ink)),
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text('${L.nameUz}  ·  ${L.nameAr}',
+                    style: const TextStyle(
+                        fontWeight: FontWeight.w800, fontSize: 20, color: AppColors.ink)),
+                const SizedBox(width: 6),
+                // Yolg'iz harfning o'zi emas, NOMI o'qiladi — ustoz ham
+                // shunday aytadi, va yolg'iz harfdan ovoz chiqmaydi.
+                SpeakButton(text: L.nameAr, id: 'harf-${L.ar}', size: 22),
+              ],
+            ),
             Text('Talaffuz: ${L.translit}',
                 style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w700)),
             const SizedBox(height: 16),
@@ -84,6 +95,21 @@ class LettersLesson extends StatelessWidget {
                       style: const TextStyle(color: AppColors.ink, height: 1.3))),
                 ],
               ),
+            ),
+            const SizedBox(height: 20),
+            const Align(
+              alignment: Alignment.centerLeft,
+              child: Text('Harakatlar bilan tinglang:',
+                  style: TextStyle(fontWeight: FontWeight.w800, color: AppColors.ink)),
+            ),
+            const SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                _syllable(L.ar, 'َ', 'a'), // fatha
+                _syllable(L.ar, 'ِ', 'i'), // kasra
+                _syllable(L.ar, 'ُ', 'u'), // zamma
+              ],
             ),
             const SizedBox(height: 20),
             const Align(
@@ -104,6 +130,32 @@ class LettersLesson extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+  /// Harf + harakat: bosilganda o'sha bo'g'in eshitiladi (بَ، بِ، بُ).
+  Widget _syllable(String letter, String sign, String sound) {
+    final text = '$letter$sign';
+    return Column(
+      children: [
+        Container(
+          width: 62,
+          height: 62,
+          decoration: BoxDecoration(
+            color: AppColors.softGreen,
+            borderRadius: BorderRadius.circular(14),
+          ),
+          child: Center(
+            child: Directionality(
+              textDirection: TextDirection.rtl,
+              child: Text(text,
+                  style: AppTheme.arabic(size: 34, color: AppColors.emerald)),
+            ),
+          ),
+        ),
+        SpeakButton(text: text, id: 'bogin-$text', size: 18),
+        Text(sound, style: const TextStyle(fontSize: 11.5, color: Colors.black54)),
+      ],
     );
   }
 

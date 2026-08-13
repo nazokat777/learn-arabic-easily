@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../main.dart';
 import '../content.dart';
 import '../theme.dart';
+import '../widgets/speak_button.dart';
 
 class HarakatLesson extends StatelessWidget {
   const HarakatLesson({super.key});
@@ -73,6 +74,9 @@ class HarakatLesson extends StatelessWidget {
                           child: Text('«${h.soundUz}»',
                               style: const TextStyle(fontWeight: FontWeight.w700, color: AppColors.gold, fontSize: 13)),
                         ),
+                        // Misolni (masalan بَ) tinglash — harakat qanday
+                        // o'qilishini yozib emas, eshitib tushunadi.
+                        SpeakButton(text: h.exampleAr, id: 'haraka-${h.nameUz}', size: 20),
                       ],
                     ),
                     const SizedBox(height: 4),

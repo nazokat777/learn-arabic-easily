@@ -5,6 +5,7 @@ import '../content.dart';
 import '../services/tts.dart';
 import '../theme.dart';
 import '../widgets/entrance.dart';
+import '../widgets/speak_button.dart';
 import 'qiroat_drill.dart';
 import 'qiroat_match.dart';
 import 'lesson/lesson_flow.dart';
@@ -329,42 +330,6 @@ class QiroatLessonDetail extends StatelessWidget {
 
 }
 
-/// Kichik dumaloq ovoz tugmasi. O'qilayotganda belgisi «to'xtat»ga o'zgaradi,
-/// shunda foydalanuvchi qaysi qator gapirayotganini ko'rib turadi.
-class _SpeakButton extends StatelessWidget {
-  final String text;
-  final String id;
-  final double size;
-  const _SpeakButton({required this.text, required this.id, this.size = 20});
-
-  @override
-  Widget build(BuildContext context) {
-    // Tugma har doim ko'rinadi: ovoz tayyor fayldan chiqadi, qurilma TTS'i
-    // ishlamasa ham. Avval `Tts.available` bo'yicha yashirilardi va TTS
-    // ishga tushmagan qurilmada tinglash imkoni umuman yo'qolardi.
-    return ValueListenableBuilder<String?>(
-      valueListenable: Tts.instance.speakingId,
-      builder: (context, speaking, _) {
-        final active = speaking == id;
-        return IconButton(
-          visualDensity: VisualDensity.compact,
-          padding: EdgeInsets.zero,
-          constraints: BoxConstraints.tightFor(width: size + 16, height: size + 16),
-          tooltip: active ? 'To\'xtatish' : 'Tinglash',
-          icon: Icon(active ? Icons.stop_circle : Icons.volume_up_rounded,
-              size: size, color: active ? AppColors.gold : AppColors.emerald),
-          onPressed: () {
-            if (active) {
-              Tts.instance.stop();
-              return;
-            }
-            Tts.instance.speak(text, id: id);
-          },
-        );
-      },
-    );
-  }
-}
 
 
 /// O'qish matni: butun matnni ketma-ket tinglash tugmasi, har bir jumlada
@@ -432,7 +397,7 @@ class _ReadingBlockState extends State<_ReadingBlock> {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  _SpeakButton(text: _sentences[i], id: 'sent$i', size: 18),
+                  SpeakButton(text: _sentences[i], id: 'sent$i', size: 18),
                   Expanded(
                     child: SentenceText(
                       sentence: _sentences[i],
@@ -467,7 +432,7 @@ class _VocabRow extends StatelessWidget {
       ),
       child: Row(
         children: [
-          _SpeakButton(text: head, id: 'v${v.ar}', size: 19),
+          SpeakButton(text: head, id: 'v${v.ar}', size: 19),
           Expanded(
             child: Text(v.uz,
                 style: const TextStyle(

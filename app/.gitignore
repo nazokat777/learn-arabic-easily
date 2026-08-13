@@ -44,7 +44,11 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-# Rendered PDF pages & book-2 transcription scratch
+# Rendered PDF pages & transcription scratch — the megabytes of page PNGs and
+# text dumps stay out, but the audit/fix SCRIPTS are kept: they are what proves
+# the lesson content matches the source books, and they were being silently
+# dropped from the repo.
 app/.qiroat_render/
-.qiroat_render/
+.qiroat_render/*
+!.qiroat_render/*.py
 .deploy/

@@ -70,6 +70,15 @@ class Tts {
     }
   }
 
+  /// Shu matnni eshitish uchun QURILMA ovozi kerakmi.
+  ///
+  /// Tayyor fayl bo'lsa qurilmada arabcha ovoz bor-yo'qligi ahamiyatsiz —
+  /// baribir eshitiladi. Shuning uchun «arabcha ovoz o'rnating» ogohlantirishini
+  /// faqat shu shart `true` bo'lgandagina ko'rsatish kerak; aks holda hamma
+  /// narsa ishlab turgani holda foydalanuvchini keraksiz sozlashga yuboramiz.
+  bool needsDeviceVoice(String text) =>
+      arabicAvailable.value == false && !VocabAudio.instance.has(text.trim());
+
   /// Ilova ishga tushganda chaqiriladi — sozlashni oldindan bajarib qo'yadi.
   ///
   /// Bu muhim: telefon brauzerlari ovozni faqat foydalanuvchi bosgan paytda

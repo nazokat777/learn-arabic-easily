@@ -356,7 +356,7 @@ class _SpeakButton extends StatelessWidget {
               Tts.instance.stop();
               return;
             }
-            if (Tts.instance.arabicAvailable.value == false) {
+            if (Tts.instance.needsDeviceVoice(text)) {
               showArabicVoiceHelp(context);
               return;
             }
@@ -436,7 +436,7 @@ class _ReadingBlockState extends State<_ReadingBlock> {
       await Tts.instance.stop();
       return;
     }
-    if (Tts.instance.arabicAvailable.value == false) {
+    if (_sentences.any(Tts.instance.needsDeviceVoice)) {
       showArabicVoiceHelp(context);
       return;
     }
@@ -464,7 +464,10 @@ class _ReadingBlockState extends State<_ReadingBlock> {
           if (Tts.instance.available)
             ValueListenableBuilder<bool?>(
               valueListenable: Tts.instance.arabicAvailable,
-              builder: (context, hasArabic, _) => Align(
+              builder: (context, hasArabic, _) {
+                // Ogohlantirish faqat tayyor ovozi YO'Q jumla bo'lsa kerak.
+                final needsVoice = _sentences.any(Tts.instance.needsDeviceVoice);
+                return Align(
                 alignment: Alignment.centerLeft,
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
@@ -480,7 +483,7 @@ class _ReadingBlockState extends State<_ReadingBlock> {
                     ),
                     // Arabcha ovoz yo'qligini oldindan aytamiz — tugmani
                     // bosib, jimlikdan hayron bo'lib qolmasin.
-                    if (hasArabic == false)
+                    if (needsVoice)
                       IconButton(
                         tooltip: 'Arabcha ovoz o\'rnatilmagan',
                         icon: const Icon(Icons.info_outline,
@@ -489,7 +492,8 @@ class _ReadingBlockState extends State<_ReadingBlock> {
                       ),
                   ],
                 ),
-              ),
+                );
+              },
             ),
           for (var i = 0; i < _sentences.length; i++)
             Padding(

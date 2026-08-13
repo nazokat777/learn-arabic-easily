@@ -31,3 +31,5 @@ flutter:
     # ishlashi uchun. Flutter web bu fayllarni faqat kerak bo'lganda yuklaydi.
     - assets/audio/vocab_manifest.json
     - assets/audio/vocab/
+    - assets/audio/sentence_manifest.json
+    - assets/audio/sentences/

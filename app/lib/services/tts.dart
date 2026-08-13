@@ -80,9 +80,10 @@ class Tts {
 
   /// Arabcha matnni o'qiydi. [id] — UI'da qaysi element «o'qilyapti»ni ko'rsatish uchun.
   ///
-  /// Avval TAYYOR OVOZ FAYLI qidiriladi (lug'at so'zlari uchun). Topilsa o'sha
-  /// ijro etiladi — shunda telefonda arabcha TTS ovozi bo'lmasa ham eshitiladi.
-  /// Topilmasa (masalan o'qish matnining jumlalari) qurilma TTS'iga o'tamiz.
+  /// Avval TAYYOR OVOZ FAYLI qidiriladi — lug'at so'zlari ham, o'qish matnining
+  /// jumlalari ham fayl bilan keladi. Topilsa o'sha ijro etiladi, ya'ni telefonda
+  /// arabcha TTS ovozi bo'lmasa ham eshitiladi. Topilmasa (masalan foydalanuvchi
+  /// bosgan alohida so'z) qurilma TTS'iga o'tamiz.
   Future<void> speak(String text, {String? id}) async {
     final clean = text.trim();
     if (clean.isEmpty) return;

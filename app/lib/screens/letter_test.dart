@@ -15,12 +15,18 @@ class LetterTest extends StatelessWidget {
     final pick = letters.take(10).toList();
 
     final questions = pick.map((L) {
-      // Chalg'ituvchi javoblar (boshqa harflar nomlari)
-      final distractors = (List<Letter>.from(repo.letters)..shuffle(rnd))
-          .where((x) => x.id != L.id)
-          .take(3)
-          .map((x) => x.nameUz)
-          .toList();
+      // Chalg'ituvchi javoblar (boshqa harflar nomlari).
+      //
+      // Nomi bo'yicha solishtiramiz, id bo'yicha emas: ح va ه ning o'zbekcha
+      // nomi bir xil — «Haa». id bo'yicha filtrlaganda ikkita bir xil variant
+      // chiqib, biri «xato» deb belgilanardi.
+      final distractors = <String>[];
+      for (final x in List<Letter>.from(repo.letters)..shuffle(rnd)) {
+        if (distractors.length == 3) break;
+        if (x.nameUz != L.nameUz && !distractors.contains(x.nameUz)) {
+          distractors.add(x.nameUz);
+        }
+      }
       final options = [L.nameUz, ...distractors]..shuffle(rnd);
       return Question(
         promptLabel: 'Bu qaysi harf?',

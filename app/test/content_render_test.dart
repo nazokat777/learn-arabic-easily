@@ -81,4 +81,37 @@ void main() {
           reason: 'book $book numbering has a gap');
     });
   });
+
+  test('alphabet data matches standard Arabic', () {
+    final letters = (json.decode(
+            File('assets/content/letters.json').readAsStringSync())['letters']
+        as List).cast<Map<String, dynamic>>();
+
+    // Standart hijoiy tartib — kitoblar ham shu tartibda o'rgatadi.
+    const order = 'ابتثجحخدذرزسشصضطظعغفقكلمنهوي';
+    expect(letters.length, 28);
+    expect(letters.map((l) => l['ar']).join(), order);
+
+    // Faqat shu olti harf o'zidan keyingisiga ulanmaydi.
+    const nonConnecting = {'ا', 'د', 'ذ', 'ر', 'ز', 'و'};
+    for (final l in letters) {
+      expect(l['connectsLeft'], !nonConnecting.contains(l['ar']),
+          reason: 'ulanish belgisi: ${l['ar']}');
+      expect((l['name_ar'] as String).trim(), isNotEmpty);
+    }
+  });
+
+  test('letter quiz can always build four distinct options', () {
+    final letters = (json.decode(
+            File('assets/content/letters.json').readAsStringSync())['letters']
+        as List).cast<Map<String, dynamic>>();
+    // ح va ه ning o'zbekcha nomi bir xil («Haa»), shuning uchun variantlar
+    // NOM bo'yicha ajratiladi. Har bir harf uchun kamida 3 ta boshqa nom
+    // topilishi shart, aks holda test savoli to'liq chiqmaydi.
+    final names = letters.map((l) => l['name_uz'] as String).toList();
+    for (final n in names) {
+      expect(names.where((x) => x != n).toSet().length, greaterThanOrEqualTo(3),
+          reason: 'variant yetarli emas: $n');
+    }
+  });
 }

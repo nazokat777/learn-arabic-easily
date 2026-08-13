@@ -20,8 +20,6 @@ class Tts {
   /// Hozir nimadir o'qilyaptimi (UI holati uchun).
   final ValueNotifier<String?> speakingId = ValueNotifier(null);
 
-  bool get available => _available;
-
   Future<void> _ensure() async {
     if (_ready) return;
     try {

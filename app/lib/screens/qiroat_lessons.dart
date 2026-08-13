@@ -351,12 +351,63 @@ class _SpeakButton extends StatelessWidget {
           tooltip: active ? 'To\'xtatish' : 'Tinglash',
           icon: Icon(active ? Icons.stop_circle : Icons.volume_up_rounded,
               size: size, color: active ? AppColors.gold : AppColors.emerald),
-          onPressed: () =>
-              active ? Tts.instance.stop() : Tts.instance.speak(text, id: id),
+          onPressed: () {
+            if (active) {
+              Tts.instance.stop();
+              return;
+            }
+            if (Tts.instance.arabicAvailable.value == false) {
+              showArabicVoiceHelp(context);
+              return;
+            }
+            Tts.instance.speak(text, id: id);
+          },
         );
       },
     );
   }
+}
+
+/// Qurilmada arabcha ovoz yo'q bo'lsa — jimgina o'tib ketmasdan, nima qilish
+/// kerakligini tushuntiramiz. Aks holda foydalanuvchi tugmani bosaveradi va
+/// nega ovoz chiqmayotganini bilmaydi.
+void showArabicVoiceHelp(BuildContext context) {
+  showDialog<void>(
+    context: context,
+    builder: (context) => AlertDialog(
+      title: const Text('Arabcha ovoz o\'rnatilmagan'),
+      content: const SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text('Ilova telefoningizdagi ovoz tizimidan foydalanadi, '
+                'lekin unda arabcha ovoz topilmadi.'),
+            SizedBox(height: 14),
+            Text('Android’da o‘rnatish:',
+                style: TextStyle(fontWeight: FontWeight.w800)),
+            SizedBox(height: 6),
+            Text('1. Sozlamalar → Til va kiritish\n'
+                '2. Matndan nutqqa (Text-to-speech)\n'
+                '3. Google matndan nutqqa → ⚙️ → Tillarni o‘rnatish\n'
+                '4. «العربية / Arabic» ni yuklab oling\n'
+                '5. Brauzerni butunlay yopib, qaytadan oching'),
+            SizedBox(height: 14),
+            Text('iPhone’da:', style: TextStyle(fontWeight: FontWeight.w800)),
+            SizedBox(height: 6),
+            Text('Sozlamalar → Universal kirish → So‘zlangan kontent → '
+                'Ovozlar → Arabcha'),
+          ],
+        ),
+      ),
+      actions: [
+        TextButton(
+          onPressed: () => Navigator.pop(context),
+          child: const Text('Tushunarli'),
+        ),
+      ],
+    ),
+  );
 }
 
 /// O'qish matni: butun matnni ketma-ket tinglash tugmasi, har bir jumlada
@@ -385,6 +436,10 @@ class _ReadingBlockState extends State<_ReadingBlock> {
       await Tts.instance.stop();
       return;
     }
+    if (Tts.instance.arabicAvailable.value == false) {
+      showArabicVoiceHelp(context);
+      return;
+    }
     setState(() => _playingAll = true);
     for (var i = 0; i < _sentences.length; i++) {
       if (!mounted || !_playingAll) break;
@@ -407,14 +462,33 @@ class _ReadingBlockState extends State<_ReadingBlock> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           if (Tts.instance.available)
-            Align(
-              alignment: Alignment.centerLeft,
-              child: TextButton.icon(
-                onPressed: _playAll,
-                icon: Icon(_playingAll ? Icons.stop_circle : Icons.play_circle_fill,
-                    color: _playingAll ? AppColors.gold : AppColors.emerald),
-                label: Text(_playingAll ? 'To\'xtatish' : 'Butun matnni tinglash',
-                    style: const TextStyle(fontWeight: FontWeight.w700)),
+            ValueListenableBuilder<bool?>(
+              valueListenable: Tts.instance.arabicAvailable,
+              builder: (context, hasArabic, _) => Align(
+                alignment: Alignment.centerLeft,
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    TextButton.icon(
+                      onPressed: _playAll,
+                      icon: Icon(
+                          _playingAll ? Icons.stop_circle : Icons.play_circle_fill,
+                          color: _playingAll ? AppColors.gold : AppColors.emerald),
+                      label: Text(
+                          _playingAll ? 'To\'xtatish' : 'Butun matnni tinglash',
+                          style: const TextStyle(fontWeight: FontWeight.w700)),
+                    ),
+                    // Arabcha ovoz yo'qligini oldindan aytamiz — tugmani
+                    // bosib, jimlikdan hayron bo'lib qolmasin.
+                    if (hasArabic == false)
+                      IconButton(
+                        tooltip: 'Arabcha ovoz o\'rnatilmagan',
+                        icon: const Icon(Icons.info_outline,
+                            color: AppColors.coral, size: 20),
+                        onPressed: () => showArabicVoiceHelp(context),
+                      ),
+                  ],
+                ),
               ),
             ),
           for (var i = 0; i < _sentences.length; i++)

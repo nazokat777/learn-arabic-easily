@@ -17,6 +17,13 @@ class Tts {
   /// Hozir nimadir o'qilyaptimi (UI holati uchun).
   final ValueNotifier<String?> speakingId = ValueNotifier(null);
 
+  /// Qurilmada ARABCHA ovoz bormi. `null` — hali aniqlanmagan.
+  ///
+  /// Bu `available` dan boshqa narsa: ovoz tizimi ishlayotgan bo'lishi mumkin,
+  /// lekin arabcha ovoz paketi o'rnatilmagan bo'lsa, `speak()` jimgina hech
+  /// narsa qilmaydi. Shuni oldindan bilib, foydalanuvchiga tushuntiramiz.
+  final ValueNotifier<bool?> arabicAvailable = ValueNotifier(null);
+
   bool get available => _available;
 
   Future<void> _ensure() async {
@@ -34,6 +41,30 @@ class Tts {
       _available = false;
     }
     _ready = true;
+    if (_available) unawaited(_detectArabic());
+  }
+
+  /// Qurilmada arabcha ovoz bor-yo'qligini aniqlaydi.
+  ///
+  /// Avval `getLanguages` ro'yxatidan `ar` bilan boshlanadiganini qidiramiz —
+  /// bu eng ishonchlisi. Ro'yxat bo'sh chiqsa (ba'zi platformalarda shunday),
+  /// `isLanguageAvailable` ga tushamiz. Ikkalasi ham javob bermasa, `true` deb
+  /// hisoblaymiz: noaniqlik tufayli ishlaydigan ovozni o'chirib qo'ymaslik uchun.
+  Future<void> _detectArabic() async {
+    try {
+      final langs = await _tts.getLanguages;
+      if (langs is List && langs.isNotEmpty) {
+        arabicAvailable.value = langs.any(
+            (l) => l.toString().toLowerCase().startsWith('ar'));
+        return;
+      }
+    } catch (_) {/* pastdagi usulga o'tamiz */}
+    try {
+      final ok = await _tts.isLanguageAvailable('ar-SA');
+      arabicAvailable.value = ok == true;
+    } catch (_) {
+      arabicAvailable.value = true;
+    }
   }
 
   /// Ilova ishga tushganda chaqiriladi — sozlashni oldindan bajarib qo'yadi.

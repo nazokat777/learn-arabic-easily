@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import '../main.dart';
+import '../arabic.dart';
 import '../content.dart';
+import '../services/tts.dart';
 import '../theme.dart';
 import '../widgets/entrance.dart';
 import 'qiroat_drill.dart';
 import 'qiroat_match.dart';
 import 'lesson/lesson_flow.dart';
 import 'lesson/master_drill.dart';
+import 'lesson/sentence_text.dart';
 
 /// «Mabdaul qiroat» — kitob tanlash ekrani (1-kitob, 2-kitob, ...).
 class QiroatBooksHome extends StatelessWidget {
@@ -241,26 +244,11 @@ class QiroatLessonDetail extends StatelessWidget {
             const SizedBox(height: 16),
             _sectionLabel('📖', 'O\'qish matni'),
             const SizedBox(height: 8),
-            // O'qish matni — o'ngdan chapga, Amiri shrift
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.all(18),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(18),
-                boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.04), blurRadius: 8)],
-              ),
-              child: Text(
-                lesson.reading,
-                textDirection: TextDirection.rtl,
-                textAlign: TextAlign.right,
-                style: AppTheme.arabic(size: 26, color: AppColors.ink, w: FontWeight.w500),
-              ),
-            ),
+            _ReadingBlock(lesson: lesson),
             const SizedBox(height: 24),
             _sectionLabel('📚', 'Lug\'at (${lesson.vocab.length} so\'z)'),
             const SizedBox(height: 8),
-            ...lesson.vocab.map(_vocabRow),
+            ...lesson.vocab.map((v) => _VocabRow(v: v)),
             const SizedBox(height: 24),
             const Text('🎮 Mashqlar',
                 style: TextStyle(fontWeight: FontWeight.w800, fontSize: 15, color: AppColors.ink)),
@@ -339,40 +327,164 @@ class QiroatLessonDetail extends StatelessWidget {
         ],
       );
 
-  Widget _vocabRow(QiroatVocab v) => Container(
-        margin: const EdgeInsets.only(bottom: 8),
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(14),
-        ),
-        child: Row(
-          children: [
-            Expanded(
-              child: Text(v.uz,
-                  style: const TextStyle(
-                      color: AppColors.ink, fontWeight: FontWeight.w600, fontSize: 14.5)),
+}
+
+/// Kichik dumaloq ovoz tugmasi. O'qilayotganda belgisi «to'xtat»ga o'zgaradi,
+/// shunda foydalanuvchi qaysi qator gapirayotganini ko'rib turadi.
+class _SpeakButton extends StatelessWidget {
+  final String text;
+  final String id;
+  final double size;
+  const _SpeakButton({required this.text, required this.id, this.size = 20});
+
+  @override
+  Widget build(BuildContext context) {
+    if (!Tts.instance.available) return const SizedBox.shrink();
+    return ValueListenableBuilder<String?>(
+      valueListenable: Tts.instance.speakingId,
+      builder: (context, speaking, _) {
+        final active = speaking == id;
+        return IconButton(
+          visualDensity: VisualDensity.compact,
+          padding: EdgeInsets.zero,
+          constraints: BoxConstraints.tightFor(width: size + 16, height: size + 16),
+          tooltip: active ? 'To\'xtatish' : 'Tinglash',
+          icon: Icon(active ? Icons.stop_circle : Icons.volume_up_rounded,
+              size: size, color: active ? AppColors.gold : AppColors.emerald),
+          onPressed: () =>
+              active ? Tts.instance.stop() : Tts.instance.speak(text, id: id),
+        );
+      },
+    );
+  }
+}
+
+/// O'qish matni: butun matnni ketma-ket tinglash tugmasi, har bir jumlada
+/// alohida ovoz tugmasi, va har bir so'z bosiladigan (ma'nosi + talaffuzi).
+class _ReadingBlock extends StatefulWidget {
+  final QiroatLesson lesson;
+  const _ReadingBlock({required this.lesson});
+
+  @override
+  State<_ReadingBlock> createState() => _ReadingBlockState();
+}
+
+class _ReadingBlockState extends State<_ReadingBlock> {
+  late final List<String> _sentences = splitSentences(widget.lesson.reading);
+  bool _playingAll = false;
+
+  @override
+  void dispose() {
+    Tts.instance.stop();
+    super.dispose();
+  }
+
+  Future<void> _playAll() async {
+    if (_playingAll) {
+      setState(() => _playingAll = false);
+      await Tts.instance.stop();
+      return;
+    }
+    setState(() => _playingAll = true);
+    for (var i = 0; i < _sentences.length; i++) {
+      if (!mounted || !_playingAll) break;
+      await Tts.instance.speak(_sentences[i], id: 'all$i');
+    }
+    if (mounted) setState(() => _playingAll = false);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.fromLTRB(14, 10, 14, 16),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(18),
+        boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.04), blurRadius: 8)],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          if (Tts.instance.available)
+            Align(
+              alignment: Alignment.centerLeft,
+              child: TextButton.icon(
+                onPressed: _playAll,
+                icon: Icon(_playingAll ? Icons.stop_circle : Icons.play_circle_fill,
+                    color: _playingAll ? AppColors.gold : AppColors.emerald),
+                label: Text(_playingAll ? 'To\'xtatish' : 'Butun matnni tinglash',
+                    style: const TextStyle(fontWeight: FontWeight.w700)),
+              ),
             ),
-            const SizedBox(width: 10),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
+          for (var i = 0; i < _sentences.length; i++)
+            Padding(
+              padding: const EdgeInsets.only(bottom: 6),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(v.ar,
-                      textDirection: TextDirection.rtl,
-                      textAlign: TextAlign.right,
-                      style: AppTheme.arabic(size: 22, color: AppColors.emerald)),
-                  if (v.pl.isNotEmpty)
-                    Text('ko\'pligi: ${v.pl}',
-                        textDirection: TextDirection.rtl,
-                        textAlign: TextAlign.right,
-                        style: AppTheme.arabic(size: 15, color: AppColors.gold, w: FontWeight.w500)),
+                  _SpeakButton(text: _sentences[i], id: 'sent$i', size: 18),
+                  Expanded(
+                    child: SentenceText(
+                      sentence: _sentences[i],
+                      vocab: widget.lesson.vocab,
+                      reading: widget.lesson.reading,
+                    ),
+                  ),
                 ],
               ),
             ),
-          ],
-        ),
-      );
+        ],
+      ),
+    );
+  }
+}
+
+/// Lug'at qatori — arabcha so'zni tinglash tugmasi bilan.
+class _VocabRow extends StatelessWidget {
+  final QiroatVocab v;
+  const _VocabRow({required this.v});
+
+  @override
+  Widget build(BuildContext context) {
+    // Fe'l shakllari «غَلِطَ، يَغْلَطُ...» bo'lsa, birinchi shaklni o'qiymiz.
+    final head = splitForms(v.ar).isEmpty ? v.ar : splitForms(v.ar).first;
+    return Container(
+      margin: const EdgeInsets.only(bottom: 8),
+      padding: const EdgeInsets.fromLTRB(6, 10, 14, 10),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(14),
+      ),
+      child: Row(
+        children: [
+          _SpeakButton(text: head, id: 'v${v.ar}', size: 19),
+          Expanded(
+            child: Text(v.uz,
+                style: const TextStyle(
+                    color: AppColors.ink, fontWeight: FontWeight.w600, fontSize: 14.5)),
+          ),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Text(v.ar,
+                    textDirection: TextDirection.rtl,
+                    textAlign: TextAlign.right,
+                    style: AppTheme.arabic(size: 22, color: AppColors.emerald)),
+                if (v.pl.isNotEmpty)
+                  Text('ko\'pligi: ${v.pl}',
+                      textDirection: TextDirection.rtl,
+                      textAlign: TextAlign.right,
+                      style: AppTheme.arabic(size: 15, color: AppColors.gold, w: FontWeight.w500)),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 /// «Tugatdim» tugmasi — XP beradi va darsni tugatilgan deb belgilaydi.

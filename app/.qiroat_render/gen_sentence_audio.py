@@ -17,7 +17,11 @@ Resumable — existing files are skipped.
 import asyncio, json, re, subprocess, sys, io
 from pathlib import Path
 
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
+# Faqat bir marta o'raymiz: ikkita modul ham o'rasa, birinchi o'rovchi
+# yig'ishtirilganda buferni yopadi va keyingi print «I/O operation on
+# closed file» bilan yiqiladi.
+if (sys.stdout.encoding or "").lower() not in ("utf-8", "utf8"):
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
 import edge_tts
 

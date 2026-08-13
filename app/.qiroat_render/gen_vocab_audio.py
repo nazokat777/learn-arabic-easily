@@ -23,7 +23,11 @@ Resumable - already-generated files are skipped, so it can be re-run safely.
 import asyncio, json, re, subprocess, sys, io, os
 from pathlib import Path
 
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
+# Faqat bir marta o'raymiz: ikkita modul ham o'rasa, birinchi o'rovchi
+# yig'ishtirilganda buferni yopadi va keyingi print «I/O operation on
+# closed file» bilan yiqiladi.
+if (sys.stdout.encoding or "").lower() not in ("utf-8", "utf8"):
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
 import edge_tts
 
@@ -35,12 +39,9 @@ RATE = "-10%"
 WORKERS = 5          # polite concurrency; the endpoint throttles above this
 RETRIES = 4
 
-FFMPEG_TRIM = (
-    "silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.05,"
-    "areverse,"
-    "silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.05,"
-    "areverse"
-)
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).parent))
+from gen_sentence_audio import FFMPEG_TRIM  # noqa: E402
 
 
 def head_of(ar: str) -> str:

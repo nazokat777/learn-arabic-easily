@@ -51,10 +51,30 @@ def collect() -> list[str]:
     return list(seen)
 
 
+def _letter_names() -> dict:
+    p = Path("assets/content/letters.json")
+    return {L["ar"]: L["name_ar"]
+            for L in json.loads(p.read_text(encoding="utf-8"))["letters"]}
+
+
+LETTER_NAME = _letter_names()
+
+
+def spoken(text: str) -> str:
+    """Sintezga beriladigan matn.
+
+    Yolg'iz harfdan edge-tts jimlik chiqaradi, shuning uchun uning o'rniga
+    harf NOMI o'qiladi — she'r muallifining bosh harflari («أ. ظ.») arabchada
+    aynan shunday o'qiladi. Bu qoida shu yerda turishi kerak: avval bitta
+    faylni qo'lda tuzatgandim va keyingi qayta yasashda tuzatish yo'qoldi.
+    """
+    return LETTER_NAME.get(text, text)
+
+
 async def synth(text: str, dest: Path, attempt: int = 0) -> bool:
     raw = dest.with_suffix(".raw.mp3")
     try:
-        await edge_tts.Communicate(text, VOICE, rate=RATE).save(str(raw))
+        await edge_tts.Communicate(spoken(text), VOICE, rate=RATE).save(str(raw))
     except Exception as e:
         if attempt < RETRIES:
             await asyncio.sleep(1.5 * (attempt + 1))

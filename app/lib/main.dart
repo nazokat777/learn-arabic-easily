@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'content.dart';
 import 'progress.dart';
 import 'services/tts.dart';
+import 'services/vocab_audio.dart';
 import 'theme.dart';
 import 'screens/alifbo_home.dart';
 import 'screens/qiroat_lessons.dart';
@@ -21,6 +22,7 @@ Future<void> main() async {
   await progress.load();
   // Ovozni oldindan sozlaymiz — tugma bosilganda kutish bo'lmasin
   // (telefon brauzerlari kutishdan keyingi ovozni bloklaydi).
+  await VocabAudio.instance.load(); // tayyor ovozlar ro'yxati
   unawaited(Tts.instance.init());
   runApp(const ArabApp());
 }

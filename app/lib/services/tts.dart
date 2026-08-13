@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
+import 'vocab_audio.dart';
+
 /// Arabcha talaffuz uchun audio xizmati (matndan-nutqqa).
 /// Brauzer (web) va mobil qurilma TTS'idan foydalanadi — audio fayllar shart emas.
 /// Arabcha ovoz bo'lmasa, jimgina o'chib qoladi (ilova buzilmaydi).
@@ -12,6 +14,7 @@ class Tts {
 
   final FlutterTts _tts = FlutterTts();
   bool _ready = false;
+  StreamSubscription<void>? _audioSub;
   bool _available = true;
 
   /// Hozir nimadir o'qilyaptimi (UI holati uchun).
@@ -76,9 +79,28 @@ class Tts {
   Future<void> init() => _ensure();
 
   /// Arabcha matnni o'qiydi. [id] — UI'da qaysi element «o'qilyapti»ni ko'rsatish uchun.
+  ///
+  /// Avval TAYYOR OVOZ FAYLI qidiriladi (lug'at so'zlari uchun). Topilsa o'sha
+  /// ijro etiladi — shunda telefonda arabcha TTS ovozi bo'lmasa ham eshitiladi.
+  /// Topilmasa (masalan o'qish matnining jumlalari) qurilma TTS'iga o'tamiz.
   Future<void> speak(String text, {String? id}) async {
     final clean = text.trim();
     if (clean.isEmpty) return;
+
+    if (VocabAudio.instance.has(clean)) {
+      speakingId.value = id ?? clean;
+      unawaited(_tts.stop());
+      final played = await VocabAudio.instance.play(clean);
+      if (played) {
+        _audioSub?.cancel();
+        _audioSub = VocabAudio.instance.onComplete.listen((_) {
+          if (speakingId.value == (id ?? clean)) speakingId.value = null;
+        });
+        return;
+      }
+      speakingId.value = null; // ijro bo'lmadi — TTS'ga qaytamiz
+    }
+
     if (!_ready) await _ensure(); // odatda init() tufayli bu yerga tushmaydi
     if (!_available) return;
     speakingId.value = id ?? clean;
@@ -93,6 +115,9 @@ class Tts {
   }
 
   Future<void> stop() async {
+    _audioSub?.cancel();
+    _audioSub = null;
+    await VocabAudio.instance.stop();
     try {
       await _tts.stop();
     } catch (_) {}

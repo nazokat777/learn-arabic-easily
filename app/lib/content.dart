@@ -119,11 +119,17 @@ class QiroatTable {
   final List<String> columns;
   final List<QiroatTableRow> rows;
 
+  /// «pairs» — kataklar (arabcha, ma'nosi) juftligi bo'lib keladi (zamirlar
+  /// jadvallari). «grid» — har bir katak alohida shakl bo'lib, ustun sarlavhasi
+  /// bilan ko'rsatiladi (fe'l boblari jadvali).
+  final String layout;
+
   const QiroatTable({
     required this.title,
     required this.titleAr,
     required this.columns,
     required this.rows,
+    this.layout = 'pairs',
   });
 
   factory QiroatTable.fromJson(Map<String, dynamic> j) => QiroatTable(
@@ -133,6 +139,7 @@ class QiroatTable {
         rows: (j['rows'] as List)
             .map((e) => QiroatTableRow.fromJson(e as Map<String, dynamic>))
             .toList(),
+        layout: j['layout'] ?? 'pairs',
       );
 }
 
@@ -141,11 +148,20 @@ class QiroatTable {
 class QiroatTableRow {
   final String group;
   final List<String> cells;
-  const QiroatTableRow({required this.group, required this.cells});
+
+  /// Qator yorlig'i — fe'l boblari jadvalidagi «БОБ» ustuni (I, II, IV ...).
+  final String label;
+
+  const QiroatTableRow({
+    required this.group,
+    required this.cells,
+    this.label = '',
+  });
 
   factory QiroatTableRow.fromJson(Map<String, dynamic> j) => QiroatTableRow(
         group: j['group'] ?? '',
         cells: (j['cells'] as List).cast<String>(),
+        label: j['label'] ?? '',
       );
 }
 

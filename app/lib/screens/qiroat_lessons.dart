@@ -539,7 +539,7 @@ class _GrammarTable extends StatelessWidget {
                 style: const TextStyle(
                     fontWeight: FontWeight.w800, color: AppColors.gold, fontSize: 13)),
           ),
-          ...g.value.map(_row),
+          ...g.value.map(table.layout == 'grid' ? _gridRow : _row),
         ],
       ],
     );
@@ -560,6 +560,57 @@ class _GrammarTable extends StatelessWidget {
           ],
         ),
       );
+
+  /// Fe'l boblari jadvalining bir qatori: har bir katak o'z ustun sarlavhasi
+  /// bilan. Kitobda «——» turgan kataklar (bunday shakl yo'q) tashlab ketiladi.
+  Widget _gridRow(QiroatTableRow r) {
+    final filled = <int>[
+      for (var i = 0; i < r.cells.length; i++)
+        if (r.cells[i].trim().isNotEmpty) i
+    ];
+    return Container(
+      width: double.infinity,
+      margin: const EdgeInsets.only(bottom: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(14),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          if (r.label.isNotEmpty)
+            Text('bob ${r.label}',
+                style: const TextStyle(
+                    fontWeight: FontWeight.w800, color: AppColors.gold, fontSize: 12)),
+          for (final i in filled)
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 3),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SpeakButton(text: r.cells[i], id: 'bob-${r.cells[i]}', size: 18),
+                  const SizedBox(width: 6),
+                  Expanded(
+                    child: Text(r.cells[i],
+                        textDirection: TextDirection.rtl,
+                        textAlign: TextAlign.right,
+                        style: AppTheme.arabic(size: 19, color: AppColors.ink)),
+                  ),
+                  const SizedBox(width: 10),
+                  SizedBox(
+                    width: 96,
+                    child: Text(i < table.columns.length ? table.columns[i] : '',
+                        textDirection: TextDirection.rtl,
+                        style: const TextStyle(color: Colors.black45, fontSize: 11)),
+                  ),
+                ],
+              ),
+            ),
+        ],
+      ),
+    );
+  }
 
   /// Bitta juftlik: arabcha shakl (tinglash tugmasi bilan) va ma'nosi.
   Widget _pair(String ar, String uz) => Padding(

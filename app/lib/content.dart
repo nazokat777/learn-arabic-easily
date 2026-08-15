@@ -173,6 +173,10 @@ class QiroatLesson {
   final List<QiroatVocab> vocab;
   final List<QiroatTable> tables;
 
+  /// O'qish matnining o'zbekcha tarjimasi (kitobning oxiridan, 1-kitob).
+  /// Bo'sh bo'lishi mumkin - 2 va 3-kitobda tarjima bo'limi yo'q.
+  final String translation;
+
   const QiroatLesson({
     required this.book,
     required this.num,
@@ -180,6 +184,7 @@ class QiroatLesson {
     required this.reading,
     required this.vocab,
     this.tables = const [],
+    this.translation = '',
   });
 
   /// Dars tugatilganini belgilash uchun noyob id (kitob + dars).
@@ -194,6 +199,7 @@ class QiroatLesson {
         tables: ((j['tables'] as List?) ?? const [])
             .map((e) => QiroatTable.fromJson(e as Map<String, dynamic>))
             .toList(),
+        translation: j['translation'] ?? '',
       );
 }
 

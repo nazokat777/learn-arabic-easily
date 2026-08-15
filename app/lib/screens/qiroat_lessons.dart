@@ -246,6 +246,10 @@ class QiroatLessonDetail extends StatelessWidget {
             _sectionLabel('📖', 'O\'qish matni'),
             const SizedBox(height: 8),
             _ReadingBlock(lesson: lesson),
+            if (lesson.translation.isNotEmpty) ...[
+              const SizedBox(height: 12),
+              _TranslationBlock(text: lesson.translation),
+            ],
             const SizedBox(height: 24),
             _sectionLabel('📚', 'Lug\'at (${lesson.vocab.length} so\'z)'),
             const SizedBox(height: 8),
@@ -630,4 +634,60 @@ class _GrammarTable extends StatelessWidget {
           ],
         ),
       );
+}
+
+
+/// Matnning o'zbekcha tarjimasi - kitobning oxirida berilgan.
+///
+/// Yopiq holda turadi: avval o'quvchi o'zi tushunishga urinsin, keyin
+/// ochib tekshirsin.
+class _TranslationBlock extends StatefulWidget {
+  final String text;
+  const _TranslationBlock({required this.text});
+  @override
+  State<_TranslationBlock> createState() => _TranslationBlockState();
+}
+
+class _TranslationBlockState extends State<_TranslationBlock> {
+  bool _open = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      decoration: BoxDecoration(
+        color: AppColors.softGreen,
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          InkWell(
+            borderRadius: BorderRadius.circular(16),
+            onTap: () => setState(() => _open = !_open),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+              child: Row(
+                children: [
+                  const Text('🇺🇿 ', style: TextStyle(fontSize: 15)),
+                  const Expanded(
+                    child: Text('Tarjimasi',
+                        style: TextStyle(fontWeight: FontWeight.w800, color: AppColors.ink)),
+                  ),
+                  Icon(_open ? Icons.expand_less : Icons.expand_more,
+                      color: AppColors.emerald),
+                ],
+              ),
+            ),
+          ),
+          if (_open)
+            Padding(
+              padding: const EdgeInsets.fromLTRB(14, 0, 14, 14),
+              child: Text(widget.text,
+                  style: const TextStyle(color: AppColors.ink, height: 1.45)),
+            ),
+        ],
+      ),
+    );
+  }
 }

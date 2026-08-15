@@ -248,7 +248,13 @@ class QiroatLessonDetail extends StatelessWidget {
             _ReadingBlock(lesson: lesson),
             if (lesson.translation.isNotEmpty) ...[
               const SizedBox(height: 12),
-              _TranslationBlock(text: lesson.translation),
+              _FoldBlock(
+                  icon: '🇺🇿', title: 'Tarjimasi', text: lesson.translation),
+            ],
+            if (lesson.exercise.isNotEmpty) ...[
+              const SizedBox(height: 8),
+              _FoldBlock(
+                  icon: '✍️', title: 'Mashq', text: lesson.exercise),
             ],
             const SizedBox(height: 24),
             _sectionLabel('📚', 'Lug\'at (${lesson.vocab.length} so\'z)'),
@@ -637,18 +643,20 @@ class _GrammarTable extends StatelessWidget {
 }
 
 
-/// Matnning o'zbekcha tarjimasi - kitobning oxirida berilgan.
+/// Yopiladigan bo'lim - tarjima va mashq uchun.
 ///
-/// Yopiq holda turadi: avval o'quvchi o'zi tushunishga urinsin, keyin
-/// ochib tekshirsin.
-class _TranslationBlock extends StatefulWidget {
+/// Yopiq turadi: avval o'quvchi matnni o'zi tushunishga urinsin, keyin
+/// ochib tekshirsin. Mashq ham shunday - oldindan ko'zga tashlanmasin.
+class _FoldBlock extends StatefulWidget {
+  final String icon;
+  final String title;
   final String text;
-  const _TranslationBlock({required this.text});
+  const _FoldBlock({required this.icon, required this.title, required this.text});
   @override
-  State<_TranslationBlock> createState() => _TranslationBlockState();
+  State<_FoldBlock> createState() => _FoldBlockState();
 }
 
-class _TranslationBlockState extends State<_TranslationBlock> {
+class _FoldBlockState extends State<_FoldBlock> {
   bool _open = false;
 
   @override
@@ -669,10 +677,11 @@ class _TranslationBlockState extends State<_TranslationBlock> {
               padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
               child: Row(
                 children: [
-                  const Text('🇺🇿 ', style: TextStyle(fontSize: 15)),
-                  const Expanded(
-                    child: Text('Tarjimasi',
-                        style: TextStyle(fontWeight: FontWeight.w800, color: AppColors.ink)),
+                  Text('${widget.icon} ', style: const TextStyle(fontSize: 15)),
+                  Expanded(
+                    child: Text(widget.title,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.w800, color: AppColors.ink)),
                   ),
                   Icon(_open ? Icons.expand_less : Icons.expand_more,
                       color: AppColors.emerald),

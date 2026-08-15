@@ -180,6 +180,11 @@ class QiroatLesson {
   /// Darsdan keyingi mashq: o'zbekcha gaplarni arabchaga o'girish (1-kitob).
   final String exercise;
 
+  /// Mashqning arabcha javobi - kitobda «N-дарснинг ўзбекча матнидаги
+  /// таржима» sarlavhasi ostida beriladi. PDF matn qatlamida buzuq, shuning
+  /// uchun sahifa tasviridan o'qib kiritiladi (bosqichma-bosqich).
+  final String exerciseAnswer;
+
   const QiroatLesson({
     required this.book,
     required this.num,
@@ -189,6 +194,7 @@ class QiroatLesson {
     this.tables = const [],
     this.translation = '',
     this.exercise = '',
+    this.exerciseAnswer = '',
   });
 
   /// Dars tugatilganini belgilash uchun noyob id (kitob + dars).
@@ -205,6 +211,7 @@ class QiroatLesson {
             .toList(),
         translation: j['translation'] ?? '',
         exercise: j['exercise'] ?? '',
+        exerciseAnswer: j['exerciseAnswer'] ?? '',
       );
 }
 

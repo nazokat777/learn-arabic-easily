@@ -256,6 +256,14 @@ class QiroatLessonDetail extends StatelessWidget {
               _FoldBlock(
                   icon: '✍️', title: 'Mashq', text: lesson.exercise),
             ],
+            if (lesson.exerciseAnswer.isNotEmpty) ...[
+              const SizedBox(height: 8),
+              _FoldBlock(
+                  icon: '✅',
+                  title: 'Mashqning javobi',
+                  text: lesson.exerciseAnswer,
+                  arabic: true),
+            ],
             const SizedBox(height: 24),
             _sectionLabel('📚', 'Lug\'at (${lesson.vocab.length} so\'z)'),
             const SizedBox(height: 8),
@@ -651,7 +659,9 @@ class _FoldBlock extends StatefulWidget {
   final String icon;
   final String title;
   final String text;
-  const _FoldBlock({required this.icon, required this.title, required this.text});
+  final bool arabic;
+  const _FoldBlock({required this.icon, required this.title, required this.text,
+      this.arabic = false});
   @override
   State<_FoldBlock> createState() => _FoldBlockState();
 }
@@ -692,8 +702,12 @@ class _FoldBlockState extends State<_FoldBlock> {
           if (_open)
             Padding(
               padding: const EdgeInsets.fromLTRB(14, 0, 14, 14),
-              child: Text(widget.text,
-                  style: const TextStyle(color: AppColors.ink, height: 1.45)),
+              child: widget.arabic
+                  ? Text(widget.text,
+                      textDirection: TextDirection.rtl,
+                      style: AppTheme.arabic(size: 20, color: AppColors.ink))
+                  : Text(widget.text,
+                      style: const TextStyle(color: AppColors.ink, height: 1.45)),
             ),
         ],
       ),

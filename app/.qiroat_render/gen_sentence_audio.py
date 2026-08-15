@@ -35,19 +35,18 @@ RETRIES = 4
 TERM = ".؟!؛?"      # splitSentences ASCII '?' ni ham ajratuvchi deb biladi
 RUN_ON = ".؟!؛"     # ketma-ket ajratuvchilar bir jumlaga qo'shiladi ('?' dan tashqari)
 
-# Boshdagi jimlikni qat'iy olib tashlaymiz, OXIRIDA esa tabiiy so'nishni
-# qoldiramiz.
+# HECH NARSA KESILMAYDI.
 #
-# Nega: avval ikkala tomon ham -45 dB bilan kesilardi va bu so'z oxiridagi
-# qisqa unlini yeb qo'yardi. Eng ko'p zarar damma («u») ga tegardi - u eng
-# jim tugaydi, shuning uchun «بُ» klipi 0.29 s bo'lib, unli deyarli
-# eshitilmasdi (yumshoq kesuvda o'sha klip 0.51 s).
-FFMPEG_TRIM = (
-    "silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.05,"
-    "areverse,"
-    "silenceremove=start_periods=1:start_threshold=-60dB:start_silence=0.25,"
-    "areverse"
-)
+# Uch marta urinib ko'rildi va har safar nutqning bir qismi yo'qoldi:
+# avval so'z oxiridagi qisqa unli (damma «u» eng jim tugagani uchun eng
+# ko'p zarar ko'rdi), keyin bosh tomondagi kesuv so'zning birinchi harfini
+# yeb qo'ydi - «أَخَذَ» tanib bo'lmas holga kelgan edi. O'lchov: kesuv har
+# bir so'zdan ~0.2 s olib tashlar edi.
+#
+# Endi ffmpeg faqat formatni o'zgartiradi (anull - o'tkazuvchi filtr).
+# Klip boshida ~0.2 s, oxirida ~0.7 s jimlik qoladi; buning evaziga
+# birorta harf ham, harakat ham yo'qolmaydi.
+FFMPEG_TRIM = "anull"
 
 
 def split_sentences(reading: str) -> list[str]:

@@ -16,8 +16,11 @@ Two things make this safe to do mechanically, unlike the Arabic:
 Headings sometimes break across lines, so the search runs over the whole
 document text, never line by line (line-wise matching finds only 38 of 52).
 
-Book 2 and 3 have no translation section - checked, «таржима» appears there
-only inside exercise instructions.
+Books 2 and 3 have their own translation sections too - see
+add_translations_b2.py / add_translations_b3.py. An earlier note here claimed
+they had none; that was wrong. The check had searched for the word «таржима»,
+which those books never use: their headings are plain «N-дарс» (and «N-ҳикоя»
+for three poem lessons in book 3). Search by STRUCTURE, not by a keyword.
 """
 import json, re, sys, io
 from pathlib import Path

@@ -99,6 +99,23 @@ def needed() -> dict:
 
     for w in json.loads(Path("assets/content/vocabulary.json").read_text(encoding="utf-8"))["words"]:
         want.setdefault(head(w["ar"]), "mashqlar lug'ati")
+
+    nahv = Path("assets/content/nahv_lessons.json")
+    if nahv.exists():
+        for L in json.loads(nahv.read_text(encoding="utf-8"))["lessons"]:
+            pairs = [L.get("rule", {})]
+            for b in L.get("blocks", []):
+                pairs.append(b)
+                if b.get("intro"):
+                    pairs.append(b["intro"])
+                pairs.extend(b.get("items", []))
+            for pr in pairs:
+                for s in split_sentences(pr.get("ar", "")):
+                    if not ARABIC.search(s):
+                        continue
+                    want.setdefault(s, f"nahv {L['num']}-dars")
+                    for w in ARABIC.findall(s):
+                        want.setdefault(w, f"nahv {L['num']}-dars so'zi")
     return want
 
 

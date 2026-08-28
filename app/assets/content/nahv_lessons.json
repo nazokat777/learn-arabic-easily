@@ -1,0 +1,69 @@
+{
+  "meta": {
+    "title": "Nahv — الدروس النحوية",
+    "source": "«الدُّرُوسُ النَّحْوِيَّةُ» (ad-Durus an-Nahviyya), 4 qism. Nashriyot: دار إيلاف الدولية (Quvayt), 1-nashr, 1427h / 2006m.",
+    "note": "Kitob TO'LIQ arabcha - o'zbekcha tarjimasi kitobda YO'Q. Arabcha matn sahifa tasviridan aynan ko'chirilgan (PDF skaner, matn qatlami yo'q); o'zbekchasi esa tarjima, kitobning so'zi emas."
+  },
+  "lessons": [
+    {
+      "book": 1,
+      "num": 1,
+      "page": 9,
+      "titleAr": "تَكَوُّنُ الكَلِمَاتِ",
+      "title": "So'zlarning tuzilishi",
+      "rule": {
+        "ar": "مِنَ الْحُرُوفِ الهِجَائِيَّةِ تَتَرَكَّبُ الكَلِمَاتُ.",
+        "uz": "So'zlar alifbo harflaridan tarkib topadi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "كُلُّ وَاحِدٍ مِنَّا يَعْرِفُ الْحُرُوفَ الهِجَائِيَّةَ الَّتِي أَوَّلُهَا الأَلِفُ، وَآخِرُهَا الْيَاءُ. فَمِنْ هَذِهِ الْحُرُوفِ تَتَكَوَّنُ جَمِيعُ الكَلِمَاتِ الَّتِي نَتَلَفَّظُ بِهَا فِي مُحَادَثَتِنَا، وَنَسْتَعْمِلُهَا فِي مُخَاطَبَتِنَا؛ مِثْلُ: أَبٍ، أُمٍّ، أَخٍ، أُخْتٍ، اجْتِهَادٍ، نَجَاحٍ.",
+          "uz": "Har birimiz alifbo harflarini bilamiz: uning birinchisi alif, oxirgisi yodir. Ana shu harflardan biz suhbatimizda talaffuz qiladigan va murojaatimizda ishlatadigan barcha so'zlar tarkib topadi; masalan: ab (ota), umm (ona), ax (aka), uxt (opa), ijtihod (tirishqoqlik), najoh (muvaffaqiyat)."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَقَدْ تَكُونُ الكَلِمَةُ:",
+            "uz": "So'z quyidagicha bo'lishi mumkin:"
+          },
+          "items": [
+            {
+              "ar": "حَرْفًا وَاحِدًا؛ كَالْبَاءِ فِي: ﴿بِسْمِ اللهِ﴾، وَالهَمْزَةِ فِي: ﴿أَلَمْ نَشْرَحْ لَكَ﴾.",
+              "uz": "Bitta harf; masalan «بِسْمِ اللهِ» dagi «ب», «أَلَمْ نَشْرَحْ لَكَ» dagi hamza."
+            },
+            {
+              "ar": "وَحَرْفَيْنِ؛ مِثْلُ: «مِنْ»، وَ«فِي».",
+              "uz": "Ikki harf; masalan «مِنْ» va «فِي»."
+            },
+            {
+              "ar": "وَثَلاَثَةَ أَحْرُفٍ؛ مِثْلُ: عِنَبٍ، وَشَجَرٍ.",
+              "uz": "Uch harf; masalan «عِنَب» (uzum), «شَجَر» (daraxt)."
+            },
+            {
+              "ar": "وَأَرْبَعَةً؛ مِثْلُ: جَدْوَلٍ، وَجَعْفَرٍ.",
+              "uz": "To'rt harf; masalan «جَدْوَل» (ariq, jadval), «جَعْفَر» (Ja'far)."
+            },
+            {
+              "ar": "وَخَمْسَةً؛ مِثْلُ: سَفَرْجَلٍ.",
+              "uz": "Besh harf; masalan «سَفَرْجَل» (behi)."
+            },
+            {
+              "ar": "وَسِتَّةً؛ مِثْلُ: زَعْفَرَانٍ.",
+              "uz": "Olti harf; masalan «زَعْفَرَان» (za'faron)."
+            },
+            {
+              "ar": "وَسَبْعَةً؛ مِثْلُ: اسْتِفْهَامٍ.",
+              "uz": "Yetti harf; masalan «اسْتِفْهَام» (so'roq)."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "وَلاَ تَتَجَاوَزُ الكَلِمَةُ هَذَا الْعَدَدَ.",
+          "uz": "So'z bu sondan oshmaydi."
+        }
+      ]
+    }
+  ]
+}

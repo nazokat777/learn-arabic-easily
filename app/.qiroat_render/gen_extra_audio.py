@@ -57,6 +57,22 @@ def collect() -> list[str]:
             want(s)
             for w in ARABIC_RUN.findall(s):
                 want(w)
+
+    # Nahv darslari: qoida, izohlar va misollar - hammasi arabcha.
+    nahv = Path("assets/content/nahv_lessons.json")
+    if nahv.exists():
+        for L in json.loads(nahv.read_text(encoding="utf-8"))["lessons"]:
+            pairs = [L.get("rule", {})]
+            for b in L.get("blocks", []):
+                pairs.append(b)
+                if b.get("intro"):
+                    pairs.append(b["intro"])
+                pairs.extend(b.get("items", []))
+            for pr in pairs:
+                for s in split_sentences(pr.get("ar", "")):
+                    want(s)
+                    for w in ARABIC_RUN.findall(s):
+                        want(w)
     return list(out)
 
 

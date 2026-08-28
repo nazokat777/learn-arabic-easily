@@ -27,6 +27,7 @@ flutter:
     - assets/content/harakat.json
     - assets/content/vocabulary.json
     - assets/content/qiroat_lessons.json
+    - assets/content/nahv_lessons.json
     # Lug'at so'zlarining tayyor ovozi — telefonda arabcha TTS bo'lmaganda ham
     # ishlashi uchun. Flutter web bu fayllarni faqat kerak bo'lganda yuklaydi.
     - assets/audio/vocab_manifest.json

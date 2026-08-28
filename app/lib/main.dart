@@ -9,6 +9,7 @@ import 'theme.dart';
 import 'screens/alifbo_home.dart';
 import 'screens/qiroat_lessons.dart';
 import 'screens/mashqlar_home.dart';
+import 'screens/nahv_home.dart';
 import 'widgets/entrance.dart';
 
 late final ContentRepository repo;
@@ -119,11 +120,12 @@ class HomeScreen extends StatelessWidget {
                 delay: const Duration(milliseconds: 420),
                 child: ModuleCard(
                   title: 'Nahv',
-                  subtitle: 'Jumla tuzilishi — i\'rob, amil-ma\'mul',
+                  subtitle: 'Jumla tuzilishi — «الدروس النحوية» kitobidan',
                   arabic: 'نَحْو',
                   color: AppColors.coral,
-                  enabled: false,
-                  onTap: () {},
+                  enabled: true,
+                  onTap: () => Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => const NahvHome())),
                 ),
               ),
             ],

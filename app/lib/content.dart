@@ -165,6 +165,75 @@ class QiroatTableRow {
       );
 }
 
+/// Nahv darsining ikki tilli bo'lagi: arabchasi kitobdan, o'zbekchasi tarjima.
+class NahvPair {
+  final String ar;
+  final String uz;
+  const NahvPair({required this.ar, required this.uz});
+
+  factory NahvPair.fromJson(Map<String, dynamic> j) =>
+      NahvPair(ar: j['ar'] ?? '', uz: j['uz'] ?? '');
+}
+
+/// Darsning bir bloki: izoh xatboshisi («para») yoki raqamli ro'yxat («list»).
+class NahvBlock {
+  final String type;
+  final NahvPair? main;   // para uchun
+  final NahvPair? intro;  // list uchun kirish jumlasi
+  final List<NahvPair> items;
+
+  const NahvBlock({required this.type, this.main, this.intro, this.items = const []});
+
+  factory NahvBlock.fromJson(Map<String, dynamic> j) {
+    final type = j['type'] ?? 'para';
+    return NahvBlock(
+      type: type,
+      main: type == 'list' ? null : NahvPair.fromJson(j),
+      intro: j['intro'] == null
+          ? null
+          : NahvPair.fromJson(j['intro'] as Map<String, dynamic>),
+      items: ((j['items'] as List?) ?? const [])
+          .map((e) => NahvPair.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+  }
+}
+
+/// «الدروس النحوية» kitobining bir darsi.
+class NahvLesson {
+  final int book;
+  final int num;
+  final int page;      // manba kitobdagi sahifa - tekshirish uchun
+  final String titleAr;
+  final String title;
+  final NahvPair rule;
+  final List<NahvBlock> blocks;
+
+  const NahvLesson({
+    required this.book,
+    required this.num,
+    required this.page,
+    required this.titleAr,
+    required this.title,
+    required this.rule,
+    required this.blocks,
+  });
+
+  factory NahvLesson.fromJson(Map<String, dynamic> j) => NahvLesson(
+        book: j['book'] ?? 1,
+        num: j['num'],
+        page: j['page'] ?? 0,
+        titleAr: j['titleAr'] ?? '',
+        title: j['title'] ?? '',
+        rule: j['rule'] == null
+            ? const NahvPair(ar: '', uz: '')
+            : NahvPair.fromJson(j['rule'] as Map<String, dynamic>),
+        blocks: ((j['blocks'] as List?) ?? const [])
+            .map((e) => NahvBlock.fromJson(e as Map<String, dynamic>))
+            .toList(),
+      );
+}
+
 class QiroatLesson {
   final int book; // qaysi kitob (1, 2, 3)
   final int num;
@@ -221,6 +290,7 @@ class ContentRepository {
   List<Haraka> harakat = [];
   List<VocabWord> words = [];
   List<QiroatLesson> qiroatLessons = [];
+  List<NahvLesson> nahvLessons = [];
 
   bool _loaded = false;
 
@@ -237,6 +307,9 @@ class ContentRepository {
 
     final q = json.decode(await rootBundle.loadString('assets/content/qiroat_lessons.json'));
     qiroatLessons = (q['lessons'] as List).map((e) => QiroatLesson.fromJson(e)).toList();
+
+    final n = json.decode(await rootBundle.loadString('assets/content/nahv_lessons.json'));
+    nahvLessons = (n['lessons'] as List).map((e) => NahvLesson.fromJson(e)).toList();
 
     _loaded = true;
   }

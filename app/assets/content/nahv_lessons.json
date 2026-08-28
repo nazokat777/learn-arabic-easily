@@ -2634,6 +2634,348 @@
           "uz": "Birinchi kitob tamom bo'ldi."
         }
       ]
+    },
+    {
+      "book": 2,
+      "num": 1,
+      "page": 78,
+      "titleAr": "مُقَدِّمَةُ الكِتَابِ الثَّانِي",
+      "title": "Ikkinchi kitob muqaddimasi",
+      "rule": {
+        "ar": "",
+        "uz": ""
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
+          "uz": "Mehribon va rahmli Alloh nomi bilan."
+        },
+        {
+          "type": "para",
+          "ar": "حَمْدًا لِمَنْ جَعَلَ مَعْرِفَةَ مَرَامِي كَلَامِ الْعَرَبِ سَبَبًا لِدَرْكِ مَرَامِ طُلَّابِ الْحِكْمَةِ وَالْأَدَبِ.",
+          "uz": "Arab kalomining maqsadlarini bilishni hikmat va adab talabalari murodiga yetishiga sabab qilgan Zotga hamd bo'lsin."
+        },
+        {
+          "type": "para",
+          "ar": "وَصَلَاةً وَسَلَامًا عَلَى مَنْ بَنَى بِإِعْرَابِهِ قَوَاعِدَ الْإِنْصَافِ، وَعَلَى آلِهِ الْمُمَيَّزِينَ بِأَحَاسِنِ الْأَحْوَالِ وَمَحَاسِنِ الْأَوْصَافِ.",
+          "uz": "O'z bayoni bilan insof qoidalarini qurgan Zotga hamda go'zal hollar va chiroyli sifatlar bilan ajralib turgan oilasiga salavot va salom bo'lsin."
+        },
+        {
+          "type": "para",
+          "ar": "أَمَّا بَعْدُ؛ فَهَذَا هُوَ الكِتَابُ الثَّانِي فِي الدُّرُوسِ النَّحْوِيَّةِ، الَّتِي أَمَرَتْنَا بِتَنْسِيقِهَا وِزَارَةُ الْمَعَارِفِ الْعُمُومِيَّةُ، أَتَيْنَا فِيهِ بِمَا لَا يَتَّسِعُ تَلَامِيذَ الْفِرْقَةِ الثَّانِيَةِ الاِبْتِدَائِيَّةِ تَرْكُهُ، وَلَا يَعْسُرُ عَلَى مَنْ فَهِمَ الكِتَابَ الْأَوَّلَ دَرْكُهُ.",
+          "uz": "So'ngra: bu — Umumiy ma'orif vazirligi bizga tartib berishni buyurgan «Nahv darslari»ning ikkinchi kitobidir. Unda boshlang'ich ikkinchi bosqich o'quvchilari tashlab keta olmaydigan, birinchi kitobni tushungan kishiga esa anglashi qiyin bo'lmagan narsalarni keltirdik."
+        },
+        {
+          "type": "para",
+          "ar": "وَلِذَلِكَ لَمْ نَرَ مِنْ حَاجَةٍ لِسُلُوكِ سَبِيلِ الشَّرْحِ الْمُطَوَّلِ، كَمَا سَلَكْنَا فِي الكِتَابِ الْأَوَّلِ، فَاكْتَفَيْنَا بِالْإِيضَاحِ الْقَصِيرِ، عِنْدَمَا تَمَسُّ الْحَاجَةُ إِلَى التَّفْسِيرِ، وَأَعْقَبْنَا كُلَّ مَبْحَثٍ بِجُمْلَةٍ مِنَ الْأَمْثِلَةِ، وَبَعْضِ تَمَارِينَ وَأَسْئِلَةٍ؛ حَتَّى لَا يَقِفَ الْمُتَعَلِّمُ عِنْدَ خُصُوصِ مِثَالِ الْقَاعِدَةِ، وَيُحْجِمَ عَنْ كَثْرَةِ التَّطْبِيقِ فَتَفُوتَهُ الْفَائِدَةُ.",
+          "uz": "Shu sababli birinchi kitobda yurgan uzun sharh yo'lidan borishga hojat ko'rmadik; izohga ehtiyoj tug'ilgan o'rinda qisqa tushuntirish bilan kifoyalandik. Har bir mavzudan keyin bir qator misollar, ba'zi mashqlar va savollar keltirdik — toki o'quvchi qoidaning faqat o'sha misoli bilan cheklanib qolmasin, ko'p mashq qilishdan tortinib, foydadan quruq qolmasin."
+        },
+        {
+          "type": "para",
+          "ar": "وَنَبَّهْنَا فِي كُلِّ مَقَامٍ عَلَى الْأَغْلَاطِ الَّتِي تَقَعُ غَالِبًا فِيهِ، حَتَّى لَا يَغْتَرَّ الطَّالِبُ بِاسْتِفَاضَتِهَا بَيْنَ مُعَاصِرِيهِ.",
+          "uz": "Har bir o'rinda ko'pincha yo'l qo'yiladigan xatolarga ogohlantirdik — toki talaba bu xatolarning zamondoshlari orasida keng tarqalganiga aldanib qolmasin."
+        },
+        {
+          "type": "para",
+          "ar": "وَلَمْ نَجْمَعْ عَلَامَاتِ الْإِعْرَابِ الْأَصْلِيَّةَ وَالْفَرْعِيَّةَ كُلَّهَا فِي مَبْحَثٍ وَاحِدٍ؛ مَخَافَةَ أَنْ يُفْضِيَ التَّهَافُتُ عَلَى الْوَسَائِلِ إِلَى إِضَاعَةِ الْمَقَاصِدِ، بَلْ ذَكَرْنَاهَا مُفَرَّقَةً فِي أَبْوَابِ الْإِعْرَابِ؛ تَسْهِيلًا لِلْمَطَالِبِ وَتَيْسِيرًا لِلطُّلَّابِ، وَنَسْأَلُ اللَّهَ تَعَالَى أَنْ يَجْعَلَ الْمَنْفَعَةَ بِهِ، وَبِمَا قَبْلَهُ عَامَّةً، وَالْفَائِدَةَ بِمَا بَعْدَهُ تَامَّةً.",
+          "uz": "I'robning asliy va far'iy alomatlarini bitta mavzuga jamlamadik — vositalarga ortiqcha berilish maqsadlarni yo'qotib qo'yishidan qo'rqib; balki ularni i'rob boblariga taqsimlab keltirdik, mavzularni osonlashtirish va talabalarga yengillik bo'lishi uchun. Alloh taolodan bu kitob va undan oldingisi bilan manfaat umumiy bo'lishini, undan keyingisi bilan foyda to'liq bo'lishini so'raymiz."
+        },
+        {
+          "type": "para",
+          "ar": "حِفْنِي نَاصِفٌ، مُحَمَّدٌ دِيَابٌ، مُصْطَفَى طَمُّومٌ، مُحَمَّدٌ صَالِحٌ.",
+          "uz": "Hifniy Nosif, Muhammad Diyob, Mustafo Tammum, Muhammad Solih."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 2,
+      "num": 2,
+      "page": 77,
+      "titleAr": "فَائِدَةٌ",
+      "title": "Foyda (kirish)",
+      "rule": {
+        "ar": "وَالْقَوَاعِدُ الكَافِلَةُ بِبَيَانِ ذَلِكَ تُسَمَّى «عِلْمَ النَّحْوِ»، وَهُوَ الْمَقْصُودُ بِالذَّاتِ مِنْ هَذَا الكِتَابِ.",
+        "uz": "Buni bayon qilishni o'z zimmasiga olgan qoidalar «nahv ilmi» deb ataladi; bu kitobdan ko'zlangan asosiy maqsad ham shudir."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "اللُّغَةُ الْعَرَبِيَّةُ: عِبَارَةٌ عَنْ أَلْفَاظٍ مَحْصُورَةٍ يَتَأَلَّفُ مِنْهَا عَلَى وَجْهٍ مَخْصُوصٍ مُرَكَّبَاتٌ تَحْصُلُ بِهَا الْإِفَادَةُ، وَالاِسْتِفَادَةُ الضَّرُورِيَّتَانِ لِلاِجْتِمَاعِ الْإِنْسَانِيِّ.",
+          "uz": "Arab tili — chegaralangan so'zlardan iborat bo'lib, ulardan maxsus tarzda tuzilmalar tarkib topadi; inson jamiyati uchun zarur bo'lgan ma'no berish va ma'no olish ana shular orqali hosil bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَلَيْسَتْ كُلُّ هَذِهِ الْأَلْفَاظِ عِنْدَمَا تَتَرَكَّبُ مِنْهَا جُمَلٌ مُفِيدَةٌ سَوَاءً، بَلْ مِنْهَا مَا يَثْبُتُ عَلَى حَالَةٍ وَاحِدَةٍ، وَمِنْهَا مَا يَتَوَارَدُ عَلَيْهِ أَحْوَالٌ مُخْتَلِفَةٌ، وَمِنْ هَذَا الْقَبِيلِ أَكْثَرُ الكَلِمَاتِ.",
+          "uz": "Bu so'zlarning hammasi mazmunli jumlalar tuzilganda bir xil bo'lavermaydi: ba'zisi bitta holatda qoladi, ba'zisiga esa turli holatlar navbatma-navbat keladi — so'zlarning ko'pchiligi shu turdandir."
+        },
+        {
+          "type": "para",
+          "ar": "وَمَنْ يُرِدْ أَنْ يَكُونَ كَلَامُهُ مُوَافِقًا لِقَوَانِينِ اللُّغَةِ الْعَرَبِيَّةِ، يَحْتَجْ لِأَنْ يَعْرِفَ الثَّابِتَ مِنْ كَلِمَاتِهَا عَلَى حَالَةٍ وَاحِدَةٍ، وَالْمُتَغَيِّرَ مِنْهَا، وَأَنْوَاعَ التَّغَيُّرِ الَّتِي تَعْرِضُ لَهَا، وَمَوَاضِعَ عُرُوضِهَا، حَتَّى يُعْطِيَ كُلَّ لَفْظٍ حَقَّهُ، وَيَسْلَمَ بِذَلِكَ مِنْ خَطَأِ اللِّسَانِ وَمُخَالَفَةِ قَوَانِينِ اللُّغَةِ.",
+          "uz": "Kimning kalomi arab tili qonunlariga muvofiq bo'lishini istasa, uning so'zlaridan qaysilari bitta holatda turishini, qaysilari o'zgarishini, ularga qanday o'zgarishlar yuz berishini va bu o'zgarishlar qaysi o'rinlarda ro'y berishini bilishi kerak bo'ladi — toki har bir so'zga haqqini bersin va shu bilan til xatosidan hamda til qonunlariga xilof bo'lishdan omon qolsin."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 2,
+      "num": 3,
+      "page": 79,
+      "titleAr": "تَقْسِيمُ الكَلِمَاتِ إِلَى فِعْلٍ وَاسْمٍ وَحَرْفٍ",
+      "title": "So'zlarning fe'l, ism va harfga bo'linishi",
+      "rule": {
+        "ar": "الْأَلْفَاظُ الْمُفْرَدَةُ الَّتِي تَتَأَلَّفُ مِنْهَا الْجُمَلُ الْمُفِيدَةُ تَنْحَصِرُ فِي ثَلَاثَةِ أَنْوَاعٍ: فِعْلٍ، وَاسْمٍ، وَحَرْفٍ.",
+        "uz": "Mazmunli jumlalar tarkib topadigan yakka so'zlar uch turga jamlanadi: fe'l, ism va harf."
+      },
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            {
+              "ar": "فَالْفِعْلُ: مَا يَدُلُّ عَلَى مَعْنًى مُسْتَقِلٍّ بِالْفَهْمِ، وَالزَّمَنُ جُزْءٌ مِنْهُ؛ مِثْلُ: كَتَبَ، وَيَكْتُبُ، وَاكْتُبْ.",
+              "uz": "Fe'l — tushunilishi mustaqil bo'lgan ma'noga dalolat qiladi va zamon uning bir qismidir; masalan: كَتَبَ (yozdi), يَكْتُبُ (yozadi), اكْتُبْ (yoz)."
+            },
+            {
+              "ar": "وَالاِسْمُ: مَا يَدُلُّ عَلَى مَعْنًى مُسْتَقِلٍّ بِالْفَهْمِ، وَلَيْسَ الزَّمَنُ جُزْءًا مِنْهُ؛ مِثْلُ: مُحَمَّدٍ، وَكِتَابٍ، وَقِرَاءَةٍ.",
+              "uz": "Ism — tushunilishi mustaqil ma'noga dalolat qiladi, lekin zamon uning bir qismi emas; masalan: مُحَمَّد, كِتَاب (kitob), قِرَاءَة (o'qish)."
+            },
+            {
+              "ar": "وَالْحَرْفُ: مَا يَدُلُّ عَلَى مَعْنًى غَيْرِ مُسْتَقِلٍّ بِالْفَهْمِ؛ مِثْلُ: «عَلَى»، وَ«لَمْ»، وَ«هَلْ».",
+              "uz": "Harf — tushunilishi mustaqil bo'lmagan ma'noga dalolat qiladi; masalan: عَلَى, لَمْ, هَلْ."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "(١) أَيْ: لَا يَتَوَقَّفُ تَصَوُّرُهُ عَلَى تَصَوُّرِ مَعْنًى آخَرَ، فَلَفْظُ «كَتَبَ» يُفْهَمُ مِنْهُ وُقُوعُ كِتَابَةٍ فِي زَمَنٍ مَضَى بِدُونِ افْتِقَارٍ إِلَى تَصَوُّرِ مَعْنًى آخَرَ، بِخِلَافِ الْحَرْفِ، فَإِنَّ تَصَوُّرَ مَعْنَاهُ يَتَوَقَّفُ عَلَى تَصَوُّرِ مَعْنًى آخَرَ؛ إِذْ مَعْنَى لَفْظِ «عَلَى» مِنْ قَوْلِكَ: «الكِتَابُ عَلَى الكُرْسِيِّ» مَثَلًا لَا يُمْكِنُ تَصَوُّرُهُ إِلَّا بِتَصَوُّرِ مَعْنَى «الكِتَابِ» وَمَعْنَى «الكُرْسِيِّ»، بِحَيْثُ لَوْ ذُكِرَ لَفْظُ «عَلَى» مُجَرَّدًا عَنْ هَذَيْنِ اللَّفْظَيْنِ لَا يُفْهَمُ مِنْهُ اسْتِعْلَاءُ الكِتَابِ عَلَى الكُرْسِيِّ.",
+          "uz": "(1-izoh) Ya'ni uni tasavvur qilish boshqa ma'noni tasavvur qilishga bog'liq emas. «كَتَبَ» so'zidan o'tgan zamonda yozish sodir bo'lgani boshqa ma'noga muhtoj bo'lmay tushuniladi. Harf esa bunday emas: uning ma'nosini tasavvur qilish boshqa ma'noni tasavvur qilishga bog'liq. Masalan, «Kitob stul ustida» degan so'zingdagi «عَلَى» ning ma'nosini «kitob» va «stul» ma'nolarini tasavvur qilmasdan anglab bo'lmaydi; «عَلَى» yolg'iz aytilsa, kitobning stul ustida turgani tushunilmaydi."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) الْفِعْلُ مَوْضُوعٌ لِلدَّلَالَةِ عَلَى أَمْرَيْنِ: أَحَدُهُمَا: حُصُولُ شَيْءٍ، وَثَانِيهِمَا: زَمَنُ الْحُصُولِ. فَمَعْنَاهُ مُرَكَّبٌ مِنَ الزَّمَنِ وَغَيْرِهِ. مَثَلًا: لَفْظُ «كَتَبَ» يَدُلُّ عَلَى حُصُولِ الكِتَابَةِ، وَعَلَى الزَّمَنِ الَّذِي حَصَلَتْ فِيهِ الكِتَابَةُ؛ وَهُوَ الزَّمَنُ الْمَاضِي، بِخِلَافِ الاِسْمِ، فَلَيْسَ مَعْنَاهُ مُرَكَّبًا مِنَ الزَّمَنِ وَغَيْرِهِ.",
+          "uz": "(2-izoh) Fe'l ikki narsaga dalolat qilish uchun qo'yilgan: biri — biror ishning sodir bo'lishi, ikkinchisi — sodir bo'lish zamoni. Demak, uning ma'nosi zamon va boshqa narsadan tarkib topgan. Masalan «كَتَبَ» so'zi yozishning sodir bo'lganiga va yozish sodir bo'lgan zamonga — o'tgan zamonga — dalolat qiladi. Ism esa bunday emas: uning ma'nosi zamon va boshqa narsadan tarkib topmagan."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "أَمْثِلَةٌ",
+            "uz": "Misollar"
+          },
+          "items": [
+            {
+              "ar": "١ - لِلْفِعْلِ: نَصَرَ، يَنْصُرُ، انْصُرْ. ضَرَبَ، يَضْرِبُ، اضْرِبْ. فَتَحَ، يَفْتَحُ، افْتَحْ. فَرِحَ، يَفْرَحُ، افْرَحْ. كَرُمَ، يَكْرُمُ، اكْرُمْ. حَسِبَ، يَحْسِبُ، احْسِبْ. أَكْرَمَ، يُكْرِمُ، أَكْرِمْ. سَاعَدَ، يُسَاعِدُ، سَاعِدْ. انْطَلَقَ، يَنْطَلِقُ، انْطَلِقْ. اسْتَغْفَرَ، يَسْتَغْفِرُ، اسْتَغْفِرْ.",
+              "uz": "1 — Fe'lga misollar: nasara (yordam berdi) — yansuru — unsur; daraba (urdi) — yadribu — idrib; fataha (ochdi) — yaftahu — iftah; fariha (xursand bo'ldi) — yafrahu — ifrah; karuma (karamli bo'ldi) — yakrumu — ukrum; hasiba (hisobladi) — yahsibu — ihsib; akrama (ikrom qildi) — yukrimu — akrim; sa'ada (yordamlashdi) — yusa'idu — sa'id; intalaqa (yo'lga chiqdi) — yantaliqu — intaliq; istag'fara (mag'firat so'radi) — yastag'firu — istag'fir."
+            },
+            {
+              "ar": "٢ - لِلاِسْمِ: أَحْمَدُ، إِبْرَاهِيمُ، زَيْنَبُ، فَاطِمَةُ، مَكَّةُ، الْقَاهِرَةُ، الْحِجَازُ، مِصْرُ، فَرَسٌ، جَمَلٌ، عِنَبٌ، رُمَّانٌ، ذَهَبٌ، نُحَاسٌ، قَلَمٌ، دَوَاةٌ، شُبَّاكٌ، مَاءٌ، هَوَاءٌ، نَارٌ، شَرَفٌ، نَبَاهَةٌ.",
+              "uz": "2 — Ismga misollar: Ahmad, Ibrohim, Zaynab, Fotima, Makka, Qohira, Hijoz, Misr, ot, tuya, uzum, anor, oltin, mis, qalam, siyohdon, deraza, suv, havo, olov, sharaf, ziyraklik."
+            },
+            {
+              "ar": "٣ - لِلْحُرُوفِ: مِنْ، إِلَى، عَنْ، فِي، قَدْ، يَا، لَكِنْ، لَيْتَ، أَلْ، ثُمَّ، حَتَّى، كَيْ.",
+              "uz": "3 — Harflarga misollar: min, ilo, an, fi, qad, yo, lakin, layta, al, summa, hatto, kay."
+            }
+          ]
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "بَيِّنِ الْأَفْعَالَ، وَالْأَسْمَاءَ، وَالْحُرُوفَ الَّتِي فِي هَذِهِ الْجُمَلِ:",
+          "uz": "Bu jumlalardagi fe'llarni, ismlarni va harflarni ko'rsating:"
+        },
+        {
+          "ar": "الْحِفْظُ فِي الصِّغَرِ كَالنَّقْشِ فِي الْحَجَرِ.",
+          "uz": "Yoshlikdagi yodlash toshdagi naqsh kabidir."
+        },
+        {
+          "ar": "لَنْ تُدْرِكَ الْأَرَبَ إِلَّا بِالتَّعَبِ، وَلَنْ تَبْلُغَ الْمَجْدَ إِلَّا بِالْأَدَبِ.",
+          "uz": "Maqsadga faqat mehnat bilan yetasan, ulug'likka esa faqat odob bilan erishasan."
+        },
+        {
+          "ar": "بِالاِمْتِحَانِ يُكْرَمُ الْمَرْءُ أَوْ يُهَانُ.",
+          "uz": "Imtihon bilan kishi yo hurmat topadi, yo xor bo'ladi."
+        },
+        {
+          "ar": "الْوَقْتُ كَالسَّيْفِ إِنْ لَمْ تَقْطَعْهُ قَطَعَكَ.",
+          "uz": "Vaqt qilich kabi: uni kesmasang, u seni kesadi."
+        },
+        {
+          "ar": "اعْلَمْ أَنَّ الْإِنْسَانَ بِالْقَلْبِ وَاللِّسَانِ فَانْطِقْ بِالْحِكْمَةِ، وَكُنْ عَالِيَ الْهِمَّةِ.",
+          "uz": "Bilki, inson qalbi va tili bilandir — hikmat so'zla va himmating yuksak bo'lsin."
+        },
+        {
+          "ar": "عَامِلِ النَّاسَ بِمَا تُحِبُّ أَنْ يُعَامِلُوكَ بِهِ.",
+          "uz": "Odamlarga o'zingga qanday muomala qilishlarini istasang, shunday muomala qil."
+        },
+        {
+          "ar": "وَلْنَتَكَلَّمْ عَلَى الْأَنْوَاعِ الثَّلَاثَةِ مُقَدِّمِينَ مَا يَقِلُّ الكَلَامُ عَلَيْهِ.",
+          "uz": "Endi bu uch tur haqida so'z yuritamiz; so'zi ozroq bo'lganini oldinga qo'yamiz."
+        }
+      ]
+    },
+    {
+      "book": 2,
+      "num": 4,
+      "page": 81,
+      "titleAr": "١ - الكَلَامُ عَلَى الْحَرْفِ",
+      "title": "1. Harf haqida so'z",
+      "rule": {
+        "ar": "كُلُّ مَا فِي اللُّغَةِ الْعَرَبِيَّةِ مِنَ الْحُرُوفِ لَا يَتَجَاوَزُ ثَمَانِينَ حَرْفًا. وَتُسَمَّى: «حُرُوفَ الْمَعَانِي»؛ وَهِيَ خَمْسَةُ أَقْسَامٍ: أُحَادِيَّةٌ، وَثُنَائِيَّةٌ، وَثُلَاثِيَّةٌ، وَرُبَاعِيَّةٌ، وَخُمَاسِيَّةٌ.",
+        "uz": "Arab tilidagi harflarning hammasi sakson harfdan oshmaydi. Ular «ma'no harflari» deb ataladi va besh bo'limdir: bir harfli, ikki harfli, uch harfli, to'rt harfli va besh harfli."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "فَمِنَ الْأُحَادِيَّةِ: الْهَمْزَةُ، وَالْبَاءُ، وَالتَّاءُ، وَالسِّينُ، وَالْفَاءُ، وَالكَافُ، وَاللَّامُ، وَالْوَاوُ.",
+          "uz": "Bir harflilardan: hamza, ب, ت, س, ف, ك, ل, و."
+        },
+        {
+          "type": "para",
+          "ar": "نَحْوُ: أَسَافَرَ إِبْرَاهِيمُ؟ كَتَبْتُ بِقَلَمِكَ. خَرَجَتِ الْجَارِيَةُ وَسَتَرْجِعُ. دَخَلَ الْعُلَمَاءُ فَالْأُمَرَاءُ. الْعِلْمُ كَالنُّورِ. الْعَاقِبَةُ لَكُمْ. تَسُودُونَ بِالْعِلْمِ وَالْأَدَبِ.",
+          "uz": "Masalan: «Ibrohim safarga chiqdimi?», «Qalaming bilan yozdim», «Xizmatkor qiz chiqdi va qaytadi», «Olimlar, keyin amirlar kirdi», «Ilm nurga o'xshaydi», «Oqibat sizniki», «Ilm va odob bilan yuksalasiz»."
+        },
+        {
+          "type": "para",
+          "ar": "وَمِنَ الثُّنَائِيَّةِ: «إِذْ»، «أَلْ»، «أَمْ»، «أَنْ»، «إِنْ»، «أَوْ»، «بَلْ»، «عَنْ»، «فِي»، «قَدْ»، «كَيْ»، «لَا»، «لَمْ»، «لَنْ»، «لَوْ»، «مَا»، «مِنْ»، «هَلْ»، «يَا».",
+          "uz": "Ikki harflilardan: إِذْ, أَلْ, أَمْ, أَنْ, إِنْ, أَوْ, بَلْ, عَنْ, فِي, قَدْ, كَيْ, لَا, لَمْ, لَنْ, لَوْ, مَا, مِنْ, هَلْ, يَا."
+        },
+        {
+          "type": "para",
+          "ar": "نَحْوُ: بَيْنَمَا الْعُسْرُ إِذِ الْيُسْرُ. الرَّجُلُ أَقْوَى مِنَ الْمَرْأَةِ. أَقَرِيبٌ أَمْ بَعِيدٌ سَفَرُكَ؟ يَسُرُّنِي أَنْ تَعُودَ قَرِيبًا. إِنْ تَرْحَمْ تُرْحَمْ. سَافِرِ الْيَوْمَ أَوْ غَدًا. لَمْ يَذْهَبْ يُوسُفُ، بَلْ إِبْرَاهِيمُ. خَرَجَ عَنِ الْبَلَدِ. فِي الْبَلَدِ لُصُوصٌ. قَدْ شَاهَدْتُ بَعْضَهُمْ. اخْتَرِسْ كَيْ تَسْلَمَ. لَمْ أَخَفْ، وَلَا أَخَافُ، وَلَنْ أَخَافَ. لَوْ أَنْصَفَ النَّاسُ اسْتَرَاحَ الْقَاضِي. مَا أَهْمَلْتُ. ذَهَبْتُ مِنَ الْمَدْرَسَةِ إِلَى الْبَيْتِ. هَلْ جَاءَ الْمِيعَادُ يَا عَلِيُّ؟",
+          "uz": "Masalan: «Qiyinchilik ustida turganda birdan yengillik», «Erkak ayoldan kuchliroq», «Safaring yaqinmi yoki uzoq?», «Tez qaytishing meni xursand qiladi», «Rahm qilsang, senga rahm qilinadi», «Bugun yoki ertaga safarga chiq», «Yusuf emas, Ibrohim ketdi», «U shahardan chiqdi», «Shaharda o'g'rilar bor», «Ularning ba'zilarini ko'rdim», «Ehtiyot bo'l, omon qolasan», «Qo'rqmadim, qo'rqmayman va qo'rqmayman ham», «Odamlar adolatli bo'lsa, qozi dam olardi», «Sustlik qilmadim», «Maktabdan uyga ketdim», «Ey Ali, va'da vaqti keldimi?»."
+        },
+        {
+          "type": "para",
+          "ar": "وَمِنَ الثُّلَاثِيَّةِ: «إِذَا»، «إِذًا»، «أَلَا»، «إِلَى»، «أَنَّ»، «إِنَّ»، «ثُمَّ»، «رُبَّ»، «سَوْفَ»، «عَلَى»، «لَيْتَ»، «نَعَمْ».",
+          "uz": "Uch harflilardan: إِذَا, إِذًا, أَلَا, إِلَى, أَنَّ, إِنَّ, ثُمَّ, رُبَّ, سَوْفَ, عَلَى, لَيْتَ, نَعَمْ."
+        },
+        {
+          "type": "para",
+          "ar": "نَحْوُ: ظَنَنْتُهُ غَائِبًا إِذَا هُوَ حَاضِرٌ. إِذًا تُوسِرَ (جَوَابًا لِمَنْ قَالَ: سَأَقْتَصِدُ). أَلَا إِنَّ أَسْبَابَ الْغِنَى لَكَثِيرٌ. أَحْسَنْتُ إِلَى جِيرَانِي؛ لِأَنَّهُمْ مُسْتَحِقُّونَ.",
+          "uz": "Masalan: «Uni yo'q deb o'ylabman, birdan u shu yerda ekan», «Unda boyib ketasan» («Tejamkor bo'laman» degan kishiga javoban), «Ogoh bo'ling, boylik sabablari ko'pdir», «Qo'shnilarimga yaxshilik qildim, chunki ular bunga loyiq»."
+        },
+        {
+          "type": "para",
+          "ar": "أُكْرِمُ الْجَارَ، ثُمَّ الْبَعِيدَ. رُبَّ صَدَقَةٍ قَلِيلَةٍ دَفَعَتْ شَرًّا كَثِيرًا. سَوْفَ تَرَى. عَلَى الْبَاغِي تَدُورُ الدَّوَائِرُ. لَيْتَ لِي قِنْطَارًا مِنَ الذَّهَبِ. نَعَمْ (جَوَابًا لِمَنْ قَالَ: أَتُنْفِقُهُ فِي الْخَيْرِ؟).",
+          "uz": "«Avval qo'shnini, so'ngra uzoqdagini hurmat qilaman», «Ba'zan oz sadaqa katta yomonlikni qaytaradi», «Ko'rasan», «Zulm qilguvchining boshiga balolar aylanadi», «Koshki menda bir qintor oltin bo'lsa», «Ha» («Uni yaxshilikka sarflaysanmi?» deganga javob)."
+        },
+        {
+          "type": "para",
+          "ar": "وَمِنَ الرُّبَاعِيَّةِ: «إِذْ مَا»، «إِلَّا»، «أَمَّا»، «إِمَّا»، «حَتَّى»، «كَأَنَّ»، «لَعَلَّ».",
+          "uz": "To'rt harflilardan: إِذْ مَا, إِلَّا, أَمَّا, إِمَّا, حَتَّى, كَأَنَّ, لَعَلَّ."
+        },
+        {
+          "type": "para",
+          "ar": "نَحْوُ: إِذْ مَا تَتَعَلَّمْ تَتَقَدَّمْ. ﴿كُلُّ شَيْءٍ هَالِكٌ إِلَّا وَجْهَهُ لَهُ الْحُكْمُ وَإِلَيْهِ تُرْجَعُونَ﴾. قَصَّرَ الْحَارِسَانِ؛ أَمَّا الْأَوَّلُ فَتَرَكَ الْبَابَ، وَأَمَّا الثَّانِي فَنَامَ. يَحْضُرُ سَعِيدٌ؛ إِمَّا غَدًا، وَإِمَّا بَعْدَ غَدٍ. قَدِمَ الْحُجَّاجُ حَتَّى الْمُشَاةُ. كَأَنَّكَ كُنْتَ مَعَنَا! لَعَلَّ الْجَوَّ يَعْتَدِلُ.",
+          "uz": "Masalan: «O'rgansang, oldinga borasan», «Uning yuzidan boshqa har bir narsa halok bo'luvchidir; hukm Uniki va Ungagina qaytarilasizlar», «Ikki qorovul ham kamchilikka yo'l qo'ydi: birinchisi eshikni tashlab ketdi, ikkinchisi uxlab qoldi», «Said yo ertaga, yo indinga keladi», «Hojilar keldi, hatto piyodalari ham», «Go'yo sen biz bilan birga bo'lgandaysan!», «Shoyad havo mo''tadil bo'lsa»."
+        },
+        {
+          "type": "para",
+          "ar": "وَمِنَ الْخُمَاسِيَّةِ: إِنَّمَا، أَنَّمَا، لَكِنَّ.",
+          "uz": "Besh harflilardan: إِنَّمَا, أَنَّمَا, لَكِنَّ."
+        },
+        {
+          "type": "para",
+          "ar": "نَحْوُ: ﴿إِنَّمَا يُوحَى إِلَيَّ أَنَّمَا إِلَهُكُمْ إِلَهٌ وَاحِدٌ﴾. يُوسُفُ غَنِيٌّ، لَكِنَّهُ بَخِيلٌ.",
+          "uz": "Masalan: «Menga faqat, ilohingiz yagona ilohdir, deb vahiy qilinadi», «Yusuf boy, lekin baxil»."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 2,
+      "num": 5,
+      "page": 83,
+      "titleAr": "٢ - الكَلَامُ عَلَى الْفِعْلِ — تَقْسِيمُ الْفِعْلِ إِلَى مَاضٍ وَمُضَارِعٍ وَأَمْرٍ",
+      "title": "2. Fe'l haqida so'z — fe'lning mozi, muzori' va amrga bo'linishi",
+      "rule": {
+        "ar": "يَنْقَسِمُ الْفِعْلُ إِلَى: مَاضٍ، وَمُضَارِعٍ، وَأَمْرٍ.",
+        "uz": "Fe'l mozi, muzori' va amrga bo'linadi."
+      },
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            {
+              "ar": "فَالْمَاضِي: مَا يَدُلُّ عَلَى حُدُوثِ شَيْءٍ فِي زَمَنٍ مَضَى قَبْلَ التَّكَلُّمِ؛ مِثْلُ: كَتَبَ.",
+              "uz": "Mozi — gapirishdan oldin o'tgan zamonda biror ish sodir bo'lganiga dalolat qiladi; masalan: كَتَبَ (yozdi)."
+            },
+            {
+              "ar": "وَالْمُضَارِعُ: مَا يَدُلُّ عَلَى حُدُوثِ شَيْءٍ فِي زَمَنِ التَّكَلُّمِ، أَوْ بَعْدَهُ؛ مِثْلُ: يَكْتُبُ. وَلَابُدَّ أَنْ يَكُونَ مَبْدُوءًا بِهَمْزَةٍ، أَوْ نُونٍ، أَوْ يَاءٍ، أَوْ تَاءٍ، وَتُسَمَّى هَذِهِ الْأَحْرُفُ بِـ«أَحْرُفِ الْمُضَارَعَةِ».",
+              "uz": "Muzori' — gapirish paytida yoki undan keyin biror ish sodir bo'lishiga dalolat qiladi; masalan: يَكْتُبُ (yozadi). U albatta hamza, nun, yo yoki to bilan boshlanishi shart; bu harflar «muzoraat harflari» deb ataladi."
+            },
+            {
+              "ar": "وَالْأَمْرُ: مَا يُطْلَبُ بِهِ حُصُولُ شَيْءٍ بَعْدَ زَمَنِ التَّكَلُّمِ؛ مِثْلُ: اكْتُبْ.",
+              "uz": "Amr — gapirish paytidan keyin biror ishning bajarilishi talab qilinadigan fe'l; masalan: اكْتُبْ (yoz)."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "(١) إِذَا قِيلَ لَكَ: «مَاذَا يَفْعَلُ عَلِيٌّ الْآنَ؟» صَحَّ أَنْ تَقُولَ فِي الْجَوَابِ: «يَكْتُبُ». فَلَفْظُ «يَكْتُبُ» حِينَئِذٍ دَالٌّ عَلَى حُدُوثِ الكِتَابَةِ فِي زَمَنِ التَّكَلُّمِ. وَإِذَا قِيلَ لَكَ: مَاذَا يَفْعَلُ عَلِيٌّ غَدًا؟ صَحَّ أَنْ تَقُولَ فِي الْجَوَابِ: «يَكْتُبُ» أَيْضًا، فَلَفْظُ «يَكْتُبُ» حِينَئِذٍ دَالٌّ عَلَى حُدُوثِ الكِتَابَةِ فِي الزَّمَنِ الْآتِي بَعْدَ زَمَنِ التَّكَلُّمِ. فَكُلُّ فِعْلٍ مُضَارِعٍ صَالِحٌ لِلْحَالِ وَالاِسْتِقْبَالِ مَا لَمْ تُوجَدْ قَرِينَةٌ تُعَيِّنُهُ لِأَحَدِهِمَا. وَمِمَّا يُعَيِّنُهُ لِلاِسْتِقْبَالِ: السِّينُ وَ«سَوْفَ»؛ نَحْوُ: سَيَكْتُبُ، أَوْ: سَوْفَ يَكْتُبُ.",
+          "uz": "(1-izoh) Senga «Ali hozir nima qilyapti?» deyilsa, javobda «yozyapti» deyishing to'g'ri bo'ladi — bunda «يَكْتُبُ» yozishning gapirish paytida sodir bo'layotganiga dalolat qiladi. «Ali ertaga nima qiladi?» deyilsa ham, javobda «yozadi» deyish to'g'ri — bunda u yozishning gapirish paytidan keyingi kelasi zamonda sodir bo'lishiga dalolat qiladi. Demak, har bir muzori' fe'l — uni biriga xoslaydigan qarina bo'lmasa — hozirgi zamonga ham, kelasi zamonga ham yaraydi. Uni kelasi zamonga xoslaydiganlardan: «س» va «سَوْفَ»; masalan: سَيَكْتُبُ yoki سَوْفَ يَكْتُبُ."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) يَجْمَعُ هَذِهِ الْأَحْرُفَ قَوْلُكَ: «أَنَيْتُ»، وَسُمِّيَتْ أَحْرُفَ الْمُضَارَعَةِ؛ لِأَنَّ الْمَاضِيَ يَصِيرُ بِزِيَادَتِهَا مُضَارِعًا لِلاِسْمِ، وَيَجِبُ فِيهَا الْفَتْحُ؛ كَـ«يَكْتُبُ»، وَ«يَنْطَلِقُ»، وَ«يَسْتَفْهِمُ»، إِلَّا إِذَا كَانَتْ فِي فِعْلٍ مَاضِيهِ عَلَى أَرْبَعَةِ أَحْرُفٍ فَتُضَمُّ؛ كَـ«يُدَحْرِجُ»، وَ«يُخْبِرُ». وَمَعْنَى «مُضَارِعًا لِلاِسْمِ»: مُشَابِهًا لَهُ.",
+          "uz": "(2-izoh) Bu harflarni «أَنَيْتُ» so'zi jamlaydi. Ular «muzoraat harflari» deb atalgan, chunki mozi ular qo'shilishi bilan ismga o'xshash (muzori') bo'lib qoladi. Ularda fatha vojib: «يَكْتُبُ», «يَنْطَلِقُ», «يَسْتَفْهِمُ» kabi. Faqat mozisi to'rt harfli bo'lgan fe'lda ular damma bilan keladi: «يُدَحْرِجُ», «يُخْبِرُ» kabi. «Ismga muzori'» ma'nosi — unga o'xshash degani."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "أَمْثِلَةٌ",
+            "uz": "Misollar"
+          },
+          "items": [
+            {
+              "ar": "١ - لِلْمَاضِي: حَفِظَ، فَهِمَ، ذَهَبَ، سَافَرَ، تَعَلَّمَ، تَفَاخَرَ، أَشْرَقَ، غَرُبَ، كَلَّمَ، اعْتَدَلَ، اسْتَخْرَجَ، اطْمَأَنَّ.",
+              "uz": "1 — Moziga: yodladi, tushundi, ketdi, safar qildi, o'rgandi, faxrlandi, chiqdi (quyosh), botdi, gapirdi, mo''tadil bo'ldi, chiqarib oldi, tinchlandi."
+            },
+            {
+              "ar": "٢ - لِلْمُضَارِعِ: أَحْفَظُ، نَفْهَمُ، يَذْهَبُ، تُسَافِرُ، أَتَعَلَّمُ، نَتَفَاخَرُ، يُشْرِقُ، تَغْرُبُ، أُكَلِّمُ، نَعْتَدِلُ، يَسْتَخْرِجُ، تَطْمَئِنُّ.",
+              "uz": "2 — Muzori'ga: yodlayman, tushunamiz, ketadi, safar qilasan, o'rganaman, faxrlanamiz, chiqadi, botadi, gaplashaman, mo''tadil bo'lamiz, chiqarib oladi, tinchlanadi."
+            },
+            {
+              "ar": "٣ - لِلْأَمْرِ: احْفَظْ، افْهَمْ، اذْهَبْ، سَافِرْ، تَعَلَّمْ، تَفَاخَرْ، أَشْرِقْ، اغْرُبْ، كَلِّمْ، اعْتَدِلْ، اسْتَخْرِجْ، اطْمَئِنَّ.",
+              "uz": "3 — Amrga: yodla, tushun, bor, safar qil, o'rgan, faxrlan, chiq, bot, gapir, mo''tadil bo'l, chiqarib ol, tinchlan."
+            }
+          ]
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "اسْتَخْرِجِ الْأَفْعَالَ الْمَاضِيَةَ، وَالْمُضَارِعَةَ، وَالْأَمْرِيَّةَ الَّتِي فِي هَذِهِ الْحِكَايَةِ، وَاكْتُبْ كُلَّ نَوْعٍ عَلَى حِدَتِهِ:",
+          "uz": "Bu hikoyadagi mozi, muzori' va amr fe'llarini ajratib oling va har bir turni alohida yozing:"
+        },
+        {
+          "ar": "دَخَلَ عَلَى عُمَرَ بْنِ عَبْدِ الْعَزِيزِ فِي أَوَّلِ وِلَايَتِهِ وُفُودُ الْمُهَنِّئِينَ مِنْ كُلِّ جِهَةٍ، فَتَقَدَّمَ مِنْ وَفْدِ الْحِجَازِيِّينَ لِلْكَلَامِ غُلَامٌ صَغِيرٌ لَمْ تَبْلُغْ سِنُّهُ إِحْدَى عَشْرَةَ سَنَةً.",
+          "uz": "Umar ibn Abdulaziz hukmronligining boshida uning huzuriga har tomondan tabriklovchi elchilar kirdi. Hijozliklar elchiligidan gapirish uchun yoshi o'n bir ga yetmagan kichkina bola oldinga chiqdi."
+        },
+        {
+          "ar": "فَقَالَ لَهُ عُمَرُ: ارْجِعْ أَنْتَ، وَلْيَتَقَدَّمْ مَنْ هُوَ أَسَنُّ مِنْكَ.",
+          "uz": "Umar unga: «Sen qayt, sendan kattaroq kishi oldinga chiqsin» dedi."
+        },
+        {
+          "ar": "فَقَالَ الْغُلَامُ: أَيَّدَ اللَّهُ أَمِيرَ الْمُؤْمِنِينَ، الْمَرْءُ بِأَصْغَرَيْهِ؛ قَلْبِهِ وَلِسَانِهِ، فَإِذَا مَنَحَ اللَّهُ الْعَبْدَ لِسَانًا لَافِظًا، وَقَلْبًا حَافِظًا، فَقَدِ اسْتَحَقَّ الكَلَامَ.",
+          "uz": "Bola dedi: «Alloh amiral-mo'minindan madad bersin! Kishi o'zining ikki kichigi — qalbi va tili bilandir. Alloh bandaga so'zlovchi til va saqlovchi qalb bergan bo'lsa, u so'zlashga haqli bo'ladi»."
+        },
+        {
+          "ar": "وَلَوْ أَنَّ الْأَمْرَ يَا أَمِيرَ الْمُؤْمِنِينَ بِالسِّنِّ، لَكَانَ فِي الْأُمَّةِ مَنْ هُوَ أَحَقُّ مِنْكَ بِمَجْلِسِكَ هَذَا.",
+          "uz": "«Ey amiral-mo'minin, agar ish yosh bilan bo'lganida, ummat ichida bu o'rningga sendan haqliroq kishi topilar edi»."
+        },
+        {
+          "ar": "فَتَعَجَّبَ عُمَرُ مِنْ كَلَامِهِ، وَأَنْشَدَ:",
+          "uz": "Umar uning so'zidan hayratlandi va she'r o'qidi:"
+        },
+        {
+          "ar": "تَعَلَّمْ فَلَيْسَ الْمَرْءُ يُولَدُ عَالِمًا * وَلَيْسَ أَخُو عِلْمٍ كَمَنْ هُوَ جَاهِلُ",
+          "uz": "O'rgan, zero kishi olim bo'lib tug'ilmaydi; ilm egasi johil kishi kabi emas."
+        },
+        {
+          "ar": "وَإِنَّ كَبِيرَ الْقَوْمِ لَا عِلْمَ عِنْدَهُ * صَغِيرٌ إِذَا الْتَفَّتْ عَلَيْهِ الْمَحَافِلُ",
+          "uz": "Qavmning kattasi, ilmi bo'lmasa, majlislar uning atrofida jam bo'lganda kichikdir."
+        }
+      ]
     }
   ]
 }

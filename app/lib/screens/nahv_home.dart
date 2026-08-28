@@ -51,10 +51,37 @@ class NahvHome extends StatelessWidget {
             const Text('Darslar hali qo\'shilmagan.',
                 style: TextStyle(color: Colors.black54))
           else
-            ...lessons.asMap().entries.map((e) => EntranceFade(
-                  delay: Duration(milliseconds: 40 + (e.key < 12 ? e.key : 12) * 45),
-                  child: _tile(context, e.value),
-                )),
+            // Kitoblar bo'yicha ajratamiz: dars raqamlari har kitobda
+            // qaytadan boshlanadi, aralashsa o'quvchi adashadi.
+            ...() {
+              final out = <Widget>[];
+              int? oxirgiKitob;
+              for (var i = 0; i < lessons.length; i++) {
+                final l = lessons[i];
+                if (l.book != oxirgiKitob) {
+                  oxirgiKitob = l.book;
+                  out.add(Padding(
+                    padding: EdgeInsets.only(top: i == 0 ? 0 : 14, bottom: 10),
+                    child: Row(
+                      children: [
+                        Text('${l.book}-kitob',
+                            style: const TextStyle(
+                                fontWeight: FontWeight.w800,
+                                color: AppColors.gold,
+                                fontSize: 13)),
+                        const SizedBox(width: 10),
+                        const Expanded(child: Divider(height: 1)),
+                      ],
+                    ),
+                  ));
+                }
+                out.add(EntranceFade(
+                  delay: Duration(milliseconds: 40 + (i < 12 ? i : 12) * 45),
+                  child: _tile(context, l),
+                ));
+              }
+              return out;
+            }(),
         ],
       ),
     );

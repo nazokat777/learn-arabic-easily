@@ -3974,6 +3974,175 @@
           "uz": "Misrda ko'zlarni hayratga soladigan yodgorliklar bor. Shulardan ikki ehrom: zamon qarib ketdi, ular esa hamon yosh; asrlar ketma-ket keldi, davrlar oqib o'tdi, ular esa hamon boqiy. Ularning qurilishi o'tganlarning darajalari yuksak bo'lganiga guvohlik beradi va Misrdagi muhandislarning mahoratidan so'zlaydi. Ularning joylashuviga qarab tomonlarni aniqlash, fasllar va ularning almashuvini bilish mumkin."
         }
       ]
+    },
+    {
+      "book": 2,
+      "num": 16,
+      "page": 104,
+      "titleAr": "٢ - تَقْسِيمُ الاِسْمِ إِلَى مُذَكَّرٍ وَمُؤَنَّثٍ",
+      "title": "2. Ismning muzakkar va muannasga bo'linishi",
+      "rule": {
+        "ar": "يَنْقَسِمُ الاِسْمُ إِلَى مُذَكَّرٍ وَمُؤَنَّثٍ. فَالْمُذَكَّرُ: مَا دَلَّ عَلَى ذَكَرٍ؛ كَـ«رَجُلٍ» وَ«فَاضِلٍ». وَالْمُؤَنَّثُ: مَا دَلَّ عَلَى أُنْثَى؛ كَـ«امْرَأَةٍ» وَ«فَاضِلَةٍ». وَعَلَامَةُ التَّأْنِيثِ: تَاءٌ مُتَحَرِّكَةٌ؛ كَـ«عَائِشَةَ»، أَوْ أَلِفٌ مَقْصُورَةٌ؛ كَـ«حُبْلَى»، أَوْ أَلِفٌ مَمْدُودَةٌ؛ كَـ«حَسْنَاءَ».",
+        "uz": "Ism muzakkar va muannasga bo'linadi. Muzakkar — erkak zotga dalolat qiladi; masalan: رَجُل, فَاضِل. Muannas — ayol zotga dalolat qiladi; masalan: امْرَأَة, فَاضِلَة. Muannaslik alomati: harakatli to (masalan عَائِشَة), yoki alifi maqsura (masalan حُبْلَى), yoki alifi mamduda (masalan حَسْنَاء)."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَقَدْ يَخْلُو الْمُؤَنَّثُ مِنَ الْعَلَامَةِ فَيُسَمَّى «مُؤَنَّثًا مَعْنَوِيًّا»؛ كَـ«زَيْنَبَ» وَ«مَرْيَمَ».",
+          "uz": "Ba'zan muannas alomatsiz keladi; u «ma'naviy muannas» deb ataladi; masalan: زَيْنَب, مَرْيَم."
+        },
+        {
+          "type": "para",
+          "ar": "وَقَدْ تُوجَدُ الْعَلَامَةُ فِي الْمُذَكَّرِ، فَيُسَمَّى «مُؤَنَّثًا لَفْظِيًّا»؛ كَـ«حَمْزَةَ»، وَ«الكُفُرَّى»، وَ«زَكَرِيَّاءَ».",
+          "uz": "Ba'zan alomat muzakkarda topiladi; u «lafziy muannas» deb ataladi; masalan: حَمْزَة, الكُفُرَّى, زَكَرِيَّاء."
+        },
+        {
+          "type": "para",
+          "ar": "وَقَدْ يُعَامَلُ بَعْضُ الْأَسْمَاءِ مُعَامَلَةَ الْمُؤَنَّثَاتِ الْحَقِيقِيَّةِ، فَتُسَمَّى «مُؤَنَّثَاتٍ مَجَازِيَّةً»؛ كَـ«الشَّمْسِ»، وَ«الْحَرْبِ»، وَالْمَدَارُ فِي هَذَا عَلَى النَّقْلِ.",
+          "uz": "Ba'zi ismlarga haqiqiy muannaslar kabi muomala qilinadi; ular «majoziy muannaslar» deb ataladi; masalan: الشَّمْس (quyosh), الْحَرْب (urush). Bunda tayanch — naql (eshitib o'rganish)."
+        },
+        {
+          "type": "para",
+          "ar": "(١) تَقُولُ فِي الْإِشَارَةِ إِلَيْهِ: «هَذَا»، وَفِي وَصْفِهِ: «الَّذِي»، وَفِي ضَمِيرِهِ: «هُوَ» أَوِ الْهَاءُ. وَلَا تَلْحَقُ الْفِعْلَ الْمُسْنَدَ إِلَيْهِ تَاءٌ.",
+          "uz": "(1-izoh) Unga ishora qilganda «hazo», sifatlaganda «allazi», zamirida «huva» yoki «ه» deysan; unga bog'langan fe'lga «to» qo'shilmaydi."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) تَقُولُ فِي الْإِشَارَةِ إِلَيْهِ: «هَذِهِ»، وَفِي وَصْفِهِ: «الَّتِي»، وَفِي ضَمِيرِهِ: «هِيَ» أَوْ «هَا»، وَتَلْحَقُ الْفِعْلَ الْمُسْنَدَ إِلَيْهِ التَّاءُ.",
+          "uz": "(2-izoh) Unga ishora qilganda «hazihi», sifatlaganda «allati», zamirida «hiya» yoki «ها» deysan; unga bog'langan fe'lga «to» qo'shiladi."
+        },
+        {
+          "type": "para",
+          "ar": "(٣) هُوَ وِعَاءُ الطَّلْعِ، وَالْمُؤَنَّثُ اللَّفْظِيُّ يُعَامَلُ مُعَامَلَةَ الْمُذَكَّرِ فِي جَمِيعِ أَحْوَالِهِ، إِلَّا فِي مَنْعِ الصَّرْفِ، وَالْجَمْعِ بِالْأَلِفِ وَالتَّاءِ.",
+          "uz": "(3-izoh) «Kufurro» — xurmo gullarining qobig'i. Lafziy muannasga hamma holatida muzakkar kabi muomala qilinadi; faqat man'i sarf (tanvin olmaslik) va alif-to bilan ko'plik yasashda bundan mustasno."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "أَمْثِلَةٌ",
+            "uz": "Misollar"
+          },
+          "items": [
+            {
+              "ar": "١ - لِلْمُؤَنَّثِ لَفْظًا وَمَعْنًى: فَاطِمَةُ، عَائِشَةُ، صَفِيَّةُ، قَائِمَةٌ، ذَاهِبَةٌ، كَبِيرَةٌ، لَيْلَى، سُعْدَى، ثُرَيَّا، فُضْلَى، صُغْرَى، كُبْرَى، زَلِيخَاءُ، خَنْسَاءُ، أَسْمَاءُ، غَيْدَاءُ، نُفَسَاءُ، عَذْرَاءُ.",
+              "uz": "1 — Lafzan ham, ma'nan ham muannasga: Fotima, Oisha, Safiyya, qoima, zohiba, kabira, Layli, Su'do, Surayyo, fuzlo, sug'ro, kubro, Zulayho, Xanso, Asmo, G'aydo, nufaso, azro."
+            },
+            {
+              "ar": "٢ - لِلْمُؤَنَّثِ مَعْنًى: هِنْدُ، دَعْدُ، هَاجَرُ، أُمُّ كُلْثُومٍ، أُمُّ الْفَضْلِ، حَائِضٌ.",
+              "uz": "2 — Ma'nan muannasga: Hind, Da'd, Hojar, Ummu Kulsum, Ummul-Fazl, hoiz."
+            },
+            {
+              "ar": "٣ - لِلْمُؤَنَّثِ لَفْظًا: طَلْحَةُ، طَرَفَةُ، رَبِيعَةُ، كِنَانَةُ، مُدْرِكَةُ، مُعَاوِيَةُ، أَشْعِيَاءُ، إِرْمِيَاءُ.",
+              "uz": "3 — Lafzan muannasga: Talha, Tarafa, Rabi'a, Kinona, Mudrika, Muoviya, Ash'iyo, Irmiyo."
+            },
+            {
+              "ar": "٤ - لِلْمُؤَنَّثِ مَجَازًا: دَارٌ، أَرْضٌ، بِئْرٌ، جَهَنَّمُ، كَأْسٌ، نَفْسٌ، عَصًا، يَمِينٌ.",
+              "uz": "4 — Majozan muannasga: dor (uy), arz (yer), bi'r (quduq), jahannam, ka's (kosa), nafs, aso (hassa), yamin (o'ng qo'l)."
+            }
+          ]
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "بَيِّنِ الْأَسْمَاءَ الْمُذَكَّرَةَ، وَالْأَسْمَاءَ الْمُؤَنَّثَةَ بِأَنْوَاعِهَا فِي هَذِهِ الْعِبَارَاتِ:",
+          "uz": "Quyidagi iboralarda muzakkar ismlarni va muannas ismlarni turlari bilan ko'rsating:"
+        },
+        {
+          "ar": "رَوَى ابْنُ لَهِيعَةَ، عَنِ ابْنِ هُبَيْرَةَ، عَنْ عَلْقَمَةَ بْنِ وَعْلَةَ، عَنِ ابْنِ عَبَّاسٍ، أَنَّ رَسُولَ اللَّهِ ﷺ سُئِلَ عَنْ سَبَأٍ: مَا هُوَ؟ أَبَلَدٌ، أَمْ رَجُلٌ، أَمِ امْرَأَةٌ؟ فَقَالَ: «بَلْ رَجُلٌ وُلِدَ لَهُ عَشَرَةٌ، فَسَكَنَ الْيَمَنَ مِنْهُمْ سِتَّةٌ، وَالشَّامَ أَرْبَعَةٌ، أَمَّا الْيَمَانِيُّونَ، فَكِنْدَةُ، وَمَذْحِجٌ، وَالْأَزْدُ، وَأَنْمَارٌ، وَحِمْيَرٌ، وَالْأَشْعَرِيُّونَ، وَأَمَّا الشَّامِيُّونَ، فَلَخْمٌ، وَجُذَامٌ، وَغَسَّانُ، وَعَامِلَةُ».",
+          "uz": "Ibn Lahi'a Ibn Hubayradan, u Alqama ibn Va'ladan, u Ibn Abbosdan rivoyat qiladi: Rasululloh sollallohu alayhi vasallamdan Saba haqida so'raldi: «U nima — shaharmi, kishimi yoki ayolmi?» U zot dedilar: «Balki kishidir; uning o'nta farzandi bo'ldi: ulardan oltitasi Yamanda, to'rttasi Shomda joylashdi. Yamanliklar: Kinda, Mazhij, Azd, Anmor, Himyar va Ash'ariylar; Shomliklar esa: Laxm, Juzom, G'asson va Omila»."
+        },
+        {
+          "ar": "أَوْلَادُ النَّبِيِّ ﷺ سَبْعَةٌ: الْقَاسِمُ، وَزَيْنَبُ، وَرُقَيَّةُ، وَفَاطِمَةُ، وَأُمُّ كُلْثُومٍ، وَعَبْدُ اللَّهِ، وَإِبْرَاهِيمُ. وَكُلُّهُمْ مِنْ خَدِيجَةَ إِلَّا إِبْرَاهِيمَ، فَمِنْ مَارِيَةَ الْقِبْطِيَّةِ.",
+          "uz": "Payg'ambar sollallohu alayhi vasallamning farzandlari yettita: Qosim, Zaynab, Ruqayya, Fotima, Ummu Kulsum, Abdulloh va Ibrohim. Ularning hammasi Xadijadan; Ibrohim esa Moriya Qibtiyyadan."
+        }
+      ]
+    },
+    {
+      "book": 2,
+      "num": 17,
+      "page": 106,
+      "titleAr": "٣ - تَقْسِيمُ الاِسْمِ إِلَى مَقْصُورٍ وَمَنْقُوصٍ وَصَحِيحٍ",
+      "title": "3. Ismning maqsur, manqus va sahihga bo'linishi",
+      "rule": {
+        "ar": "يَنْقَسِمُ الاِسْمُ الْمُعْرَبُ إِلَى مَقْصُورٍ، وَمَنْقُوصٍ، وَصَحِيحٍ.",
+        "uz": "Mu'rab ism maqsur, manqus va sahihga bo'linadi."
+      },
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            {
+              "ar": "فَالْمَقْصُورُ: مَا كَانَ آخِرُهُ أَلِفًا لَازِمَةً؛ كَـ«الْهُدَى»، وَ«الْمُصْطَفَى».",
+              "uz": "Maqsur — oxiri doimiy alif bo'lgan ism; masalan: الْهُدَى (hidoyat), الْمُصْطَفَى (tanlangan)."
+            },
+            {
+              "ar": "وَالْمَنْقُوصُ: مَا كَانَ آخِرُهُ يَاءً لَازِمَةً مَكْسُورًا مَا قَبْلَهَا؛ كَـ«الدَّاعِي»، وَ«الْمُنَادِي».",
+              "uz": "Manqus — oxiri doimiy yo bo'lib, undan oldingi harfi kasrali ism; masalan: الدَّاعِي (chaqiruvchi), الْمُنَادِي (nido qiluvchi)."
+            },
+            {
+              "ar": "وَالصَّحِيحُ: مَا لَيْسَ كَذَلِكَ؛ كَـ«شَجَرٍ»، وَ«كِتَابٍ».",
+              "uz": "Sahih — bunday bo'lmagan ism; masalan: شَجَر (daraxt), كِتَاب (kitob)."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "(١) وَأَمَّا نَحْوُ: «أَبَا» مِنْ قَوْلِكَ: «أَبَا زَيْدٍ» .. فَلَيْسَ مَقْصُورًا؛ لِأَنَّ الْأَلِفَ فِيهِ تَتَغَيَّرُ بِالْوَاوِ وَالْيَاءِ، فَيُقَالُ: «أَبُو زَيْدٍ»، وَ«أَبِي زَيْدٍ».",
+          "uz": "(1-izoh) «أَبَا زَيْدٍ» dagi «أَبَا» maqsur emas, chunki undagi alif vov va yoga o'zgaradi: «أَبُو زَيْدٍ», «أَبِي زَيْدٍ» deyiladi."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) وَأَمَّا نَحْوُ: «أَبِي» مِنْ قَوْلِكَ: «أَبِي زَيْدٍ» .. فَلَيْسَ مَنْقُوصًا؛ لِأَنَّهَا مُرٌّ، وَكَذَلِكَ ظَبْيٌ، وَسَعْيٌ؛ لِعَدَمِ كَسْرِ مَا قَبْلَ الْيَاءِ.",
+          "uz": "(2-izoh) «أَبِي زَيْدٍ» dagi «أَبِي» manqus emas (uning yosi doimiy emas). Shuningdek ظَبْي (kiyik), سَعْي (harakat) ham manqus emas, chunki yodan oldingi harf kasrali emas."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "أَمْثِلَةٌ",
+            "uz": "Misollar"
+          },
+          "items": [
+            {
+              "ar": "١ - لِلْمَقْصُورِ: الْفَتَى، الرِّضَا، الْهَوَى، النَّوَى، الْعَصَا، الْعُلَا، الْمُنَى، الْأَذَى، النَّدَى، الرَّحَى.",
+              "uz": "1 — Maqsurga: yigit, rizolik, havas, danak, hassa, yuksaklik, orzular, aziyat, shudring, tegirmon toshi."
+            },
+            {
+              "ar": "٢ - لِلْمَنْقُوصِ: الْقَاضِي، الْمُفْتِي، الْهَادِي، الْعَالِي، الْمُقْتَدِي، الْمُعْتَدِي، الْجَانِي، الْمُتَنَاهِي، الْمُتَغَالِي، الْمُكْتَفِي.",
+              "uz": "2 — Manqusga: qozi, muftiy, hidoyat qiluvchi, yuksak, ergashuvchi, tajovuz qiluvchi, jinoyatchi, nihoyaga yetuvchi, haddan oshuvchi, kifoyalanuvchi."
+            }
+          ]
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "عَيِّنِ الْأَسْمَاءَ الصَّحِيحَةَ، وَالْمَقْصُورَةَ، وَالْمَنْقُوصَةَ فِي هَذِهِ الْعِبَارَاتِ:",
+          "uz": "Quyidagi iboralarda sahih, maqsur va manqus ismlarni aniqlang:"
+        },
+        {
+          "ar": "﴿أَيَحْسَبُ الْإِنْسَانُ أَنْ يُتْرَكَ سُدًى﴾.",
+          "uz": "«Inson bekorga tashlab qo'yilaman deb o'ylaydimi?»"
+        },
+        {
+          "ar": "الْعِلْمُ خَيْرُ مُقْتَنًى وَأَعْذَبُ مُجْتَنًى، بِهِ يَدْنُو الْقَاصِي وَيَدِينُ الْعَاصِي.",
+          "uz": "Ilm — eng yaxshi orttiriladigan boylik va eng shirin teriladigan meva; u bilan uzoqdagi yaqinlashadi va osiy kishi bo'ysunadi."
+        },
+        {
+          "ar": "﴿وَمَا تِلْكَ بِيَمِينِكَ يَا مُوسَى﴾.",
+          "uz": "«Ey Muso, o'ng qo'lingdagi nima?»"
+        },
+        {
+          "ar": "﴿إِنَّ فِي ذَلِكَ لَآيَاتٍ لِأُولِي النُّهَى﴾.",
+          "uz": "«Albatta bunda aql egalari uchun oyatlar bordir»."
+        },
+        {
+          "ar": "التَّقْوَى شِعَارُ الْأَبْرَارِ.",
+          "uz": "Taqvo — yaxshilarning shioridir."
+        },
+        {
+          "ar": "مَنْ يَرْكَنْ إِلَى السَّلَامَةِ لَا يَطْلُبِ الْمَعَالِيَ.",
+          "uz": "Kim tinchlikka moyil bo'lsa, yuksak martabalarni talab qilmaydi."
+        }
+      ]
     }
   ]
 }

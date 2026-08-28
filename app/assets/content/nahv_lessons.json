@@ -2976,6 +2976,302 @@
           "uz": "Qavmning kattasi, ilmi bo'lmasa, majlislar uning atrofida jam bo'lganda kichikdir."
         }
       ]
+    },
+    {
+      "book": 2,
+      "num": 6,
+      "page": 85,
+      "titleAr": "٢ - تَقْسِيمُ الْفِعْلِ إِلَى صَحِيحِ الْآخِرِ وَمُعْتَلِّ الْآخِرِ",
+      "title": "2. Fe'lning oxiri sahih va oxiri illatliga bo'linishi",
+      "rule": {
+        "ar": "الْأَلِفُ وَالْوَاوُ وَالْيَاءُ تُسَمَّى «أَحْرُفَ الْعِلَّةِ»؛ لِكَثْرَةِ التَّغْيِيرِ فِيهَا، فَإِذَا كَانَ آخِرُ الْفِعْلِ حَرْفًا مِنْ هَذِهِ الْأَحْرُفِ، سُمِّيَ: «مُعْتَلَّ الْآخِرِ». وَإِلَّا سُمِّيَ: «صَحِيحَ الْآخِرِ».",
+        "uz": "Alif, vov va yo — ularda o'zgarish ko'p bo'lgani uchun «illat harflari» deb ataladi. Fe'lning oxiri shu harflardan biri bo'lsa, u «oxiri illatli» deb ataladi; aks holda «oxiri sahih» deyiladi."
+      },
+      "blocks": [
+        {
+          "type": "list",
+          "intro": {
+            "ar": "أَمْثِلَةٌ",
+            "uz": "Misollar"
+          },
+          "items": [
+            {
+              "ar": "١ - لِلْفِعْلِ الصَّحِيحِ الْآخِرِ: عَلِمَ، صَدَقَ، أَخْبَرَ، انْصَرَفَ، يَعْلَمُ، يَصْدُقُ، يُخْبِرُ، يَنْصَرِفُ، اعْلَمْ، اصْدُقْ، أَخْبِرْ، انْصَرِفْ.",
+              "uz": "1 — Oxiri sahih fe'lga: bildi, rost so'zladi, xabar berdi, qaytdi; biladi, rost so'zlaydi, xabar beradi, qaytadi; bil, rost so'zla, xabar ber, qayt."
+            },
+            {
+              "ar": "٢ - لِلْمُعْتَلِّ الْآخِرِ بِالْأَلِفِ: دَعَا، غَزَا، سَمَا، يَخْشَى، يَرْضَى، يَنْهَى، يَهْوَى، يَنْسَى، يَلْقَى، يَتَّقِى، يَتَحَرَّى، يَتَغَذَّى، يَضْعَى، اسْعَ، انْهَ، ارْضَ، تَحَرَّ.",
+              "uz": "2 — Oxiri alif bilan illatliga: chaqirdi, g'azot qildi, yuksaldi; qo'rqadi, rozi bo'ladi, qaytaradi, mayl qiladi, unutadi, uchratadi, saqlanadi, izlaydi, ovqatlanadi; harakat qil, qaytar, rozi bo'l, izla."
+            },
+            {
+              "ar": "٣ - لِلْمُعْتَلِّ الْآخِرِ بِالْوَاوِ: سَرُوَ، نَهُوَ، يَدْعُو، يَغْزُو، يَدْنُو، يَعْلُو، يَخْلُو، يَصْفُو، يَعْفُو، يَبْدُو، يَرْجُو، ادْعُ، اسْرُ، ارْجُ، اغْزُ.",
+              "uz": "3 — Oxiri vov bilan illatliga: saxiy bo'ldi, aqlli bo'ldi; chaqiradi, g'azot qiladi, yaqinlashadi, yuksaladi, bo'shaydi, tiniydi, avf qiladi, ko'rinadi, umid qiladi; chaqir, saxiy bo'l, umid qil, g'azot qil."
+            },
+            {
+              "ar": "٤ - لِلْمُعْتَلِّ الْآخِرِ بِالْيَاءِ: رَضِيَ، خَشِيَ، لَقِيَ، يَرْمِي، يَأْتِي، يَمْشِي، يَهْتَدِي، يَسْتَوِي، يَرْتَقِي، يَسْتَدْعِي، يَغْتَنِي، يَنْبَغِي، ارْمِ، اهْتَدِ، امْشِ، اسْتَوِ.",
+              "uz": "4 — Oxiri yo bilan illatliga: rozi bo'ldi, qo'rqdi, uchratdi; otadi, keladi, yuradi, to'g'ri yo'l topadi, tenglashadi, ko'tariladi, chaqiradi, boyiydi, lozim bo'ladi; ot, to'g'ri yo'l top, yur, tenglash."
+            }
+          ]
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "مَيِّزِ الْأَفْعَالَ الصَّحِيحَةَ الْآخِرِ، وَالْأَفْعَالَ الْمُعْتَلَّةَ الْآخِرِ بِأَلِفٍ، أَوْ وَاوٍ، أَوْ يَاءٍ، مِنْ هَذِهِ الْعِبَارَاتِ:",
+          "uz": "Bu iboralardan oxiri sahih fe'llarni va oxiri alif, vov yoki yo bilan illatli fe'llarni ajrating:"
+        },
+        {
+          "ar": "يَجْتَنِي الْإِنْسَانُ مَا يَشْتَهِي، إِذَا فَعَلَ مَا يَنْبَغِي أَنْ يَسْعَى إِلَيْهِ الْمُجِدُّ.",
+          "uz": "Tirishqoq kishi intilishi lozim bo'lgan ishni qilsa, inson o'zi istagan narsani teradi."
+        },
+        {
+          "ar": "صَاحِبُ الْعَزِيمَةِ لَا يَخْشَى أَنْ يُلَاقِيَ الْعَقَبَاتِ، وَلَا يَنْثَنِي عَنْ أَنْ يَغْدُوَ إِلَى الْغَايَاتِ.",
+          "uz": "Azm egasi to'siqlarga duch kelishdan qo'rqmaydi va maqsadlar sari yurishdan qaytmaydi."
+        },
+        {
+          "ar": "تَأْتِي الرِّيَاحُ بِمَا لَا تَشْتَهِي السُّفُنُ.",
+          "uz": "Shamollar kemalar istamagan narsani keltiradi."
+        },
+        {
+          "ar": "الْعَقْلُ يَنْمُو كَمَا يَنْمُو النَّبَاتُ، وَنُمُوُّهُ يَكُونُ بِالْعِلْمِ وَالتَّجَارِبِ.",
+          "uz": "Aql o'simlik o'sganidek o'sadi; uning o'sishi ilm va tajribalar bilan bo'ladi."
+        },
+        {
+          "ar": "يَعْلُو قَدْرُ الْإِنْسَانِ بِفَصَاحَةِ اللِّسَانِ.",
+          "uz": "Insonning qadri til fasohati bilan yuksaladi."
+        },
+        {
+          "ar": "﴿مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَى﴾.",
+          "uz": "«Robbing seni tark etmadi va yomon ko'rmadi»."
+        },
+        {
+          "ar": "﴿ذَلِكَ لِمَنْ خَشِيَ رَبَّهُ﴾.",
+          "uz": "«Bu — Robbidan qo'rqqan kishi uchundir»."
+        },
+        {
+          "ar": "مَنْ صَدَقَ نَجَا.",
+          "uz": "Kim rost so'zlasa, najot topadi."
+        },
+        {
+          "ar": "مَنْ بَذَلَ وَحَلُمَ سَرُوَ.",
+          "uz": "Kim saxovat qilsa va hilm ko'rsatsa, ulug' bo'ladi."
+        }
+      ]
+    },
+    {
+      "book": 2,
+      "num": 7,
+      "page": 87,
+      "titleAr": "إِعْرَابُ الْفِعْلِ وَبِنَاؤُهُ",
+      "title": "Fe'lning i'robi va binosi",
+      "rule": {
+        "ar": "الْفِعْلُ عِنْدَمَا يَدْخُلُ فِي جُمَلٍ مُفِيدَةٍ لَا يَكُونُ عَلَى حَالَةٍ وَاحِدَةٍ فِي جَمِيعِ أَنْوَاعِهِ.",
+        "uz": "Fe'l mazmunli jumlalarga kirganda, uning barcha turlari bitta holatda bo'lavermaydi."
+      },
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            {
+              "ar": "١ - مِنْهُ مَا يَكُونُ آخِرُهُ ثَابِتًا لَا يَتَغَيَّرُ بِتَغَيُّرِ التَّرَاكِيبِ، وَيُسَمَّى: «مَبْنِيًّا». وَعَدَمُ التَّغَيُّرِ يُسَمَّى: «بِنَاءً».",
+              "uz": "1 — Ba'zisining oxiri o'zgarmas bo'lib, tuzilishlar o'zgarishi bilan o'zgarmaydi; u «mabniy» deb ataladi. O'zgarmaslikning o'zi esa «bino» deyiladi."
+            },
+            {
+              "ar": "٢ - وَمِنْهُ مَا يَتَغَيَّرُ آخِرُهُ بِتَغَيُّرِ التَّرَاكِيبِ، وَيُسَمَّى: «مُعْرَبًا»، وَالتَّغَيُّرُ يُسَمَّى: «إِعْرَابًا».",
+              "uz": "2 — Ba'zisining oxiri tuzilishlar o'zgarishi bilan o'zgaradi; u «mu'rab» deb ataladi, o'zgarishning o'zi esa «i'rob» deyiladi."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "وَمَنْ يُرِدْ أَنْ يَكُونَ كَلَامُهُ مُوَافِقًا لِلصَّوَابِ، يَحْتَجْ لِمَعْرِفَةِ الْمَبْنِيِّ مِنَ الْأَفْعَالِ، وَالْمُعْرَبِ مِنْهَا؛ لِيُعْطِيَ كُلًّا مَا يَسْتَحِقُّهُ.",
+          "uz": "Kimning kalomi to'g'riga muvofiq bo'lishini istasa, fe'llarning qaysisi mabniy, qaysisi mu'rab ekanini bilishga muhtoj bo'ladi — toki har biriga haqqini bersin."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 2,
+      "num": 8,
+      "page": 88,
+      "titleAr": "بَيَانُ الْمَبْنِيِّ مِنَ الْأَفْعَالِ",
+      "title": "Fe'llardan mabniysining bayoni",
+      "rule": {
+        "ar": "الْمَبْنِيُّ مِنَ الْأَفْعَالِ هُوَ الْمَاضِي، وَالْأَمْرُ، وَالْمُضَارِعُ إِذَا اتَّصَلَتْ بِهِ نُونُ التَّوْكِيدِ، أَوْ نُونُ الْإِنَاثِ.",
+        "uz": "Fe'llardan mabniysi: mozi, amr, hamda ta'kid nuni yoki ayollar nuni qo'shilgan muzori'."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "نَحْوُ: لَيَخْرُجَنَّ الْخَادِمُ، أَوْ: لَيَخْرُجَنْ. أَوْ نُونُ الْإِنَاثِ؛ نَحْوُ: الْبَنَاتُ يَلْعَبْنَ.",
+          "uz": "Masalan: «Xizmatkor albatta chiqadi» (og'ir yoki yengil ta'kid nuni bilan); ayollar nuniga misol: «Qizlar o'ynamoqdalar»."
+        },
+        {
+          "type": "para",
+          "ar": "أَمَّا الْمَاضِي: فَبِنَاؤُهُ عَلَى الْفَتْحِ؛ نَحْوُ: كَتَبَ.",
+          "uz": "Mozi fatha ustiga bino qilinadi; masalan: كَتَبَ."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُضَمُّ إِذَا اتَّصَلَ بِالْوَاوِ فِي نَحْوِ: كَتَبُوا.",
+          "uz": "Vovga qo'shilsa damma bilan keladi: كَتَبُوا (yozdilar)."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُسَكَّنُ إِذَا اتَّصَلَ بِالنُّونِ، أَوْ: «نَا»، أَوِ التَّاءِ، فِي نَحْوِ: كَتَبْنَ، كَتَبْنَا، كَتَبْتُ، كَتَبْتَ، كَتَبْتِ، كَتَبْتُمَا، كَتَبْتُمْ، كَتَبْتُنَّ.",
+          "uz": "Nunga, «نَا» ga yoki toga qo'shilsa sukunli bo'ladi: كَتَبْنَ, كَتَبْنَا, كَتَبْتُ, كَتَبْتَ, كَتَبْتِ, كَتَبْتُمَا, كَتَبْتُمْ, كَتَبْتُنَّ."
+        },
+        {
+          "type": "para",
+          "ar": "وَأَمَّا الْأَمْرُ: فَبِنَاؤُهُ عَلَى السُّكُونِ إِنِ اتَّصَلَ بِنُونِ النِّسْوَةِ؛ نَحْوُ: اضْرِبْنَ، أَوْ كَانَ صَحِيحَ الْآخِرِ، وَلَمْ يَتَّصِلْ بِهِ شَيْءٌ؛ نَحْوُ: اسْمَعْ.",
+          "uz": "Amr esa, ayollar nuniga qo'shilsa — masalan: اضْرِبْنَ — yoki oxiri sahih bo'lib, unga hech narsa qo'shilmagan bo'lsa — masalan: اسْمَعْ — sukun ustiga bino qilinadi."
+        },
+        {
+          "type": "para",
+          "ar": "وَعَلَى حَذْفِ آخِرِهِ إِنْ كَانَ مُعْتَلَّ الْآخِرِ؛ نَحْوُ: اسْعَ، وَ: اسْمُ، وَ: ارْتَقِ.",
+          "uz": "Oxiri illatli bo'lsa, oxirini tushirish ustiga bino qilinadi; masalan: اسْعَ (harakat qil), اسْمُ (yuksal), ارْتَقِ (ko'taril)."
+        },
+        {
+          "type": "para",
+          "ar": "وَعَلَى حَذْفِ النُّونِ إِنْ كَانَ مُتَّصِلًا بِأَلِفِ اثْنَيْنِ، أَوْ وَاوِ جَمَاعَةٍ، أَوْ يَاءِ مُخَاطَبَةٍ؛ نَحْوُ: اسْمَعَا، وَاسْمَعُوا، وَ: اسْمَعِي.",
+          "uz": "Ikkilik alifi, jamoa vovi yoki muxotaba yosiga qo'shilgan bo'lsa, nunni tushirish ustiga bino qilinadi; masalan: اسْمَعَا, اسْمَعُوا, اسْمَعِي."
+        },
+        {
+          "type": "para",
+          "ar": "وَعَلَى الْفَتْحِ، إِنْ كَانَ مُتَّصِلًا بِهِ نُونُ التَّوْكِيدِ؛ نَحْوُ: اسْمَعَنَّ.",
+          "uz": "Unga ta'kid nuni qo'shilgan bo'lsa, fatha ustiga bino qilinadi; masalan: اسْمَعَنَّ."
+        },
+        {
+          "type": "para",
+          "ar": "(١) تُسَمَّى النُّونُ فِي نَحْوِ الْمِثَالِ الْأَوَّلِ: نُونَ التَّوْكِيدِ الثَّقِيلَةَ، وَفِي نَحْوِ الْمِثَالِ الثَّانِي: نُونَ التَّوْكِيدِ الْخَفِيفَةَ، وَلَا تَلْحَقُ نُونُ التَّوْكِيدِ إِلَّا الْفِعْلَ الْمُضَارِعَ وَالْأَمْرَ، وَتُفِيدُ تَأْكِيدَ مَضْمُونِ الْفِعْلِ، فَقَوْلُكَ لِإِنْسَانٍ: اذْهَبَنَّ، أَوْ: اذْهَبَنْ .. يُفِيدُ رَغْبَتَكَ فِي ذَهَابِهِ أَكْثَرَ مِمَّا يُفِيدُهُ قَوْلُكَ: اذْهَبْ.",
+          "uz": "(1-izoh) Birinchi misoldagi nun «og'ir ta'kid nuni», ikkinchisidagi «yengil ta'kid nuni» deb ataladi. Ta'kid nuni faqat muzori' va amr fe'liga qo'shiladi va fe'l mazmunini ta'kidlaydi. Bir kishiga «albatta bor» deyishing, oddiy «bor» deyishingdan ko'ra uning borishini ko'proq istaganingni bildiradi."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) الْأَصْلُ: اسْعَى، وَ: اسْمُو، وَ: ارْتَقِي.",
+          "uz": "(2-izoh) Asli: اسْعَى, اسْمُو, ارْتَقِي edi."
+        },
+        {
+          "type": "para",
+          "ar": "(٣) الْأَصْلُ: اسْمَعَانِ، وَ: اسْمَعُونَ، وَ: اسْمَعِينَ، وَلَكِنَّ هَذَا الْأَصْلَ لَا يَجُوزُ النُّطْقُ بِهِ، فَلَا يُقَالُ: «أَخِّرُونَ حِفْظَ الْأَوْرَاقِ» … مَثَلًا.",
+          "uz": "(3-izoh) Asli: اسْمَعَانِ, اسْمَعُونَ, اسْمَعِينَ edi; lekin bu asl shaklni talaffuz qilish joiz emas — masalan «أَخِّرُونَ حِفْظَ الْأَوْرَاقِ» deb aytilmaydi."
+        },
+        {
+          "type": "para",
+          "ar": "وَأَمَّا الْمُضَارِعُ الْمُتَّصِلَةُ بِهِ نُونُ التَّوْكِيدِ، فَبِنَاؤُهُ عَلَى الْفَتْحِ. وَالْمُتَّصِلَةُ بِهِ نُونُ الْإِنَاثِ، بِنَاؤُهُ عَلَى السُّكُونِ.",
+          "uz": "Ta'kid nuni qo'shilgan muzori' fatha ustiga bino qilinadi; ayollar nuni qo'shilgani esa sukun ustiga bino qilinadi."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "أَمْثِلَةٌ",
+            "uz": "Misollar"
+          },
+          "items": [
+            {
+              "ar": "١ - لِلْمَاضِي الْمَفْتُوحِ: أَكَلَ، شَرِبَ، لَبِسَ، قَامَ، قَعَدَ، جَلَسَ، نَامَ، اسْتَيْقَظَ.",
+              "uz": "1 — Fathali moziga: yedi, ichdi, kiydi, turdi, o'tirdi, o'tirdi, uxladi, uyg'ondi."
+            },
+            {
+              "ar": "٢ - لِلْمَاضِي الْمَضْمُومِ: أَكَلُوا، شَرِبُوا، لَبِسُوا، قَامُوا، قَعَدُوا، جَلَسُوا، نَامُوا، اسْتَيْقَظُوا.",
+              "uz": "2 — Dammali moziga: yedilar, ichdilar, kiydilar, turdilar, o'tirdilar, o'tirdilar, uxladilar, uyg'ondilar."
+            },
+            {
+              "ar": "٣ - لِلْمَاضِي السَّاكِنِ: أَكَلْنَ، شَرِبْنَا، لَبِسْتُ، قُمْتُ، قَعَدْتِ، جَلَسْتُمَا، نِمْتُمْ، اسْتَيْقَظْتُنَّ.",
+              "uz": "3 — Sukunli moziga: (ular ayollar) yedilar, biz ichdik, men kiydim, men turdim, sen (ayol) o'tirding, siz ikkovingiz o'tirdingiz, sizlar uxladingiz, sizlar (ayollar) uyg'ondingiz."
+            },
+            {
+              "ar": "٤ - لِلْأَمْرِ الْمَبْنِيِّ عَلَى السُّكُونِ: اسْكُتْنَ يَا نِسَاءُ، وَاضْغَيْنَ، اقْعُدْ، تَنَبَّهْ، احْذَرْ.",
+              "uz": "4 — Sukun ustiga mabniy amrga: «Ey ayollar, jim turinglar», quloq solinglar, o'tir, ogoh bo'l, ehtiyot bo'l."
+            },
+            {
+              "ar": "٥ - لِلْأَمْرِ الْمَبْنِيِّ عَلَى حَذْفِ الْأَلِفِ: اخْشَ، ارْضَ، ابْقَ، تَحَرَّ، تَنَحَّ.",
+              "uz": "5 — Alifni tushirish ustiga mabniy amrga: qo'rq, rozi bo'l, qol, izla, chetlan."
+            },
+            {
+              "ar": "٦ - لِلْأَمْرِ الْمَبْنِيِّ عَلَى حَذْفِ الْوَاوِ: ادْعُ، اغْزُ، ادْنُ، اصْفُ، ارْجُ.",
+              "uz": "6 — Vovni tushirish ustiga mabniy amrga: chaqir, g'azot qil, yaqinlash, tin, umid qil."
+            },
+            {
+              "ar": "٧ - لِلْأَمْرِ الْمَبْنِيِّ عَلَى حَذْفِ الْيَاءِ: ارْمِ، امْشِ، اسْتَوِ، ارْتَقِ، اغْتَنِ.",
+              "uz": "7 — Yoni tushirish ustiga mabniy amrga: ot, yur, tenglash, ko'taril, boyi."
+            },
+            {
+              "ar": "٨ - لِلْأَمْرِ الْمَبْنِيِّ عَلَى حَذْفِ النُّونِ: افْهَمَا، افْهَمُوا، افْهَمِي، اكْتُبَا، اكْتُبُوا، اكْتُبِي.",
+              "uz": "8 — Nunni tushirish ustiga mabniy amrga: (ikkovingiz) tushuninglar, (sizlar) tushuninglar, (sen ayol) tushun, (ikkovingiz) yozinglar, (sizlar) yozinglar, (sen ayol) yoz."
+            },
+            {
+              "ar": "٩ - لِلْأَمْرِ الْمَبْنِيِّ عَلَى الْفَتْحِ: اقْعُدَنَّ، تَنَبَّهَنَّ، اسْتَيْقِظَنَّ، احْتَرِسَنَّ، احْذَرَنَّ.",
+              "uz": "9 — Fatha ustiga mabniy amrga: albatta o'tir, albatta ogoh bo'l, albatta uyg'on, albatta ehtiyot bo'l, albatta saqlan."
+            },
+            {
+              "ar": "١٠ - لِلْمُضَارِعِ الْمَبْنِيِّ عَلَى الْفَتْحِ: لَيَقْعُدَنَّ، لَيَتَنَبَّهَنَّ، لَأَكِيدَنَّ، لَيُسْجَنَنَّ، لَيَذْهَبَنَّ.",
+              "uz": "10 — Fatha ustiga mabniy muzori'ga: albatta o'tiradi, albatta ogoh bo'ladi, albatta hiyla qilaman, albatta zindonga tashlanadi, albatta ketadi."
+            },
+            {
+              "ar": "١١ - لِلْمُضَارِعِ الْمَبْنِيِّ عَلَى السُّكُونِ: يَتَرَبَّصْنَ، يَأْكُلْنَ، يَكْتُبْنَ، يَلِدْنَ، يُؤَدِّبْنَ.",
+              "uz": "11 — Sukun ustiga mabniy muzori'ga: (ayollar) kutadilar, yeydilar, yozadilar, tug'adilar, tarbiya beradilar."
+            }
+          ]
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "مَيِّزْ أَصْنَافَ الْأَفْعَالِ الْمَبْنِيَّةِ مِنْ هَذِهِ الْجُمَلِ:",
+          "uz": "Bu jumlalardan mabniy fe'llarning turlarini ajrating:"
+        },
+        {
+          "ar": "لَا خَابَ مَنِ اسْتَخَارَ، وَلَا نَدِمَ مَنِ اسْتَشَارَ.",
+          "uz": "Allohdan xayr so'ragan kishi noumid bo'lmadi, maslahat so'ragan kishi pushaymon bo'lmadi."
+        },
+        {
+          "ar": "﴿فَالَّذِينَ هَاجَرُوا وَأُخْرِجُوا مِنْ دِيَارِهِمْ وَأُوذُوا فِي سَبِيلِي وَقَاتَلُوا وَقُتِلُوا لَأُكَفِّرَنَّ عَنْهُمْ سَيِّئَاتِهِمْ وَلَأُدْخِلَنَّهُمْ جَنَّاتٍ تَجْرِي مِنْ تَحْتِهَا الْأَنْهَارُ﴾.",
+          "uz": "«Hijrat qilgan, diyorlaridan chiqarilgan, Mening yo'limda aziyat chekkan, jang qilgan va o'ldirilganlarning yomonliklarini albatta o'chiraman va ularni albatta ostidan daryolar oqib turuvchi jannatlarga kiritaman»."
+        },
+        {
+          "ar": "﴿يَا أَيُّهَا الَّذِينَ آمَنُوا اصْبِرُوا وَصَابِرُوا وَرَابِطُوا وَاتَّقُوا اللَّهَ لَعَلَّكُمْ تُفْلِحُونَ﴾.",
+          "uz": "«Ey iymon keltirganlar! Sabr qilinglar, sabrda ustun bo'linglar, chegarada hozir turinglar va Allohdan qo'rqinglar — shoyad najot topsangiz»."
+        },
+        {
+          "ar": "اتَّقِ اللَّهَ، وَاسْعَ فِي الْخَيْرِ، وَأْمُرْ بِالْمَعْرُوفِ، وَانْهَ عَنِ الْمُنْكَرِ.",
+          "uz": "Allohdan qo'rq, yaxshilikda harakat qil, ma'rufga buyur va munkardan qaytar."
+        },
+        {
+          "ar": "قُلْتَ فَسَمِعْتُ، وَأَمَرْتُمْ فَأَطَعْنَا.",
+          "uz": "Sen aytding — men eshitdim; sizlar buyurdingiz — biz itoat qildik."
+        },
+        {
+          "ar": "﴿كُنْتُمْ خَيْرَ أُمَّةٍ أُخْرِجَتْ لِلنَّاسِ﴾.",
+          "uz": "«Sizlar odamlar uchun chiqarilgan eng yaxshi ummat bo'ldingiz»."
+        },
+        {
+          "ar": "﴿وَكَتَبْنَا عَلَيْهِمْ فِيهَا أَنَّ النَّفْسَ بِالنَّفْسِ﴾.",
+          "uz": "«Va unda ularga jonga jon deb yozdik»."
+        },
+        {
+          "ar": "كُلْ مَا اشْتَهَيْتَ وَالْبَسْ مَا تَشْتَهِيهِ النَّاسُ.",
+          "uz": "O'zing xohlagan narsani ye, odamlar xohlagan narsani kiy."
+        },
+        {
+          "ar": "أَخْبِرَا بِمَا رَأَيْتُمَا، وَقُولَا مَا سَمِعْتُمَا.",
+          "uz": "Ikkovingiz ko'rganingizni xabar qilinglar va eshitganingizni aytinglar."
+        },
+        {
+          "ar": "فَلَيُسْأَلَنَّ الْقَائِلُ عَمَّا قَالَ، وَلَيَذُوقَنَّ الكَاذِبُ الْوَبَالَ.",
+          "uz": "So'zlovchidan albatta aytgani so'raladi va yolg'onchi albatta oqibatni tortadi."
+        },
+        {
+          "ar": "﴿وَالْمُطَلَّقَاتُ يَتَرَبَّصْنَ بِأَنْفُسِهِنَّ ثَلَاثَةَ قُرُوءٍ﴾.",
+          "uz": "«Taloq qilingan ayollar uch hayz muddati kutadilar»."
+        },
+        {
+          "ar": "أَنْزِلُوا النَّاسَ مَنَازِلَهُمْ.",
+          "uz": "Odamlarni o'z martabalariga qo'yinglar."
+        },
+        {
+          "ar": "﴿وَأَوْفُوا بِعَهْدِ اللَّهِ إِذَا عَاهَدْتُمْ﴾.",
+          "uz": "«Ahd qilganingizda Allohning ahdiga vafo qilinglar»."
+        }
+      ]
     }
   ]
 }

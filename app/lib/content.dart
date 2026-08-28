@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:flutter/services.dart';
+import 'services/content_updater.dart';
 
 /// Bitta arab harfi (махраж va holatlari bilan).
 class Letter {
@@ -284,7 +284,11 @@ class QiroatLesson {
       );
 }
 
-/// Barcha kontentni assets'dan yuklaydigan repozitoriy.
+/// Barcha kontentni yuklaydigan repozitoriy.
+///
+/// Fayllar to'g'ridan-to'g'ri assets'dan emas, [ContentUpdater] orqali
+/// o'qiladi: agar saytdan yangi darslar yuklab olingan bo'lsa, o'shalar
+/// ishlatiladi; aks holda APK ichidagi nusxa.
 class ContentRepository {
   List<Letter> letters = [];
   List<Haraka> harakat = [];
@@ -296,19 +300,19 @@ class ContentRepository {
 
   Future<void> load() async {
     if (_loaded) return;
-    final l = json.decode(await rootBundle.loadString('assets/content/letters.json'));
+    final l = json.decode(await ContentUpdater.instance.read('letters.json'));
     letters = (l['letters'] as List).map((e) => Letter.fromJson(e)).toList();
 
-    final h = json.decode(await rootBundle.loadString('assets/content/harakat.json'));
+    final h = json.decode(await ContentUpdater.instance.read('harakat.json'));
     harakat = (h['harakat'] as List).map((e) => Haraka.fromJson(e)).toList();
 
-    final v = json.decode(await rootBundle.loadString('assets/content/vocabulary.json'));
+    final v = json.decode(await ContentUpdater.instance.read('vocabulary.json'));
     words = (v['words'] as List).map((e) => VocabWord.fromJson(e)).toList();
 
-    final q = json.decode(await rootBundle.loadString('assets/content/qiroat_lessons.json'));
+    final q = json.decode(await ContentUpdater.instance.read('qiroat_lessons.json'));
     qiroatLessons = (q['lessons'] as List).map((e) => QiroatLesson.fromJson(e)).toList();
 
-    final n = json.decode(await rootBundle.loadString('assets/content/nahv_lessons.json'));
+    final n = json.decode(await ContentUpdater.instance.read('nahv_lessons.json'));
     nahvLessons = (n['lessons'] as List).map((e) => NahvLesson.fromJson(e)).toList();
 
     _loaded = true;

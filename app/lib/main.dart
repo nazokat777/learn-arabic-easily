@@ -1,8 +1,12 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'content.dart';
 import 'progress.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+import 'services/content_updater.dart';
 import 'services/tts.dart';
 import 'services/vocab_audio.dart';
 import 'theme.dart';
@@ -25,6 +29,9 @@ Future<void> main() async {
   // (telefon brauzerlari kutishdan keyingi ovozni bloklaydi).
   await VocabAudio.instance.load(); // tayyor ovozlar ro'yxati
   unawaited(Tts.instance.init());
+  // Yangi darslar saytga qo'shilgan bo'lsa, orqa fonda yuklab qo'yamiz.
+  // Ilovani kutdirmaydi; yangisi keyingi ochilishda ko'rinadi.
+  unawaited(ContentUpdater.instance.checkForUpdate());
   runApp(const ArabApp());
 }
 
@@ -128,6 +135,59 @@ class HomeScreen extends StatelessWidget {
                       MaterialPageRoute(builder: (_) => const NahvHome())),
                 ),
               ),
+              // Saytda ochganlar uchun: ko'pchilik ilovani telefonga
+              // o'rnatmoqchi, lekin APK'ni qayerdan olishni bilmaydi.
+              if (kIsWeb) ...[
+                const SizedBox(height: 20),
+                const _ApkBanner(),
+              ],
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// APK yuklab olish sahifasini ochadi. Sahifa saytning o'zida turadi
+/// (`apk.html`), shuning uchun manzilni joriy manzilga nisbatan olamiz —
+/// sayt boshqa domenga ko'chsa ham ishlayveradi.
+void launchApkPage() {
+  launchUrl(Uri.base.resolve('apk.html'), webOnlyWindowName: '_blank');
+}
+
+/// «Telefonga o'rnatish» taklifi — faqat brauzerda ko'rinadi.
+class _ApkBanner extends StatelessWidget {
+  const _ApkBanner();
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: AppColors.softGreen,
+      borderRadius: BorderRadius.circular(18),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(18),
+        onTap: () => launchApkPage(),
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Row(
+            children: [
+              const Icon(Icons.android, color: AppColors.emerald, size: 30),
+              const SizedBox(width: 14),
+              const Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Telefonga o'rnatish",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w800, color: AppColors.ink)),
+                    SizedBox(height: 2),
+                    Text('Android uchun APK — brauzersiz ishlatasiz',
+                        style: TextStyle(color: Colors.black54, fontSize: 13)),
+                  ],
+                ),
+              ),
+              const Icon(Icons.download, color: AppColors.emerald),
             ],
           ),
         ),

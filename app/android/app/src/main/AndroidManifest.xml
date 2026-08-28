@@ -1,4 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Ovoz fayllari saytdan yuklanadi, shuning uchun internet kerak. -->
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:label="learn_arabic"
         android:name="${applicationName}"

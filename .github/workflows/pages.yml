@@ -21,13 +21,19 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 45
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Java o'rnatish (APK uchun)
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
 
       - name: Flutter o'rnatish
         uses: subosito/flutter-action@v2
@@ -40,6 +46,75 @@ jobs:
         run: |
           flutter pub get
           flutter build web --release --base-href "/learn-arabic-easily/"
+
+      - name: Ovoz fayllarini saytga nusxalash
+        # Kliplar (257 MB) Flutter asset'i EMAS - APK ichiga sig'masligi uchun
+        # ular oddiy fayl bo'lib saytda turadi. Ilova ularni
+        # <sayt>/audio/... manzilidan yuklaydi (VocabAudio.baseUrl).
+        working-directory: app
+        run: |
+          mkdir -p build/web/audio
+          for d in vocab sentences words alifbo extra; do
+            cp -r "assets/audio/$d" build/web/audio/
+          done
+          echo "ovoz: $(du -sh build/web/audio | cut -f1)"
+
+      - name: Kontentni saytga nusxalash
+        # APK ichidagi darslar eskirsa, ilova shu manzildan yangisini oladi
+        # (ContentUpdater.baseUrl). Shuning uchun kontent sayt ildizida ham
+        # oddiy fayl bo'lib turishi kerak.
+        working-directory: app
+        run: |
+          mkdir -p build/web/content
+          cp assets/content/*.json build/web/content/
+          echo "kontent versiyasi: $(cat assets/content/version.json)"
+
+      - name: APK yig'ish
+        # Ko'p foydalanuvchi ilovani telefonga o'rnatib ishlatadi. APK ichida
+        # darslar bor (ovoz va yangilanishlar internetdan keladi), shuning
+        # uchun hajmi kichik.
+        working-directory: app
+        run: |
+          flutter build apk --release
+          cp build/app/outputs/flutter-apk/app-release.apk build/web/arab-tili.apk
+          echo "APK: $(du -h build/web/arab-tili.apk | cut -f1)"
+
+      - name: Yuklab olish sahifasi
+        working-directory: app
+        run: |
+          cat > build/web/apk.html <<'HTML'
+          <!doctype html>
+          <html lang="uz"><head><meta charset="utf-8">
+          <meta name="viewport" content="width=device-width,initial-scale=1">
+          <title>Arab tilini oson o'rganamiz — telefonga o'rnatish</title>
+          <style>
+            body{font-family:system-ui,sans-serif;margin:0;padding:32px 20px;
+                 background:#F7F3E8;color:#2C3A2F;line-height:1.5}
+            .box{max-width:560px;margin:0 auto;background:#fff;border-radius:20px;
+                 padding:28px}
+            h1{font-size:22px;margin:0 0 8px}
+            a.btn{display:block;text-align:center;background:#1F7A5A;color:#fff;
+                  text-decoration:none;padding:16px;border-radius:14px;
+                  font-weight:700;margin:20px 0}
+            ol{padding-left:20px}li{margin-bottom:8px}
+            p.small{color:#66736B;font-size:14px}
+          </style></head><body><div class="box">
+          <h1>Arab tilini oson o'rganamiz</h1>
+          <p>Ilovani Android telefoningizga o'rnating.</p>
+          <a class="btn" href="arab-tili.apk">APK ni yuklab olish</a>
+          <ol>
+            <li>Tugmani bosing — fayl yuklanadi.</li>
+            <li>Yuklangan faylni oching.</li>
+            <li>«Noma'lum manbadan o'rnatishga ruxsat» so'ralsa — ruxsat bering.</li>
+            <li>«O'rnatish» ni bosing.</li>
+          </ol>
+          <p class="small">Darslar ilova ichida. Ovozlar internetdan yuklanadi.
+          Yangi darslar qo'shilsa ilova o'zi yangilanadi — APK ni qayta
+          o'rnatish shart emas.</p>
+          <p class="small"><a href="./">Brauzerda ochish</a></p>
+          </div></body></html>
+          HTML
+          echo "apk.html tayyor"
 
       - name: Pages sozlash
         uses: actions/configure-pages@v5

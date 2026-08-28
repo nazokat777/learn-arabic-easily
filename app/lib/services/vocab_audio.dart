@@ -18,8 +18,17 @@ class VocabAudio {
 
   final AudioPlayer _player = AudioPlayer();
 
-  /// Matn → asset yo'li. Uchala to'plam shu yerda: lug'at so'zlari, o'qish
-  /// matnining jumlalari va matn ichida bosiladigan alohida so'zlar.
+  /// Ovoz fayllari saytda turadi, ilova ichida emas.
+  ///
+  /// Sabab: kliplar 257 MB - APK ichiga sig'maydi. Ro'yxatlar (~1 MB) ilova
+  /// bilan keladi, fayllar esa shu manzildan yuklanadi. Web ham xuddi shu
+  /// manzildan oladi (o'zining sayti), shuning uchun ikkala platformada
+  /// bitta yo'l ishlaydi.
+  static const String baseUrl =
+      'https://nazokat777.github.io/learn-arabic-easily/audio';
+
+  /// Matn → fayl yo'li («vocab/0001.mp3»). Barcha to'plamlar shu yerda:
+  /// lug'at, matn jumlalari, so'zlar, alifbo va qo'shimchalar.
   Map<String, String> _manifest = const {};
   bool _loaded = false;
 
@@ -31,11 +40,11 @@ class VocabAudio {
     _loaded = true;
     final all = <String, String>{};
     for (final entry in const {
-      'assets/audio/vocab_manifest.json': 'audio/vocab',
-      'assets/audio/sentence_manifest.json': 'audio/sentences',
-      'assets/audio/word_manifest.json': 'audio/words',
-      'assets/audio/alifbo_manifest.json': 'audio/alifbo',
-      'assets/audio/extra_manifest.json': 'audio/extra',
+      'assets/audio/vocab_manifest.json': 'vocab',
+      'assets/audio/sentence_manifest.json': 'sentences',
+      'assets/audio/word_manifest.json': 'words',
+      'assets/audio/alifbo_manifest.json': 'alifbo',
+      'assets/audio/extra_manifest.json': 'extra',
     }.entries) {
       try {
         final raw = await rootBundle.loadString(entry.key);
@@ -59,7 +68,7 @@ class VocabAudio {
     if (path == null) return false;
     try {
       await _player.stop();
-      await _player.play(AssetSource(path));
+      await _player.play(UrlSource('$baseUrl/$path'));
       return true;
     } catch (_) {
       return false;

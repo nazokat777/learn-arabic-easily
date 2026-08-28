@@ -14,12 +14,14 @@ import edge_tts
 
 sys.path.insert(0, str(Path(__file__).parent))
 # Bu import stdout'ni UTF-8 ga o'raydi — ikkinchi marta o'ramang.
-from gen_sentence_audio import FFMPEG_TRIM, VOICE, RATE, RETRIES, WORKERS
+from gen_sentence_audio import (FFMPEG_TRIM, VOICE, RATE, RETRIES, WORKERS,
+                                split_sentences)
 
 OUT_DIR = Path("assets/audio/extra")
 MANIFEST = Path("assets/audio/extra_manifest.json")
 COVERED = ["vocab", "sentence", "word", "alifbo"]
 ARABIC = re.compile(r"[؀-ۿݐ-ݿ]")
+ARABIC_RUN = re.compile(r"[؀-ۿݐ-ݿ]+")
 
 
 def head(s: str) -> str:
@@ -42,13 +44,19 @@ def collect() -> list[str]:
     for w in json.loads(Path("assets/content/vocabulary.json").read_text(encoding="utf-8"))["words"]:
         want(head(w["ar"]))
 
-    # Grammatika jadvallarining arabcha kataklari - ular lug'atga kirmaydi,
-    # shuning uchun boshqa hech qaysi to'plamda uchramaydi.
     for L in json.loads(Path("assets/content/qiroat_lessons.json").read_text(encoding="utf-8"))["lessons"]:
+        # Grammatika jadvallarining arabcha kataklari - ular lug'atga kirmaydi,
+        # shuning uchun boshqa hech qaysi to'plamda uchramaydi.
         for t in L.get("tables", []):
             for row in t["rows"]:
                 for cell in row["cells"]:
                     want(cell)
+        # Mashq javoblari ham arabcha va ilovada tinglanadi: butun jumla ham,
+        # ichidagi har bir so'z ham (o'qish matnidagi kabi).
+        for s in split_sentences(L.get("exerciseAnswer", "")):
+            want(s)
+            for w in ARABIC_RUN.findall(s):
+                want(w)
     return list(out)
 
 

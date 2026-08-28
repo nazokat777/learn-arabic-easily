@@ -73,6 +73,14 @@ def needed() -> dict:
                 want.setdefault(w, f"{where} so'z")
         for v in L["vocab"]:
             want.setdefault(head(v["ar"]), f"{where} lug'at")
+        # Mashq javobi - jumlasi ham, ichidagi so'zlari ham tinglanadi.
+        for sent in split_sentences(L.get("exerciseAnswer", "")):
+            # Arabcha harfsiz parcha (masalan qo'shtirnoq + nuqta) ovozlanmaydi.
+            if not ARABIC.search(sent):
+                continue
+            want.setdefault(sent, f"{where} javob jumlasi")
+            for w in ARABIC.findall(sent):
+                want.setdefault(w, f"{where} javob so'zi")
         # Grammatika jadvallari - har bir arabcha katak tinglanadi.
         for t in L.get("tables", []):
             for row in t["rows"]:

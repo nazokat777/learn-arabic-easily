@@ -262,7 +262,9 @@ class QiroatLessonDetail extends StatelessWidget {
                   icon: '✅',
                   title: 'Mashqning javobi',
                   text: lesson.exerciseAnswer,
-                  arabic: true),
+                  arabic: true,
+                  vocab: lesson.vocab,
+                  reading: lesson.reading),
             ],
             const SizedBox(height: 24),
             _sectionLabel('📚', 'Lug\'at (${lesson.vocab.length} so\'z)'),
@@ -660,8 +662,12 @@ class _FoldBlock extends StatefulWidget {
   final String title;
   final String text;
   final bool arabic;
+  /// Arabcha bo'limda so'z bosilganda izoh ko'rsatish uchun darsning
+  /// lug'ati va matni kerak bo'ladi.
+  final List<QiroatVocab> vocab;
+  final String reading;
   const _FoldBlock({required this.icon, required this.title, required this.text,
-      this.arabic = false});
+      this.arabic = false, this.vocab = const [], this.reading = ''});
   @override
   State<_FoldBlock> createState() => _FoldBlockState();
 }
@@ -703,9 +709,31 @@ class _FoldBlockState extends State<_FoldBlock> {
             Padding(
               padding: const EdgeInsets.fromLTRB(14, 0, 14, 14),
               child: widget.arabic
-                  ? Text(widget.text,
-                      textDirection: TextDirection.rtl,
-                      style: AppTheme.arabic(size: 20, color: AppColors.ink))
+                  ? Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        // Javob ham o'qish matni kabi tinglanadi: har bir jumla
+                        // alohida, so'zini bossa - o'sha so'z.
+                        for (final s in splitSentences(widget.text))
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 4),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SpeakButton(text: s, id: 'javob-$s', size: 18),
+                                const SizedBox(width: 4),
+                                Expanded(
+                                  child: SentenceText(
+                                    sentence: s,
+                                    vocab: widget.vocab,
+                                    reading: widget.reading,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                      ],
+                    )
                   : Text(widget.text,
                       style: const TextStyle(color: AppColors.ink, height: 1.45)),
             ),

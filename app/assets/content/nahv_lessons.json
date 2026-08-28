@@ -2487,6 +2487,153 @@
         }
       ],
       "exercise": []
+    },
+    {
+      "book": 1,
+      "num": 45,
+      "page": 69,
+      "titleAr": "كَيْفِيَّةُ الْإِعْرَابِ",
+      "title": "I'rob qilish tartibi",
+      "rule": {
+        "ar": "وَهَذَا يُسَمَّى عِنْدَهُمْ بِـ«الْإِعْرَابِ»: أَنْ نُعَيِّنَ الاِسْمَ وَالْفِعْلَ وَالْحَرْفَ، وَنُبَيِّنَ الْمَبْنِيَّ وَالْمُعْرَبَ، وَنُمَيِّزَ الْمَرْفُوعَ وَالْمَنْصُوبَ وَالْمَجْزُومَ وَالْمَجْرُورَ، وَنَذْكُرَ سَبَبَ ذَلِكَ.",
+        "uz": "Ularning istilohida «i'rob» shu: ism, fe'l va harfni aniqlash, mabniy va mu'rabni bayon qilish, marfu', mansub, majzum va majrurni ajratish hamda buning sababini aytishdir."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "عَلِمْنَا مِمَّا تَقَدَّمَ لَنَا أَنَّ الْحُرُوفَ الهِجَائِيَّةَ تَتَرَكَّبُ مِنْهَا جَمِيعُ الكَلِمَاتِ، وَأَنَّ الكَلِمَاتِ فِعْلٌ، وَاسْمٌ، وَحَرْفٌ، وَأَنَّ مِنَ الكَلِمَاتِ مَا هُوَ مَبْنِيٌّ، وَمَا هُوَ مُعْرَبٌ، وَأَنَّ الْمُعْرَبَ يَكُونُ مَرْفُوعًا، أَوْ مَنْصُوبًا، أَوْ مَجْزُومًا، أَوْ مَجْرُورًا، وَعَرَفْنَا مَوَاضِعَ ذَلِكَ.",
+          "uz": "O'tganlardan bilib oldik: barcha so'zlar alifbo harflaridan tarkib topadi; so'zlar fe'l, ism va harfdir; so'zlarning ba'zisi mabniy, ba'zisi mu'rabdir; mu'rab marfu', mansub, majzum yoki majrur bo'ladi — va bularning o'rinlarini ham bildik."
+        },
+        {
+          "type": "para",
+          "ar": "فَلَا يَعْسُرُ عَلَيْنَا بَعْدَ ذَلِكَ إِذَا رَأَيْنَا عِبَارَةً أَنْ نَقْرَأَهَا صَحِيحَةً، وَنُمَيِّزَ كَلِمَاتِهَا بِأَنْ نُعَيِّنَ الاِسْمَ وَالْفِعْلَ وَالْحَرْفَ مِنْهَا، وَنُبَيِّنَ الْمَبْنِيَّ وَالْمُعْرَبَ، وَنُمَيِّزَ الْمَرْفُوعَ وَالْمَنْصُوبَ وَالْمَجْزُومَ وَالْمَجْرُورَ، وَنَذْكُرَ سَبَبَ ذَلِكَ.",
+          "uz": "Shundan keyin biror iborani ko'rsak, uni to'g'ri o'qish, so'zlarini ajratish — ism, fe'l va harfni aniqlash, mabniy va mu'rabni bayon qilish, marfu', mansub, majzum va majrurni ajratib, sababini aytish — bizga qiyin bo'lmaydi."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "فَتَقُولُ فِي مِثْلِ: لَا يُؤَخِّرْ أَحَدٌ عَمَلَ الْيَوْمِ لِغَدٍ:",
+            "uz": "«Hech kim bugungi ishni ertaga qoldirmasin» kabi misolda shunday deysan:"
+          },
+          "items": [
+            {
+              "ar": "(لَا): حَرْفُ نَهْيٍ، مَبْنِيٌّ عَلَى السُّكُونِ، لَا مَحَلَّ لَهُ مِنَ الْإِعْرَابِ.",
+              "uz": "«لَا» — qaytariq harfi, sukun ustiga mabniy; i'robdan o'rni yo'q."
+            },
+            {
+              "ar": "(يُؤَخِّرْ): فِعْلٌ مُضَارِعٌ مَجْزُومٌ؛ لِوُقُوعِهِ بَعْدَ «لَا» النَّاهِيَةِ.",
+              "uz": "«يُؤَخِّرْ» — muzori' fe'l, majzum; chunki qaytariq «لَا» sidan keyin kelgan."
+            },
+            {
+              "ar": "(أَحَدٌ): فَاعِلٌ مَرْفُوعٌ.",
+              "uz": "«أَحَدٌ» — foil, marfu'."
+            },
+            {
+              "ar": "(عَمَلَ): مَفْعُولٌ بِهِ مَنْصُوبٌ.",
+              "uz": "«عَمَلَ» — maf'ulun bihi, mansub."
+            },
+            {
+              "ar": "(الْيَوْمِ): مُضَافٌ إِلَيْهِ مَجْرُورٌ.",
+              "uz": "«الْيَوْمِ» — muzofun ilayh, majrur."
+            },
+            {
+              "ar": "(لِغَدٍ): اللَّامُ حَرْفُ جَرٍّ مَبْنِيٌّ عَلَى الكَسْرِ، لَا مَحَلَّ لَهُ مِنَ الْإِعْرَابِ، «غَدٍ»: مَجْرُورٌ بِاللَّامِ.",
+              "uz": "«لِغَدٍ» — «ل» jarr harfi bo'lib, kasra ustiga mabniy, i'robdan o'rni yo'q; «غَدٍ» esa «ل» bilan majrur."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "وَعَلَى هَذَا الْقِيَاسُ.",
+          "uz": "Qolganlari shu qiyosda."
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "اقْرَأِ الْجُمَلَ الْآتِيَةَ صَحِيحَةً، وَأَعْرِبْهَا بَعْدَ ذَلِكَ:",
+          "uz": "Quyidagi jumlalarni to'g'ri o'qing, so'ngra ularni i'rob qiling:"
+        },
+        {
+          "ar": "إِنَّ التَّارِيخَ مِرْآةٌ لِحَوَادِثِ الزَّمَانِ.",
+          "uz": "Albatta tarix — zamon voqealarining ko'zgusidir."
+        },
+        {
+          "ar": "حَاصَرَ جَيْشُ الْإِسْلَامِ مَدِينَةَ الْإِسْكَنْدَرِيَّةِ فِي خِلَافَةِ الْفَارُوقِ سَنَةً وَشَهْرَيْنِ، ثُمَّ دَخَلَ الْجَيْشُ هَذِهِ الْمَدِينَةَ فَائِزًا بِالنَّصْرِ مُتَوَّجًا بِتَاجِ الْعِزِّ وَالْفَخْرِ.",
+          "uz": "Islom qo'shini Foruq xalifaligi davrida Iskandariya shahrini bir yilu ikki oy qamal qildi, so'ngra qo'shin g'alaba qozongan, izzat va faxr toji bilan toj kiygan holda bu shaharga kirdi."
+        },
+        {
+          "ar": "يُعْرَفُ صَاحِبُ الْأَمَانَةِ عِنْدَ الْأَخْذِ وَالْإِعْطَاءِ.",
+          "uz": "Omonatga sodiq kishi olish va berish paytida tanilaadi."
+        },
+        {
+          "ar": "لِسَانُ التَّجْرِبَةِ أَصْدَقُ.",
+          "uz": "Tajriba tili eng rostgo'ydir."
+        },
+        {
+          "ar": "إِنَّ وَعْدَ الْحُرِّ دَيْنٌ عَلَيْهِ.",
+          "uz": "Albatta erkin kishining va'dasi uning zimmasidagi qarzdir."
+        },
+        {
+          "ar": "آفَةُ الْمُرُوءَةِ خُلْفُ الْوَعْدِ.",
+          "uz": "Muruvvatning ofati — va'daga xilof qilishdir."
+        },
+        {
+          "ar": "الْإِخْوَانُ زِينَةٌ فِي الرَّخَاءِ، وَعُدَّةٌ فِي الْبَلَاءِ، وَمَعُونَةٌ عَلَى الْأَعْدَاءِ.",
+          "uz": "Birodarlar — farog'atda ziynat, balo paytida quvvat, dushmanlarga qarshi yordamdir."
+        },
+        {
+          "ar": "تَمُرُّ الْفُرَصُ مَرَّ السَّحَابِ.",
+          "uz": "Imkoniyatlar bulut o'tganidek o'tib ketadi."
+        },
+        {
+          "ar": "الذَّهَبُ مَعْدِنٌ نَفِيسٌ رَنَّانٌ أَصْفَرُ اللَّوْنِ جَمِيلٌ.",
+          "uz": "Oltin — qimmatbaho, jarangdor, sariq rangli va go'zal ma'dandir."
+        },
+        {
+          "ar": "يُسْتَعْمَلُ الذَّهَبُ وَالْفِضَّةُ فِي النُّقُودِ وَالْحُلِيِّ.",
+          "uz": "Oltin va kumush pul hamda taqinchoqlarda ishlatiladi."
+        },
+        {
+          "ar": "الْأَفْعَالُ مَبْنِيَّةٌ إِلَّا الْمُضَارِعَ.",
+          "uz": "Fe'llar mabniydir, muzori'dan tashqari."
+        },
+        {
+          "ar": "خَيْرُ الْأُمُورِ الْوَسَطُ.",
+          "uz": "Ishlarning yaxshisi — o'rtachasidir."
+        },
+        {
+          "ar": "قَالَ أَعْرَابِيٌّ: الْبَلَاغَةُ حَذْفُ الْفُضُولِ وَتَقْرِيبُ الْبَعِيدِ.",
+          "uz": "Bir a'robiy dedi: balog'at — ortiqchani olib tashlash va uzoqni yaqinlashtirishdir."
+        },
+        {
+          "ar": "لَا يَزَالُ الْجَاهِلِيُّ لَاهِيًا، يَبِيتُ قَلْبُهُ خَالِيًا، وَيُصْبِحُ طَرْفُهُ سَاهِيًا.",
+          "uz": "Johiliyat kishisi hamon o'yin-kulgida; qalbi bo'sh holda tunaydi, ko'zi g'aflatda tongni qarshilaydi."
+        },
+        {
+          "ar": "الْأَسْمَاءُ مُعْرَبَةٌ إِلَّا الضَّمَائِرَ، وَأَسْمَاءَ الْإِشَارَةِ، وَالْأَسْمَاءَ الْمَوْصُولَةَ، وَأَسْمَاءَ الشَّرْطِ، وَأَلْفَاظًا قَلِيلَةً غَيْرَ ذَلِكَ.",
+          "uz": "Ismlar mu'rabdir; zamirlar, ishora ismlari, mavsul ismlar, shart ismlari va shulardan boshqa sanoqli so'zlardan tashqari."
+        },
+        {
+          "ar": "يَكُونُ الزِّئْبَقُ سَائِلًا فِي دَرَجَةِ الْحَرَارَةِ الْمُعْتَادَةِ.",
+          "uz": "Simob odatdagi harorat darajasida suyuq bo'ladi."
+        },
+        {
+          "ar": "يُسْتَعْمَلُ الزِّئْبَقُ فِي عَمَلِ الْمِرْآةِ.",
+          "uz": "Simob ko'zgu yasashda ishlatiladi."
+        },
+        {
+          "ar": "الْمَرْءُ قَلِيلٌ بِنَفْسِهِ كَثِيرٌ بِإِخْوَانِهِ.",
+          "uz": "Kishi yolg'iz o'zi oz, birodarlari bilan ko'pdir."
+        },
+        {
+          "ar": "انْفَرَدَ الْإِلَهُ بِالكَمَالِ.",
+          "uz": "Kamolot yolg'iz Allohga xosdir."
+        },
+        {
+          "ar": "تَمَّ الكِتَابُ الْأَوَّلُ.",
+          "uz": "Birinchi kitob tamom bo'ldi."
+        }
+      ]
     }
   ]
 }

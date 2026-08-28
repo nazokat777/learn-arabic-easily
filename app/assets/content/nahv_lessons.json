@@ -3709,6 +3709,271 @@
           "uz": "Yuqoridagi misollarda damma bilan marfu' bo'lganini va nun bilan marfu' bo'lganini aniqlang."
         }
       ]
+    },
+    {
+      "book": 2,
+      "num": 13,
+      "page": 98,
+      "titleAr": "تَتِمَّةٌ: فِي الْإِعْرَابِ التَّقْدِيرِيِّ لِلْفِعْلِ",
+      "title": "To'ldiruvchi: fe'lning taqdiriy i'robi",
+      "rule": {
+        "ar": "إِذَا كَانَ الْفِعْلُ مُعْتَلَّ الْآخِرِ بِالْأَلِفِ؛ فَلِتَعَذُّرِ تَحْرِيكِهَا تُقَدَّرُ عَلَيْهَا الضَّمَّةُ عِنْدَ الرَّفْعِ، وَالْفَتْحَةُ عِنْدَ النَّصْبِ؛ نَحْوُ: يَسْعَى، وَلَنْ يَسْعَى.",
+        "uz": "Fe'lning oxiri alif bilan illatli bo'lsa, alifni harakatlantirib bo'lmagani uchun raf'da damma, nasbda fatha uning ustida taqdir qilinadi (yozilmaydi, faraz qilinadi); masalan: يَسْعَى, لَنْ يَسْعَى."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَإِذَا كَانَ مُعْتَلَّ الْآخِرِ بِالْوَاوِ، أَوِ الْيَاءِ؛ فَلِاسْتِثْقَالِ ضَمِّهِمَا تُقَدَّرُ عَلَيْهِمَا الضَّمَّةُ عِنْدَ الرَّفْعِ؛ نَحْوُ: يَسْمُو، وَيَرْتَقِي، وَذَلِكَ طَرْدًا لِقَوَاعِدِ الْإِعْرَابِ.",
+          "uz": "Oxiri vov yoki yo bilan illatli bo'lsa, ularni damma bilan aytish og'ir bo'lgani uchun raf'da damma ular ustida taqdir qilinadi; masalan: يَسْمُو, يَرْتَقِي. Bu i'rob qoidalarini bir tekis qo'llash uchundir."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "أَمْثِلَةٌ",
+            "uz": "Misollar"
+          },
+          "items": [
+            {
+              "ar": "يَهْوَى الْعَاقِلُ أَنْ تَبْقَى آثَارُهُ، وَأَنْ تَحْيَا بَعْدَ مَا يَفْنَى أَخْبَارُهُ.",
+              "uz": "Aqlli kishi asarlari qolishini va o'zi haqidagi xabarlar yo'qolgandan keyin ham ular yashab qolishini istaydi."
+            },
+            {
+              "ar": "بِالْحَزْمِ تَدْنُو الْمَطَالِبُ، وَبِالثَّبَاتِ تَنْجَلِي الْغَيَاهِبُ.",
+              "uz": "Qat'iyat bilan maqsadlar yaqinlashadi, sabot bilan zulmatlar tarqaladi."
+            }
+          ]
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "عَيِّنِ الْحَرَكَاتِ الْمُقَدَّرَةَ عَلَى الْأَفْعَالِ فِي هَذِهِ الْآيَاتِ:",
+          "uz": "Quyidagi oyatlardagi fe'llar ustida taqdir qilingan harakatlarni aniqlang:"
+        },
+        {
+          "ar": "﴿وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَى﴾.",
+          "uz": "«Albatta Robbing senga ato qiladi va sen rozi bo'lasan»."
+        },
+        {
+          "ar": "﴿مَا أَنْزَلْنَا عَلَيْكَ الْقُرْآنَ لِتَشْقَى ۝ إِلَّا تَذْكِرَةً لِمَنْ يَخْشَى﴾.",
+          "uz": "«Biz senga Qur'onni mashaqqat chekishing uchun nozil qilmadik; balki qo'rqadigan kishi uchun eslatma bo'lsin deb»."
+        },
+        {
+          "ar": "﴿يَوْمَ نَدْعُو كُلَّ أُنَاسٍ بِإِمَامِهِمْ﴾.",
+          "uz": "«U kunda har bir guruh odamni imomi bilan chaqiramiz»."
+        }
+      ]
+    },
+    {
+      "book": 2,
+      "num": 14,
+      "page": 100,
+      "titleAr": "تَمْرِينٌ عُمُومِيٌّ لِلْأَفْعَالِ",
+      "title": "Fe'llar bo'yicha umumiy mashq",
+      "rule": {
+        "ar": "",
+        "uz": ""
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "بَيِّنْ فِي الْعِبَارَاتِ الْآتِيَةِ الْأَفْعَالَ الْمَبْنِيَّةَ، وَالْأَفْعَالَ الْمُعْرَبَةَ، وَأَنْوَاعَ إِعْرَابِهَا.",
+          "uz": "Quyidagi iboralarda mabniy fe'llarni, mu'rab fe'llarni va ularning i'rob turlarini ko'rsating."
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "﴿أَطِيعُوا اللَّهَ وَأَطِيعُوا الرَّسُولَ وَأُولِي الْأَمْرِ مِنْكُمْ﴾.",
+          "uz": "«Allohga itoat qilinglar, Rasulga va sizlardan bo'lgan ish egalariga itoat qilinglar»."
+        },
+        {
+          "ar": "أَخْلِصَا الْوَفَاءَ وَرَاعِيَا الْإِخَاءَ.",
+          "uz": "Ikkovingiz vafoni xolis qilinglar va birodarlikni saqlanglar."
+        },
+        {
+          "ar": "اشْكُرْنَ اللَّهَ عَلَى السَّرَّاءِ، وَاصْبِرْنَ عَلَى الضَّرَّاءِ.",
+          "uz": "(Ey ayollar!) Farog'atda Allohga shukr qilinglar, musibatda sabr qilinglar."
+        },
+        {
+          "ar": "ثَمَرَةُ الْعِلْمِ أَنْ يُعْمَلَ بِهِ، وَثَمَرَةُ الْعَمَلِ أَنْ يُؤْجَرَ عَلَيْهِ.",
+          "uz": "Ilmning mevasi — unga amal qilinishi, amalning mevasi — unga ajr berilishidir."
+        },
+        {
+          "ar": "الْعَاقِلُ يَأْكُلُ لِيَعِيشَ، وَالْجَاهِلُ يَعِيشُ لِيَأْكُلَ.",
+          "uz": "Aqlli yashash uchun yeydi, johil esa yeyish uchun yashaydi."
+        },
+        {
+          "ar": "﴿ارْجِعِي إِلَى رَبِّكِ رَاضِيَةً مَرْضِيَّةً ۝ فَادْخُلِي فِي عِبَادِي ۝ وَادْخُلِي جَنَّتِي﴾.",
+          "uz": "«Robbingga rozi bo'lgan va rozi qilingan holda qayt; bandalarim orasiga kir va jannatimga kir»."
+        },
+        {
+          "ar": "إِذَا قُلْتَ فَأَوْجِزْ، وَإِذَا وَعَدْتَ فَأَنْجِزْ.",
+          "uz": "Gapirsang — qisqa gapir, va'da bersang — bajar."
+        },
+        {
+          "ar": "لَا تَبْغِ غَيْرَ الَّذِي يُعْلِيكَ.",
+          "uz": "Seni yuksaltiradigan narsadan boshqasini istama."
+        },
+        {
+          "ar": "صَافِ النَّبِيهَ، وَدَارِ السَّفِيهَ، وَاعْفُ عَنِ الْهَفَوَاتِ.",
+          "uz": "Ziyrak kishi bilan sof do'st bo'l, nodon bilan chidamli muomala qil va xatolarni kechir."
+        },
+        {
+          "ar": "الكِبْرُ وَالْإِعْجَابُ يَسْلُبَانِ الْفَضَائِلَ، وَيُكْسِبَانِ الرَّذَائِلَ.",
+          "uz": "Kibr va o'ziga mahliyolik fazilatlarni tortib oladi va yomon xislatlarni keltiradi."
+        },
+        {
+          "ar": "حَافِظْنَ عَلَى مَنْ تُرَبِّينَ، وَلَا تُهْمِلْنَ مَنْ رَبَّيْتُنَّ.",
+          "uz": "(Ey ayollar!) Tarbiyalayotganlaringizni asranglar va tarbiyalaganlaringizni tashlab qo'ymanglar."
+        },
+        {
+          "ar": "مَتَى تَسْتَقِيمُوا تُحْمَدُوا.",
+          "uz": "Qachon to'g'ri bo'lsangiz, maqtalasizlar."
+        },
+        {
+          "ar": "مَنْ يَعْفُ عَنِ الزَّلَّاتِ يَأْمَنِ الْعَثَرَاتِ.",
+          "uz": "Kim xatolarni kechirsa, qoqilishlardan omon bo'ladi."
+        },
+        {
+          "ar": "﴿فَلَنْ يُخْلِفَ اللَّهُ عَهْدَهُ﴾.",
+          "uz": "«Alloh ahdiga hech xilof qilmaydi»."
+        },
+        {
+          "ar": "سَعَيْتَ كَيْ تَرْقَى إِذَنْ تَلْقَى خَيْرًا.",
+          "uz": "Yuksalish uchun harakat qilding — unda yaxshilik topasan."
+        },
+        {
+          "ar": "مَنْ يَتَعَلَّمْ صَغِيرًا يَتَقَدَّمْ كَبِيرًا.",
+          "uz": "Kim yoshligida o'rgansa, ulg'ayganda oldinga boradi."
+        },
+        {
+          "ar": "لَا تَقُولَنَّ إِذَا مَا لَمْ تُرِدْ * أَنْ تُتِمَّ الْوَعْدَ فِي شَيْءٍ: نَعَمْ",
+          "uz": "Biror ishda va'dangni bajarishni istamasang, hech qachon «ha» dema."
+        },
+        {
+          "ar": "مَهْمَا يَكُنْ عِنْدَكَ مِنْ ضَمِيرٍ يَظْهَرْ عَلَى أَسِرَّةِ وَجْهِكَ.",
+          "uz": "Ichingda nima bo'lsa, u yuzing chiziqlarida ko'rinadi."
+        },
+        {
+          "ar": "مَا كَانَ التَّصَنُّعُ لِيَخْفَى.",
+          "uz": "Sun'iylik yashirin qoladigan emas."
+        },
+        {
+          "ar": "كَيْفَمَا يُصَلِّ الْإِمَامُ يُصَلِّ الْمَأْمُومُ.",
+          "uz": "Imom qanday namoz o'qisa, unga ergashuvchi ham shunday o'qiydi."
+        },
+        {
+          "ar": "﴿وَمَا تَفْعَلُوا مِنْ خَيْرٍ يَعْلَمْهُ اللَّهُ﴾.",
+          "uz": "«Qanday yaxshilik qilsangiz, Alloh uni biladi»."
+        },
+        {
+          "ar": "أَيًّا مَا تَصْنَعْ تُحَاسَبْ عَلَيْهِ.",
+          "uz": "Nima qilsang, undan hisob berasan."
+        },
+        {
+          "ar": "لَأُلَازِمَنَّكَ، أَوْ تَقْضِيَنِي حَقِّي.",
+          "uz": "Haqqimni ado etmaguningcha sendan ajralmayman."
+        },
+        {
+          "ar": "لَا تَكُنْ رَطْبًا فَتُعْصَرَ، وَلَا يَابِسًا فَتُكْسَرَ.",
+          "uz": "Yumshoq bo'lma — siqiladi; qattiq ham bo'lma — sinadi."
+        },
+        {
+          "ar": "لَا تُبْرِمِ الْأَمْرَ حَتَّى تُفَكِّرَ فِيهِ.",
+          "uz": "O'ylab ko'rmaguningcha ishni pishitma."
+        }
+      ]
+    },
+    {
+      "book": 2,
+      "num": 15,
+      "page": 102,
+      "titleAr": "٣ - الكَلَامُ عَلَى الاِسْمِ — تَقْسِيمُ الاِسْمِ إِلَى مُفْرَدٍ وَمُثَنًّى وَجَمْعٍ",
+      "title": "3. Ism haqida so'z — ismning birlik, ikkilik va ko'plikka bo'linishi",
+      "rule": {
+        "ar": "يَنْقَسِمُ الاِسْمُ إِلَى مُفْرَدٍ، وَمُثَنًّى، وَجَمْعٍ. وَالْجَمْعُ قِسْمَانِ: جَمْعُ تَكْسِيرٍ، وَجَمْعُ تَصْحِيحٍ. وَجَمْعُ التَّصْحِيحِ قِسْمَانِ: جَمْعُ مُذَكَّرٍ سَالِمٌ، وَجَمْعُ مُؤَنَّثٍ سَالِمٌ.",
+        "uz": "Ism birlik, ikkilik va ko'plikka bo'linadi. Ko'plik ikki bo'lim: jam'i taksir (siniq ko'plik) va jam'i tas'hih (butun ko'plik). Jam'i tas'hih ham ikki bo'lim: jam'i muzakkari solim va jam'i muannasi solim."
+      },
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            {
+              "ar": "فَالْمُفْرَدُ: مَا دَلَّ عَلَى وَاحِدٍ؛ كَمُحَمَّدٍ، وَرَجُلٍ.",
+              "uz": "Mufrad — bittaga dalolat qiladigan ism; masalan: Muhammad, rajul (kishi)."
+            },
+            {
+              "ar": "وَالْمُثَنَّى: مَا دَلَّ عَلَى اثْنَيْنِ، أَوِ اثْنَتَيْنِ، بِزِيَادَةِ أَلِفٍ وَنُونٍ، أَوْ يَاءٍ وَنُونٍ؛ كَـ«كَاتِبَانِ»، وَ«كَاتِبَيْنِ»، وَ«كَاتِبَتَانِ»، وَ«كَاتِبَتَيْنِ».",
+              "uz": "Musanno — alif va nun yoki yo va nun qo'shilib, ikki erkak yoki ikki ayolga dalolat qiladigan ism; masalan: كَاتِبَانِ, كَاتِبَيْنِ, كَاتِبَتَانِ, كَاتِبَتَيْنِ."
+            },
+            {
+              "ar": "فَجَمْعُ التَّكْسِيرِ: مَا دَلَّ عَلَى أَكْثَرَ مِنِ اثْنَيْنِ بِتَغَيُّرِ صُورَةِ مُفْرَدِهِ؛ كَـ«رِجَالٍ»، وَ«عَرَائِسَ».",
+              "uz": "Jam'i taksir — birlik shakli o'zgarib, ikkitadan ortiqqa dalolat qiladigan ism; masalan: رِجَال (kishilar), عَرَائِس (kelinlar)."
+            },
+            {
+              "ar": "جَمْعُ مُذَكَّرٍ سَالِمٌ؛ وَهُوَ: مَا دَلَّ عَلَى أَكْثَرَ مِنِ اثْنَيْنِ، بِزِيَادَةِ «وَاوٍ وَنُونٍ»، أَوْ «يَاءٍ وَنُونٍ»؛ كَـ: مُؤْمِنُونَ، وَمُؤْمِنِينَ.",
+              "uz": "Jam'i muzakkari solim — «vov va nun» yoki «yo va nun» qo'shilib, ikkitadan ortiqqa dalolat qiladigan ism; masalan: مُؤْمِنُونَ, مُؤْمِنِينَ."
+            },
+            {
+              "ar": "وَجَمْعُ الْمُؤَنَّثِ السَّالِمُ: مَا دَلَّ عَلَى أَكْثَرَ مِنِ اثْنَتَيْنِ بِزِيَادَةِ أَلِفٍ وَتَاءٍ؛ كَـ: زَيْنَبَاتٍ، وَقَائِمَاتٍ.",
+              "uz": "Jam'i muannasi solim — alif va to qo'shilib, ikkitadan ortiq ayolga dalolat qiladigan ism; masalan: زَيْنَبَات, قَائِمَات."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "(١) وَمِنَ الْمُفْرَدِ: قَبِيلَةٌ، وَقَوْمٌ، وَرَهْطٌ، وَأُمَّةٌ، وَفِئَةٌ، وَنَحْوُهَا، فَإِنَّهَا تَدُلُّ عَلَى وَاحِدٍ بِالنِّسْبَةِ لِمُثَنَّيَاتِهَا وَجُمُوعِهَا. مِثَالُ ذَلِكَ: قَبِيلَتَانِ، وَقَبَائِلُ، وَقَوْمَانِ، وَأَقْوَامٌ … وَهَكَذَا.",
+          "uz": "(1-izoh) Mufraddan: qabila, qavm, raht, ummat, fi'a va shu kabilar — o'zlarining ikkiliklari va ko'pliklariga nisbatan bittaga dalolat qiladi. Masalan: qabilatani, qaboil; qavmani, aqvom — va hokazo."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) فَلَا يُقَالُ: ثِلْثَايِ، وَالصَّوَابُ: ثِلْثَانِ، أَوْ ثِلْثَيْنِ.",
+          "uz": "(2-izoh) «ثِلْثَايِ» deb aytilmaydi; to'g'risi: ثِلْثَانِ yoki ثِلْثَيْنِ."
+        },
+        {
+          "type": "para",
+          "ar": "(٣) لَا يُجْمَعُ هَذَا الْجَمْعُ إِلَّا الْأَسْمَاءُ الدَّالَّةُ عَلَى الْعُقَلَاءِ مِنَ الذُّكُورِ، فَلَا يُقَالُ: «الْأَبْوَابُ الْمَفْتُوحِينَ»، وَ«الْأَخْشَابُ الْمَوْضُوعِينَ»، وَ«الْإِفَادَاتُ الْوَارِدِينَ». وَلَا يُقَالُ أَيْضًا: «النِّسَاءُ الْمُتَزَوِّجِينَ». بَلْ يُقَالُ: «الْأَبْوَابُ الْمَفْتُوحَةُ»، وَ«الْأَخْشَابُ الْمَوْضُوعَةُ»، وَ«الْإِفَادَاتُ الْوَارِدَةُ»، وَ«النِّسَاءُ الْمُتَزَوِّجَاتُ».",
+          "uz": "(3-izoh) Bu ko'plik faqat erkak aqlli zotlarga dalolat qiladigan ismlarda yasaladi. Shuning uchun «الْأَبْوَابُ الْمَفْتُوحِينَ», «الْأَخْشَابُ الْمَوْضُوعِينَ», «الْإِفَادَاتُ الْوَارِدِينَ» deb aytilmaydi; «النِّسَاءُ الْمُتَزَوِّجِينَ» ham deyilmaydi. Balki: «ochilgan eshiklar», «qo'yilgan yog'ochlar», «kelgan ma'lumotlar», «turmushga chiqqan ayollar» deb aytiladi."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "أَمْثِلَةٌ",
+            "uz": "Misollar"
+          },
+          "items": [
+            {
+              "ar": "١ - لِلْمُفْرَدِ: قَلَمٌ، مِسْطَرَةٌ، لَوْحٌ، وَرَقَةٌ، كِتَابٌ، مِفْتَاحٌ، بَابٌ، شُبَّاكٌ، شَارِعٌ، طَرِيقٌ.",
+              "uz": "1 — Birlikka: qalam, chizg'ich, lavh, varaq, kitob, kalit, eshik, deraza, ko'cha, yo'l."
+            },
+            {
+              "ar": "٢ - لِلْمُثَنَّى: قَلَمَانِ، مِسْطَرَتَانِ، لَوْحَانِ، وَرَقَتَانِ، كِتَابَانِ، مِفْتَاحَيْنِ، بَابَيْنِ، شُبَّاكَيْنِ، شَارِعَيْنِ، طَرِيقَيْنِ.",
+              "uz": "2 — Ikkilikka: ikki qalam, ikki chizg'ich, ikki lavh, ikki varaq, ikki kitob, ikki kalit, ikki eshik, ikki deraza, ikki ko'cha, ikki yo'l."
+            },
+            {
+              "ar": "٣ - لِجَمْعِ التَّكْسِيرِ: أَقْلَامٌ، مَسَاطِرُ، أَلْوَاحٌ، أَوْرَاقٌ، كُتُبٌ، مَفَاتِيحُ، أَبْوَابٌ، شَبَابِيكُ، شَوَارِعُ، طُرُقٌ.",
+              "uz": "3 — Jam'i taksirga: qalamlar, chizg'ichlar, lavhlar, varaqlar, kitoblar, kalitlar, eshiklar, derazalar, ko'chalar, yo'llar."
+            },
+            {
+              "ar": "٤ - لِجَمْعِ الْمُذَكَّرِ السَّالِمِ: مُؤْمِنُونَ، قَائِمُونَ، مُوَظَّفُونَ، مُعَلِّمُونَ، مُسْتَخْدِمُونَ، كَاتِبِينَ، حَافِظِينَ، فَاهِمِينَ، مُسَافِرِينَ، مُتَشَارِكِينَ.",
+              "uz": "4 — Jam'i muzakkari solimga: mo'minlar, turuvchilar, xizmatchilar, o'qituvchilar, ishlatuvchilar, kotiblar, saqlovchilar, tushunuvchilar, safar qiluvchilar, sherikchilar."
+            },
+            {
+              "ar": "٥ - لِجَمْعِ الْمُؤَنَّثِ السَّالِمِ: مُؤْمِنَاتٌ، قَائِمَاتٌ، مُوَظَّفَاتٌ، مُعَلِّمَاتٌ، مُسْتَخْدِمَاتٌ، كَاتِبَاتٌ، حَافِظَاتٌ، فَاهِمَاتٌ، مُسَافِرَاتٌ، مُتَشَارِكَاتٌ.",
+              "uz": "5 — Jam'i muannasi solimga: mo'mina ayollar, turuvchi ayollar, xizmatchi ayollar, o'qituvchi ayollar, ishlatuvchi ayollar, kotiba ayollar, saqlovchi ayollar, tushunuvchi ayollar, safar qiluvchi ayollar, sherik ayollar."
+            }
+          ]
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "عَيِّنِ الْمُفْرَدَ، وَالْمُثَنَّى، وَالْجَمْعَ بِأَنْوَاعِهِ فِي هَذِهِ الْعِبَارَةِ:",
+          "uz": "Ushbu iborada birlik, ikkilik va ko'plikning turlarini aniqlang:"
+        },
+        {
+          "ar": "فِي مِصْرَ مِنَ الْآثَارِ مَا يَذْهَشُ الْأَبْصَارَ، مِنْ ذَلِكَ الْهَرَمَانِ اللَّذَانِ هَرِمَ الدَّهْرُ، وَهُمَا فَتِيَّانِ، وَتَعَاقَبَتِ الْعُصُورُ، وَتَوَالَتِ الدُّهُورُ، وَهُمَا بَاقِيَانِ، يَشْهَدُ بِنَاؤُهُمَا بِعُلُوِّ دَرَجَاتِ الْمُتَقَدِّمِينَ، وَيَنْطِقُ بِبَرَاعَةِ مَنْ كَانَ بِمِصْرَ مِنَ الْمُهَنْدِسِينَ، بِوَضْعِهِمَا يُمْكِنُ تَعْيِينُ الْجِهَاتِ، وَمَعْرِفَةُ الْفُصُولِ وَالاِنْتِقَالَاتِ.",
+          "uz": "Misrda ko'zlarni hayratga soladigan yodgorliklar bor. Shulardan ikki ehrom: zamon qarib ketdi, ular esa hamon yosh; asrlar ketma-ket keldi, davrlar oqib o'tdi, ular esa hamon boqiy. Ularning qurilishi o'tganlarning darajalari yuksak bo'lganiga guvohlik beradi va Misrdagi muhandislarning mahoratidan so'zlaydi. Ularning joylashuviga qarab tomonlarni aniqlash, fasllar va ularning almashuvini bilish mumkin."
+        }
+      ]
     }
   ]
 }

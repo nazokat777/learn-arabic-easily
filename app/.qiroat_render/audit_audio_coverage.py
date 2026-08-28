@@ -20,6 +20,10 @@ sys.path.insert(0, str(Path(__file__).parent))
 TERM = ".؟!؛?"
 RUN_ON = ".؟!؛"
 ARABIC = re.compile(r"[؀-ۿݐ-ݿ]+")
+# Diqqat: ARABIC bo'lagi tinish belgilarini ham qamraydi (masalan «؛»),
+# shuning uchun HARF borligini alohida tekshiramiz - aks holda yolg'iz
+# nuqta-vergul ham "so'z" deb ovozga yuboriladi va edge-tts xato beradi.
+LETTER = re.compile(r"[ء-يٱ-ۓ]")
 FATHA, DAMMA, KASRA = "َ", "ُ", "ِ"
 
 
@@ -69,23 +73,23 @@ def needed() -> dict:
         where = f"{L.get('book', 1)}-kitob {L['num']}-dars"
         for s in split_sentences(L["reading"]):
             want.setdefault(s, f"{where} jumla")
-            for w in ARABIC.findall(s):
+            for w in (x for x in ARABIC.findall(s) if LETTER.search(x)):
                 want.setdefault(w, f"{where} so'z")
         for v in L["vocab"]:
             want.setdefault(head(v["ar"]), f"{where} lug'at")
         # Mashq javobi - jumlasi ham, ichidagi so'zlari ham tinglanadi.
         for sent in split_sentences(L.get("exerciseAnswer", "")):
             # Arabcha harfsiz parcha (masalan qo'shtirnoq + nuqta) ovozlanmaydi.
-            if not ARABIC.search(sent):
+            if not LETTER.search(sent):
                 continue
             want.setdefault(sent, f"{where} javob jumlasi")
-            for w in ARABIC.findall(sent):
+            for w in (x for x in ARABIC.findall(sent) if LETTER.search(x)):
                 want.setdefault(w, f"{where} javob so'zi")
         # Grammatika jadvallari - har bir arabcha katak tinglanadi.
         for t in L.get("tables", []):
             for row in t["rows"]:
                 for cell in row["cells"]:
-                    if ARABIC.search(cell):
+                    if LETTER.search(cell):
                         want.setdefault(cell.strip(), f"{where} jadval")
 
     letters = json.loads(Path("assets/content/letters.json").read_text(encoding="utf-8"))["letters"]
@@ -111,10 +115,10 @@ def needed() -> dict:
                 pairs.extend(b.get("items", []))
             for pr in pairs:
                 for s in split_sentences(pr.get("ar", "")):
-                    if not ARABIC.search(s):
+                    if not LETTER.search(s):
                         continue
                     want.setdefault(s, f"nahv {L['num']}-dars")
-                    for w in ARABIC.findall(s):
+                    for w in (x for x in ARABIC.findall(s) if LETTER.search(x)):
                         want.setdefault(w, f"nahv {L['num']}-dars so'zi")
     return want
 

@@ -22,6 +22,10 @@ MANIFEST = Path("assets/audio/extra_manifest.json")
 COVERED = ["vocab", "sentence", "word", "alifbo"]
 ARABIC = re.compile(r"[؀-ۿݐ-ݿ]")
 ARABIC_RUN = re.compile(r"[؀-ۿݐ-ݿ]+")
+# Diqqat: ARABIC bo'lagi tinish belgilarini ham qamraydi (masalan «؛»),
+# shuning uchun HARF borligini alohida tekshiramiz - aks holda yolg'iz
+# nuqta-vergul ham "so'z" deb ovozga yuboriladi va edge-tts xato beradi.
+LETTER = re.compile(r"[ء-يٱ-ۓ]")
 
 
 def head(s: str) -> str:
@@ -38,7 +42,7 @@ def collect() -> list[str]:
 
     def want(t: str) -> None:
         t = t.strip()
-        if t and t not in covered and ARABIC.search(t):
+        if t and t not in covered and LETTER.search(t):
             out.setdefault(t, True)
 
     for w in json.loads(Path("assets/content/vocabulary.json").read_text(encoding="utf-8"))["words"]:
@@ -55,7 +59,7 @@ def collect() -> list[str]:
         # ichidagi har bir so'z ham (o'qish matnidagi kabi).
         for s in split_sentences(L.get("exerciseAnswer", "")):
             want(s)
-            for w in ARABIC_RUN.findall(s):
+            for w in (x for x in ARABIC_RUN.findall(s) if LETTER.search(x)):
                 want(w)
 
     # Nahv darslari: qoida, izohlar va misollar - hammasi arabcha.
@@ -71,7 +75,7 @@ def collect() -> list[str]:
             for pr in pairs:
                 for s in split_sentences(pr.get("ar", "")):
                     want(s)
-                    for w in ARABIC_RUN.findall(s):
+                    for w in (x for x in ARABIC_RUN.findall(s) if LETTER.search(x)):
                         want(w)
     return list(out)
 

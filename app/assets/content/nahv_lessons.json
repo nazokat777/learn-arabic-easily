@@ -64,6 +64,76 @@
           "uz": "So'z bu sondan oshmaydi."
         }
       ]
+    },
+    {
+      "book": 1,
+      "num": 2,
+      "page": 10,
+      "titleAr": "أَنْوَاعُ الكَلِمَاتِ",
+      "title": "So'zlarning turlari",
+      "rule": {
+        "ar": "وَتَنْقَسِمُ إِلَى ثَلَاثَةِ أَنْوَاعٍ: ١ - نَوْعٌ يُقَالُ لَهُ: «فِعْلٌ»؛ مِثْلُ: كَتَبَ، وَيَكْتُبُ، وَاكْتُبْ. ٢ - وَنَوْعٌ يُقَالُ لَهُ: «اسْمٌ»؛ مِثْلُ: مُحَمَّدٍ، وَعُصْفُورٍ، وَتُفَّاحَةٍ. ٣ - وَنَوْعٌ يُقَالُ لَهُ: «حَرْفٌ»؛ مِثْلُ: «هَلْ»، وَ«فِي»، وَ«لَمْ».",
+        "uz": "Ular uch turga bo'linadi: 1 — «fe'l» deyiladigan tur; masalan: كَتَبَ (yozdi), يَكْتُبُ (yozadi), اكْتُبْ (yoz). 2 — «ism» deyiladigan tur; masalan: مُحَمَّد (Muhammad), عُصْفُور (chumchuq), تُفَّاحَة (olma). 3 — «harf» deyiladigan tur; masalan: هَلْ, فِي, لَمْ."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "لَا تَخْرُجُ جَمِيعُ الْكَلِمَاتِ الَّتِي تَتَرَكَّبُ مِنَ الْحُرُوفِ الهِجَائِيَّةِ عَنْ ثَلَاثَةِ أَنْوَاعٍ: نَوْعٌ يُسَمَّى «فِعْلًا»، وَنَوْعٌ يُسَمَّى «اسْمًا»، وَنَوْعٌ يُسَمَّى «حَرْفًا».",
+          "uz": "Alifbo harflaridan tarkib topadigan barcha so'zlar uch turdan tashqariga chiqmaydi: «fe'l» deb ataladigan tur, «ism» deb ataladigan tur va «harf» deb ataladigan tur."
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "ar": "فَالْفِعْلُ؛ مِثْلُ: كَتَبَ، وَيَكْتُبُ، وَاكْتُبْ، وَدَحْرَجَ، وَيُدَحْرِجُ، وَدَحْرِجْ، وَانْطَلَقَ، وَيَنْطَلِقُ، وَانْطَلِقْ، وَاسْتَخْرَجَ، وَيَسْتَخْرِجُ، وَاسْتَخْرِجْ، وَغَيْرِ ذَلِكَ مِنَ الْأَلْفَاظِ الَّتِي تَدُلُّ عَلَى حُصُولِ شَيْءٍ وَزَمَنِهِ.",
+              "uz": "Fe'l; masalan: كَتَبَ (yozdi), يَكْتُبُ (yozadi), اكْتُبْ (yoz), دَحْرَجَ (dumaladi), يُدَحْرِجُ, دَحْرِجْ, انْطَلَقَ (yo'lga chiqdi), يَنْطَلِقُ, انْطَلِقْ, اسْتَخْرَجَ (chiqarib oldi), يَسْتَخْرِجُ, اسْتَخْرِجْ va shu kabi biror ish sodir bo'lishiga hamda uning zamoniga dalolat qiladigan so'zlar."
+            },
+            {
+              "ar": "وَالْاسْمُ؛ مِثْلُ: مُحَمَّدٍ، وَعُصْفُورٍ، وَتُفَّاحَةٍ، وَأَرْضٍ، وَسَمَاءٍ، وَشَمْسٍ، وَقَمَرٍ، وَغَيْرِ ذَلِكَ مِنَ الْأَلْفَاظِ الَّتِي نُنَادِي بِهَا الْأَشْخَاصَ، أَوْ نُسَمِّي بِهَا الْأَشْيَاءَ.",
+              "uz": "Ism; masalan: مُحَمَّد (Muhammad), عُصْفُور (chumchuq), تُفَّاحَة (olma), أَرْض (yer), سَمَاء (osmon), شَمْس (quyosh), قَمَر (oy) va shu kabi biz odamlarni chaqiradigan yoki narsalarni nomlaydigan so'zlar."
+            },
+            {
+              "ar": "وَالْحَرْفُ؛ مِثْلُ: هَلْ، وَفِي، وَلَمْ، وَمِنْ، وَإِلَى، وَثُمَّ. وَغَيْرِ ذَلِكَ مِنَ الْأَلْفَاظِ الَّتِي لَا يَظْهَرُ مَعْنَاهَا إِلَّا مَعَ غَيْرِهَا.",
+              "uz": "Harf; masalan: هَلْ, فِي, لَمْ, مِنْ, إِلَى, ثُمَّ va shu kabi ma'nosi faqat boshqa so'z bilan birga oydinlashadigan so'zlar."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "فَمِنْ ذَلِكَ أَسْمَاءُ النَّاسِ، وَأَسْمَاءُ الْجِبَالِ وَالْأَنْهَارِ وَالْبِلَادِ، وَكُلُّ مَا يَدُلُّ عَلَى حَيَوَانٍ، أَوْ نَبَاتٍ، أَوْ جَمَادٍ.",
+          "uz": "Ism turkumiga: odamlarning ismlari, tog', daryo va shaharlarning nomlari, shuningdek hayvon, o'simlik yoki jonsiz narsaga dalolat qiladigan har bir so'z kiradi."
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "مَا الَّذِي يَتَرَكَّبُ مِنَ الْحُرُوفِ الهِجَائِيَّةِ؟",
+          "uz": "Alifbo harflaridan nima tarkib topadi?"
+        },
+        {
+          "ar": "فِي كَمْ نَوْعٍ تَنْحَصِرُ الْكَلِمَاتُ؟",
+          "uz": "So'zlar necha turga jamlanadi?"
+        },
+        {
+          "ar": "مَا الَّذِي يَدُلُّ عَلَيْهِ الْفِعْلُ؟",
+          "uz": "Fe'l nimaga dalolat qiladi?"
+        },
+        {
+          "ar": "اذْكُرْ عَشَرَةَ أَفْعَالٍ.",
+          "uz": "O'nta fe'l keltiring."
+        },
+        {
+          "ar": "اذْكُرْ خَمْسَةَ أَسْمَاءٍ مِنْ أَسْمَاءِ النَّاسِ، وَمِثْلَهَا مِنْ أَسْمَاءِ أَجْنَاسِ الْحَيَوَانِ، وَالنَّبَاتِ، وَالْجَمَادِ.",
+          "uz": "Odamlarning ismlaridan beshtasini, shuncha miqdorda hayvon, o'simlik va jonsiz narsalarning nomlarini keltiring."
+        },
+        {
+          "ar": "عَيِّنِ الْأَفْعَالَ وَالْأَسْمَاءَ وَالْحُرُوفَ مِنْ هَذِهِ الْكَلِمَاتِ: «قَلَمٌ، مِنْ، كَتَبَ، وَرَقٌ، يُطَالِعُ، مَحْمُودٌ، فِي، يَتَعَلَّمُ، فَرَسٌ، احْفَظْ، حَمَامٌ، إِلَى، حَضَرَ، ثُمَّ، وَرْدَةٌ».",
+          "uz": "Bu so'zlardan fe'l, ism va harflarni ajrating: «qalam, min, kataba (yozdi), varaq (qog'oz), yutoli'u (mutolaa qiladi), Mahmud, fi, yata'allamu (o'rganadi), faras (ot), ihfaz (yodla), hamam (kaptar), ila, hadara (keldi), summa, varda (gul)»."
+        },
+        {
+          "ar": "عَيِّنْ مَا يَظْهَرُ لَكَ مِنَ الْأَفْعَالِ وَالْأَسْمَاءِ وَالْحُرُوفِ فِي هَذِهِ الْعِبَارَةِ: «النِّيلُ نَهْرٌ يَنْبُعُ مِنْ أَوَاسِطِ إِفْرِيقِيَّةَ، وَيَصُبُّ فِي الْبَحْرِ الْمَالِحِ، وَيَمُرُّ بِبِلَادِ مِصْرَ، فَيُفِيضُ عَلَى أَرْضِهَا الْخِصْبَ وَالنَّمَاءَ، وَيُكْسِبُ أَهْلَهَا السَّعَادَةَ وَالْهَنَاءَ».",
+          "uz": "Ushbu iborada ko'zingizga tashlangan fe'l, ism va harflarni ajrating: «Nil — O'rta Afrikadan boshlanadigan daryo. U sho'r dengizga quyiladi, Misr yurtidan o'tadi, uning yeriga hosildorlik va o'sish ulashadi, aholisiga esa baxt va farog'at keltiradi»."
+        }
+      ]
     }
   ]
 }

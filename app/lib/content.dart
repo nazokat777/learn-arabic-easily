@@ -209,6 +209,10 @@ class NahvLesson {
   final NahvPair rule;
   final List<NahvBlock> blocks;
 
+  /// Kitobdagi «تَمْرِينٌ» - dars oxiridagi mashq savollari.
+  /// Ba'zi darslarda yo'q, shuning uchun bo'sh bo'lishi mumkin.
+  final List<NahvPair> exercise;
+
   const NahvLesson({
     required this.book,
     required this.num,
@@ -217,6 +221,7 @@ class NahvLesson {
     required this.title,
     required this.rule,
     required this.blocks,
+    this.exercise = const [],
   });
 
   factory NahvLesson.fromJson(Map<String, dynamic> j) => NahvLesson(
@@ -230,6 +235,9 @@ class NahvLesson {
             : NahvPair.fromJson(j['rule'] as Map<String, dynamic>),
         blocks: ((j['blocks'] as List?) ?? const [])
             .map((e) => NahvBlock.fromJson(e as Map<String, dynamic>))
+            .toList(),
+        exercise: ((j['exercise'] as List?) ?? const [])
+            .map((e) => NahvPair.fromJson(e as Map<String, dynamic>))
             .toList(),
       );
 }

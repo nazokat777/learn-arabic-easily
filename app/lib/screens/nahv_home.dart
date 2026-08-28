@@ -144,7 +144,8 @@ class NahvLessonScreen extends StatelessWidget {
           if (lesson.rule.ar.isNotEmpty) _RuleBox(rule: lesson.rule),
           const SizedBox(height: 18),
           for (final b in lesson.blocks) ...[
-            if (b.type == 'list' && b.intro != null) _Bilingual(pair: b.intro!),
+            if (b.type == 'list' && (b.intro?.ar.isNotEmpty ?? false))
+              _Bilingual(pair: b.intro!),
             if (b.type != 'list') _Bilingual(pair: b.main!),
             if (b.type == 'list')
               for (var i = 0; i < b.items.length; i++)
@@ -153,6 +154,20 @@ class NahvLessonScreen extends StatelessWidget {
                   child: _Bilingual(pair: b.items[i], bullet: '${i + 1}.'),
                 ),
             const SizedBox(height: 12),
+          ],
+          if (lesson.exercise.isNotEmpty) ...[
+            const SizedBox(height: 8),
+            Row(
+              children: [
+                const Text('✍️ ', style: TextStyle(fontSize: 16)),
+                Text('Mashq — تَمْرِينٌ',
+                    style: const TextStyle(
+                        fontWeight: FontWeight.w800, color: AppColors.gold)),
+              ],
+            ),
+            const SizedBox(height: 8),
+            for (var i = 0; i < lesson.exercise.length; i++)
+              _Bilingual(pair: lesson.exercise[i], bullet: '${i + 1}.'),
           ],
         ],
       ),

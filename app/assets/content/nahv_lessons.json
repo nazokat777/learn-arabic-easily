@@ -2093,7 +2093,204 @@
           "uz": "Muzofun ilayh faqat majrur bo'ladi."
         }
       ],
+      "exercise": [
+        {
+          "ar": "مَيِّزِ الْمَجْرُورَاتِ مِنْ هَذِهِ الْجُمَلِ:",
+          "uz": "Bu jumlalarda majrurlarni ajrating:"
+        },
+        {
+          "ar": "لِسَانُ الْحَالِ أَفْصَحُ مِنْ لِسَانِ الْمَقَالِ.",
+          "uz": "Hol tili so'z tilidan fasihroqdir."
+        },
+        {
+          "ar": "بِالْأَدَبِ نَيْلُ الْأَرَبِ.",
+          "uz": "Odob bilan maqsadga yetiladi."
+        },
+        {
+          "ar": "نُورُ الْقَمَرِ مُسْتَفَادٌ مِنْ نُورِ الشَّمْسِ.",
+          "uz": "Oyning nuri quyosh nuridan olingandir."
+        },
+        {
+          "ar": "الْمُسْتَجِيرُ بِعَمْرٍو عِنْدَ كُرْبَتِهِ * كَالْمُسْتَجِيرِ مِنَ الرَّمْضَاءِ بِالنَّارِ.",
+          "uz": "G'ami tushganda Amrdan panoh so'ragan kishi — qizigan qumdan qochib o'tdan panoh so'ragan kabidir."
+        }
+      ]
+    },
+    {
+      "book": 1,
+      "num": 39,
+      "page": 60,
+      "titleAr": "التَّوَابِعُ",
+      "title": "Tobelar",
+      "rule": {
+        "ar": "وَإِلَى هُنَا تَمَّ لَنَا مَعْرِفَةُ جَمِيعِ مَوَاضِعِ الرَّفْعِ وَالنَّصْبِ وَالْجَزْمِ وَالْجَرِّ، غَيْرَ أَنَّهُ قَدْ يَسْرِي إِعْرَابُ الكَلِمَةِ عَلَى مَا بَعْدَهَا؛ بِحَيْثُ تُرْفَعُ عِنْدَ رَفْعِهَا، وَتُنْصَبُ عِنْدَ نَصْبِهَا، وَهَكَذَا، وَيُسَمَّى الْمُتَأَخِّرُ: «تَابِعًا». وَالتَّوَابِعُ: أَرْبَعَةُ أَنْوَاعٍ.",
+        "uz": "Shu bilan raf', nasb, jazm va jarrning barcha o'rinlarini bilib oldik. Faqat, so'zning i'robi undan keyingi so'zga o'tishi mumkin: u raf' bo'lganda keyingisi ham raf' bo'ladi, nasb bo'lganda nasb bo'ladi va hokazo. Keyin kelgani «tobe» deb ataladi. Tobelar to'rt turlidir."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "إِذَا رُفِعَتِ الكَلِمَةُ، أَوْ نُصِبَتْ، أَوْ جُرَّتْ، بِسَبَبِ وُقُوعِهَا فِي مَوْضِعٍ مِنَ الْمَوَاضِعِ الَّتِي سَبَقَ لَنَا بَيَانُهَا، يُقَالُ: إِنَّ إِعْرَابَهَا أَصْلِيٌّ.",
+          "uz": "So'z biz bayon qilgan o'rinlardan birida kelgani sababli raf', nasb yoki jarr bo'lsa, uning i'robi «asliy» deyiladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَهُنَاكَ إِعْرَابٌ يُقَالُ لَهُ: تَبَعِيٌّ. وَلَا سَبَبَ لَهُ إِلَّا وُقُوعُ الكَلِمَةِ بَعْدَ مَا لَهُ إِعْرَابٌ أَصْلِيٌّ؛ فَيُرْفَعُ الْمُتَأَخِّرُ، أَوْ يُنْصَبُ، أَوْ يُجْزَمُ، أَوْ يُجَرُّ، تَبَعًا لِمَا قَبْلَهُ، وَلِذَلِكَ يُسَمَّى: «تَابِعًا».",
+          "uz": "Yana «taba'iy» deb ataladigan i'rob bor. Uning sababi faqat shuki, so'z asliy i'robga ega so'zdan keyin kelgan. Shunda keyin kelgani o'zidan oldingisiga ergashib raf', nasb, jazm yoki jarr bo'ladi; shuning uchun u «tobe» deb ataladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَقَدْ عَرَفْنَا الْإِعْرَابَ الْأَصْلِيَّ لِلْكَلِمَاتِ. وَأَمَّا الْإِعْرَابُ التَّبَعِيُّ، فَيَكُونُ فِي أَرْبَعَةِ أَنْوَاعٍ:",
+          "uz": "So'zlarning asliy i'robini bildik. Taba'iy i'robga kelsak, u to'rt turda bo'ladi:"
+        }
+      ],
       "exercise": []
+    },
+    {
+      "book": 1,
+      "num": 40,
+      "page": 60,
+      "titleAr": "١ - النَّعْتُ",
+      "title": "1. Na't (sifat)",
+      "rule": {
+        "ar": "نَوْعٌ يُسَمَّى: «نَعْتًا»؛ مِثْلُ: عَاقِلٍ وَجَاهِلٍ؛ مِنْ: عَدُوٌّ عَاقِلٌ خَيْرٌ مِنْ صَدِيقٍ جَاهِلٍ.",
+        "uz": "«Na't» deb ataladigan tur; masalan: «Aqlli dushman johil do'stdan yaxshiroq» dagi «عَاقِلٌ» va «جَاهِلٍ»."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "إِذَا لَقِيتَ كِيسًا فِي الطَّرِيقِ، وَسَمِعْتَ إِنْسَانًا يَقُولُ: ضَاعَ لِي كِيسٌ. فَلَا يَصِحُّ أَنْ تُعْطِيَهُ الكِيسَ مُعْتَقِدًا أَنَّهُ لَهُ، مَا لَمْ يُبَيِّنْ صِفَاتِهِ الْخَاصَّةَ بِهِ، كَأَنْ يَقُولَ: ضَاعَ لِي كِيسٌ صَغِيرٌ أَسْوَدُ. مَثَلًا.",
+          "uz": "Yo'lda hamyon topsang va bir kishining «Hamyonim yo'qoldi» deganini eshitsang, u hamyonning o'ziga xos sifatlarini aytmaguncha, uni shu kishiniki deb ishonib berishing to'g'ri bo'lmaydi. Masalan, u: «Kichkina qora hamyonim yo'qoldi» desa (boshqa gap)."
+        },
+        {
+          "type": "para",
+          "ar": "فَلَفْظُ: «صَغِيرٌ»، وَنَحْوُهُ، يُسَمَّى: «نَعْتًا»، أَوْ «صِفَةً». وَيَجِبُ فِيهِ الرَّفْعُ حِينَئِذٍ تَبَعًا لِلَفْظِ «كِيسٌ» الْمَرْفُوعِ عَلَى أَنَّهُ فَاعِلٌ.",
+          "uz": "«صَغِيرٌ» va shunga o'xshash so'z «na't» yoki «sifat» deb ataladi. Bunda u foil bo'lgani uchun raf' bo'lgan «كِيسٌ» so'ziga ergashib raf' bo'lishi vojib bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "فَإِنْ نُصِبَ الْأَوَّلُ نُصِبَ الثَّانِي تَبَعًا لَهُ؛ كَأَنْ يَقُولَ: فَقَدْتُ كِيسًا صَغِيرًا. فَلَفْظُ: «كِيسًا» مَنْصُوبٌ عَلَى أَنَّهُ مَفْعُولٌ بِهِ، وَ«صَغِيرًا» نَعْتٌ لَهُ مَنْصُوبٌ.",
+          "uz": "Birinchisi nasb bo'lsa, ikkinchisi ham unga ergashib nasb bo'ladi; masalan: «Kichkina hamyon yo'qotdim». «كِيسًا» maf'ulun bihi bo'lgani uchun mansub, «صَغِيرًا» esa unga na't bo'lib, mansubdir."
+        },
+        {
+          "type": "para",
+          "ar": "وَكَذَلِكَ فِي الْجَرِّ؛ نَحْوُ: أَسْأَلُ عَنْ كِيسٍ صَغِيرٍ. فَلَفْظُ: «كِيسٍ» مَجْرُورٌ بِـ«عَنْ»، وَ«صَغِيرٍ» نَعْتٌ لَهُ مَجْرُورٌ.",
+          "uz": "Jarrda ham shunday; masalan: «Kichkina hamyonni so'rayapman». «كِيسٍ» — «عَنْ» bilan majrur, «صَغِيرٍ» esa unga na't bo'lib, majrurdir."
+        },
+        {
+          "type": "para",
+          "ar": "وَمِثْلُ «كِيسٌ صَغِيرٌ»: رَجُلٌ قَصِيرٌ، وَعَلِيٌّ التَّاجِرُ، وَحَسَنٌ الكَاتِبُ، وَعَدُوٌّ عَاقِلٌ، وَصَدِيقٌ جَاهِلٌ، وَمَا أَشْبَهَ ذَلِكَ مِنَ الْأَسْمَاءِ الدَّالَّةِ عَلَى صِفَاتِ مَا قَبْلَهَا.",
+          "uz": "«كِيسٌ صَغِيرٌ» ga o'xshashlar: «past bo'yli kishi», «savdogar Ali», «kotib Hasan», «aqlli dushman», «johil do'st» va shunga o'xshash — o'zidan oldingi so'zning sifatiga dalolat qiladigan ismlar."
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "اضْبِطْ بِالْقَلَمِ لَفْظَ «الْعَادِلِ» فِي هَذِهِ الْأَمْثِلَةِ:",
+          "uz": "Quyidagi misollarda «الْعَادِل» so'zining harakatini qalam bilan qo'ying:"
+        },
+        {
+          "ar": "الْإِمَامُ الْعَادِلُ مَحْبُوبٌ عِنْدَ اللَّهِ وَالنَّاسِ.",
+          "uz": "Adolatli rahbar Alloh huzurida ham, odamlar orasida ham suyukli."
+        },
+        {
+          "ar": "يُظِلُّ اللَّهُ الْإِمَامَ الْعَادِلَ يَوْمَ الْقِيَامَةِ.",
+          "uz": "Alloh qiyomat kuni adolatli rahbarni o'z soyasida saqlaydi."
+        },
+        {
+          "ar": "تَسْعَدُ الْأُمَّةُ بِالْإِمَامِ الْعَادِلِ.",
+          "uz": "Ummat adolatli rahbar bilan baxtli bo'ladi."
+        }
+      ]
+    },
+    {
+      "book": 1,
+      "num": 41,
+      "page": 62,
+      "titleAr": "٢ - الْعَطْفُ",
+      "title": "2. Atf (bog'lanma)",
+      "rule": {
+        "ar": "وَنَوْعٌ يُسَمَّى: «عَطْفًا»؛ مِثْلُ: الشَّرَفَ وَالْأَدَبِ مِنْ: يَبْلُغُ الطَّالِبُ الْمَجْدَ وَالشَّرَفَ بِالْعِلْمِ وَالْأَدَبِ. وَمِثْلُ الْوَاوِ: «الْفَاءُ»، «ثُمَّ»، «أَوْ»، «أَمْ»، «لَكِنْ»، «لَا»، «بَلْ».",
+        "uz": "«Atf» deb ataladigan tur; masalan: «Talaba ilm va odob bilan ulug'lik hamda sharafga yetadi» dagi «الشَّرَفَ» va «الْأَدَبِ». «و» kabi harflar: ف, ثُمَّ, أَوْ, أَمْ, لَكِنْ, لَا, بَلْ."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "إِذَا انْكَسَرَ الْقَلَمُ وَالدَّوَاةُ، وَأَرَدْتَ أَنْ تُعَبِّرَ عَنْ ذَلِكَ، فَبَدَلَ أَنْ تَذْكُرَ جُمْلَتَيْنِ: إِحْدَاهُمَا: انْكَسَرَ الْقَلَمُ، وَالثَّانِيَةُ: انْكَسَرَتِ الدَّوَاةُ. يَكْفِي أَنْ تَذْكُرَ الْفِعْلَ مَرَّةً وَاحِدَةً، وَتَأْتِيَ بَعْدَهُ بِالاِسْمَيْنِ مُتَّصِلَيْنِ بِوَاوٍ، فَتَقُولَ: انْكَسَرَ الْقَلَمُ وَالدَّوَاةُ.",
+          "uz": "Qalam va siyohdon singan bo'lsa va buni ifodalamoqchi bo'lsang, ikkita jumla — «Qalam sindi» va «Siyohdon sindi» — deyish o'rniga, fe'lni bir marta aytib, undan keyin ikkala ismni «و» bilan bog'lab keltirish yetarli: «Qalam va siyohdon sindi» deysan."
+        },
+        {
+          "type": "para",
+          "ar": "فَمَا بَعْدَ الْوَاوِ يُسَمَّى: «مَعْطُوفًا»، وَمَا قَبْلَهَا يُسَمَّى: «مَعْطُوفًا عَلَيْهِ».",
+          "uz": "«و» dan keyingisi «ma'tuf», undan oldingisi «ma'tufun alayh» deb ataladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَجِبُ فِي الْمَعْطُوفِ أَنْ يَتْبَعَ مَا قَبْلَهُ فِي نَوْعِ إِعْرَابِهِ؛ فَلَفْظُ: «الدَّوَاةُ» فِي هَذَا الْمِثَالِ مَرْفُوعٌ تَبَعًا لِلَفْظِ: «الْقَلَمُ» الْمَرْفُوعِ عَلَى أَنَّهُ فَاعِلٌ.",
+          "uz": "Ma'tuf o'zidan oldingisiga i'rob turida ergashishi vojibdir. Bu misolda «الدَّوَاةُ» so'zi foil bo'lgani uchun raf' bo'lgan «الْقَلَمُ» so'ziga ergashib raf' bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَفِي: كَسَرْتُ الْقَلَمَ وَالدَّوَاةَ. مَنْصُوبٌ تَبَعًا لِـ«الْقَلَمَ» الْمَنْصُوبِ عَلَى أَنَّهُ مَفْعُولٌ بِهِ.",
+          "uz": "«Qalam va siyohdonni sindirdim» da esa u maf'ulun bihi bo'lgani uchun mansub bo'lgan «الْقَلَمَ» ga ergashib mansub bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَفِي: عَجِبْتُ مِنْ كَسْرِ الْقَلَمِ وَالدَّوَاةِ. مَجْرُورٌ تَبَعًا لِـ«الْقَلَمِ» الْمَجْرُورِ عَلَى أَنَّهُ مُضَافٌ إِلَيْهِ.",
+          "uz": "«Qalam va siyohdonning sinishidan hayron qoldim» da esa u muzofun ilayh bo'lgani uchun majrur bo'lgan «الْقَلَمِ» ga ergashib majrur bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَتَقُولُ: انْكَسَرَ الْقَلَمُ، فَالدَّوَاةُ. إِذَا أَرَدْتَ أَنْ تَدُلَّ عَلَى أَنَّ كَسْرَ الدَّوَاةِ كَانَ عَقِبَ كَسْرِ الْقَلَمِ.",
+          "uz": "Siyohdonning sinishi qalam singanidan darrov keyin bo'lganini bildirmoqchi bo'lsang: «Qalam sindi, keyin siyohdon» deysan."
+        },
+        {
+          "type": "para",
+          "ar": "وَانْكَسَرَ الْقَلَمُ، ثُمَّ الدَّوَاةُ. إِذَا أَرَدْتَ أَنْ تَدُلَّ عَلَى أَنَّ كَسْرَهَا كَانَ بَعْدَ كَسْرِهِ بِزَمَنٍ.",
+          "uz": "Siyohdonning sinishi qalam singanidan ancha vaqt keyin bo'lganini bildirmoqchi bo'lsang: «Qalam sindi, so'ngra siyohdon» deysan."
+        },
+        {
+          "type": "para",
+          "ar": "وَانْكَسَرَ الْقَلَمُ، أَوِ الدَّوَاةُ. إِذَا كَانَ الْمَكْسُورُ أَحَدَهُمَا فَقَطْ، وَأَنْتَ شَاكٌّ فِي تَعْيِينِهِ.",
+          "uz": "«Qalam yoki siyohdon sindi» — singani faqat bittasi bo'lib, qaysi biri ekanida shubhalanayotgan bo'lsang."
+        },
+        {
+          "type": "para",
+          "ar": "وَانْكَسَرَ الْقَلَمُ، لَا الدَّوَاةُ. إِذَا كَانَ الْمَكْسُورُ الْقَلَمَ فَقَطْ.",
+          "uz": "«Qalam sindi, siyohdon emas» — singani faqat qalam bo'lsa."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْقَلَمَ كَسَرْتَ، أَمِ الدَّوَاةَ؟ إِذَا اسْتَفْهَمْتَ عَنِ الْمَكْسُورِ مِنْهُمَا.",
+          "uz": "«Qalamni sindirdingmi, siyohdonnimi?» — ikkovidan qaysi biri singanini so'raganingda."
+        },
+        {
+          "type": "para",
+          "ar": "وَلَمْ يَنْكَسِرِ الْقَلَمُ، بَلِ الدَّوَاةُ. أَوْ: لَكِنِ الدَّوَاةُ. إِذَا كَانَ الْمَكْسُورُ الدَّوَاةَ، وَظَنَّ أَحَدٌ أَنَّهُ الْقَلَمُ.",
+          "uz": "«Qalam sinmadi, balki siyohdon» yoki «lekin siyohdon» — singani siyohdon bo'lib, kimdir uni qalam deb o'ylagan bo'lsa."
+        },
+        {
+          "type": "para",
+          "ar": "فَمَتَى وَقَعَ حَرْفٌ مِنْ أَحْرُفِ الْعَطْفِ الْمَذْكُورَةِ بَيْنَ اسْمَيْنِ، أُعْرِبَ الثَّانِي بِإِعْرَابِ الْأَوَّلِ.",
+          "uz": "Yuqorida sanalgan atf harflaridan biri ikki ism orasida kelsa, ikkinchisi birinchisining i'robi bilan i'rob qilinadi."
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "اضْبِطْ بِالْقَلَمِ كَلِمَتَيْ «فِعْلٍ» وَ«حَرْفٍ» فِي هَذِهِ الْأَمْثِلَةِ:",
+          "uz": "Quyidagi misollarda «فِعْل» va «حَرْف» so'zlarining harakatini qalam bilan qo'ying:"
+        },
+        {
+          "ar": "الكَلِمَةُ اسْمٌ، أَوْ فِعْلٌ، أَوْ حَرْفٌ.",
+          "uz": "So'z — ism, fe'l yoki harfdir."
+        },
+        {
+          "ar": "تَكُونُ الكَلِمَةُ اسْمًا، أَوْ فِعْلًا، أَوْ حَرْفًا.",
+          "uz": "So'z ism, fe'l yoki harf bo'ladi."
+        },
+        {
+          "ar": "تَنْقَسِمُ الكَلِمَةُ إِلَى اسْمٍ وَفِعْلٍ وَحَرْفٍ.",
+          "uz": "So'z ism, fe'l va harfga bo'linadi."
+        }
+      ]
     }
   ]
 }

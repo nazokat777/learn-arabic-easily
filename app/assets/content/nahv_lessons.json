@@ -3488,9 +3488,227 @@
           "type": "para",
           "ar": "وَ«لَامُ الْأَمْرِ» تَجْعَلُ الْمُضَارِعَ مُفِيدًا لِلطَّلَبِ، كَفِعْلِ الْأَمْرِ، كَمَا فِي قَوْلِهِ تَعَالَى: ﴿وَلْتَكُنْ مِنْكُمْ أُمَّةٌ يَدْعُونَ إِلَى الْخَيْرِ﴾. وَ«لَا» النَّاهِيَةُ تُسَمَّى: دُعَائِيَّةً، إِذَا خُوطِبَ بِهَا الْمَوْلَى سُبْحَانَهُ وَتَعَالَى؛ نَحْوُ: ﴿رَبَّنَا لَا تُؤَاخِذْنَا﴾، وَمِثْلُهَا لَامُ الْأَمْرِ.",
           "uz": "Buyruq lomi muzori'ni amr fe'li kabi talab ma'nosini beruvchi qiladi; masalan: «Sizlardan yaxshilikka chaqiradigan bir jamoa bo'lsin». Qaytariq «لَا» si Alloh taologa murojaat qilinganda «duo lasi» deb ataladi; masalan: «Robbimiz, bizni ayblama». Buyruq lomi ham xuddi shunday."
+        },
+        {
+          "type": "para",
+          "ar": "٢ - وَقِسْمٌ يَجْزِمُ فِعْلَيْنِ؛ يُسَمَّى أَوَّلُهُمَا «فِعْلَ الشَّرْطِ»، وَالثَّانِي «جَوَابَهُ وَجَزَاءَهُ»؛ وَهُوَ: هَذَانِ الْحَرْفَانِ: «إِنْ»، وَ«إِذْ مَا». وَهَذِهِ الْأَسْمَاءُ: «مَنْ»، وَ«مَا»، وَ«مَهْمَا»، وَ«مَتَى»، وَ«أَيَّانَ»، وَ«أَيْنَ»، وَ«أَنَّى»، وَ«حَيْثُمَا»، وَ«كَيْفَمَا»، وَ«أَيٌّ».",
+          "uz": "2 — Ikkita fe'lni jazm qiladigan bo'lim: birinchisi «shart fe'li», ikkinchisi «uning javobi va jazosi» deb ataladi. Bular: «إِنْ» va «إِذْ مَا» harflari hamda «مَنْ», «مَا», «مَهْمَا», «مَتَى», «أَيَّانَ», «أَيْنَ», «أَنَّى», «حَيْثُمَا», «كَيْفَمَا», «أَيٌّ» ismlari."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "نَحْوُ:",
+            "uz": "Masalan:"
+          },
+          "items": [
+            {
+              "ar": "﴿وَإِنْ تَعُودُوا نَعُدْ﴾.",
+              "uz": "«Agar qaytsangiz, Biz ham qaytamiz»."
+            },
+            {
+              "ar": "إِذْ مَا تَتَعَلَّمْ تَتَقَدَّمْ.",
+              "uz": "O'rgansang, oldinga borasan."
+            },
+            {
+              "ar": "﴿وَمَنْ يَفْعَلْ ذَلِكَ يَلْقَ أَثَامًا﴾.",
+              "uz": "«Kim shuni qilsa, jazoga yo'liqadi»."
+            },
+            {
+              "ar": "﴿وَمَا تُقَدِّمُوا لِأَنْفُسِكُمْ مِنْ خَيْرٍ تَجِدُوهُ عِنْدَ اللَّهِ هُوَ خَيْرًا وَأَعْظَمَ أَجْرًا﴾.",
+              "uz": "«O'zingiz uchun qanday yaxshilik oldindan yuborsangiz, uni Alloh huzurida yaxshiroq va ajri ulug'roq holda topasiz»."
+            },
+            {
+              "ar": "مَهْمَا تُبْطِنْ تُظْهِرْهُ الْأَيَّامُ.",
+              "uz": "Nimani yashirsang, kunlar uni oshkor qiladi."
+            },
+            {
+              "ar": "مَتَى يَصْلُحْ قَلْبُكَ تَصْلُحْ جَوَارِحُكَ.",
+              "uz": "Qachon qalbing tuzalsa, a'zolaring ham tuzaladi."
+            },
+            {
+              "ar": "أَيَّانَ تَحْسُنْ سَرِيرَتُكَ تُحْمَدْ سِيرَتُكَ.",
+              "uz": "Qachon ichki holating yaxshi bo'lsa, yurish-turishing maqtaladi."
+            },
+            {
+              "ar": "أَيْنَ يَذْهَبْ ذُو الْمَالِ يَلْقَ رَفِيقًا.",
+              "uz": "Boy kishi qayerga borsa, hamroh topadi."
+            },
+            {
+              "ar": "أَنَّى تَمْشِ تُصَادِفْ رِزْقَكَ.",
+              "uz": "Qayerdan yursang, rizqingni uchratasan."
+            },
+            {
+              "ar": "حَيْثُمَا تَسْتَقِمْ يُقَدِّرْ لَكَ اللَّهُ نَجَاحًا.",
+              "uz": "Qayerda to'g'ri bo'lsang, Alloh senga muvaffaqiyat taqdir qiladi."
+            },
+            {
+              "ar": "كَيْفَمَا تَكُنْ يَكُنْ قَرِينُكَ.",
+              "uz": "Qanday bo'lsang, hamrohing ham shunday bo'ladi."
+            },
+            {
+              "ar": "أَيُّ إِنْسَانٍ يَحْتَرِمْهُ الرَّئِيسُ يَحْتَرِمْهُ الْمَرْؤُوسُ.",
+              "uz": "Rahbar qaysi insonni hurmat qilsa, qo'l ostidagi ham uni hurmat qiladi."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "(١) «مَنْ»: لِلْعَاقِلِ، وَ«مَا» وَ«مَهْمَا»: لِغَيْرِ الْعَاقِلِ، وَ«مَتَى» وَ«أَيَّانَ»: لِلزَّمَانِ، وَ«أَيْنَ» وَ«أَنَّى» وَ«حَيْثُمَا»: لِلْمَكَانِ، وَ«كَيْفَمَا»: لِلْحَالِ، وَ«أَيٌّ»: تَصْلُحُ لِجَمِيعِ ذَلِكَ. وَأَمَّا «إِنْ» وَ«إِذْ مَا» .. فَلَا مَعْنَى لَهُمَا غَيْرُ تَعْلِيقِ الْجَوَابِ بِالشَّرْطِ.",
+          "uz": "(1-izoh) «مَنْ» — aqlli zot uchun; «مَا» va «مَهْمَا» — aqlsiz narsa uchun; «مَتَى» va «أَيَّانَ» — zamon uchun; «أَيْنَ», «أَنَّى», «حَيْثُمَا» — makon uchun; «كَيْفَمَا» — hol uchun; «أَيٌّ» esa bularning hammasiga yaraydi. «إِنْ» va «إِذْ مَا» ning esa javobni shartga bog'lashdan boshqa ma'nosi yo'q."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "أَمْثِلَةٌ",
+            "uz": "Misollar"
+          },
+          "items": [
+            {
+              "ar": "﴿أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ﴾.",
+              "uz": "«Biz senga ko'ksingni ochib qo'ymadikmi?»"
+            },
+            {
+              "ar": "﴿أَمْ حَسِبْتُمْ أَنْ تَدْخُلُوا الْجَنَّةَ وَلَمَّا يَعْلَمِ اللَّهُ الَّذِينَ جَاهَدُوا مِنْكُمْ وَيَعْلَمَ الصَّابِرِينَ﴾.",
+              "uz": "«Yoki Alloh sizlardan jihod qilganlarni ham, sabr qilganlarni ham hali ajratmay turib jannatga kiraman deb o'yladingizmi?»"
+            },
+            {
+              "ar": "﴿فَلْيُؤَدِّ الَّذِي اؤْتُمِنَ أَمَانَتَهُ وَلْيَتَّقِ اللَّهَ رَبَّهُ﴾.",
+              "uz": "«Omonat topshirilgan kishi omonatini ado etsin va Robbi bo'lmish Allohdan qo'rqsin»."
+            },
+            {
+              "ar": "﴿وَلَا تَكْتُمُوا الشَّهَادَةَ وَمَنْ يَكْتُمْهَا فَإِنَّهُ آثِمٌ قَلْبُهُ﴾.",
+              "uz": "«Guvohlikni yashirmanglar; kim uni yashirsa, uning qalbi gunohkordir»."
+            },
+            {
+              "ar": "﴿لِيُنْفِقْ ذُو سَعَةٍ مِنْ سَعَتِهِ﴾.",
+              "uz": "«Kengchilik egasi o'z kengchiligidan infoq qilsin»."
+            },
+            {
+              "ar": "لَا تَثِقْ بِالصَّدِيقِ قَبْلَ الْخِبْرَةِ، وَلَا تَتَعَرَّضْ لِلْعَدُوِّ قَبْلَ الْقُدْرَةِ.",
+              "uz": "Sinamasdan do'stga ishonma, qudratga ega bo'lmasdan dushmanga qarshi chiqma."
+            },
+            {
+              "ar": "﴿إِنْ نَشَأْ نُنَزِّلْ عَلَيْهِمْ مِنَ السَّمَاءِ آيَةً﴾.",
+              "uz": "«Xohlasak, ularga osmondan bir oyat tushiramiz»."
+            },
+            {
+              "ar": "إِذْ مَا تَقُمْ أَقُمْ.",
+              "uz": "Sen tursang, men ham turaman."
+            },
+            {
+              "ar": "﴿مَنْ يَعْمَلْ سُوءًا يُجْزَ بِهِ﴾.",
+              "uz": "«Kim yomonlik qilsa, u bilan jazolanadi»."
+            },
+            {
+              "ar": "﴿وَمَا تَفْعَلُوا مِنْ خَيْرٍ يَعْلَمْهُ اللَّهُ﴾.",
+              "uz": "«Qanday yaxshilik qilsangiz, Alloh uni biladi»."
+            },
+            {
+              "ar": "مَهْمَا تَأْمُرْ بِالْخَيْرِ أَمْتَثِلْ.",
+              "uz": "Yaxshilikdan nimaga buyursang, bajaraman."
+            },
+            {
+              "ar": "مَتَى تُتْقِنِ الْعَمَلَ تَبْلُغِ الْأَمَلَ.",
+              "uz": "Qachon ishni puxta qilsang, orzuga yetasan."
+            },
+            {
+              "ar": "أَيَّانَ نُؤْمِنْكَ تَأْمَنْ غَيْرَنَا.",
+              "uz": "Qachon biz senga omonlik bersak, boshqalardan ham omon bo'lasan."
+            },
+            {
+              "ar": "﴿أَيْنَمَا تَكُونُوا يُدْرِكْكُمُ الْمَوْتُ﴾.",
+              "uz": "«Qayerda bo'lsangiz ham, o'lim sizni topadi»."
+            },
+            {
+              "ar": "أَنَّى تَنْجَحْ تُخْدَمَا.",
+              "uz": "Qayerda muvaffaq bo'lsang, senga xizmat qilinadi."
+            },
+            {
+              "ar": "وَحَيْثُمَا تَنْزِلَا تُكْرَمَا.",
+              "uz": "Ikkovingiz qayerga tushsangiz, hurmat topasiz."
+            },
+            {
+              "ar": "كَيْفَمَا تَكُونُوا يَكُنْ قُرَنَاؤُكُمْ.",
+              "uz": "Qanday bo'lsangiz, hamrohlaringiz ham shunday bo'ladi."
+            },
+            {
+              "ar": "أَيَّ كِتَابٍ تَقْرَأْ تَسْتَفِدْ.",
+              "uz": "Qaysi kitobni o'qisang, foyda olasan."
+            }
+          ]
         }
       ],
-      "exercise": []
+      "exercise": [
+        {
+          "ar": "عَيِّنِ الْمَجْزُومَ بِالسُّكُونِ، وَالْمَجْزُومَ بِحَذْفِ النُّونِ، وَالْمَجْزُومَ بِحَذْفِ حَرْفِ الْعِلَّةِ مِنَ الْأَمْثِلَةِ الْمُتَقَدِّمَةِ.",
+          "uz": "Yuqoridagi misollardan sukun bilan majzum bo'lganini, nunni tushirish bilan majzum bo'lganini va illat harfini tushirish bilan majzum bo'lganini aniqlang."
+        }
+      ]
+    },
+    {
+      "book": 2,
+      "num": 12,
+      "page": 97,
+      "titleAr": "رَفْعُ الْفِعْلِ وَمَوَاضِعُهُ",
+      "title": "Fe'lning raf'i va uning o'rinlari",
+      "rule": {
+        "ar": "الْأَصْلُ فِي رَفْعِ الْفِعْلِ أَنْ يَكُونَ بِالضَّمَّةِ. وَيَنُوبُ عَنْهَا النُّونُ فِي الْأَمْثِلَةِ الْخَمْسَةِ. وَهُوَ يُرْفَعُ إِذَا لَمْ يَسْبِقْهُ نَاصِبٌ، وَلَا جَازِمٌ.",
+        "uz": "Fe'lning raf'ida asl — damma bilan bo'lishi. Besh misolda uning o'rniga nun keladi. Fe'ldan oldin nasb qiluvchi ham, jazm qiluvchi ham kelmagan bo'lsa, u raf' bo'ladi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "نَحْوُ: يُخَفِّفُ اللَّهُ عَنْكُمْ. يُثْمِرُ بُسْتَانُنَا. تَنَالُونَ الْبِرَّ.",
+          "uz": "Masalan: «Alloh sizdan yengillashtiradi», «Bog'imiz hosil beradi», «Yaxshilikka erishasizlar»."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "أَمْثِلَةٌ",
+            "uz": "Misollar"
+          },
+          "items": [
+            {
+              "ar": "الْجَاهِلُ يَعْتَمِدُ عَلَى نَسَبِهِ، وَالْعَاقِلُ يُعَوِّلُ عَلَى أَدَبِهِ.",
+              "uz": "Johil nasabiga suyanadi, aqlli esa odobiga tayanadi."
+            },
+            {
+              "ar": "كُلُّ خَيْرٍ يُنَالُ بِالطَّلَبِ، وَيَزْدَادُ بِالْأَدَبِ.",
+              "uz": "Har bir yaxshilik intilish bilan qo'lga kiritiladi va odob bilan ziyoda bo'ladi."
+            },
+            {
+              "ar": "«مَنْهُومَانِ لَا يَشْبَعَانِ: طَالِبُ عِلْمٍ، وَطَالِبُ مَالٍ».",
+              "uz": "«Ikki ochko'z to'ymaydi: ilm talab qiluvchi va mol talab qiluvchi»."
+            },
+            {
+              "ar": "﴿يَعْلَمُونَ مَا تَفْعَلُونَ﴾.",
+              "uz": "«Ular nima qilayotganingizni biladilar»."
+            },
+            {
+              "ar": "﴿فِيهِمَا عَيْنَانِ تَجْرِيَانِ﴾.",
+              "uz": "«Ikkovida oqib turuvchi ikki buloq bor»."
+            },
+            {
+              "ar": "بِالرَّاعِي تَصْلُحُ الرَّعِيَّةُ، وَبِالْعَدْلِ تُمْلَكُ الْبَرِيَّةُ.",
+              "uz": "Cho'pon bilan poda tuzaladi, adolat bilan xalq qo'lga kiritiladi."
+            },
+            {
+              "ar": "﴿يَعْلَمُ خَائِنَةَ الْأَعْيُنِ وَمَا تُخْفِي الصُّدُورُ﴾.",
+              "uz": "«U ko'zlarning xiyonatini va ko'ksilar yashirgan narsani biladi»."
+            },
+            {
+              "ar": "﴿يَمْحَقُ اللَّهُ الرِّبَا وَيُرْبِي الصَّدَقَاتِ﴾.",
+              "uz": "«Alloh ribani mahv qiladi va sadaqalarni ziyoda qiladi»."
+            }
+          ]
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "عَيِّنِ الْمَرْفُوعَ بِالضَّمَّةِ، وَالْمَرْفُوعَ بِالنُّونِ فِي الْأَمْثِلَةِ الْمُتَقَدِّمَةِ.",
+          "uz": "Yuqoridagi misollarda damma bilan marfu' bo'lganini va nun bilan marfu' bo'lganini aniqlang."
+        }
+      ]
     }
   ]
 }

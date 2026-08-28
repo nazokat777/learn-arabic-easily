@@ -90,6 +90,40 @@ List<String> splitForms(String ar) => ar
     .where((e) => e.isNotEmpty)
     .toList();
 
+/// Lug'at so'zi ishlatilgan jumlani matndan topadi.
+///
+/// Nega kerak: TTS yolg'iz turgan arabcha so'zni «vaqf» shaklida o'qiydi -
+/// oxirgi qisqa unlini tushiradi («tafarrasa» → «tafarras»). Jumla ichida
+/// esa so'z to'liq o'qiladi. Shuning uchun lug'at qatoriga «jumlada
+/// tinglash» tugmasi qo'yiladi va u shu jumlani ijro etadi.
+///
+/// Solishtirish harakatsiz shaklda boradi: matnda so'z boshqa harakat bilan
+/// kelishi mumkin. Prefikslar (وَ، بِ، الْ...) tufayli aniq tenglik
+/// bo'lmasligi ham mumkin, shuning uchun tenglik topilmasa so'z tokenning
+/// ichida kelishiga ham roziday bo'lamiz. Bir nechta jumla mos kelsa eng
+/// qisqasi olinadi - misol qisqa bo'lgani tushunarli.
+String? findSentenceFor(String vocabAr, String reading) {
+  final forms = splitForms(vocabAr).map(stripDiacritics).where((e) => e.isNotEmpty).toList();
+  if (forms.isEmpty || reading.trim().isEmpty) return null;
+
+  String? exact, loose;
+  for (final sentence in splitSentences(reading)) {
+    final words = tokenize(sentence)
+        .where((t) => t.isWord)
+        .map((t) => stripDiacritics(t.text))
+        .where((w) => w.isNotEmpty)
+        .toList();
+    for (final f in forms) {
+      if (words.contains(f)) {
+        if (exact == null || sentence.length < exact.length) exact = sentence;
+      } else if (words.any((w) => w.length > f.length && w.contains(f))) {
+        if (loose == null || sentence.length < loose.length) loose = sentence;
+      }
+    }
+  }
+  return exact ?? loose;
+}
+
 // --- Taxminiy talaffuz (lotin) — o'qishga yordam, aniq transkripsiya emas. ---
 
 const Map<String, String> _cons = {

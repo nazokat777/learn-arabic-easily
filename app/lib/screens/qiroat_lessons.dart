@@ -269,7 +269,7 @@ class QiroatLessonDetail extends StatelessWidget {
             const SizedBox(height: 24),
             _sectionLabel('📚', 'Lug\'at (${lesson.vocab.length} so\'z)'),
             const SizedBox(height: 8),
-            ...lesson.vocab.map((v) => _VocabRow(v: v)),
+            ...lesson.vocab.map((v) => _VocabRow(v: v, reading: lesson.reading)),
             for (final t in lesson.tables) ...[
               const SizedBox(height: 24),
               _sectionLabel('🧾', t.title),
@@ -443,12 +443,18 @@ class _ReadingBlockState extends State<_ReadingBlock> {
 /// Lug'at qatori — arabcha so'zni tinglash tugmasi bilan.
 class _VocabRow extends StatelessWidget {
   final QiroatVocab v;
-  const _VocabRow({required this.v});
+
+  /// Darsning o'qish matni — so'z ishlatilgan jumlani topish uchun.
+  final String reading;
+  const _VocabRow({required this.v, required this.reading});
 
   @override
   Widget build(BuildContext context) {
     // Fe'l shakllari «غَلِطَ، يَغْلَطُ...» bo'lsa, birinchi shaklni o'qiymiz.
     final head = splitForms(v.ar).isEmpty ? v.ar : splitForms(v.ar).first;
+    // Yolg'iz so'zni TTS vaqf shaklida o'qiydi (oxirgi unli tushadi).
+    // Jumla ichida esa to'liq eshitiladi - shuning uchun ikkinchi tugma.
+    final misol = findSentenceFor(v.ar, reading);
     return Container(
       margin: const EdgeInsets.only(bottom: 8),
       padding: const EdgeInsets.fromLTRB(6, 10, 14, 10),
@@ -459,6 +465,14 @@ class _VocabRow extends StatelessWidget {
       child: Row(
         children: [
           SpeakButton(text: head, id: 'v${v.ar}', size: 19),
+          if (misol != null)
+            SpeakButton(
+              text: misol,
+              id: 'vj${v.ar}',
+              size: 17,
+              icon: Icons.format_quote_rounded,
+              tooltip: "Jumlada tinglash — so'z to'liq o'qiladi",
+            ),
           Expanded(
             child: Text(v.uz,
                 style: const TextStyle(

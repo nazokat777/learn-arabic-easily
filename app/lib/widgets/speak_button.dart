@@ -12,7 +12,18 @@ class SpeakButton extends StatelessWidget {
   final String text;
   final String id;
   final double size;
-  const SpeakButton({super.key, required this.text, required this.id, this.size = 20});
+
+  /// Boshqacha belgi kerak bo'lganda (masalan lug'atdagi «jumlada tinglash»).
+  final IconData? icon;
+  final String? tooltip;
+  const SpeakButton({
+    super.key,
+    required this.text,
+    required this.id,
+    this.size = 20,
+    this.icon,
+    this.tooltip,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +36,7 @@ class SpeakButton extends StatelessWidget {
           padding: EdgeInsets.zero,
           constraints: BoxConstraints.tightFor(width: size + 16, height: size + 16),
           tooltip: active ? 'To\'xtatish' : 'Tinglash',
-          icon: Icon(active ? Icons.stop_circle : Icons.volume_up_rounded,
+          icon: Icon(active ? Icons.stop_circle : (icon ?? Icons.volume_up_rounded),
               size: size, color: active ? AppColors.gold : AppColors.emerald),
           onPressed: () {
             if (active) {

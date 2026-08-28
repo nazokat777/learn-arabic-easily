@@ -3272,6 +3272,225 @@
           "uz": "«Ahd qilganingizda Allohning ahdiga vafo qilinglar»."
         }
       ]
+    },
+    {
+      "book": 2,
+      "num": 9,
+      "page": 91,
+      "titleAr": "بَيَانُ الْمُعْرَبِ مِنَ الْأَفْعَالِ",
+      "title": "Fe'llardan mu'rabining bayoni",
+      "rule": {
+        "ar": "الْمُعْرَبُ مِنَ الْأَفْعَالِ هُوَ الْمُضَارِعُ فَقَطْ، إِذَا لَمْ يَتَّصِلْ بِهِ نُونُ التَّوْكِيدِ، وَلَا نُونُ الْإِنَاثِ. وَأَنْوَاعُ إِعْرَابِهِ ثَلَاثَةٌ: رَفْعٌ، وَنَصْبٌ، وَجَزْمٌ.",
+        "uz": "Fe'llardan mu'rabi — faqat muzori'; unga ta'kid nuni ham, ayollar nuni ham qo'shilmagan bo'lsa. Uning i'rob turlari uchta: raf', nasb va jazm."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَلِكُلٍّ مِنْهَا مَوَاضِعُ مُعَيَّنَةٌ لَوْ وَقَعَ فِي غَيْرِهَا يُعَدُّ خَطَأً.",
+          "uz": "Ularning har biri uchun belgilangan o'rinlar bor; boshqa o'rinda kelsa, xato hisoblanadi."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 2,
+      "num": 10,
+      "page": 91,
+      "titleAr": "نَصْبُ الْفِعْلِ وَمَوَاضِعُهُ",
+      "title": "Fe'lning nasbi va uning o'rinlari",
+      "rule": {
+        "ar": "الْأَصْلُ فِي نَصْبِ الْفِعْلِ أَنْ يَكُونَ بِالْفَتْحَةِ. وَيَنُوبُ عَنْهَا حَذْفُ النُّونِ فِي الْأَمْثِلَةِ الْخَمْسَةِ. وَهُوَ يُنْصَبُ إِذَا سَبَقَهُ أَحَدُ الْأَحْرُفِ النَّاصِبَةِ؛ وَهِيَ: «أَنْ»، وَ«لَنْ»، وَ«إِذًا»، وَ«كَيْ».",
+        "uz": "Fe'lning nasbida asl — fatha bilan bo'lishi. Besh misolda uning o'rniga nunni tushirish keladi. Fe'l nasb qiluvchi harflardan biri — أَنْ, لَنْ, إِذًا, كَيْ — undan oldin kelsa, nasb bo'ladi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَالْأَمْثِلَةُ الْخَمْسَةُ هِيَ: كُلُّ مُضَارِعٍ اتَّصَلَتْ بِهِ أَلِفُ اثْنَيْنِ؛ كَـ: يَفْعَلَانِ، وَتَفْعَلَانِ، أَوْ وَاوُ جَمَاعَةٍ؛ كَـ: يَفْعَلُونَ، وَتَفْعَلُونَ، أَوْ يَاءُ مُخَاطَبَةٍ؛ كَـ: تَفْعَلِينَ.",
+          "uz": "Besh misol shu: ikkilik alifi qo'shilgan har bir muzori' — يَفْعَلَانِ, تَفْعَلَانِ; jamoa vovi qo'shilgani — يَفْعَلُونَ, تَفْعَلُونَ; muxotaba yosi qo'shilgani — تَفْعَلِينَ."
+        },
+        {
+          "type": "para",
+          "ar": "نَحْوُ: ﴿يُرِيدُ اللَّهُ أَنْ يُخَفِّفَ عَنْكُمْ﴾.",
+          "uz": "Masalan: «Alloh sizdan yengillashtirishni istaydi»."
+        },
+        {
+          "type": "para",
+          "ar": "(١) لَمَّا كَانَتِ الْأَفْعَالُ الْمَنْصُوبَةُ بِالْفَتْحَةِ أَكْثَرَ دَوَرَانًا فِي الكَلَامِ مِنَ الْأَفْعَالِ الْمَنْصُوبَةِ بِحَذْفِ النُّونِ، اعْتُبِرَتِ الْفَتْحَةُ أَصْلًا فِي نَصْبِ الْفِعْلِ، وَحَذْفُ النُّونِ نَائِبًا عَنْهَا، وَكَذَا يُقَالُ فِيمَا سَيَأْتِي.",
+          "uz": "(1-izoh) Fatha bilan mansub bo'lgan fe'llar kalomda nunni tushirish bilan mansub bo'lganlaridan ko'ra ko'proq uchragani uchun, fe'l nasbida fatha asl, nunni tushirish esa uning o'rnini bosuvchi deb hisoblangan. Keyingi o'rinlarda ham shunday deyiladi."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) فَـ«يَكْتُبُ»، وَ: يَكْتُبَانِ، وَ: تَكْتُبَانِ، وَ: يَكْتُبُونَ، وَ: تَكْتُبُونَ، وَ: تَكْتُبِينَ .. تَصِيرُ بِالنَّصْبِ: يَكْتُبَ، يَكْتُبَا، تَكْتُبَا، يَكْتُبُوا، تَكْتُبُوا، تَكْتُبِي.",
+          "uz": "(2-izoh) «يَكْتُبُ», يَكْتُبَانِ, تَكْتُبَانِ, يَكْتُبُونَ, تَكْتُبُونَ, تَكْتُبِينَ — nasb holida: يَكْتُبَ, يَكْتُبَا, تَكْتُبَا, يَكْتُبُوا, تَكْتُبُوا, تَكْتُبِي bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "(٣) «أَنْ» وَالْفِعْلُ بَعْدَهَا يُؤَوَّلَانِ بِاسْمٍ، فَالتَّقْدِيرُ فِي: ﴿يُرِيدُ اللَّهُ أَنْ يُخَفِّفَ عَنْكُمْ﴾: يُرِيدُ اللَّهُ التَّخْفِيفَ عَنْكُمْ. وَ«لَنْ» لِنَفْيِ الْفِعْلِ الْمُسْتَقْبَلِ. وَ«إِذًا» لِلْجَوَابِ وَالْجَزَاءِ، فَقَوْلُكَ: إِذًا تَبْلُغَ الْمَجْدَ. يَقَعُ فِي جَوَابِ «سَأَجْتَهِدُ» مَثَلًا.",
+          "uz": "(3-izoh) «أَنْ» va undan keyingi fe'l ism ma'nosiga o'giriladi: «Alloh sizdan yengillashtirishni istaydi» oyatining taqdiri — «Alloh sizdan yengillikni istaydi». «لَنْ» kelasi zamon fe'lini inkor qiladi. «إِذًا» javob va jazo uchun: «Unda ulug'likka yetasan» degan so'zing, masalan, «Tirishaman» degan gapga javob bo'lib keladi."
+        },
+        {
+          "type": "para",
+          "ar": "لَنْ يَغْلِبَ عُسْرٌ يُسْرَيْنِ. إِذًا تَبْلُغَ الْمَجْدَ. جِئْتُ كَيْ أَتَعَلَّمَ. ﴿فَرَجَعْنَاكَ إِلَى أُمِّكَ كَيْ تَقَرَّ عَيْنُهَا﴾.",
+          "uz": "«Bir qiyinchilik ikki yengillikni yenga olmaydi», «Unda ulug'likka yetasan», «O'rganish uchun keldim», «Seni onangga qaytardik — ko'zi quvonsin deb»."
+        },
+        {
+          "type": "para",
+          "ar": "وَقَدْ تَنْصِبُ «أَنْ» وَهِيَ مَحْذُوفَةٌ، وَيَجِبُ ذَلِكَ فِي خَمْسَةِ مَوَاضِعَ:",
+          "uz": "Ba'zan «أَنْ» tushirilgan holda ham nasb qiladi; bu besh o'rinda vojib bo'ladi:"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "ar": "الْأَوَّلُ: بَعْدَ لَامِ الْجُحُودِ؛ وَهِيَ: الْمَسْبُوقَةُ بِكَوْنٍ مَنْفِيٍّ؛ نَحْوُ: مَا كَانَ صَالِحٌ لِيَسْرِقَ، وَلَمْ تَكُنْ لِتَكْذِبَ.",
+              "uz": "Birinchi: «juhud lomi» dan keyin — u inkor qilingan «kana» dan keyin keladi; masalan: «Solih o'g'irlik qiladigan emas edi», «Sen yolg'on gapiradigan emasding»."
+            },
+            {
+              "ar": "الثَّانِي: بَعْدَ «أَوْ» الَّتِي بِمَعْنَى «إِلَى»، أَوْ «إِلَّا»؛ نَحْوُ: اجْتَهِدْ أَوْ تَصِلَ إِلَى الْمَقْصُودِ، وَ: يُحْبَسُ الْمُتَّهَمُ أَوْ تَظْهَرَ بَرَاءَتُهُ.",
+              "uz": "Ikkinchi: «إِلَى» yoki «إِلَّا» ma'nosidagi «أَوْ» dan keyin; masalan: «Maqsadingga yetguningcha tirish», «Ayblanuvchi aybsizligi ma'lum bo'lgunicha hibsda saqlanadi»."
+            },
+            {
+              "ar": "الثَّالِثُ: بَعْدَ «حَتَّى»؛ نَحْوُ: ﴿لَنْ تَنَالُوا الْبِرَّ حَتَّى تُنْفِقُوا مِمَّا تُحِبُّونَ﴾.",
+              "uz": "Uchinchi: «حَتَّى» dan keyin; masalan: «Sevgan narsangizdan infoq qilmaguningizcha yaxshilikka erisha olmaysiz»."
+            },
+            {
+              "ar": "الرَّابِعُ: بَعْدَ فَاءِ السَّبَبِيَّةِ الْمَسْبُوقَةِ بِنَفْيٍ، أَوْ طَلَبٍ؛ نَحْوُ: لَمْ تَزْرَعْ فَتَحْصُدَ، ازْرَعْ فَتَحْصُدَ.",
+              "uz": "To'rtinchi: inkor yoki talabdan keyin kelgan «sababiyat fosi» dan so'ng; masalan: «Ekmading-ku, o'rasan?», «Ek — o'rasan»."
+            },
+            {
+              "ar": "الْخَامِسُ: بَعْدَ وَاوِ الْمَعِيَّةِ كَذَلِكَ؛ نَحْوُ: لَمْ يَأْمُرْ بِالصِّدْقِ وَيَكْذِبَ. لَا تَنْهَ عَنْ خُلُقٍ وَتَأْتِيَ مِثْلَهُ.",
+              "uz": "Beshinchi: xuddi shunday, «birgalik vovi» dan keyin; masalan: «U rostgo'ylikka buyurib, o'zi yolg'on gapirmadi», «Bir xulqdan qaytarib, o'zing shunday qilma»."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "وَيَجُوزُ حَذْفُ «أَنْ»، وَإِثْبَاتُهَا بَعْدَ لَامِ التَّعْلِيلِ؛ نَحْوُ: حَضَرْتُ لِأَسْمَعَ، أَوْ: لِأَنْ أَسْمَعَ.",
+          "uz": "«Ta'lil lomi» dan keyin «أَنْ» ni tushirish ham, keltirish ham joiz; masalan: «Eshitish uchun keldim» — لِأَسْمَعَ yoki لِأَنْ أَسْمَعَ."
+        },
+        {
+          "type": "para",
+          "ar": "وَ«كَيْ» مِثْلُ «أَنْ» فِي التَّأْوِيلِ بِاسْمٍ، فَالتَّقْدِيرُ فِي: «جِئْتُ كَيْ أَقْرَأَ»: جِئْتُ لِلْقِرَاءَةِ.",
+          "uz": "«كَيْ» ham ism ma'nosiga o'girilishida «أَنْ» kabi: «O'qish uchun keldim» — «جِئْتُ كَيْ أَقْرَأَ» ning taqdiri «جِئْتُ لِلْقِرَاءَةِ» dir."
+        },
+        {
+          "type": "para",
+          "ar": "(١) الْجُحُودُ: الْإِنْكَارُ. (٢) أَصْلُ الْفِعْلِ قَبْلَ دُخُولِ النَّاصِبِ: تُنْفِقُونَ، كَمَا أَنَّ أَصْلَ «تَنَالُوا»: تَنَالُونَ. (٣) أَيِ: الْمُفِيدَةُ أَنَّ مَا قَبْلَهَا سَبَبٌ لِمَا بَعْدَهَا. (٤) أَيِ: الْمُفِيدَةُ مُصَاحَبَةَ مَا قَبْلَهَا لِمَا بَعْدَهَا. (٥) مَا لَمْ يُقْرَنِ الْفِعْلُ بِـ«لَا»، وَإِلَّا وَجَبَ إِظْهَارُ «أَنْ»؛ نَحْوُ: ﴿لِئَلَّا يَعْلَمَ أَهْلُ الكِتَابِ﴾.",
+          "uz": "(1) «Juhud» — inkor demakdir. (2) Nasb qiluvchi kirmasdan oldin fe'l «تُنْفِقُونَ» edi, xuddi «تَنَالُوا» ning asli «تَنَالُونَ» bo'lgani kabi. (3) Ya'ni o'zidan oldingisi keyingisiga sabab ekanini bildiruvchi «ف». (4) Ya'ni o'zidan oldingisining keyingisiga hamrohligini bildiruvchi «و». (5) Fe'l «لَا» bilan qo'shilmagan bo'lsa; aks holda «أَنْ» ni oshkor keltirish vojib: «لِئَلَّا يَعْلَمَ أَهْلُ الْكِتَابِ» kabi."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "أَمْثِلَةٌ",
+            "uz": "Misollar"
+          },
+          "items": [
+            {
+              "ar": "﴿وَأَنْ تَصُومُوا خَيْرٌ لَكُمْ﴾.",
+              "uz": "«Ro'za tutishingiz siz uchun yaxshiroqdir»."
+            },
+            {
+              "ar": "لَنْ تَبْلُغَ الْمَجْدَ حَتَّى تَلْقَى الصَّبْرَ.",
+              "uz": "Sabrni uchratmaguningcha ulug'likka yetmaysan."
+            },
+            {
+              "ar": "﴿لِكَيْلَا تَأْسَوْا عَلَى مَا فَاتَكُمْ﴾.",
+              "uz": "«Sizdan o'tib ketgan narsaga afsuslanmasligingiz uchun»."
+            },
+            {
+              "ar": "إِذًا أُكْرِمَكَ (فِي جَوَابِ: سَأَزُورُكَ).",
+              "uz": "«Unda seni hurmat qilaman» («Seni ziyorat qilaman» degan gapga javoban)."
+            },
+            {
+              "ar": "مَا كُنْتُ لِأُخْلِفَ الْوَعْدَ، وَلَمْ أَكُنْ لِأَنْقُضَ الْعَهْدَ.",
+              "uz": "Men va'daga xilof qiladigan emas edim va ahdni buzadigan emas edim."
+            },
+            {
+              "ar": "لَأَسْتَسْهِلَنَّ الصَّعْبَ أَوْ أُدْرِكَ الْمُنَى.",
+              "uz": "Murodimga yetgunimcha qiyinni albatta oson deb bilaman."
+            },
+            {
+              "ar": "لَأُكَافِئَنَّهُ أَوْ يُسَافِرَ.",
+              "uz": "U safarga chiqmaguncha uni albatta mukofotlayman."
+            },
+            {
+              "ar": "لَمْ يَجُودُوا فَيَسُودُوا.",
+              "uz": "Ular saxovat qilmadilar-ki, yuksalsalar."
+            },
+            {
+              "ar": "جُودُوا فَتَسُودُوا.",
+              "uz": "Saxovat qilinglar — yuksalasizlar."
+            },
+            {
+              "ar": "لَا تَأْكُلِ السَّمَكَ وَتَشْرَبَ اللَّبَنَ.",
+              "uz": "Baliq yeb, ustidan sut ichma."
+            },
+            {
+              "ar": "لَمْ يَأْمُرُوا بِالْخَيْرِ وَيَنْسَوْا أَنْفُسَهُمْ.",
+              "uz": "Ular yaxshilikka buyurib, o'zlarini unutmadilar."
+            },
+            {
+              "ar": "جِدَّ لِتَجِدَ، أَوْ لِأَنْ تَجِدَ.",
+              "uz": "Topishing uchun jiddiy harakat qil."
+            }
+          ]
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "عَيِّنِ الْمَنْصُوبَ بِالْفَتْحَةِ، وَالْمَنْصُوبَ بِحَذْفِ النُّونِ مِنَ الْأَمْثِلَةِ الْمُتَقَدِّمَةِ، وَبَيِّنْ مَا نُصِبَ فِيهَا بِـ«أَنْ» مَحْذُوفَةً.",
+          "uz": "Yuqoridagi misollardan fatha bilan mansub bo'lganini va nunni tushirish bilan mansub bo'lganini aniqlang; ulardan qaysilari tushirilgan «أَنْ» bilan nasb bo'lganini ko'rsating."
+        }
+      ]
+    },
+    {
+      "book": 2,
+      "num": 11,
+      "page": 94,
+      "titleAr": "جَزْمُ الْفِعْلِ وَمَوَاضِعُهُ",
+      "title": "Fe'lning jazmi va uning o'rinlari",
+      "rule": {
+        "ar": "الْأَصْلُ فِي جَزْمِ الْفِعْلِ أَنْ يَكُونَ بِالسُّكُونِ. وَيَنُوبُ عَنْهُ حَذْفُ النُّونِ فِي الْأَمْثِلَةِ الْخَمْسَةِ، وَحَذْفُ حَرْفِ الْعِلَّةِ فِي الْفِعْلِ الْمُعْتَلِّ الْآخِرِ.",
+        "uz": "Fe'lning jazmida asl — sukun bilan bo'lishi. Besh misolda uning o'rniga nunni tushirish, oxiri illatli fe'lda esa illat harfini tushirish keladi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَهُوَ يُجْزَمُ إِذَا سَبَقَهُ أَحَدُ الْأَدَوَاتِ الْجَازِمَةِ؛ وَهِيَ قِسْمَانِ:",
+          "uz": "Fe'l jazm qiluvchi vositalardan biri undan oldin kelsa, jazm bo'ladi. Ular ikki bo'limdir:"
+        },
+        {
+          "type": "para",
+          "ar": "١ - قِسْمٌ يَجْزِمُ فِعْلًا وَاحِدًا؛ وَهُوَ هَذِهِ الْأَحْرُفُ: «لَمْ»، وَ«لَمَّا»، وَ«لَامُ الْأَمْرِ»، وَ«لَا» النَّاهِيَةُ.",
+          "uz": "1 — Bitta fe'lni jazm qiladigan bo'lim: «لَمْ», «لَمَّا», buyruq lomi va qaytariq «لَا» si."
+        },
+        {
+          "type": "para",
+          "ar": "نَحْوُ: لَمْ يَخُنْ عَهْدًا، وَلَمْ يُخْلِفْ وُعُودًا. لَمَّا يُثْمِرْ بُسْتَانُنَا، وَقَدْ أَثْمَرَتِ الْبَسَاتِينُ. لِيَلْزَمْ كُلُّ إِنْسَانٍ حَدَّهُ. لَا تَيْأَسْ مِنْ رَحْمَةِ اللَّهِ. ﴿وَلَمَّا يَدْخُلِ الْإِيمَانُ فِي قُلُوبِكُمْ﴾.",
+          "uz": "Masalan: «U ahdga xiyonat qilmadi va va'dalarni buzmadi», «Bog'imiz hali hosil bermadi, holbuki boshqa bog'lar hosil berdi», «Har bir inson o'z chegarasini saqlasin», «Allohning rahmatidan umid uzma», «Iymon hali qalblaringizga kirgani yo'q»."
+        },
+        {
+          "type": "para",
+          "ar": "(١) فَـ«يَكْتُبُ»، وَ: يَكْتُبَانِ، وَ: تَكْتُبَانِ، وَ: يَكْتُبُونَ، وَ: تَكْتُبُونَ، وَ: تَكْتُبِينَ .. تَصِيرُ بِالْجَزْمِ: يَكْتُبْ، يَكْتُبَا، تَكْتُبَا، يَكْتُبُوا، تَكْتُبُوا، تَكْتُبِي. فَصُورَةُ الْأَمْثِلَةِ الْخَمْسَةِ فِي الْجَزْمِ كَصُورَتِهَا فِي النَّصْبِ. وَ: يَسْعَى، وَ: يَسْمُو، وَ: يَرْتَقِي .. تَصِيرُ بِالْجَزْمِ: يَسْعَ، يَرْتَقِ، يَسْمُ.",
+          "uz": "(1-izoh) «يَكْتُبُ», يَكْتُبَانِ, تَكْتُبَانِ, يَكْتُبُونَ, تَكْتُبُونَ, تَكْتُبِينَ — jazm holida: يَكْتُبْ, يَكْتُبَا, تَكْتُبَا, يَكْتُبُوا, تَكْتُبُوا, تَكْتُبِي bo'ladi; ya'ni besh misolning jazmdagi shakli nasbdagi shakliday. يَسْعَى, يَسْمُو, يَرْتَقِي esa jazm holida: يَسْعَ, يَسْمُ, يَرْتَقِ bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) «لَمْ» لِنَفْيِ حُصُولِ الْفِعْلِ فِي الزَّمَنِ الْمَاضِي، فَإِذَا قُلْتَ: «لَمْ يُهْمِلْ فُلَانٌ فِي تَأْدِيَةِ وَاجِبَاتِهِ» فَمَعْنَاهُ: مَا أَهْمَلَ فِي تَأْدِيَتِهَا فِي الزَّمَنِ الْمَاضِي، وَلَا تُفِيدُ تَوَقُّعَ الْإِهْمَالِ مِنْهُ فِي الْمُسْتَقْبَلِ. وَتَخْتَصُّ «لَمْ» بِدُخُولِهَا عَلَى الْمُضَارِعِ، فَلَا يُقَالُ: «لَمْ وَرَدَ»، وَ«لَمْ أَحَدٌ حَضَرَ».",
+          "uz": "(2-izoh) «لَمْ» fe'lning o'tgan zamonda sodir bo'lishini inkor qiladi. «Falonchi vazifalarini bajarishda sustlik qilmadi» desang, ma'nosi: o'tgan zamonda sustlik qilmagan; kelajakda undan sustlik kutilishini bildirmaydi. «لَمْ» faqat muzori'ga kiradi; «لَمْ وَرَدَ» yoki «لَمْ أَحَدٌ حَضَرَ» deb aytilmaydi."
+        },
+        {
+          "type": "para",
+          "ar": "وَ«لَمَّا» مِثْلُ «لَمْ»، غَيْرَ أَنَّ النَّفْيَ بِهَا يَنْسَحِبُ عَلَى زَمَنِ التَّكَلُّمِ، فَقَوْلُكَ: «لَمَّا يُثْمِرْ بُسْتَانُنَا» مَعْنَاهُ: لَمْ يُثْمِرْ فِيمَا مَضَى، وَإِلَى الْآنَ .. لَمْ يُثْمِرْ. وَ«لَمَّا» هَذِهِ غَيْرُ «لَمَّا» الَّتِي فِي نَحْوِ قَوْلِكَ: «لَمَّا حَضَرَ أَكْرَمْتُهُ»؛ فَإِنَّهَا بِمَعْنَى «حِينَ».",
+          "uz": "«لَمَّا» ham «لَمْ» kabi; faqat undagi inkor gapirish paytigacha cho'ziladi. «Bog'imiz hali hosil bermadi» degan so'zingning ma'nosi: o'tganda ham hosil bermadi, hozirgacha ham bermadi. Bu «لَمَّا» — «U kelganda uni hurmat qildim» degan gapdagi «لَمَّا» dan boshqa; u yerdagisi «paytda» ma'nosidadir."
+        },
+        {
+          "type": "para",
+          "ar": "وَ«لَامُ الْأَمْرِ» تَجْعَلُ الْمُضَارِعَ مُفِيدًا لِلطَّلَبِ، كَفِعْلِ الْأَمْرِ، كَمَا فِي قَوْلِهِ تَعَالَى: ﴿وَلْتَكُنْ مِنْكُمْ أُمَّةٌ يَدْعُونَ إِلَى الْخَيْرِ﴾. وَ«لَا» النَّاهِيَةُ تُسَمَّى: دُعَائِيَّةً، إِذَا خُوطِبَ بِهَا الْمَوْلَى سُبْحَانَهُ وَتَعَالَى؛ نَحْوُ: ﴿رَبَّنَا لَا تُؤَاخِذْنَا﴾، وَمِثْلُهَا لَامُ الْأَمْرِ.",
+          "uz": "Buyruq lomi muzori'ni amr fe'li kabi talab ma'nosini beruvchi qiladi; masalan: «Sizlardan yaxshilikka chaqiradigan bir jamoa bo'lsin». Qaytariq «لَا» si Alloh taologa murojaat qilinganda «duo lasi» deb ataladi; masalan: «Robbimiz, bizni ayblama». Buyruq lomi ham xuddi shunday."
+        }
+      ],
+      "exercise": []
     }
   ]
 }

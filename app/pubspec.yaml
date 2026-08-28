@@ -41,3 +41,13 @@ flutter:
     - assets/audio/word_manifest.json
     - assets/audio/alifbo_manifest.json
     - assets/audio/extra_manifest.json
+  fonts:
+    # Amiri ilova ichida. Avval google_fonts orqali internetdan olinardi:
+    # shrift kelguncha (yoki internet bo'lmasa) matn zaxira shriftda
+    # chiziladi, u esa harakatlarni harfga ulay olmaydi - harakatlar
+    # so'z ustida ajralib suzib turadi. Endi shrift har doim tayyor.
+    - family: Amiri
+      fonts:
+        - asset: assets/fonts/Amiri-Regular.ttf
+        - asset: assets/fonts/Amiri-Bold.ttf
+          weight: 700

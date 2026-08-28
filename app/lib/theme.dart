@@ -47,7 +47,21 @@ class AppTheme {
   }
 
   /// Arabcha matn uchun shrift (Amiri — nasx uslubi, harakatlarni yaxshi ko'rsatadi).
+  ///
+  /// Shrift ilova ichida (assets/fonts). Internetdan yuklanmaydi: aks holda
+  /// u kelgunicha matn zaxira shriftda chiziladi va harakatlar harfga
+  /// ulanmay, so'z ustida ajralib turadi.
+  ///
+  /// Amiri'da faqat 400 va 700 og'irlik bor. Oradagi qiymat so'ralsa Flutter
+  /// eng yaqinini oladi, «sun'iy qalinlashtirish» qilmaydi — shuning uchun
+  /// harakatlar joyida qoladi.
   static TextStyle arabic({double size = 40, Color color = AppColors.ink, FontWeight w = FontWeight.w600}) {
-    return GoogleFonts.amiri(fontSize: size, color: color, fontWeight: w, height: 1.4);
+    return TextStyle(
+      fontFamily: 'Amiri',
+      fontSize: size,
+      color: color,
+      fontWeight: w,
+      height: 1.4,
+    );
   }
 }

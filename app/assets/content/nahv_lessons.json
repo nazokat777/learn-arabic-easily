@@ -421,6 +421,737 @@
           "uz": "Alloh taoloning «Bizni to'g'ri yo'lga boshlagin — o'zing ne'mat bergan kishilarning yo'liga» degan so'zidagi «الَّذِينَ» so'zi qaysi turdan?"
         }
       ]
+    },
+    {
+      "book": 1,
+      "num": 9,
+      "page": 21,
+      "titleAr": "أَنْوَاعُ الْبِنَاءِ",
+      "title": "Bino turlari",
+      "rule": {
+        "ar": "فَالَّذِي لَا يَتَغَيَّرُ آخِرُهُ؛ إِمَّا أَنْ يَكُونَ مُلَازِمًا: ١ - لِلسُّكُونِ؛ كَـ«لَمْ». ٢ - أَوِ الضَّمَّةِ؛ كَـ«حَيْثُ». ٣ - أَوِ الْفَتْحَةِ؛ كَـ«أَيْنَ». ٤ - أَوِ الكَسْرَةِ؛ كَالْبَاءِ فِي: «بِاسْمِ اللهِ». وَالْمَدَارُ فِي تَعْيِينِ ذَلِكَ عَلَى النَّقْلِ الصَّحِيحِ.",
+        "uz": "Oxiri o'zgarmaydigan so'z quyidagilardan biriga doim bog'liq bo'ladi: 1 — sukunga; masalan «لَمْ». 2 — dammaga; masalan «حَيْثُ». 3 — fathaga; masalan «أَيْنَ». 4 — kasraga; masalan «بِاسْمِ اللهِ» dagi «ب». Buni aniqlashda tayanch — ishonchli naql (eshitib o'rganilgan rivoyat)."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "عَلِمْتَ أَنَّ الكَلِمَاتِ عِنْدَ تَرَكُّبِهَا، إِمَّا أَنْ يُلَازِمَ آخِرُهَا حَالَةً وَاحِدَةً، وَإِمَّا أَنْ يَتَغَيَّرَ بِتَغَيُّرِ التَّرَاكِيبِ.",
+          "uz": "So'zlar jumla tarkibiga kirganda ularning oxiri yo bitta holatda qoladi, yo tuzilishning o'zgarishi bilan o'zgaradi — buni bilding."
+        },
+        {
+          "type": "para",
+          "ar": "وَاعْلَمْ أَنَّ الْأَحْوَالَ الَّتِي تُلَازِمُهَا أَوَاخِرُ الكَلِمَاتِ لَا تَتَجَاوَزُ أَرْبَعًا: السُّكُونُ، وَالضَّمُّ، وَالْفَتْحُ، وَالكَسْرُ.",
+          "uz": "Bilki, so'zlar oxiri doim bog'lanadigan holatlar to'rttadan oshmaydi: sukun, damma, fatha va kasra."
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "ar": "فَكُلُّ كَلِمَةٍ يُلَازِمُ آخِرَهَا السُّكُونُ يُقَالُ: إِنَّهَا مَبْنِيَّةٌ عَلَى السُّكُونِ؛ مِثْلُ: «لَمْ»، وَ«لَنْ»، وَ«مِنْ»، وَ«عَنْ»، وَ«فِي».",
+              "uz": "Oxiri doim sukunli bo'lgan har bir so'z «sukun ustiga mabniy» deyiladi; masalan: لَمْ, لَنْ, مِنْ, عَنْ, فِي."
+            },
+            {
+              "ar": "وَكُلُّ كَلِمَةٍ يُلَازِمُ آخِرَهَا الضَّمَّةُ يُقَالُ: إِنَّهَا مَبْنِيَّةٌ عَلَى الضَّمِّ؛ مِثْلُ: «حَيْثُ»، وَ«نَحْنُ»، وَ«مُنْذُ».",
+              "uz": "Oxiri doim dammali bo'lgan har bir so'z «damma ustiga mabniy» deyiladi; masalan: حَيْثُ, نَحْنُ, مُنْذُ."
+            },
+            {
+              "ar": "وَكُلُّ كَلِمَةٍ يُلَازِمُ آخِرَهَا الْفَتْحَةُ يُقَالُ: إِنَّهَا مَبْنِيَّةٌ عَلَى الْفَتْحِ؛ مِثْلُ «أَيْنَ»، وَ«لَيْتَ»، وَ«ثُمَّ».",
+              "uz": "Oxiri doim fathali bo'lgan har bir so'z «fatha ustiga mabniy» deyiladi; masalan: أَيْنَ, لَيْتَ, ثُمَّ."
+            },
+            {
+              "ar": "وَكُلُّ كَلِمَةٍ يُلَازِمُ آخِرَهَا الكَسْرَةُ يُقَالُ: إِنَّهَا مَبْنِيَّةٌ عَلَى الكَسْرِ؛ كَالْبَاءِ وَاللَّامِ فِي قَوْلِكَ: التَّقَدُّمُ بِالِاجْتِهَادِ، وَلِكُلِّ مُجْتَهِدٍ نَصِيبٌ.",
+              "uz": "Oxiri doim kasrali bo'lgan har bir so'z «kasra ustiga mabniy» deyiladi; masalan: التَّقَدُّمُ بِالِاجْتِهَادِ (taraqqiyot tirishqoqlik bilan), وَلِكُلِّ مُجْتَهِدٍ نَصِيبٌ (har bir tirishqoqqa nasiba bor) — dagi «ب» va «ل»."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "وَلَا يُعْرَفُ بِقَاعِدَةٍ كَوْنُ الكَلِمَةِ مَبْنِيَّةً عَلَى سُكُونٍ، أَوْ ضَمٍّ، أَوْ فَتْحٍ، أَوْ كَسْرٍ، بَلِ الْمَدَارُ فِي ذَلِكَ عَلَى النَّقْلِ مِنَ الكُتُبِ الصَّحِيحَةِ، وَأَفْوَاهِ الْعَارِفِينَ.",
+          "uz": "So'zning sukun, damma, fatha yoki kasra ustiga mabniy ekani biror qoida bilan bilinmaydi; balki bunda tayanch — ishonchli kitoblardan va biluvchilarning tilidan olingan naql."
+        },
+        {
+          "type": "para",
+          "ar": "فَإِذَا قَالَ لَكَ قَائِلٌ: بِمَاذَا عَرَفْتَ أَنَّ بِنَاءَ «لَمْ» عَلَى السُّكُونِ، وَ«حَيْثُ» عَلَى الضَّمِّ، وَ«أَيْنَ» عَلَى الْفَتْحِ، وَ(الْبَاءِ) عَلَى الكَسْرِ؟ وَلِمَ لَا يَجُوزُ أَنْ يَكُونَ بِنَاءُ «لَمْ» عَلَى الضَّمِّ مَثَلًا؟!",
+          "uz": "Agar kimdir sendan so'rasa: «لَمْ» sukun ustiga, «حَيْثُ» damma ustiga, «أَيْنَ» fatha ustiga, «ب» esa kasra ustiga mabniy ekanini qayerdan bilding? Nega «لَمْ» ning binosi, masalan, damma ustiga bo'lishi mumkin emas?"
+        },
+        {
+          "type": "para",
+          "ar": "فَلَا يُمْكِنُكَ فِي الْجَوَابِ إِلَّا أَنْ تَقُولَ: إِنَّ مَعْرِفَةَ ذَلِكَ لَا تَكُونُ بِقَوَاعِدَ تُتَعَلَّمُ، وَإِنَّمَا تَكُونُ بِالسَّمَاعِ، وَلَمْ أَسْمَعْ كَلِمَةَ «لَمْ» فِي تَرْكِيبٍ مِنْ تَرَاكِيبِ الكَلَامِ الْعَرَبِيِّ الصَّحِيحِ إِلَّا وَهِيَ سَاكِنَةٌ؛ كَقَوْلِ الشَّاعِرِ: لَمْ أَخُنْ عَهْدًا وَلَمْ أُخْلِفْ وُعُودَا.",
+          "uz": "Javobda faqat shuni ayta olasan: buni bilish o'rganiladigan qoidalar bilan emas, balki eshitish (samo') bilan bo'ladi. Men «لَمْ» so'zini sahih arab kalomining biror tuzilishida sukunli holdan boshqa ko'rinishda eshitmadim; shoirning so'zi kabi: «Ahdga xiyonat qilmadim va va'dalarimni buzmadim»."
+        },
+        {
+          "type": "para",
+          "ar": "فَبِذَلِكَ عَلِمْتَ أَنَّ بِنَاءَهَا عَلَى السُّكُونِ، لَا عَلَى الضَّمِّ، وَلَا عَلَى غَيْرِهِ مِنَ الْحَرَكَاتِ، وَلِذَلِكَ لَا أَنْطِقُ بِهَا إِلَّا سَاكِنَةً، وَهَكَذَا أَغْلَبُ الكَلِمَاتِ الْمَبْنِيَّةِ، لَا سَبِيلَ لِمَعْرِفَةِ مَا تُبْنَى عَلَيْهِ إِلَّا النَّقْلُ الصَّحِيحُ.",
+          "uz": "Shu bilan uning binosi sukun ustiga ekanini, damma yoki boshqa harakat ustiga emasligini bilding; shuning uchun uni sukunli holdan boshqacha talaffuz qilmayman. Mabniy so'zlarning ko'pchiligi shunday: nima ustiga bino qilinganini bilishning ishonchli naqldan boshqa yo'li yo'q."
+        },
+        {
+          "type": "para",
+          "ar": "عَلَى أَنَّهُ لَا صُعُوبَةَ عَلَيْنَا فِي مَعْرِفَةِ ذَلِكَ؛ لِأَنَّ الكَلِمَاتِ الْمَبْنِيَّةَ بِالنِّسْبَةِ لِلْمُعْرَبَاتِ قَلِيلَةٌ جِدًّا، وَنُطْقُ النَّاسِ بِهَا صَحِيحٌ فِي الْغَالِبِ؛ لِكَوْنِ آخِرِهَا لَيْسَ عُرْضَةً لِلتَّغْيِيرِ، وَمَعَ هَذَا سَنَذْكُرُ أَشْهَرَهَا فِي الاِسْتِعْمَالِ.",
+          "uz": "Shunday bo'lsa-da, buni bilish biz uchun qiyin emas: mabniy so'zlar mu'rablarga nisbatan juda oz, va odamlarning ularni talaffuzi ko'pincha to'g'ri bo'ladi — chunki ularning oxiri o'zgarishga uchramaydi. Shu bilan birga, ishlatishda eng mashhurlarini keltiramiz."
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "مَا الْأَحْوَالُ الَّتِي تَكُونُ عَلَيْهَا أَوَاخِرُ الكَلِمَاتِ الْمَبْنِيَّةِ؟",
+          "uz": "Mabniy so'zlarning oxiri qanday holatlarda bo'ladi?"
+        },
+        {
+          "ar": "أَتَتَوَارَدُ جَمِيعُ هَذِهِ الْأَحْوَالِ عَلَى كُلِّ كَلِمَةٍ مِنَ الكَلِمَاتِ الْمَبْنِيَّةِ، أَمْ كُلُّ كَلِمَةٍ تُلَازِمُ حَالَةً مَخْصُوصَةً؟",
+          "uz": "Bu holatlarning hammasi har bir mabniy so'zga navbatma-navbat keladimi, yoki har bir so'z o'ziga xos bitta holatga bog'lanadimi?"
+        },
+        {
+          "ar": "هَلْ تُوجَدُ قَوَاعِدُ تُعَرِّفُنَا حَالَةَ آخِرِ كُلِّ كَلِمَةٍ مِنَ الْمَبْنِيَّاتِ؟",
+          "uz": "Mabniy so'zlarning har birining oxiri qaysi holatda bo'lishini bildiradigan qoidalar bormi?"
+        }
+      ]
+    },
+    {
+      "book": 1,
+      "num": 10,
+      "page": 24,
+      "titleAr": "أَصْنَافُ الْمَبْنِيَّاتِ",
+      "title": "Mabniy so'zlarning turlari",
+      "rule": {
+        "ar": "وَمِنَ الْمَبْنِيِّ: ١ - جَمِيعُ الْحُرُوفِ. ٢ - وَكَذَا الْأَفْعَالُ مَا عَدَا الْمُضَارِعَ. ٣ - وَأَلْفَاظٌ مِنَ الْأَسْمَاءِ يُسَمَّى بَعْضُهَا بِـ«الضَّمَائِرِ»؛ كَـ«أَنَا»، وَ«أَنْتَ»، وَ«هُوَ». ٤ - وَبَعْضُهَا بِـ«الْأَسْمَاءِ الْمَوْصُولَةِ»؛ كَـ«الَّذِي»، وَ«الَّتِي». ٥ - وَبَعْضُهَا بِـ«أَسْمَاءِ الْإِشَارَةِ»؛ كَـ«هَذَا» وَ«هَذِهِ». ٦ - وَبَعْضُهَا بِـ«أَسْمَاءِ الشَّرْطِ»؛ كَـ«مَنْ»، وَ«مَهْمَا».",
+        "uz": "Mabniylardan: 1 — barcha harflar. 2 — muzori'dan boshqa barcha fe'llar. 3 — ismlardan bir qism so'zlar: ba'zilari «zamirlar» deb ataladi; masalan أَنَا (men), أَنْتَ (sen), هُوَ (u). 4 — ba'zilari «mavsul ismlar»; masalan الَّذِي, الَّتِي. 5 — ba'zilari «ishora ismlari»; masalan هَذَا, هَذِهِ. 6 — ba'zilari «shart ismlari»; masalan مَنْ, مَهْمَا."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "عَلِمْتَ أَنَّ الكَلِمَاتِ لَيْسَتْ كُلُّهَا مَبْنِيَّةً، وَلَا كُلُّهَا مُعْرَبَةً، بَلْ مِنْهَا مَا هُوَ مَبْنِيٌّ، وَمِنْهَا مَا هُوَ مُعْرَبٌ، وَسَبَقَ لَكَ أَنَّ الكَلِمَاتِ ثَلَاثَةُ أَنْوَاعٍ: أَفْعَالٌ، وَأَسْمَاءٌ، وَحُرُوفٌ.",
+          "uz": "So'zlarning hammasi ham mabniy emas, hammasi mu'rab ham emas — balki ba'zisi mabniy, ba'zisi mu'rab ekanini bilding. So'zlar uch turli — fe'l, ism va harf — ekani ham oldin o'tdi."
+        },
+        {
+          "type": "para",
+          "ar": "أَمَّا الْحُرُوفُ فَكُلُّهَا مَبْنِيَّةٌ، وَهِيَ خَمْسَةُ أَقْسَامٍ:",
+          "uz": "Harflarga kelsak, ularning hammasi mabniydir. Ular besh bo'limdir:"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "ar": "أُحَادِيَّةٌ؛ كَالْهَمْزَةِ، وَالْبَاءِ، وَالتَّاءِ، وَالسِّينِ، وَالْفَاءِ، وَالْكَافِ، وَاللَّامِ، وَالْوَاوِ؛ نَحْوُ: أَسَافَرَ إِبْرَاهِيمُ؟ كَتَبْتُ بِقَلَمِكَ، خَرَجَتِ الْجَارِيَةُ وَسَتَرْجِعُ، دَخَلَ عِنْدَ السُّلْطَانِ الْعُلَمَاءُ فَالْأُمَرَاءُ، الْعِلْمُ كَالنُّورِ، الْعَاقِبَةُ لَكُمْ، تَسُودُونَ بِالْعِلْمِ وَالْأَدَبِ.",
+              "uz": "Bir harfli: hamza, ب, ت, س, ف, ك, ل, و; masalan: «Ibrohim safarga chiqdimi?», «Qalaming bilan yozdim», «Xizmatkor qiz chiqdi va qaytadi», «Sulton huzuriga olimlar, keyin amirlar kirdi», «Ilm nurga o'xshaydi», «Oqibat sizniki», «Ilm va odob bilan yuksalasiz»."
+            },
+            {
+              "ar": "وَثُنَائِيَّةٌ؛ كَـ«أَلْ»، «أَمْ»، «أَنْ»، «إِنْ»، «بَلْ»، «قَدْ»، «لَوْ»، «هَلْ»؛ نَحْوُ: أَقَرِيبٌ السَّفَرُ أَمْ بَعِيدٌ؟ يَسُرُّنِي أَنْ تَعُودَ. إِنْ تَرْحَمْ تُرْحَمْ. لَمْ يَذْهَبْ يُوسُفُ بَلْ إِبْرَاهِيمُ. قَدْ شَاهَدْتُ الْقِطَارَ. لَوْ أَنْصَفَ النَّاسُ اسْتَرَاحَ الْقَاضِي. هَلْ جَاءَ الْمِيعَادُ؟",
+              "uz": "Ikki harfli: أَلْ, أَمْ, أَنْ, إِنْ, بَلْ, قَدْ, لَوْ, هَلْ; masalan: «Safar yaqinmi yoki uzoq?», «Qaytishing meni xursand qiladi», «Rahm qilsang, senga rahm qilinadi», «Yusuf emas, Ibrohim ketdi», «Poyezdni ko'rdim», «Odamlar adolatli bo'lsa, qozi dam olardi», «Va'da vaqti keldimi?»."
+            },
+            {
+              "ar": "وَثُلَاثِيَّةٌ؛ كَـ«إِذَا»، «أَلَا»، «إِلَى»، «إِنَّ»، «سَوْفَ»، «عَلَى»، «لَيْتَ»، «نَعَمْ»؛ نَحْوُ: ظَنَنْتُهُ غَائِبًا، إِذَا هُوَ حَاضِرٌ. أَلَا إِنَّ أَسْبَابَ الْغِنَى لَكَثِيرٌ. سَوْفَ تَرَى. لَيْتَ لِي قِنْطَارًا مِنَ الذَّهَبِ. نَعَمْ (جَوَابًا لِمَنْ قَالَ: أَتُنْفِقُهُ فِي الْخَيْرِ؟).",
+              "uz": "Uch harfli: إِذَا, أَلَا, إِلَى, إِنَّ, سَوْفَ, عَلَى, لَيْتَ, نَعَمْ; masalan: «Uni yo'q deb o'ylabman, birdan u shu yerda ekan», «Ogoh bo'ling, boylik sabablari ko'pdir», «Ko'rasan», «Koshki menda bir qintor oltin bo'lsa», «Ha» (uni yaxshilikka sarflaysanmi? deganga javob)."
+            },
+            {
+              "ar": "وَرُبَاعِيَّةٌ؛ كَـ«إِذْ مَا»، «إِلَّا»، «إِنَّمَا»، «أَمَّا»، «حَتَّى»، «كَأَنَّ»، «لَعَلَّ»؛ نَحْوُ: إِذْ مَا تَتَعَلَّمْ تَتَقَدَّمْ. ﴿كُلُّ شَيْءٍ هَالِكٌ إِلَّا وَجْهَهُ﴾. قَصَّرَ الْحَارِسَانِ أَمَّا الْأَوَّلُ فَتَرَكَ الْبَابَ، وَأَمَّا الثَّانِي فَنَامَ. يَحْضُرُ سَعِيدٌ إِمَّا غَدًا وَإِمَّا بَعْدَ غَدٍ. قَدِمَ الْحُجَّاجُ حَتَّى الْمُشَاةُ. كَأَنَّكَ كُنْتَ مَعَنَا. لَعَلَّ الْجَوَّ يَعْتَدِلُ.",
+              "uz": "To'rt harfli: إِذْ مَا, إِلَّا, إِنَّمَا, أَمَّا, حَتَّى, كَأَنَّ, لَعَلَّ; masalan: «O'rgansang, oldinga borasan», «Uning yuzidan boshqa har bir narsa halok bo'luvchidir», «Ikki qorovul ham kamchilikka yo'l qo'ydi: birinchisi eshikni tashlab ketdi, ikkinchisi esa uxlab qoldi», «Said yo ertaga, yo indinga keladi», «Hojilar keldi, hatto piyodalari ham», «Go'yo sen biz bilan birga bo'lgandaysan», «Shoyad havo mo''tadil bo'lsa»."
+            },
+            {
+              "ar": "وَخُمَاسِيَّةٌ؛ كَـ«إِنَّمَا»، «أَنَّمَا»، «لَكِنَّ»؛ نَحْوُ: ﴿إِنَّمَا يُوحَى إِلَيَّ أَنَّمَا إِلَهُكُمْ إِلَهٌ وَاحِدٌ﴾. يُوسُفُ غَنِيٌّ لَكِنَّهُ بَخِيلٌ.",
+              "uz": "Besh harfli: إِنَّمَا, أَنَّمَا, لَكِنَّ; masalan: «Menga faqat, ilohingiz yagona ilohdir, deb vahiy qilinadi», «Yusuf boy, lekin baxil»."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "وَأَمَّا الْأَفْعَالُ: فَالْمَاضِي وَالْأَمْرُ مِنْهَا مَبْنِيَّانِ؛ الْأَوَّلُ عَلَى الْفَتْحِ، وَالثَّانِي عَلَى السُّكُونِ. وَالْمُضَارِعُ مُعْرَبٌ إِلَّا إِذَا اتَّصَلَتْ بِهِ نُونُ التَّوْكِيدِ، أَوْ نُونُ الْإِنَاثِ.",
+          "uz": "Fe'llarga kelsak: mozi va amr mabniydir — birinchisi fatha ustiga, ikkinchisi sukun ustiga. Muzori' esa mu'rabdir; faqat unga ta'kid nuni yoki ayollar nuni qo'shilgan holdan tashqari."
+        },
+        {
+          "type": "para",
+          "ar": "وَأَمَّا الْأَسْمَاءُ: فَكُلُّهَا مُعْرَبَةٌ إِلَّا أَلْفَاظًا مَحْصُورَةً يُسَمَّى بَعْضُهَا بِـ«الضَّمَائِرِ»، وَبَعْضُهَا بِـ«الْأَسْمَاءِ الْمَوْصُولَةِ»، وَبَعْضُهَا بِـ«أَسْمَاءِ الْإِشَارَةِ»، وَبَعْضُهَا بِـ«أَسْمَاءِ الشَّرْطِ».",
+          "uz": "Ismlarga kelsak: ularning hammasi mu'rabdir, faqat sanoqli so'zlardan tashqari: ba'zilari «zamirlar», ba'zilari «mavsul ismlar», ba'zilari «ishora ismlari», ba'zilari «shart ismlari» deb ataladi."
+        },
+        {
+          "type": "para",
+          "ar": "أَمَّا الضَّمَائِرُ؛ فَهِيَ: أَنَا، نَحْنُ، أَنْتَ، أَنْتِ، أَنْتُمَا، أَنْتُنَّ، أَنْتُمْ، هُوَ، هِيَ، هُمَا، هُمْ، هُنَّ، إِيَّايَ، إِيَّانَا، إِيَّاكَ، إِيَّاكِ، إِيَّاكُمَا، إِيَّاكُمْ، إِيَّاكُنَّ، إِيَّاهُ، إِيَّاهَا، إِيَّاهُمَا، إِيَّاهُمْ، إِيَّاهُنَّ، وَتُسَمَّى هَذِهِ بِـ«الضَّمَائِرِ الْمُنْفَصِلَةِ».",
+          "uz": "Zamirlar: أَنَا (men), نَحْنُ (biz), أَنْتَ, أَنْتِ, أَنْتُمَا, أَنْتُنَّ, أَنْتُمْ, هُوَ, هِيَ, هُمَا, هُمْ, هُنَّ, إِيَّايَ, إِيَّانَا, إِيَّاكَ, إِيَّاكِ, إِيَّاكُمَا, إِيَّاكُمْ, إِيَّاكُنَّ, إِيَّاهُ, إِيَّاهَا, إِيَّاهُمَا, إِيَّاهُمْ, إِيَّاهُنَّ. Bular «ajralgan zamirlar» deb ataladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَمَا اتَّصَلَ بِالْفِعْلِ فِي نَحْوِ: كَتَبْتُ، كَتَبْنَا، كَتَبْتَ، كَتَبْتِ، كَتَبْتُمَا، كَتَبْتُمْ، كَتَبْتُنَّ، كَتَبَ، كَتَبَتْ، كَتَبَا، كَتَبَتَا، كَتَبُوا، كَتَبْنَ.",
+          "uz": "Fe'lga qo'shilib keladiganlari, masalan: كَتَبْتُ (yozdim), كَتَبْنَا (yozdik), كَتَبْتَ, كَتَبْتِ, كَتَبْتُمَا, كَتَبْتُمْ, كَتَبْتُنَّ, كَتَبَ, كَتَبَتْ, كَتَبَا, كَتَبَتَا, كَتَبُوا, كَتَبْنَ."
+        },
+        {
+          "type": "para",
+          "ar": "وَمَا اتَّصَلَ بِالْفِعْلِ، أَوْ بِالاِسْمِ فِي نَحْوِ: عَلَّمَنِي كِتَابِي، عَلَّمَنَا كِتَابُنَا، عَلَّمَكَ كِتَابُكَ، عَلَّمَكِ كِتَابُكِ، عَلَّمَكُمَا كِتَابُكُمَا، عَلَّمَكُمْ كِتَابُكُمْ، عَلَّمَكُنَّ كِتَابُكُنَّ، عَلَّمَهُ كِتَابُهُ، عَلَّمَهَا كِتَابُهَا، عَلَّمَهُمَا كِتَابُهُمَا، عَلَّمَهُمْ كِتَابُهُمْ، عَلَّمَهُنَّ كِتَابُهُنَّ. وَتُسَمَّى هَذِهِ بِـ«الضَّمَائِرِ الْمُتَّصِلَةِ».",
+          "uz": "Fe'lga yoki ismga qo'shilib keladiganlari, masalan: «kitobim meni o'rgatdi», «kitobimiz bizni o'rgatdi», «kitobing seni o'rgatdi» va hokazo. Bular «qo'shilgan zamirlar» deb ataladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَأَمَّا الْأَسْمَاءُ الْمَوْصُولَةُ فَمِنْهَا: الَّذِي، الَّتِي، اللَّذَانِ، اللَّتَانِ، الَّذِينَ، اللَّاتِي.",
+          "uz": "Mavsul ismlardan: الَّذِي, الَّتِي, اللَّذَانِ, اللَّتَانِ, الَّذِينَ, اللَّاتِي."
+        },
+        {
+          "type": "para",
+          "ar": "وَأَمَّا أَسْمَاءُ الْإِشَارَةِ فَمِنْهَا: هَذَا، هَذِهِ، هَذَانِ، هَاتَانِ، هَؤُلَاءِ.",
+          "uz": "Ishora ismlaridan: هَذَا (bu), هَذِهِ, هَذَانِ, هَاتَانِ, هَؤُلَاءِ (bular)."
+        },
+        {
+          "type": "para",
+          "ar": "وَأَمَّا أَسْمَاءُ الشَّرْطِ فَمِنْهَا: مَنْ، مَا، مَهْمَا، مَتَى، أَيَّانَ، أَيْنَ، أَنَّى، حَيْثُمَا، كَيْفَمَا، أَيٌّ.",
+          "uz": "Shart ismlaridan: مَنْ (kim), مَا (nima), مَهْمَا, مَتَى (qachon), أَيَّانَ, أَيْنَ (qayerda), أَنَّى, حَيْثُمَا, كَيْفَمَا, أَيٌّ."
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "هَلْ يُعْرَبُ شَيْءٌ مِنَ الْحُرُوفِ؟",
+          "uz": "Harflardan biror narsa mu'rab bo'ladimi?"
+        },
+        {
+          "ar": "مَا الْمَبْنِيُّ مِنَ الْأَفْعَالِ، وَمَا الْمُعْرَبُ مِنْهَا؟",
+          "uz": "Fe'llardan qaysisi mabniy, qaysisi mu'rab?"
+        },
+        {
+          "ar": "مَا الَّذِي عَرَفْتَهُ مِنَ الْأَسْمَاءِ الْمَبْنِيَّةِ؟",
+          "uz": "Mabniy ismlardan nimalarni bilib olding?"
+        },
+        {
+          "ar": "بَيِّنِ الضَّمَائِرَ، وَالْأَسْمَاءَ الْمَوْصُولَةَ، وَأَسْمَاءَ الْإِشَارَةِ، وَأَسْمَاءَ الشَّرْطِ الَّتِي فِي هَذِهِ الْعِبَارَاتِ:",
+          "uz": "Quyidagi iboralardagi zamirlarni, mavsul ismlarni, ishora ismlarini va shart ismlarini ko'rsating:"
+        },
+        {
+          "ar": "﴿تَبَارَكَ الَّذِي بِيَدِهِ الْمُلْكُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ﴾.",
+          "uz": "«Mulk qo'lida bo'lgan Zot barakotlidir; U har narsaga qodirdir»."
+        },
+        {
+          "ar": "مَنْ طَلَبَ الْعُلَا سَهِرَ اللَّيَالِيَ.",
+          "uz": "Kim yuksaklikni istasa, kechalari bedor bo'ladi."
+        },
+        {
+          "ar": "عِلْمُكَ وَأَدَبُكَ هُمَا الْخَصْلَتَانِ اللَّتَانِ تَسُودُ بِهِمَا.",
+          "uz": "Iling va odobing — sen ular bilan yuksaladigan ikki xislatdir."
+        },
+        {
+          "ar": "الْأُمَّهَاتُ مُدَبِّرَاتُ الْمَنَازِلِ، وَهُنَّ نِظَامُ الْأُسَرِ، وَعَلَيْهِنَّ الاِعْتِمَادُ فِي تَهْذِيبِ الْأَطْفَالِ، فَإِذَا حَسُنَتْ تَرْبِيَةُ هَؤُلَاءِ حَسُنَتْ تَرْبِيَةُ الْأَبْنَاءِ؛ إِذْ كَيْفَمَا يَكُنِ الْمُرَبِّي يَكُنِ الْمُرَبَّى.",
+          "uz": "Onalar — uy boshqaruvchilari; ular oilaning tartibidir. Bolalarni tarbiyalashda tayanch ularga. Ularning tarbiyasi yaxshi bo'lsa, farzandlarning tarbiyasi ham yaxshi bo'ladi; chunki tarbiyachi qanday bo'lsa, tarbiyalanuvchi ham shunday bo'ladi."
+        }
+      ]
+    },
+    {
+      "book": 1,
+      "num": 11,
+      "page": 28,
+      "titleAr": "أَنْوَاعُ الْإِعْرَابِ",
+      "title": "I'robning turlari",
+      "rule": {
+        "ar": "وَالَّذِي يَتَغَيَّرُ آخِرُهُ؛ إِنْ كَانَ فِعْلًا، فَتَغَيُّرُهُ يَكُونُ بِالضَّمَّةِ وَالْفَتْحَةِ وَالسُّكُونِ، وَإِنْ كَانَ اسْمًا، فَتَغَيُّرُهُ يَكُونُ بِالضَّمَّةِ وَالْفَتْحَةِ وَالكَسْرَةِ. وَالتَّغَيُّرُ بِالضَّمَّةِ يُسَمَّى «رَفْعًا»، وَبِالْفَتْحَةِ يُسَمَّى «نَصْبًا»، وَبِالكَسْرَةِ يُسَمَّى «جَرًّا»، وَبِالسُّكُونِ يُسَمَّى «جَزْمًا». وَيُقَالُ لِلضَّمَّةِ وَالْفَتْحَةِ وَالكَسْرَةِ وَالسُّكُونِ: «عَلَامَاتُ الْإِعْرَابِ الْأَصْلِيَّةُ».",
+        "uz": "Oxiri o'zgaradigan so'z fe'l bo'lsa, o'zgarishi damma, fatha va sukun bilan bo'ladi; ism bo'lsa, damma, fatha va kasra bilan bo'ladi. Damma bilan o'zgarish «raf'», fatha bilan «nasb», kasra bilan «jarr», sukun bilan «jazm» deyiladi. Damma, fatha, kasra va sukun «asliy i'rob alomatlari» deb ataladi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "اتَّضَحَ لَنَا أَنَّ الكَلِمَاتِ الَّتِي تَتَغَيَّرُ أَوَاخِرُهَا بِتَغَيُّرِ التَّرَاكِيبِ؛ هِيَ مِنْ نَوْعَيِ الْفِعْلِ وَالاِسْمِ، وَلَا تَكُونُ مِنْ نَوْعِ الْحُرُوفِ.",
+          "uz": "Tuzilishning o'zgarishi bilan oxiri o'zgaradigan so'zlar fe'l va ism turlaridan ekani bizga ayon bo'ldi; ular harf turidan bo'lmaydi."
+        },
+        {
+          "type": "para",
+          "ar": "وَبَقِيَ عَلَيْنَا أَنْ نَعْرِفَ الْأَحْوَالَ الَّتِي يَكُونُ بِهَا التَّغَيُّرُ، فَاعْلَمْ أَنَّهَا أَرْبَعٌ: الضَّمَّةُ، وَالْفَتْحَةُ، وَالكَسْرَةُ، وَالسُّكُونُ، وَيُسَمَّى التَّغَيُّرُ بِالضَّمَّةِ «رَفْعًا»، وَبِالْفَتْحَةِ «نَصْبًا»، وَبِالكَسْرَةِ «جَرًّا»، وَبِالسُّكُونِ «جَزْمًا». فَيُقَالُ: إِنَّ أَنْوَاعَ الْإِعْرَابِ: رَفْعٌ، وَنَصْبٌ، وَجَرٌّ، وَجَزْمٌ.",
+          "uz": "Endi o'zgarish qaysi holatlar bilan bo'lishini bilishimiz qoldi. Bilki, ular to'rtta: damma, fatha, kasra va sukun. Damma bilan o'zgarish «raf'», fatha bilan «nasb», kasra bilan «jarr», sukun bilan «jazm» deyiladi. Shunday qilib: i'rob turlari — raf', nasb, jarr va jazm."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَنْبَغِي لَنَا أَنْ نَعْرِفَ أَنَّ الْجَرَّ لَا يَدْخُلُ الْأَفْعَالَ، كَمَا أَنَّ الْجَزْمَ لَا يَدْخُلُ الْأَسْمَاءَ.",
+          "uz": "Shuni ham bilishimiz kerak: jarr fe'llarga kirmaydi, xuddi shunday jazm ham ismlarga kirmaydi."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 1,
+      "num": 12,
+      "page": 29,
+      "titleAr": "إِعْرَابُ الْمُثَنَّى وَالْجَمْعِ السَّالِمِ",
+      "title": "Ikkilik va butun ko'plikning i'robi",
+      "rule": {
+        "ar": "وَالْمُثَنَّى يُرْفَعُ بِالْأَلِفِ، وَيُنْصَبُ وَيُجَرُّ بِالْيَاءِ. وَجَمْعُ الْمُذَكَّرِ السَّالِمُ يُرْفَعُ بِالْوَاوِ، وَيُنْصَبُ وَيُجَرُّ بِالْيَاءِ. وَجَمْعُ الْمُؤَنَّثِ السَّالِمُ يُنْصَبُ بِالكَسْرَةِ. وَيُقَالُ لِلْأَلِفِ وَالْوَاوِ وَالْيَاءِ وَالكَسْرَةِ: «عَلَامَاتٌ فَرْعِيَّةٌ».",
+        "uz": "Ikkilik alif bilan raf' bo'ladi, yo bilan nasb va jarr bo'ladi. Jam'i muzakkari solim vov bilan raf' bo'ladi, yo bilan nasb va jarr bo'ladi. Jam'i muannasi solim kasra bilan nasb bo'ladi. Alif, vov, yo va kasra «tarmoq (far'iy) alomatlar» deb ataladi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "عَرَفْتَ أَنَّ عَلَامَةَ الرَّفْعِ الْأَصْلِيَّةَ الضَّمَّةُ، وَعَلَامَةَ النَّصْبِ الْفَتْحَةُ، وَعَلَامَةَ الْجَرِّ الكَسْرَةُ، وَعَلَامَةَ الْجَزْمِ السُّكُونُ. وَهُنَاكَ عَلَامَاتٌ فَرْعِيَّةٌ تَنُوبُ عَنْ هَذِهِ الْعَلَامَاتِ فِي أَنْوَاعٍ مِنَ الكَلِمَاتِ كَمَا سَيُذْكَرُ:",
+          "uz": "Raf'ning asliy alomati damma, nasbniki fatha, jarrniki kasra, jazmniki sukun ekanini bilding. Ba'zi so'z turlarida bu alomatlar o'rniga keladigan far'iy alomatlar ham bor; ular quyida keltiriladi:"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "ar": "فَالْمُثَنَّى: يُرْفَعُ بِالْأَلِفِ نِيَابَةً عَنِ الضَّمَّةِ؛ نَحْوُ: حَضَرَ هُنَا رَجُلَانِ. وَيُنْصَبُ وَيُجَرُّ بِالْيَاءِ نِيَابَةً عَنِ الْفَتْحَةِ وَالكَسْرَةِ؛ نَحْوُ: أَكْرَمْتُ الرَّجُلَيْنِ، وَنَظَرْتُ إِلَى الرَّجُلَيْنِ.",
+              "uz": "Ikkilik: damma o'rniga alif bilan raf' bo'ladi; masalan: «Bu yerga ikki kishi keldi». Fatha va kasra o'rniga yo bilan nasb va jarr bo'ladi; masalan: «Ikki kishini hurmat qildim», «Ikki kishiga qaradim»."
+            },
+            {
+              "ar": "وَجَمْعُ الْمُذَكَّرِ السَّالِمُ: يُرْفَعُ بِالْوَاوِ نِيَابَةً عَنِ الضَّمَّةِ؛ نَحْوُ: خَرَجَ الْمُهَنْدِسُونَ، وَيُنْصَبُ وَيُجَرُّ بِالْيَاءِ نِيَابَةً عَنِ الْفَتْحَةِ وَالكَسْرَةِ؛ نَحْوُ: وَدَّعْتُ الْمُهَنْدِسِينَ، وَنَظَرْتُ إِلَى الْمُهَنْدِسِينَ.",
+              "uz": "Jam'i muzakkari solim: damma o'rniga vov bilan raf' bo'ladi; masalan: «Muhandislar chiqdi». Fatha va kasra o'rniga yo bilan nasb va jarr bo'ladi; masalan: «Muhandislarni kuzatdim», «Muhandislarga qaradim»."
+            },
+            {
+              "ar": "وَجَمْعُ الْمُؤَنَّثِ السَّالِمُ: يُنْصَبُ بِالكَسْرَةِ نِيَابَةً عَنِ الْفَتْحَةِ؛ نَحْوُ: غَرَسْتُ شَجَرَاتٍ. أَمَّا رَفْعُهُ وَجَرُّهُ فَيَكُونُ بِالْعَلَامَتَيْنِ الْأَصْلِيَّتَيْنِ؛ الضَّمَّةِ وَالكَسْرَةِ؛ نَحْوُ: أَيْنَعَتِ الشَّجَرَاتُ، وَجِئْتُ بِشَجَرَاتٍ أُخْرَى.",
+              "uz": "Jam'i muannasi solim: fatha o'rniga kasra bilan nasb bo'ladi; masalan: «Daraxtlar ekdim». Raf' va jarri esa asliy ikki alomat — damma va kasra bilan bo'ladi; masalan: «Daraxtlar pishdi», «Boshqa daraxtlar keltirdim»."
+            }
+          ]
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 1,
+      "num": 13,
+      "page": 30,
+      "titleAr": "إِعْرَابُ الْفِعْلِ الْمُعْتَلِّ",
+      "title": "Illatli fe'lning i'robi",
+      "rule": {
+        "ar": "وَإِذَا كَانَ آخِرُ الْمُضَارِعِ أَلِفًا، أَوْ وَاوًا، أَوْ يَاءً؛ سُمِّيَ «مُعْتَلَّ الْآخِرِ»، وَجُزِمَ بِحَذْفِ آخِرِهِ نِيَابَةً عَنِ السُّكُونِ؛ نَحْوُ: لَمْ يَخْشَ، وَلَمْ يَدْعُ، وَلَمْ يَرْمِ. أَمَّا النَّصْبُ: فَيَظْهَرُ عَلَى الْوَاوِ، وَالْيَاءِ، وَيُقَدَّرُ عَلَى الْأَلِفِ. وَأَمَّا الرَّفْعُ: فَيُقَدَّرُ عَلَى الْجَمِيعِ.",
+        "uz": "Muzori'ning oxiri alif, vov yoki yo bo'lsa, u «mu'tallul-oxir» (oxiri illatli) deb ataladi va sukun o'rniga oxirgi harfi tushirilib jazm qilinadi; masalan: لَمْ يَخْشَ, لَمْ يَدْعُ, لَمْ يَرْمِ. Nasbga kelsak: u vov va yo ustida ko'rinadi, alif ustida esa taqdir qilinadi. Raf' esa ularning hammasida taqdir qilinadi (ya'ni yozilmaydi, faraz qilinadi)."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "إِذَا كَانَ آخِرُ الْفِعْلِ الْمُضَارِعِ أَلِفًا؛ نَحْوُ: يَخْشَى، وَيَسْعَى، وَيَلْقَى. أَوْ وَاوًا؛ نَحْوُ: يَدْعُو، وَيَسْمُو، وَيَلْهُو. أَوْ يَاءً؛ نَحْوُ: يَرْمِي، وَيَعْصِي، وَيَمْشِي؛ سُمِّيَ الْفِعْلُ «مُعْتَلَّ الْآخِرِ».",
+          "uz": "Muzori' fe'lning oxiri alif bo'lsa — masalan: يَخْشَى (qo'rqadi), يَسْعَى (harakat qiladi), يَلْقَى (uchratadi); yoki vov bo'lsa — masalan: يَدْعُو (chaqiradi), يَسْمُو (yuksaladi), يَلْهُو (o'ynaydi); yoki yo bo'lsa — masalan: يَرْمِي (otadi), يَعْصِي (osiylik qiladi), يَمْشِي (yuradi), bu fe'l «oxiri illatli» deb ataladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَجَزْمُ الْفِعْلِ الْمُعْتَلِّ الْآخِرِ لَا يَكُونُ بِالسُّكُونِ، بَلْ بِحَذْفِ آخِرِهِ نِيَابَةً عَنِ السُّكُونِ، فَحَذْفُ الْآخِرِ هُوَ مِنَ الْعَلَامَاتِ الْفَرْعِيَّةِ؛ نَحْوُ: لَمْ يَخْشَ، وَلَمْ يَسْعَ، وَلَمْ يَلْقَ، وَلَمْ يَدْعُ، وَلَمْ يَسْمُ، وَلَمْ يَلْهُ، وَلَمْ يَرْمِ، وَلَمْ يَعْصِ، وَلَمْ يَمْشِ.",
+          "uz": "Oxiri illatli fe'lning jazmi sukun bilan emas, sukun o'rniga oxirgi harfini tushirish bilan bo'ladi; oxirni tushirish — far'iy alomatlardandir; masalan: لَمْ يَخْشَ, لَمْ يَسْعَ, لَمْ يَلْقَ, لَمْ يَدْعُ, لَمْ يَسْمُ, لَمْ يَلْهُ, لَمْ يَرْمِ, لَمْ يَعْصِ, لَمْ يَمْشِ."
+        },
+        {
+          "type": "para",
+          "ar": "أَمَّا نَصْبُهُ وَرَفْعُهُ؛ فَبِالْعَلَامَتَيْنِ الْأَصْلِيَّتَيْنِ؛ الضَّمَّةِ وَالْفَتْحَةِ، إِلَّا أَنَّ الْفَتْحَةَ تُقَدَّرُ عَلَى الْأَلِفِ لِتَعَذُّرِ تَحْرِيكِهَا، وَتَظْهَرُ عَلَى الْوَاوِ وَالْيَاءِ، وَالضَّمَّةُ تُقَدَّرُ عَلَى الْأَلِفِ لِلتَّعَذُّرِ، وَعَلَى الْوَاوِ وَالْيَاءِ لِلثِّقَلِ.",
+          "uz": "Nasb va raf'iga kelsak: ular asliy ikki alomat — damma va fatha bilan bo'ladi. Faqat fatha alif ustida taqdir qilinadi (alifni harakatlantirib bo'lmagani uchun), vov va yo ustida esa ko'rinadi. Damma esa alif ustida imkonsizlik sababli, vov va yo ustida og'irlik sababli taqdir qilinadi."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 1,
+      "num": 14,
+      "page": 31,
+      "titleAr": "إِعْرَابُ الْأَمْثِلَةِ الْخَمْسَةِ",
+      "title": "Besh misolning i'robi",
+      "rule": {
+        "ar": "وَالْمُضَارِعُ إِذَا اتَّصَلَ بِهِ أَلِفُ اثْنَيْنِ، أَوْ وَاوُ جَمَاعَةٍ، أَوْ يَاءُ مُخَاطَبَةٍ، يُرْفَعُ بِثُبُوتِ النُّونِ نِيَابَةً عَنِ الضَّمَّةِ، وَيُنْصَبُ وَيُجْزَمُ بِحَذْفِهَا نِيَابَةً عَنِ الْفَتْحَةِ وَالسُّكُونِ.",
+        "uz": "Muzori'ga ikkilik alifi, jamoa vovi yoki muxotaba yosi qo'shilsa, u damma o'rniga nunning turishi bilan raf' bo'ladi; fatha va sukun o'rniga esa o'sha nunning tushishi bilan nasb va jazm bo'ladi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "إِذَا أُسْنِدَ الْمُضَارِعُ لِأَلِفِ الِاثْنَيْنِ؛ نَحْوُ: الرَّجُلَانِ يَكْتُبَانِ، وَأَنْتُمَا تَكْتُبَانِ، أَوْ لِوَاوِ الْجَمَاعَةِ؛ نَحْوُ: الرِّجَالُ يَكْتُبُونَ، وَأَنْتُمْ تَكْتُبُونَ، أَوْ لِيَاءِ الْمُخَاطَبَةِ؛ نَحْوُ: أَنْتِ تَكْتُبِينَ. كَانَ رَفْعُهُ بِثُبُوتِ النُّونِ كَمَا رَأَيْتَ، وَنَصْبُهُ وَجَزْمُهُ بِحَذْفِهَا.",
+          "uz": "Muzori' ikkilik alifiga bog'lansa — masalan: «Ikki kishi yozmoqda», «Siz ikkovingiz yozyapsiz»; yoki jamoa voviga — masalan: «Erkaklar yozmoqda», «Sizlar yozyapsizlar»; yoki muxotaba yosiga — masalan: «Sen (ayol) yozyapsan», ko'rganingdek, uning raf'i nunning turishi bilan, nasb va jazmi esa uning tushishi bilan bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "نَحْوُ: لَنْ يَكْتُبَا، وَلَنْ تَكْتُبَا، وَلَنْ يَكْتُبُوا، وَلَنْ تَكْتُبُوا، وَلَنْ تَكْتُبِي، وَلَمْ يَكْتُبَا، وَلَمْ تَكْتُبَا، وَلَمْ يَكْتُبُوا، وَلَمْ تَكْتُبُوا، وَلَمْ تَكْتُبِي. وَتُسَمَّى هَذِهِ الْأَفْعَالُ وَأَمْثَالُهَا بِالْأَمْثِلَةِ الْخَمْسَةِ.",
+          "uz": "Masalan: لَنْ يَكْتُبَا, لَنْ تَكْتُبَا, لَنْ يَكْتُبُوا, لَنْ تَكْتُبُوا, لَنْ تَكْتُبِي, لَمْ يَكْتُبَا, لَمْ تَكْتُبَا, لَمْ يَكْتُبُوا, لَمْ تَكْتُبُوا, لَمْ تَكْتُبِي. Bu fe'llar va ularga o'xshashlar «besh misol» deb ataladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَثُبُوتُ النُّونِ، وَحَذْفُهَا مِنَ الْعَلَامَاتِ الْفَرْعِيَّةِ.",
+          "uz": "Nunning turishi va tushishi — far'iy alomatlardandir."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 1,
+      "num": 15,
+      "page": 32,
+      "titleAr": "أَهَمِّيَّةُ تَمْيِيزِ التَّرَاكِيبِ",
+      "title": "Tuzilishlarni ajrata bilishning ahamiyati",
+      "rule": {
+        "ar": "وَلِكُلِّ نَوْعٍ مِنْ هَذِهِ التَّغْيِيرَاتِ مَوَاضِعُ لَوْ وَقَعَ فِي غَيْرِهَا يُعَدُّ خَطَأً، فَيَلْزَمُنَا لِأَجْلِ أَنْ نَسْلَمَ مِنَ الْخَطَأِ، وَيَكُونَ نُطْقُنَا صَحِيحًا أَنْ نَعْرِفَ فِي أَيِّ تَرْكِيبٍ يَكُونُ الْفِعْلُ مَرْفُوعًا، أَوْ مَنْصُوبًا، أَوْ مَجْزُومًا، وَفِي أَيِّ تَرْكِيبٍ يَكُونُ الاِسْمُ مَرْفُوعًا، أَوْ مَنْصُوبًا، أَوْ مَجْرُورًا.",
+        "uz": "Bu o'zgarishlarning har biri uchun o'z o'rni bor; boshqa o'rinda kelsa, xato hisoblanadi. Shuning uchun xatodan omon bo'lishimiz va talaffuzimiz to'g'ri bo'lishi uchun fe'l qaysi tuzilishda marfu', mansub yoki majzum bo'lishini, ism esa qaysi tuzilishda marfu', mansub yoki majrur bo'lishini bilishimiz zarur."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "نَسْمَعُ مِنَ النَّاسِ كَلِمَةَ «عَلِيٌّ» مَثَلًا؛ تَارَةً مَرْفُوعَةً، وَتَارَةً مَنْصُوبَةً، وَتَارَةً مَجْرُورَةً؛ فَيَقُولُونَ: عَلِيٌّ شُجَاعٌ. إِنَّ عَلِيًّا فَصِيحٌ. لِعَلِيٍّ أَوْلَادٌ بَرَرَةٌ.",
+          "uz": "Odamlardan, masalan, «عَلِيّ» so'zini goh marfu', goh mansub, goh majrur holda eshitamiz. Ular: «Ali botir», «Albatta Ali fasohatli», «Alining yaxshi farzandlari bor» deyishadi."
+        },
+        {
+          "type": "para",
+          "ar": "فَهَلْ رَفْعُ كَلِمَةِ «عَلِيٌّ» فِي التَّرْكِيبِ الْأَوَّلِ، وَنَصْبُهَا فِي الثَّانِي، وَجَرُّهَا فِي الثَّالِثِ أَمْرٌ مُتَعَيِّنٌ عَلَى مَنْ يُرِيدُ أَنْ يَكُونَ كَلَامُهُ صَحِيحًا؟ الْجَوَابُ: نَعَمْ.",
+          "uz": "Xo'sh, «عَلِيّ» so'zining birinchi tuzilishda raf' bo'lishi, ikkinchisida nasb, uchinchisida jarr bo'lishi — kalomi to'g'ri bo'lishini istagan kishi uchun majburiymi? Javob: ha."
+        },
+        {
+          "type": "para",
+          "ar": "وَمَنْ يَنْطِقُ بِغَيْرِ ذَلِكَ يَكُونُ مُخْطِئًا، وَكَلَامُهُ مُخَالِفًا لِلُغَةِ الْعَرَبِ؛ لُغَةِ الْقُرْآنِ الشَّرِيفِ وَالْأَحَادِيثِ وَالْكُتُبِ الصَّحِيحَةِ وَكَلَامِ الْفُصَحَاءِ.",
+          "uz": "Kim bundan boshqacha talaffuz qilsa, xato qilgan bo'ladi va uning kalomi arab tiliga — sharafli Qur'on, hadislar, sahih kitoblar va fasih kishilar kalomi tiliga — muxolif bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "فَكُلُّ كَلِمَةٍ مِنَ الكَلِمَاتِ الْمُعْرَبَةِ يَتَعَيَّنُ رَفْعُهَا فِي مَوَاضِعَ مَخْصُوصَةٍ، وَنَصْبُهَا فِي مَوَاضِعَ مَخْصُوصَةٍ، وَكَذَلِكَ جَرُّهَا وَجَزْمُهَا. وَلِذَلِكَ قَوَاعِدُ وَأُصُولٌ، إِذَا عَرَفَهَا الْإِنْسَانُ سَلِمَ مِنَ الْخَطَأِ، وَوَافَقَ كَلَامُهُ لُغَةَ الْقُرْآنِ.",
+          "uz": "Mu'rab so'zlarning har biri belgilangan o'rinlarda raf' bo'lishi, belgilangan o'rinlarda nasb bo'lishi lozim; jarr va jazmi ham shunday. Buning qoidalari va asoslari bor: inson ularni bilsa, xatodan omon bo'ladi va kalomi Qur'on tiliga muvofiq keladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِذَا كَانَ تَغَيُّرُ الْفِعْلِ مُنْحَصِرًا فِي الرَّفْعِ وَالنَّصْبِ وَالْجَزْمِ، وَتَغَيُّرُ الاِسْمِ مُنْحَصِرًا فِي الرَّفْعِ وَالنَّصْبِ وَالْجَرِّ، فَعَلَيْنَا أَنْ نَعْرِفَ فِي أَيِّ تَرْكِيبٍ يَكُونُ الْفِعْلُ: مَرْفُوعًا، أَوْ مَنْصُوبًا، أَوْ مَجْزُومًا، وَفِي أَيِّ تَرْكِيبٍ يَكُونُ الاِسْمُ مَرْفُوعًا، أَوْ مَنْصُوبًا، أَوْ مَجْرُورًا، حَتَّى نَصِلَ إِلَى الْغَايَةِ الْمَقْصُودَةِ.",
+          "uz": "Fe'lning o'zgarishi raf', nasb va jazm bilan, ismning o'zgarishi esa raf', nasb va jarr bilan chegaralangan ekan, ko'zlangan maqsadga yetish uchun fe'l qaysi tuzilishda marfu', mansub yoki majzum bo'lishini, ism qaysi tuzilishda marfu', mansub yoki majrur bo'lishini bilishimiz kerak."
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "مَا الْأَحْوَالُ الَّتِي يَكُونُ بِهَا تَغَيُّرُ أَوَاخِرِ الكَلِمَاتِ الْمُعْرَبَةِ؟",
+          "uz": "Mu'rab so'zlar oxirining o'zgarishi qanday holatlar bilan bo'ladi?"
+        },
+        {
+          "ar": "مَا الْأَحْوَالُ الَّتِي تَكُونُ مِنْهَا فِي الْفِعْلِ، وَمَا الَّتِي تَكُونُ مِنْهَا فِي الاِسْمِ؟",
+          "uz": "Ulardan qaysilari fe'lda, qaysilari ismda bo'ladi?"
+        },
+        {
+          "ar": "هَلْ رَفْعُ الْمُعْرَبِ، أَوْ نَصْبُهُ، أَوْ جَرُّهُ، أَوْ جَزْمُهُ، يَكُونُ بِمُجَرَّدِ الاِخْتِيَارِ، وَكَيْفَمَا يَشَاءُ الْمُتَكَلِّمُ؟",
+          "uz": "Mu'rabning raf'i, nasbi, jarri yoki jazmi shunchaki ixtiyoriymi — so'zlovchi xohlaganicha bo'laveradimi?"
+        },
+        {
+          "ar": "مَا الَّذِي يَتَرَتَّبُ عَلَى الرَّفْعِ فِي مَوْضِعِ النَّصْبِ، أَوِ النَّصْبِ فِي مَوْضِعِ الرَّفْعِ، مَثَلًا؟",
+          "uz": "Masalan, nasb o'rnida raf' qilish yoki raf' o'rnida nasb qilishning oqibati nima bo'ladi?"
+        },
+        {
+          "ar": "هَلْ تُوجَدُ قَوَاعِدُ نَحْتَرِزُ بِهَا عَنِ الْوُقُوعِ فِي الْخَطَأِ، بِحَيْثُ يَكُونُ كَلَامُنَا مُوَافِقًا لِلُغَةِ الْقُرْآنِ الشَّرِيفِ وَكَلَامِ الْفُصَحَاءِ؟",
+          "uz": "Xatoga tushishdan saqlanadigan, kalomimiz sharafli Qur'on tiliga va fasih kishilar kalomiga muvofiq bo'ladigan qoidalar bormi?"
+        },
+        {
+          "ar": "مَا الَّذِي يَنْبَغِي لَنَا أَنْ نَعْرِفَهُ لِلْوُصُولِ إِلَى الْغَايَةِ الْمَطْلُوبَةِ؟",
+          "uz": "Ko'zlangan maqsadga yetish uchun nimani bilishimiz kerak?"
+        }
+      ]
+    },
+    {
+      "book": 1,
+      "num": 16,
+      "page": 34,
+      "titleAr": "نَصْبُ الْفِعْلِ الْمُضَارِعِ",
+      "title": "Muzori' fe'lning nasbi",
+      "rule": {
+        "ar": "أَمَّا الْفِعْلُ فَيَنْتَصِبُ إِذَا كَانَ قَبْلَهُ أَحَدُ هَذِهِ الْأَحْرُفِ: «أَنْ»، «لَنْ»، «إِذًا»، «كَيْ».",
+        "uz": "Fe'lga kelsak, uning oldida quyidagi harflardan biri kelsa, u nasb bo'ladi: «أَنْ», «لَنْ», «إِذًا», «كَيْ»."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "لَمَّا كَانَتِ السَّلَامَةُ مِنَ الْخَطَأِ فِي الكَلَامِ تَتَوَقَّفُ عَلَى أَنْ نَعْرِفَ فِي أَيِّ تَرْكِيبٍ يَكُونُ الْفِعْلُ مَنْصُوبًا، أَوْ مَجْزُومًا، أَوْ مَرْفُوعًا، وَفِي أَيِّ تَرْكِيبٍ يَكُونُ الاِسْمُ مَرْفُوعًا، أَوْ مَنْصُوبًا، أَوْ مَجْرُورًا، كَانَ مِنَ اللَّازِمِ أَنْ نَشْرَعَ فِي مَعْرِفَةِ الْقَوَاعِدِ الَّتِي تُوصِلُنَا إِلَى ذَلِكَ.",
+          "uz": "Kalomda xatodan omon bo'lish fe'l qaysi tuzilishda mansub, majzum yoki marfu' bo'lishini, ism esa qaysi tuzilishda marfu', mansub yoki majrur bo'lishini bilishga bog'liq ekan, bizni shunga yetkazadigan qoidalarni o'rganishga kirishishimiz lozim bo'ldi."
+        },
+        {
+          "type": "para",
+          "ar": "فَالْفِعْلُ يُنْصَبُ فِي أَرْبَعَةِ مَوَاضِعَ، وَيُجْزَمُ فِي سِتَّةَ عَشَرَ مَوْضِعًا، وَيُرْفَعُ فِي غَيْرِ ذَلِكَ.",
+          "uz": "Fe'l to'rt o'rinda nasb bo'ladi, o'n olti o'rinda jazm bo'ladi, bulardan boshqa hollarda esa raf' bo'ladi."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "أ - فَيُنْصَبُ فِي كُلِّ جُمْلَةٍ وَقَعَ فِيهَا بَعْدَ كَلِمَةٍ مِنْ هَذِهِ الكَلِمَاتِ:",
+            "uz": "a — Fe'l quyidagi so'zlardan biridan keyin kelgan har bir jumlada nasb bo'ladi:"
+          },
+          "items": [
+            {
+              "ar": "أَنْ؛ نَحْوُ: يَسُرُّنِي أَنْ تَنْجَحَ.",
+              "uz": "«أَنْ»; masalan: «Muvaffaq bo'lishing meni xursand qiladi»."
+            },
+            {
+              "ar": "لَنْ؛ نَحْوُ: لَنْ يَسُودَ الكَسْلَانُ.",
+              "uz": "«لَنْ»; masalan: «Dangasa hech qachon yuksalmaydi»."
+            },
+            {
+              "ar": "إِذًا؛ نَحْوُ: إِذًا تَبْلُغَ الْمَجْدَ. (جَوَابًا لِمَنْ قَالَ: سَأَجْتَهِدُ).",
+              "uz": "«إِذًا»; masalan: «Unda sen shon-shuhratga erishasan» («Men tirishaman» degan kishiga javoban)."
+            },
+            {
+              "ar": "كَيْ؛ نَحْوُ: جِئْتُ كَيْ أَتَعَلَّمَ.",
+              "uz": "«كَيْ»; masalan: «O'rganish uchun keldim»."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "وَعَلَى هَذَا الْقِيَاسُ.",
+          "uz": "Qolganlari ham shu qiyosda."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 1,
+      "num": 17,
+      "page": 35,
+      "titleAr": "جَزْمُ الْفِعْلِ الْمُضَارِعِ",
+      "title": "Muzori' fe'lning jazmi",
+      "rule": {
+        "ar": "وَيُجْزَمُ إِذَا كَانَ قَبْلَهُ إِحْدَى هَذِهِ الكَلِمَاتِ: «لَمْ»، «لَمَّا»، «لَامُ الْأَمْرِ»، «لَا النَّاهِيَةُ»، «إِنْ»، «إِذْ مَا»، «مَنْ»، «مَا»، «مَهْمَا»، «مَتَى»، «أَيَّانَ»، «أَيْنَ»، «أَنَّى»، «حَيْثُمَا»، «كَيْفَمَا»، «أَيٌّ».",
+        "uz": "Fe'lning oldida quyidagi so'zlardan biri kelsa, u jazm bo'ladi: «لَمْ», «لَمَّا», buyruq lomi, qaytariq «لَا» si, «إِنْ», «إِذْ مَا», «مَنْ», «مَا», «مَهْمَا», «مَتَى», «أَيَّانَ», «أَيْنَ», «أَنَّى», «حَيْثُمَا», «كَيْفَمَا», «أَيٌّ»."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "عَرَفْنَا الْمَوَاضِعَ الْأَرْبَعَةَ الَّتِي يُنْصَبُ فِيهَا الْفِعْلُ. بَقِيَ عَلَيْنَا أَنْ نَعْرِفَ الْمَوَاضِعَ السِّتَّةَ عَشَرَ الَّتِي يُجْزَمُ فِيهَا.",
+          "uz": "Fe'l nasb bo'ladigan to'rt o'rinni bildik. Endi u jazm bo'ladigan o'n olti o'rinni bilishimiz qoldi."
+        },
+        {
+          "type": "para",
+          "ar": "ب - فَيُجْزَمُ فِي كُلِّ جُمْلَةٍ وَقَعَ فِيهَا بَعْدَ كَلِمَةٍ مِنَ الكَلِمَاتِ الْمَذْكُورَةِ، وَهِيَ تَنْقَسِمُ إِلَى قِسْمَيْنِ:",
+          "uz": "b — Fe'l yuqorida sanalgan so'zlardan biridan keyin kelgan har bir jumlada jazm bo'ladi. Bu so'zlar ikki bo'limga bo'linadi:"
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "١ - قِسْمٌ يُجْزَمُ بَعْدَهُ فِعْلٌ وَاحِدٌ؛ وَهُوَ:",
+            "uz": "1 — Undan keyin bitta fe'l jazm bo'ladigan bo'lim:"
+          },
+          "items": [
+            {
+              "ar": "لَمْ؛ نَحْوُ: لَمْ أَخُنْ عَهْدًا، وَلَمْ أُخْلِفْ وُعُودًا.",
+              "uz": "«لَمْ»; masalan: «Ahdga xiyonat qilmadim va va'dalarni buzmadim»."
+            },
+            {
+              "ar": "لَمَّا؛ نَحْوُ: لَمَّا يُثْمِرْ بُسْتَانُنَا، وَقَدْ أَثْمَرَتِ الْبَسَاتِينُ.",
+              "uz": "«لَمَّا»; masalan: «Bog'imiz hali hosil bermadi, holbuki boshqa bog'lar hosil berdi». (Ya'ni: hozirgacha hosil bermadi. «لَمَّا» ning yana bir ishlatilishi bor — «حِين» (paytda) ma'nosida keladi; masalan: لَمَّا قَدِمَ أَبِي قَبَّلْتُ يَدَهُ — «Otam kelganda qo'lini o'pdim». Bu esa mozi fe'liga kiradi va hech narsani jazm qilmaydi.)"
+            },
+            {
+              "ar": "لَامُ الْأَمْرِ؛ نَحْوُ: لِيَلْزَمْ كُلُّ إِنْسَانٍ حَدَّهُ.",
+              "uz": "Buyruq lomi; masalan: «Har bir inson o'z chegarasini saqlasin»."
+            },
+            {
+              "ar": "لَا النَّاهِيَةُ؛ نَحْوُ: لَا تَيْأَسْ مِنْ رَحْمَةِ اللَّهِ.",
+              "uz": "Qaytariq «لَا» si; masalan: «Allohning rahmatidan umid uzma»."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "٢ - وَقِسْمٌ يُجْزَمُ بَعْدَهُ فِعْلَانِ: الْأَوَّلُ يُسَمَّى «فِعْلَ الشَّرْطِ»، وَالثَّانِي «جَوَابَهُ»؛ وَهُوَ:",
+            "uz": "2 — Undan keyin ikkita fe'l jazm bo'ladigan bo'lim: birinchisi «shart fe'li», ikkinchisi «uning javobi» deyiladi:"
+          },
+          "items": [
+            {
+              "ar": "إِنْ؛ نَحْوُ: إِنْ تَصْبِرْ تَنَلْ.",
+              "uz": "«إِنْ»; masalan: «Sabr qilsang, erishasan»."
+            },
+            {
+              "ar": "إِذْ مَا؛ نَحْوُ: إِذْ مَا تَتَعَلَّمْ تَتَقَدَّمْ.",
+              "uz": "«إِذْ مَا»; masalan: «O'rgansang, oldinga borasan»."
+            },
+            {
+              "ar": "مَنْ؛ نَحْوُ: مَنْ يَبْحَثْ يَجِدْ.",
+              "uz": "«مَنْ»; masalan: «Kim izlasa, topadi»."
+            },
+            {
+              "ar": "مَا؛ نَحْوُ: مَا تُحَصِّلْ فِي الصِّغَرِ يَنْفَعْكَ فِي الكِبَرِ.",
+              "uz": "«مَا»; masalan: «Yoshligingda nimani o'rgansang, ulg'ayganingda foyda beradi»."
+            },
+            {
+              "ar": "مَهْمَا؛ نَحْوُ: مَهْمَا تُبْطِنْ تُظْهِرْهُ الْأَيَّامُ.",
+              "uz": "«مَهْمَا»; masalan: «Nimani yashirsang, kunlar uni oshkor qiladi»."
+            },
+            {
+              "ar": "مَتَى؛ نَحْوُ: مَتَى يَصْلُحْ قَلْبُكَ تَصْلُحْ جَوَارِحُكَ.",
+              "uz": "«مَتَى»; masalan: «Qachon qalbing tuzalsa, a'zolaring ham tuzaladi»."
+            },
+            {
+              "ar": "أَيَّانَ؛ نَحْوُ: أَيَّانَ تُحْسِنْ سَرِيرَتَكَ تُحْمَدْ سِيرَتُكَ.",
+              "uz": "«أَيَّانَ»; masalan: «Qachon ichki holatingni yaxshilasang, yurish-turishing maqtaladi»."
+            },
+            {
+              "ar": "أَيْنَ؛ نَحْوُ: أَيْنَ تَتَوَجَّهْ تُصَادِفْ رِزْقَكَ.",
+              "uz": "«أَيْنَ»; masalan: «Qayerga yuzlansang, rizqingni uchratasan»."
+            },
+            {
+              "ar": "أَنَّى؛ نَحْوُ: أَنَّى يَذْهَبْ ذُو الْمَالِ يَجِدْ رَفِيقًا.",
+              "uz": "«أَنَّى»; masalan: «Boy kishi qayerga borsa, hamroh topadi»."
+            },
+            {
+              "ar": "حَيْثُمَا؛ نَحْوُ: حَيْثُمَا تَسْتَقِمْ يُقَدِّرْ لَكَ اللَّهُ نَجَاحًا.",
+              "uz": "«حَيْثُمَا»; masalan: «Qayerda to'g'ri bo'lsang, Alloh senga muvaffaqiyat taqdir qiladi»."
+            },
+            {
+              "ar": "كَيْفَمَا؛ نَحْوُ: كَيْفَمَا تَكُنْ يَكُنْ قَرِينُكَ.",
+              "uz": "«كَيْفَمَا»; masalan: «Qanday bo'lsang, hamrohing ham shunday bo'ladi»."
+            },
+            {
+              "ar": "أَيٌّ؛ نَحْوُ: أَيُّ إِنْسَانٍ يَحْتَرِمْهُ الرَّئِيسُ يَحْتَرِمْهُ الْمَرْءُوسُ.",
+              "uz": "«أَيٌّ»; masalan: «Rahbar qaysi insonni hurmat qilsa, qo'l ostidagilar ham uni hurmat qiladi»."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "وَعَلَى هَذَا الْقِيَاسُ، وَتُسَمَّى كَلِمَةُ «إِنْ» وَمَا بَعْدَهَا: أَدَوَاتِ شَرْطٍ.",
+          "uz": "Qolganlari ham shu qiyosda. «إِنْ» so'zi va undan keyingilari «shart vositalari» deb ataladi."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 1,
+      "num": 18,
+      "page": 37,
+      "titleAr": "رَفْعُ الْفِعْلِ الْمُضَارِعِ",
+      "title": "Muzori' fe'lning raf'i",
+      "rule": {
+        "ar": "وَيُرْفَعُ إِذَا تَجَرَّدَ مِنْ جَمِيعِ ذَلِكَ.",
+        "uz": "Muzori' bularning barchasidan xoli bo'lsa, raf' bo'ladi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "لَا صُعُوبَةَ عَلَيْنَا فِي مَعْرِفَةِ مَوَاضِعِ رَفْعِ الْفِعْلِ، بَعْدَمَا عَرَفْنَا مَوَاضِعَ نَصْبِهِ وَجَزْمِهِ.",
+          "uz": "Fe'lning nasb va jazm o'rinlarini bilganimizdan keyin, uning raf' o'rinlarini bilish biz uchun qiyin emas."
+        },
+        {
+          "type": "para",
+          "ar": "فَكُلُّ فِعْلٍ مُضَارِعٍ لَمْ يَقَعْ بَعْدَ كَلِمَةٍ مِنَ الكَلِمَاتِ الْأَرْبَعِ السَّابِقَةِ، أَوْ بَعْدَ كَلِمَةٍ مِنَ الكَلِمَاتِ السِّتَّ عَشْرَةَ الْمَذْكُورَةِ بَعْدَهَا، فَهُوَ مَرْفُوعٌ حَتْمًا؛ نَحْوُ: يُخَفِّفُ اللَّهُ عَنْكُمْ، وَيُثْمِرُ بُسْتَانُنَا، وَيَلْزَمُ الْإِنْسَانُ حَدَّهُ، وَهَكَذَا.",
+          "uz": "Oldingi to'rt so'zdan biridan keyin ham, ulardan keyin sanalgan o'n olti so'zdan biridan keyin ham kelmagan har bir muzori' fe'l albatta marfu'dir; masalan: «Alloh sizdan yengillashtiradi», «Bog'imiz hosil beradi», «Inson o'z chegarasini saqlaydi» va hokazo."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِلَى هُنَا تَمَّ لَنَا مَعْرِفَةُ مَوَاضِعِ نَصْبِ الْفِعْلِ، وَمَوَاضِعِ جَزْمِهِ، وَمَوَاضِعِ رَفْعِهِ، فَلَا نَخْشَى حِينَئِذٍ أَنْ يَدْخُلَ عَلَيْنَا الْخَطَأُ مِنْ جِهَتِهِ، وَعَلَيْنَا أَنْ نَجْتَهِدَ فِي مَعْرِفَةِ مَوَاضِعِ رَفْعِ الاِسْمِ، وَمَوَاضِعِ نَصْبِهِ، وَمَوَاضِعِ جَرِّهِ؛ لِنَأْمَنَ الْخَطَأَ فِي جَمِيعِ الكَلِمَاتِ الْمُعْرَبَةِ.",
+          "uz": "Shu bilan fe'lning nasb, jazm va raf' o'rinlarini bilib oldik; endi bu tomondan xatoga tushishdan qo'rqmaymiz. Endi barcha mu'rab so'zlarda xatodan omon bo'lish uchun ismning raf', nasb va jarr o'rinlarini bilishga harakat qilishimiz kerak."
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "مَيِّزْ أَنْوَاعَ الْفِعْلِ فِي الْعِبَارَاتِ الْآتِيَةِ، مَعَ تَبْيِينِ الْمَبْنِيِّ مِنْهَا، وَالْمُعْرَبِ وَالْمَرْفُوعِ وَالْمَنْصُوبِ وَالْمَجْزُومِ:",
+          "uz": "Quyidagi iboralarda fe'l turlarini ajrating; ularning mabniysini, mu'rabini, marfu', mansub va majzumini ko'rsating:"
+        },
+        {
+          "ar": "اكْتُبْ خَيْرَ الَّذِي تَسْمَعُ، وَاحْفَظْ خَيْرَ الَّذِي تَكْتُبُ.",
+          "uz": "Eshitganingning eng yaxshisini yoz, yozganingning eng yaxshisini yodla."
+        },
+        {
+          "ar": "يَفْعَلُ اللَّهُ مَا يَشَاءُ، وَيَحْكُمُ مَا يُرِيدُ.",
+          "uz": "Alloh xohlaganini qiladi va istaganicha hukm qiladi."
+        },
+        {
+          "ar": "قَلِيلٌ تَدُومُ عَلَيْهِ خَيْرٌ مِنْ كَثِيرٍ تَنْقَطِعُ عَنْهُ.",
+          "uz": "Doimiy qiladigan ozing — uzilib qoladigan ko'pdan yaxshiroq."
+        },
+        {
+          "ar": "مَا تَفْعَلْ مِنْ حَسَنٍ، أَوْ قَبِيحٍ يَحْفَظْهُ لَكَ التَّارِيخُ.",
+          "uz": "Yaxshi yoki yomon nima qilsang, tarix uni sen uchun saqlab qoladi."
+        },
+        {
+          "ar": "سَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ.",
+          "uz": "Robbingga hamd bilan tasbeh ayt va Undan mag'firat so'ra."
+        }
+      ]
+    },
+    {
+      "book": 1,
+      "num": 19,
+      "page": 38,
+      "titleAr": "رَفْعُ الاِسْمِ",
+      "title": "Ismning raf'i",
+      "rule": {
+        "ar": "وَأَمَّا الاِسْمُ، فَيُرْفَعُ فِي سِتَّةِ مَوَاضِعَ.",
+        "uz": "Ismga kelsak, u olti o'rinda raf' bo'ladi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "لَمْ يَبْقَ عَلَيْنَا إِلَّا أَنْ نَعْرِفَ فِي أَيِّ تَرْكِيبٍ يَكُونُ الاِسْمُ مَرْفُوعًا، أَوْ مَنْصُوبًا، أَوْ مَجْرُورًا، وَذَلِكَ أَمْرٌ سَهْلُ الْمَرَامِ، يَسِيرٌ عَلَى الْأَفْهَامِ.",
+          "uz": "Endi bizga faqat ism qaysi tuzilishda marfu', mansub yoki majrur bo'lishini bilish qoldi; bu esa maqsadi oson, tushunishga yengil ishdir."
+        },
+        {
+          "type": "para",
+          "ar": "فَيُرْفَعُ فِي سِتَّةِ مَوَاضِعَ، وَيُنْصَبُ فِي أَحَدَ عَشَرَ مَوْضِعًا، وَيُجَرُّ فِي مَوْضِعَيْنِ، وَهَذَا بَيَانُ مَوَاضِعِ الرَّفْعِ السِّتَّةِ:",
+          "uz": "U olti o'rinda raf', o'n bir o'rinda nasb, ikki o'rinda jarr bo'ladi. Quyida raf'ning oltita o'rni bayon qilinadi:"
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 1,
+      "num": 20,
+      "page": 38,
+      "titleAr": "١ - الْفَاعِلُ",
+      "title": "1. Foil (ish bajaruvchi)",
+      "rule": {
+        "ar": "الْأَوَّلُ: كُلُّ تَرْكِيبٍ؛ مِثْلِ: حَفِظَ مُحَمَّدٌ الكِتَابَ، وَيَطْلُبُ الْعَاقِلُ الْعِلْمَ. وَيُسَمَّى الاِسْمُ حِينَئِذٍ «فَاعِلًا».",
+        "uz": "Birinchi o'rin: har bir shunday tuzilish; masalan: «Muhammad kitobni yodladi», «Aqlli kishi ilm talab qiladi». Bunday holda ism «foil» deb ataladi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "إِذَا شَاهَدْتَ إِنْسَانًا اسْمُهُ «مَحْمُودٌ» مَثَلًا، يَقْطَعُ غُصْنًا مِنْ شَجَرَةٍ، وَأَرَدْتَ أَنْ تُخْبِرَ عَنْ ذَلِكَ تَقُولُ: قَطَعَ مَحْمُودٌ الْغُصْنَ.",
+          "uz": "Ismi «Mahmud» bo'lgan bir kishini daraxtdan shox kesayotgan holda ko'rsang va bu haqda xabar bermoqchi bo'lsang: «Mahmud shoxni kesdi» deysan."
+        },
+        {
+          "type": "para",
+          "ar": "فَلَفْظُ «قَطَعَ» الدَّالُّ عَلَى حُصُولِ الْقَطْعِ يُسَمَّى «فِعْلًا» كَمَا سَبَقَ شَرْحُهُ، وَلَفْظُ «مَحْمُودٌ» الدَّالُّ عَلَى مَنْ فَعَلَ الْقَطْعَ يُسَمَّى «فَاعِلًا»، وَيَجِبُ فِيهِ الرَّفْعُ، وَلَفْظُ «الْغُصْنَ» الدَّالُّ عَلَى مَا وَقَعَ عَلَيْهِ الْفِعْلُ يُسَمَّى «مَفْعُولًا بِهِ» وَسَيَأْتِي.",
+          "uz": "Kesish sodir bo'lganiga dalolat qiladigan «قَطَعَ» so'zi — oldin tushuntirilganidek — «fe'l» deb ataladi. Kesishni bajargan kishiga dalolat qiladigan «مَحْمُودٌ» so'zi «foil» deb ataladi va unda raf' vojib bo'ladi. Fe'l tushgan narsaga dalolat qiladigan «الْغُصْنَ» so'zi esa «maf'ulun bihi» deb ataladi; u keyinroq keladi."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَمِثْلُ كَلِمَةِ «مَحْمُودٌ» فِي هَذَا الْمِثَالِ كَلِمَةُ:",
+            "uz": "Bu misoldagi «مَحْمُودٌ» so'ziga o'xshash so'zlar:"
+          },
+          "items": [
+            {
+              "ar": "«مُحَمَّدٌ» فِي: حَفِظَ مُحَمَّدٌ الكِتَابَ.",
+              "uz": "«Muhammad kitobni yodladi» dagi «مُحَمَّدٌ»."
+            },
+            {
+              "ar": "وَ«الْعَاقِلُ» فِي: يَطْلُبُ الْعَاقِلُ الْعِلْمَ.",
+              "uz": "«Aqlli kishi ilm talab qiladi» dagi «الْعَاقِلُ»."
+            },
+            {
+              "ar": "وَ«اللَّهُ» فِي: خَلَقَ اللَّهُ الْإِنْسَانَ.",
+              "uz": "«Alloh insonni yaratdi» dagi «اللَّهُ»."
+            },
+            {
+              "ar": "وَ«الذِّئْبُ» فِي: يَأْكُلُ الذِّئْبُ الْغَنَمَ.",
+              "uz": "«Bo'ri qo'yni yeydi» dagi «الذِّئْبُ»."
+            },
+            {
+              "ar": "وَ«الْأَنْبِيَاءُ» فِي: أَرْشَدَ الْأَنْبِيَاءُ النَّاسَ.",
+              "uz": "«Payg'ambarlar odamlarni to'g'ri yo'lga boshladi» dagi «الْأَنْبِيَاءُ»."
+            },
+            {
+              "ar": "وَ«النَّاسُ» فِي: يُبْغِضُ النَّاسُ الْخَائِنَ.",
+              "uz": "«Odamlar xoinni yomon ko'radi» dagi «النَّاسُ»."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "وَهَكَذَا كُلُّ كَلِمَةٍ وَقَعَتْ بَعْدَ الْفِعْلِ، وَدَلَّتْ عَلَى مَنْ فَعَلَ.",
+          "uz": "Fe'ldan keyin kelgan va ishni bajargan zotga dalolat qilgan har bir so'z shunday bo'ladi."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 1,
+      "num": 21,
+      "page": 39,
+      "titleAr": "٢ - نَائِبُ الْفَاعِلِ",
+      "title": "2. Noibi foil (foil o'rnini bosuvchi)",
+      "rule": {
+        "ar": "وَالثَّانِي: كُلُّ تَرْكِيبٍ، مِثْلُ: حُفِظَ الكِتَابُ، وَيُطْلَبُ الْعِلْمُ. وَيُسَمَّى الاِسْمُ حِينَئِذٍ «نَائِبَ فَاعِلٍ».",
+        "uz": "Ikkinchi o'rin: har bir shunday tuzilish; masalan: «Kitob yodlandi», «Ilm talab qilinadi». Bunday holda ism «noibi foil» deb ataladi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "إِذَا سَرَقَ إِنْسَانٌ سَاعَتَكَ، وَأَنْتَ تَعْرِفُهُ، وَأَرَدْتَ أَنْ تُخْبِرَ عَنْ ذَلِكَ تَقُولُ: سَرَقَ فُلَانٌ السَّاعَةَ.",
+          "uz": "Bir kishi soatingni o'g'irlasa va sen uni tanisang, bu haqda xabar bermoqchi bo'lsang: «Falonchi soatni o'g'irladi» deysan."
+        },
+        {
+          "type": "para",
+          "ar": "وَلَكِنْ إِذَا كُنْتَ غَيْرَ عَارِفٍ لَهُ، أَوْ عَارِفًا لَهُ، وَلَا تُرِيدُ ذِكْرَ اسْمِهِ، تَقُولُ: سُرِقَتِ السَّاعَةُ.",
+          "uz": "Ammo uni tanimasang, yoki tanisang ham ismini aytishni istamasang: «Soat o'g'irlandi» deysan."
+        },
+        {
+          "type": "para",
+          "ar": "فَتَحْذِفُ الْفَاعِلَ، وَتَجْعَلُ مَكَانَهُ اللَّفْظَ الدَّالَّ عَلَى مَا وَقَعَ عَلَيْهِ الْفِعْلُ، وَهُوَ لَفْظُ «السَّاعَةُ»، وَلِذَلِكَ يُرْفَعُ، وَيُسَمَّى «نَائِبَ فَاعِلٍ».",
+          "uz": "Ya'ni foilni tushirasan va uning o'rniga fe'l tushgan narsaga dalolat qiladigan so'zni — «السَّاعَةُ» so'zini — qo'yasan. Shuning uchun u raf' bo'ladi va «noibi foil» deb ataladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَتَتَغَيَّرُ مَعَهُ صُورَةُ الْفِعْلِ: فَإِنْ كَانَ مَاضِيًا: ضُمَّ أَوَّلُهُ، وَكُسِرَ مَا قَبْلَ آخِرِهِ، وَإِنْ كَانَ مُضَارِعًا: ضُمَّ أَوَّلُهُ أَيْضًا، وَفُتِحَ مَا قَبْلَ آخِرِهِ.",
+          "uz": "Shu bilan birga fe'lning shakli ham o'zgaradi: mozi bo'lsa, boshi damma qilinadi va oxiridan oldingi harfi kasra qilinadi; muzori' bo'lsa, boshi yana damma qilinadi va oxiridan oldingi harfi fatha qilinadi."
+        }
+      ],
+      "exercise": []
     }
   ]
 }

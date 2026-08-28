@@ -2291,6 +2291,202 @@
           "uz": "So'z ism, fe'l va harfga bo'linadi."
         }
       ]
+    },
+    {
+      "book": 1,
+      "num": 42,
+      "page": 64,
+      "titleAr": "٣ - التَّوْكِيدُ",
+      "title": "3. Ta'kid",
+      "rule": {
+        "ar": "وَنَوْعٌ يُسَمَّى: «تَوْكِيدًا»؛ مِثْلُ: «نَفْسُهُ»، أَوْ «عَيْنُهُ»؛ مِنْ: جَاءَ الْأَمِيرُ نَفْسُهُ، أَوْ عَيْنُهُ. وَ«كُلٌّ» أَوْ «جَمِيعٌ» مِنْ: سَارَ الْجَيْشُ كُلُّهُ، أَوْ جَمِيعُهُ.",
+        "uz": "«Ta'kid» deb ataladigan tur; masalan: «Amirning o'zi keldi» dagi «نَفْسُهُ» yoki «عَيْنُهُ»; hamda «Butun qo'shin yurdi» dagi «كُلُّهُ» yoki «جَمِيعُهُ»."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "إِذَا أَخْبَرَكَ إِنْسَانٌ بِأَنَّهُ خَاطَبَ السُّلْطَانَ، فَالْعَادَةُ أَنَّهُ يَقُولُ: خَاطَبْتُ السُّلْطَانَ نَفْسَهُ. وَإِذَا أَخْبَرَكَ بِأَنَّهُ خَاطَبَ وَاحِدًا مِنْ آحَادِ النَّاسِ، فَإِنَّهُ يَقُولُ: خَاطَبْتُ فُلَانًا، وَلَا يَذْكُرُ بَعْدَ اسْمِهِ لَفْظَ: «نَفْسَهُ».",
+          "uz": "Bir kishi senga sulton bilan gaplashganini xabar bersa, odatda: «Sultonning o'zi bilan gaplashdim» deydi. Oddiy odamlardan biri bilan gaplashganini aytsa esa: «Falonchi bilan gaplashdim» deydi va ismidan keyin «نَفْسَهُ» so'zini keltirmaydi."
+        },
+        {
+          "type": "para",
+          "ar": "وَذَلِكَ لِأَنَّ مُخَاطَبَةَ السُّلْطَانِ عَظِيمَةٌ بِالنِّسْبَةِ لَهُ، فَرُبَّمَا تَتَوَهَّمُ أَنَّهُ خَاطَبَ خَادِمَ السُّلْطَانِ، أَوْ كَاتِبَهُ مَثَلًا، وَذَكَرَ لَفْظَ: «السُّلْطَانَ» مُرِيدًا بِهِ ذَلِكَ، فَلِدَفْعِ هَذَا التَّوَهُّمِ يَزِيدُ كَلِمَةَ «نَفْسَهُ»؛ لِيُفِيدَ أَنَّهُ خَاطَبَ السُّلْطَانَ نَفْسَهُ، لَا أَحَدَ أَتْبَاعِهِ، وَلِذَلِكَ يُسَمَّى هَذَا اللَّفْظُ «تَوْكِيدًا».",
+          "uz": "Chunki sulton bilan suhbatlashish uning uchun ulkan ish; sen esa u, masalan, sultonning xizmatkori yoki kotibi bilan gaplashib, «sulton» so'zini shu ma'noda aytdi deb gumon qilishing mumkin. Shu gumonni ketkazish uchun u «نَفْسَهُ» so'zini qo'shadi — sultonning o'zi bilan gaplashganini, izdoshlaridan biri bilan emasligini bildirish uchun. Shuning uchun bu so'z «ta'kid» deb ataladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَالتَّوْكِيدُ يَتْبَعُ مَا قَبْلَهُ فِي نَوْعِ إِعْرَابِهِ، فَكَلِمَةُ «نَفْسَ» فِي الْمِثَالِ السَّابِقِ مَنْصُوبَةٌ؛ لِكَوْنِهَا تَابِعَةً لِلَفْظِ: «السُّلْطَانَ» الْمَنْصُوبِ عَلَى أَنَّهُ مَفْعُولٌ بِهِ.",
+          "uz": "Ta'kid o'zidan oldingisiga i'rob turida ergashadi. Oldingi misolda «نَفْسَ» so'zi mansub, chunki u maf'ulun bihi bo'lgani uchun mansub bo'lgan «السُّلْطَانَ» ga tobedir."
+        },
+        {
+          "type": "para",
+          "ar": "وَفِي: حَضَرَ السُّلْطَانُ نَفْسُهُ. مَرْفُوعَةٌ؛ لِأَنَّ مَا قَبْلَهَا مَرْفُوعٌ عَلَى أَنَّهُ فَاعِلٌ.",
+          "uz": "«Sultonning o'zi keldi» da esa u marfu', chunki undan oldingisi foil bo'lgani uchun marfu'dir."
+        },
+        {
+          "type": "para",
+          "ar": "وَفِي: دَخَلْتُ مَنْزِلَ السُّلْطَانِ نَفْسِهِ. مَجْرُورَةٌ؛ لِأَنَّ مَا قَبْلَهَا مَجْرُورٌ عَلَى أَنَّهُ مُضَافٌ إِلَيْهِ.",
+          "uz": "«Sultonning o'z uyiga kirdim» da esa u majrur, chunki undan oldingisi muzofun ilayh bo'lgani uchun majrurdir."
+        },
+        {
+          "type": "para",
+          "ar": "وَمِثْلُ كَلِمَةِ «النَّفْسِ» فِيمَا ذُكِرَ: كَلِمَةُ «الْعَيْنِ»؛ نَحْوُ: خَاطَبْتُ السُّلْطَانَ عَيْنَهُ. وَهَكَذَا.",
+          "uz": "Aytilganlarda «نَفْس» so'ziga o'xshash: «عَيْن» so'zi; masalan: «Sultonning aynan o'zi bilan gaplashdim» va hokazo."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَكُونُ التَّوْكِيدُ بِلَفْظِ: «كُلٌّ» وَ«جَمِيعٌ» بَعْدَ اسْمٍ عَامٍّ؛ نَحْوُ: سَارَ الْجَيْشُ كُلُّهُ، أَوْ جَمِيعُهُ، وَرَأَيْتُ الْجَيْشَ كُلَّهُ، أَوْ جَمِيعَهُ، وَسَلَّمْتُ عَلَى الْجَيْشِ كُلِّهِ، أَوْ جَمِيعِهِ. فَكَلِمَةُ «كُلٌّ» أَوْ «جَمِيعٌ» تَتْبَعُ مَا قَبْلَهَا فِي الْإِعْرَابِ.",
+          "uz": "Ta'kid umumiy ismdan keyin «كُلّ» va «جَمِيع» so'zlari bilan ham bo'ladi; masalan: «Butun qo'shin yurdi», «Butun qo'shinni ko'rdim», «Butun qo'shinga salom berdim». «كُلّ» yoki «جَمِيع» so'zi o'zidan oldingisiga i'robda ergashadi."
+        },
+        {
+          "type": "para",
+          "ar": "وَتُسَمَّى: «تَوْكِيدًا»؛ إِذْ رُبَّمَا تَتَوَهَّمُ أَنَّ الْمُرَادَ بِالْجَيْشِ أَكْثَرُهُ إِذَا لَمْ يُتْبَعْ بِكَلِمَةِ «كُلٍّ»، أَوْ «جَمِيعٍ».",
+          "uz": "U «ta'kid» deb ataladi; chunki «كُلّ» yoki «جَمِيع» so'zi ergashtirilmasa, qo'shindan uning ko'p qismi ko'zda tutilgan deb gumon qilishing mumkin."
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "انْطِقْ بِكَلِمَةِ «كُلٍّ» صَحِيحَةً فِي هَذِهِ الْأَمْثِلَةِ:",
+          "uz": "Quyidagi misollarda «كُلّ» so'zini to'g'ri talaffuz qiling:"
+        },
+        {
+          "ar": "الْحُرُوفُ كُلُّهَا مَبْنِيَّةٌ.",
+          "uz": "Harflarning hammasi mabniydir."
+        },
+        {
+          "ar": "انْصِبِ الظُّرُوفَ كُلَّهَا.",
+          "uz": "Zarflarning hammasini nasb qiling."
+        },
+        {
+          "ar": "الْبِنَاءُ مُلَازِمٌ لِلضَّمَائِرِ كُلِّهَا.",
+          "uz": "Bino zamirlarning hammasiga lozimdir."
+        }
+      ]
+    },
+    {
+      "book": 1,
+      "num": 43,
+      "page": 65,
+      "titleAr": "٤ - الْبَدَلُ",
+      "title": "4. Badal (o'rin bosar)",
+      "rule": {
+        "ar": "وَنَوْعٌ يُسَمَّى: «بَدَلًا»؛ مِثْلُ: «عَلِيٍّ» مِنْ: وَاضِعُ النَّحْوِ الْإِمَامُ عَلِيٌّ. وَ«أَكْثَرُ» مِنْ: جَدَّدَ الْأَمِيرُ الْقَصْرَ أَكْثَرَهُ. وَ«عُمَّالُ» مِنْ: انْصَرَفَ الدِّيوَانُ عُمَّالُهُ.",
+        "uz": "«Badal» deb ataladigan tur; masalan: «Nahvni asos solgan zot — imom Ali» dagi «عَلِيٌّ»; «Amir qasrni, uning ko'p qismini yangiladi» dagi «أَكْثَرَ»; «Devon — uning xodimlari tarqaldi» dagi «عُمَّالُ»."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "إِذَا قُلْتَ: وَاضِعُ النَّحْوِ عَلِيٌّ. فَكَلَامُكَ تَامُّ الْفَائِدَةِ، وَلَكِنْ إِذَا قُلْتَ: وَاضِعُ النَّحْوِ الْإِمَامُ عَلِيٌّ. يَكُونُ الكَلَامُ أَقْوَى تَأْثِيرًا فِي نَفْسِ السَّامِعِ وَأَمْكَنَ، فَكَأَنَّكَ نَسَبْتَ وَضْعَ النَّحْوِ لِعَلِيٍّ مَرَّتَيْنِ؛ مَرَّةً بِعُنْوَانِ «الْإِمَامِ»، وَمَرَّةً بِاسْمِ «عَلِيٍّ».",
+          "uz": "«Nahvni asos solgan zot — Ali» desang, kalom to'liq foydali bo'ladi. Ammo «Nahvni asos solgan zot — imom Ali» desang, kalom tinglovchi qalbida kuchliroq va mustahkamroq ta'sir qoldiradi: go'yo nahvning asoslanishini Aliga ikki marta — bir marta «imom» unvoni bilan, bir marta «Ali» ismi bilan — nisbat bergandaysan."
+        },
+        {
+          "type": "para",
+          "ar": "فَلَفْظُ «عَلِيٌّ» فِي هَذَا التَّرْكِيبِ يُسَمَّى: «بَدَلًا»، وَيَتْبَعُ مَا قَبْلَهُ فِي نَوْعِ إِعْرَابِهِ، فَهُوَ فِي هَذَا الْمِثَالِ مَرْفُوعٌ تَبَعًا لِلَفْظِ «الْإِمَامُ» الْمَرْفُوعِ عَلَى أَنَّهُ خَبَرٌ.",
+          "uz": "Bu tuzilishdagi «عَلِيٌّ» so'zi «badal» deb ataladi va o'zidan oldingisiga i'rob turida ergashadi. Bu misolda u xabar bo'lgani uchun marfu' bo'lgan «الْإِمَامُ» so'ziga ergashib marfu'dir."
+        },
+        {
+          "type": "para",
+          "ar": "وَفِي: إِنَّ الْإِمَامَ عَلِيًّا وَاضِعُ النَّحْوِ. مَنْصُوبٌ تَبَعًا لِـ«الْإِمَامَ» الْمَنْصُوبِ عَلَى أَنَّهُ اسْمُ «إِنَّ».",
+          "uz": "«Albatta imom Ali nahvni asos solgan zotdir» da esa u «إِنَّ» ning ismi bo'lgani uchun mansub bo'lgan «الْإِمَامَ» ga ergashib mansubdir."
+        },
+        {
+          "type": "para",
+          "ar": "وَفِي: النَّحْوُ مِنْ وَضْعِ الْإِمَامِ عَلِيٍّ. مَجْرُورٌ تَبَعًا لِـ«الْإِمَامِ» الْمَجْرُورِ عَلَى أَنَّهُ مُضَافٌ إِلَيْهِ.",
+          "uz": "«Nahv imom Alining asos solishidandir» da esa u muzofun ilayh bo'lgani uchun majrur bo'lgan «الْإِمَامِ» ga ergashib majrurdir."
+        },
+        {
+          "type": "para",
+          "ar": "وَمِثْلُ ذَلِكَ يُقَالُ فِي: جَدَّدَ الْأَمِيرُ الْقَصْرَ أَكْثَرَهُ، وَانْصَرَفَ الدِّيوَانُ عُمَّالُهُ.",
+          "uz": "Shu kabi gap «Amir qasrni, uning ko'p qismini yangiladi» va «Devon — uning xodimlari tarqaldi» haqida ham aytiladi."
+        },
+        {
+          "type": "para",
+          "ar": "إِلَّا أَنَّ الْبَدَلَ يُسَمَّى فِي نَحْوِ الْمِثَالِ الْأَوَّلِ: «مُطَابِقًا»؛ لِأَنَّ «عَلِيًّا» مُطَابِقٌ لِلْإِمَامِ فِي الْمَعْنَى.",
+          "uz": "Faqat birinchi misolga o'xshash o'rinlarda badal «mutobiq» deb ataladi, chunki «Ali» ma'noda «imom» ga mos keladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَفِي نَحْوِ الْمِثَالِ الثَّانِي: بَدَلُ بَعْضٍ مِنْ كُلٍّ؛ لِأَنَّ أَكْثَرَ الْقَصْرِ بَعْضٌ مِنْ كُلِّهِ.",
+          "uz": "Ikkinchi misolga o'xshash o'rinlarda esa u «badalu ba'zin min kull» (butunning bir qismi) deyiladi, chunki qasrning ko'p qismi uning butunidan bir bo'lakdir."
+        },
+        {
+          "type": "para",
+          "ar": "وَفِي نَحْوِ الْمِثَالِ الثَّالِثِ: بَدَلُ اشْتِمَالٍ؛ لِمَا بَيْنَ الدِّيوَانِ وَعُمَّالِهِ مِنَ الاِشْتِمَالِ؛ أَيِ: الْمُنَاسَبَةِ.",
+          "uz": "Uchinchi misolga o'xshash o'rinlarda esa «badalu ishtimol» deyiladi, chunki devon bilan uning xodimlari orasida qamrab olish, ya'ni bog'liqlik bor."
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "انْطِقْ بِلَفْظِ «الْمُعِزِّ» صَحِيحًا فِي هَذِهِ الْأَمْثِلَةِ:",
+          "uz": "Quyidagi misollarda «الْمُعِزّ» so'zini to'g'ri talaffuz qiling:"
+        },
+        {
+          "ar": "أَنْشَأَ الْخَلِيفَةُ الْمُعِزُّ مَدِينَةَ الْقَاهِرَةِ.",
+          "uz": "Xalifa Muizz Qohira shahriga asos soldi."
+        },
+        {
+          "ar": "إِنَّ الْخَلِيفَةَ الْمُعِزَّ أَوَّلُ مُؤَسِّسٍ لِلدَّوْلَةِ الْفَاطِمِيَّةِ فِي مِصْرَ.",
+          "uz": "Albatta xalifa Muizz Misrda Fotimiylar davlatining birinchi asoschisidir."
+        },
+        {
+          "ar": "أَسَّسَ الْأَزْهَرَ قَائِدُ جَيْشِ الْخَلِيفَةِ الْمُعِزِّ.",
+          "uz": "Azharga xalifa Muizz qo'shinining sarkardasi asos solgan."
+        }
+      ]
+    },
+    {
+      "book": 1,
+      "num": 44,
+      "page": 67,
+      "titleAr": "نِهَايَةٌ: الْإِعْرَابُ الْمَحَلِّيُّ",
+      "title": "Xotima: Mahalliy i'rob",
+      "rule": {
+        "ar": "إِذَا وَقَعَتْ كَلِمَةٌ مِنَ الكَلِمَاتِ الْمَبْنِيَّةِ فِي مَوْضِعٍ مِنَ الْمَوَاضِعِ السَّابِقَةِ، يَلْزَمُ أَنْ نَنْطِقَ بِهَا كَمَا سَمِعْنَاهَا، وَلَكِنْ نَعْتَبِرُ أَنَّهَا فِي مَوْضِعِ رَفْعٍ، أَوْ نَصْبٍ، أَوْ جَزْمٍ، أَوْ جَرٍّ، حَسَبَ مَا يَقْتَضِيهِ الْمَوْضِعُ؛ نَحْوُ: هُوَ عَالِمٌ، وَإِنَّهُ فَاضِلٌ، وَمَنْ صَدَقَ قَصْدُهُ حَسُنَ عَمَلُهُ.",
+        "uz": "Mabniy so'zlardan biri yuqoridagi o'rinlardan birida kelsa, uni eshitganimizdek talaffuz qilishimiz lozim; ammo o'rin talabiga ko'ra uni raf', nasb, jazm yoki jarr o'rnida deb hisoblaymiz; masalan: «U olimdir», «Albatta u fozildir», «Kimning niyati rost bo'lsa, amali go'zal bo'ladi»."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "عَرَفْنَا بِالتَّفْصِيلِ الْمَوَاضِعَ الَّتِي يَكُونُ فِيهَا الْفِعْلُ مَرْفُوعًا، وَالَّتِي يَكُونُ فِيهَا مَنْصُوبًا، وَالَّتِي يَكُونُ فِيهَا مَجْزُومًا.",
+          "uz": "Fe'l marfu', mansub va majzum bo'ladigan o'rinlarni batafsil bilib oldik."
+        },
+        {
+          "type": "para",
+          "ar": "وَكَذَلِكَ الْمَوَاضِعُ الَّتِي يَكُونُ فِيهَا الاِسْمُ مَرْفُوعًا، وَالَّتِي يَكُونُ فِيهَا مَنْصُوبًا، وَالَّتِي يَكُونُ فِيهَا مَجْرُورًا.",
+          "uz": "Shuningdek, ism marfu', mansub va majrur bo'ladigan o'rinlarni ham."
+        },
+        {
+          "type": "para",
+          "ar": "وَعَرَفْنَا أَنَّهُ مَتَى حَلَّ فِعْلٌ، أَوِ اسْمٌ فِي مَوْضِعٍ مِنْهَا نَرْفَعُهُ، أَوْ نَنْصِبُهُ، أَوْ نَجُرُّهُ، أَوْ نَجْزِمُهُ.",
+          "uz": "Fe'l yoki ism ana shu o'rinlardan birida kelsa, uni raf', nasb, jarr yoki jazm qilishimizni bildik."
+        },
+        {
+          "type": "para",
+          "ar": "غَيْرَ أَنَّ مِنَ الْأَفْعَالِ وَالْأَسْمَاءِ مَا يَكُونُ مَبْنِيًّا؛ أَيْ: لَا يَتَغَيَّرُ آخِرُهُ أَبَدًا بِتَغَيُّرِ التَّرَاكِيبِ، كَمَا عَلِمْنَا.",
+          "uz": "Faqat, bilganimizdek, fe'l va ismlarning ba'zisi mabniydir; ya'ni tuzilish o'zgarishi bilan uning oxiri hech qachon o'zgarmaydi."
+        },
+        {
+          "type": "para",
+          "ar": "فَهَذَا الْمَبْنِيُّ إِذَا وَقَعَ فِي مَوْضِعٍ مِنْ مَوَاضِعِ الرَّفْعِ، أَوِ النَّصْبِ، أَوِ الْجَزْمِ، أَوِ الْجَرِّ، لَا نُغَيِّرُ آخِرَهُ نَظَرًا لِوُقُوعِهِ فِي ذَلِكَ الْمَوْضِعِ؛ أَيْ: إِنَّهُ لَوْ جُعِلَ مَكَانَهُ اسْمٌ مُعْرَبٌ، لَظَهَرَ عَلَيْهِ الرَّفْعُ أَوِ النَّصْبُ مَثَلًا.",
+          "uz": "Bu mabniy so'z raf', nasb, jazm yoki jarr o'rinlaridan birida kelganda, shu o'rinda kelgani uchun uning oxirini o'zgartirmaymiz; ya'ni uning o'rniga mu'rab ism qo'yilsa, unda, masalan, raf' yoki nasb ko'rinib turardi."
+        },
+        {
+          "type": "para",
+          "ar": "وَبِنَاءً عَلَى ذَلِكَ يُقَالُ فِي مِثْلِ: هُوَ عَالِمٌ: «هُوَ»: مُبْتَدَأٌ مَبْنِيٌّ عَلَى الْفَتْحِ فِي مَحَلِّ رَفْعٍ.",
+          "uz": "Shunga ko'ra, «U olimdir» kabi misolda: «هُوَ» — fatha ustiga mabniy mubtado bo'lib, raf' o'rnida turibdi, deyiladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَفِي: إِنَّهُ فَاضِلٌ. الْهَاءُ: اسْمُ «إِنَّ» مَبْنِيَّةٌ عَلَى الضَّمِّ فِي مَحَلِّ نَصْبٍ.",
+          "uz": "«Albatta u fozildir» da: «ه» — «إِنَّ» ning ismi bo'lib, damma ustiga mabniy va nasb o'rnida turibdi."
+        },
+        {
+          "type": "para",
+          "ar": "وَفِي: مَنْ صَدَقَ قَصْدُهُ حَسُنَ عَمَلُهُ. «صَدَقَ»: فِعْلٌ مَاضٍ، مَبْنِيٌّ عَلَى الْفَتْحِ فِي مَحَلِّ جَزْمٍ، «قَصْدُ»: مُضَافٌ، وَالْهَاءُ: مُضَافٌ إِلَيْهِ مَبْنِيٌّ عَلَى الضَّمِّ فِي مَحَلِّ جَرٍّ، وَعَلَى هَذَا الْقِيَاسُ.",
+          "uz": "«Kimning niyati rost bo'lsa, amali go'zal bo'ladi» da: «صَدَقَ» — mozi fe'l, fatha ustiga mabniy, jazm o'rnida; «قَصْدُ» — muzof; «ه» — damma ustiga mabniy muzofun ilayh bo'lib, jarr o'rnida turibdi. Qolganlari shu qiyosda."
+        }
+      ],
+      "exercise": []
     }
   ]
 }

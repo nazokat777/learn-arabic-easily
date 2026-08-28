@@ -20,6 +20,8 @@ from pathlib import Path
 
 import edge_tts
 
+from synth_word import synth as word_synth
+
 sys.path.insert(0, str(Path(__file__).parent))
 # Diqqat: bu import stdout'ni UTF-8 ga o'raydi. Shu yerda ikkinchi marta
 # o'rasak, birinchisi yopilib «I/O operation on closed file» chiqadi.
@@ -72,22 +74,8 @@ def spoken(text: str) -> str:
 
 
 async def synth(text: str, dest: Path, attempt: int = 0) -> bool:
-    raw = dest.with_suffix(".raw.mp3")
-    try:
-        await edge_tts.Communicate(spoken(text), VOICE, rate=RATE).save(str(raw))
-    except Exception as e:
-        if attempt < RETRIES:
-            await asyncio.sleep(1.5 * (attempt + 1))
-            return await synth(text, dest, attempt + 1)
-        print(f"  !! {text}: {e}", flush=True)
-        return False
-    ok = subprocess.run(
-        ["ffmpeg", "-y", "-v", "error", "-i", str(raw), "-af", FFMPEG_TRIM,
-         "-ac", "1", "-ar", "24000", "-b:a", "32k", str(dest)],
-        capture_output=True,
-    ).returncode == 0
-    raw.unlink(missing_ok=True)
-    return ok
+    """Yolg'iz so'z oxirgi harakati bilan o'qilsin - synth_word ga topshiramiz."""
+    return await word_synth(spoken(text), dest, VOICE, RATE, FFMPEG_TRIM, RETRIES, attempt)
 
 
 async def main() -> None:

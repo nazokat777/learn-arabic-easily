@@ -42,6 +42,7 @@ RETRIES = 4
 import sys as _sys
 _sys.path.insert(0, str(Path(__file__).parent))
 from gen_sentence_audio import FFMPEG_TRIM  # noqa: E402
+from synth_word import synth as word_synth  # noqa: E402
 
 
 def head_of(ar: str) -> str:
@@ -61,24 +62,8 @@ def collect_words() -> list[str]:
 
 
 async def synth(word: str, dest: Path, attempt: int = 0) -> bool:
-    raw = dest.with_suffix(".raw.mp3")
-    try:
-        await edge_tts.Communicate(word, VOICE, rate=RATE).save(str(raw))
-    except Exception as e:
-        if attempt < RETRIES:
-            await asyncio.sleep(1.5 * (attempt + 1))
-            return await synth(word, dest, attempt + 1)
-        print(f"  !! {word}: {e}")
-        return False
-    ok = subprocess.run(
-        ["ffmpeg", "-y", "-v", "error", "-i", str(raw), "-af", FFMPEG_TRIM,
-         "-ac", "1", "-ar", "24000", "-b:a", "32k", str(dest)],
-        capture_output=True,
-    ).returncode == 0
-    raw.unlink(missing_ok=True)
-    if not ok:
-        print(f"  !! ffmpeg failed: {word}")
-    return ok
+    """Yolg'iz so'z oxirgi harakati bilan o'qilsin - synth_word ga topshiramiz."""
+    return await word_synth(word, dest, VOICE, RATE, FFMPEG_TRIM, RETRIES, attempt)
 
 
 async def main() -> None:

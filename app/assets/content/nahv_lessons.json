@@ -134,6 +134,293 @@
           "uz": "Ushbu iborada ko'zingizga tashlangan fe'l, ism va harflarni ajrating: «Nil — O'rta Afrikadan boshlanadigan daryo. U sho'r dengizga quyiladi, Misr yurtidan o'tadi, uning yeriga hosildorlik va o'sish ulashadi, aholisiga esa baxt va farog'at keltiradi»."
         }
       ]
+    },
+    {
+      "book": 1,
+      "num": 3,
+      "page": 12,
+      "titleAr": "أَقْسَامُ الْفِعْلِ",
+      "title": "Fe'lning bo'limlari",
+      "rule": {
+        "ar": "وَالْفِعْلُ يَنْقَسِمُ إِلَى ثَلَاثَةِ أَقْسَامٍ: ١ - مَاضٍ؛ نَحْوُ: كَتَبَ. ٢ - وَمُضَارِعٍ؛ نَحْوُ: يَكْتُبُ. ٣ - وَأَمْرٍ؛ نَحْوُ: اكْتُبْ.",
+        "uz": "Fe'l uch bo'limga bo'linadi: 1 — mozi (o'tgan zamon); masalan: كَتَبَ (yozdi). 2 — muzori' (hozirgi-kelasi zamon); masalan: يَكْتُبُ (yozadi). 3 — amr (buyruq); masalan: اكْتُبْ (yoz)."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "سَبَقَ لَكَ أَنَّ جَمِيعَ الْكَلِمَاتِ تَنْحَصِرُ فِي ثَلَاثَةِ أَنْوَاعٍ: فِعْلٍ، وَاسْمٍ، وَحَرْفٍ، وَأَوْضَحْنَا لَكَ أَنَّ كُلَّ لَفْظٍ يَدُلُّ عَلَى حُصُولِ شَيْءٍ وَزَمَنِهِ، يُسَمَّى «فِعْلًا».",
+          "uz": "Oldin o'tdi: barcha so'zlar uch turga jamlanadi — fe'l, ism va harf. Shuningdek, biror ish sodir bo'lishiga va uning zamoniga dalolat qiladigan har bir so'z «fe'l» deb atalishini tushuntirgan edik."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْفِعْلُ يَنْقَسِمُ إِلَى ثَلَاثَةِ أَقْسَامٍ: مَاضٍ، وَمُضَارِعٍ، وَأَمْرٍ.",
+          "uz": "Fe'l esa uch bo'limga bo'linadi: mozi, muzori' va amr."
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "ar": "فَالْمَاضِي: مَا يَدُلُّ عَلَى حُصُولِ شَيْءٍ فِي زَمَنٍ مَضَى؛ نَحْوُ: كَتَبَ، وَدَحْرَجَ، وَانْطَلَقَ، وَاسْتَخْرَجَ.",
+              "uz": "Mozi — o'tgan zamonda biror ish sodir bo'lganiga dalolat qiladigan fe'l; masalan: كَتَبَ (yozdi), دَحْرَجَ (dumalatdi), انْطَلَقَ (yo'lga chiqdi), اسْتَخْرَجَ (chiqarib oldi)."
+            },
+            {
+              "ar": "وَالْمُضَارِعُ: مَا يَدُلُّ عَلَى حُصُولِ شَيْءٍ فِي الْحَالِ، أَوِ الاِسْتِقْبَالِ؛ نَحْوُ: يَكْتُبُ، وَيُدَحْرِجُ، وَيَنْطَلِقُ، وَيَسْتَخْرِجُ. وَلَابُدَّ أَنْ يَكُونَ مَبْدُوءًا: بِأَلِفٍ، أَوْ نُونٍ، أَوْ يَاءٍ، أَوْ تَاءٍ.",
+              "uz": "Muzori' — hozir yoki kelajakda biror ish sodir bo'lishiga dalolat qiladigan fe'l; masalan: يَكْتُبُ (yozadi), يُدَحْرِجُ, يَنْطَلِقُ, يَسْتَخْرِجُ. U albatta alif, nun, yo yoki to bilan boshlanishi shart."
+            },
+            {
+              "ar": "وَالْأَمْرُ: مَا يُطْلَبُ بِهِ حُصُولُ شَيْءٍ؛ نَحْوُ: اكْتُبْ، وَدَحْرِجْ، وَانْطَلِقْ، وَاسْتَخْرِجْ.",
+              "uz": "Amr — biror ishning bajarilishi talab qilinadigan fe'l; masalan: اكْتُبْ (yoz), دَحْرِجْ (dumalat), انْطَلِقْ (yo'lga chiq), اسْتَخْرِجْ (chiqarib ol)."
+            }
+          ]
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "إِلَى كَمْ قِسْمٍ يَنْقَسِمُ الْفِعْلُ؟",
+          "uz": "Fe'l necha bo'limga bo'linadi?"
+        },
+        {
+          "ar": "بِمَاذَا تَمَيَّزَ الْمَاضِي مِنَ الْمُضَارِعِ وَالْأَمْرِ؟",
+          "uz": "Mozi muzori' va amrdan nimasi bilan ajralib turadi?"
+        },
+        {
+          "ar": "عَيِّنِ الْمَاضِيَ وَالْمُضَارِعَ وَالْأَمْرَ مِنْ هَذِهِ الْأَفْعَالِ: «فَتَحَ، كَسَرَ، نَقُومُ، أَكَلَ، يَفْهَمُ، اذْهَبْ، نَسْمَعُ، اجْلِسْ، أُشَارِكُ، شَرِبَ، احْفَظْ، يَحْضُرُ، قَامَ».",
+          "uz": "Bu fe'llardan mozi, muzori' va amrni ajrating: «fataha (ochdi), kasara (sindirdi), naqumu (turamiz), akala (yedi), yafhamu (tushunadi), izhab (bor), nasma'u (eshitamiz), ijlis (o'tir), ushariku (ishtirok etaman), shariba (ichdi), ihfaz (yodla), yahduru (keladi), qoma (turdi)»."
+        },
+        {
+          "ar": "عُدَّ عَشَرَةَ أَفْعَالٍ مِنْ كُلِّ نَوْعٍ.",
+          "uz": "Har bir turdan o'nta fe'l sanang."
+        },
+        {
+          "ar": "عَيِّنِ الْأَفْعَالَ بِأَنْوَاعِهَا وَالْأَسْمَاءَ وَالْحُرُوفَ مِنْ هَذِهِ الْعِبَارَاتِ:",
+          "uz": "Quyidagi iboralardan fe'llarni turlari bilan, ismlarni va harflarni ajrating:"
+        },
+        {
+          "ar": "الْقَمَرُ يَسْتَفِيدُ النُّورَ مِنَ الشَّمْسِ.",
+          "uz": "Oy nurni quyoshdan oladi."
+        },
+        {
+          "ar": "الْكِتَابُ خَيْرُ رَفِيقِي وَأَعَزُّ صَدِيقِي، لَا يَطْلُبُ أَجْرًا، وَلَا يُكَلِّفُ أَمْرًا.",
+          "uz": "Kitob — eng yaxshi hamrohim va eng aziz do'stim; u haq so'ramaydi va biror ishni yuklamaydi."
+        },
+        {
+          "ar": "أَحْسِنْ إِلَى كُلِّ إِنْسَانٍ صَدَقَ فِي الْمُعَامَلَةِ، وَلَا تُصَاحِبْ شَخْصًا لَا يَعْرِفُ حَقَّ الْمُجَامَلَةِ.",
+          "uz": "Muomalada rostgo'y bo'lgan har bir insonga yaxshilik qil; xushmuomalalik haqqini bilmaydigan kishiga esa do'st bo'lma."
+        }
+      ]
+    },
+    {
+      "book": 1,
+      "num": 4,
+      "page": 14,
+      "titleAr": "أَقْسَامُ الاِسْمِ — ١ - الْمُذَكَّرُ وَالْمُؤَنَّثُ",
+      "title": "Ismning bo'limlari — 1. Muzakkar va muannas",
+      "rule": {
+        "ar": "وَالاِسْمُ يَنْقَسِمُ إِلَى قِسْمَيْنِ: ١ - مُذَكَّرٍ؛ نَحْوُ: عَلِيٌّ، وَجَمَلٍ، وَحِصَانٍ. ٢ - وَمُؤَنَّثٍ؛ نَحْوُ: عَائِشَةَ، وَنَاقَةٍ، وَهِرَّةٍ.",
+        "uz": "Ism ikki bo'limga bo'linadi: 1 — muzakkar (erkak jinsi); masalan: عَلِيّ (Ali), جَمَل (tuya), حِصَان (ot). 2 — muannas (ayol jinsi); masalan: عَائِشَة (Oisha), نَاقَة (urg'ochi tuya), هِرَّة (mushuk)."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "عَلِمْتَ أَنَّ الكَلِمَةَ ثَلَاثَةُ أَنْوَاعٍ: فِعْلٍ، وَاسْمٍ، وَحَرْفٍ، وَأَنَّ الْفِعْلَ ثَلَاثَةُ أَنْوَاعٍ: مَاضٍ، وَمُضَارِعٍ، وَأَمْرٍ، فَاعْلَمِ الْآنَ أَنَّ الاِسْمَ نَوْعَانِ:",
+          "uz": "So'z uch turli — fe'l, ism va harf — ekanini, fe'l esa uch turli — mozi, muzori' va amr — ekanini bilding. Endi bilki, ism ikki turlidir:"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "ar": "مُذَكَّرٌ؛ وَهُوَ: كُلُّ اسْمٍ دَلَّ عَلَى ذَكَرٍ؛ مِثْلُ: عَلِيٍّ، وَحُسَيْنٍ، وَجَمَلٍ، وَبَغْلٍ، وَحِصَانٍ، وَحِمَارٍ، وَهِرٍّ.",
+              "uz": "Muzakkar — erkak zotga dalolat qiladigan har bir ism; masalan: عَلِيّ (Ali), حُسَيْن (Husayn), جَمَل (tuya), بَغْل (xachir), حِصَان (ot), حِمَار (eshak), هِرّ (erkak mushuk)."
+            },
+            {
+              "ar": "وَمُؤَنَّثٌ؛ وَهُوَ: كُلُّ اسْمٍ دَلَّ عَلَى أُنْثَى؛ مِثْلُ: عَائِشَةَ، وَفَاطِمَةَ، وَعَزِيزَةَ، وَنَاقَةٍ، وَبَغْلَةٍ، وَحِمَارَةٍ، وَهِرَّةٍ.",
+              "uz": "Muannas — ayol zotga dalolat qiladigan har bir ism; masalan: عَائِشَة (Oisha), فَاطِمَة (Fotima), عَزِيزَة (Aziza), نَاقَة (urg'ochi tuya), بَغْلَة (urg'ochi xachir), حِمَارَة (urg'ochi eshak), هِرَّة (urg'ochi mushuk)."
+            }
+          ]
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 1,
+      "num": 5,
+      "page": 15,
+      "titleAr": "٢ - الْمُفْرَدُ وَالْمُثَنَّى وَالْجَمْعُ",
+      "title": "2. Birlik, ikkilik va ko'plik",
+      "rule": {
+        "ar": "وَيَنْقَسِمُ الاِسْمُ أَيْضًا إِلَى ثَلَاثَةِ أَقْسَامٍ: ١ - مُفْرَدٍ؛ نَحْوُ: فَاضِلٍ، وَفَاضِلَةٍ. ٢ - وَمُثَنًّى؛ نَحْوُ: فَاضِلَانِ، أَوْ فَاضِلَيْنِ، وَفَاضِلَتَانِ، أَوْ فَاضِلَتَيْنِ. ٣ - وَجَمْعٍ؛ نَحْوُ: فَاضِلُونَ، أَوْ فَاضِلِينَ، أَوْ فُضَلَاءَ.",
+        "uz": "Ism yana uch bo'limga bo'linadi: 1 — mufrad (birlik); masalan: فَاضِل, فَاضِلَة. 2 — musanno (ikkilik); masalan: فَاضِلَانِ yoki فَاضِلَيْنِ, فَاضِلَتَانِ yoki فَاضِلَتَيْنِ. 3 — jam' (ko'plik); masalan: فَاضِلُونَ, فَاضِلِينَ yoki فُضَلَاءَ."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "عَلِمْتَ أَنَّ الاِسْمَ يَنْقَسِمُ إِلَى مُذَكَّرٍ وَمُؤَنَّثٍ، فَاعْلَمْ أَيْضًا أَنَّهُ يَنْقَسِمُ إِلَى:",
+          "uz": "Ism muzakkar va muannasga bo'linishini bilding; endi shuni ham bilki, u yana quyidagilarga bo'linadi:"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "ar": "مُفْرَدٌ؛ وَهُوَ: مَا دَلَّ عَلَى وَاحِدٍ أَوْ وَاحِدَةٍ؛ مِثْلُ: فَاضِلٍ، وَفَاضِلَةٍ، وَمُجْتَهِدٍ، وَمُجْتَهِدَةٍ.",
+              "uz": "Mufrad — bitta erkak yoki bitta ayolga dalolat qiladigan ism; masalan: فَاضِل (fozil), فَاضِلَة, مُجْتَهِد (tirishqoq), مُجْتَهِدَة."
+            },
+            {
+              "ar": "وَمُثَنًّى؛ وَهُوَ: مَا دَلَّ عَلَى اثْنَيْنِ أَوِ اثْنَتَيْنِ بِزِيَادَةِ أَلِفٍ وَنُونٍ، أَوْ يَاءٍ وَنُونٍ فِي مُفْرَدِهِ؛ نَحْوُ: فَاضِلَانِ، أَوْ فَاضِلَيْنِ، وَفَاضِلَتَانِ، أَوْ فَاضِلَتَيْنِ، وَمُجْتَهِدَانِ، أَوْ مُجْتَهِدَيْنِ، وَمُجْتَهِدَتَانِ، أَوْ مُجْتَهِدَتَيْنِ.",
+              "uz": "Musanno — birlik shakliga alif va nun yoki yo va nun qo'shilib, ikki erkak yoki ikki ayolga dalolat qiladigan ism; masalan: فَاضِلَانِ / فَاضِلَيْنِ, فَاضِلَتَانِ / فَاضِلَتَيْنِ, مُجْتَهِدَانِ / مُجْتَهِدَيْنِ, مُجْتَهِدَتَانِ / مُجْتَهِدَتَيْنِ."
+            },
+            {
+              "ar": "وَجَمْعٌ؛ وَهُوَ: مَا دَلَّ عَلَى أَكْثَرَ مِنِ اثْنَيْنِ أَوِ اثْنَتَيْنِ بِتَغْيِيرٍ فِي مُفْرَدِهِ؛ نَحْوُ: فَاضِلُونَ أَوْ فَاضِلِينَ، أَوْ فُضَلَاءُ أَوْ فُضْلَيَاتٍ.",
+              "uz": "Jam' — birlik shakli o'zgarib, ikkitadan ortiq erkak yoki ayolga dalolat qiladigan ism; masalan: فَاضِلُونَ / فَاضِلِينَ, فُضَلَاء yoki فُضْلَيَات."
+            }
+          ]
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 1,
+      "num": 6,
+      "page": 16,
+      "titleAr": "أَقْسَامُ الْجَمْعِ",
+      "title": "Ko'plikning bo'limlari",
+      "rule": {
+        "ar": "وَيَنْقَسِمُ الْجَمْعُ إِلَى قِسْمَيْنِ: ١ - جَمْعِ تَكْسِيرٍ؛ نَحْوُ: فُضَلَاءَ، وَكُتُبٍ، وَأَقْلَامٍ. ٢ - وَجَمْعِ تَصْحِيحٍ؛ نَحْوُ: فَاضِلُونَ، أَوْ فَاضِلِينَ، وَفَاضِلَاتٍ. فَإِذَا كَانَ لِلْمُذَكَّرِ سُمِّيَ «جَمْعَ مُذَكَّرٍ سَالِمًا»، وَإِذَا كَانَ لِلْمُؤَنَّثِ سُمِّيَ «جَمْعَ مُؤَنَّثٍ سَالِمًا».",
+        "uz": "Ko'plik ikki bo'limga bo'linadi: 1 — jam'i taksir (siniq ko'plik); masalan: فُضَلَاء, كُتُب (kitoblar), أَقْلَام (qalamlar). 2 — jam'i tas'hih (butun ko'plik); masalan: فَاضِلُونَ / فَاضِلِينَ, فَاضِلَات. Agar u muzakkar uchun bo'lsa «jam'i muzakkari solim», muannas uchun bo'lsa «jam'i muannasi solim» deb ataladi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "سَبَقَ لَكَ أَنَّ الاِسْمَ يَكُونُ مُفْرَدًا، وَمُثَنًّى، وَجَمْعًا. وَنَقُولُ: إِنَّ الْجَمْعَ لَيْسَ نَوْعًا وَاحِدًا، بَلْ هُوَ نَوْعَانِ:",
+          "uz": "Ism birlik, ikkilik va ko'plik bo'lishi oldin o'tdi. Endi aytamiz: ko'plik bir turli emas, balki ikki turlidir:"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "ar": "جَمْعُ تَكْسِيرٍ؛ وَهُوَ: مَا تَغَيَّرَ فِيهِ بِنَاءُ مُفْرَدِهِ؛ مِثْلُ: فُضَلَاءَ جَمْعِ فَاضِلٍ، وَكُتُبٍ جَمْعِ كِتَابٍ، وَأَقْلَامٍ جَمْعِ قَلَمٍ.",
+              "uz": "Jam'i taksir — birlik shaklining tuzilishi o'zgargan ko'plik; masalan: فُضَلَاء — فَاضِل ning ko'pligi, كُتُب — كِتَاب ning ko'pligi, أَقْلَام — قَلَم ning ko'pligi."
+            },
+            {
+              "ar": "وَجَمْعُ تَصْحِيحٍ؛ وَهُوَ: مَا سَلِمَ فِيهِ بِنَاءُ مُفْرَدِهِ، وَهُوَ قِسْمَانِ:",
+              "uz": "Jam'i tas'hih — birlik shaklining tuzilishi butun qolgan ko'plik. U ikki bo'limdir:"
+            },
+            {
+              "ar": "جَمْعُ مُذَكَّرٍ سَالِمٌ؛ نَحْوُ: فَاضِلُونَ، أَوْ فَاضِلِينَ، وَمُجْتَهِدُونَ، أَوْ مُجْتَهِدِينَ؛ مِنْ كُلِّ اسْمٍ زَادَ فِي مُفْرَدِهِ وَاوٌ وَنُونٌ، أَوْ يَاءٌ وَنُونٌ.",
+              "uz": "Jam'i muzakkari solim; masalan: فَاضِلُونَ / فَاضِلِينَ, مُجْتَهِدُونَ / مُجْتَهِدِينَ — birlik shakliga vov va nun yoki yo va nun qo'shilgan har bir ismdan yasaladi."
+            },
+            {
+              "ar": "وَجَمْعُ مُؤَنَّثٍ سَالِمٌ؛ نَحْوُ: فَاضِلَاتٍ وَمُجْتَهِدَاتٍ؛ مِنْ كُلِّ اسْمٍ زَادَ فِي مُفْرَدِهِ أَلِفٌ وَتَاءٌ.",
+              "uz": "Jam'i muannasi solim; masalan: فَاضِلَات, مُجْتَهِدَات — birlik shakliga alif va to qo'shilgan har bir ismdan yasaladi."
+            }
+          ]
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 1,
+      "num": 7,
+      "page": 17,
+      "titleAr": "الكَلَامُ",
+      "title": "Kalom (gap)",
+      "rule": {
+        "ar": "وَمِنَ الْكَلِمَاتِ تَتَرَكَّبُ الْجُمَلُ الْمُفِيدَةُ، وَهِيَ الْمُسَمَّاةُ بِـ«الكَلَامِ».",
+        "uz": "So'zlardan mazmunli jumlalar tuziladi; ular «kalom» deb ataladi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "عَلِمْنَا فِيمَا سَبَقَ أَنَّ جَمِيعَ الْكَلِمَاتِ لَا تَخْرُجُ عَنْ ثَلَاثَةِ أَنْوَاعٍ: الْفِعْلِ وَالاِسْمِ وَالْحَرْفِ. وَمِنَ الْوَاضِحِ أَنَّ فَهْمَ الْمُرَادِ لَا يَكُونُ بِكَلِمَةٍ وَاحِدَةٍ؛ لِعَدَمِ كِفَايَتِهَا، بَلْ لَابُدَّ لِحُصُولِ ذَلِكَ مِنْ كَلِمَتَيْنِ فَأَكْثَرَ، حَتَّى يَكُونَ مَا نَتَلَفَّظُ بِهِ مُفِيدًا فَائِدَةً يُعْتَدُّ بِهَا.",
+          "uz": "Oldin barcha so'zlar uch turdan chiqmasligini bildik: fe'l, ism va harf. Ma'lumki, ko'zlangan ma'no bitta so'z bilan tushunilmaydi — u yetarli emas; buning uchun ikki yoki undan ortiq so'z kerak, toki aytganimiz e'tiborga loyiq foyda beradigan bo'lsin."
+        },
+        {
+          "type": "para",
+          "ar": "فَالْجُمْلَةُ الْمُرَكَّبَةُ مِنْ كَلِمَتَيْنِ فَأَكْثَرَ بِحَيْثُ تُفِيدُ الْفَائِدَةَ الْمَقْصُودَةَ، يُقَالُ لَهَا: «كَلَامٌ»؛ نَحْوُ: الْعِلْمُ نَافِعٌ، وَالْجَهْلُ ضَارٌّ.",
+          "uz": "Ikki yoki undan ortiq so'zdan tuzilgan va ko'zlangan ma'noni beradigan jumla «kalom» deb ataladi; masalan: الْعِلْمُ نَافِعٌ (ilm foydali), الْجَهْلُ ضَارٌّ (jaholat zararli)."
+        },
+        {
+          "type": "para",
+          "ar": "وَلَا يُشْتَرَطُ فِي الكَلَامِ أَنْ يَكُونَ مُرَكَّبًا مِنَ الْأَنْوَاعِ الثَّلَاثَةِ؛ إِذْ قَدْ يَتَرَكَّبُ مِنِ اسْمَيْنِ فَقَطْ؛ نَحْوُ: عَلِيٌّ مُقْبِلٌ، أَوْ فِعْلٍ وَاسْمٍ؛ نَحْوُ: فَاضَ نَهَرٌ.",
+          "uz": "Kalomning uchala turdan tuzilishi shart emas: u faqat ikki ismdan ham tuzilishi mumkin — masalan: عَلِيٌّ مُقْبِلٌ (Ali kelmoqda); yoki fe'l va ismdan — masalan: فَاضَ نَهَرٌ (daryo toshdi)."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُقَالُ لِلْجُمْلَةِ: «فِعْلِيَّةٌ»، إِنْ كَانَ صَدْرُهَا فِعْلًا؛ نَحْوُ: حَضَرَ الْمُعَلِّمُ، وَيَحْضُرُ النَّاظِرُ، وَ«اسْمِيَّةٌ»، إِنْ كَانَ صَدْرُهَا اسْمًا؛ نَحْوُ: الْأُسْتَاذُ وَاقِفٌ، وَالنَّاظِرُ يُفَتِّشُ.",
+          "uz": "Jumla boshi fe'l bo'lsa «fe'liya» deyiladi; masalan: حَضَرَ الْمُعَلِّمُ (o'qituvchi keldi), يَحْضُرُ النَّاظِرُ (nozir keladi). Boshi ism bo'lsa «ismiya» deyiladi; masalan: الْأُسْتَاذُ وَاقِفٌ (ustoz turibdi), النَّاظِرُ يُفَتِّشُ (nozir tekshirmoqda)."
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "مَا الَّذِي يَتَرَكَّبُ مِنَ الْكَلِمَاتِ؟",
+          "uz": "So'zlardan nima tarkib topadi?"
+        },
+        {
+          "ar": "هَلْ يَلْزَمُ أَنَّ كُلَّ كَلَامٍ يَشْتَمِلُ عَلَى فِعْلٍ وَاسْمٍ وَحَرْفٍ؟",
+          "uz": "Har bir kalomda fe'l, ism va harf bo'lishi shartmi?"
+        },
+        {
+          "ar": "كَمْ كَلِمَةً فِي كُلِّ جُمْلَةٍ مِنْ هَذِهِ الْجُمَلِ: «الْقَمَرُ أَصْغَرُ مِنَ الْأَرْضِ، وَالشَّمْسُ أَكْبَرُ مِنَ الْاثْنَيْنِ. فِي التَّأَنِّي السَّلَامَةُ، وَفِي الْعَجَلَةِ النَّدَامَةُ. بِالثَّبَاتِ يَصِلُ الْإِنْسَانُ إِلَى الْمَقْصُودِ»؟",
+          "uz": "Bu jumlalarning har birida nechta so'z bor: «Oy Yerdan kichikroq, Quyosh esa ikkalasidan kattaroq. Shoshmaslikda — salomatlik, shoshqaloqlikda — pushaymonlik. Sabot bilan inson maqsadiga yetadi»?"
+        },
+        {
+          "ar": "عَيِّنِ الْمُفْرَدَ وَالْمُثَنَّى وَأَنْوَاعَ الْجَمْعِ فِي الْعِبَارَاتِ الْآتِيَةِ: «بَرَّ وَالِدَيْكَ، وَاسْعَ فِيمَا يَرْفَعُ شُئُونَهُمَا، وَيَجْلِبُ أَفْرَاحَهُمَا، وَيُذْهِبُ أَحْزَانَهُمَا، وَإِنَّ مِنْ أَعْظَمِ الْقُرُبَاتِ عِنْدَ اللَّهِ مُسَاعَدَةَ الْعَاجِزِينَ وَبِرَّ الْمُعْوِزِينَ».",
+          "uz": "Quyidagi iboralarda birlik, ikkilik va ko'plik turlarini ajrating: «Ota-onangga yaxshilik qil, ularning ishlarini ko'taradigan, quvonchlarini keltiradigan va g'amlarini ketkazadigan ishga intil. Allohning huzurida eng ulug' yaqinlashtiruvchi amallardan biri — ojizlarga yordam berish va muhtojlarga yaxshilik qilishdir»."
+        }
+      ]
+    },
+    {
+      "book": 1,
+      "num": 8,
+      "page": 19,
+      "titleAr": "الْمَبْنِيُّ وَالْمُعْرَبُ",
+      "title": "Mabniy va mu'rab",
+      "rule": {
+        "ar": "وَتَنْقَسِمُ الْكَلِمَاتُ عِنْدَ التَّرَكُّبِ إِلَى قِسْمَيْنِ: ١ - قِسْمٍ لَا يَتَغَيَّرُ آخِرُهُ أَبَدًا، وَيُسَمَّى «مَبْنِيًّا». ٢ - وَقِسْمٍ يَتَغَيَّرُ آخِرُهُ، وَيُسَمَّى «مُعْرَبًا».",
+        "uz": "So'zlar jumla tarkibiga kirganda ikki bo'limga bo'linadi: 1 — oxiri hech qachon o'zgarmaydigan bo'lim, u «mabniy» deb ataladi. 2 — oxiri o'zgaradigan bo'lim, u «mu'rab» deb ataladi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "سَبَقَ لَكَ أَنَّ الْجُمَلَ الْمُفِيدَةَ تَتَرَكَّبُ مِنَ الكَلِمَاتِ الْمُفْرَدَةِ، الَّتِي تَنْحَصِرُ فِي الْأَنْوَاعِ الثَّلَاثَةِ: الْفِعْلِ وَالاِسْمِ وَالْحُرُوفِ.",
+          "uz": "Mazmunli jumlalar uch turga jamlanadigan yakka so'zlardan — fe'l, ism va harflardan — tuzilishi oldin o'tdi."
+        },
+        {
+          "type": "para",
+          "ar": "فَهَذِهِ الكَلِمَاتُ لَيْسَتْ كُلُّهَا عِنْدَ التَّرَكُّبِ سَوَاءً؛ بَلْ مِنْهَا:",
+          "uz": "Bu so'zlarning hammasi jumla tarkibida bir xil emas; balki ulardan:"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "ar": "مَا يَكُونُ آخِرُهُ عَلَى حَالَةٍ وَاحِدَةٍ فِي أَيِّ تَرْكِيبٍ كَانَ، وَيُسَمَّى «مَبْنِيًّا»؛ مِثْلُ: كَلِمَةِ (أَيْنَ) فِي قَوْلِكَ: أَيْنَ الكِتَابُ؟، وَأَيْنَ ذَهَبَ عَلِيٌّ؟، وَمِنْ أَيْنَ جِئْتَ؟. فَإِنَّ النُّونَ فِيهَا مُلَازِمَةٌ لِلْفَتْحَةِ، وَلَا يَصِحُّ أَنْ تُفَارِقَهَا مَهْمَا تَغَيَّرَتِ التَّرَاكِيبُ.",
+              "uz": "Qanday tuzilishda kelmasin, oxiri bitta holatda qoladigani bor — u «mabniy» deyiladi; masalan: «أَيْنَ» so'zi: أَيْنَ الكِتَابُ؟ (kitob qani?), أَيْنَ ذَهَبَ عَلِيٌّ؟ (Ali qayerga ketdi?), مِنْ أَيْنَ جِئْتَ؟ (qayerdan kelding?). Undagi nun doim fatha bilan keladi va tuzilish qanday o'zgarmasin, undan ajralmaydi."
+            },
+            {
+              "ar": "وَمِنْهَا مَا يَكُونُ آخِرُهُ عَلَى أَحْوَالٍ مُخْتَلِفَةٍ، وَيُسَمَّى «مُعْرَبًا»؛ مِثْلُ: كَلِمَةِ (السَّمَاءِ) فِي قَوْلِكَ: السَّمَاءُ صَافِيَةٌ. وَقَوْلِكَ: حَجَبَتِ السُّحُبُ السَّمَاءَ. وَقَوْلِكَ: نَظَرْتُ إِلَى السَّمَاءِ. فَإِنَّ آخِرَهَا فِي الْجُمْلَةِ الْأُولَى مُتَحَرِّكٌ بِالضَّمَّةِ، وَفِي الثَّانِيَةِ مُتَحَرِّكٌ بِالْفَتْحَةِ، وَفِي الثَّالِثَةِ مُتَحَرِّكٌ بِالْكَسْرَةِ.",
+              "uz": "Ulardan oxiri turli holatlarda bo'ladigani ham bor — u «mu'rab» deyiladi; masalan: «السَّمَاء» so'zi: السَّمَاءُ صَافِيَةٌ (osmon musaffo), حَجَبَتِ السُّحُبُ السَّمَاءَ (bulutlar osmonni to'sdi), نَظَرْتُ إِلَى السَّمَاءِ (osmonga qaradim). Birinchi jumlada uning oxiri damma bilan, ikkinchisida fatha bilan, uchinchisida kasra bilan harakatlanadi."
+            }
+          ]
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "إِلَى كَمْ قِسْمٍ تَنْقَسِمُ الكَلِمَاتُ بِالنِّسْبَةِ لِتَغَيُّرِ أَوَاخِرِهَا، أَوْ عَدَمِ تَغَيُّرِهَا؟",
+          "uz": "So'zlar oxirining o'zgarishi yoki o'zgarmasligiga ko'ra necha bo'limga bo'linadi?"
+        },
+        {
+          "ar": "مَا الْمَبْنِيُّ، وَمَا الْمُعْرَبُ؟",
+          "uz": "Mabniy nima, mu'rab nima?"
+        },
+        {
+          "ar": "أَمُعْرَبَةٌ أَمْ مَبْنِيَّةٌ كَلِمَةُ «النَّاسِ» فِي قَوْلِ الشَّاعِرِ: النَّاسُ لِلنَّاسِ مِنْ بَدْوٍ وَحَاضِرَةٍ * بَعْضٌ لِبَعْضٍ وَإِنْ لَمْ يَشْعُرُوا خَدَمُ.",
+          "uz": "Shoirning quyidagi so'zida «النَّاس» so'zi mu'rabmi yoki mabniy? «Odamlar — cho'lliksi ham, shaharliksi ham — bir-biri uchun, o'zlari sezmasalar-da, xizmatkordirlar»."
+        },
+        {
+          "ar": "مِنْ أَيِّ النَّوْعَيْنِ كَلِمَةُ «الَّذِينَ» فِي قَوْلِهِ تَعَالَى: ﴿اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ ۝ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ﴾؟",
+          "uz": "Alloh taoloning «Bizni to'g'ri yo'lga boshlagin — o'zing ne'mat bergan kishilarning yo'liga» degan so'zidagi «الَّذِينَ» so'zi qaysi turdan?"
+        }
+      ]
     }
   ]
 }

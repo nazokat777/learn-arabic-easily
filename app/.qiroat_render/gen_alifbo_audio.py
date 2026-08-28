@@ -22,7 +22,8 @@ import edge_tts
 
 sys.path.insert(0, str(Path(__file__).parent))
 # Bu import stdout'ni UTF-8 ga o'raydi — ikkinchi marta o'ramang.
-from gen_sentence_audio import FFMPEG_TRIM, VOICE, RETRIES, WORKERS
+from gen_sentence_audio import FFMPEG_TRIM, VOICE, RETRIES, WORKERS  # noqa: E402
+from synth_word import synth as word_synth  # noqa: E402
 
 # Alifbo bo'g'inlari sekinroq o'qiladi - bu yerda harf tovushining
 # o'zi o'rgatiladi, shoshilishning ma'nosi yo'q.
@@ -48,22 +49,8 @@ def collect() -> list[str]:
 
 
 async def synth(text: str, dest: Path, attempt: int = 0) -> bool:
-    raw = dest.with_suffix(".raw.mp3")
-    try:
-        await edge_tts.Communicate(text, VOICE, rate=RATE).save(str(raw))
-    except Exception as e:
-        if attempt < RETRIES:
-            await asyncio.sleep(1.5 * (attempt + 1))
-            return await synth(text, dest, attempt + 1)
-        print(f"  !! {text}: {e}", flush=True)
-        return False
-    ok = subprocess.run(
-        ["ffmpeg", "-y", "-v", "error", "-i", str(raw), "-af", FFMPEG_TRIM,
-         "-ac", "1", "-ar", "24000", "-b:a", "32k", str(dest)],
-        capture_output=True,
-    ).returncode == 0
-    raw.unlink(missing_ok=True)
-    return ok
+    """Yolg'iz so'z oxirgi harakati bilan o'qilsin - synth_word ga topshiramiz."""
+    return await word_synth(text, dest, VOICE, RATE, FFMPEG_TRIM, RETRIES, attempt)
 
 
 async def main() -> None:

@@ -4143,6 +4143,228 @@
           "uz": "Kim tinchlikka moyil bo'lsa, yuksak martabalarni talab qilmaydi."
         }
       ]
+    },
+    {
+      "book": 2,
+      "num": 18,
+      "page": 108,
+      "titleAr": "٤ - تَقْسِيمُ الاِسْمِ إِلَى نَكِرَةٍ وَمَعْرِفَةٍ",
+      "title": "4. Ismning nakira va ma'rifaga bo'linishi",
+      "rule": {
+        "ar": "يَنْقَسِمُ الاِسْمُ إِلَى نَكِرَةٍ وَمَعْرِفَةٍ. فَالنَّكِرَةُ: مَا لَا يُفْهَمُ مِنْهُ مُعَيَّنٌ؛ كَـ«رَجُلٍ» وَ«كِتَابٍ». وَالْمَعْرِفَةُ: مَا يُفْهَمُ مِنْهُ مُعَيَّنٌ، وَهُوَ سَبْعَةُ أَنْوَاعٍ: الضَّمِيرُ، وَالْعَلَمُ، وَاسْمُ الْإِشَارَةِ، وَالاِسْمُ الْمَوْصُولُ، وَمَا فِيهِ «أَلْ»، وَالْمُضَافُ لِوَاحِدٍ مِمَّا ذُكِرَ، وَالْمُنَادَى.",
+        "uz": "Ism nakira va ma'rifaga bo'linadi. Nakira — undan aniq bir narsa tushunilmaydigan ism; masalan: رَجُل (bir kishi), كِتَاب (bir kitob). Ma'rifa — undan aniq bir narsa tushuniladigan ism; u yetti turli: zamir, alam (atoqli ot), ishora ismi, mavsul ism, «أل» qo'shilgani, sanalganlardan biriga muzof bo'lgani va munodo."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "١ - أَمَّا الضَّمِيرُ؛ فَهُوَ: أَنَا، نَحْنُ. أَنْتَ، أَنْتِ، أَنْتُمَا، أَنْتُمْ، أَنْتُنَّ. هُوَ، هِيَ، هُمَا، هُمْ، هُنَّ.",
+          "uz": "1 — Zamirlar: أَنَا (men), نَحْنُ (biz); أَنْتَ, أَنْتِ, أَنْتُمَا, أَنْتُمْ, أَنْتُنَّ; هُوَ, هِيَ, هُمَا, هُمْ, هُنَّ."
+        },
+        {
+          "type": "para",
+          "ar": "إِيَّايَ، إِيَّانَا. إِيَّاكَ، إِيَّاكِ، إِيَّاكُمَا، إِيَّاكُمْ، إِيَّاكُنَّ. إِيَّاهُ، إِيَّاهَا، إِيَّاهُمَا، إِيَّاهُمْ، إِيَّاهُنَّ. وَتُسَمَّى هَذِهِ بِـ«الضَّمَائِرِ الْمُنْفَصِلَةِ».",
+          "uz": "إِيَّايَ, إِيَّانَا; إِيَّاكَ, إِيَّاكِ, إِيَّاكُمَا, إِيَّاكُمْ, إِيَّاكُنَّ; إِيَّاهُ, إِيَّاهَا, إِيَّاهُمَا, إِيَّاهُمْ, إِيَّاهُنَّ. Bular «ajralgan zamirlar» deb ataladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَمَا اتَّصَلَ بِالْفِعْلِ؛ فِي نَحْوِ: كَتَبْتُ، كَتَبْنَا، كَتَبْتَ، كَتَبْتِ، كَتَبْتُمَا، كَتَبْتُمْ، كَتَبْتُنَّ، كَتَبَ، كَتَبَتْ، كَتَبَا، كَتَبَتَا، كَتَبُوا، كَتَبْنَ، اكْتُبِي.",
+          "uz": "Fe'lga qo'shilib kelganlari: كَتَبْتُ, كَتَبْنَا, كَتَبْتَ, كَتَبْتِ, كَتَبْتُمَا, كَتَبْتُمْ, كَتَبْتُنَّ, كَتَبَ, كَتَبَتْ, كَتَبَا, كَتَبَتَا, كَتَبُوا, كَتَبْنَ, اكْتُبِي."
+        },
+        {
+          "type": "para",
+          "ar": "وَمَا اتَّصَلَ بِالْفِعْلِ، أَوْ بِالاِسْمِ؛ فِي نَحْوِ: عَلَّمَنِي كِتَابِي، عَلَّمَنَا كِتَابُنَا، عَلَّمَكَ كِتَابُكَ، عَلَّمَكِ كِتَابُكِ، عَلَّمَكُمَا كِتَابُكُمَا، عَلَّمَكُمْ كِتَابُكُمْ، عَلَّمَكُنَّ كِتَابُكُنَّ.",
+          "uz": "Fe'lga yoki ismga qo'shilib kelganlari: «kitobim meni o'rgatdi», «kitobimiz bizni o'rgatdi», «kitobing seni o'rgatdi», «kitobing seni (ayol) o'rgatdi», «kitobingiz ikkovingizni o'rgatdi», «kitobingiz sizlarni o'rgatdi», «kitobingiz sizlarni (ayollar) o'rgatdi»."
+        },
+        {
+          "type": "para",
+          "ar": "(١) الضَّمِيرُ الْمُنْفَصِلُ: مَا يَصِحُّ وُقُوعُهُ فِي ابْتِدَاءِ الْجُمْلَةِ. وَالْمُتَّصِلُ: مَا لَيْسَ كَذَلِكَ.",
+          "uz": "(1-izoh) Ajralgan zamir — jumla boshida kelishi to'g'ri bo'ladigan zamir; qo'shilgan zamir esa bunday emas."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) الضَّمِيرُ الْمُتَّصِلُ بِالْفِعْلِ فِي «كَتَبَ» لَيْسَ لَهُ صُورَةٌ فِي اللَّفْظِ، بَلْ هُوَ مُسْتَتِرٌ فِي الْفِعْلِ، يُقَدَّرُ بِـ«هُوَ»، وَمِثْلُهُ الضَّمِيرُ الْمُتَّصِلُ بِـ«كَتَبَتْ»، وَيُقَدَّرُ بِـ«هِيَ»، وَالتَّاءُ الَّتِي فِيهِ عَلَامَةُ التَّأْنِيثِ.",
+          "uz": "(2-izoh) «كَتَبَ» dagi fe'lga qo'shilgan zamirning lafzda ko'rinishi yo'q; u fe'l ichida yashiringan (mustatir) bo'lib, «هُوَ» deb taqdir qilinadi. «كَتَبَتْ» dagi zamir ham shunday bo'lib, «هِيَ» deb taqdir qilinadi; undagi «to» esa muannaslik alomatidir."
+        },
+        {
+          "type": "para",
+          "ar": "(٣) الضَّمِيرُ هُوَ الْيَاءُ، وَالنُّونُ الَّتِي قَبْلَهَا تُسَمَّى: «نُونَ الْوِقَايَةِ».",
+          "uz": "(3-izoh) Zamir — «yo»; undan oldingi «nun» esa «nunul-viqoya» (himoya nuni) deb ataladi."
+        },
+        {
+          "type": "para",
+          "ar": "عَلَّمَهُ كِتَابُهُ، عَلَّمَهَا كِتَابُهَا، عَلَّمَهُمَا كِتَابُهُمَا، عَلَّمَهُمْ كِتَابُهُمْ، عَلَّمَهُنَّ كِتَابُهُنَّ. وَتُسَمَّى هَذِهِ بِـ«الضَّمَائِرِ الْمُتَّصِلَةِ».",
+          "uz": "«Kitobi uni o'rgatdi», «kitobi uni (ayolni) o'rgatdi», «kitobi ikkovini o'rgatdi», «kitobi ularni o'rgatdi», «kitobi ularni (ayollarni) o'rgatdi». Bular «qo'shilgan zamirlar» deb ataladi."
+        },
+        {
+          "type": "para",
+          "ar": "(١) «أَنَا»: لِلْمُتَكَلِّمِ الْوَاحِدِ .. مُذَكَّرًا كَانَ، أَوْ مُؤَنَّثًا، وَ«نَحْنُ»: لِلْمُتَكَلِّمِ وَمَعَهُ غَيْرُهُ .. سَوَاءٌ كَانَ غَيْرُهُ وَاحِدًا، أَوْ أَكْثَرَ، مِنَ الذُّكُورِ، أَوِ الْإِنَاثِ.",
+          "uz": "(1-izoh) «أَنَا» — yolg'iz so'zlovchi uchun, erkak bo'ladimi, ayol bo'ladimi. «نَحْنُ» — so'zlovchi va u bilan birga boshqalar uchun; boshqasi bitta bo'ladimi, ko'p bo'ladimi, erkak yoki ayol bo'ladimi — farqi yo'q."
+        },
+        {
+          "type": "para",
+          "ar": "وَ«أَنْتَ»: لِلْمُخَاطَبِ، وَ«أَنْتِ»: لِلْمُخَاطَبَةِ، وَ«أَنْتُمَا»: لِلْمُخَاطَبَيْنِ، أَوِ الْمُخَاطَبَتَيْنِ، وَ«أَنْتُمْ»: لِلْمُخَاطَبِينَ، وَ«أَنْتُنَّ»: لِلْمُخَاطَبَاتِ.",
+          "uz": "«أَنْتَ» — murojaat qilinayotgan erkak uchun; «أَنْتِ» — ayol uchun; «أَنْتُمَا» — ikki erkak yoki ikki ayol uchun; «أَنْتُمْ» — erkaklar uchun; «أَنْتُنَّ» — ayollar uchun."
+        },
+        {
+          "type": "para",
+          "ar": "وَ«هُوَ»: لِلْغَائِبِ، وَ«هِيَ»: لِلْغَائِبَةِ، وَ«هُمَا»: لِلْغَائِبَيْنِ، أَوِ الْغَائِبَتَيْنِ، وَ«هُمْ»: لِلْغَائِبِينَ، وَ«هُنَّ»: لِلْغَائِبَاتِ. فَلِلْمُتَكَلِّمِ: اثْنَانِ، وَلِلْمُخَاطَبِ: خَمْسَةٌ، وَلِلْغَائِبِ: خَمْسَةٌ أَيْضًا. وَعَلَى هَذَا التَّرْتِيبِ بَقِيَّةُ الضَّمَائِرِ.",
+          "uz": "«هُوَ» — g'oyib erkak uchun; «هِيَ» — g'oyib ayol uchun; «هُمَا» — ikki g'oyib erkak yoki ayol uchun; «هُمْ» — g'oyib erkaklar uchun; «هُنَّ» — g'oyib ayollar uchun. Demak, so'zlovchi uchun ikkita, murojaat qilinuvchi uchun beshta, g'oyib uchun ham beshta. Qolgan zamirlar ham shu tartibda."
+        },
+        {
+          "type": "para",
+          "ar": "وَتَخْتَصُّ ضَمَائِرُ التَّكَلُّمِ وَالْخِطَابِ بِالْعُقَلَاءِ، وَأَمَّا ضَمَائِرُ الْغَيْبَةِ، فَتَصْلُحُ لِلْعُقَلَاءِ وَغَيْرِهِمْ إِلَّا «الْوَاوَ» وَ«هُمْ» .. فَتَخْتَصَّانِ بِالْعُقَلَاءِ مِنَ الذُّكُورِ، فَلَا يَصِحُّ أَنْ يُقَالَ: «النُّقُودُ صُرِفُوا لِأَرْبَابِهِمْ». وَالصَّوَابُ: النُّقُودُ صُرِفَتْ لِأَرْبَابِهَا. وَلَا أَنْ يُقَالَ: «الْبَنَاتُ لَا يَسْتَطِيعُونَ أَنْ يُفَارِقُوا أُمَّهَاتِهِمْ». وَالصَّوَابُ: الْبَنَاتُ لَا يَسْتَطِعْنَ أَنْ يُفَارِقْنَ أُمَّهَاتِهِنَّ.",
+          "uz": "So'zlovchi va murojaat zamirlari faqat aqlli zotlarga xos. G'oyiblik zamirlari esa aqlli zotlarga ham, boshqalarga ham yaraydi; faqat «vov» va «هُمْ» bundan mustasno — ular erkak aqlli zotlarga xos. Shuning uchun «النُّقُودُ صُرِفُوا لِأَرْبَابِهِمْ» deyish to'g'ri emas; to'g'risi: «Pullar egalariga sarflandi». «الْبَنَاتُ لَا يَسْتَطِيعُونَ أَنْ يُفَارِقُوا أُمَّهَاتِهِمْ» deyish ham noto'g'ri; to'g'risi: «Qizlar onalaridan ajrala olmaydilar»."
+        }
+      ],
+      "exercise": [],
+      "tables": [
+        {
+          "title": "Zamirlar jadvali",
+          "titleAr": "جَدْوَلُ الضَّمَائِرِ",
+          "layout": "grid",
+          "columns": [
+            "ajralgan — raf'",
+            "ajralgan — nasb",
+            "qo'shilgan — fe'l bilan",
+            "qo'shilgan — ism bilan",
+            "izoh"
+          ],
+          "rows": [
+            {
+              "group": "مُتَكَلِّم",
+              "label": "",
+              "cells": [
+                "أَنَا",
+                "إِيَّايَ",
+                "كَتَبْتُ",
+                "كِتَابِي",
+                "Yolg'iz so'zlovchi uchun; erkak yoki ayol"
+              ]
+            },
+            {
+              "group": "مُتَكَلِّم",
+              "label": "",
+              "cells": [
+                "نَحْنُ",
+                "إِيَّانَا",
+                "كَتَبْنَا",
+                "كِتَابُنَا",
+                "So'zlovchi va u bilan birga boshqalar uchun"
+              ]
+            },
+            {
+              "group": "مُخَاطَب",
+              "label": "",
+              "cells": [
+                "أَنْتَ",
+                "إِيَّاكَ",
+                "كَتَبْتَ",
+                "كِتَابُكَ",
+                "Murojaat qilinayotgan erkak uchun"
+              ]
+            },
+            {
+              "group": "مُخَاطَب",
+              "label": "",
+              "cells": [
+                "أَنْتِ",
+                "إِيَّاكِ",
+                "كَتَبْتِ",
+                "كِتَابُكِ",
+                "Murojaat qilinayotgan ayol uchun"
+              ]
+            },
+            {
+              "group": "مُخَاطَب",
+              "label": "",
+              "cells": [
+                "أَنْتُمَا",
+                "إِيَّاكُمَا",
+                "كَتَبْتُمَا",
+                "كِتَابُكُمَا",
+                "Ikki erkak yoki ikki ayol uchun"
+              ]
+            },
+            {
+              "group": "مُخَاطَب",
+              "label": "",
+              "cells": [
+                "أَنْتُمْ",
+                "إِيَّاكُمْ",
+                "كَتَبْتُمْ",
+                "كِتَابُكُمْ",
+                "Murojaat qilinayotgan erkaklar uchun"
+              ]
+            },
+            {
+              "group": "مُخَاطَب",
+              "label": "",
+              "cells": [
+                "أَنْتُنَّ",
+                "إِيَّاكُنَّ",
+                "كَتَبْتُنَّ",
+                "كِتَابُكُنَّ",
+                "Murojaat qilinayotgan ayollar uchun"
+              ]
+            },
+            {
+              "group": "غَائِب",
+              "label": "",
+              "cells": [
+                "هُوَ",
+                "إِيَّاهُ",
+                "كَتَبَ",
+                "كِتَابُهُ",
+                "G'oyib erkak uchun"
+              ]
+            },
+            {
+              "group": "غَائِب",
+              "label": "",
+              "cells": [
+                "هِيَ",
+                "إِيَّاهَا",
+                "كَتَبَتْ",
+                "كِتَابُهَا",
+                "G'oyib ayol uchun"
+              ]
+            },
+            {
+              "group": "غَائِب",
+              "label": "",
+              "cells": [
+                "هُمَا",
+                "إِيَّاهُمَا",
+                "كَتَبَا، كَتَبَتَا",
+                "كِتَابُهُمَا",
+                "Ikki g'oyib erkak yoki ikki g'oyib ayol uchun"
+              ]
+            },
+            {
+              "group": "غَائِب",
+              "label": "",
+              "cells": [
+                "هُمْ",
+                "إِيَّاهُمْ",
+                "كَتَبُوا",
+                "كِتَابُهُمْ",
+                "G'oyib erkaklar uchun"
+              ]
+            },
+            {
+              "group": "غَائِب",
+              "label": "",
+              "cells": [
+                "هُنَّ",
+                "إِيَّاهُنَّ",
+                "كَتَبْنَ",
+                "كِتَابُهُنَّ",
+                "G'oyib ayollar uchun"
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

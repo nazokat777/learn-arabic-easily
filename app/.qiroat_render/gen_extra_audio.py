@@ -74,6 +74,13 @@ def collect() -> list[str]:
                 if b.get("intro"):
                     pairs.append(b["intro"])
                 pairs.extend(b.get("items", []))
+            # Mashq savollari ham tinglanadi - ular ham ro'yxatga kiradi.
+            pairs.extend(L.get("exercise", []))
+            for t in L.get("tables", []):
+                for row in t["rows"]:
+                    for cell in row["cells"]:
+                        if LETTER.search(cell):
+                            want(cell.strip())
             for pr in pairs:
                 for s in split_sentences(pr.get("ar", "")):
                     want(s)

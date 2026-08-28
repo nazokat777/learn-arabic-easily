@@ -113,6 +113,13 @@ def needed() -> dict:
                 if b.get("intro"):
                     pairs.append(b["intro"])
                 pairs.extend(b.get("items", []))
+            # Mashq savollari ham tinglanadi.
+            pairs.extend(L.get("exercise", []))
+            for t in L.get("tables", []):
+                for row in t["rows"]:
+                    for cell in row["cells"]:
+                        if LETTER.search(cell):
+                            want.setdefault(cell.strip(), f"nahv {L['num']}-dars jadvali")
             for pr in pairs:
                 for s in split_sentences(pr.get("ar", "")):
                     if not LETTER.search(s):

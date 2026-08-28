@@ -4,6 +4,7 @@ import '../main.dart';
 import '../content.dart';
 import '../theme.dart';
 import '../widgets/entrance.dart';
+import '../widgets/grammar_table.dart';
 import '../widgets/speak_button.dart';
 import 'lesson/sentence_text.dart';
 
@@ -181,6 +182,11 @@ class NahvLessonScreen extends StatelessWidget {
                   child: _Bilingual(pair: b.items[i], bullet: '${i + 1}.'),
                 ),
             const SizedBox(height: 12),
+          ],
+          for (final t in lesson.tables) ...[
+            const SizedBox(height: 8),
+            GrammarTable(table: t),
+            const SizedBox(height: 8),
           ],
           if (lesson.exercise.isNotEmpty) ...[
             const SizedBox(height: 8),

@@ -20,10 +20,27 @@ oxirgi harakati va undan keyingi tabiiy tanaffus butunligicha qoladi.
 Ko'p so'zli matn (jumla) uchun bu kerak emas: unda so'zlar allaqachon
 o'zaro bog'lanib o'qiladi, oxirgi so'z esa tabiiy ravishda vaqfda tugaydi.
 """
-import asyncio, re, subprocess
+import asyncio, json, re, subprocess
 from pathlib import Path
 
 import edge_tts
+
+
+def _letter_names() -> dict:
+    """Harf -> uning arabcha nomi (أ -> أَلِف)."""
+    p = Path("assets/content/letters.json")
+    if not p.exists():
+        return {}
+    return {L["ar"]: L["name_ar"]
+            for L in json.loads(p.read_text(encoding="utf-8"))["letters"]}
+
+
+LETTER_NAME = _letter_names()
+# Hamzali shakllar letters.json da alohida yozilmagan, lekin yolg'iz kelganda
+# ular ham «أَلِف» deb o'qiladi.
+for _alt in ("أ", "إ", "آ", "ء"):
+    LETTER_NAME.setdefault(_alt, LETTER_NAME.get("ا", ""))
+LETTER_NAME = {k: v for k, v in LETTER_NAME.items() if v}
 
 # So'zdan keyin qo'yiladigan bog'lovchi. «وَ» tanlandi: bir bo'g'inli,
 # har qanday so'zdan keyin kelaveradi va so'zning oxirgi harakatiga
@@ -47,8 +64,16 @@ def tail_kerakmi(text: str) -> bool:
 
 
 def matn_ozagi(text: str) -> str:
-    """Matnning oxiridagi tinish belgilarisiz ko'rinishi."""
-    return text.strip().rstrip(TERM).strip()
+    """Sintezga beriladigan matn: oxiridagi tinish belgilarisiz.
+
+    Yolg'iz harf («أ.» kabi bosh harflar) qolsa, uning o'rniga harf NOMI
+    o'qiladi: edge-tts yalang'och harfdan jimlik chiqaradi, arabchada esa
+    bunday bosh harf aynan nomi bilan o'qiladi.
+    """
+    t = text.strip().rstrip(TERM).strip()
+    # Qavs kabi belgilar ham qolib ketmasin.
+    core = t.strip("()[]«»\"'‘’ ")
+    return LETTER_NAME.get(core, t)
 
 
 async def _stream(text: str, voice: str, rate: str, dest_raw: Path) -> float | None:

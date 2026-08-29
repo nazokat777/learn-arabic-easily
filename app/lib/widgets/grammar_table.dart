@@ -4,6 +4,10 @@ import '../content.dart';
 import '../theme.dart';
 import 'speak_button.dart';
 
+/// Katakda arab harfi bormi.
+final RegExp _arabHarf = RegExp('[ء-يٱ-ۓ]');
+bool _arabchami(String s) => _arabHarf.hasMatch(s);
+
 /// Kitobdagi grammatika jadvali.
 ///
 /// Qiroat darslarida ham, nahv darslarida ham bir xil ko'rinadi, shuning
@@ -84,13 +88,23 @@ class GrammarTable extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SpeakButton(text: r.cells[i], id: 'bob-${r.cells[i]}', size: 18),
+                  // O'zbekcha izoh katagi (masalan zamirlar jadvalidagi
+                  // «G'oyib ayol uchun») arabcha emas: uni o'qitib
+                  // bo'lmaydi va arab shriftida chizish ham noto'g'ri.
+                  if (_arabchami(r.cells[i]))
+                    SpeakButton(text: r.cells[i], id: 'bob-${r.cells[i]}', size: 18)
+                  else
+                    const SizedBox(width: 34),
                   const SizedBox(width: 6),
                   Expanded(
-                    child: Text(r.cells[i],
-                        textDirection: TextDirection.rtl,
-                        textAlign: TextAlign.right,
-                        style: AppTheme.arabic(size: 19, color: AppColors.ink)),
+                    child: _arabchami(r.cells[i])
+                        ? Text(r.cells[i],
+                            textDirection: TextDirection.rtl,
+                            textAlign: TextAlign.right,
+                            style: AppTheme.arabic(size: 19, color: AppColors.ink))
+                        : Text(r.cells[i],
+                            style: const TextStyle(
+                                fontSize: 13, color: Colors.black54, height: 1.3)),
                   ),
                   const SizedBox(width: 10),
                   SizedBox(

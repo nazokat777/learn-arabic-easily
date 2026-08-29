@@ -82,7 +82,13 @@ def collect() -> list[str]:
                         if LETTER.search(cell):
                             want(cell.strip())
             for pr in pairs:
-                for s in split_sentences(pr.get("ar", "")):
+                # Ilova BUTUN matnni bir tugma bilan o'qiydi (qoida, xatboshi,
+                # ro'yxat bandi, mashq savoli), shuning uchun avval butunligicha
+                # kerak; jumlalari va so'zlari esa alohida bosilishi mumkin.
+                whole = pr.get("ar", "").strip()
+                if LETTER.search(whole):
+                    want(whole)
+                for s in split_sentences(whole):
                     want(s)
                     for w in (x for x in ARABIC_RUN.findall(s) if LETTER.search(x)):
                         want(w)

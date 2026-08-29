@@ -121,7 +121,11 @@ def needed() -> dict:
                         if LETTER.search(cell):
                             want.setdefault(cell.strip(), f"nahv {L['num']}-dars jadvali")
             for pr in pairs:
-                for s in split_sentences(pr.get("ar", "")):
+                # Ilova butun matnni ham o'qiydi - audit ham shuni tekshirsin.
+                whole = pr.get("ar", "").strip()
+                if LETTER.search(whole):
+                    want.setdefault(whole, f"nahv {L['num']}-dars (butun matn)")
+                for s in split_sentences(whole):
                     if not LETTER.search(s):
                         continue
                     want.setdefault(s, f"nahv {L['num']}-dars")

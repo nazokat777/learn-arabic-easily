@@ -32,16 +32,36 @@ TAIL = "وَ"          # وَ
 
 _SPACE = re.compile(r"\s")
 
+# Jumla oxiridagi tinish belgilari.
+TERM = ".؟!؛?:،,…"
 
-def yolgiz_soz(text: str) -> bool:
-    """Matn bitta so'zmi (ya'ni vaqf muammosi bormi)."""
-    t = text.strip()
-    return bool(t) and not _SPACE.search(t) and t[-1] not in ".؟!؛?:،,"
+
+def tail_kerakmi(text: str) -> bool:
+    """Bu matnning oxirgi so'zi vaqf shaklida o'qiladimi.
+
+    Ha - deyarli har doim: yolg'iz so'z ham, butun jumla ham. Farqi shundaki,
+    jumlada avval oxirgi tinish belgisini olib tashlaymiz, aks holda «وَ»
+    nuqtadan keyin qoladi va oxirgi so'z baribir vaqfda o'qiladi.
+    """
+    return bool(matn_ozagi(text))
+
+
+def matn_ozagi(text: str) -> str:
+    """Matnning oxiridagi tinish belgilarisiz ko'rinishi."""
+    return text.strip().rstrip(TERM).strip()
 
 
 async def _stream(text: str, voice: str, rate: str, dest_raw: Path) -> float | None:
-    """Ovozni yozadi; «وَ» boshlanadigan vaqtni qaytaradi (topilmasa None)."""
-    comm = edge_tts.Communicate(f"{text} {TAIL}", voice, rate=rate,
+    """Ovozni yozadi; qayerdan kesish kerakligini (soniya) qaytaradi.
+
+    Kesuv nuqtasi ikki o'lchovning KATTAsi:
+      * «وَ» boshlanadigan vaqt;
+      * oxirgi haqiqiy so'zning tugash vaqti + 30 ms zaxira.
+    Ikkinchisi kerak: ba'zan «وَ» ning boshlanishi so'zning oxirgi unlisi
+    bilan ustma-ust tushadi va faqat birinchi o'lchov bo'yicha kessak,
+    unli chala qolib ketadi.
+    """
+    comm = edge_tts.Communicate(f"{matn_ozagi(text)} {TAIL}", voice, rate=rate,
                                 boundary="WordBoundary")
     marks = []
     with open(dest_raw, "wb") as f:
@@ -51,9 +71,11 @@ async def _stream(text: str, voice: str, rate: str, dest_raw: Path) -> float | N
             elif ch["type"] == "WordBoundary":
                 marks.append(ch)
     # Oxirgi belgi «وَ» bo'lishi kerak. Bo'lmasa - kesmaymiz, chunki
-    # noto'g'ri joydan kesish so'zni buzadi.
+    # noto'g'ri joydan kesish nutqni buzadi.
     if len(marks) >= 2 and marks[-1]["text"].strip() == TAIL:
-        return marks[-1]["offset"] / 1e7
+        wa_start = marks[-1]["offset"] / 1e7
+        soz_oxiri = (marks[-2]["offset"] + marks[-2]["duration"]) / 1e7 + 0.03
+        return max(wa_start, soz_oxiri)
     return None
 
 
@@ -68,7 +90,7 @@ async def synth(text: str, dest: Path, voice: str, rate: str,
     raw = dest.with_suffix(".raw.mp3")
     cut = None
     try:
-        if yolgiz_soz(text):
+        if tail_kerakmi(text):
             cut = await _stream(text, voice, rate, raw)
             if cut is None:
                 # «وَ» ni ajratib bo'lmadi - qo'shimcha tovush qolib

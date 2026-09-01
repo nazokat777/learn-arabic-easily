@@ -4365,6 +4365,286 @@
           ]
         }
       ]
+    },
+    {
+      "book": 2,
+      "num": 19,
+      "page": 111,
+      "titleAr": "أَنْوَاعُ الْمَعْرِفَةِ — الْعَلَمُ، اسْمُ الْإِشَارَةِ، الْمَوْصُولُ، «أَلْ»، الْمُضَافُ",
+      "title": "Ma'rifaning turlari — alam, ishora ismi, mavsul, «أل», muzof",
+      "rule": {
+        "ar": "وَالْعَلَمُ: اسْمٌ وُضِعَ لِتَعْيِينِ مُسَمَّاهُ بِدُونِ احْتِيَاجٍ إِلَى قَرِينَةٍ؛ كَـ«مُحَمَّدٍ»، وَ«زَيْنَبَ»، وَ«مَكَّةَ»، وَ«الْحِجَازِ».",
+        "uz": "Alam (atoqli ot) — o'z egasini hech qanday qarinaga muhtoj bo'lmay aniqlab beradigan ism; masalan: Muhammad, Zaynab, Makka, Hijoz."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "٣ - وَأَمَّا اسْمُ الْإِشَارَةِ؛ فَهُوَ: «ذَا»، وَ«ذِهِ»، وَ«ذَانِ»، وَ«تَانِ»، أَوْ «ذَيْنِ»، وَ«تَيْنِ»، وَ«أُولَاءِ». وَكَثِيرًا مَا تَلْحَقُهَا «هَا» التَّنْبِيهِ.",
+          "uz": "3 — Ishora ismlari: «ذَا», «ذِهِ», «ذَانِ», «تَانِ» yoki «ذَيْنِ», «تَيْنِ», «أُولَاءِ». Ularga ko'pincha ogohlantirish «ها» si qo'shiladi (هَذَا, هَذِهِ kabi)."
+        },
+        {
+          "type": "para",
+          "ar": "٤ - وَأَمَّا الاِسْمُ الْمَوْصُولُ؛ فَهُوَ: «الَّذِي» وَ«الَّتِي»، وَ«اللَّذَانِ» وَ«اللَّتَانِ»، أَوْ «اللَّذَيْنِ» وَ«اللَّتَيْنِ»، وَ«الَّذِينَ» وَ«اللَّاتِي»، وَ«مَنْ» وَ«مَا». وَلَابُدَّ لِكُلِّ مَوْصُولٍ مِنْ تَكْمِلَةٍ تُذْكَرُ بَعْدَهُ لِتَعْيِينِ مَعْنَاهُ، وَتُسَمَّى «صِلَةً».",
+          "uz": "4 — Mavsul ismlar: «الَّذِي», «الَّتِي», «اللَّذَانِ», «اللَّتَانِ» yoki «اللَّذَيْنِ», «اللَّتَيْنِ», «الَّذِينَ», «اللَّاتِي», «مَنْ», «مَا». Har bir mavsuldan keyin uning ma'nosini aniqlaydigan to'ldiruvchi kelishi shart; u «sila» deb ataladi."
+        },
+        {
+          "type": "para",
+          "ar": "٥ - وَأَمَّا مَا فِيهِ «أَلْ»؛ فَهُوَ: اسْمٌ دَخَلَتْ عَلَيْهِ «أَلْ» فَأَفَادَتْهُ التَّعْرِيفَ؛ نَحْوُ: الرَّجُلُ، وَ: الكِتَابُ. وَلَا تَدْخُلُ «أَلْ» عَلَى الْأَعْلَامِ إِلَّا سَمَاعًا.",
+          "uz": "5 — «أل» qo'shilgani: ustiga «أل» kirib, unga aniqlik bergan ism; masalan: الرَّجُلُ (o'sha kishi), الكِتَابُ (o'sha kitob). «أل» atoqli otlarga faqat eshitilgan (samo'iy) holdagina kiradi."
+        },
+        {
+          "type": "para",
+          "ar": "٦ - وَأَمَّا الْمُضَافُ لِوَاحِدٍ مِنَ الْمَعَارِفِ السَّابِقَةِ؛ فَهُوَ: اسْمٌ نُسِبَ إِلَى غَيْرِهِ مِنَ الْمَعَارِفِ فَاكْتَسَبَ مِنْهُ التَّعْرِيفَ؛ نَحْوُ: كِتَابُ مُحَمَّدٍ، وَبَابُ الدَّارِ.",
+          "uz": "6 — Yuqoridagi ma'rifalardan biriga muzof bo'lgani: boshqa ma'rifaga nisbat berilib, undan aniqlik olgan ism; masalan: «Muhammadning kitobi», «uyning eshigi»."
+        },
+        {
+          "type": "para",
+          "ar": "(١) «ذَا»: لِلْوَاحِدِ، وَ«ذِهِ»: لِلْوَاحِدَةِ، وَ«ذَانِ» وَ«تَانِ»: لِلِاثْنَيْنِ وَلِلِاثْنَتَيْنِ، وَ«أُولَاءِ»: لِلْجَمْعِ مُطْلَقًا.",
+          "uz": "(1-izoh) «ذَا» — bitta erkak uchun; «ذِهِ» — bitta ayol uchun; «ذَانِ» va «تَانِ» — ikki erkak va ikki ayol uchun; «أُولَاءِ» — mutlaq ko'plik uchun."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) وَقَدْ تَلْحَقُ «ذَا» الكَافُ وَحْدَهَا، أَوْ مَعَ اللَّامِ، فَيُقَالُ: «ذَاكَ» وَ«ذَلِكَ»، وَتَلْحَقُ «ذَانِ» وَ«تَانِ» وَ«أُولَاءِ» الكَافُ وَحْدَهَا، فَيُقَالُ: «ذَانِكَ» وَ«تَانِكَ» وَ«أُولَئِكَ». وَقَدْ يُشَارُ لِلْوَاحِدَةِ بِـ«تِلْكَ».",
+          "uz": "(2-izoh) «ذَا» ga yolg'iz «ك» yoki «ل» bilan birga qo'shiladi: «ذَاكَ», «ذَلِكَ» deyiladi. «ذَانِ», «تَانِ», «أُولَاءِ» ga yolg'iz «ك» qo'shiladi: «ذَانِكَ», «تَانِكَ», «أُولَئِكَ» deyiladi. Bitta ayolga «تِلْكَ» bilan ham ishora qilinadi."
+        },
+        {
+          "type": "para",
+          "ar": "(٣) «الَّذِي»: لِلْوَاحِدِ، وَ«الَّتِي»: لِلْوَاحِدَةِ، وَ«اللَّذَانِ»: لِلِاثْنَيْنِ، وَ«اللَّتَانِ»: لِلِاثْنَتَيْنِ، وَ«الَّذِينَ»: لِجَمَاعَةِ الذُّكُورِ، وَ«اللَّاتِي»: لِجَمَاعَةِ الْإِنَاثِ، وَ«مَنْ» وَ«مَا» يُسْتَعْمَلَانِ فِي جَمِيعِ مَا ذُكِرَ، غَيْرَ أَنَّ «مَنْ»: تَكُونُ لِلْعَاقِلِ، وَ«مَا»: لِغَيْرِهِ.",
+          "uz": "(3-izoh) «الَّذِي» — bitta erkak; «الَّتِي» — bitta ayol; «اللَّذَانِ» — ikki erkak; «اللَّتَانِ» — ikki ayol; «الَّذِينَ» — erkaklar jamoasi; «اللَّاتِي» — ayollar jamoasi uchun. «مَنْ» va «مَا» sanalganlarning hammasida ishlatiladi; faqat «مَنْ» aqlli zot uchun, «مَا» esa boshqasi uchun bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "(٤) تَقُولُ: أَكْرِمِ الَّذِي عَلَّمَكَ، وَالَّتِي عَلَّمَتْكَ، وَاللَّذَيْنِ عَلَّمَاكَ، وَاللَّتَيْنِ عَلَّمَتَاكَ، وَالَّذِينَ عَلَّمُوكَ، وَاللَّاتِي عَلَّمْنَكَ، وَمَنْ عَلَّمَكَ، أَوْ عَلَّمَتْكَ، وَاحْفَظْ مَا تَعَلَّمْتَهُ … وَهَكَذَا.",
+          "uz": "(4-izoh) Shunday deysan: «Seni o'rgatgan kishini hurmat qil», «seni o'rgatgan ayolni», «seni o'rgatgan ikki kishini», «seni o'rgatgan ikki ayolni», «seni o'rgatganlarni», «seni o'rgatgan ayollarni», «seni o'rgatgan kimsani» va «o'rganganingni saqla» — va hokazo."
+        },
+        {
+          "type": "para",
+          "ar": "(٥) فَلَا يُقَالُ: «الْمُحَمَّدُ» وَ«الْعَلِيُّ» إِلَّا فِي الْمُثَنَّى وَجَمْعِ الْمُذَكَّرِ السَّالِمِ لِتَنْكِيرِهِ حِينَئِذٍ. وَمِنَ الْمَسْمُوعِ: الْحَسَنُ، وَالْحُسَيْنُ، وَالْفَضْلُ، وَالْحَارِثُ، وَالنُّعْمَانُ.",
+          "uz": "(5-izoh) «الْمُحَمَّد», «الْعَلِيّ» deb aytilmaydi; faqat ikkilik va jam'i muzakkari solimda aytiladi, chunki u holda ism nakiraga aylanadi. Eshitilganlaridan: الْحَسَن, الْحُسَيْن, الْفَضْل, الْحَارِث, النُّعْمَان."
+        },
+        {
+          "type": "para",
+          "ar": "نَحْوُ: كِتَابِي، وَكِتَابُ مُحَمَّدٍ، وَكِتَابُ هَذَا، وَكِتَابُ الَّذِي كَانَ مَعَنَا، وَكِتَابُ الْأُسْتَاذِ.",
+          "uz": "Masalan: «kitobim», «Muhammadning kitobi», «bunikining kitobi», «biz bilan birga bo'lgan kishining kitobi», «ustozning kitobi»."
+        },
+        {
+          "type": "para",
+          "ar": "٧ - وَأَمَّا الْمُعَرَّفُ بِالنِّدَاءِ؛ فَهُوَ: مَا قُصِدَ تَعْيِينُهُ بَعْدَ حَرْفِ نِدَاءٍ؛ كَـ«يَا غُلَامُ».",
+          "uz": "7 — Nido bilan ma'rifa bo'lgani: nido harfidan keyin kelib, aniqlanishi ko'zda tutilgan ism; masalan: «يَا غُلَامُ» (ey bola)."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "أَمْثِلَةٌ",
+            "uz": "Misollar"
+          },
+          "items": [
+            {
+              "ar": "١ - لِلنَّكِرَةِ: بَيْتٌ، بُسْتَانٌ، فَرَسٌ، قَلَمٌ، يَدٌ، دَوَاةٌ، وَرَقَةٌ، عَيْنٌ، سَفِينَةٌ، نَهْرٌ.",
+              "uz": "1 — Nakiraga: bir uy, bir bog', bir ot, bir qalam, bir qo'l, bir siyohdon, bir varaq, bir ko'z (buloq), bir kema, bir daryo."
+            },
+            {
+              "ar": "٢ - لِلْمُعَرَّفِ بِـ«أَلْ»: الْبَيْتُ، الْبُسْتَانُ، الْفَرَسُ، الْقَلَمُ، الدَّوَاةُ، الْيَدُ، الْوَرَقَةُ، الْعَيْنُ، السَّفِينَةُ، النَّهْرُ.",
+              "uz": "2 — «أل» bilan ma'rifa bo'lganiga: o'sha uy, o'sha bog', o'sha ot, o'sha qalam, o'sha siyohdon, o'sha qo'l, o'sha varaq, o'sha ko'z, o'sha kema, o'sha daryo."
+            },
+            {
+              "ar": "٣ - لِلْمُعَرَّفِ بِالْإِضَافَةِ: بَيْتُكُمْ، بُسْتَانُ إِبْرَاهِيمَ، فَرَسُ هَذَا، قَلَمُ الَّذِي جَاءَ، دَوَاةُ الكَاتِبِ، يَدِي، وَرَقَةُ عَامِرٍ، عَيْنُ تِلْكَ، سَفِينَةُ الَّذِينَ قَدِمُوا أَمْسِ، نَهْرُ النِّيلِ.",
+              "uz": "3 — Izofa bilan ma'rifa bo'lganiga: uyingiz, Ibrohimning bog'i, bunikining oti, kelgan kishining qalami, kotibning siyohdoni, qo'lim, Omirning varag'i, u ayolning ko'zi, kecha kelganlarning kemasi, Nil daryosi."
+            },
+            {
+              "ar": "٤ - لِلْمُعَرَّفِ بِالنِّدَاءِ: يَا رَجُلُ، يَا غُلَامُ، يَا سَقَّاءُ، يَا حُوذِيُّ، يَا شُرْطِيُّ.",
+              "uz": "4 — Nido bilan ma'rifa bo'lganiga: ey kishi, ey bola, ey suvchi, ey aravakash, ey posbon."
+            }
+          ]
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "عَيِّنِ النَّكِرَاتِ، وَأَنْوَاعَ الْمَعَارِفِ فِي هَذِهِ الْعِبَارَاتِ:",
+          "uz": "Quyidagi iboralarda nakiralarni va ma'rifalarning turlarini aniqlang:"
+        },
+        {
+          "ar": "أَوْصَى عَلِيُّ بْنُ أَبِي طَالِبٍ جَيْشَهُ، فَقَالَ: «لَا تُقَاتِلُوا أَعْدَاءَكُمْ حَتَّى يَبْدَأُوكُمْ؛ فَإِنَّكُمْ بِحَمْدِ اللَّهِ عَلَى حُجَّةٍ، وَتَرْكُكُمْ إِيَّاهُمْ حَتَّى يَبْدَأُوكُمْ حُجَّةٌ».",
+          "uz": "Ali ibn Abu Tolib qo'shiniga vasiyat qilib dedi: «Dushmanlaringiz o'zlari boshlamaguncha ular bilan jang qilmanglar; zero, Allohning hamdi bilan, sizlar hujjat ustidasiz, ularni o'zlari boshlaguncha tark etishingiz esa yana bir hujjatdir»."
+        },
+        {
+          "ar": "«أُخْرَى لَكُمْ عَلَيْهِمْ، فَإِذَا كَانَتِ الْهَزِيمَةُ بِإِذْنِ اللَّهِ، فَلَا تَقْتُلُوا مُدْبِرًا، وَلَا تُصِيبُوا مُعْوِرًا، وَلَا تُجْهِزُوا عَلَى جَرِيحٍ، وَلَا تَهِيجُوا النِّسَاءَ بِأَذًى، وَإِنْ شَتَمْنَ أَعْرَاضَكُمْ وَسَبَبْنَ أُمَرَاءَكُمْ، فَإِنَّهُنَّ ضَعِيفَاتُ الْقِوَى وَالْأَنْفُسِ وَالْعُقُولِ».",
+          "uz": "«…bu sizlar uchun ular ustidan yana bir hujjatdir. Alloh izni bilan mag'lubiyat yuz berganda, qochayotganni o'ldirmanglar, himoyasiz qolganga zarba bermanglar, yarador ustiga bostirib bormanglar, ayollarni ozor berib qo'zg'atmanglar — nomuslaringizni haqorat qilsalar, amirlaringizni so'ksalar ham; chunki ular kuch, jon va aql jihatidan zaifdirlar»."
+        },
+        {
+          "ar": "دَخَلَ الْمَأْمُونُ يَوْمًا بَيْتَ الدِّيوَانِ، فَرَأَى غُلَامًا صَغِيرًا عَلَى أُذُنِهِ قَلَمٌ، فَقَالَ لَهُ: مَنْ أَنْتَ؟",
+          "uz": "Ma'mun bir kuni devon uyiga kirdi va qulog'iga qalam qistirgan kichkina bolani ko'rib, unga: «Sen kimsan?» dedi."
+        },
+        {
+          "ar": "قَالَ: أَنَا النَّاشِئُ فِي دَوْلَتِكَ، الْمُتَقَلِّبُ فِي نِعْمَتِكَ، الْمُؤَمَّلُ لِخِدْمَتِكَ؛ الْحَسَنُ بْنُ رَجَاءٍ.",
+          "uz": "U dedi: «Men sening davlatingda voyaga yetgan, ne'matingda yashagan, xizmatingga umid bog'langan kishiman — Hasan ibn Rajo»."
+        },
+        {
+          "ar": "فَعَجِبَ الْمَأْمُونُ مِنْهُ، وَقَالَ: بِالْإِحْسَانِ فِي الْبَدِيهَةِ تَفَاضَلَتِ الْعُقُولُ، ارْفَعُوا هَذَا الْغُلَامَ فَوْقَ مَرْتَبَتِهِ.",
+          "uz": "Ma'mun undan hayratlanib dedi: «Aqllar birdaniga chiroyli javob berish bilan bir-biridan ustun bo'ladi. Bu bolani martabasidan yuqoriga ko'taringlar»."
+        },
+        {
+          "ar": "(١) أَعْوَرَ الْفَارِسُ: إِذَا بَدَا فِيهِ مَوْضِعُ خَلَلٍ لِلضَّرْبِ.",
+          "uz": "(1-izoh) «A'vara al-foris» — chavandozda zarbaga ochiq, himoyasiz joy ko'rinib qolishi."
+        }
+      ]
+    },
+    {
+      "book": 2,
+      "num": 20,
+      "page": 114,
+      "titleAr": "٥ - تَقْسِيمُ الاِسْمِ إِلَى مُنَوَّنٍ وَغَيْرِ مُنَوَّنٍ",
+      "title": "5. Ismning tanvinli va tanvinsizga bo'linishi",
+      "rule": {
+        "ar": "يَنْقَسِمُ الاِسْمُ إِلَى مُنَوَّنٍ وَغَيْرِ مُنَوَّنٍ. فَالْمُنَوَّنُ: كُلُّ اسْمٍ مُجَرَّدٍ مِنْ «أَلْ» وَالْإِضَافَةِ، لَحِقَ آخِرَهُ التَّنْوِينُ؛ وَهُوَ نُونٌ سَاكِنَةٌ تُحْذَفُ خَطًّا، وَتُثْبَتُ لَفْظًا فِي غَيْرِ الْوَقْفِ؛ كَـ«رَجُلٍ». وَغَيْرُ الْمُنَوَّنِ: كُلُّ اسْمٍ مُجَرَّدٍ مِنْ «أَلْ» وَالْإِضَافَةِ، لَمْ يَلْحَقْ آخِرَهُ التَّنْوِينُ؛ كَـ«أَفْضَلَ».",
+        "uz": "Ism tanvinli va tanvinsizga bo'linadi. Tanvinli — «أل» dan ham, izofadan ham xoli bo'lib, oxiriga tanvin qo'shilgan har bir ism; tanvin — yozuvda tushiriladigan, vaqfdan boshqa holatda talaffuzda saqlanadigan sokin nundir; masalan: رَجُلٍ. Tanvinsiz — «أل» dan ham, izofadan ham xoli bo'lib, oxiriga tanvin qo'shilmagan ism; masalan: أَفْضَلَ."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَلَا يَلْحَقُ التَّنْوِينُ الْعَلَمَ إِذَا كَانَ مُؤَنَّثًا؛ كَـ«فَاطِمَةَ»، وَ«حَمْزَةَ»، وَ«زَيْنَبَ».",
+          "uz": "Atoqli ot muannas bo'lsa, unga tanvin qo'shilmaydi; masalan: فَاطِمَةَ, حَمْزَةَ, زَيْنَبَ."
+        },
+        {
+          "type": "para",
+          "ar": "أَوْ أَعْجَمِيًّا؛ كَـ«إِدْرِيسَ»، وَ«بَطْلَيْمُوسَ». أَوْ مُرَكَّبًا مَزْجِيًّا؛ كَـ«حَضْرَمَوْتَ»، وَ«بُخْتَنَصَّرَ». أَوْ مَزِيدًا فِيهِ أَلِفٌ وَنُونٌ؛ كَـ«عُثْمَانَ»، وَ«سُلَيْمَانَ». أَوْ مُوَازِنًا لِلْفِعْلِ؛ كَـ«أَحْمَدَ»، وَ«يَزِيدَ». أَوْ مَعْدُولًا بِهِ عَنْ لَفْظٍ آخَرَ؛ كَـ«عُمَرَ» وَ«زُفَرَ».",
+          "uz": "Yoki ajnabiy (arab tilidan bo'lmagan) bo'lsa; masalan: إِدْرِيس, بَطْلَيْمُوس. Yoki qo'shma (murakkab mazjiy) bo'lsa; masalan: حَضْرَمَوْت, بُخْتَنَصَّر. Yoki oxiriga alif va nun qo'shilgan bo'lsa; masalan: عُثْمَان, سُلَيْمَان. Yoki fe'l vazniga o'xshash bo'lsa; masalan: أَحْمَد, يَزِيد. Yoki boshqa shakldan burilgan (ma'dul) bo'lsa; masalan: عُمَر, زُفَر."
+        },
+        {
+          "type": "para",
+          "ar": "(١) سَوَاءٌ كَانَ التَّأْنِيثُ مَعْنَوِيًّا وَلَفْظِيًّا، أَوْ مَعْنَوِيًّا فَقَطْ، أَوْ لَفْظِيًّا فَقَطْ.",
+          "uz": "(1-izoh) Muannaslik ma'naviy va lafziy bo'ladimi, faqat ma'naviy yoki faqat lafziy bo'ladimi — farqi yo'q."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) أَيْ: لَيْسَ مِنْ وَضْعِ الْعَرَبِ، فَمِنْ ذَلِكَ: إِبْرَاهِيمُ، وَإِسْمَاعِيلُ، وَجِبْرِيلُ، وَمِيكَائِيلُ، وَرَمْسِيسُ، وَكَذَلِكَ: بِرْنَارُ، وَهِمْبِرْتُ، وَاغْنَاتِيفُ، وَمَا أَشْبَهَهَا مِنْ أَسْمَاءِ الْإِفْرِنْجِ.",
+          "uz": "(2-izoh) Ya'ni arablar qo'ygan ism emas. Bunga: Ibrohim, Ismoil, Jibril, Mikoil, Ramsis kiradi; shuningdek Bernar, Humbert, Ignatiy kabi yevropacha ismlar ham."
+        },
+        {
+          "type": "para",
+          "ar": "(٣) هُوَ كُلُّ كَلِمَتَيْنِ امْتَزَجَتَا مَعًا، وَصَارَتَا بِمَنْزِلَةِ كَلِمَةٍ وَاحِدَةٍ، وَيَظْهَرُ الْإِعْرَابُ عَلَى ثَانِيَتِهِمَا.",
+          "uz": "(3-izoh) Bu — bir-biriga qo'shilib ketgan, bitta so'z o'rniga aylangan ikki so'z; i'rob ularning ikkinchisida ko'rinadi."
+        },
+        {
+          "type": "para",
+          "ar": "(٤) خَرَجَ نَحْوُ: عِنَانٍ؛ عَلَمًا لِأَصَالَةِ النُّونِ فِيهِ.",
+          "uz": "(4-izoh) «عِنَان» kabi ism bundan chiqadi (atoqli ot bo'lsa ham), chunki undagi nun so'zning asl harfidir."
+        },
+        {
+          "type": "para",
+          "ar": "(٥) الْأَوَّلُ عَلَى وَزْنِ «أَشْرَبُ»، وَالثَّانِي عَلَى وَزْنِ «يَبِيعُ».",
+          "uz": "(5-izoh) Birinchisi «أَشْرَبُ» vaznida, ikkinchisi «يَبِيعُ» vaznidadir."
+        },
+        {
+          "type": "para",
+          "ar": "(٦) وَرَدَ فِي اللُّغَةِ خَمْسَةَ عَشَرَ عَلَمًا عَلَى وَزْنِ «فُعَلَ» غَيْرَ مُنَوَّنَةٍ، وَهِيَ: بُلَعُ، وَثُعَلُ، وَجُشَمُ، وَجُمَحُ، وَدُلَفُ، وَزُحَلُ، وَزُفَرُ، وَعُصَمُ، وَعُمَرُ، وَقُثَمُ، وَقُزَحُ، وَمُضَرُ، وَهُبَلُ، وَهُذَلُ .. فَقَدَّرَ النُّحَاةُ أَنَّهَا مَعْدُولَةٌ عَنْ وَزْنِ «فَاعِلٍ»؛ كَـ«عَامِرٍ» وَ«عَاصِمٍ».",
+          "uz": "(6-izoh) Tilda «فُعَل» vaznida tanvinsiz keladigan o'n beshta atoqli ot kelgan: Bula', Sua'l, Jusham, Jumah, Dulaf, Zuhal, Zufar, Usam, Umar, Qusam, Quzah, Muzar, Hubal, Huzal. Nahvchilar ularni «فَاعِل» vaznidan (masalan Omir, Osim) burilgan deb hisoblaganlar."
+        },
+        {
+          "type": "para",
+          "ar": "وَلَا يَلْحَقُ الصِّفَةَ إِذَا كَانَتْ عَلَى وَزْنِ «فَعْلَانَ»؛ كَـ«عَطْشَانَ»، أَوْ عَلَى وَزْنِ «أَفْعَلَ»؛ كَـ«أَفْضَلَ»، أَوْ مَعْدُولًا بِهَا عَنْ لَفْظٍ آخَرَ؛ كَـ«مَثْنَى»، وَ«ثُلَاثَ»، وَ«أُخَرَ».",
+          "uz": "Sifat «فَعْلَان» vaznida bo'lsa (masalan عَطْشَان — chanqagan), yoki «أَفْعَل» vaznida bo'lsa (masalan أَفْضَل — afzalroq), yoki boshqa shakldan burilgan bo'lsa (masalan مَثْنَى — ikkitadan, ثُلَاث — uchtadan, أُخَر — boshqalar), unga ham tanvin qo'shilmaydi."
+        },
+        {
+          "type": "para",
+          "ar": "وَلَا يَلْحَقُ الاِسْمَ الْمُنْتَهِيَ بِأَلِفِ التَّأْنِيثِ الْمَقْصُورَةِ، أَوِ الْمَمْدُودَةِ؛ كَـ«حُبْلَى»، وَ«حَسْنَاءَ».",
+          "uz": "Oxiri muannaslik alifi bilan tugagan ismga ham tanvin qo'shilmaydi — maqsura bo'ladimi, mamduda bo'ladimi; masalan: حُبْلَى (homilador), حَسْنَاء (go'zal)."
+        },
+        {
+          "type": "para",
+          "ar": "وَلَا جَمْعَ التَّكْسِيرِ الْمُمَاثِلَ لِـ«مَسَاجِدَ» وَ«مَصَابِيحَ»؛ كَـ«دَرَاهِمَ»، وَ«دَنَانِيرَ». وَيُسَمَّى كُلُّ نَوْعٍ مِنْ هَذِهِ الْأَنْوَاعِ الاِثْنَيْ عَشَرَ مَمْنُوعًا مِنَ الصَّرْفِ.",
+          "uz": "«مَسَاجِد» va «مَصَابِيح» ga o'xshash jam'i taksirga ham qo'shilmaydi; masalan: دَرَاهِم (dirhamlar), دَنَانِير (dinorlar). Bu o'n ikki turning har biri «man'i sarf» (tanvin olmaydigan) deb ataladi."
+        },
+        {
+          "type": "para",
+          "ar": "(١) «مَثْنَى» مَعْدُولٌ عَنْ «اثْنَيْنِ .. اثْنَيْنِ»، وَ«ثُلَاثَ» مَعْدُولٌ عَنْ «ثَلَاثَةٍ … ثَلَاثَةٍ»، وَ«أُخَرُ» مَعْدُولٌ عَنْ: آخَرَ.",
+          "uz": "(1-izoh) «مَثْنَى» — «ikkitadan-ikkitadan» dan burilgan; «ثُلَاثَ» — «uchtadan-uchtadan» dan; «أُخَر» esa «آخَر» dan burilgan."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) يُسَمَّى هَذَا الْوَزْنُ بِـ«صِيغَةِ مُنْتَهَى الْجُمُوعِ».",
+          "uz": "(2-izoh) Bu vazn «siyg'atu muntahal-jumu'» (ko'pliklarning eng yuqori shakli) deb ataladi."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "أَمْثِلَةٌ",
+            "uz": "Misollar"
+          },
+          "items": [
+            {
+              "ar": "١ - لِلْعَلَمِ الْمُؤَنَّثِ: سُعَادُ، مَكَّةُ، عَزَّةُ، بُثَيْنَةُ، خَدِيجَةُ.",
+              "uz": "1 — Muannas atoqli otga: Suod, Makka, Azza, Busayna, Xadija."
+            },
+            {
+              "ar": "٢ - لِلْعَلَمِ الْأَعْجَمِيِّ: إِبْرَاهِيمُ، إِسْمَاعِيلُ، آدَمُ، يَعْقُوبُ، يُوسُفُ، يُونُسُ.",
+              "uz": "2 — Ajnabiy atoqli otga: Ibrohim, Ismoil, Odam, Ya'qub, Yusuf, Yunus."
+            },
+            {
+              "ar": "٣ - لِلْعَلَمِ الْمُرَكَّبِ: بَعْلَبَكُّ، بُزُرْجَمِهْرُ، مَعْدِ يْكَرِبُ، حَضْرَمَوْتُ، نِيُويُورْكُ.",
+              "uz": "3 — Qo'shma atoqli otga: Ba'labakk, Buzurgmehr, Ma'dikarib, Hazramavt, Nyu-York."
+            },
+            {
+              "ar": "٤ - لِلْعَلَمِ الْمَزِيدِ فِيهِ أَلِفٌ وَنُونٌ: عُثْمَانُ، مَرْوَانُ، سَحْبَانُ، حَمْدَانُ، شَعْبَانُ.",
+              "uz": "4 — Alif va nun qo'shilgan atoqli otga: Usmon, Marvon, Sahbon, Hamdon, Sha'bon."
+            },
+            {
+              "ar": "٥ - لِلْعَلَمِ الْمُوَازِنِ لِلْفِعْلِ: شَعَبُ، شَمَّرُ، أَشْهَبُ، يَعْلَى، يَشْكُرُ، يَعِيشُ.",
+              "uz": "5 — Fe'l vaznidagi atoqli otga: Sha'ab, Shammar, Ash'hab, Ya'lo, Yashkur, Ya'ish."
+            },
+            {
+              "ar": "٦ - لِلْعَلَمِ الْمَعْدُولِ: عُمَرُ، زُفَرُ، مُضَرُ، قُزَحُ، هُبَلُ، ثُعَلُ، جُمَحُ.",
+              "uz": "6 — Burilgan (ma'dul) atoqli otga: Umar, Zufar, Muzar, Quzah, Hubal, Sua'l, Jumah."
+            },
+            {
+              "ar": "٧ - لِلصِّفَةِ الْمَزِيدِ فِيهَا أَلِفٌ وَنُونٌ: شَبْعَانُ، مَلْآنُ، رَيَّانُ، غَضْبَانُ، ظَمْآنُ.",
+              "uz": "7 — Alif va nun qo'shilgan sifatga: to'q, to'la, qonib ichgan, g'azablangan, chanqagan."
+            },
+            {
+              "ar": "٨ - لِلصِّفَةِ الْمُوَازِنَةِ لِـ«أَفْعَلَ»: أَحْسَنُ، أَعْظَمُ، أَكْثَرُ، أَكْبَرُ، أَعْرَضُ.",
+              "uz": "8 — «أَفْعَل» vaznidagi sifatga: yaxshiroq, ulug'roq, ko'proq, kattaroq, kengroq."
+            },
+            {
+              "ar": "٩ - لِلصِّفَةِ الْمَعْدُولَةِ: رُبَاعُ، خُمَاسُ، سُدَاسُ، سُبَاعُ، ثُمَانُ.",
+              "uz": "9 — Burilgan sifatga: to'rttadan, beshtadan, oltitadan, yettitadan, sakkiztadan."
+            },
+            {
+              "ar": "١٠ - لِلاِسْمِ الْمُنْتَهِي بِأَلِفِ التَّأْنِيثِ الْمَقْصُورَةِ: طُوبَى، حُبَارَى، ذِكْرَى، شَبْعَى، عُلْيَا.",
+              "uz": "10 — Oxiri maqsura muannaslik alifi bilan tugagan ismga: tuba, hubaro (bir qush), zikro (eslatma), shab'a, ulyo (yuksak)."
+            },
+            {
+              "ar": "١١ - لِلاِسْمِ الْمُنْتَهِي بِأَلِفِ التَّأْنِيثِ الْمَمْدُودَةِ: صَحْرَاءُ، كِبْرِيَاءُ، عَاشُورَاءُ، صَنْعَاءُ، عَشْوَاءُ.",
+              "uz": "11 — Oxiri mamduda muannaslik alifi bilan tugagan ismga: sahro, kibriyo, Ashuro, San'o, ashvo."
+            },
+            {
+              "ar": "١٢ - لِصِيغَةِ مُنْتَهَى الْجُمُوعِ: مَسَاجِدُ، مَصَابِيحُ، مَسَائِلُ، تَوَارِيخُ، مَنَابِرُ.",
+              "uz": "12 — «Muntahal-jumu'» shakliga: masjidlar, chiroqlar, masalalar, tarixlar, minbarlar."
+            }
+          ]
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "بَيِّنِ الْمَمْنُوعَ مِنَ الصَّرْفِ فِي الْعِبَارَاتِ الْآتِيَةِ، مَعَ تَبْيِينِ الْمُفْرَدِ، وَالْمُثَنَّى، وَالْجَمْعِ، وَالْمُذَكَّرِ، وَالْمُؤَنَّثِ، وَالنَّكِرَةِ، وَالْمَعْرِفَةِ:",
+          "uz": "Quyidagi iboralarda tanvin olmaydigan (man'i sarf) so'zlarni ko'rsating; shu bilan birga birlik, ikkilik, ko'plik, muzakkar, muannas, nakira va ma'rifani ham ajrating:"
+        },
+        {
+          "ar": "خُلَفَاءُ بَنِي أُمَيَّةَ أَرْبَعَةَ عَشَرَ، أَوَّلُهُمْ: مُعَاوِيَةُ بْنُ أَبِي سُفْيَانَ، وَآخِرُهُمْ: مَرْوَانُ ابْنُ مُحَمَّدٍ، وَمُدَّةُ خِلَافَتِهِمْ: اثْنَتَانِ وَتِسْعُونَ سَنَةً.",
+          "uz": "Umaviylar xalifalari o'n to'rt kishi: birinchisi Muoviya ibn Abu Sufyon, oxirgisi Marvon ibn Muhammad; ularning xalifalik muddati to'qson ikki yil."
+        },
+        {
+          "ar": "هَرَاةُ: مَدِينَةٌ عَظِيمَةٌ بِخُرَاسَانَ، فُتِحَتْ فِي زَمَنِ عُثْمَانَ بْنِ عَفَّانَ.",
+          "uz": "Hirot — Xurosondagi ulkan shahar; u Usmon ibn Affon zamonida fath qilingan."
+        },
+        {
+          "ar": "هَمَذَانُ: مَدِينَةٌ كَبِيرَةٌ بِهَا مِيَاهٌ، وَبَسَاتِينُ، وَمَزَارِعُ نَضِرَةٌ.",
+          "uz": "Hamadon — katta shahar; unda suvlar, bog'lar va ko'm-ko'k ekinzorlar bor."
+        },
+        {
+          "ar": "يَنْبُعُ: فُرْضَةٌ عَلَى سَاحِلِ الْبَحْرِ الْأَحْمَرِ، وَعَلَى طَرِيقِ الذَّاهِبِ إِلَى يَثْرِبَ.",
+          "uz": "Yanbu' — Qizil dengiz sohilidagi bandargoh; u Yasribga boradigan yo'l ustida joylashgan."
+        }
+      ]
     }
   ]
 }

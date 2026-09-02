@@ -7945,9 +7945,55 @@
           "type": "para",
           "ar": "وَقَدْ زَعَمَتْ أَنِّي تَغَيَّرْتُ بَعْدَهَا. وَقَدْ يُحْذَفَانِ، أَوْ أَحَدُهُمَا؛ كَقَوْلِ الشَّاعِرِ: بِأَيِّ كِتَابٍ أَمْ بِأَيَّةِ سُنَّةٍ * تَرَى حُبَّهُمْ عَارًا عَلَيَّ وَتَحْسِبُ؟ أَيْ: تَحْسِبُهُ عَارًا.",
           "uz": "«U mendan keyin o'zgarib ketdim deb da'vo qildi». Ba'zan ikkala maf'ul yoki biri tushiriladi; shoirning so'zi kabi: «Qaysi kitob yoki qaysi sunnat bilan ularni sevishni menga uyat deb ko'rasan va hisoblaysan?» — ya'ni «uni uyat deb hisoblaysan»."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِنْ كَانَ مُتَعَدِّيًا لِاثْنَيْنِ، يَكُونُ مُطَاوِعُهُ مُتَعَدِّيًا لِوَاحِدٍ؛ كَـ: عَلَّمْتُهُ الْحِسَابَ فَتَعَلَّمَهُ.",
+          "uz": "Agar u ikkita maf'ulga o'timli bo'lsa, uning mutovi'i bitta maf'ulga o'timli bo'ladi; masalan: «Unga hisobni o'rgatdim — u uni o'rgandi»."
+        },
+        {
+          "type": "para",
+          "ar": "(١) فَائِدَةٌ: جَمِيعُ الْأَفْعَالِ الَّتِي عَلَى وَزْنِ (فَعُلَ يَفْعُلُ)؛ كَـ: كَرُمَ يَكْرُمُ، وَشَرُفَ يَشْرُفُ، وَظَرُفَ يَظْرُفُ .. لَازِمَةٌ.",
+          "uz": "(1-izoh — foyda) «فَعُلَ يَفْعُلُ» vaznidagi barcha fe'llar — masalan karuma–yakrumu, sharufa–yashrufu, zarufa–yazrufu — lozimdir (o'timsiz)."
+        },
+        {
+          "type": "para",
+          "ar": "وَالَّتِي عَلَى وَزْنِ (فَعِلَ يَفْعَلُ) تَكُونُ لَازِمَةً إِذَا دَلَّتْ عَلَى لَوْنٍ؛ كَـ: حَمِرَ وَسَوِدَ. أَوْ عَيْبٍ؛ كَـ: عَمِشَ وَجَهِرَ. أَوْ حِلْيَةٍ؛ كَـ: غَيِدَ وَهَيِفَ.",
+          "uz": "«فَعِلَ يَفْعَلُ» vaznidagilar quyidagilarga dalolat qilsa, lozim bo'ladi: rangga (masalan hamira — qizardi, savida — qorayd), aybga (amisha — ko'zi xira bo'ldi, jahira — ko'zi yorug'da ko'rmadi), go'zallik sifatiga (g'ayida — nozik bo'ldi, hayifa — beli ingichka bo'ldi)."
+        },
+        {
+          "type": "para",
+          "ar": "أَوْ فَرَحٍ؛ كَـ: طَرِبَ وَفَرِحَ. أَوْ حُزْنٍ؛ كَـ: غَضِبَ وَحَزِنَ. أَوِ امْتِلَاءٍ؛ كَـ: شَبِعَ وَرَوِيَ. أَوْ خُلُوٍّ؛ كَـ: عَطِشَ وَصَدِيَ.",
+          "uz": "Yoki quvonchga (tariba, fariha), yoki g'amga (g'aziba — g'azablandi, hazina — g'amgin bo'ldi), yoki to'lishga (shabi'a — to'ydi, raviya — qonib ichdi), yoki bo'shlikka (atisha — chanqadi, sadiya — chanqoq bo'ldi) dalolat qilsa."
+        },
+        {
+          "type": "para",
+          "ar": "وَتَكُونُ مُتَعَدِّيَةً إِذَا لَمْ تَدُلَّ عَلَى شَيْءٍ مِنْ ذَلِكَ؛ كَـ: عَلِمَ وَفَهِمَ وَسَمِعَ وَحَفِظَ.",
+          "uz": "Bulardan biriga dalolat qilmasa, muta'addiy bo'ladi; masalan: bildi, tushundi, eshitdi, yodladi."
         }
       ],
-      "exercise": []
+      "exercise": [
+        {
+          "ar": "مَيِّزِ الْأَفْعَالَ اللَّازِمَةَ وَالْمُتَعَدِّيَةَ فِي الْعِبَارَاتِ الْآتِيَةِ:",
+          "uz": "Quyidagi iboralarda lozim va muta'addiy fe'llarni ajrating:"
+        },
+        {
+          "ar": "﴿إِنَّمَا الْمُؤْمِنُونَ إِخْوَةٌ فَأَصْلِحُوا بَيْنَ أَخَوَيْكُمْ وَاتَّقُوا اللَّهَ لَعَلَّكُمْ تُرْحَمُونَ﴾.",
+          "uz": "«Albatta mo'minlar birodarlardir; ikki birodaringiz orasini isloh qilinglar va Allohdan qo'rqinglar — shoyad rahm qilinsangiz»."
+        },
+        {
+          "ar": "﴿وَأَوْفُوا بِعَهْدِ اللَّهِ إِذَا عَاهَدْتُمْ وَلَا تَنْقُضُوا الْأَيْمَانَ بَعْدَ تَوْكِيدِهَا﴾.",
+          "uz": "«Ahd qilganingizda Allohning ahdiga vafo qilinglar va qasamlarni mustahkamlagandan keyin buzmanglar»."
+        },
+        {
+          "ar": "«تَرَى الْمُؤْمِنِينَ فِي تَرَاحُمِهِمْ وَتَوَادِّهِمْ وَتَعَاطُفِهِمْ كَمَثَلِ الْجَسَدِ إِذَا اشْتَكَى عُضْوٌ تَدَاعَى لَهُ سَائِرُ الْجَسَدِ بِالسَّهَرِ وَالْحُمَّى».",
+          "uz": "«Mo'minlarni bir-biriga rahm qilishi, do'stligi va mehribonligida bir tana kabi ko'rasan: bir a'zo shikoyat qilsa, butun tana bedorlik va isitma bilan unga hamdard bo'ladi»."
+        },
+        {
+          "ar": "عَلِمْتُكَ الْبَاذِلَ الْمَعْرُوفَ فَانْبَعَثَتْ * إِلَيْكَ بِي وَاجِفَاتُ الشَّوْقِ وَالْأَمَلِ",
+          "uz": "Seni yaxshilik ulashuvchi deb bildim — shuning uchun shavq va umidning talpinishlari meni senga yetakladi."
+        }
+      ]
     }
   ]
 }

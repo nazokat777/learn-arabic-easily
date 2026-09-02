@@ -6994,6 +6994,129 @@
           "uz": "(2-izoh) Ya'ni foil, noibi foil yoki mubtado bo'lishi bilan. Shu xususiyat orqali «قَرَأْتُ», «قَرَأْنَا» kabi so'zlardagi zamirlarning ism ekanini bilasan."
         }
       ],
+      "exercise": [
+        {
+          "ar": "بَيِّنِ الْأَسْمَاءَ وَالْأَفْعَالَ وَعَلَامَاتِهَا مِنْ هَذِهِ الْعِبَارَاتِ:",
+          "uz": "Quyidagi iboralarda ismlar, fe'llar va ularning belgilarini ko'rsating:"
+        },
+        {
+          "ar": "﴿لَقَدْ آثَرَكَ اللَّهُ عَلَيْنَا﴾.",
+          "uz": "«Allohga qasamki, Alloh seni bizdan ustun qildi»."
+        },
+        {
+          "ar": "﴿وَإِنَّكَ لَعَلَى خُلُقٍ عَظِيمٍ﴾.",
+          "uz": "«Albatta sen ulug' xulq ustidasan»."
+        },
+        {
+          "ar": "﴿خُذِ الْعَفْوَ وَأْمُرْ بِالْعُرْفِ وَأَعْرِضْ عَنِ الْجَاهِلِينَ﴾.",
+          "uz": "«Afvni ol, yaxshilikka buyur va johillardan yuz o'gir»."
+        },
+        {
+          "ar": "مَا شَقِيَ عَبْدٌ بِمَشُورَةٍ، وَلَا سَعِدَ مَنِ اسْتَغْنَى بِرَأْيِهِ.",
+          "uz": "Maslahat bilan ish qilgan banda baxtsiz bo'lmadi; o'z fikri bilan kifoyalangan kishi baxtli bo'lmadi."
+        },
+        {
+          "ar": "مَنْ عَامَلَ النَّاسَ، فَلَمْ يَظْلِمْهُمْ، وَوَعَدَهُمْ، فَلَمْ يُخْلِفْهُمْ، وَحَدَّثَهُمْ، فَلَمْ يَكْذِبْهُمْ، فَهُوَ مِمَّنْ كَمُلَتْ مُرُوءَتُهُ، وَظَهَرَتْ عَدَالَتُهُ، وَوَجَبَتْ مَحَبَّتُهُ.",
+          "uz": "Kim odamlar bilan muomala qilib, ularga zulm qilmasa; va'da berib, xilof qilmasa; gapirib, yolg'on aytmasa — u muruvvati kamolga yetgan, adolati oshkor bo'lgan va sevilishi vojib bo'lgan kishilardandir."
+        },
+        {
+          "ar": "وَكُنْ عَلَى حَذَرٍ لِلنَّاسِ تَسْتُرُهُ * وَلَا يَغُرَّكَ مِنْهُمْ ثَغْرُ مُبْتَسِمِ",
+          "uz": "Odamlardan yashirin ehtiyotda bo'l; ulardan birining tabassumli og'zi seni aldab qo'ymasin."
+        }
+      ]
+    },
+    {
+      "book": 3,
+      "num": 3,
+      "page": 169,
+      "titleAr": "١ - الكَلَامُ عَلَى الْحَرْفِ",
+      "title": "1. Harf haqida so'z",
+      "rule": {
+        "ar": "الْحُرُوفُ كُلُّهَا مَبْنِيَّةٌ. وَهِيَ خَمْسَةُ أَقْسَامٍ: أُحَادِيَّةٌ، وَثُنَائِيَّةٌ، وَثُلَاثِيَّةٌ، وَرُبَاعِيَّةٌ، وَخُمَاسِيَّةٌ.",
+        "uz": "Harflarning hammasi mabniydir. Ular besh bo'lim: bir harfli, ikki harfli, uch harfli, to'rt harfli va besh harfli."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "فَالْأُحَادِيَّةُ: ١ - الْهَمْزَةُ، ٢ - وَالْأَلِفُ، ٣ - وَالْبَاءُ، ٤ - وَالتَّاءُ، ٥ - وَالسِّينُ، ٦ - وَالْفَاءُ، ٧ - وَالكَافُ، ٨ - وَاللَّامُ، ٩ - وَالْمِيمُ، ١٠ - وَالنُّونُ، ١١ - وَالْهَاءُ، ١٢ - وَالْوَاوُ، ١٣ - وَالْيَاءُ.",
+          "uz": "Bir harflilar: 1 — hamza, 2 — alif, 3 — ب, 4 — ت, 5 — س, 6 — ف, 7 — ك, 8 — ل, 9 — م, 10 — ن, 11 — ه, 12 — و, 13 — ي."
+        },
+        {
+          "type": "para",
+          "ar": "وَالثُّنَائِيَّةُ: ١ - «آ»، ٢ - «إِذْ»، ٣ - «أَلْ»، ٤ - «أَمْ»، ٥ - «أَنْ»، ٦ - «إِنْ»، ٧ - «أَوْ»، ٨ - «أَيْ»، ٩ - «إِي»، ١٠ - «عَنْ»، ١١ - «فِي»، ١٢ - «قَدْ»، ١٣ - «كَيْ»، ١٤ - «لَا»، ١٥ - «لَمْ»، ١٦ - «لَنْ»، ١٧ - «لَوْ»، ١٨ - «مَا»، ١٩ - «مُذْ»، ٢٠ - «مِنْ»، ٢١ - «هَا»، ٢٢ - (النُّونُ الثَّقِيلَةُ).",
+          "uz": "Ikki harflilar: آ, إِذْ, أَلْ, أَمْ, أَنْ, إِنْ, أَوْ, أَيْ, إِي, عَنْ, فِي, قَدْ, كَيْ, لَا, لَمْ, لَنْ, لَوْ, مَا, مُذْ, مِنْ, هَا va og'ir (shaddali) nun."
+        },
+        {
+          "type": "para",
+          "ar": "وَالثُّلَاثِيَّةُ: ١ - «آيْ»، ٢ - «أَجَلْ»، ٣ - «إِذَا»، ٤ - «إِذًا»، ٥ - «أَلَا»، ٦ - «إِلَى»، ٧ - «أَمَا»، ٨ - «أَنَّ»، ٩ - «إِنَّ»، ١٠ - «أَيَا»، ١١ - «بَلَى»، ١٢ - «ثُمَّ»، ١٣ - «جَلَلْ»، ١٤ - «جَيْرِ»، ١٥ - «خَلَا»، ١٦ - «رُبَّ»، ١٧ - «سَوْفَ»، ١٨ - «عَدَا»، ١٩ - «عَلَّ»، ٢٠ - «عَلَى»، ٢١ - «لَاتَ»، ٢٢ - «لَيْتَ»، ٢٣ - «مُنْذُ»، ٢٤ - «نَعَمْ»، ٢٥ - «هَيَا».",
+          "uz": "Uch harflilar: آيْ, أَجَلْ, إِذَا, إِذًا, أَلَا, إِلَى, أَمَا, أَنَّ, إِنَّ, أَيَا, بَلَى, ثُمَّ, جَلَلْ, جَيْرِ, خَلَا, رُبَّ, سَوْفَ, عَدَا, عَلَّ, عَلَى, لَاتَ, لَيْتَ, مُنْذُ, نَعَمْ, هَيَا."
+        },
+        {
+          "type": "para",
+          "ar": "وَالرُّبَاعِيَّةُ: ١ - «إِذْ مَا»، ٢ - «أَلَّا»، ٣ - «إِلَّا»، ٤ - «أَمَّا»، ٥ - «إِمَّا»، ٦ - «حَاشَا»، ٧ - «حَتَّى»، ٨ - «كَأَنَّ»، ٩ - «كَلَّا»، ١٠ - «لَكِنْ»، ١١ - «لَعَلَّ»، ١٢ - «لَمَّا»، ١٣ - «لَوْلَا»، ١٤ - «لَوْمَا»، ١٥ - «هَلَّا».",
+          "uz": "To'rt harflilar: إِذْ مَا, أَلَّا, إِلَّا, أَمَّا, إِمَّا, حَاشَا, حَتَّى, كَأَنَّ, كَلَّا, لَكِنْ, لَعَلَّ, لَمَّا, لَوْلَا, لَوْمَا, هَلَّا."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْخُمَاسِيَّةُ: ١ - «إِنَّمَا»، ٢ - «أَنَّمَا»، ٣ - «لَكِنَّ».",
+          "uz": "Besh harflilar: إِنَّمَا, أَنَّمَا, لَكِنَّ."
+        },
+        {
+          "type": "para",
+          "ar": "وَكُلُّ طَائِفَةٍ مِنْ هَذِهِ الْحُرُوفِ، اشْتَرَكَتْ فِي مَعْنًى، أَوْ عَمَلٍ نُسِبَتْ إِلَيْهِ. فَمِنْ ذَلِكَ:",
+          "uz": "Bu harflardan bir ma'noda yoki bir amalda sherik bo'lgan har bir guruh o'sha ma'noga nisbat beriladi. Jumladan:"
+        },
+        {
+          "type": "para",
+          "ar": "١ - أَحْرُفُ الْجَوَابِ؛ وَهِيَ: «لَا»، وَ«نَعَمْ»، وَ«بَلَى»، وَ«إِي»، وَ«أَجَلْ»، وَ«جَلَلْ»، وَ«جَيْرِ»، وَ«إِنَّ»؛ نَحْوُ قَالُوا: أَتَصْبِرُ؟ قُلْتُ: لَا. قَالُوا: أَتُوفِي بِعَهْدِ الْوُدِّ؟ قُلْتُ: نَعَمْ. قُلْتُ: أَلَسْتَ ابْنَ جَلَا؟ قَالَ: بَلَى.",
+          "uz": "1 — Javob harflari: لَا, نَعَمْ, بَلَى, إِي, أَجَلْ, جَلَلْ, جَيْرِ, إِنَّ. Masalan: «Sabr qilasanmi?» dedilar — «Yo'q» dedim. «Do'stlik ahdiga vafo qilasanmi?» dedilar — «Ha» dedim. «Sen mashhur zotning o'g'li emasmisan?» dedim — «Balki shundayman» dedi."
+        },
+        {
+          "type": "para",
+          "ar": "﴿وَيَسْتَنْبِئُونَكَ أَحَقٌّ هُوَ قُلْ إِي وَرَبِّي﴾.",
+          "uz": "«Sendan: “Bu haqmi?” deb so'raydilar. Ayt: “Ha, Robbimga qasamki (shundaydir)”»."
+        },
+        {
+          "type": "para",
+          "ar": "يَقُولُونَ لِي: صِفْهَا فَأَنْتَ بِوَصْفِهَا خَبِيرٌ * أَجَلْ؛ عِنْدِي بِأَوْصَافِهَا عِلْمُ",
+          "uz": "Menga: «Uni ta'rifla, sen uni bilasan» deydilar. Ha, uning sifatlari haqida menda bilim bor."
+        },
+        {
+          "type": "para",
+          "ar": "قَالُوا تَخُوضُ غِمَارَ الْمَوْتِ؟ قُلْتُ: جَلَلْ * أَتَقْتَحِمُ الْمَنُونَ؛ فَقُلْتُ: جَيْرِ",
+          "uz": "«O'lim to'lqinlariga sho'ng'iysanmi?» dedilar — «Ha, shunday» dedim. «O'limga bostirib borasanmi?» — «Albatta» dedim."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَقُلْنَ شَيْبٌ قَدْ عَلَاكَ وَقَدْ كَبِرْتَ! فَقُلْتُ: إِنَّهْ",
+          "uz": "«Sochingni oqartirdi, qaridingku!» deydilar — «Ha, shunday» dedim."
+        },
+        {
+          "type": "para",
+          "ar": "٢ - وَأَحْرُفُ النَّفْيِ؛ وَهِيَ: «لَمْ»، وَ«لَمَّا»، وَ«لَنْ»، وَ«مَا»، وَ«لَا»، وَ«لَاتَ»، وَ«إِنْ»؛ نَحْوُ: لَمْ يَخُنْ يُوسُفُ. لَمَّا يُثْمِرْ بُسْتَانُنَا. لَنْ يُخْزِيَكَ اللَّهُ. مَا هَذَا جَائِزًا. لَا شَيْءَ عَلَى الْأَرْضِ بَاقِيًا. لَاتَ سَاعَةَ مَنْدَمٍ. إِنْ أَحَدٌ خَيْرًا مِنْ أَحَدٍ إِلَّا بِالْعَافِيَةِ.",
+          "uz": "2 — Inkor harflari: لَمْ, لَمَّا, لَنْ, مَا, لَا, لَاتَ, إِنْ. Masalan: «Yusuf xiyonat qilmadi», «Bog'imiz hali hosil bermadi», «Alloh seni xor qilmaydi», «Bu joiz emas», «Yer yuzida hech narsa boqiy emas», «Endi pushaymon vaqti emas», «Hech kim hech kimdan yaxshi emas — faqat sog'liq (ofiyat) bilan»."
+        },
+        {
+          "type": "para",
+          "ar": "٣ - وَأَحْرُفُ الشَّرْطِ؛ وَهِيَ: «إِنْ»، وَ«إِذْ مَا»، وَ«لَوْ»، وَ«لَوْلَا»، وَ«لَوْمَا»، وَ«أَمَّا»؛ نَحْوُ: ﴿وَإِنْ تَعُودُوا نَعُدْ﴾. إِذْ مَا تَزْرَعْ تَحْصُدْ. ﴿وَلَوْ كُنْتَ فَظًّا غَلِيظَ الْقَلْبِ لَانْفَضُّوا مِنْ حَوْلِكَ﴾.",
+          "uz": "3 — Shart harflari: إِنْ, إِذْ مَا, لَوْ, لَوْلَا, لَوْمَا, أَمَّا. Masalan: «Agar qaytsangiz, Biz ham qaytamiz», «Eksang, o'rasan», «Agar qo'pol, qattiq qalbli bo'lganingda, atrofingdan tarqab ketardilar»."
+        },
+        {
+          "type": "para",
+          "ar": "لَوْلَا الْعُقُولُ لَكَانَ أَدْنَى ضَيْغَمٍ * أَدْنَى إِلَى شَرَفٍ مِنَ الْإِنْسَانِ",
+          "uz": "Aql bo'lmaganida, eng oddiy sher ham sharafga insondan yaqinroq bo'lardi."
+        },
+        {
+          "type": "para",
+          "ar": "لَوْمَا الطَّمَعُ لَاسْتَرَاحَ النَّاسُ. ﴿فَأَمَّا الزَّبَدُ فَيَذْهَبُ جُفَاءً وَأَمَّا مَا يَنْفَعُ النَّاسَ فَيَمْكُثُ فِي الْأَرْضِ﴾.",
+          "uz": "Tama' bo'lmaganida, odamlar tinch bo'lardi. «Ko'pik esa behuda ketadi; odamlarga foyda beradigan narsa esa yerda qoladi»."
+        },
+        {
+          "type": "para",
+          "ar": "٤ - وَأَحْرُفُ التَّحْضِيضِ؛ وَهِيَ: «أَلَا»، وَ«أَلَّا»، وَ«هَلَّا»، وَ«لَوْلَا»، وَ«لَوْمَا»؛ نَحْوُ: أَلَا تَرْعَوِي! أَلَّا تَسْمَعَ قَوْلَ أَبِيكَ. هَلَّا حَفِظْتَ كَرَامَتَكَ.",
+          "uz": "4 — Undash (tahziz) harflari: أَلَا, أَلَّا, هَلَّا, لَوْلَا, لَوْمَا. Masalan: «Nega o'zingni tiymaysan!», «Otangning so'zini eshitsang-chi», «Nega izzatingni saqlamading?»"
+        }
+      ],
       "exercise": []
     }
   ]

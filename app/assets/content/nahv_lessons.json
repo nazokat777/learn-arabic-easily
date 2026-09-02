@@ -6453,6 +6453,166 @@
           "type": "para",
           "ar": "وَقَدْ يُعْطَفُ بِـ«حَتَّى»؛ نَحْوُ: قَدِمَ الْحُجَّاجُ حَتَّى الْمُشَاةُ. وَالْعَطْفُ بِهَا قَلِيلٌ، وَأَنْكَرَهُ بَعْضُهُمْ.",
           "uz": "Ba'zan «حَتَّى» bilan ham atf qilinadi; masalan: «Hojilar, hatto piyodalari ham keldi». Bu bilan atf qilish kam uchraydi; ba'zilar buni inkor qilgan."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "أَمْثِلَةٌ",
+            "uz": "Misollar"
+          },
+          "items": [
+            {
+              "ar": "يَسُودُ الرَّجُلُ بِالْعِلْمِ وَالْأَدَبِ.",
+              "uz": "Kishi ilm va odob bilan yuksaladi."
+            },
+            {
+              "ar": "دَخَلَ عِنْدَ السُّلْطَانِ الْعُلَمَاءُ فَالْأُمَرَاءُ.",
+              "uz": "Sulton huzuriga olimlar, ketidan amirlar kirdi."
+            },
+            {
+              "ar": "خَرَجَ الشُّبَّانُ، ثُمَّ الشُّيُوخُ.",
+              "uz": "Yigitlar chiqdi, so'ngra qariyalar."
+            },
+            {
+              "ar": "﴿لَبِثْنَا يَوْمًا أَوْ بَعْضَ يَوْمٍ﴾.",
+              "uz": "«Bir kun yoki kunning bir qismi turdik»."
+            },
+            {
+              "ar": "﴿أَقَرِيبٌ أَمْ بَعِيدٌ مَا تُوعَدُونَ﴾.",
+              "uz": "«Sizga va'da qilinayotgan narsa yaqinmi yoki uzoqmi?»"
+            },
+            {
+              "ar": "﴿سَوَاءٌ عَلَيْنَا أَوَعَظْتَ أَمْ لَمْ تَكُنْ مِنَ الْوَاعِظِينَ﴾.",
+              "uz": "«Bizga baribir: nasihat qildingmi yoki nasihat qiluvchilardan bo'lmadingmi»."
+            },
+            {
+              "ar": "لَا تُكْرِمْ خَالِدًا لَكِنْ أَخَاهُ.",
+              "uz": "Xolidni emas, balki uning birodarini hurmat qil."
+            },
+            {
+              "ar": "أَكْرِمِ الصَّالِحَ لَا الطَّالِحَ.",
+              "uz": "Yaxshini hurmat qil, yomonni emas."
+            },
+            {
+              "ar": "مَا سَافَرَ مَحْمُودٌ، بَلْ يُوسُفُ.",
+              "uz": "Mahmud emas, balki Yusuf safarga chiqdi."
+            }
+          ]
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "وَسِّطْ حُرُوفَ الْعَطْفِ بِالتَّعَاقُبِ بَيْنَ لَفْظَيِ «الذَّهَبِ» وَ«الْفِضَّةِ»، وَانْطِقْ بِهِمَا مَرْفُوعَيْنِ وَمَنْصُوبَيْنِ وَمَجْرُورَيْنِ فِي تَرَاكِيبَ تَقْتَضِي ذَلِكَ.",
+          "uz": "«Oltin» va «kumush» so'zlari orasiga atf harflarini navbatma-navbat qo'ying va ularni shuni talab qiladigan tuzilishlarda marfu', mansub va majrur holda talaffuz qiling."
+        }
+      ]
+    },
+    {
+      "book": 2,
+      "num": 48,
+      "page": 152,
+      "titleAr": "٣ - التَّوْكِيدُ",
+      "title": "3. Ta'kid",
+      "rule": {
+        "ar": "التَّوْكِيدُ: تَابِعٌ يُذْكَرُ تَقْرِيرًا لِمَتْبُوعِهِ بِرَفْعِ احْتِمَالِ التَّجَوُّزِ أَوِ السَّهْوِ. وَهُوَ قِسْمَانِ: ١ - لَفْظِيٌّ. ٢ - وَمَعْنَوِيٌّ.",
+        "uz": "Ta'kid — majoz yoki xato ehtimolini ko'tarish bilan ergashgan so'zini mustahkamlash uchun keltiriladigan tobe. U ikki bo'lim: 1 — lafziy, 2 — ma'naviy."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "فَاللَّفْظِيُّ يَكُونُ بِإِعَادَةِ اللَّفْظِ الْأَوَّلِ: ١ - فِعْلًا كَانَ. ٢ - أَوِ اسْمًا. ٣ - أَوْ حَرْفًا. ٤ - أَوْ جُمْلَةً.",
+          "uz": "Lafziy ta'kid birinchi so'zni takrorlash bilan bo'ladi: 1 — fe'l bo'ladimi, 2 — ism bo'ladimi, 3 — harf bo'ladimi, 4 — jumla bo'ladimi."
+        },
+        {
+          "type": "para",
+          "ar": "(١) إِذَا قُلْتَ: «جَاءَ السُّلْطَانُ» .. احْتُمِلَ أَنَّ الْجَائِيَ رَسُولُهُ، أَوْ وَزِيرُهُ مَثَلًا، وَأَنَّكَ نَطَقْتَ بِالسُّلْطَانِ مَجَازًا، أَوْ سَهْوًا؛ فَإِذَا قُلْتَ: «جَاءَ السُّلْطَانُ السُّلْطَانُ»، أَوْ «السُّلْطَانُ نَفْسُهُ» .. ارْتَفَعَ ذَلِكَ الاِحْتِمَالُ.",
+          "uz": "(1-izoh) «Sulton keldi» desang, kelgan kishi uning elchisi yoki vaziri bo'lishi, «sulton» so'zini majoz yoki xato bilan aytgan bo'lishing ehtimoli bor. «Sulton — sultonning o'zi keldi» yoki «sultonning o'zi keldi» desang, bu ehtimol ko'tariladi."
+        },
+        {
+          "type": "para",
+          "ar": "نَحْوُ: ظَهَرَ ظَهَرَ الْهِلَالُ. أَنْتَ صَادِقٌ صَادِقٌ. لَا لَا أَبُوحُ. قَدْ قَامَتِ الصَّلَاةُ قَدْ قَامَتِ الصَّلَاةُ.",
+          "uz": "Masalan: «Yangi oy chiqdi, chiqdi» (fe'l takrori), «Sen rostgo'ysan, rostgo'ysan» (ism), «Yo'q, yo'q, oshkor qilmayman» (harf), «Namoz boshlandi, namoz boshlandi» (jumla)."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْمَعْنَوِيُّ: يَكُونُ بِسَبْعَةِ أَلْفَاظٍ؛ وَهِيَ: ١ - النَّفْسُ. ٢ - الْعَيْنُ. ٣ - «كُلٌّ». ٤ - «جَمِيعٌ». ٥ - «عَامَّةٌ». ٦ - «كِلَا». ٧ - «كِلْتَا».",
+          "uz": "Ma'naviy ta'kid yetti so'z bilan bo'ladi: 1 — النَّفْس (o'zi), 2 — الْعَيْن (aynan o'zi), 3 — كُلّ (butun), 4 — جَمِيع (hammasi), 5 — عَامَّة (umumi), 6 — كِلَا (ikkovi — muzakkar), 7 — كِلْتَا (ikkovi — muannas)."
+        },
+        {
+          "type": "para",
+          "ar": "نَحْوُ: حَضَرَ الْأَمِيرُ نَفْسُهُ، أَوْ عَيْنُهُ. وَسَارَ الْجَيْشُ كُلُّهُ، أَوْ جَمِيعُهُ، أَوْ عَامَّتُهُ. وَطَالَعْتُ الكِتَابَيْنِ كِلَيْهِمَا، وَحَلَلْتُ الْمَسْأَلَتَيْنِ كِلْتَيْهِمَا.",
+          "uz": "Masalan: «Amirning o'zi keldi», «Butun qo'shin yurdi», «Ikkala kitobni ham mutolaa qildim», «Ikkala masalani ham yechdim»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَجِبُ أَنْ يَتَّصِلَ بِضَمِيرٍ يُطَابِقُ الْمُؤَكَّدَ كَمَا رَأَيْتَ.",
+          "uz": "Ko'rganingdek, unga ta'kidlanayotgan so'zga mos keladigan zamir qo'shilishi vojibdir."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "أَمْثِلَةٌ — ١ - لِلتَّوْكِيدِ اللَّفْظِيِّ:",
+            "uz": "Misollar — 1. Lafziy ta'kidga:"
+          },
+          "items": [
+            {
+              "ar": "أَتَاكِ أَتَاكِ اللَّاحِقُونَ.",
+              "uz": "Ortdan yetib kelganlar keldi, keldi."
+            },
+            {
+              "ar": "احْبِسْ احْبِسْ.",
+              "uz": "To'xtat, to'xtat."
+            },
+            {
+              "ar": "﴿وَالسَّابِقُونَ السَّابِقُونَ ۝ أُولَئِكَ الْمُقَرَّبُونَ﴾.",
+              "uz": "«Oldinga o'tganlar — o'sha oldinga o'tganlar; ana o'shalar yaqin qilinganlardir»."
+            },
+            {
+              "ar": "نَعَمْ نَعَمْ طَلَعَ النَّهَارُ.",
+              "uz": "Ha, ha, kun yorishdi."
+            },
+            {
+              "ar": "لَا يَنْجَحُ الكَسْلَانُ، لَا يَنْجَحُ الكَسْلَانُ.",
+              "uz": "Dangasa muvaffaq bo'lmaydi, dangasa muvaffaq bo'lmaydi."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "٢ - لِلتَّوْكِيدِ الْمَعْنَوِيِّ:",
+            "uz": "2 — Ma'naviy ta'kidga:"
+          },
+          "items": [
+            {
+              "ar": "خَرَجَتْ عَائِشَةُ نَفْسُهَا.",
+              "uz": "Oishaning o'zi chiqdi."
+            },
+            {
+              "ar": "شَهِدَ بِفَضْلِكَ الْأَعْدَاءُ أَعْيُنُهُمْ.",
+              "uz": "Sening fazlingga dushmanlarning aynan o'zlari guvohlik berdi."
+            },
+            {
+              "ar": "يُضَيِّعُ الْجَاهِلُ زَمَانَهُ كُلَّهُ فِي اللَّهْوِ وَاللَّعِبِ.",
+              "uz": "Johil butun zamonini o'yin-kulgida zoye qiladi."
+            },
+            {
+              "ar": "يُشْغِلُ الْعَاقِلُ أَوْقَاتَهُ جَمِيعَهَا بِالْفَائِدَةِ.",
+              "uz": "Aqlli kishi barcha vaqtlarini foydali ish bilan band qiladi."
+            },
+            {
+              "ar": "نَجَحَتِ التَّلَامِيذُ عَامَّتُهُمْ.",
+              "uz": "O'quvchilarning umumi muvaffaq bo'ldi."
+            },
+            {
+              "ar": "بَرَّ وَالِدَيْكَ كِلَيْهِمَا.",
+              "uz": "Ota-onangning ikkalasiga ham yaxshilik qil."
+            },
+            {
+              "ar": "صُنْ يَدَيْكَ كِلْتَيْهِمَا عَنِ الْأَذَى.",
+              "uz": "Ikkala qo'lingni ham ozor berishdan saqla."
+            }
+          ]
         }
       ],
       "exercise": []

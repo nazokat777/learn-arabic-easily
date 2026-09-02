@@ -5936,9 +5936,106 @@
           "type": "para",
           "ar": "(٢) فَيَدْخُلُ فِي الْمُفْرَدِ بِهَذَا الْمَعْنَى: الْمُثَنَّى وَالْجَمْعُ.",
           "uz": "(2-izoh) Bu ma'noda «yakka» ga ikkilik va ko'plik ham kiradi."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "أَمْثِلَةٌ",
+            "uz": "Misollar"
+          },
+          "items": [
+            {
+              "ar": "١ - لِلْمُنَادَى الْمُضَافِ: يَا عَبْدَ الرَّحْمَنِ. يَا زَيْنَ الْعَابِدِينَ. يَا أَبَا سَعِيدٍ. يَا أَكْرَمَ الْخَلْقِ. يَا رَسُولَ اللَّهِ. يَا سَيِّدَ الْقَوْمِ.",
+              "uz": "1 — Muzof munodoga: «Ey Abdurrahmon!», «Ey Zaynul-obidin!», «Ey Abu Said!», «Ey xaloyiqning eng karamlisi!», «Ey Allohning Rasuli!», «Ey qavmning sayyidi!»"
+            },
+            {
+              "ar": "٢ - لِلشَّبِيهِ بِالْمُضَافِ: يَا عَظِيمًا يُرْجَى لِكُلِّ عَظِيمٍ. يَا سَامِعًا دُعَاءَ الْمَظْلُومِ. يَا حَمِيدًا فِعْلُهُ. يَا زَكِيًّا أَصْلُهُ. يَا آخِذًا بِيَدِ الضَّعِيفِ. يَا سَاعِيًا فِي الْخَيْرِ.",
+              "uz": "2 — Muzofga o'xshashga: «Ey har bir ulug' ishda umid qilinadigan Ulug'!», «Ey mazlumning duosini Eshituvchi!», «Ey ishi maqtovli zot!», «Ey asli pok kishi!», «Ey zaifning qo'lidan tutuvchi!», «Ey yaxshilikda harakat qiluvchi!»"
+            },
+            {
+              "ar": "٣ - لِلنَّكِرَةِ غَيْرِ الْمَقْصُودَةِ: يَا مُغْتَرًّا دَعِ الْغُرُورَ. يَا عَجُولًا تَبَصَّرْ فِي الْعَوَاقِبِ. يَا حَازِمًا لَقَدْ أَصَبْتَ الْحُجَّةَ. يَا حَلِيمًا لَقَدْ أَلَّفْتَ الْقُلُوبَ. يَا مُجْتَهِدًا أَبْشِرْ بِالنَّجَاحِ. يَا مُؤْمِنًا لَا تَعْتَمِدْ عَلَى غَيْرِ مَوْلَاكَ.",
+              "uz": "3 — Aniq ko'zda tutilmagan nakiraga: «Ey aldangan, g'ururni tashla!», «Ey shoshqaloq, oqibatlarni o'ylab ko'r!», «Ey qat'iyatli, hujjatni topding!», «Ey halim, qalblarni birlashtirding!», «Ey tirishqoq, muvaffaqiyat xushxabarini ol!», «Ey mo'min, Xo'jayiningdan boshqaga tayanma!»"
+            },
+            {
+              "ar": "٤ - لِلنَّكِرَةِ الْمَقْصُودَةِ: يَا غُلَامُ. يَا أُسْتَاذُ. يَا فَتَيَانِ. يَا صَبِيَّانِ. يَا مُنْصِفُونَ. يَا عَادِلُونَ.",
+              "uz": "4 — Aniq ko'zda tutilgan nakiraga: «Ey bola!», «Ey ustoz!», «Ey ikki yigit!», «Ey ikki bola!», «Ey insofli kishilar!», «Ey adolatlilar!»"
+            },
+            {
+              "ar": "٥ - لِلْعَلَمِ الْمُفْرَدِ: يَا مُحَمَّدُ. يَا حُسَيْنُ. يَا صَادِقُ. يَا خَلِيلُ.",
+              "uz": "5 — Yakka atoqli otga: «Ey Muhammad!», «Ey Husayn!», «Ey Sodiq!», «Ey Xalil!»"
+            }
+          ]
         }
       ],
       "exercise": []
+    },
+    {
+      "book": 2,
+      "num": 40,
+      "page": 141,
+      "titleAr": "١٠، ١١ - خَبَرُ «كَانَ» وَأَخَوَاتِهَا، وَاسْمُ «إِنَّ» وَأَخَوَاتِهَا",
+      "title": "10, 11. «Kana» sheriklarining xabari va «inna» sheriklarining ismi",
+      "rule": {
+        "ar": "خَبَرُ «كَانَ» وَأَخَوَاتِهَا، وَاسْمُ «إِنَّ» وَأَخَوَاتِهَا تَقَدَّمَ ذِكْرُهُمَا فِي الْمَرْفُوعَاتِ.",
+        "uz": "«Kana» va sheriklarining xabari hamda «inna» va sheriklarining ismi — bular marfu'lar bobida o'tgan edi (u yerda ikkinchi juftlari raf' bo'lardi; bu yerda esa mansub tomonlari sanaladi)."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "غَيْرَ أَنَّ اسْمَ «لَا» لَا يُعْرَبُ إِلَّا إِذَا كَانَ مُضَافًا، أَوْ شَبِيهًا بِالْمُضَافِ؛ نَحْوُ: لَا طَالِبَ عِلْمٍ مَحْرُومٌ، وَلَا سَاعِيًا فِي الْخَيْرِ مَذْمُومٌ.",
+          "uz": "Faqat «لَا» ning ismi muzof yoki muzofga o'xshash bo'lgandagina i'rob qilinadi (mansub bo'ladi); masalan: «Hech bir ilm talab qiluvchi mahrum emas», «Yaxshilikda harakat qiluvchi hech kim yomonlanmaydi»."
+        },
+        {
+          "type": "para",
+          "ar": "أَمَّا الْمُفْرَدُ، فَيُبْنَى عَلَى مَا يُنْصَبُ بِهِ؛ نَحْوُ: لَا شَيْءَ أَفْضَلُ مِنَ الْأَدَبِ، وَلَا مُتَّحِدَيْنِ مَغْلُوبَانِ، وَلَا مُتَّحِدِينَ مَغْلُوبُونَ.",
+          "uz": "Yakka (mufrad) esa nasb qilinadigan alomat ustiga bino qilinadi; masalan: «Hech narsa odobdan afzal emas», «Birlashgan ikki kishi mag'lub bo'lmaydi», «Birlashganlar mag'lub bo'lmaydilar»."
+        },
+        {
+          "type": "para",
+          "ar": "وَلَابُدَّ أَنْ يَكُونَ اسْمُ «لَا» نَكِرَةً مُتَّصِلًا بِهَا؛ كَمَا مُثِّلَ، وَإِلَّا بَطَلَ عَمَلُهَا.",
+          "uz": "«لَا» ning ismi — misollardagidek — nakira va unga bevosita tutash bo'lishi shart; aks holda uning amali bekor bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "(١) الْمُرَادُ بِالْمُفْرَدِ هُنَا: مَا لَيْسَ مُضَافًا، وَلَا شَبِيهًا بِالْمُضَافِ .. كَمَا فِي الْمُنَادَى.",
+          "uz": "(1-izoh) Bu yerda «mufrad» dan murod — munododagi kabi — muzof ham, muzofga o'xshash ham bo'lmagan ism."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "أَمْثِلَةٌ",
+            "uz": "Misollar"
+          },
+          "items": [
+            {
+              "ar": "١ - لِلْمُضَافِ: لَا فَاعِلَ بِرٍّ مَكْرُوهٌ. لَا نَاصِرَ حَقٍّ مَخْذُولٌ. لَا شَاهِدَ زُورٍ مَقْبُولٌ. لَا قَلِيلَ حَيَاءٍ مَحْبُوبٌ. لَا مُضْمِرَ سُوءٍ سَائِدٌ. لَا غَيْرَ زَرَّاعٍ حَاصِدٌ.",
+              "uz": "1 — Muzofga: «Hech bir yaxshilik qiluvchi yomon ko'rilmaydi», «Haq himoyachisi tashlab qo'yilmaydi», «Yolg'on guvoh qabul qilinmaydi», «Hayosi kam kishi sevilmaydi», «Ichida yomonlik saqlagan yuksalmaydi», «Ekmagan o'rmaydi»."
+            },
+            {
+              "ar": "٢ - لِلشَّبِيهِ بِالْمُضَافِ: لَا قَبِيحًا فِعْلُهُ مَحْمُودٌ. لَا كَرِيمًا عُنْصُرُهُ سَفِيهٌ. لَا حَافِظًا عَهْدًا مَنْسِيٌّ. لَا مُرَاعِيًا وُدًّا شَقِيٌّ. لَا وَاثِقًا بِاللَّهِ ضَائِعٌ. لَا مُغَايِرًا لِمَا قَضَى اللَّهُ وَاقِعٌ.",
+              "uz": "2 — Muzofga o'xshashga: «Ishi xunuk kishi maqtalmaydi», «Asli karamli kishi nodon bo'lmaydi», «Ahdni saqlovchi unutilmaydi», «Do'stlikni asrovchi baxtsiz bo'lmaydi», «Allohga ishongan kishi zoye bo'lmaydi», «Alloh hukm qilganidan boshqasi yuz bermaydi»."
+            },
+            {
+              "ar": "٣ - لِلْمُفْرَدِ: لَا سَمِيرَ أَحْسَنُ مِنَ الكِتَابِ. لَا سَيْفَ أَقْطَعُ مِنَ الْحَقِّ. لَا عَوْنَ أَلْيَقُ مِنَ الصِّدْقِ. لَا شَفِيعَ أَنْجَحُ مِنَ التَّوْبَةِ. لَا نِعْمَةَ أَعْظَمُ مِنَ الصِّحَّةِ. لَا مَعْذُورَ مَلُومٌ.",
+              "uz": "3 — Yakkaga: «Kitobdan yaxshiroq suhbatdosh yo'q», «Haqdan o'tkirroq qilich yo'q», «Rostgo'ylikdan loyiqroq yordamchi yo'q», «Tavbadan muvaffaqiyatliroq shafoatchi yo'q», «Sog'liqdan ulug'roq ne'mat yo'q», «Uzrli kishi malomat qilinmaydi»."
+            }
+          ]
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "احْصُرِ الْمَنْصُوبَاتِ مِنَ الْأَسْمَاءِ فِي هَذِهِ الْعِبَارَاتِ، وَبَيِّنْ أَنْوَاعَهَا:",
+          "uz": "Quyidagi iboralardagi mansub ismlarni sanab chiqing va turlarini ko'rsating:"
+        },
+        {
+          "ar": "«قَالَ أَعْرَابِيٌّ: أَبْلَغُ النَّاسِ أَحْسَنُهُمْ لَفْظًا وَأَسْرَعُهُمْ بَدِيهَةً.",
+          "uz": "«Bir a'robiy dedi: odamlarning eng balog'atlisi — so'zi eng chiroylisi va topqirligi eng tezidir."
+        },
+        {
+          "ar": "لِكُلِّ دَاءٍ دَوَاءٌ يُسْتَطَبُّ بِهِ * إِلَّا الْحَمَاقَةَ أَعْيَتْ مَنْ يُدَاوِيهَا",
+          "uz": "Har bir dardga davo izlab topiladi — ahmoqlikdan boshqa: u davolamoqchi bo'lganni ojiz qoldirgan."
+        }
+      ]
     }
   ]
 }

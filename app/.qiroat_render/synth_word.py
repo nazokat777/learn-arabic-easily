@@ -130,16 +130,21 @@ async def synth(text: str, dest: Path, voice: str, rate: str,
         print(f"  !! {text[:40]}: {e}")
         return False
 
-    cmd = ["ffmpeg", "-y", "-v", "error", "-i", str(raw)]
-    af = trim_filter
+    # Nega oxiriga 0.3 s jimlik qo'shiladi (apad): ba'zi telefon
+    # pleerlari mp3 ning eng oxirgi kadrlarini yutib yuboradi - shunda
+    # gapning oxirgi bo'g'ini "yeb qo'yilgandek" eshitiladi. Jimlik
+    # qo'shilsa, yutilsa ham jimlik yutiladi, nutq emas.
+    #
+    # 48 kbps: 32 kbps da ba'zi harflar (ayniqsa sirg'aluvchilar) xira
+    # chiqardi; 48 da manba sifati to'liq saqlanadi.
     if cut:
-        cmd += ["-t", f"{cut:.3f}"]
-        # Kesilgan joyda «chirt» eshitilmasin: oxirgi 15 ms silliq so'nadi.
-        # Bu nutqni olib tashlamaydi - kesuv allaqachon so'z tugagandan
-        # keyingi tanaffusda turibdi.
         fade = max(0.0, cut - 0.015)
-        af = f"afade=t=out:st={fade:.3f}:d=0.015" if af == "anull" else f"{af},afade=t=out:st={fade:.3f}:d=0.015"
-    cmd += ["-af", af, "-ac", "1", "-ar", "24000", "-b:a", "32k", str(dest)]
+        af = (f"atrim=end={cut:.3f},asetpts=PTS-STARTPTS,"
+              f"afade=t=out:st={fade:.3f}:d=0.015,apad=pad_dur=0.3")
+    else:
+        af = f"{trim_filter},apad=pad_dur=0.3"
+    cmd = ["ffmpeg", "-y", "-v", "error", "-i", str(raw),
+           "-af", af, "-ac", "1", "-ar", "24000", "-b:a", "48k", str(dest)]
     ok = subprocess.run(cmd, capture_output=True).returncode == 0
     raw.unlink(missing_ok=True)
     return ok

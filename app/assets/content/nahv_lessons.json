@@ -7248,6 +7248,90 @@
           ]
         }
       ],
+      "exercise": [
+        {
+          "ar": "عَيِّنِ الْأَفْعَالَ بِأَنْوَاعِهَا وَأَسْمَاءَ الْأَفْعَالِ فِي هَذِهِ الْعِبَارَاتِ:",
+          "uz": "Quyidagi iboralarda fe'llarni turlari bilan va fe'l ismlarini aniqlang:"
+        },
+        {
+          "ar": "﴿أَطِيعُوا اللَّهَ وَأَطِيعُوا الرَّسُولَ وَأُولِي الْأَمْرِ مِنْكُمْ﴾.",
+          "uz": "«Allohga itoat qilinglar, Rasulga va sizlardan bo'lgan ish egalariga itoat qilinglar»."
+        },
+        {
+          "ar": "﴿وَقَضَى رَبُّكَ أَلَّا تَعْبُدُوا إِلَّا إِيَّاهُ وَبِالْوَالِدَيْنِ إِحْسَانًا إِمَّا يَبْلُغَنَّ عِنْدَكَ الكِبَرَ أَحَدُهُمَا أَوْ كِلَاهُمَا فَلَا تَقُلْ لَهُمَا أُفٍّ وَلَا تَنْهَرْهُمَا وَقُلْ لَهُمَا قَوْلًا كَرِيمًا ۝ وَاخْفِضْ لَهُمَا جَنَاحَ الذُّلِّ مِنَ الرَّحْمَةِ وَقُلْ رَبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا﴾.",
+          "uz": "«Robbing faqat Ungagina ibodat qilishingizni va ota-onaga yaxshilik qilishingizni hukm qildi. Agar ularning biri yoki ikkalasi sening qoshingda keksalikka yetsa, ularga “uf” dema, ularni jerkima va ularga yumshoq so'z ayt. Ularga rahmdillik bilan xokisorlik qanotini past tut va: “Robbim, meni kichikligimda tarbiyalaganlaridek, ularga rahm qil”, deb ayt»."
+        },
+        {
+          "ar": "﴿وَمَا آتَاكُمُ الرَّسُولُ فَخُذُوهُ وَمَا نَهَاكُمْ عَنْهُ فَانْتَهُوا﴾.",
+          "uz": "«Rasul sizga nima bergan bo'lsa, uni oling; nimadan qaytargan bo'lsa, undan to'xtang»."
+        },
+        {
+          "ar": "﴿هَيْهَاتَ هَيْهَاتَ لِمَا تُوعَدُونَ﴾.",
+          "uz": "«Sizga va'da qilinayotgan narsa juda uzoq, juda uzoq!»"
+        },
+        {
+          "ar": "إِذَا ذُكِرَ الصَّالِحُونَ فَحَيَّهَلًا بِعُمَرَ.",
+          "uz": "Solihlar zikr qilinsa, Umarga marhabo (u ham ularning boshida)."
+        },
+        {
+          "ar": "حَيَّ عَلَى الصَّلَاةِ، حَيَّ عَلَى الْفَلَاحِ.",
+          "uz": "Namozga shoshiling, najotga shoshiling."
+        },
+        {
+          "ar": "وَيْكَ اتَّئِبْ.",
+          "uz": "Voy senga, uyalgin!"
+        },
+        {
+          "ar": "﴿أُفٍّ لَكُمْ وَلِمَا تَعْبُدُونَ مِنْ دُونِ اللَّهِ﴾.",
+          "uz": "«Sizlarga ham, Allohdan o'zga ibodat qilayotgan narsalaringizga ham uf bo'lsin!»"
+        },
+        {
+          "ar": "صَهْ عَنِ الْقَبِيحِ.",
+          "uz": "Yomon so'zdan jim tur."
+        },
+        {
+          "ar": "عَوِّدْ لِسَانَكَ قَوْلَ الصِّدْقِ تَحْظَ بِهِ * إِنَّ اللِّسَانَ لِمَا عَوَّدْتَ مُعْتَادُ",
+          "uz": "Tilingni rost so'zga o'rgat — undan bahra topasan; zero til nimaga o'rgatsang, o'shanga o'rganadi."
+        }
+      ]
+    },
+    {
+      "book": 3,
+      "num": 5,
+      "page": 176,
+      "titleAr": "٢ - تَقْسِيمُ الْفِعْلِ إِلَى مُجَرَّدٍ وَمَزِيدٍ",
+      "title": "2. Fe'lning mujarrad va maziydga bo'linishi",
+      "rule": {
+        "ar": "يَنْقَسِمُ الْفِعْلُ إِلَى مُجَرَّدٍ وَمَزِيدٍ. فَالْمُجَرَّدُ: مَا كَانَتْ جَمِيعُ حُرُوفِهِ أَصْلِيَّةً. وَالْمَزِيدُ: مَا زِيدَ فِيهِ حَرْفٌ، أَوْ أَكْثَرُ عَلَى حُرُوفِهِ الْأَصْلِيَّةِ. وَالْمُجَرَّدُ قِسْمَانِ: ١ - ثُلَاثِيٌّ؛ كَـ«نَصَرَ». ٢ - وَرُبَاعِيٌّ؛ كَـ«دَحْرَجَ».",
+        "uz": "Fe'l mujarrad va maziydga bo'linadi. Mujarrad — barcha harflari asliy bo'lgan fe'l. Maziyd — asliy harflariga bir yoki bir necha harf qo'shilgan fe'l. Mujarrad ikki bo'lim: 1 — uch harfli (masalan نَصَرَ), 2 — to'rt harfli (masalan دَحْرَجَ)."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "(١) عُلَمَاءُ اللُّغَةِ إِنَّمَا يُلَاحِظُونَ فِي تَرْتِيبِ الكُتُبِ اللُّغَوِيَّةِ الْحُرُوفَ الْأَصْلِيَّةَ لِلْكَلِمَاتِ، فَإِذَا أَرَدْتَ أَنْ تَعْرِفَ مِنَ «الْقَامُوسِ» مَعْنَى كَلِمَةٍ؛ مَثَلًا: اسْتَخْرَجَ .. تَنْظُرُ فِي مَادَّةِ «خرج».",
+          "uz": "(1-izoh) Til olimlari lug'at kitoblarini tartiblashda so'zlarning asliy harflarini e'tiborga oladilar. Shuning uchun «Qomus»dan, masalan, «istaxraja» so'zining ma'nosini bilmoqchi bo'lsang, «خرج» moddasiga qaraysan."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) الْفِعْلُ الثُّلَاثِيُّ يَأْتِي عَلَى سِتَّةِ أَوْزَانٍ؛ لِأَنَّ الْحَرْفَ الثَّانِيَ مِنْهُ: إِنْ كَانَ مَفْتُوحًا فِي الْمَاضِي، فَفِي الْمُضَارِعِ يَكُونُ: ١ - إِمَّا مَفْتُوحًا. ٢ - أَوْ مَضْمُومًا. ٣ - أَوْ مَكْسُورًا.",
+          "uz": "(2-izoh) Uch harfli fe'l olti vaznda keladi. Chunki uning ikkinchi harfi mozida fathali bo'lsa, muzori'da: 1 — yo fathali, 2 — yo dammali, 3 — yo kasrali bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِنْ كَانَ مَكْسُورًا فِي الْمَاضِي فَفِي الْمُضَارِعِ يَكُونُ: ١ - إِمَّا مَكْسُورًا. ٢ - أَوْ مَفْتُوحًا، وَلَا يَكُونُ مَضْمُومًا. وَإِنْ كَانَ مَضْمُومًا فِي الْمَاضِي، فَفِي الْمُضَارِعِ يَكُونُ: مَضْمُومًا لَا غَيْرَ.",
+          "uz": "Mozida kasrali bo'lsa, muzori'da: 1 — yo kasrali, 2 — yo fathali bo'ladi; dammali bo'lmaydi. Mozida dammali bo'lsa, muzori'da faqat dammali bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَأَمْثِلَتُهَا: فَتَحَ يَفْتَحُ، نَصَرَ يَنْصُرُ، ضَرَبَ يَضْرِبُ، فَرِحَ يَفْرَحُ، حَسِبَ يَحْسِبُ، كَرُمَ يَكْرُمُ. وَيُعْرَفُ كَوْنُ الْفِعْلِ مِنْ أَحَدِ هَذِهِ الْأَوْزَانِ بِالنَّقْلِ.",
+          "uz": "Misollari: fataha–yaftahu (ochdi), nasara–yansuru (yordam berdi), daraba–yadribu (urdi), fariha–yafrahu (xursand bo'ldi), hasiba–yahsibu (hisobladi), karuma–yakrumu (karamli bo'ldi). Fe'lning qaysi vazndan ekani naql (eshitish) bilan bilinadi."
+        },
+        {
+          "type": "para",
+          "ar": "قُلْتُ: وَلِسُهُولَةِ حِفْظِهَا لِكَثْرَةِ اسْتِعْمَالِهِ نَظَمَهَا بَعْضُهُمْ مُرَتَّبًا قَائِلًا: فَتْحُ ضَمٍّ، فَتْحُ كَسْرٍ، فَتْحَتَانِ، كَسْرُ فَتْحٍ، ضَمُّ ضَمٍّ، كَسْرَتَانِ. وَهِيَ الْأَبْوَابُ السِّتَّةُ عَلَى هَذَا التَّرْتِيبِ. (عَبْدُ الْجَلِيلِ)",
+          "uz": "(Nashrga tayyorlovchi) dedi: ko'p ishlatilgani uchun yodlash oson bo'lsin deb, ba'zilar ularni tartib bilan nazmga solgan: fatha-damma, fatha-kasra, ikki fatha, kasra-fatha, damma-damma, ikki kasra. Oltita bob shu tartibdadir. (Abdul Jalil)"
+        }
+      ],
       "exercise": []
     }
   ]

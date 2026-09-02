@@ -7417,6 +7417,124 @@
           "uz": "Osmon quyuq bulut bilan qoraydi. Kecha cho'zildi. Yomg'ir og'irlashdi. Mo'minning ikki ko'zi Robbidan qo'rqib yoshga to'ldi."
         }
       ]
+    },
+    {
+      "book": 3,
+      "num": 6,
+      "page": 179,
+      "titleAr": "٣ - تَقْسِيمُ الْفِعْلِ إِلَى جَامِدٍ وَمُتَصَرِّفٍ",
+      "title": "3. Fe'lning jomid va mutasarrifga bo'linishi",
+      "rule": {
+        "ar": "يَنْقَسِمُ الْفِعْلُ إِلَى: ١ - جَامِدٍ. ٢ - وَمُتَصَرِّفٍ. فَالْجَامِدُ: مَا يُلَازِمُ صُورَةً وَاحِدَةً. وَالْمُتَصَرِّفُ: مَا لَيْسَ كَذَلِكَ.",
+        "uz": "Fe'l ikkiga bo'linadi: 1 — jomid, 2 — mutasarrif. Jomid — bitta shaklda qotib qoladigan fe'l. Mutasarrif — bunday bo'lmagani."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَالْأَوَّلُ: إِمَّا أَنْ يَكُونَ مُلَازِمًا لِلْمُضِيِّ؛ كَـ«عَسَى»، وَ«لَيْسَ»، أَوْ لِلْأَمْرِيَّةِ؛ كَـ«هَبْ»، وَ«تَعَلَّمْ».",
+          "uz": "Birinchisi (jomid): yo doim mozi shaklida qoladi — masalan «عَسَى» (shoyad), «لَيْسَ» (emas); yo doim amr shaklida qoladi — masalan «هَبْ» (faraz qil), «تَعَلَّمْ» (bilib qo'y)."
+        },
+        {
+          "type": "para",
+          "ar": "وَالثَّانِي: إِمَّا أَنْ يَكُونَ نَاقِصَ التَّصَرُّفِ؛ وَهُوَ: مَا لَمْ تَأْتِ مِنْهُ الْأَفْعَالُ الثَّلَاثَةُ؛ كَـ«بَرِحَ»، وَ«كَادَ».",
+          "uz": "Ikkinchisi (mutasarrif): yo tasarrufi noqis bo'ladi — ya'ni undan uchala fe'l (mozi, muzori', amr) kelmaydi; masalan «بَرِحَ», «كَادَ»."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِمَّا تَامَّ التَّصَرُّفِ؛ وَهُوَ: مَا تَأْتِي مِنْهُ الْأَفْعَالُ الثَّلَاثَةُ؛ كَـ«عَلِمَ»، وَ«أَكْرَمَ».",
+          "uz": "Yo tasarrufi to'liq bo'ladi — undan uchala fe'l ham keladi; masalan «عَلِمَ» (bildi), «أَكْرَمَ» (ikrom qildi)."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُؤْخَذُ الْمُضَارِعُ مِنَ الْمَاضِي بِأَنْ يُزَادَ فِي أَوَّلِهِ أَحَدُ أَحْرُفِ الْمُضَارَعَةِ: ١ - مَضْمُومًا فِي الرُّبَاعِيِّ؛ كَـ: يُدَحْرِجُ، وَيُحْسِنُ. ٢ - مَفْتُوحًا فِي غَيْرِهِ؛ كَـ: يَكْتُبُ، وَ: يَنْطَلِقُ، وَ: يَسْتَغْفِرُ.",
+          "uz": "Muzori' mozidan olinadi: uning boshiga muzoraat harflaridan biri qo'shiladi — 1) to'rt harflida dammali: يُدَحْرِجُ, يُحْسِنُ; 2) boshqasida fathali: يَكْتُبُ, يَنْطَلِقُ, يَسْتَغْفِرُ."
+        },
+        {
+          "type": "para",
+          "ar": "ثُمَّ إِنْ كَانَ الْمَاضِي ثُلَاثِيًّا، يُسَكَّنُ أَوَّلُهُ، وَيُحَرَّكُ ثَانِيهِ (بِضَمَّةٍ، أَوْ فَتْحَةٍ، أَوْ كَسْرَةٍ، عَلَى حَسَبِ مَا يَقْتَضِيهِ نَصُّ اللُّغَةِ)؛ كَـ: يَنْصُرُ، وَ: يَفْتَحُ، وَ: يَضْرِبُ.",
+          "uz": "So'ngra mozi uch harfli bo'lsa, uning birinchi harfi sokin qilinadi, ikkinchisi esa — til nassi talab qilganicha — damma, fatha yoki kasra bilan harakatlanadi; masalan: يَنْصُرُ, يَفْتَحُ, يَضْرِبُ."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِنْ كَانَ غَيْرَ ثُلَاثِيٍّ: فَإِمَّا أَنْ يَكُونَ مَبْدُوءًا بِتَاءٍ زَائِدَةٍ، أَوْ لَا: فَفِي الْحَالَةِ الْأُولَى، يَبْقَى عَلَى هَيْئَتِهِ قَبْلَ زِيَادَةِ حُرُوفِ الْمُضَارَعَةِ؛ كَـ: يَتَقَابَلُ، وَ: يَتَقَدَّمُ، وَ: يَتَدَحْرَجُ.",
+          "uz": "Uch harfli bo'lmasa: yo boshida ortiqcha «to» bo'ladi, yo bo'lmaydi. Birinchi holatda muzoraat harflari qo'shilishidan oldingi holicha qoladi; masalan: يَتَقَابَلُ, يَتَقَدَّمُ, يَتَدَحْرَجُ."
+        },
+        {
+          "type": "para",
+          "ar": "وَفِي الْحَالَةِ الثَّانِيَةِ: يُكْسَرُ مَا قَبْلَ آخِرِهِ. وَإِنْ كَانَ أَوَّلُهُ هَمْزَةً زَائِدَةً تُحْذَفُ؛ كَـ: يُدَحْرِجُ، وَ: يُكْرِمُ، وَ: يَسْتَغْفِرُ.",
+          "uz": "Ikkinchi holatda: oxiridan oldingi harfi kasra qilinadi. Boshida ortiqcha hamza bo'lsa, u tushiriladi; masalan: يُدَحْرِجُ, يُكْرِمُ, يَسْتَغْفِرُ."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُؤْخَذُ الْأَمْرُ مِنَ الْمُضَارِعِ، بِأَنْ يُحْذَفَ مِنْهُ حَرْفُ الْمُضَارَعَةِ، وَيُزَادَ فِي أَوَّلِ الْبَاقِي هَمْزَةٌ، إِنْ كَانَ سَاكِنًا؛ كَـ: تَقَابَلْ، وَانْصُرْ، وَأَكْرِمْ، وَاسْتَغْفِرْ.",
+          "uz": "Amr muzori'dan olinadi: undan muzoraat harfi tushiriladi va qolganining boshi sokin bo'lsa, hamza qo'shiladi; masalan: تَقَابَلْ, انْصُرْ, أَكْرِمْ, اسْتَغْفِرْ."
+        },
+        {
+          "type": "para",
+          "ar": "وَمِنَ الْأَفْعَالِ الْجَامِدَةِ الْمُلَازِمَةِ لِلْمُضِيِّ: نِعْمَ، وَ: بِئْسَ، وَفِعْلَا التَّعَجُّبِ.",
+          "uz": "Doim mozi shaklida qoladigan jomid fe'llardan: نِعْمَ, بِئْسَ va ikkita taajjub fe'li."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 3,
+      "num": 7,
+      "page": 180,
+      "titleAr": "نِعْمَ وَبِئْسَ",
+      "title": "«Ni'ma» va «bi'sa»",
+      "rule": {
+        "ar": "«نِعْمَ» وَ«بِئْسَ» فِعْلَانِ جَامِدَانِ لِلْمَدْحِ وَالذَّمِّ.",
+        "uz": "«نِعْمَ» va «بِئْسَ» — maqtash va yomonlash uchun ishlatiladigan ikki jomid fe'l."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "فَإِذَا قُلْتَ: «نِعْمَ التَّاجِرُ صَادِقٌ» .. كُنْتَ قَدْ مَدَحْتَ جِنْسَ التَّاجِرِ مُرِيدًا بِهِ فَرْدًا وَاحِدًا، وَهُوَ صَادِقٌ.",
+          "uz": "«Savdogar degani — rostgo'y savdogar!» desang, savdogar jinsini maqtagan bo'lasan va undan bitta shaxsni — rostgo'yni — ko'zda tutgan bo'lasan."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِذَا قُلْتَ: «بِئْسَ الصَّانِعُ خَلِيلٌ» .. كُنْتَ قَدْ ذَمَمْتَ جِنْسَ الصَّانِعِ مُرِيدًا بِهِ فَرْدًا وَاحِدًا، وَهُوَ خَلِيلٌ.",
+          "uz": "«Yomon hunarmand — Xalil!» desang, hunarmand jinsini yomonlagan bo'lasan va undan bitta shaxsni — Xalilni — ko'zda tutasan."
+        },
+        {
+          "type": "para",
+          "ar": "وَكُلٌّ مِنَ التَّاجِرِ وَالصَّانِعِ فَاعِلٌ لِلْفِعْلِ قَبْلَهُ، وَكُلٌّ مِنْ «صَادِقٍ» وَ«خَلِيلٍ» خَبَرٌ لِمُبْتَدَإٍ مَحْذُوفٍ وُجُوبًا، تَقْدِيرُهُ: الْمَمْدُوحُ، أَوِ: الْمَذْمُومُ.",
+          "uz": "«التَّاجِر» va «الصَّانِع» — oldidagi fe'lning foili; «صَادِق» va «خَلِيل» esa vojib ravishda tushirilgan mubtadoning xabari bo'lib, taqdiri: «maqtalgan» yoki «yomonlangan» degani."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَلَابُدَّ فِي الْفَاعِلِ أَنْ يَكُونَ:",
+            "uz": "Foil quyidagilardan biri bo'lishi shart:"
+          },
+          "items": [
+            {
+              "ar": "١ - مُقْتَرِنًا بِـ«أَلْ» كَمَا مُثِّلَ.",
+              "uz": "1 — «أل» bilan kelgan bo'lishi — misollardagi kabi."
+            },
+            {
+              "ar": "٢ - أَوْ مُضَافًا لِمُقْتَرِنٍ بِهَا؛ كَـ«نِعْمَتْ عَاقِبَةُ الصِّدْقِ».",
+              "uz": "2 — Yoki «أل» bilan kelgan so'zga muzof bo'lishi; masalan: «Rostgo'ylikning oqibati naqadar yaxshi!»"
+            },
+            {
+              "ar": "٣ - أَوْ ضَمِيرًا مُمَيَّزًا؛ كَـ«بِئْسَ لِلْكَاذِبِ مَصِيرًا».",
+              "uz": "3 — Yoki tamyiz bilan aniqlangan zamir bo'lishi; masalan: «Yolg'onchi uchun naqadar yomon oqibat!»"
+            },
+            {
+              "ar": "٤ - أَوْ كَلِمَةَ «مَا»؛ كَـ«نِعْمَ مَا صَنَعْتَ».",
+              "uz": "4 — Yoki «مَا» so'zi bo'lishi; masalan: «Qilgan ishing naqadar yaxshi!»"
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "وَمِثْلُ «نِعْمَ» وَ«بِئْسَ»: «حَبَّذَا»، وَ«لَا حَبَّذَا»؛ نَحْوُ: حَبَّذَا الاِتِّفَاقُ، وَ: لَا حَبَّذَا الاِخْتِلَافُ.",
+          "uz": "«نِعْمَ» va «بِئْسَ» kabi: «حَبَّذَا» va «لَا حَبَّذَا»; masalan: «Ittifoq naqadar yaxshi!», «Ixtilof aslo yaxshi emas»."
+        }
+      ],
+      "exercise": []
     }
   ]
 }

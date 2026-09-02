@@ -5439,6 +5439,108 @@
         }
       ],
       "exercise": []
+    },
+    {
+      "book": 2,
+      "num": 33,
+      "page": 133,
+      "titleAr": "٣ - الْمَفْعُولُ لِأَجْلِهِ",
+      "title": "3. Maf'ulun li ajlihi",
+      "rule": {
+        "ar": "الْمَفْعُولُ لِأَجْلِهِ: اسْمٌ يُذْكَرُ بَعْدَ الْفِعْلِ لِبَيَانِ عِلَّتِهِ؛ كَـ«وَقَفَ الْجُنْدُ إِجْلَالًا لِلْأَمِيرِ». وَعَلَامَتُهُ: أَنْ يَصْلُحَ جَوَابًا لِـ«لِمَ». وَلَا بُدَّ لِجَوَازِ نَصْبِهِ أَنْ يَتَّحِدَ مَعَ الْفِعْلِ فِي الزَّمَنِ وَالْفَاعِلِ.",
+        "uz": "Maf'ulun li ajlihi — fe'ldan keyin uning sababini bayon qilish uchun keltiriladigan ism; masalan: «Askarlar amirga ta'zim yuzasidan turdi». Belgisi: «nega?» savoliga javob bo'la olishi. Nasb qilinishi joiz bo'lishi uchun u fe'l bilan zamon va foilda bir bo'lishi shart."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "(١) فَلَا يُقَالُ: «تَأَهَّبْتُ السَّفَرَ»؛ لِسَبْقِ زَمَنِ التَّأَهُّبِ، وَلَا «جِئْتُ مَحَبَّتَكَ إِيَّايَ»؛ لِاخْتِلَافِ الْفَاعِلِ، بَلْ يَتَعَيَّنُ أَنْ يُقَالَ: تَأَهَّبْتُ لِلسَّفَرِ، وَ: جِئْتُ لِمَحَبَّتِكَ إِيَّايَ.",
+          "uz": "(1-izoh) «تَأَهَّبْتُ السَّفَرَ» deb aytilmaydi, chunki tayyorlanish zamoni safardan oldin; «جِئْتُ مَحَبَّتَكَ إِيَّايَ» ham deyilmaydi, chunki foillar har xil. Bularda «ل» bilan aytish lozim: «Safar uchun tayyorlandim», «Meni sevganing uchun keldim»."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "أَمْثِلَةٌ",
+            "uz": "Misollar"
+          },
+          "items": [
+            {
+              "ar": "يَجُوبُ النَّاسُ الْبِلَادَ ابْتِغَاءَ الكَسْبِ، وَيَجْتَهِدُونَ فِي السَّعْيِ تَحْصِيلًا لِلثَّرْوَةِ، وَطَلَبًا لِلْمَجْدِ.",
+              "uz": "Odamlar daromad istab yurtlarni kezadi; boylik orttirish va shon-sharaf talab qilish uchun harakatda tirishadi."
+            },
+            {
+              "ar": "زُيِّنَتِ الْمَدِينَةُ إِكْرَامًا لِلْقَادِمِ.",
+              "uz": "Shahar kelayotgan mehmonga hurmat yuzasidan bezatildi."
+            },
+            {
+              "ar": "اخْتَرْتُ إِبْرَاهِيمَ ثِقَةً بِأَمَانَتِهِ، وَاعْتِمَادًا عَلَى عِفَّتِهِ، وَاحْتَرَمْتُهُ مُرَاعَاةً لِفَضْلِهِ، وَأَكْرَمْتُهُ سَعْيًا فِي مَرْضَاتِهِ.",
+              "uz": "Ibrohimni omonatiga ishonganim va iffatiga tayanganim uchun tanladim; fazlini e'tiborga olib hurmat qildim va roziligini istab ikrom qildim."
+            }
+          ]
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 2,
+      "num": 34,
+      "page": 133,
+      "titleAr": "٤ - الْمَفْعُولُ فِيهِ وَيُسَمَّى «ظَرْفًا»",
+      "title": "4. Maf'ulun fihi — «zarf»",
+      "rule": {
+        "ar": "الْمَفْعُولُ فِيهِ: اسْمٌ يُذْكَرُ لِبَيَانِ زَمَنِ الْفِعْلِ، أَوْ مَكَانِهِ؛ كَـ«حَفِظْتُ الدَّرْسَ صَبَاحًا أَمَامَ الْمُعَلِّمِ».",
+        "uz": "Maf'ulun fihi — fe'lning zamonini yoki makonini bayon qilish uchun keltiriladigan ism; masalan: «Darsni ertalab o'qituvchi oldida yodladim»."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَكُلُّ أَسْمَاءِ الزَّمَانِ صَالِحَةٌ لِلنَّصْبِ عَلَى الظَّرْفِيَّةِ؛ نَحْوُ: «زَمَنًا»، وَ«سَنَةً»، وَ«شَهْرًا»، وَ«يَوْمًا»، وَ«سَاعَةً».",
+          "uz": "Zamon ismlarining hammasi zarf sifatida nasb qilinishga yaroqli; masalan: زَمَنًا (bir zamon), سَنَةً (bir yil), شَهْرًا (bir oy), يَوْمًا (bir kun), سَاعَةً (bir soat)."
+        },
+        {
+          "type": "para",
+          "ar": "وَلَا يَصْلُحُ لِلنَّصْبِ مِنْ أَسْمَاءِ الْمَكَانِ إِلَّا الْمُبْهَمَاتُ؛ كَأَسْمَاءِ الْجِهَاتِ وَالْمَقَادِيرِ؛ نَحْوُ: «أَمَامَ»، وَ«فَرْسَخًا».",
+          "uz": "Makon ismlaridan esa faqat mavhumlari — tomon va masofa nomlari — nasbga yaraydi; masalan: أَمَامَ (oldida), فَرْسَخًا (bir farsax)."
+        },
+        {
+          "type": "para",
+          "ar": "(١) أَيْ: مَا لَيْسَ لَهَا صُورَةٌ وَلَا حُدُودٌ مَحْصُورَةٌ، فَلَا يُقَالُ: «صَلَّيْتُ الْمَسْجِدَ»، وَلَا «قَعَدْتُ الدَّارَ».",
+          "uz": "(1-izoh) Ya'ni shakli va aniq chegarasi bo'lmaganlari. Shuning uchun «صَلَّيْتُ الْمَسْجِدَ» yoki «قَعَدْتُ الدَّارَ» deb aytilmaydi (masjid va uy aniq chegarali — «fi» bilan aytiladi)."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "أَمْثِلَةٌ",
+            "uz": "Misollar"
+          },
+          "items": [
+            {
+              "ar": "١ - لِظَرْفِ الزَّمَانِ: عَاشَ نُوحٌ دَهْرًا، وَدَعَا قَوْمَهُ حِينًا.",
+              "uz": "1 — Zamon zarfiga: «Nuh uzoq zamon yashadi va qavmini bir muddat da'vat qildi»."
+            },
+            {
+              "ar": "وَكَذَلِكَ: «أَبَدًا»، وَ«أَمَدًا»، وَ«سَرْمَدًا»، وَ«زَمَنًا»، وَ«قَرْنًا»، وَ«حِقْبَةً»، وَ«مُدَّةً»، وَ«عَصْرًا»، وَ«عَامًا»، وَ«سَنَةً»، وَ«شَهْرًا»، وَ«أُسْبُوعًا»، وَ«يَوْمًا»، وَ«لَيْلَةً»، وَ«غَدًا»، وَ«سَاعَةً»، وَ«بُرْهَةً»، وَ«لَحْظَةً»، وَ«سَحَرًا»، وَ«فَجْرًا»، وَ«بُكْرَةً»، وَ«ضَحْوَةً»، وَ«ظُهْرًا»، وَ«عَصْرًا»، وَ«أَصِيلًا»، وَ«عَشِيَّةً».",
+              "uz": "Shuningdek: abadan, muddat, doimo, zamon, asr (yuz yil), davr, muddat, zamon, yil, sana, oy, hafta, kun, kecha, ertaga, soat, lahza, on, sahar, fajr, erta tong, choshgoh, peshin, asr, oqshom oldi, kechqurun."
+            },
+            {
+              "ar": "٢ - لِظَرْفِ الْمَكَانِ: تَرَكْتُ الكِتَابَ فَوْقَ الكُرْسِيِّ.",
+              "uz": "2 — Makon zarfiga: «Kitobni stul ustida qoldirdim»."
+            },
+            {
+              "ar": "وَكَذَلِكَ: «تَحْتَهُ»، وَ«أَسْفَلَهُ»، وَ«يَمِينَهُ»، وَ«شَمَالَهُ»، وَ«يَسَارَهُ»، وَ«أَمَامَهُ»، وَ«قُدَّامَهُ»، وَ«خَلْفَهُ»، وَ«وَرَاءَهُ».",
+              "uz": "Shuningdek: ostida, pastida, o'ngida, chapida (ikki xil), oldida, ro'parasida, orqasida, ortida."
+            },
+            {
+              "ar": "وَمَشَيْتُ بَيْنَ الصَّفَّيْنِ. وَسِرْتُ مِيلًا، أَوْ «فَرْسَخًا»، أَوْ «بَرِيدًا».",
+              "uz": "«Ikki saf orasida yurdim», «Bir mil, bir farsax yoki bir barid yo'l bosdim»."
+            },
+            {
+              "ar": "وَجَلَسْتُ قَبْلَ عَلِيٍّ، أَوْ «بَعْدَهُ». وَكُنْتُ مَعَ خَالِدٍ عِنْدَكَ، وَقَعَدْتُ إِزَاءَهُ، أَوْ «حِذَاءَهُ»، أَوْ «تِلْقَاءَهُ».",
+              "uz": "«Alidan oldin yoki keyin o'tirdim», «Xolid bilan sening huzuringda edim; uning ro'parasida, yonida yoki qarshisida o'tirdim»."
+            }
+          ]
+        }
+      ],
+      "exercise": []
     }
   ]
 }

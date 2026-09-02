@@ -7834,6 +7834,120 @@
         }
       ],
       "exercise": []
+    },
+    {
+      "book": 3,
+      "num": 11,
+      "page": 186,
+      "titleAr": "٥ - تَقْسِيمُ الْفِعْلِ إِلَى لَازِمٍ وَمُتَعَدٍّ",
+      "title": "5. Fe'lning lozim va muta'addiyga bo'linishi",
+      "rule": {
+        "ar": "يَنْقَسِمُ الْفِعْلُ إِلَى لَازِمٍ وَمُتَعَدٍّ. فَاللَّازِمُ: مَا لَا يَنْصِبُ الْمَفْعُولَ بِهِ؛ كَـ«خَرَجَ» وَ«فَرِحَ». وَالْمُتَعَدِّي: مَا يَنْصِبُهُ؛ وَهُوَ أَرْبَعَةُ أَقْسَامٍ.",
+        "uz": "Fe'l lozim (o'timsiz) va muta'addiy (o'timli)ga bo'linadi. Lozim — maf'ulun bihini nasb qilmaydigan fe'l; masalan: خَرَجَ (chiqdi), فَرِحَ (xursand bo'ldi). Muta'addiy — uni nasb qiladigani; u to'rt bo'limdir."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "١ - قِسْمٌ يَنْصِبُ مَفْعُولًا وَاحِدًا، وَهُوَ كَثِيرٌ؛ كَـ: كَتَبَ الدَّرْسَ، وَفَهِمَ الْمَسْأَلَةَ.",
+          "uz": "1 — Bitta maf'ulni nasb qiladigan bo'lim; ular ko'p; masalan: «Darsni yozdi», «Masalani tushundi»."
+        },
+        {
+          "type": "para",
+          "ar": "٢ - وَقِسْمٌ يَنْصِبُ مَفْعُولَيْنِ أَصْلُهُمَا مُبْتَدَأٌ وَخَبَرٌ؛ وَهُوَ: «ظَنَّ»، وَ«خَالَ»، وَ«حَسِبَ»، وَ«زَعَمَ»، وَ«جَعَلَ»، وَ«عَدَّ»، وَ«حَجَا»، وَ«هَبْ»، وَتُفِيدُ الرُّجْحَانَ.",
+          "uz": "2 — Asli mubtado va xabar bo'lgan ikki maf'ulni nasb qiladigan bo'lim: «ظَنَّ», «خَالَ», «حَسِبَ», «زَعَمَ», «جَعَلَ», «عَدَّ», «حَجَا», «هَبْ» — bular gumon-taxmin ma'nosini beradi."
+        },
+        {
+          "type": "para",
+          "ar": "وَ«رَأَى»، وَ«عَلِمَ»، وَ«وَجَدَ»، وَ«أَلْفَى»، وَ«دَرَى»، وَ«تَعَلَّمْ»، وَتُفِيدُ الْيَقِينَ.",
+          "uz": "«رَأَى», «عَلِمَ», «وَجَدَ», «أَلْفَى», «دَرَى», «تَعَلَّمْ» — bular ishonch (yaqin) ma'nosini beradi."
+        },
+        {
+          "type": "para",
+          "ar": "وَ«صَيَّرَ»، وَ«رَدَّ»، وَ«تَرَكَ»، وَ«تَخِذَ»، وَ«اتَّخَذَ»، وَ«جَعَلَ»، وَ«وَهَبَ»، وَتُفِيدُ التَّحْوِيلَ؛ نَحْوُ: ظَنَنْتُ الْمُخْبِرَ صَادِقًا، وَ: خِلْتُ الْفَجْرَ طَالِعًا.",
+          "uz": "«صَيَّرَ», «رَدَّ», «تَرَكَ», «تَخِذَ», «اتَّخَذَ», «جَعَلَ», «وَهَبَ» — bular o'zgartirish ma'nosini beradi; masalan: «Xabarchini rostgo'y deb o'yladim», «Tongni otgan deb o'yladim»."
+        },
+        {
+          "type": "para",
+          "ar": "(١) (أَمْثِلَةُ الْبَقِيَّةِ): لَا تَحْسَبْ نَيْلَ الْعُلَا سَهْلًا، زَعَمْتَ الشَّمْسَ مُنْكَسِفَةً، جَعَلْتُ مُحَمَّدًا بَخِيلًا، فَإِذَا هُوَ كَرِيمٌ، عَدَدْتُكَ صَدِيقًا.",
+          "uz": "(1-izoh — qolganlariga misollar): «Yuksaklikka erishishni oson deb hisoblama», «Quyoshni tutilgan deb da'vo qilding», «Muhammadni baxil deb o'ylabman, u esa karamli ekan», «Seni do'st deb sanadim»."
+        },
+        {
+          "type": "para",
+          "ar": "قَدْ كُنْتُ أَحْجُو أَبَا عَمْرٍو أَخَا ثِقَةٍ * حَتَّى أَلَمَّتْ بِنَا يَوْمًا مُلِمَّاتُ",
+          "uz": "Abu Amrni ishonchli birodar deb o'ylardim — to bir kun bizga musibatlar tushgunicha."
+        },
+        {
+          "type": "para",
+          "ar": "هَبْهُ حَجَرًا فِي الْيَمِّ. رَأَيْتُ اللَّهَ أَكْبَرَ كُلِّ شَيْءٍ * مُحَاوَلَةً وَأَكْثَرَهُمْ جُنُودَا",
+          "uz": "«Uni dengizdagi tosh deb faraz qil». «Allohni har bir narsadan buyukroq — harakati bilan ham, lashkari ko'pligi bilan ham — deb bildim»."
+        },
+        {
+          "type": "para",
+          "ar": "﴿فَإِنْ عَلِمْتُمُوهُنَّ مُؤْمِنَاتٍ فَلَا تَرْجِعُوهُنَّ﴾، ﴿وَمَا تُقَدِّمُوا لِأَنْفُسِكُمْ مِنْ خَيْرٍ تَجِدُوهُ عِنْدَ اللَّهِ هُوَ خَيْرًا﴾، ﴿إِنَّهُمْ أَلْفَوْا آبَاءَهُمْ ضَالِّينَ﴾. دَرَيْتُكَ وَفِيًّا.",
+          "uz": "«Agar ularni mo'mina deb bilsangiz, ularni qaytarmanglar», «O'zingiz uchun qanday yaxshilik oldindan yuborsangiz, uni Alloh huzurida yaxshiroq holda topasiz», «Ular ota-bobolarini adashgan holda topdilar». «Seni vafodor deb bildim»."
+        },
+        {
+          "type": "para",
+          "ar": "تَعَلَّمْ شِفَاءَ النَّفْسِ قَهْرَ عَدُوِّهَا * وَبَالِغْ بِلُطْفٍ فِي التَّحَيُّلِ وَالْمَكْرِ",
+          "uz": "Bilib qo'y: nafsning shifosi — uning dushmanini yengishdir; hiyla va tadbirda yumshoqlik bilan ish tut."
+        },
+        {
+          "type": "para",
+          "ar": "٣ - وَقِسْمٌ يَنْصِبُ مَفْعُولَيْنِ، لَيْسَ أَصْلُهُمَا مُبْتَدَأً وَخَبَرًا؛ كَـ«أَعْطَى»، وَ«سَأَلَ»، وَ«مَنَحَ»، وَ«مَنَعَ»، وَ«كَسَا»، وَ«أَلْبَسَ»؛ نَحْوُ: أَعْطَيْتُ الْمُتَعَلِّمَ كِتَابًا، وَ: مَنَحْتُ الْمُجْتَهِدَ جَائِزَةً.",
+          "uz": "3 — Asli mubtado va xabar bo'lmagan ikki maf'ulni nasb qiladigan bo'lim: «أَعْطَى», «سَأَلَ», «مَنَحَ», «مَنَعَ», «كَسَا», «أَلْبَسَ»; masalan: «O'quvchiga kitob berdim», «Tirishqoqqa mukofot berdim»."
+        },
+        {
+          "type": "para",
+          "ar": "٤ - وَقِسْمٌ يَنْصِبُ ثَلَاثَةَ مَفَاعِيلَ؛ وَهُوَ: «أَرَى»، وَ«أَعْلَمَ»، وَ«أَنْبَأَ»، وَ«نَبَّأَ»، وَ«أَخْبَرَ»، وَ«خَبَّرَ»، وَ«حَدَّثَ»؛ نَحْوُ: ﴿كَذَلِكَ يُرِيهِمُ اللَّهُ أَعْمَالَهُمْ حَسَرَاتٍ عَلَيْهِمْ﴾.",
+          "uz": "4 — Uchta maf'ulni nasb qiladigan bo'lim: «أَرَى», «أَعْلَمَ», «أَنْبَأَ», «نَبَّأَ», «أَخْبَرَ», «خَبَّرَ», «حَدَّثَ»; masalan: «Alloh ularga amallarini o'zlariga hasrat qilib shunday ko'rsatadi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِذَا زِيدَ فِي أَوَّلِ الثُّلَاثِيِّ اللَّازِمِ هَمْزَةٌ، أَوْ ضُعِّفَ ثَانِيهِ، صَارَ مُتَعَدِّيًا لِوَاحِدٍ؛ كَـ: أَخْرَجَ، وَ: فَرَّحَ.",
+          "uz": "Uch harfli lozim fe'lning boshiga hamza qo'shilsa yoki ikkinchi harfi shaddalansa, u bitta maf'ulga o'timli bo'ladi; masalan: أَخْرَجَ (chiqardi), فَرَّحَ (xursand qildi)."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِنْ كَانَ مُتَعَدِّيًا لِوَاحِدٍ، صَارَ مُتَعَدِّيًا لِاثْنَيْنِ؛ كَـ: أَقْرَأَ، وَ: فَهَّمَ.",
+          "uz": "Agar u bitta maf'ulga o'timli bo'lsa, ikkitaga o'timli bo'ladi; masalan: أَقْرَأَ (o'qitdi), فَهَّمَ (tushuntirdi)."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِذَا كَانَ مُتَعَدِّيًا لِوَاحِدٍ، يَكُونُ مُطَاوِعُهُ لَازِمًا؛ كَـ: كَسَرْتُ الْحَجَرَ فَانْكَسَرَ، وَدَحْرَجْتُهُ، فَتَدَحْرَجَ. وَجَمَعْتُ الْفَوَائِدَ، فَاجْتَمَعَتْ.",
+          "uz": "Bitta maf'ulga o'timli bo'lsa, uning «mutovi'i» (aks ta'siri) lozim bo'ladi; masalan: «Toshni sindirdim — u sindi», «Uni dumalatdim — u dumaladi», «Foydalarni to'pladim — ular to'plandi»."
+        },
+        {
+          "type": "para",
+          "ar": "(١) تُنْقَاسُ زِيَادَةُ الْهَمْزَةِ فِي اللَّازِمِ دُونَ الْمُتَعَدِّي، فَيُقْتَصَرُ فِيهِ عَلَى مَا سُمِعَ، وَأَمَّا التَّضْعِيفُ فَلَيْسَ بِقِيَاسِيٍّ .. لَا فِي اللَّازِمِ، وَلَا فِي الْمُتَعَدِّي عَلَى الصَّحِيحِ.",
+          "uz": "(1-izoh) Hamza qo'shish lozim fe'lda qiyosiy bo'ladi, muta'addiyda esa emas — unda faqat eshitilgani bilan cheklaniladi. Shaddalash esa — to'g'ri qarashga ko'ra — na lozimda, na muta'addiyda qiyosiy emas."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) الْمُطَاوِعُ هُوَ مَا يَدُلُّ عَلَى أَثَرِ فِعْلِ فَاعِلٍ آخَرَ.",
+          "uz": "(2-izoh) «Mutovi'» — boshqa foil ishining natijasiga dalolat qiladigan fe'l."
+        },
+        {
+          "type": "para",
+          "ar": "(تَتِمَّةُ أَمْثِلَةِ الْبَقِيَّةِ): صَيَّرْتُ الدُّهْنَ شَمْعًا، رَدَدْتُ الطِّينَ آجُرًّا. ﴿وَتَرَكْنَا بَعْضَهُمْ يَوْمَئِذٍ يَمُوجُ فِي بَعْضٍ﴾. تَخِذْتُ الصِّدْقَ شِعَارًا. ﴿وَاتَّخَذَ اللَّهُ إِبْرَاهِيمَ خَلِيلًا﴾، ﴿فَجَعَلْنَاهُ هَبَاءً مَنْثُورًا﴾. وَهَبَنِي اللَّهُ فِدَاءَكَ.",
+          "uz": "(Qolgan misollarning davomi): «Yog'ni shamga aylantirdim», «Loyni g'ishtga aylantirdim». «O'sha kuni ularning ba'zisini ba'zisiga aralashib ketgan holda qoldirdik». «Rostgo'ylikni shior qilib oldim». «Alloh Ibrohimni do'st tutdi», «Biz uni sochilgan changga aylantirdik». «Alloh meni senga fido qilsin»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ«هَبْ» وَ«تَعَلَّمْ»: مُلَازِمَانِ لِلْأَمْرِيَّةِ، وَ«وَهَبَ» مُلَازِمٌ لِلْمُضِيِّ، وَالْبَاقِي مُتَصَرِّفٌ.",
+          "uz": "«هَبْ» va «تَعَلَّمْ» doim amr shaklida qoladi; «وَهَبَ» doim mozi shaklida qoladi; qolganlari mutasarrifdir."
+        },
+        {
+          "type": "para",
+          "ar": "وَاعْلَمْ أَنَّهُ قَدْ يَسُدُّ مَسَدَّ الْمَفْعُولَيْنِ فِي أَفْعَالِ الرُّجْحَانِ وَالْيَقِينِ («أَنَّ» وَاسْمُهَا وَخَبَرُهَا)؛ نَحْوُ: ﴿وَهُمْ يَحْسَبُونَ أَنَّهُمْ يُحْسِنُونَ صُنْعًا﴾.",
+          "uz": "Bilki, gumon va yaqin fe'llarida ikki maf'ul o'rnini «أَنَّ» va uning ismi hamda xabari egallashi mumkin; masalan: «Ular esa o'zlarini yaxshi ish qilyapmiz deb hisoblaydilar»."
+        },
+        {
+          "type": "para",
+          "ar": "وَقَدْ زَعَمَتْ أَنِّي تَغَيَّرْتُ بَعْدَهَا. وَقَدْ يُحْذَفَانِ، أَوْ أَحَدُهُمَا؛ كَقَوْلِ الشَّاعِرِ: بِأَيِّ كِتَابٍ أَمْ بِأَيَّةِ سُنَّةٍ * تَرَى حُبَّهُمْ عَارًا عَلَيَّ وَتَحْسِبُ؟ أَيْ: تَحْسِبُهُ عَارًا.",
+          "uz": "«U mendan keyin o'zgarib ketdim deb da'vo qildi». Ba'zan ikkala maf'ul yoki biri tushiriladi; shoirning so'zi kabi: «Qaysi kitob yoki qaysi sunnat bilan ularni sevishni menga uyat deb ko'rasan va hisoblaysan?» — ya'ni «uni uyat deb hisoblaysan»."
+        }
+      ],
+      "exercise": []
     }
   ]
 }

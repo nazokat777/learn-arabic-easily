@@ -7535,6 +7535,141 @@
         }
       ],
       "exercise": []
+    },
+    {
+      "book": 3,
+      "num": 8,
+      "page": 181,
+      "titleAr": "فِعْلَا التَّعَجُّبِ",
+      "title": "Taajjub fe'llari",
+      "rule": {
+        "ar": "لِلتَّعَجُّبِ صِيغَتَانِ: «مَا أَفْعَلَهُ»، وَ«أَفْعِلْ بِهِ»؛ نَحْوُ: مَا أَحْسَنَ النِّيلَ، وَأَعْذِبْ بِمَائِهِ.",
+        "uz": "Taajjubning ikki shakli bor: «مَا أَفْعَلَهُ» va «أَفْعِلْ بِهِ»; masalan: «Nil naqadar go'zal!», «Uning suvi naqadar shirin!»"
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "فَفِي الْمِثَالِ الْأَوَّلِ: «مَا» نَكِرَةٌ تَامَّةٌ؛ بِمَعْنَى «شَيْءٍ» مُبْتَدَأٌ. وَ«أَحْسَنَ»: فِعْلٌ مَاضٍ جَامِدٌ، فَاعِلُهُ مُسْتَتِرٌ وُجُوبًا، تَقْدِيرُهُ: هُوَ؛ يَعُودُ عَلَى «مَا»، وَالْجُمْلَةُ فِي مَحَلِّ رَفْعٍ خَبَرُ «مَا». وَ«النِّيلَ»: مَفْعُولٌ لِـ«أَحْسَنَ».",
+          "uz": "Birinchi misolda: «مَا» — «narsa» ma'nosidagi to'liq nakira bo'lib, mubtado. «أَحْسَنَ» — jomid mozi fe'l; foili vojib ravishda yashiringan bo'lib, taqdiri «هُوَ» — u «مَا» ga qaytadi; jumla esa «مَا» ning xabari sifatida raf' o'rnida. «النِّيلَ» — «أَحْسَنَ» ning maf'uli."
+        },
+        {
+          "type": "para",
+          "ar": "وَفِي الْمِثَالِ الثَّانِي: «أَعْذِبْ»: فِعْلٌ مَاضٍ جَامِدٌ أَتَى عَلَى صُورَةِ الْأَمْرِ. وَالْبَاءُ: حَرْفُ جَرٍّ زَائِدٌ. وَ«مَاءٌ»: فَاعِلٌ لِـ«أَعْذِبْ» مَرْفُوعٌ بِضَمَّةٍ مُقَدَّرَةٍ مَنَعَ مِنْ ظُهُورِهَا حَرَكَةُ حَرْفِ الْجَرِّ الزَّائِدِ، وَالْهَاءُ مُضَافٌ إِلَيْهِ.",
+          "uz": "Ikkinchi misolda: «أَعْذِبْ» — amr shaklida kelgan jomid mozi fe'l. «ب» — ortiqcha (zoid) jarr harfi. «مَاء» — «أَعْذِبْ» ning foili bo'lib, taqdiriy damma bilan marfu'; dammaning ko'rinishiga ortiqcha jarr harfining harakati to'sqinlik qilgan. «ه» esa muzofun ilayh."
+        },
+        {
+          "type": "para",
+          "ar": "وَلَا تُصَاغَانِ إِلَّا مِنْ فِعْلٍ مُتَصَرِّفٍ قَابِلٍ لِلتَّفَاوُتِ، بِشَرْطِ أَنْ يَكُونَ ثُلَاثِيًّا تَامًّا مُثْبَتًا مَبْنِيًّا لِلْمَعْلُومِ لَمْ يَجِئِ الْوَصْفُ مِنْهُ عَلَى وَزْنِ «أَفْعَل».",
+          "uz": "Bu ikki shakl faqat ortiq-kam bo'lishi mumkin bo'lgan mutasarrif fe'ldan yasaladi; sharti: u uch harfli, to'liq, tasdiq shaklida, ma'lum darajada (majhul emas) bo'lishi va undan sifat «أَفْعَل» vaznida kelmagan bo'lishi."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "فَإِنْ كَانَ:",
+            "uz": "Agar u:"
+          },
+          "items": [
+            {
+              "ar": "١ - اسْمًا؛ كَـ«قِرْدٍ».",
+              "uz": "1 — Ism bo'lsa (masalan «qird» — maymun);"
+            },
+            {
+              "ar": "٢ - أَوْ فِعْلًا جَامِدًا؛ كَـ«كَادَ».",
+              "uz": "2 — Yoki jomid fe'l bo'lsa (masalan «كَادَ»);"
+            },
+            {
+              "ar": "٣ - أَوْ لَا تَفَاوُتَ فِيهِ؛ كَـ«مَاتَ»، فَلَا يُتَعَجَّبُ مِنْهُ الْبَتَّةَ.",
+              "uz": "3 — Yoki unda ortiq-kamlik bo'lmasa (masalan «مَاتَ» — o'ldi), — bulardan mutlaqo taajjub yasalmaydi."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "وَإِنْ كَانَ: ١ - غَيْرَ ثُلَاثِيٍّ؛ كَـ«أَعَنَّ».",
+          "uz": "Agar u: 1 — uch harfli bo'lmasa (masalan «أَعَنَّ»)…"
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَإِنْ كَانَ (تَتِمَّةٌ):",
+            "uz": "Agar u (davomi):"
+          },
+          "items": [
+            {
+              "ar": "٢ - أَوْ نَاقِصًا؛ كَـ«صَارَ».",
+              "uz": "2 — Yoki noqis bo'lsa (masalan «صَارَ»);"
+            },
+            {
+              "ar": "٣ - أَوْ مَنْفِيًّا؛ كَـ«مَا بَالَى».",
+              "uz": "3 — Yoki inkor holida bo'lsa (masalan «مَا بَالَى» — parvo qilmadi);"
+            },
+            {
+              "ar": "٤ - أَوْ مَبْنِيًّا لِلْمَجْهُولِ؛ كَـ«غُلِبَ».",
+              "uz": "4 — Yoki majhul shaklda bo'lsa (masalan «غُلِبَ» — mag'lub qilindi);"
+            },
+            {
+              "ar": "٥ - أَوْ كَانَ الْوَصْفُ مِنْهُ عَلَى أَفْعَلَ؛ كَـ«عَرِجَ».",
+              "uz": "5 — Yoki undan sifat «أَفْعَل» vaznida kelsa (masalan «عَرِجَ» — oqsadi)."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "تَوَصَّلْتَ إِلَى التَّعَجُّبِ مِنْهُ بِذِكْرِ مَصْدَرِهِ بَعْدَ «مَا أَشَدَّ» وَ«أَشْدِدْ»، وَ«مَا أَعْظَمَ» وَ«أَعْظِمْ»، وَأَمْثَالِهَا.",
+          "uz": "Bunday fe'ldan taajjubga uning masdarini «مَا أَشَدَّ», «أَشْدِدْ», «مَا أَعْظَمَ», «أَعْظِمْ» va shu kabilardan keyin keltirish bilan erishasan."
+        },
+        {
+          "type": "para",
+          "ar": "نَحْوُ: مَا أَشَدَّ إِعْزَازَ النَّاسِ لِلْعُلَمَاءِ، وَ: أَشْدِدْ بِصَيْرُورَةِ الْمُبَذِّرِ إِلَى الْفَقْرِ. وَ: مَا أَعْظَمَ أَلَّا يُبَالِيَ الرَّجُلُ بِالشَّدَائِدِ، وَأَعْظِمْ أَنْ يُغْلَبَ الْمُبْطِلُ. وَ: أَكْبِرْ بِعَرَجِ حِمَارِكِ.",
+          "uz": "Masalan: «Odamlarning olimlarni izzatlashi naqadar kuchli!», «Isrofgarning qashshoqlikka yuz tutishi naqadar shiddatli!», «Kishining qiyinchiliklarga parvo qilmasligi naqadar ulug'!», «Botil egasining mag'lub bo'lishi naqadar ulug'!», «Eshagingning oqsashi naqadar katta ish!»"
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 3,
+      "num": 9,
+      "page": 182,
+      "titleAr": "هَمْزَتَا الْوَصْلِ وَالْقَطْعِ",
+      "title": "Vasl va qat' hamzalari",
+      "rule": {
+        "ar": "الْهَمْزَةُ الْمَزِيدَةُ فِي: ١ - مَاضِي الْخُمَاسِيِّ. ٢ - وَالسُّدَاسِيِّ. ٣ - وَأَمْرِهِمَا. ٤ - وَمَصْدَرِهِمَا. ٥ - وَأَمْرِ الثُّلَاثِيِّ .. تُسَمَّى «هَمْزَةَ وَصْلٍ».",
+        "uz": "Quyidagilarda qo'shiladigan hamza «vasl hamzasi» deb ataladi: 1 — besh harfli fe'lning mozisi, 2 — olti harflining mozisi, 3 — ikkalasining amri, 4 — ikkalasining masdari, 5 — uch harflining amri."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "لِأَنَّهَا تَسْقُطُ فِي دَرْجِ الكَلَامِ، فَيَتَّصِلُ مَا قَبْلَهَا بِمَا بَعْدَهَا، وَلَا يُنْطَقُ بِهَا إِلَّا فِي الاِبْتِدَاءِ تَوَصُّلًا لِلسَّاكِنِ.",
+          "uz": "Chunki u kalom o'rtasida tushib qoladi va oldingi so'z keyingisiga ulanadi; u faqat so'z boshida — sokin harfga yetish uchun — talaffuz qilinadi."
+        },
+        {
+          "type": "para",
+          "ar": "نَحْوُ: انْطَلَقَ، وَ: اسْتَغْفَرَ، وَ: انْطَلِقْ، وَ: اسْتَغْفِرْ، وَ: انْطِلَاقٍ، وَ: اسْتِغْفَارٍ. وَ: اعْلَمْ.",
+          "uz": "Masalan: انْطَلَقَ, اسْتَغْفَرَ, انْطَلِقْ, اسْتَغْفِرْ, انْطِلَاق, اسْتِغْفَار va اعْلَمْ."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَفِي:",
+            "uz": "Shuningdek quyidagi ismlarda ham (vasl hamzasi bo'ladi):"
+          },
+          "items": [
+            {
+              "ar": "١ - ابْنٍ. ٢ - وَابْنَةٍ.",
+              "uz": "1 — ابْن (o'g'il), 2 — ابْنَة (qiz)."
+            },
+            {
+              "ar": "٣ - وَاثْنَيْنِ. ٤ - وَامْرِئٍ.",
+              "uz": "3 — اثْنَيْنِ (ikki), 4 — امْرِئ (kishi)."
+            },
+            {
+              "ar": "٥ - وَامْرَأَةٍ. ٦ - وَاثْنَتَيْنِ.",
+              "uz": "5 — امْرَأَة (ayol), 6 — اثْنَتَيْنِ (ikki — muannas)."
+            }
+          ]
+        }
+      ],
+      "exercise": []
     }
   ]
 }

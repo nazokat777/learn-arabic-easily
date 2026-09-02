@@ -6034,8 +6034,78 @@
         {
           "ar": "لِكُلِّ دَاءٍ دَوَاءٌ يُسْتَطَبُّ بِهِ * إِلَّا الْحَمَاقَةَ أَعْيَتْ مَنْ يُدَاوِيهَا",
           "uz": "Har bir dardga davo izlab topiladi — ahmoqlikdan boshqa: u davolamoqchi bo'lganni ojiz qoldirgan."
+        },
+        {
+          "ar": "عِشْ قَانِعًا، وَعَاشِرِ النَّاسَ مُتَوَاضِعًا. يَا مُفْتَخِرًا بِالْحَسَبِ، إِنَّ الْفَخْرَ بِالْأَدَبِ. لَا يَزَالُ الْجَاهِلُ لَاهِيًا، يَبِيتُ قَلْبُهُ خَالِيًا، وَيُصْبِحُ طَرْفُهُ سَاهِيًا».",
+          "uz": "Qanoatli holda yasha, odamlar bilan kamtar holda muomala qil. Ey nasab bilan faxrlanuvchi, faxr — odob bilandir. Johil hamon o'yin-kulgida: qalbi bo'sh holda tunaydi, ko'zi g'aflatda tong ottiradi»."
         }
       ]
+    },
+    {
+      "book": 2,
+      "num": 41,
+      "page": 143,
+      "titleAr": "تَمْرِينٌ عَامٌّ لِمَنْصُوبَاتِ الْأَسْمَاءِ",
+      "title": "Ismning mansublari bo'yicha umumiy mashq",
+      "rule": {
+        "ar": "",
+        "uz": ""
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "كَمْ نَوْعًا مِنْ مَنْصُوبَاتِ الْأَسْمَاءِ فِي الْعِبَارَةِ الْآتِيَةِ:",
+          "uz": "Quyidagi iborada ism mansublarining necha turi bor:"
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "«لَا شَيْءَ أَعَزُّ عِنْدَ الْعَاقِلِ مِنْ وَطَنِهِ، الَّذِي تَرَبَّى صَغِيرًا فَوْقَ أَرْضِهِ، وَتَحْتَ سَمَائِهِ، وَانْتَفَعَ زَمَنًا بِنَبَاتِهِ وَحَيَوَانِهِ، وَعَاشَ فِيهِ آنِسًا بَيْنَ أَهْلِهِ وَمَعَ عَشِيرَتِهِ، لَمْ يَأْلَفْ إِلَّا مَعَاهِدَهُ، وَلَمْ يَرِدْ إِلَّا مَوَارِدَهُ، نَظَرَ قَبْلَ كُلِّ شَيْءٍ شَكْلَهُ .. فَصَادَفَ حُبُّهُ قَلْبًا خَالِيًا فَتَمَكَّنَ.",
+          "uz": "«Aqlli kishi uchun vatanidan azizroq narsa yo'q: u bolaligida uning yeri ustida, osmoni ostida voyaga yetdi; uzoq zamon o'simligi va hayvonidan foydalandi; unda ahli orasida, urug'i bilan xotirjam yashadi; faqat uning maskanlariga o'rgandi, faqat uning suv joylariga bordi; hamma narsadan avval uning qiyofasiga qaradi — vatan sevgisi bo'sh qalbga duch kelib, o'rnashib oldi."
+        },
+        {
+          "ar": "وَلَا يَعِيشُ الْإِنْسَانُ عَيْشًا رَغَدًا، وَلَا يَسْعَدُ سَعَادَةً تَامَّةً .. إِلَّا إِذَا أَصْبَحَ أَهْلُ بِلَادِهِ عَارِفِينَ لِحُقُوقِهِمْ وَوَاجِبَاتِهِمْ، وَأَمْسَى الْعِلْمُ بَيْنَهُمْ أَرْفَعَ الْأَشْيَاءِ قِيمَةً، وَأَعَزَّهَا مَطْلُوبًا.",
+          "uz": "Inson farovon hayot kechirmaydi va to'liq baxtga erishmaydi — faqat yurtining ahli o'z haqlari va burchlarini biladigan bo'lsa, ilm ular orasida qiymati eng yuksak va talab qilinishi eng aziz narsaga aylansagina."
+        },
+        {
+          "ar": "فَيَا طَالِبَ الشَّرَفِ أَحْبِبْ وَطَنَكَ حُبًّا، وَصُنْهُ صَوْنًا، قِيَامًا بِوَاجِبِهِ وَرِعَايَةً لِحَقِّهِ؛ فَإِنَّ حُبَّ الْوَطَنِ مِنْ حَمِيدِ الْخِصَالِ».",
+          "uz": "Ey sharaf istovchi! Vataningni chin sevgi bilan sev, uni chinakam asra — burchini bajarish va haqini rioya qilish yuzasidan; zero vatan sevgisi maqtovli xislatlardandir»."
+        }
+      ]
+    },
+    {
+      "book": 2,
+      "num": 42,
+      "page": 144,
+      "titleAr": "جَرُّ الاِسْمِ وَمَوَاضِعُهُ — ١ - الْمَجْرُورُ بِالْحَرْفِ",
+      "title": "Ismning jarri — 1. Harf bilan majrur",
+      "rule": {
+        "ar": "الْأَصْلُ فِي الْجَرِّ أَنْ يَكُونَ بِكَسْرَةٍ. وَيَنُوبُ عَنْهَا يَاءٌ فِي الْمُثَنَّى، وَجَمْعِ الْمُذَكَّرِ السَّالِمِ، وَالْأَسْمَاءِ الْخَمْسَةِ، وَفَتْحَةٌ فِي الْمَمْنُوعِ مِنَ الصَّرْفِ. فَتَقُولُ: أَخَذْتُ بِرَأْيِ أَبِي حَنِيفَةَ النُّعْمَانِ، وَصَاحِبَيْهِ، وَزُفَرَ، وَالْعِرَاقِيِّينَ.",
+        "uz": "Jarrda asl — kasra bilan bo'lishi. Uning o'rniga keladi: ikkilikda, jam'i muzakkari solimda va besh ismda yo; man'i sarfda esa fatha. Masalan: «Abu Hanifa Nu'monning, ikki sherigining, Zufarning va iroqliklarning fikrini oldim»."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَالاِسْمُ يُجَرُّ إِذَا كَانَ مَسْبُوقًا بِحَرْفٍ مِنْ حُرُوفِ الْجَرِّ، أَوْ كَانَ مُضَافًا إِلَيْهِ.",
+          "uz": "Ism jarr harflaridan biri undan oldin kelganda yoki muzofun ilayh bo'lganda jarr bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "حُرُوفُ الْجَرِّ هِيَ: «مِنْ»، وَ«إِلَى»، وَ«عَنْ»، وَ«عَلَى»، وَ«فِي»، وَ«رُبَّ»، وَ«الْبَاءُ»، وَ«الكَافُ»، وَ«اللَّامُ»، وَ«الْوَاوُ»، وَ«التَّاءُ»، وَ«مُذْ»، وَ«مُنْذُ»، وَ«حَتَّى»؛ نَحْوُ: سَافَرَ مَحْمُودٌ مِنَ الْقَاهِرَةِ إِلَى الْإِسْكَنْدَرِيَّةِ فِي يَوْمٍ.",
+          "uz": "Jarr harflari: مِنْ, إِلَى, عَنْ, عَلَى, فِي, رُبَّ, ب, ك, ل, و, ت, مُذْ, مُنْذُ, حَتَّى; masalan: «Mahmud bir kunda Qohiradan Iskandariyaga safar qildi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَحْتَاجُ الظَّرْفُ إِلَى مُتَعَلِّقٍ يَتَعَلَّقُ بِهِ، وَكَذَا الْجَارُّ إِنْ لَمْ يَكُنْ زَائِدًا.",
+          "uz": "Zarf o'zi bog'lanadigan so'zga (muta'allaq) muhtoj bo'ladi; jarr harfi ham — ortiqcha (zoid) bo'lmasa — xuddi shunday."
+        },
+        {
+          "type": "para",
+          "ar": "(١) هَذِهِ الْحُرُوفُ تَكُونُ لِمَعَانٍ كَثِيرَةٍ نَكْتَفِي بِذِكْرِ أَشْهَرِهَا: فَـ«مِنْ»: لِلاِبْتِدَاءِ، وَ«إِلَى» وَ«حَتَّى»: لِلاِنْتِهَاءِ، وَ«عَنْ»: لِلْمُجَاوَزَةِ، وَ«عَلَى»: لِلاِسْتِعْلَاءِ، وَ«فِي»: لِلظَّرْفِيَّةِ، وَ«رُبَّ»: لِلتَّقْلِيلِ، وَالْبَاءُ: لِلسَّبَبِيَّةِ وَالْقَسَمِ، وَالكَافُ: لِلتَّشْبِيهِ، وَاللَّامُ: لِلاِخْتِصَاصِ، وَالْوَاوُ وَالتَّاءُ: لِلْقَسَمِ، وَ«مُذْ» وَ«مُنْذُ»: لِلاِبْتِدَاءِ .. إِنْ كَانَ مَا بَعْدَهُمَا زَمَنًا مَاضِيًا، وَلِلظَّرْفِيَّةِ .. إِنْ كَانَ زَمَنًا حَاضِرًا.",
+          "uz": "(1-izoh) Bu harflar ko'p ma'nolarda keladi; eng mashhurlarini aytish bilan kifoyalanamiz: «مِنْ» — boshlanish; «إِلَى» va «حَتَّى» — tugash; «عَنْ» — o'tib ketish; «عَلَى» — ustunlik; «فِي» — ichida bo'lish; «رُبَّ» — ozlik; «ب» — sabab va qasam; «ك» — o'xshatish; «ل» — xoslik; «و» va «ت» — qasam; «مُذْ» va «مُنْذُ» — keyingisi o'tgan zamon bo'lsa boshlanish, hozirgi zamon bo'lsa zarflik ma'nosida."
+        }
+      ],
+      "exercise": []
     }
   ]
 }

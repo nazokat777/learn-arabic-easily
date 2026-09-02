@@ -6615,7 +6615,104 @@
           ]
         }
       ],
-      "exercise": []
+      "exercise": [
+        {
+          "ar": "صُغْ مِنْ قَوْلِكَ: «لَا يَسُودُ الْحَسُودُ» أَرْبَعَةَ أَمْثِلَةٍ لِتَوْكِيدِ الْفِعْلِ وَالاِسْمِ وَالْحُرُوفِ وَالْجُمْلَةِ تَوْكِيدًا لَفْظِيًّا.",
+          "uz": "«Hasadchi yuksalmaydi» degan gapingdan fe'l, ism, harf va jumlaning lafziy ta'kidiga to'rtta misol tuzing."
+        },
+        {
+          "ar": "رَكِّبْ أَحَدًا وَعِشْرِينَ مِثَالًا لِلتَّوْكِيدِ الْمَعْنَوِيِّ؛ سَبْعَةً مِنْهَا لِلرَّفْعِ، وَسَبْعَةً لِلنَّصْبِ، وَسَبْعَةً لِلْجَرِّ.",
+          "uz": "Ma'naviy ta'kidga yigirma bitta misol tuzing: yettitasi raf', yettitasi nasb, yettitasi jarr uchun."
+        }
+      ]
+    },
+    {
+      "book": 2,
+      "num": 49,
+      "page": 154,
+      "titleAr": "٤ - الْبَدَلُ",
+      "title": "4. Badal",
+      "rule": {
+        "ar": "الْبَدَلُ: تَابِعٌ مُمَهَّدٌ لَهُ بِذِكْرِ اسْمٍ قَبْلَهُ غَيْرِ مَقْصُودٍ لِذَاتِهِ. وَهُوَ أَرْبَعَةُ أَنْوَاعٍ: ١ - بَدَلٌ مُطَابِقٌ. ٢ - وَبَدَلُ بَعْضٍ مِنْ كُلٍّ. ٣ - وَبَدَلُ اشْتِمَالٍ. ٤ - وَبَدَلٌ مُبَايِنٌ.",
+        "uz": "Badal — o'zidan oldin, o'zi uchun ko'zda tutilmagan ismni keltirish bilan yo'l ochilgan tobe. U to'rt turli: 1 — mutobiq badal, 2 — butundan bo'lak badali, 3 — ishtimol badali, 4 — mubayin (boshqa) badal."
+      },
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            {
+              "ar": "١ - بَدَلٌ مُطَابِقٌ؛ نَحْوُ: وَاضِعُ النَّحْوِ الْإِمَامُ عَلِيٌّ.",
+              "uz": "1 — Mutobiq badal; masalan: «Nahvni asos solgan zot — imom Ali»."
+            },
+            {
+              "ar": "٢ - وَبَدَلُ بَعْضٍ مِنْ كُلٍّ؛ نَحْوُ: جَدَّدَ الْأَمِيرُ الْقَصْرَ أَكْثَرَهُ.",
+              "uz": "2 — Butundan bo'lak badali; masalan: «Amir qasrni, uning ko'p qismini yangiladi»."
+            },
+            {
+              "ar": "٣ - وَبَدَلُ اشْتِمَالٍ؛ نَحْوُ: انْصَرَفَ الدِّيوَانُ عُمَّالُهُ.",
+              "uz": "3 — Ishtimol badali; masalan: «Devon — uning xodimlari tarqaldi»."
+            },
+            {
+              "ar": "٤ - وَبَدَلٌ مُبَايِنٌ؛ نَحْوُ: خُذْ دِرْهَمًا دِينَارًا.",
+              "uz": "4 — Mubayin badal; masalan: «Bir dirham — yo'q, bir dinor ol» (so'zlovchi fikridan qaytadi)."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "وَيَجِبُ فِي بَدَلِ الْبَعْضِ وَالاِشْتِمَالِ أَنْ يَتَّصِلَا بِضَمِيرٍ يَعُودُ عَلَى الْمُبْدَلِ مِنْهُ، كَمَا رَأَيْتَ.",
+          "uz": "Ko'rganingdek, bo'lak badali va ishtimol badalida ular badal qilingan so'zga qaytadigan zamirga qo'shilishi vojibdir."
+        },
+        {
+          "type": "para",
+          "ar": "(١) فَالْقَصْدُ مِنْ قَوْلِكَ: «جَدَّدَ الْأَمِيرُ الْقَصْرَ أَكْثَرَهُ» الْإِخْبَارُ عَنْ تَجْدِيدِ الْأَمِيرِ لِأَكْثَرِ الْقَصْرِ، وَلَفْظُ «الْقَصْرِ» غَيْرُ مَقْصُودٍ لِذَاتِهِ، وَإِنَّمَا جِيءَ بِهِ تَمْهِيدًا لِذِكْرِ الْأَكْثَرِ، فَكَأَنَّ الْجُمْلَةَ ذُكِرَتْ مَرَّتَيْنِ لِيَكُونَ الكَلَامُ أَقْوَى تَأْثِيرًا فِي نَفْسِ السَّامِعِ.",
+          "uz": "(1-izoh) «Amir qasrni, uning ko'p qismini yangiladi» degan so'zdan maqsad — amirning qasrning ko'p qismini yangilaganini xabar qilish. «Qasr» so'zi o'zi uchun ko'zda tutilmagan, balki «ko'p qismi» ni aytishga yo'l ochish uchun keltirilgan — go'yo jumla ikki marta aytilib, kalom tinglovchi qalbida kuchliroq ta'sir qoldiradi."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) وَضَابِطُهُ: أَنْ يَكُونَ بَيْنَ الْبَدَلِ وَالْمُبْدَلِ مِنْهُ مُنَاسَبَةٌ.",
+          "uz": "(2-izoh) Uning o'lchovi: badal bilan badal qilingan so'z orasida bog'liqlik bo'lishi."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "أَمْثِلَةٌ",
+            "uz": "Misollar"
+          },
+          "items": [
+            {
+              "ar": "١ - لِلْبَدَلِ الْمُطَابِقِ: ﴿اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ ۝ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ﴾.",
+              "uz": "1 — Mutobiq badalga: «Bizni to'g'ri yo'lga boshlagin — o'zing ne'mat bergan kishilarning yo'liga»."
+            },
+            {
+              "ar": "هَبَطَ أَبُونَا آدَمُ فِي الْهِنْدِ. حَصَلَ الطُّوفَانُ فِي عَهْدِ سَيِّدِنَا نُوحٍ.",
+              "uz": "Otamiz Odam Hindistonga tushdi. To'fon sayyidimiz Nuh davrida bo'ldi."
+            },
+            {
+              "ar": "﴿لَا أُقْسِمُ بِهَذَا الْبَلَدِ ۝ وَأَنْتَ حِلٌّ بِهَذَا الْبَلَدِ﴾. نَجَا مِنَ النَّارِ الْخَلِيلُ إِبْرَاهِيمُ.",
+              "uz": "«Bu shaharga qasam ichaman — sen esa shu shaharda turuvchisan». Xalil Ibrohim olovdan najot topdi."
+            },
+            {
+              "ar": "٢ - لِبَدَلِ الْبَعْضِ: طَالَعْتُ الكِتَابَ نِصْفَهُ فِي يَوْمٍ. بُنِيَ الْبَيْتُ أَسَاسُهُ. خَسَفَ الْقَمَرُ جُزْؤُهُ. لَا تَظْهَرُ الكَوَاكِبُ نَهَارًا إِلَّا النَّيِّرَانِ.",
+              "uz": "2 — Bo'lak badaliga: «Kitobning yarmini bir kunda mutolaa qildim», «Uyning poydevori qurildi», «Oyning bir qismi tutildi», «Yulduzlar kunduzi ko'rinmaydi, ikki yoritqichdan boshqa»."
+            },
+            {
+              "ar": "٣ - لِبَدَلِ الاِشْتِمَالِ: نَفَعَنِي الْأُسْتَاذُ نَصِيحَتُهُ. أَطْرَبَنِي الْبُلْبُلُ صَوْتُهُ. انْظُرْ إِلَى الْمَاءِ جَرَيَانِهِ. تَشْكُرُ النَّاسُ الْمُجْتَهِدَ صُنْعَهُ. يَسَعُنِي الْأَمِيرُ عَفْوُهُ.",
+              "uz": "3 — Ishtimol badaliga: «Ustozning nasihati menga foyda berdi», «Bulbulning ovozi meni maftun qildi», «Suvning oqishiga qara», «Odamlar tirishqoqning ishini maqtaydi», «Amirning afvi meni qamrab oladi»."
+            },
+            {
+              "ar": "٤ - لِلْبَدَلِ الْمُبَايِنِ: اشْتَرِ رَطْلًا قِنْطَارًا. لَا تَأْمَنِ الْخَائِنَ عَلَى ذَهَبٍ نُحَاسٍ. اخْرُجْ إِلَى اللِّصِّ بِعَصًا سَيْفٍ. الْحَقِ الْفَارَّ رَاكِبًا حِمَارًا فَرَسًا. أَعْطِ السَّائِلَ ثَلَاثَةً أَرْبَعَةً.",
+              "uz": "4 — Mubayin badalga: «Bir ratl — yo'q, bir qintor sotib ol», «Xoinga oltinni — yo'q, misni ham ishonma», «O'g'riga hassa — yo'q, qilich bilan chiq», «Qochoqni eshak — yo'q, ot minib quvib yet», «So'rovchiga uchta — yo'q, to'rtta ber»."
+            }
+          ]
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "ائْتِ لِكُلِّ نَوْعٍ مِنْ أَنْوَاعِ الْبَدَلِ بِثَلَاثَةِ أَمْثِلَةٍ: أَحَدُهَا مَرْفُوعٌ، وَثَانِيهَا مَنْصُوبٌ، وَثَالِثُهَا مَجْرُورٌ.",
+          "uz": "Badalning har bir turiga uchtadan misol keltiring: biri marfu', ikkinchisi mansub, uchinchisi majrur bo'lsin."
+        }
+      ]
     }
   ]
 }

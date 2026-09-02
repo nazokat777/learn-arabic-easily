@@ -4908,6 +4908,200 @@
           "uz": "Kechasi ishlar to'xtaydi, xayollar oqadi, qalbning maydoni kengayadi va hikmat to'planadi»."
         }
       ]
+    },
+    {
+      "book": 2,
+      "num": 27,
+      "page": 123,
+      "titleAr": "٣، ٤ - الْمُبْتَدَأُ وَالْخَبَرُ",
+      "title": "3, 4. Mubtado va xabar",
+      "rule": {
+        "ar": "الْمُبْتَدَأُ وَالْخَبَرُ: اسْمَانِ يَتَأَلَّفُ مِنْهُمَا جُمْلَةٌ مُفِيدَةٌ؛ كَـ«الْمَطَرُ غَزِيرٌ»، وَ«الْأَمْرَانِ مُسْتَوِيَانِ»، وَ«الْعَارِفُونَ مُمَيَّزُونَ». وَتُسَمَّى الْجُمْلَةُ الْمُرَكَّبَةُ مِنَ الْمُبْتَدَإِ وَالْخَبَرِ «جُمْلَةً اسْمِيَّةً».",
+        "uz": "Mubtado va xabar — ikki ism bo'lib, ulardan mazmunli jumla tuziladi; masalan: «Yomg'ir mo'l», «Ikki ish teng», «Biluvchilar ajralib turadi». Mubtado va xabardan tuzilgan jumla «ismiy jumla» deb ataladi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَقَدْ يَقَعُ الْخَبَرُ جُمْلَةً فِعْلِيَّةً؛ نَحْوُ: الْعَدْلُ يَحْسُنُ أَثَرُهُ. أَوِ اسْمِيَّةً؛ نَحْوُ: الظُّلْمُ مَرْتَعُهُ وَخِيمٌ. وَلَابُدَّ مِنِ اشْتِمَالِهَا عَلَى ضَمِيرٍ يَرْبِطُهَا بِالْمُبْتَدَإِ.",
+          "uz": "Ba'zan xabar fe'liy jumla bo'lib keladi; masalan: «Adolatning izi go'zal bo'ladi». Yoki ismiy jumla bo'ladi; masalan: «Zulmning oqibati og'ir». Bunday jumlada uni mubtadoga bog'lab turadigan zamir bo'lishi shart."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَقَعُ أَيْضًا شِبْهَ جُمْلَةٍ؛ نَحْوُ: «النَّظَافَةُ مِنَ الْإِيمَانِ»، وَ«الْجَنَّةُ تَحْتَ أَقْدَامِ الْأُمَّهَاتِ».",
+          "uz": "Xabar «shibhu jumla» (jumlaga o'xshash) bo'lib ham keladi; masalan: «Poklik iymondandir», «Jannat onalarning oyoqlari ostidadir»."
+        },
+        {
+          "type": "para",
+          "ar": "(١) وَيُمَيَّزُ الْمُبْتَدَأُ عَنِ الْخَبَرِ بِكَوْنِ الْأَوَّلِ هُوَ الْمُحَدَّثَ عَنْهُ، وَالثَّانِي هُوَ الْمُحَدَّثَ بِهِ.",
+          "uz": "(1-izoh) Mubtado xabardan shu bilan ajraladi: birinchisi — haqida gapirilayotgan narsa, ikkinchisi — u haqda aytilayotgan gap."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) وَيُقَالُ حِينَئِذٍ: إِنَّ الْجُمْلَةَ فِي مَحَلِّ رَفْعٍ.",
+          "uz": "(2-izoh) Bunday holda: «jumla raf' o'rnida» deyiladi."
+        },
+        {
+          "type": "para",
+          "ar": "(٣) شِبْهُ الْجُمْلَةِ هُوَ: الظَّرْفُ، وَالْجَارُّ وَالْمَجْرُورُ. وَالْخَبَرُ فِي الْحَقِيقَةِ: هُوَ مُتَعَلَّقُ الظَّرْفِ، أَوِ الْجَارِّ وَالْمَجْرُورِ.",
+          "uz": "(3-izoh) «Shibhu jumla» — zarf hamda jorr va majrur. Haqiqatda xabar — zarfning yoki jorr-majrurning bog'langan (taqdirdagi) so'zidir."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "أَمْثِلَةٌ",
+            "uz": "Misollar"
+          },
+          "items": [
+            {
+              "ar": "١ - لِلْمُبْتَدَإِ وَالْخَبَرِ الَّذِي لَيْسَ بِجُمْلَةٍ: الصَّمْتُ حِرْزٌ، وَالصِّدْقُ عِزٌّ. الْحَرْبُ خِدْعَةٌ. الْمُسْتَشِيرُ مُعَانٌ، وَالْمُسْتَشَارُ مُؤْتَمَنٌ. الرِّفْقُ يُمْنٌ، وَالْحُمْقُ شُؤْمٌ. الْأَقْدَارُ نَافِذَةٌ. الْأَحْكَامُ جَارِيَةٌ. الْأُمُورُ مُتَصَرِّفَةٌ. الْحَرَكَةُ بَرَكَةٌ. الْمَخْلُوقُونَ مُسَيَّرُونَ. الشَّمْسُ وَالْقَمَرُ آيَتَانِ مِنْ آيَاتِ اللَّهِ. الْمُتَبَايِعَانِ مُخْتَارَانِ مَا لَمْ يَتَفَرَّقَا. السَّابِقُونَ فَائِزُونَ.",
+              "uz": "1 — Xabari jumla bo'lmagan mubtado-xabarga: «Sukut — himoya, rostgo'ylik — izzat», «Urush — hiyla», «Maslahat so'ragan — yordamlangan, maslahat berilgan — omonatdor», «Muloyimlik — baraka, ahmoqlik — shumlik», «Taqdirlar amalga oshadi», «Hukmlar joriydir», «Ishlar o'zgarib turadi», «Harakatda — baraka», «Maxluqlar boshqariladi», «Quyosh va oy — Allohning oyatlaridan ikkitasi», «Xaridor va sotuvchi ajralmagunlaricha ixtiyorlidir», «Oldinga o'tganlar — yutuqqa erishuvchilar»."
+            },
+            {
+              "ar": "٢ - لِلْمُبْتَدَإِ وَالْخَبَرِ الْجُمْلَةِ، أَوِ الشَّبِيهِ بِالْجُمْلَةِ: الْعِلْمُ طَالِبُهُ مُوَفَّقٌ.",
+              "uz": "2 — Xabari jumla yoki jumlaga o'xshash bo'lganiga: «Ilm — uni talab qilgan kishi muvaffaqdir»."
+            },
+            {
+              "ar": "الْغَضَبُ آخِرُهُ نَدَمٌ. الصِّدْقُ يَنْجُو قَائِلُهُ. الذَّهَبُ لَا يَصْدَأُ جَوْهَرُهُ. النَّجَاةُ فِي الصِّدْقِ. الْبَرَكَةُ فِي الْبُكُورِ. يَدُ اللَّهِ مَعَ الْجَمَاعَةِ. الشَّرَفُ بِالْفَضْلِ وَالْأَدَبِ. النَّمِيمَةُ مِنَ الْخِصَالِ الذَّمِيمَةِ.",
+              "uz": "«G'azabning oxiri — pushaymon», «Rostgo'ylikni aytgan najot topadi», «Oltinning javhari zanglamaydi», «Najot rostgo'ylikda», «Baraka erta turishda», «Allohning qo'li jamoat bilan», «Sharaf fazl va odob bilan», «G'iybat — yomon xislatlardan»."
+            }
+          ]
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 2,
+      "num": 28,
+      "page": 124,
+      "titleAr": "٥، ٦ - اسْمُ «كَانَ» وَأَخَوَاتِهَا وَخَبَرُ «إِنَّ» وَأَخَوَاتِهَا",
+      "title": "5, 6. «Kana» va sheriklarining ismi, «Inna» va sheriklarining xabari",
+      "rule": {
+        "ar": "١ - تَدْخُلُ عَلَى الْمُبْتَدَإِ وَالْخَبَرِ «كَانَ»، فَتَرْفَعُ الْأَوَّلَ، وَيُسَمَّى: «اسْمَهَا»، وَتَنْصِبُ الثَّانِيَ، وَيُسَمَّى: «خَبَرَهَا»؛ نَحْوُ: كَانَ الْمَطَرُ غَزِيرًا. ٢ - وَتَدْخُلُ عَلَيْهِمَا «إِنَّ»، فَتَنْصِبُ الْأَوَّلَ، وَيُسَمَّى: «اسْمَهَا»، وَتَرْفَعُ الثَّانِيَ، وَيُسَمَّى: «خَبَرَهَا»؛ نَحْوُ: إِنَّ الْمَطَرَ غَزِيرٌ.",
+        "uz": "1 — Mubtado va xabar ustiga «كَانَ» kiradi: birinchisini raf' qiladi (u «kananing ismi» deyiladi), ikkinchisini nasb qiladi (u «kananing xabari» deyiladi); masalan: «Yomg'ir mo'l edi». 2 — Ular ustiga «إِنَّ» kiradi: birinchisini nasb qiladi (u «innaning ismi»), ikkinchisini raf' qiladi (u «innaning xabari»); masalan: «Albatta yomg'ir mo'ldir»."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَمِثْلُ «كَانَ»: «أَصْبَحَ»، وَ«أَضْحَى»، وَ«ظَلَّ»، وَ«أَمْسَى»، وَ«بَاتَ»، وَ«مَا زَالَ»، وَ«مَا بَرِحَ»، وَ«مَا انْفَكَّ»، وَ«مَا فَتِئَ»، وَ«مَا دَامَ»، وَ«صَارَ»، وَ«لَيْسَ».",
+          "uz": "«كَانَ» kabi: أَصْبَحَ, أَضْحَى, ظَلَّ, أَمْسَى, بَاتَ, مَا زَالَ, مَا بَرِحَ, مَا انْفَكَّ, مَا فَتِئَ, مَا دَامَ, صَارَ, لَيْسَ."
+        },
+        {
+          "type": "para",
+          "ar": "وَغَيْرُ الْمَاضِي مِنْ هَذِهِ الْأَفْعَالِ يَعْمَلُ عَمَلَهُ؛ نَحْوُ: قَدْ يَكُونُ السُّكُوتُ جَوَابًا.",
+          "uz": "Bu fe'llarning mozidan boshqa shakllari ham xuddi shu amalni qiladi; masalan: «Ba'zan sukut javob bo'ladi»."
+        },
+        {
+          "type": "para",
+          "ar": "(١) «كَانَ»: لِمُطْلَقِ التَّوْقِيتِ، وَ«أَصْبَحَ»: لِلتَّوْقِيتِ بِالصُّبْحِ، وَ«أَضْحَى»: لِلتَّوْقِيتِ بِالضُّحَى، وَ«أَمْسَى»: لِلتَّوْقِيتِ بِالْمَسَاءِ، وَ«ظَلَّ»: لِلتَّوْقِيتِ بِالنَّهَارِ، وَ«بَاتَ»: لِلتَّوْقِيتِ بِاللَّيْلِ، وَ«صَارَ»: لِلتَّحَوُّلِ، وَ«لَيْسَ»: لِلنَّفْيِ.",
+          "uz": "(1-izoh) «كَانَ» — mutlaq vaqt uchun; «أَصْبَحَ» — tong vaqti; «أَضْحَى» — choshgoh vaqti; «أَمْسَى» — kechqurun; «ظَلَّ» — kunduzi; «بَاتَ» — kechasi; «صَارَ» — bir holdan boshqasiga o'tish; «لَيْسَ» — inkor uchun."
+        },
+        {
+          "type": "para",
+          "ar": "وَ«مَا زَالَ»، وَ«مَا بَرِحَ»، وَ«مَا انْفَكَّ»، وَ«مَا فَتِئَ»: لِلاِسْتِمْرَارِ، وَ«مَا دَامَ»: لِبَيَانِ الْمُدَّةِ.",
+          "uz": "«مَا زَالَ», «مَا بَرِحَ», «مَا انْفَكَّ», «مَا فَتِئَ» — davomiylik uchun; «مَا دَامَ» esa muddatni bayon qilish uchun."
+        },
+        {
+          "type": "para",
+          "ar": "وَمِثْلُ «إِنَّ»: «أَنَّ»، وَ«كَأَنَّ»، وَ«لَكِنَّ»، وَ«لَيْتَ»، وَ«لَعَلَّ»، وَ«لَا».",
+          "uz": "«إِنَّ» kabi: أَنَّ, كَأَنَّ, لَكِنَّ, لَيْتَ, لَعَلَّ, لَا."
+        },
+        {
+          "type": "para",
+          "ar": "(١) «إِنَّ» وَ«أَنَّ»: لِلتَّوْكِيدِ، وَ«كَأَنَّ»: لِلتَّشْبِيهِ، وَ«لَكِنَّ»: لِلاِسْتِدْرَاكِ، وَ«لَيْتَ»: لِلتَّمَنِّي، وَ«لَعَلَّ»: لِلتَّرَجِّي وَالتَّوَقُّعِ، وَ«لَا»: لِنَفْيِ الْجِنْسِ.",
+          "uz": "(1-izoh) «إِنَّ» va «أَنَّ» — ta'kid uchun; «كَأَنَّ» — o'xshatish; «لَكِنَّ» — istidrok (oldingi gapni to'g'rilash); «لَيْتَ» — orzu; «لَعَلَّ» — umid va kutish; «لَا» — jinsni inkor qilish uchun."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "أَمْثِلَةٌ",
+            "uz": "Misollar"
+          },
+          "items": [
+            {
+              "ar": "كَانَ الْجَوُّ مُعْتَدِلًا. إِنْ يَكُنِ الشُّغْلُ مَجْهَدَةً، فَإِنَّ الْفَرَاغَ مَفْسَدَةٌ. أَصْبَحَ الْبَرْدُ شَدِيدًا. قَدْ تُصْبِحُ الْأَمَةُ رَبَّةً. أَضْحَتِ الصَّلَاةُ قَرِيبَةً. قَدْ يُضْحِي الْعَبْدُ سَيِّدًا.",
+              "uz": "«Havo mo''tadil edi», «Ish charchatuvchi bo'lsa, bekorchilik buzuqlikdir», «Sovuq qattiq bo'ldi», «Ba'zan cho'ri bekaga aylanadi», «Namoz vaqti yaqinlashdi», «Ba'zan qul xo'jayin bo'lib qoladi»."
+            },
+            {
+              "ar": "ظَلَّ الْهَوَاءُ حَارًّا، وَبَاتَ بَارِدًا. يَظَلُّ الْحَاسِدُ مَكْرُوبًا، وَيَبِيتُ مَهْمُومًا. أَمْسَى السِّعْرُ رَخِيصًا. يُمْسِي الْقَانِعُ شَاكِرًا.",
+              "uz": "«Havo kunduzi issiq bo'ldi, kechasi sovuq bo'ldi», «Hasadchi kunduzi qayg'uda, kechasi g'amda bo'ladi», «Narx arzon bo'ldi», «Qanoat qiluvchi kechqurun shukr qilgan holda bo'ladi»."
+            },
+            {
+              "ar": "مَا زَالَتِ النَّاسُ مُخْتَلِفَةً. لَا يَزَالُ اللَّهُ رَحِيمًا. لَا بَرِحَ الْحَقُّ مُنْتَصِرًا. لَا يَبْرَحُ الْعَفَافُ زِينَةَ الْفُقَرَاءِ.",
+              "uz": "«Odamlar hamon turlichadir», «Alloh doim rahmlidir», «Haq doim g'olibdir», «Iffat kambag'allarning ziynati bo'lib qolaveradi»."
+            },
+            {
+              "ar": "مَا انْفَكَّ الْبَاطِلُ مَهْزُومًا. لَا يَنْفَكُّ الشُّكْرُ زِينَةَ الْأَغْنِيَاءِ. مَا فَتِئَتْ طَائِفَةٌ قَائِمَةً عَلَى الْحَقِّ. لَا يَفْتَأُ الكَرِيمُ مَحْبُوبًا.",
+              "uz": "«Botil hamisha mag'lubdir», «Shukr boylarning ziynati bo'lib qolaveradi», «Bir toifa haq ustida turishdan to'xtamadi», «Karamli kishi sevimli bo'lib qolaveradi»."
+            },
+            {
+              "ar": "لَا يَهْدَأُ الرَّوْعُ مَا دَامَتِ الْحَرْبُ قَائِمَةً. لَيْسَ الْعَالِمُ وَالْجَاهِلُ سَوَاءً.",
+              "uz": "«Urush davom etar ekan, qo'rquv tinchimaydi», «Olim bilan johil teng emas»."
+            },
+            {
+              "ar": "إِنَّ عَوْدَ الذِّئْبِ ذَنْبَانِ. عَلِمْتُ أَنَّ الصُّلْحَ خَيْرٌ. كَأَنَّ صِلَةَ الْعِلْمِ نَسَبٌ.",
+              "uz": "«Bo'rining qaytishi ikki jinoyatdir», «Sulh yaxshiroq ekanini bildim», «Go'yo ilm rishtasi qarindoshlik kabidir»."
+            },
+            {
+              "ar": "خَالِدٌ شُجَاعٌ، لَكِنَّ ابْنَهُ جَبَانٌ. لَيْتَ الشَّبَابَ عَائِدٌ. لَعَلَّ الْغَائِبَ قَادِمٌ. لَا مُجِدًّا فِي الطَّلَبِ خَائِبٌ. لَا يَبْرَحُ ذُو الْحَقِّ مُنْتَصِرًا.",
+              "uz": "«Xolid botir, lekin o'g'li qo'rqoq», «Koshki yoshlik qaytsa», «Shoyad g'oyib bo'lgan kishi kelsa», «Talabda jiddiy bo'lgan hech kim noumid qolmaydi», «Haq egasi doim g'olib bo'lib qolaveradi»."
+            }
+          ]
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "١ - جَرِّدْ هَذِهِ الْأَمْثِلَةَ مِنْ «كَانَ» وَأَخَوَاتِهَا، وَ«إِنَّ» وَأَخَوَاتِهَا، وَاقْرَأْهَا بَعْدَ ذَلِكَ صَحِيحَةً.",
+          "uz": "1 — Bu misollarni «كَانَ» va sheriklaridan hamda «إِنَّ» va sheriklaridan xoli qiling, so'ngra ularni to'g'ri o'qing."
+        },
+        {
+          "ar": "٢ - أَدْخِلْ عَلَى أَمْثِلَةِ «كَانَ» وَأَخَوَاتِهَا بَعْدَ التَّجْرِيدِ: «إِنَّ» وَأَخَوَاتِهَا بِالتَّعَاقُبِ، وَعَلَى أَمْثِلَةِ «إِنَّ» وَأَخَوَاتِهَا بَعْدَ تَجْرِيدِهَا: «كَانَ» وَأَخَوَاتِهَا بِالتَّعَاقُبِ.",
+          "uz": "2 — «كَانَ» va sheriklarining misollarini xoli qilgach, ularga navbatma-navbat «إِنَّ» va sheriklarini kiriting; «إِنَّ» va sheriklarining misollarini xoli qilgach esa, ularga navbatma-navbat «كَانَ» va sheriklarini kiriting."
+        }
+      ]
+    },
+    {
+      "book": 2,
+      "num": 29,
+      "page": 126,
+      "titleAr": "تَمْرِينٌ عَامٌّ لِمَرْفُوعَاتِ الْأَسْمَاءِ",
+      "title": "Ismning marfu'lari bo'yicha umumiy mashq",
+      "rule": {
+        "ar": "",
+        "uz": ""
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "عَيِّنْ أَنْوَاعَ الْمَرْفُوعَاتِ فِي الْعِبَارَاتِ الْآتِيَةِ، مَعَ تَبْيِينِ الْأَفْعَالِ الْمَبْنِيَّةِ وَالْأَفْعَالِ الْمُعْرَبَةِ.",
+          "uz": "Quyidagi iboralarda marfu'larning turlarini aniqlang; shu bilan birga mabniy fe'llar va mu'rab fe'llarni ham ko'rsating."
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "«إِذَا تَكَلَّمَ أَحَدٌ مِنْكُمْ فَلْيَجْتَهِدْ أَنْ تَكُونَ الْأَلْفَاظُ عَذْبَةً لَا يَمَلُّ سَمَاعُهَا، وَأَنْ تَكُونَ الْمَدْلُولَاتُ صَحِيحَةً يُمْكِنُ وُقُوعُهَا؛ فَلَيْسَ كُلُّ لَفْظٍ مَقْبُولًا، وَلَا كُلُّ مَدْلُولٍ مَعْقُولًا.",
+          "uz": "«Sizlardan biringiz gapirsa, so'zlari eshitishdan zeriktirmaydigan shirin bo'lishiga va ma'nolari to'g'ri, ro'y berishi mumkin bo'lgan narsalar bo'lishiga harakat qilsin; zero har bir so'z ham maqbul emas, har bir ma'no ham aqlga sig'avermaydi."
+        },
+        {
+          "ar": "الْزَمِ الاِعْتِدَالَ؛ فَإِنَّ الزِّيَادَةَ عَيْبٌ، وَالنُّقْصَانَ عَجْزٌ.",
+          "uz": "Mo''tadillikni lozim tut; zero ortiqchalik — ayb, kamchilik — ojizlik."
+        },
+        {
+          "ar": "الْعَالِمُ وَالْمُتَعَلِّمُ شَرِيكَانِ فِي الْخَيْرِ.",
+          "uz": "Olim va o'rganuvchi yaxshilikda sherikdirlar."
+        },
+        {
+          "ar": "سَأَلَ عُمَرُ رَجُلًا عَنْ شَيْءٍ، فَقَالَ: اللَّهُ أَعْلَمُ. فَقَالَ عُمَرُ: لَقَدْ شَقِينَا إِنْ كُنَّا لَا نَعْلَمُ أَنَّ اللَّهَ أَعْلَمُ! إِذَا سُئِلَ أَحَدٌ مِنْكُمْ عَنْ شَيْءٍ لَا يَعْلَمُهُ فَلْيَقُلْ: لَا أَدْرِي.",
+          "uz": "Umar bir kishidan bir narsani so'radi. U: «Alloh biluvchiroq» dedi. Umar aytdi: «Agar Allohning biluvchiroq ekanini bilmasak, baxtsiz bo'libmiz-da! Sizlardan biringizdan bilmagan narsasi so'ralsa, ‘bilmayman' desin»."
+        },
+        {
+          "ar": "لَيْسَ الْعَطَاءُ مِنَ الْفُضُولِ سَمَاحَةً * حَتَّى تَجُودَ وَمَا لَدَيْكَ قَلِيلُ",
+          "uz": "Ortiqcha molidan berish saxovat emas — saxovat sendagi narsa oz bo'lganda ham berishingdir."
+        },
+        {
+          "ar": "إِذَا كَانَ الْإِيجَازُ كَافِيًا، كَانَ الْإِكْثَارُ عِيًّا».",
+          "uz": "Qisqa aytish yetarli bo'lsa, ko'p gapirish — ojizlikdir»."
+        }
+      ]
     }
   ]
 }

@@ -7330,9 +7330,93 @@
           "type": "para",
           "ar": "قُلْتُ: وَلِسُهُولَةِ حِفْظِهَا لِكَثْرَةِ اسْتِعْمَالِهِ نَظَمَهَا بَعْضُهُمْ مُرَتَّبًا قَائِلًا: فَتْحُ ضَمٍّ، فَتْحُ كَسْرٍ، فَتْحَتَانِ، كَسْرُ فَتْحٍ، ضَمُّ ضَمٍّ، كَسْرَتَانِ. وَهِيَ الْأَبْوَابُ السِّتَّةُ عَلَى هَذَا التَّرْتِيبِ. (عَبْدُ الْجَلِيلِ)",
           "uz": "(Nashrga tayyorlovchi) dedi: ko'p ishlatilgani uchun yodlash oson bo'lsin deb, ba'zilar ularni tartib bilan nazmga solgan: fatha-damma, fatha-kasra, ikki fatha, kasra-fatha, damma-damma, ikki kasra. Oltita bob shu tartibdadir. (Abdul Jalil)"
+        },
+        {
+          "type": "para",
+          "ar": "وَالْمَزِيدُ قِسْمَانِ: ١ - مَزِيدُ الثُّلَاثِيِّ. ٢ - وَمَزِيدُ الرُّبَاعِيِّ.",
+          "uz": "Maziyd ikki bo'lim: 1 — uch harflining maziydi, 2 — to'rt harflining maziydi."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "فَمَزِيدُ الثُّلَاثِيِّ إِمَّا:",
+            "uz": "Uch harflining maziydi:"
+          },
+          "items": [
+            {
+              "ar": "١ - أَنْ تَكُونَ زِيَادَتُهُ بِحَرْفٍ وَاحِدٍ؛ كَـ: أَكْرَمَ، وَقَدَّمَ، وَقَاتَلَ.",
+              "uz": "1 — Bitta harf qo'shilgani; masalan: أَكْرَمَ (ikrom qildi), قَدَّمَ (taqdim etdi), قَاتَلَ (jang qildi)."
+            },
+            {
+              "ar": "٢ - أَوْ بِحَرْفَيْنِ؛ كَـ: انْطَلَقَ، وَاجْتَمَعَ، وَاحْمَرَّ، وَتَشَارَكُوا، وَتَعَلَّمَ.",
+              "uz": "2 — Ikki harf qo'shilgani; masalan: انْطَلَقَ (yo'lga chiqdi), اجْتَمَعَ (to'plandi), احْمَرَّ (qizardi), تَشَارَكُوا (sherik bo'ldilar), تَعَلَّمَ (o'rgandi)."
+            },
+            {
+              "ar": "٣ - أَوْ بِثَلَاثَةٍ؛ كَـ: اسْتَغْفَرَ، وَاخْشَوْشَنَ، وَاجْلَوَّذَ، وَاحْمَارَّ.",
+              "uz": "3 — Uch harf qo'shilgani; masalan: اسْتَغْفَرَ (mag'firat so'radi), اخْشَوْشَنَ (dag'allashdi), اجْلَوَّذَ (tez yurdi), احْمَارَّ (qizarib ketdi)."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "وَمَزِيدُ الرُّبَاعِيِّ إِمَّا: ١ - أَنْ تَكُونَ زِيَادَتُهُ بِحَرْفٍ؛ كَـ: تَدَحْرَجَ. أَوْ: بِحَرْفَيْنِ؛ كَـ: احْرَنْجَمَ، وَاقْشَعَرَّ.",
+          "uz": "To'rt harflining maziydi: 1 — bitta harf qo'shilgani; masalan: تَدَحْرَجَ (dumalab ketdi). Yoki ikki harf qo'shilgani; masalan: احْرَنْجَمَ (to'plandi), اقْشَعَرَّ (junjikdi)."
         }
       ],
-      "exercise": []
+      "exercise": [
+        {
+          "ar": "بَيِّنْ أَنْوَاعَ الْفِعْلِ الْمُجَرَّدِ وَالْمَزِيدِ فِي هَذِهِ الْعِبَارَاتِ:",
+          "uz": "Quyidagi iboralarda mujarrad va maziyd fe'l turlarini ko'rsating:"
+        },
+        {
+          "ar": "مَنْ أَسْرَعَ فِي الْعَمَلِ لَمْ يَأْمَنْ مِنَ الزَّلَلِ.",
+          "uz": "Kim ishda shoshsa, xatodan omon bo'lmaydi."
+        },
+        {
+          "ar": "مَنْ رَضِيَ بِالْقَدَرِ اطْمَأَنَّ لِلْحَوَادِثِ.",
+          "uz": "Kim taqdirga rozi bo'lsa, hodisalarga xotirjam bo'ladi."
+        },
+        {
+          "ar": "أَحْسِنْ إِلَى مَنْ شِئْتَ تَكُنْ أَمِيرَهُ، وَاسْتَغْنِ عَمَّنْ شِئْتَ تَكُنْ نَظِيرَهُ، وَاحْتَجْ إِلَى مَنْ شِئْتَ تَكُنْ أَسِيرَهُ.",
+          "uz": "Kimga xohlasang yaxshilik qil — uning amiri bo'lasan; kimdan xohlasang beparvo bo'l — unga teng bo'lasan; kimga xohlasang muhtoj bo'l — uning asiri bo'lasan."
+        },
+        {
+          "ar": "«خَالِقِ النَّاسَ بِخُلُقٍ حَسَنٍ».",
+          "uz": "«Odamlar bilan go'zal xulq bilan muomala qil»."
+        },
+        {
+          "ar": "كَفْكِفْ غَرْبَ الْحِدَّةِ عِنْدَ الْمُعَارَضَةِ.",
+          "uz": "E'tiroz paytida qattiqqo'llik shashtini tiy."
+        },
+        {
+          "ar": "الْعَاقِلُ مَنِ اشْتَغَلَ بِعَيْبِهِ عَنْ عُيُوبِ النَّاسِ.",
+          "uz": "Aqlli kishi — odamlarning ayblari o'rniga o'z aybi bilan mashg'ul bo'lgan kishidir."
+        },
+        {
+          "ar": "لَيْسَ أَضَرَّ عَلَى النَّاسِ مِنْ ثَلَاثَةِ أَشْيَاءَ: تَحَمُّلُ الْإِنْسَانِ مَا لَا يُطِيقُ؛ اتِّكَالًا عَلَى الْقُوَّةِ، وَعَدَمُ السَّعْيِ؛ اتِّكَالًا عَلَى الْقَضَاءِ وَالْقَدَرِ، وَعَدَمُ الْحِمْيَةِ فِي الْأَكْلِ؛ اتِّكَالًا عَلَى جَوْدَةِ الصِّحَّةِ.",
+          "uz": "Odamlarga uch narsadan ko'ra zararliroq narsa yo'q: kuchiga suyanib, insonning quvvati yetmaydigan ishni bo'yniga olishi; qazoyu qadarga suyanib, harakat qilmasligi; sog'lig'ining yaxshiligiga suyanib, yeyishda parhez qilmasligi."
+        },
+        {
+          "ar": "مَنْ قَدَّمَ خَيْرًا جَنَى ثَمَرَتَهُ.",
+          "uz": "Kim yaxshilikni oldindan yuborsa, uning mevasini teradi."
+        },
+        {
+          "ar": "«أَحْبِبْ حَبِيبَكَ هَوْنًا مَا عَسَى أَنْ يَكُونَ بَغِيضَكَ يَوْمًا مَا، وَأَبْغِضْ بَغِيضَكَ هَوْنًا مَا، عَسَى أَنْ يَكُونَ حَبِيبَكَ يَوْمًا مَا».",
+          "uz": "«Do'stingni me'yorida sev — u bir kun dushmaning bo'lib qolishi mumkin; dushmaningni ham me'yorida yomon ko'r — u bir kun do'sting bo'lib qolishi mumkin»."
+        },
+        {
+          "ar": "تَفَاضُلُ الرِّجَالِ بِالْأَعْمَالِ.",
+          "uz": "Kishilarning ustunligi amallari bilandir."
+        },
+        {
+          "ar": "﴿اسْتَغْفِرُوا رَبَّكُمْ إِنَّهُ كَانَ غَفَّارًا﴾.",
+          "uz": "«Robbingizdan mag'firat so'ranglar; albatta U ko'p mag'firat qiluvchidir»."
+        },
+        {
+          "ar": "اكْفَهَرَّتِ السَّمَاءُ. اسْبَطَرَّ اللَّيْلُ. ازْجَحَنَّ الْمَطَرُ. اغْرَوْرَقَتْ عَيْنَا الْمُؤْمِنِ بِالدُّمُوعِ خَشْيَةً مِنْ رَبِّهِ.",
+          "uz": "Osmon quyuq bulut bilan qoraydi. Kecha cho'zildi. Yomg'ir og'irlashdi. Mo'minning ikki ko'zi Robbidan qo'rqib yoshga to'ldi."
+        }
+      ]
     }
   ]
 }

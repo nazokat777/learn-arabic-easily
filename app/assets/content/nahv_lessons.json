@@ -7994,6 +7994,65 @@
           "uz": "Seni yaxshilik ulashuvchi deb bildim — shuning uchun shavq va umidning talpinishlari meni senga yetakladi."
         }
       ]
+    },
+    {
+      "book": 3,
+      "num": 12,
+      "page": 189,
+      "titleAr": "٦ - تَقْسِيمُ الْفِعْلِ إِلَى مَبْنِيٍّ لِلْمَعْلُومِ وَمَبْنِيٍّ لِلْمَجْهُولِ",
+      "title": "6. Fe'lning ma'lum va majhulga bo'linishi",
+      "rule": {
+        "ar": "يَنْقَسِمُ الْفِعْلُ إِلَى مَبْنِيٍّ لِلْمَعْلُومِ، وَمَبْنِيٍّ لِلْمَجْهُولِ. فَالْأَوَّلُ: مَا ذُكِرَ مَعَهُ فَاعِلُهُ؛ نَحْوُ: قَطَعَ مَحْمُودٌ الْغُصْنَ. وَالثَّانِي: مَا حُذِفَ فَاعِلُهُ، وَأُنِيبَ عَنْهُ الْمَفْعُولُ؛ نَحْوُ: قُطِعَ الْغُصْنُ.",
+        "uz": "Fe'l ma'lum va majhulga bo'linadi. Birinchisi — foili birga zikr qilingani; masalan: «Mahmud shoxni kesdi». Ikkinchisi — foili tushirilib, o'rniga maf'ul qo'yilgani; masalan: «Shox kesildi»."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَالْمَبْنِيُّ لِلْمَجْهُولِ: إِنْ كَانَ مَاضِيًا، ضُمَّ أَوَّلُهُ، وَكُسِرَ مَا قَبْلَ آخِرِهِ؛ كَمَا مُثِّلَ.",
+          "uz": "Majhul fe'l mozi bo'lsa, boshi damma, oxiridan oldingi harfi kasra qilinadi — misoldagi kabi."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُضَمُّ مَعَ أَوَّلِهِ ثَانِيهِ، إِنْ كَانَ مَبْدُوءًا بِتَاءٍ زَائِدَةٍ؛ كَـ: تُعُلِّمَ الْحِسَابُ.",
+          "uz": "Boshida ortiqcha «to» bo'lsa, birinchisi bilan birga ikkinchisi ham damma qilinadi; masalan: «Hisob o'rganildi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُضَمُّ مَعَ أَوَّلِهِ ثَالِثُهُ، إِنْ كَانَ مَبْدُوءًا بِهَمْزَةِ وَصْلٍ؛ كَـ: اسْتُخْرِجَ الْمَعْدِنُ.",
+          "uz": "Boshida vasl hamzasi bo'lsa, birinchisi bilan birga uchinchisi ham damma qilinadi; masalan: «Ma'dan chiqarildi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِنْ كَانَ مُضَارِعًا، ضُمَّ أَوَّلُهُ وَفُتِحَ مَا قَبْلَ آخِرِهِ؛ كَـ: يُقْطَعُ الْغُصْنُ، وَ: يُتَعَلَّمُ الْحِسَابُ، وَ: يُسْتَخْرَجُ الْمَعْدِنُ.",
+          "uz": "Muzori' bo'lsa, boshi damma, oxiridan oldingi harfi fatha qilinadi; masalan: «Shox kesiladi», «Hisob o'rganiladi», «Ma'dan chiqariladi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَلَا يَأْتِي الْمَبْنِيُّ لِلْمَجْهُولِ مِنَ اللَّازِمِ، إِلَّا مَعَ: ١ - الظَّرْفِ الْمُتَصَرِّفِ. ٢ - أَوِ الْجَارِّ وَالْمَجْرُورِ؛ نَحْوُ: سُهِرَتْ لَيْلَتَانِ. وَ: سِيرَ مِيلَانِ، وَ: فُرِحَ بِالْوُصُولِ.",
+          "uz": "Lozim fe'ldan majhul faqat quyidagilar bilan keladi: 1 — mutasarrif zarf, 2 — yoki jorr va majrur; masalan: «Ikki kecha bedor o'tildi», «Ikki mil yurildi», «Yetib kelinganidan xursand bo'lindi»."
+        },
+        {
+          "type": "para",
+          "ar": "(١) فَإِذَا كَانَ مَا قَبْلَ آخِرِهِ أَلِفًا؛ كَـ: قَالَ، وَ: بَاعَ، وَ: اخْتَارَ، وَ: اسْتَمَالَ .. قُلِبَتِ الْأَلِفُ يَاءً، وَكُسِرَ مَا قَبْلَهَا، فَنَقُولُ: قِيلَ، وَ: بِيعَ، وَ: اخْتِيرَ، وَ: اسْتُمِيلَ.",
+          "uz": "(1-izoh) Oxiridan oldingi harfi alif bo'lsa (masalan: قَالَ, بَاعَ, اخْتَارَ, اسْتَمَالَ), alif yoga aylanadi va undan oldingisi kasra qilinadi: قِيلَ, بِيعَ, اخْتِيرَ, اسْتُمِيلَ."
+        },
+        {
+          "type": "para",
+          "ar": "وَمِنَ اللَّحْنِ: قَوْلُهُمْ: «الرَّجُلُ أَصَابَ»، وَ«الْمَبْلَغُ أَضَافَ»، وَ«الْمُتَّهَمُ أَعْلَنَ»، وَ«الكِتَابُ أَرْسَلَ»، وَ«فِي كُلِّ كِتَابٍ أَنْزَلَ».",
+          "uz": "Xato talaffuzlardan: «الرجل أصاب», «المبلغ أضاف», «المتهم أعلن», «الكتاب أرسل», «في كل كتاب أنزل» deb, majhul o'rniga ma'lum shaklni ishlatish."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) فَإِذَا كَانَ مَا قَبْلَ آخِرِهِ وَاوًا، أَوْ يَاءً؛ كَـ: يَقُولُ، وَ: يَبِيعُ، وَ: يَسْتَمِيلُ .. قُلِبَتْ أَلِفًا، فَنَقُولُ: يُقَالُ، وَ: يُبَاعُ، وَ: يُسْتَمَالُ.",
+          "uz": "(2-izoh) Oxiridan oldingi harfi vov yoki yo bo'lsa (masalan: يَقُولُ, يَبِيعُ, يَسْتَمِيلُ), u alifga aylanadi: يُقَالُ, يُبَاعُ, يُسْتَمَالُ."
+        },
+        {
+          "type": "para",
+          "ar": "وَمِنَ الْخَطَأِ: قَوْلُهُمْ: «يُعَافَى مِنْ دَفْعِ الْمَصَارِيفِ». وَالصَّوَابُ: يُعْفَى؛ لِأَنَّهُ مِنْ: أَعْفَاهُ يُعْفِيهِ.",
+          "uz": "Xatolardan: «يُعافى من دفع المصاريف» deb aytish; to'g'risi «يُعْفَى», chunki u «أَعْفَاهُ يُعْفِيهِ» fe'lidandir."
+        }
+      ],
+      "exercise": []
     }
   ]
 }

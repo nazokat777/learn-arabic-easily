@@ -27,6 +27,15 @@ class VocabAudio {
   static const String baseUrl =
       'https://nazokat777.github.io/learn-arabic-easily/audio';
 
+  /// Klip manzillariga qo'shiladigan versiya belgisi.
+  ///
+  /// Fayl NOMLARI qayta yasalganda o'zgarmaydi (s0001.mp3 o'sha-o'sha),
+  /// shuning uchun brauzer/telefon keshi eski ovozni qaytaraverishi mumkin.
+  /// Ovoz bazasi qayta yasalganda shu raqam oshiriladi - manzil o'zgargani
+  /// uchun kesh chetlab o'tiladi. Oshirish esdan chiqmasligi uchun:
+  /// ovoz commit'ida version.json bilan birga tekshiriladi.
+  static const int audioVersion = 2;
+
   /// Matn → fayl yo'li («vocab/0001.mp3»). Barcha to'plamlar shu yerda:
   /// lug'at, matn jumlalari, so'zlar, alifbo va qo'shimchalar.
   Map<String, String> _manifest = const {};
@@ -68,7 +77,7 @@ class VocabAudio {
     if (path == null) return false;
     try {
       await _player.stop();
-      await _player.play(UrlSource('$baseUrl/$path'));
+      await _player.play(UrlSource('$baseUrl/$path?v=$audioVersion'));
       return true;
     } catch (_) {
       return false;

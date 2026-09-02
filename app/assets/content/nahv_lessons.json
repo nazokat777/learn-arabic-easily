@@ -7665,11 +7665,76 @@
             {
               "ar": "٥ - وَامْرَأَةٍ. ٦ - وَاثْنَتَيْنِ.",
               "uz": "5 — امْرَأَة (ayol), 6 — اثْنَتَيْنِ (ikki — muannas)."
+            },
+            {
+              "ar": "٧ - وَاثْنَتَيْنِ. ٨ - وَاسْمٍ.",
+              "uz": "7 — اثْنَتَيْنِ, 8 — اسْم (ism)."
+            },
+            {
+              "ar": "٩ - وَاسْتٍ. ١٠ - وَايْمُنِ.",
+              "uz": "9 — اسْت, 10 — ايْمُن (qasam so'zi)."
+            },
+            {
+              "ar": "١١ - وَفِي «الْ».",
+              "uz": "11 — «أل» da ham."
             }
           ]
+        },
+        {
+          "type": "para",
+          "ar": "وَمَا سِوَى مَا ذُكِرَ، فَهَمْزَتُهُ تُسَمَّى «هَمْزَةَ قَطْعٍ»؛ لِأَنَّهَا لَا تَسْقُطُ أَبَدًا، وَيَنْقَطِعُ بِهَا مَا قَبْلَهَا عَمَّا بَعْدَهَا؛ نَحْوُ: أَكْرِمِ الضَّيْفَ وَأَعْطِ السَّائِلَ.",
+          "uz": "Sanalganlardan boshqasining hamzasi «qat' hamzasi» deb ataladi: u hech qachon tushmaydi va u bilan oldingisi keyingisidan uziladi; masalan: «Mehmonni ikrom qil va so'rovchiga ber»."
+        },
+        {
+          "type": "para",
+          "ar": "وَهَمْزَةُ الْوَصْلِ تَكُونُ مَكْسُورَةً إِلَّا فِي «أَلْ» وَ«ايْمُنِ»، فَتُفْتَحُ، وَإِلَّا فِي الْأَمْرِ الْمَضْمُومِ مَا قَبْلَ آخِرِهِ، فَتُضَمُّ.",
+          "uz": "Vasl hamzasi kasrali bo'ladi; faqat «أل» va «ايْمُن» da fathali bo'ladi, hamda oxiridan oldingi harfi dammali bo'lgan amrda dammali bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "(١) مِنْ هَذِهِ الضَّوَابِطِ تَعْلَمُ أَنَّ مِنَ الْخَطَأِ قَوْلَهُمْ: «الإِسْمُ، وَالإِبْتِدَاءُ، وَالإِنْطِلَاقُ، وَالإِسْتِغْفَارُ، وَفُلَانٌ إِبْنُ فُلَانٍ» بِقَطْعِ الْهَمْزَةِ.",
+          "uz": "(1-izoh) Bu qoidalardan bilasanki, «الإسم», «الإبتداء», «الإنطلاق», «الإستغفار», «فلان إبن فلان» deb hamzani qat' qilib yozish/aytish xatodir."
+        },
+        {
+          "type": "para",
+          "ar": "وَقَوْلُهُمْ: «اعْلِ كَلِمَةَ الْحَقِّ وَالْإِيمَانِ»، وَ«دُمْ وَانْعَمْ وَتَفَضَّلْ» بِحَذْفِهَا. وَقَوْلُهُمْ: «إِعْطِهِ حَقَّهُ»، وَ«إِجْرِ صَرْفَهُ» بِكَسْرِهَا.",
+          "uz": "Shuningdek «اعْلِ كَلِمَةَ الْحَقِّ وَالْإِيمَانِ» va «دُمْ وَانْعَمْ وَتَفَضَّلْ» da hamzani tushirib yuborish, «إعطه حقه» va «إجر صرفه» da esa uni kasrali yozish ham xatodir."
         }
       ],
-      "exercise": []
+      "exercise": [
+        {
+          "ar": "بَيِّنْ هَمْزَتَيِ الْوَصْلِ وَالْقَطْعِ فِي هَذِهِ الْجُمَلِ:",
+          "uz": "Quyidagi jumlalarda vasl va qat' hamzalarini ko'rsating:"
+        },
+        {
+          "ar": "«رَحِمَ اللَّهُ امْرَأً أَصْلَحَ مِنْ لِسَانِهِ».",
+          "uz": "«Tilini isloh qilgan kishiga Alloh rahm qilsin»."
+        },
+        {
+          "ar": "أَوْصَى ابْنُ الْمَخْزُومِيِّ الْقُرَشِيُّ ابْنَهُ، فَقَالَ: أَصْغِ إِلَى الكَلَامِ الْحَسَنِ لِمَنْ يُحَدِّثُكَ بِغَيْرِ إِظْهَارِ عَجَبٍ مِنْكَ، وَلَا تَسْأَلْهُ إِعَادَةً.",
+          "uz": "Ibn Maxzumiy Qurashiy o'g'liga vasiyat qilib dedi: senga gapirayotgan kishining go'zal so'ziga — hayratingni ko'rsatmasdan — quloq sol va undan takrorlashini so'rama."
+        },
+        {
+          "ar": "وَأَكْرِمْ عِرْضَكَ، وَأَلْقِ الْفُضُولَ عَنْكَ، وَإِذَا وَعَدْتَ فَحَقِّقْ، وَإِذَا حَدَّثْتَ فَاصْدُقْ.",
+          "uz": "Nomusingni asra, ortiqcha ishlarni o'zingdan uloqtir; va'da bersang — bajar; gapirsang — rost so'zla."
+        },
+        {
+          "ar": "وَاعْلَمْ أَنَّ كُلَّ امْرِئٍ حَيْثُ وَضَعَ نَفْسَهُ، وَالْمَرْءُ يُعْرَفُ بِقَرِينِهِ.",
+          "uz": "Bilki, har bir kishi o'zini qayerga qo'ysa, o'sha yerdadir; kishi hamrohi bilan tanilaadi."
+        },
+        {
+          "ar": "تَجَنَّبْ قَرِينَ السَّوْءِ، وَاصْرِمْ حِبَالَهُ * وَإِنْ لَمْ تَجِدْ مِنْهُ مَحِيصًا فَدَارِهِ",
+          "uz": "Yomon hamrohdan qoch va u bilan rishtangni uz; agar undan qutulish yo'lini topmasang, ehtiyotkorlik bilan muomala qil."
+        },
+        {
+          "ar": "وَأَحْبِبْ حَبِيبَ الصِّدْقِ وَاتْرُكْ مِرَاءَهُ * تَنَلْ مِنْهُ صَفْوَ الْوُدِّ مَا لَمْ تُمَارِهِ",
+          "uz": "Chin do'stni sev va u bilan bahslashishni tark et; bahslashmasang, undan sof do'stlik topasan."
+        },
+        {
+          "ar": "أَحْسِنْ إِلَى النَّاسِ تَسْتَعْبِدْ قُلُوبَهُمْ * فَطَالَمَا اسْتَعْبَدَ الْإِنْسَانَ إِحْسَانُ",
+          "uz": "Odamlarga yaxshilik qil — qalblarini o'zingga bo'ysundirasan; zero yaxshilik insonni ko'p bor bandi qilgan."
+        }
+      ]
     }
   ]
 }

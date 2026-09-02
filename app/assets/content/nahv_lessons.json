@@ -6338,6 +6338,121 @@
           "type": "para",
           "ar": "(١) إِذِ الكَثْرَةُ فِي الْحَقِيقَةِ صِفَةٌ لِلْمَالِ، لَا لِلرَّجُلِ، وَلَكِنْ لَمَّا كَانَ الْمَالُ مُرْتَبِطًا بِالرَّجُلِ صَحَّ اعْتِبَارُهَا نَعْتًا لَهُ.",
           "uz": "(1-izoh) Chunki «ko'plik» aslida molning sifati, kishining emas; lekin mol kishiga bog'liq bo'lgani uchun uni kishiga na't deb hisoblash to'g'ri bo'ldi."
+        },
+        {
+          "type": "para",
+          "ar": "وَقَدْ يَقَعُ نَعْتُ النَّكِرَةِ جُمْلَةً؛ نَحْوُ قَوْلِهِ تَعَالَى: ﴿وَاتَّقُوا يَوْمًا تُرْجَعُونَ فِيهِ إِلَى اللَّهِ﴾. وَالْجُمَلُ بَعْدَ النَّكِرَاتِ صِفَاتٌ، وَبَعْدَ الْمَعَارِفِ أَحْوَالٌ.",
+          "uz": "Nakiraning na'ti jumla bo'lib ham keladi; masalan Alloh taoloning: «Sizlar unda Allohga qaytariladigan kundan qo'rqinglar» degan so'zi. Nakiralardan keyingi jumlalar — sifat, ma'rifalardan keyingilari — holdir."
+        },
+        {
+          "type": "para",
+          "ar": "(١) وَيُقَالُ حِينَئِذٍ: إِنَّ الْجُمْلَةَ فِي مَحَلِّ رَفْعٍ، أَوْ نَصْبٍ، أَوْ جَرٍّ .. عَلَى حَسَبِ مَا يَكُونُ الْمَتْبُوعُ.",
+          "uz": "(1-izoh) Bunday holda: «jumla raf', nasb yoki jarr o'rnida» deyiladi — ergashilgan so'z qanday bo'lsa, shunga qarab."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "أَمْثِلَةٌ — ١ - لِلْحَقِيقِيِّ:",
+            "uz": "Misollar — 1. Haqiqiy na'tga:"
+          },
+          "items": [
+            {
+              "ar": "غَنِيٌّ شَاكِرٌ. الْعَالِمُ الْعَامِلُ. غَنِيَّةٌ شَاكِرَةٌ. الْعَالِمَةُ الْعَامِلَةُ.",
+              "uz": "Shukr qiluvchi boy. Amal qiluvchi olim. Shukr qiluvchi boy ayol. Amal qiluvchi olima."
+            },
+            {
+              "ar": "غَنِيَّانِ شَاكِرَانِ. الْعَالِمَانِ الْعَامِلَانِ. غَنِيَّتَانِ شَاكِرَتَانِ. الْعَالِمَتَانِ الْعَامِلَتَانِ.",
+              "uz": "Shukr qiluvchi ikki boy. Amal qiluvchi ikki olim. Shukr qiluvchi ikki boy ayol. Amal qiluvchi ikki olima."
+            },
+            {
+              "ar": "أَغْنِيَاءُ شَاكِرُونَ. الْعَالِمُونَ الْعَامِلُونَ. غَنِيَّاتٌ شَاكِرَاتٌ. الْعَالِمَاتُ الْعَامِلَاتُ.",
+              "uz": "Shukr qiluvchi boylar. Amal qiluvchi olimlar. Shukr qiluvchi boy ayollar. Amal qiluvchi olimalar."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "٢ - وَلِلسَّبَبِيِّ — مُفْرَدٌ:",
+            "uz": "2 — Sababiy na'tga — birlik:"
+          },
+          "items": [
+            {
+              "ar": "مَلِكٌ عَزِيزٌ جَارُهُ. غُلَامٌ غَائِبٌ أَبَوَاهُ. السَّيِّدُ الْمُسْتَفِيدُ زَائِرُوهُ. الرَّجُلُ الْعَاقِلَةُ إِمَاؤُهُ.",
+              "uz": "Qo'shnisi aziz podshoh. Ota-onasi g'oyib bo'lgan bola. Ziyoratchilari foyda oladigan sayyid. Cho'rilari aqlli kishi."
+            },
+            {
+              "ar": "مَلِكَةٌ عَزِيزٌ جَارُهَا. بِنْتٌ غَائِبٌ أَبَوَاهَا. السَّيِّدَةُ الْمُسْتَفِيدُ زَائِرُوهَا. الْمَرْأَةُ الْعَاقِلَةُ إِمَاؤُهَا.",
+              "uz": "Qo'shnisi aziz malika. Ota-onasi g'oyib bo'lgan qiz. Ziyoratchilari foyda oladigan sayyida. Cho'rilari aqlli ayol."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "٢ - مُثَنًّى:",
+            "uz": "2 — Ikkilik:"
+          },
+          "items": [
+            {
+              "ar": "مَلِكَانِ عَزِيزٌ جَارُهُمَا. غُلَامَانِ غَائِبٌ أَبَوَاهُمَا. السَّيِّدَانِ الْمُسْتَفِيدُ زَائِرُوهُمَا. الرَّجُلَانِ الْعَاقِلَةُ إِمَاؤُهُمَا.",
+              "uz": "Qo'shnisi aziz ikki podshoh. Ota-onasi g'oyib ikki bola. Ziyoratchilari foyda oladigan ikki sayyid. Cho'rilari aqlli ikki kishi."
+            },
+            {
+              "ar": "مَلِكَتَانِ عَزِيزٌ جَارُهُمَا. بِنْتَانِ غَائِبٌ أَبَوَاهُمَا. السَّيِّدَتَانِ الْمُسْتَفِيدُ زَائِرُوهُمَا. الْمَرْأَتَانِ الْعَاقِلَةُ إِمَاؤُهُمَا.",
+              "uz": "Qo'shnisi aziz ikki malika. Ota-onasi g'oyib ikki qiz. Ziyoratchilari foyda oladigan ikki sayyida. Cho'rilari aqlli ikki ayol."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "٣ - جَمْعٌ:",
+            "uz": "3 — Ko'plik:"
+          },
+          "items": [
+            {
+              "ar": "مُلُوكٌ عَزِيزٌ جَارُهُمْ. غِلْمَانٌ غَائِبٌ أَبَوَاهُمْ. السَّادَةُ الْمُسْتَفِيدُ زَائِرُوهُمْ. الرِّجَالُ الْعَاقِلَةُ إِمَاؤُهُمْ.",
+              "uz": "Qo'shnisi aziz podshohlar. Ota-onasi g'oyib bolalar. Ziyoratchilari foyda oladigan sayyidlar. Cho'rilari aqlli kishilar."
+            },
+            {
+              "ar": "مَلِكَاتٌ عَزِيزٌ جَارُهُنَّ. بَنَاتٌ غَائِبٌ أَبَوَاهُنَّ. السَّيِّدَاتُ الْمُسْتَفِيدُ زَائِرُوهُنَّ. النِّسَاءُ الْعَاقِلَةُ إِمَاؤُهُنَّ.",
+              "uz": "Qo'shnisi aziz malikalar. Ota-onasi g'oyib qizlar. Ziyoratchilari foyda oladigan sayyidalar. Cho'rilari aqlli ayollar."
+            }
+          ]
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "انْطِقْ بِالْأَمْثِلَةِ الْمُتَقَدِّمَةِ مَرَّةً مَرْفُوعَةً، وَمَرَّةً مَنْصُوبَةً، وَمَرَّةً مَجْرُورَةً فِي تَرَاكِيبَ تَقْتَضِي ذَلِكَ.",
+          "uz": "Yuqoridagi misollarni bir marta marfu', bir marta mansub, bir marta majrur holda — shuni talab qiladigan tuzilishlarda talaffuz qiling."
+        },
+        {
+          "ar": "أَجْرِ التَّغْيِيرَاتِ الْمُمْكِنَةَ مِنْ حَيْثُ الْإِفْرَادُ وَالتَّثْنِيَةُ وَالْجَمْعُ، مَعَ التَّذْكِيرِ وَالتَّأْنِيثِ، وَمَعَ التَّعْرِيفِ وَالتَّنْكِيرِ، وَمَعَ الرَّفْعِ وَالنَّصْبِ وَالْجَرِّ فِي هَذَا الْمِثَالِ: عَدُوٌّ عَاقِلٌ خَيْرٌ مِنْ صَدِيقٍ جَاهِلٍ.",
+          "uz": "Quyidagi misolda birlik-ikkilik-ko'plik, muzakkar-muannas, ma'rifa-nakira hamda raf'-nasb-jarr bo'yicha mumkin bo'lgan o'zgarishlarni qo'llang: «Aqlli dushman johil do'stdan yaxshiroq»."
+        }
+      ]
+    },
+    {
+      "book": 2,
+      "num": 47,
+      "page": 151,
+      "titleAr": "٢ - الْعَطْفُ",
+      "title": "2. Atf",
+      "rule": {
+        "ar": "الْعَطْفُ: تَابِعٌ يَتَوَسَّطُ بَيْنَهُ وَبَيْنَ مَتْبُوعِهِ أَحَدُ هَذِهِ الْحُرُوفِ؛ وَهِيَ: الْوَاوُ، وَالْفَاءُ، وَ«ثُمَّ»، وَ«أَوْ»، وَ«أَمْ»، وَ«لَكِنْ»، وَ«لَا»، وَ«بَلْ»؛ كَـ﴿جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ﴾.",
+        "uz": "Atf — o'zi bilan ergashgan so'zi orasida quyidagi harflardan biri keladigan tobe: و, ف, ثُمَّ, أَوْ, أَمْ, لَكِنْ, لَا, بَلْ; masalan: «Allohning nusrati va fath keldi»."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "(١) الْوَاوُ: لِمُطْلَقِ الْجَمْعِ، وَالْفَاءُ: لِلتَّرْتِيبِ مَعَ التَّعْقِيبِ، وَ«ثُمَّ»: لِلتَّرْتِيبِ مَعَ التَّرَاخِي، وَ«أَوْ»: لِلشَّكِّ، أَوِ التَّخْيِيرِ، وَ«أَمْ»: لِطَلَبِ التَّعْيِينِ، أَوْ لِلتَّسْوِيَةِ، وَ«لَكِنْ»: لِلاِسْتِدْرَاكِ، وَ«لَا»: لِلنَّفْيِ، وَ«بَلْ»: لِلْإِضْرَابِ.",
+          "uz": "(1-izoh) «و» — shunchaki qo'shish; «ف» — ketma-ketlik va darrov ergashish; «ثُمَّ» — ketma-ketlik va oraliq bilan; «أَوْ» — shubha yoki tanlov; «أَمْ» — aniqlashtirishni talab qilish yoki tenglashtirish; «لَكِنْ» — istidrok; «لَا» — inkor; «بَلْ» — fikrni burish uchundir."
+        },
+        {
+          "type": "para",
+          "ar": "وَقَدْ يُعْطَفُ بِـ«حَتَّى»؛ نَحْوُ: قَدِمَ الْحُجَّاجُ حَتَّى الْمُشَاةُ. وَالْعَطْفُ بِهَا قَلِيلٌ، وَأَنْكَرَهُ بَعْضُهُمْ.",
+          "uz": "Ba'zan «حَتَّى» bilan ham atf qilinadi; masalan: «Hojilar, hatto piyodalari ham keldi». Bu bilan atf qilish kam uchraydi; ba'zilar buni inkor qilgan."
         }
       ],
       "exercise": []

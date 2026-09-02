@@ -6713,6 +6713,121 @@
           "uz": "Badalning har bir turiga uchtadan misol keltiring: biri marfu', ikkinchisi mansub, uchinchisi majrur bo'lsin."
         }
       ]
+    },
+    {
+      "book": 2,
+      "num": 50,
+      "page": 156,
+      "titleAr": "نِهَايَةٌ: الْمَبْنِيُّ فِي مَحَلِّ رَفْعٍ أَوْ نَصْبٍ أَوْ جَزْمٍ أَوْ جَرٍّ",
+      "title": "Xotima: mabniyning raf', nasb, jazm yoki jarr o'rnida bo'lishi",
+      "rule": {
+        "ar": "إِذَا وَقَعَتْ كَلِمَةٌ مِنَ الكَلِمَاتِ الْمَبْنِيَّةِ فِي مَوْضِعٍ مِنْ مَوَاضِعِ الرَّفْعِ، أَوِ النَّصْبِ، أَوِ الْجَزْمِ، أَوِ الْجَرِّ، فَلَا نُغَيِّرُ آخِرَهَا نَظَرًا لِوُقُوعِهَا فِي ذَلِكَ الْمَوْضِعِ، بَلْ يَلْزَمُ أَنْ نُبْقِيَهَا عَلَى حَالَتِهَا الَّتِي سُمِعَتْ بِهَا، وَلَكِنْ نَعْتَبِرُ أَنَّهَا فِي مَوْضِعِ رَفْعٍ، أَوْ نَصْبٍ، أَوْ جَزْمٍ، أَوْ جَرٍّ، حَسَبَ مَا يَقْتَضِيهِ الْمَوْضِعُ؛ نَحْوُ: إِنْ فَهِمْتَ مَا قَدَّمْنَاهُ، سَهُلَ عَلَيْكَ الْعَمَلُ بِمُقْتَضَاهُ.",
+        "uz": "Mabniy so'zlardan biri raf', nasb, jazm yoki jarr o'rinlaridan birida kelsa, shu o'rinda kelgani uchun uning oxirini o'zgartirmaymiz; balki uni eshitilgan holicha qoldirish lozim. Ammo o'rin talabiga qarab uni raf', nasb, jazm yoki jarr o'rnida deb hisoblaymiz; masalan: «Biz keltirgan narsani tushunsang, unga amal qilish senga oson bo'ladi»."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "(١) فِعْلُ الشَّرْطِ فِي هَذَا الْمِثَالِ «فَهِمَ»، وَجَوَابُهُ «سَهُلَ»، وَإِذْ كَانَا مَبْنِيَّيْنِ؛ الْأَوَّلُ عَلَى السُّكُونِ، وَالثَّانِي عَلَى الْفَتْحِ، فَلَفْظُهُمَا يَبْقَى كَذَلِكَ، وَيُقَالُ: إِنَّهُمَا فِي مَحَلِّ جَزْمٍ؛ أَيْ: فِي مَحَلٍّ لَوْ وَقَعَ فِيهِ مُضَارِعٌ خَالٍ مِنَ النُّونَيْنِ، لَظَهَرَ عَلَيْهِ الْجَزْمُ.",
+          "uz": "(1-izoh) Bu misolda shart fe'li — «فَهِمَ», javobi — «سَهُلَ». Ikkalasi mabniy bo'lgani uchun (birinchisi sukun, ikkinchisi fatha ustiga), lafzi shundayligicha qoladi va: «ikkalasi jazm o'rnida» deyiladi — ya'ni o'sha o'rinda ikki nundan xoli muzori' kelganida, unda jazm ko'rinar edi."
+        },
+        {
+          "type": "para",
+          "ar": "وَالتَّاءُ مِنْ «فَهِمْتَ» فَاعِلٌ، وَكَذَلِكَ «نَا» مِنْ «قَدَّمْنَاهُ»، وَإِذْ كَانَتَا مَبْنِيَّتَيْنِ؛ الْأُولَى عَلَى الْفَتْحِ، وَالثَّانِيَةُ عَلَى السُّكُونِ، فَلَفْظُهُمَا لَا يَتَغَيَّرُ، وَإِنَّمَا يُقَالُ: إِنَّهُمَا فِي مَحَلِّ رَفْعٍ.",
+          "uz": "«فَهِمْتَ» dagi «ت» — foil; «قَدَّمْنَاهُ» dagi «نَا» ham shunday. Ikkalasi mabniy bo'lgani uchun (birinchisi fatha, ikkinchisi sukun ustiga), lafzi o'zgarmaydi; faqat «ikkalasi raf' o'rnida» deyiladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَ«مَا» وَالْهَاءُ مِنْ قَوْلِكَ: «مَا قَدَّمْنَاهُ» مَفْعُولَانِ، وَإِذْ كَانَتَا مَبْنِيَّتَيْنِ؛ الْأُولَى عَلَى السُّكُونِ، وَالثَّانِيَةُ عَلَى الضَّمِّ، فَانْطِقْ بِهِمَا كَذَلِكَ، وَيُقَالُ: إِنَّهُمَا فِي مَحَلِّ نَصْبٍ.",
+          "uz": "«مَا قَدَّمْنَاهُ» dagi «مَا» va «ه» — ikki maf'ul. Ikkalasi mabniy bo'lgani uchun (birinchisi sukun, ikkinchisi damma ustiga), ularni shundayligicha talaffuz qil; «ikkalasi nasb o'rnida» deyiladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَالكَافُ مِنْ قَوْلِكَ: «عَلَيْكَ» دَاخِلٌ عَلَيْهَا حَرْفُ الْجَرِّ، وَإِذْ كَانَتْ مَبْنِيَّةً عَلَى الْفَتْحِ .. فَلَفْظُهَا لَا يَتَغَيَّرُ، وَيُقَالُ: إِنَّهَا فِي مَحَلِّ جَرٍّ. وَعَلَى هَذَا الْقِيَاسُ.",
+          "uz": "«عَلَيْكَ» dagi «ك» ga jarr harfi kirgan. U fatha ustiga mabniy bo'lgani uchun lafzi o'zgarmaydi; «u jarr o'rnida» deyiladi. Qolganlari shu qiyosda."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "أَمْثِلَةٌ — ١ - لِلْمَبْنِيِّ الْوَاقِعِ فِي مَحَلِّ رَفْعٍ:",
+            "uz": "Misollar — 1. Raf' o'rnida kelgan mabniyga:"
+          },
+          "items": [
+            {
+              "ar": "أَكْرَمْتُ. أَكْرَمْنَا. أَكْرَمْتَ. أَكْرَمْتِ. أَكْرَمْتُمَا. أَكْرَمْتُمْ. أَكْرَمْتُنَّ. أَكْرَمَا. أَكْرَمَتَا. أَكْرَمُوا. أَكْرَمْنَ.",
+              "uz": "Hurmat qildim. Hurmat qildik. Sen hurmat qilding. Sen (ayol) hurmat qilding. Ikkovingiz hurmat qildingiz. Sizlar hurmat qildingiz. Sizlar (ayollar) hurmat qildingiz. Ikkovi hurmat qildi. Ikki ayol hurmat qildi. Ular hurmat qildilar. Ular (ayollar) hurmat qildilar."
+            },
+            {
+              "ar": "أَنَا فَاهِمٌ. نَحْنُ فَاهِمُونَ. أَنْتَ فَاهِمٌ. أَنْتِ فَاهِمَةٌ. أَنْتُمَا فَاهِمَانِ. أَنْتُمْ فَاهِمُونَ. أَنْتُنَّ فَاهِمَاتٌ. هُوَ فَاهِمٌ. هِيَ فَاهِمَةٌ. هُمَا فَاهِمَانِ. هُمْ فَاهِمُونَ. هُنَّ فَاهِمَاتٌ.",
+              "uz": "Men tushunuvchiman. Biz tushunuvchimiz. Sen tushunuvchisan. Sen (ayol) tushunuvchisan. Ikkovingiz tushunuvchisiz. Sizlar tushunuvchisiz. Sizlar (ayollar) tushunuvchisiz. U tushunuvchi. U (ayol) tushunuvchi. Ikkovi tushunuvchi. Ular tushunuvchilar. Ular (ayollar) tushunuvchilar."
+            },
+            {
+              "ar": "٢ - لِلْمَبْنِيِّ الْوَاقِعِ فِي مَحَلِّ نَصْبٍ: أَكْرَمَنِي مُحَمَّدٌ، وَأَكْرَمَنَا، وَأَكْرَمَكَ، وَأَكْرَمَكِ، وَأَكْرَمَكُمَا، وَأَكْرَمَكُمْ، وَأَكْرَمَكُنَّ، وَأَكْرَمَهُ، وَأَكْرَمَهَا، وَأَكْرَمَهُمَا، وَأَكْرَمَهُمْ، وَأَكْرَمَهُنَّ.",
+              "uz": "2 — Nasb o'rnida kelgan mabniyga: «Muhammad meni hurmat qildi», bizni, seni, seni (ayol), ikkovingizni, sizlarni, sizlarni (ayollar), uni, uni (ayol), ikkovini, ularni, ularni (ayollar)."
+            },
+            {
+              "ar": "٣ - لِلْمَبْنِيِّ الْوَاقِعِ فِي مَحَلِّ جَرٍّ: كِتَابِي، كِتَابُنَا، كِتَابُكَ، كِتَابُكِ، كِتَابُكُمَا، كِتَابُكُمْ، كِتَابُكُنَّ، كِتَابُهُ، كِتَابُهَا، كِتَابُهُمَا، كِتَابُهُمْ، كِتَابُهُنَّ.",
+              "uz": "3 — Jarr o'rnida kelgan mabniyga: kitobim, kitobimiz, kitobing, kitobing (ayol), ikkovingizning kitobingiz, kitobingiz, kitobingiz (ayollar), uning kitobi, uning (ayol) kitobi, ikkovining kitobi, ularning kitobi, ularning (ayollar) kitobi."
+            },
+            {
+              "ar": "٤ - لِلْمَبْنِيِّ الْوَاقِعِ فِي مَحَلِّ جَزْمٍ: ﴿إِنْ أَحْسَنْتُمْ أَحْسَنْتُمْ لِأَنْفُسِكُمْ﴾. مَنْ صَبَرَ نَالَ.",
+              "uz": "4 — Jazm o'rnida kelgan mabniyga: «Yaxshilik qilsangiz, o'zingizga yaxshilik qilgan bo'lasiz». «Kim sabr qilsa, maqsadiga yetadi»."
+            }
+          ]
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 2,
+      "num": 51,
+      "page": 158,
+      "titleAr": "تَمْرِينٌ عُمُومِيٌّ",
+      "title": "Umumiy mashq — Ibn Xaldun so'zi",
+      "rule": {
+        "ar": "",
+        "uz": ""
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "اقْرَأْ هَذِهِ الْعِبَارَةَ صَحِيحَةً، وَطَبِّقْ أَلْفَاظَهَا عَلَى مَا عَلِمْتَهُ مِنْ قَوَاعِدِ النَّحْوِ الَّتِي سَلَفَتْ:",
+          "uz": "Bu iborani to'g'ri o'qing va so'zlarini o'zingiz o'rgangan nahv qoidalariga tatbiq qiling:"
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "قَالَ الْعَلَّامَةُ ابْنُ خَلْدُونَ: اعْلَمْ أَنَّ تَلْقِينَ الْعُلُومِ لِلْمُتَعَلِّمِينَ، إِنَّمَا يَكُونُ مُفِيدًا إِذَا كَانَ عَلَى التَّدْرِيجِ شَيْئًا فَشَيْئًا، وَقَلِيلًا قَلِيلًا.",
+          "uz": "Alloma Ibn Xaldun aytdi: Bilki, o'rganuvchilarga ilmlarni o'rgatish faqat bosqichma-bosqich, sekin-asta va oz-ozdan bo'lgandagina foydali bo'ladi."
+        },
+        {
+          "ar": "يُلْقِي عَلَيْهِ الْمُعَلِّمُ أَوَّلًا مَسَائِلَ مِنْ كُلِّ بَابٍ مِنَ الْفَنِّ هِيَ أُصُولُ ذَلِكَ الْبَابِ، وَيُقَرِّبُ إِلَيْهِ فِي شَرْحِهَا عَلَى سَبِيلِ الْإِجْمَالِ، وَيُرَاعِي فِي ذَلِكَ قُوَّةَ عَقْلِهِ وَاسْتِعْدَادَهُ لِقَبُولِ مَا يَرِدُ عَلَيْهِ حَتَّى يَنْتَهِيَ إِلَى آخِرِ الْفَنِّ.",
+          "uz": "O'qituvchi avval unga fanning har bir bobidan o'sha bobning asoslari bo'lgan masalalarni beradi, ularni umumiy tarzda tushuntirib yaqinlashtiradi; bunda uning aql quvvatini va kelayotgan narsani qabul qilishga tayyorligini hisobga oladi — toki fanning oxiriga yetguncha."
+        },
+        {
+          "ar": "وَعِنْدَ ذَلِكَ يَحْصُلُ لَهُ مَلَكَةٌ فِي ذَلِكَ الْعِلْمِ، إِلَّا أَنَّهَا جُزْئِيَّةٌ، وَغَايَتُهَا: أَنَّهَا هَيَّأَتْهُ لِفَهْمِ الْفَنِّ وَتَحْصِيلِ مَسَائِلِهِ.",
+          "uz": "Shunda unda o'sha ilmda malaka hosil bo'ladi; ammo u qisman bo'ladi va uning natijasi — uni fanni tushunishga va masalalarini o'zlashtirishga tayyorlaganidir."
+        },
+        {
+          "ar": "ثُمَّ يَرْجِعُ بِهِ إِلَى الْفَنِّ ثَانِيَةً، فَيَرْفَعُهُ فِي التَّلْقِينِ عَنْ تِلْكَ الرُّتْبَةِ إِلَى أَعْلَى مِنْهَا، وَيَسْتَوْفِي الشَّرْحَ وَالْبَيَانَ، وَيَخْرُجُ عَنِ الْإِجْمَالِ، وَيَذْكُرُ لَهُ مَا هُنَالِكَ مِنَ الْخِلَافِ وَوَجْهِهِ، إِلَى أَنْ يَنْتَهِيَ إِلَى آخِرِ الْفَنِّ فَتَجُودُ مَلَكَتُهُ.",
+          "uz": "So'ngra uni fanga ikkinchi marta qaytaradi va o'rgatishda uni o'sha darajadan yuqoriroqqa ko'taradi; sharh va bayonni to'liq qiladi, umumiylikdan chiqadi, undagi ixtiloflarni va ularning yo'nalishini aytib beradi — fanning oxiriga yetguncha; shunda uning malakasi yaxshilanadi."
+        },
+        {
+          "ar": "ثُمَّ يَرْجِعُ بِهِ وَقَدْ شَدَا، فَلَا يَتْرُكُ عَوِيصًا، وَلَا مُهِمًّا، وَلَا مُغْلَقًا إِلَّا وَضَّحَهُ، وَفَتَحَ لَهُ مُقْفَلَهُ، فَيَخْلُصُ مِنَ الْفَنِّ، وَقَدِ اسْتَوْلَى عَلَى مَلَكَتِهِ.",
+          "uz": "So'ngra u ancha bilim olgan holida yana qaytaradi: birorta mushkul, muhim yoki yopiq masalani tushuntirmasdan, qulfini ochmasdan qoldirmaydi. Shunda u fanni tugatadi va malakasini to'liq egallagan bo'ladi."
+        },
+        {
+          "ar": "هَذَا وَجْهُ التَّعْلِيمِ الْمُفِيدِ، وَهُوَ كَمَا رَأَيْتَ إِنَّمَا يَحْصُلُ فِي ثَلَاثَةِ تَكْرَارَاتٍ، وَقَدْ يَحْصُلُ لِلْبَعْضِ فِي أَقَلَّ مِنْ ذَلِكَ بِحَسَبِ مَا يُخْلَقُ لَهُ وَيَتَيَسَّرُ عَلَيْهِ.",
+          "uz": "Foydali o'qitishning yo'li shu. Ko'rganingdek, u faqat uch marta takrorlash bilan hosil bo'ladi; ba'zilarga esa — tabiati va qulayligiga qarab — bundan kamrog'ida ham hosil bo'ladi."
+        },
+        {
+          "ar": "وَقَدْ شَاهَدْنَا كَثِيرًا مِنَ الْمُعَلِّمِينَ لِهَذَا الْعَهْدِ الَّذِي أَدْرَكْنَاهُ يَجْهَلُونَ طُرُقَ التَّعْلِيمِ وَإِفَادَتَهُ، وَيُحْضِرُونَ لِلْمُتَعَلِّمِ فِي أَوَّلِ تَعْلِيمِهِ الْمَسَائِلَ الْمُقْفَلَةَ مِنَ الْعِلْمِ، وَيُطَالِبُونَهُ بِإِحْضَارِ ذِهْنِهِ فِي حَلِّهَا.",
+          "uz": "Biz yetishgan bu zamonda ko'p o'qituvchilarni ko'rdik: ular o'qitish yo'llarini va uning foydasini bilmaydilar; o'rganuvchiga ta'limning boshidayoq ilmning yopiq masalalarini keltiradilar va ularni yechishda zehnini ishlatishni talab qiladilar."
+        },
+        {
+          "ar": "وَيَحْسَبُونَ ذَلِكَ مِرَانَةً عَلَى التَّعْلِيمِ وَصَوَابًا فِيهِ، وَيُكَلِّفُونَهُ وَعْيَ ذَلِكَ وَتَحْصِيلَهُ، وَيَخْلِطُونَ عَلَيْهِ بِمَا يُلْقُونَ لَهُ مِنْ غَايَاتِ الْفُنُونِ فِي مَبَادِئِهَا قَبْلَ أَنْ يَسْتَعِدَّ لِفَهْمِهَا؛ فَإِنَّ قَبُولَ الْعِلْمِ وَالاِسْتِعْدَادَ لِفَهْمِهِ …",
+          "uz": "Buni o'qitishdagi mashq va to'g'rilik deb hisoblaydilar; unga buni anglash va o'zlashtirishni yuklaydilar. Fanlarning oxirgi masalalarini boshlanishidayoq — u tushunishga tayyor bo'lmasdan turib — berib, boshini qotiradilar. Zero, ilmni qabul qilish va uni tushunishga tayyorlik…"
+        }
+      ]
     }
   ]
 }

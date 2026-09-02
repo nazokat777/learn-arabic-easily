@@ -7173,6 +7173,82 @@
         }
       ],
       "exercise": []
+    },
+    {
+      "book": 3,
+      "num": 4,
+      "page": 173,
+      "titleAr": "٢ - الكَلَامُ عَلَى الْفِعْلِ — تَقْسِيمُ الْفِعْلِ إِلَى مَاضٍ وَمُضَارِعٍ وَأَمْرٍ",
+      "title": "2. Fe'l haqida so'z — mozi, muzori' va amrga bo'linishi",
+      "rule": {
+        "ar": "يَنْقَسِمُ الْفِعْلُ إِلَى مَاضٍ، وَمُضَارِعٍ، وَأَمْرٍ. فَالْمَاضِي: مَا يَدُلُّ عَلَى حُدُوثِ شَيْءٍ فِي زَمَنٍ مَضَى قَبْلَ التَّكَلُّمِ؛ مِثْلُ: قَرَأَ. وَعَلَامَتُهُ: أَنْ يَقْبَلَ تَاءَ الْفَاعِلِ؛ كَـ«قَرَأْتُ»، وَتَاءَ التَّأْنِيثِ السَّاكِنَةَ؛ كَـ«قَرَأَتْ».",
+        "uz": "Fe'l mozi, muzori' va amrga bo'linadi. Mozi — gapirishdan oldin o'tgan zamonda biror ish sodir bo'lganiga dalolat qiladi; masalan: قَرَأَ (o'qidi). Belgisi: foil «to» sini qabul qilishi (قَرَأْتُ) va sokin muannaslik «to» sini qabul qilishi (قَرَأَتْ)."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَالْمُضَارِعُ: مَا يَدُلُّ عَلَى حُدُوثِ شَيْءٍ فِي زَمَنِ التَّكَلُّمِ، أَوْ بَعْدَهُ؛ مِثْلُ: «يَقْرَأُ»، فَهُوَ صَالِحٌ لِلْحَالِ وَالاِسْتِقْبَالِ، مَا لَمْ تُوجَدْ قَرِينَةٌ تُعَيِّنُهُ لِأَحَدِهِمَا.",
+          "uz": "Muzori' — gapirish paytida yoki undan keyin biror ish sodir bo'lishiga dalolat qiladi; masalan: يَقْرَأُ. U — biriga xoslaydigan qarina bo'lmasa — hozirgi zamonga ham, kelasi zamonga ham yaraydi."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُعَيِّنُهُ لِلْحَالِ: لَامُ التَّأْكِيدِ؛ نَحْوُ: إِنَّ مَحْمُودًا لَيَقْرَأُ، وَيُعَيِّنُهُ لِلاِسْتِقْبَالِ: السِّينُ، وَ«سَوْفَ»؛ نَحْوُ: «سَيَقْرَأُ»، وَ«سَوْفَ يَقْرَأُ».",
+          "uz": "Uni hozirgi zamonga xoslaydi — ta'kid lomi; masalan: «Albatta Mahmud o'qiyapti». Kelasi zamonga xoslaydi — «س» va «سَوْفَ»; masalan: «o'qiydi», «keyin o'qiydi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَعَلَامَتُهُ: أَنْ يَصِحَّ وُقُوعُهُ بَعْدَ «لَمْ»؛ كَـ«لَمْ يَقْرَأْ».",
+          "uz": "Uning belgisi: «لَمْ» dan keyin kelishi to'g'ri bo'lishi; masalan: لَمْ يَقْرَأْ."
+        },
+        {
+          "type": "para",
+          "ar": "(١) هَذِهِ التَّاءُ تَكُونُ سَاكِنَةً إِذَا وَلِيَهَا مُتَحَرِّكٌ؛ نَحْوُ: قَالَتْ فَاطِمَةُ، فَإِنْ وَلِيَهَا سَاكِنٌ كُسِرَتْ لِلتَّخَلُّصِ مِنَ الْتِقَاءِ السَّاكِنَيْنِ؛ كَـ﴿قَالَتِ امْرَأَتُ الْعَزِيزِ﴾. وَتُحَرَّكُ بِالْفَتْحِ إِذَا وَلِيَهَا أَلِفُ «اثْنَيْنِ»؛ نَحْوُ: ﴿قَالَتَا أَتَيْنَا طَائِعِينَ﴾.",
+          "uz": "(1-izoh) Bu «to» dan keyin harakatli harf kelsa, u sokin bo'ladi: «Fotima aytdi». Agar keyin sokin harf kelsa, ikki sokinning uchrashuvidan qutulish uchun kasra bilan keladi: «Azizning xotini aytdi». Undan keyin ikkilik alifi kelsa, fatha bilan harakatlanadi: «Ikkovi: itoat qilgan holda keldik, dedilar»."
+        },
+        {
+          "type": "para",
+          "ar": "وَكُلُّ حَرْفٍ صَحِيحٍ سَاكِنٍ فِي آخِرِ الكَلِمَةِ يُحَرَّكُ بِالكَسْرِ إِذَا تَلَاهُ سَاكِنٌ آخَرُ؛ نَحْوُ: خُذِ الكِتَابَ، وَلَا تُهْمِلِ الْمُطَالَعَةَ. إِلَّا إِذَا كَانَتِ الكَلِمَةُ الْأُولَى «مِنْ»، وَالثَّانِيَةُ «أَلْ»؛ فَإِنَّهُ يُفْتَحُ؛ نَحْوُ: ﴿مِنَ الكِتَابِ﴾.",
+          "uz": "So'z oxiridagi har bir sokin sahih harf, ketidan yana sokin kelsa, kasra bilan harakatlanadi; masalan: «Kitobni ol», «Mutolaani tashlab qo'yma». Faqat birinchi so'z «مِنْ», ikkinchisi «أل» bo'lsa, fatha bilan keladi: «مِنَ الكِتَابِ»."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِلَّا إِذَا كَانَتِ الكَلِمَةُ الْأُولَى مُنْتَهِيَةً بِمِيمِ الْجَمْعِ؛ فَإِنَّهُ يُضَمُّ؛ نَحْوُ: ﴿لَهُمُ الْبُشْرَى﴾. وَإِذَا تَحَرَّكَتْ لَامُ «أَلْ» بِسَبَبِ هَمْزَةِ وَصْلٍ، فَالْأَفْصَحُ عَدَمُ الاِعْتِدَادِ بِالْحَرَكَةِ الْعَارِضَةِ، فَتَقُولُ: فَرَغْتُ مِنَ الاِسْتِحْمَامِ. وَإِنْ قُلْتَ: مِنِ الاِسْتِحْمَامِ .. جَازَ.",
+          "uz": "Yoki birinchi so'z ko'plik «mim» i bilan tugagan bo'lsa, damma bilan keladi: «Ularga xushxabar bor». «أل» ning lomi vasl hamzasi sababli harakatlansa, eng fasihi — bu vaqtinchalik harakatga e'tibor bermaslik: «Cho'milishdan bo'shadim» deysan; «مِنِ الاِسْتِحْمَامِ» desang ham joiz."
+        },
+        {
+          "type": "para",
+          "ar": "وَلَابُدَّ أَنْ يَبْدَأَ بِحَرْفٍ مِنْ أَحْرُفِ «أَنَيْتُ»؛ فَالْهَمْزَةُ لِتَكَلُّمِ الْفَرْدِ، وَالنُّونُ لِتَكَلُّمِهِ إِذَا كَانَ مَعَهُ غَيْرُهُ، وَالْيَاءُ لِغَيْبَةِ الْمُذَكَّرِ: وَاحِدًا، أَوِ اثْنَيْنِ، أَوْ جَمَاعَةً، وَجَمَاعَةِ الْإِنَاثِ. وَالتَّاءُ لِلْخِطَابِ مُطْلَقًا، وَغَيْبَةِ الْوَاحِدَةِ وَالاِثْنَتَيْنِ.",
+          "uz": "Muzori' albatta «أَنَيْتُ» harflaridan biri bilan boshlanadi: hamza — yolg'iz so'zlovchi uchun; nun — u bilan birga boshqalar bo'lsa; yo — g'oyib erkak (bitta, ikkita yoki jamoa) va ayollar jamoasi uchun; to — mutlaq murojaat uchun hamda bitta va ikkita g'oyib ayol uchun."
+        },
+        {
+          "type": "para",
+          "ar": "٣ - وَالْأَمْرُ: مَا يُطْلَبُ بِهِ حُصُولُ شَيْءٍ بَعْدَ زَمَنِ التَّكَلُّمِ؛ مِثْلُ: اقْرَأْ. وَعَلَامَتُهُ: أَنْ يَقْبَلَ نُونَ التَّوْكِيدِ مَعَ دَلَالَتِهِ عَلَى الطَّلَبِ؛ كَـ«اذْهَبَنَّ».",
+          "uz": "3 — Amr: gapirish paytidan keyin biror ishning bo'lishi talab qilinadigan fe'l; masalan: اقْرَأْ (o'qi). Belgisi: talabga dalolat qilishi bilan birga ta'kid nunini qabul qilishi; masalan: اذْهَبَنَّ (albatta bor)."
+        },
+        {
+          "type": "para",
+          "ar": "وَهُنَاكَ أَلْفَاظٌ تَدُلُّ عَلَى مَعَانِي الْأَفْعَالِ، وَلَا تَقْبَلُ عَلَامَاتِهَا، وَيُقَالُ لَهَا: أَسْمَاءُ الْأَفْعَالِ؛ وَهِيَ ثَلَاثَةُ أَنْوَاعٍ:",
+          "uz": "Yana shunday so'zlar borki, ular fe'l ma'nolariga dalolat qiladi, lekin fe'l belgilarini qabul qilmaydi; ular «asmoul-af'ol» (fe'l ismlari) deb ataladi. Ular uch turli:"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "ar": "١ - اسْمُ فِعْلٍ مَاضٍ؛ كَـ«هَيْهَاتَ»؛ بِمَعْنَى: بَعُدَ. وَ«شَتَّانَ»؛ بِمَعْنَى: افْتَرَقَ.",
+              "uz": "1 — Mozi fe'l ismi; masalan «هَيْهَاتَ» — «uzoq bo'ldi» ma'nosida; «شَتَّانَ» — «ajraldi, farq qildi» ma'nosida."
+            },
+            {
+              "ar": "٢ - وَاسْمُ فِعْلٍ مُضَارِعٍ؛ كَـ«وَيْ»؛ بِمَعْنَى: أَتَعَجَّبُ. وَ«آهِ»؛ بِمَعْنَى: أَتَوَجَّعُ.",
+              "uz": "2 — Muzori' fe'l ismi; masalan «وَيْ» — «hayron qolaman» ma'nosida; «آهِ» — «og'riq sezaman» ma'nosida."
+            },
+            {
+              "ar": "٣ - وَاسْمُ فِعْلِ أَمْرٍ؛ كَـ«صَهْ»؛ بِمَعْنَى: اسْكُتْ. وَ«آمِينَ»؛ بِمَعْنَى: اسْتَجِبْ.",
+              "uz": "3 — Amr fe'l ismi; masalan «صَهْ» — «jim tur» ma'nosida; «آمِينَ» — «ijobat qil» ma'nosida."
+            }
+          ]
+        }
+      ],
+      "exercise": []
     }
   ]
 }

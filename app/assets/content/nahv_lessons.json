@@ -5728,6 +5728,214 @@
           "type": "para",
           "ar": "(١) وَيُقَالُ حِينَئِذٍ: إِنَّ الْجُمْلَةَ فِي مَحَلِّ نَصْبٍ.",
           "uz": "(1-izoh) Bunday holda: «jumla nasb o'rnida» deyiladi."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "أَمْثِلَةٌ — ١ - لِلْمُبَيِّنِ هَيْئَةَ الْفَاعِلِ:",
+            "uz": "Misollar — 1. Foilning holatini bayon qiluvchiga:"
+          },
+          "items": [
+            {
+              "ar": "إِذَا اجْتَهَدَ الطَّالِبُ صَغِيرًا سَادَ كَبِيرًا.",
+              "uz": "Talaba yoshligida tirishsa, ulg'ayganda yuksaladi."
+            },
+            {
+              "ar": "عِشْ عَزِيزًا، أَوْ مُتْ كَرِيمًا.",
+              "uz": "Aziz holda yasha yoki karamli holda o'l."
+            },
+            {
+              "ar": "﴿وَلَا تَمْشِ فِي الْأَرْضِ مَرَحًا﴾.",
+              "uz": "«Yer yuzida kibrlanib yurma»."
+            },
+            {
+              "ar": "﴿رَجَعَ مُوسَى إِلَى قَوْمِهِ غَضْبَانَ أَسِفًا﴾.",
+              "uz": "«Muso qavmiga g'azablangan, afsuslangan holda qaytdi»."
+            },
+            {
+              "ar": "وَلَّى الْعَدُوُّ مُدْبِرًا.",
+              "uz": "Dushman orqasiga qarab qochdi."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "٢ - لِلْمُبَيِّنِ هَيْئَةَ الْمَفْعُولِ:",
+            "uz": "2 — Maf'ulning holatini bayon qiluvchiga:"
+          },
+          "items": [
+            {
+              "ar": "لَا تَأْكُلِ الْفَوَاكِهَ فِجَّةً، وَلَا الطَّعَامَ حَارًّا.",
+              "uz": "Mevalarni g'o'r holida yema, ovqatni ham qaynoq holida."
+            },
+            {
+              "ar": "مَا رَكِبْتُ الْبَحْرَ هَائِجًا، وَلَا شَرِبْتُ الْمَاءَ مَكْشُوفًا.",
+              "uz": "Dengizga to'lqinli holida chiqmadim, suvni ham ochiq qolgan holida ichmadim."
+            },
+            {
+              "ar": "﴿وَآتَيْنَاهُ الْحُكْمَ صَبِيًّا﴾.",
+              "uz": "«Unga bolaligidayoq hikmat berdik»."
+            },
+            {
+              "ar": "دَخَلْتُ الرَّوْضَ يَانِعًا.",
+              "uz": "Bog'qa g'arq pishgan holida kirdim."
+            },
+            {
+              "ar": "وَرَكِبْتُ الْفَرَسَ مُسْرَجًا.",
+              "uz": "Otga egarlangan holida mindim."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "٣ - لِلْحَالِ الْجُمْلَةِ:",
+            "uz": "3 — Jumla bo'lib kelgan holga:"
+          },
+          "items": [
+            {
+              "ar": "﴿لَئِنْ أَكَلَهُ الذِّئْبُ وَنَحْنُ عُصْبَةٌ إِنَّا إِذًا لَخَاسِرُونَ﴾.",
+              "uz": "«Biz kuchli jamoa bo'la turib uni bo'ri yesa, unda biz albatta ziyon ko'ruvchilarmiz»."
+            },
+            {
+              "ar": "﴿اهْبِطُوا بَعْضُكُمْ لِبَعْضٍ عَدُوٌّ﴾.",
+              "uz": "«Bir-biringizga dushman bo'lgan holda tushinglar»."
+            },
+            {
+              "ar": "﴿أَتَجْعَلُ فِيهَا مَنْ يُفْسِدُ فِيهَا وَيَسْفِكُ الدِّمَاءَ وَنَحْنُ نُسَبِّحُ بِحَمْدِكَ وَنُقَدِّسُ لَكَ﴾.",
+              "uz": "«Biz Seni hamding bilan poklab, Seni muqaddas deb turgan holimizda, unda buzg'unchilik qiladigan va qon to'kadigan kimsani qo'yasanmi?»"
+            },
+            {
+              "ar": "﴿لِمَ تُؤْذُونَنِي وَقَدْ تَعْلَمُونَ أَنِّي رَسُولُ اللَّهِ إِلَيْكُمْ﴾.",
+              "uz": "«Mening sizlarga Allohning elchisi ekanimni bilib turib, nega menga ozor berasizlar?»"
+            },
+            {
+              "ar": "﴿فَلَا تَجْعَلُوا لِلَّهِ أَنْدَادًا وَأَنْتُمْ تَعْلَمُونَ﴾.",
+              "uz": "«Bilib turgan holingizda Allohga tengdoshlar qilmanglar»."
+            },
+            {
+              "ar": "أَقْبَلَ يُوسُفُ، وَالْبِشْرُ لَائِحٌ عَلَى وَجْهِهِ.",
+              "uz": "Yusuf yuzida quvonch porlagan holda keldi."
+            },
+            {
+              "ar": "لَا تَحْكُمْ، وَأَنْتَ غَضْبَانُ.",
+              "uz": "G'azablangan holingda hukm chiqarma."
+            },
+            {
+              "ar": "﴿تَرَاهُمْ رُكَّعًا سُجَّدًا يَبْتَغُونَ فَضْلًا مِنَ اللَّهِ وَرِضْوَانًا﴾.",
+              "uz": "«Ularni Allohdan fazl va rizolik istab ruku' va sajda qilgan hollarida ko'rasan»."
+            },
+            {
+              "ar": "عَرَفْتُ الدِّينَ يَدْعُو إِلَى الْفَلَاحِ.",
+              "uz": "Dinni najotga chaqirayotgan holida tanidim."
+            }
+          ]
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 2,
+      "num": 38,
+      "page": 139,
+      "titleAr": "٨ - التَّمْيِيزُ",
+      "title": "8. Tamyiz",
+      "rule": {
+        "ar": "التَّمْيِيزُ: اسْمٌ يُذْكَرُ لِبَيَانِ عَيْنِ الْمُرَادِ مِنِ اسْمٍ سَابِقٍ يَصْلُحُ لِأَنْ يُرَادَ بِهِ أَشْيَاءُ كَثِيرَةٌ. وَالْمُمَيَّزُ: إِمَّا مَلْفُوظٌ، وَإِمَّا مَلْحُوظٌ.",
+        "uz": "Tamyiz — ko'p narsaga ehtimoli bo'lgan oldingi ismdan aynan nima ko'zda tutilganini bayon qilish uchun keltiriladigan ism. Aniqlashtiriladigan (mumayyaz) yo aytilgan (malfuz), yo anglashilgan (malhuz) bo'ladi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "فَالْأَوَّلُ؛ كَأَسْمَاءِ الْوَزْنِ، وَالكَيْلِ، وَالْمِسَاحَةِ، وَالْعَدَدِ؛ نَحْوُ: اشْتَرَيْتُ قِنْطَارًا نُحَاسًا، وَإِرْدَبًّا قَمْحًا، وَذِرَاعًا حَرِيرًا، وَخَمْسَةَ عَشَرَ كِتَابًا.",
+          "uz": "Birinchisi — tarozi, o'lchov, masohat va son nomlari; masalan: «Bir qintor mis, bir irdab bug'doy, bir tirsak ipak va o'n beshta kitob sotib oldim»."
+        },
+        {
+          "type": "para",
+          "ar": "وَالثَّانِي: مَا يُفْهَمُ مِنَ الْجُمْلَةِ فِي نَحْوِ: طَابَ مُحَمَّدٌ نَفْسًا. ﴿وَفَجَّرْنَا الْأَرْضَ عُيُونًا﴾. ﴿أَنَا أَكْثَرُ مِنْكَ مَالًا﴾. وَامْتَلَأَ الْإِنَاءُ مَاءً. وَلَا يَكُونُ التَّمْيِيزُ إِلَّا نَكِرَةً.",
+          "uz": "Ikkinchisi — jumladan anglashiladigani; masalan: «Muhammadning ko'ngli xush bo'ldi», «Yerni buloqlar bilan otiltirdik», «Men sendan mol jihatidan ko'proqman», «Idish suvga to'ldi». Tamyiz faqat nakira bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "(١) التَّقْدِيرُ: طَابَ شَيْءٌ مِنَ الْأَشْيَاءِ الْمَنْسُوبَةِ لِمُحَمَّدٍ، فَلِتَعْيِينِ هَذَا الشَّيْءِ تَذْكُرُ التَّمْيِيزَ، فَنَقُولُ: طَابَ مُحَمَّدٌ نَفْسًا، أَوْ: كَلَامًا، أَوْ: أَصْلًا.",
+          "uz": "(1-izoh) Taqdiri: Muhammadga nisbat beriladigan narsalardan bittasi xush bo'ldi; o'sha narsani aniqlash uchun tamyiz keltiriladi: «ko'ngli», «so'zi» yoki «asl-nasabi» xush bo'ldi, deymiz."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "أَمْثِلَةٌ — ١ - لِلْمُمَيَّزِ الْمَلْفُوظِ:",
+            "uz": "Misollar — 1. Aytilgan mumayyazga:"
+          },
+          "items": [
+            {
+              "ar": "مِثْقَالٌ ذَهَبًا أَرْفَعُ قِيمَةً مِنْ رَطْلٍ نُحَاسًا.",
+              "uz": "Bir misqol oltin bir ratl misdan qimmatliroqdir."
+            },
+            {
+              "ar": "زَكَاةُ الْفِطْرِ صَاعٌ قَمْحًا.",
+              "uz": "Fitr zakoti — bir so' bug'doydir."
+            },
+            {
+              "ar": "زَرَعْتُ فَدَّانًا قَصَبًا.",
+              "uz": "Bir faddon (yer) qamish ekdim."
+            },
+            {
+              "ar": "﴿إِنِّي رَأَيْتُ أَحَدَ عَشَرَ كَوْكَبًا﴾.",
+              "uz": "«Men o'n bitta yulduzni ko'rdim»."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "٢ - لِلْمُمَيَّزِ الْمَلْحُوظِ:",
+            "uz": "2 — Anglashilgan mumayyazga:"
+          },
+          "items": [
+            {
+              "ar": "خَيْرُ الْأَعْمَالِ أَعْجَلُهَا عَائِدَةً وَأَكْثَرُهَا فَائِدَةً.",
+              "uz": "Ishlarning yaxshisi — natijasi eng tez qaytadigani va foydasi eng ko'pi."
+            },
+            {
+              "ar": "الْإِنْسَانُ أَعْدَلُ الْحَيَوَانِ مِزَاجًا، وَأَكْمَلُهُ أَفْعَالًا، وَأَلْطَفُهُ حِسًّا، وَأَنْفَذُهُ رَأْيًا.",
+              "uz": "Inson — jonzotlar ichida mijoz jihatidan eng mo''tadili, ishlari jihatidan eng mukammali, sezgisi jihatidan eng nozigi va fikri jihatidan eng o'tkiridir."
+            }
+          ]
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 2,
+      "num": 39,
+      "page": 140,
+      "titleAr": "٩ - الْمُنَادَى",
+      "title": "9. Munodo",
+      "rule": {
+        "ar": "الْمُنَادَى: اسْمٌ يُذْكَرُ بَعْدَ «يَا» اسْتِدْعَاءً لِمَدْلُولِهِ؛ كَـ«يَا عَبْدَ اللَّهِ».",
+        "uz": "Munodo — o'z egasini chaqirish uchun «يَا» dan keyin keltiriladigan ism; masalan: «Ey Abdulloh!»"
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَهُوَ: إِمَّا مُضَافٌ لِاسْمٍ بَعْدَهُ؛ كَمَا مُثِّلَ، أَوْ شَبِيهٌ بِالْمُضَافِ؛ كَـ«يَا رَؤُوفًا بِالْعِبَادِ»، أَوْ نَكِرَةٌ غَيْرُ مَقْصُودَةٍ؛ كَـ«يَا غَافِلًا تَنَبَّهْ».",
+          "uz": "U yo o'zidan keyingi ismga muzof bo'ladi (misoldagi kabi); yo muzofga o'xshash bo'ladi — «Ey bandalarga mehribon Zot!»; yo aniq ko'zda tutilmagan nakira bo'ladi — «Ey g'ofil (kim bo'lsang ham), uyg'on!». Bularning hammasi mansub."
+        },
+        {
+          "type": "para",
+          "ar": "فَإِنْ كَانَ نَكِرَةً مَقْصُودَةً، أَوْ عَلَمًا مُفْرَدًا، (وَالْمُفْرَدُ هُنَا مَا لَيْسَ مُضَافًا، وَلَا شَبِيهًا بِهِ) بُنِيَ عَلَى مَا يُرْفَعُ بِهِ؛ نَحْوُ: يَا رِجَالُ، وَ: يَا رَجُلَانِ، وَ: يَا عَلِيَّانِ، وَ: يَا مُؤْمِنُونَ، وَ: يَا عَلِيُّونَ، وَ: يَا عَلِيُّ.",
+          "uz": "Agar u aniq ko'zda tutilgan nakira yoki yakka atoqli ot bo'lsa (bu yerda «yakka» — muzof ham, unga o'xshash ham bo'lmagani), raf' qilinadigan alomat ustiga bino qilinadi; masalan: «Ey kishilar!», «Ey ikki kishi!», «Ey ikki Ali!», «Ey mo'minlar!», «Ey Alilar!», «Ey Ali!»"
+        },
+        {
+          "type": "para",
+          "ar": "(١) هِيَ أَشْهَرُ حُرُوفِ النِّدَاءِ، وَقَدْ يُنَادَى بِـ«أَيَا»، وَ«هَيَا»، وَ«أَيْ»، وَالْهَمْزَةِ.",
+          "uz": "(1-izoh) «يَا» — nido harflarining eng mashhuri; «أَيَا», «هَيَا», «أَيْ» va hamza bilan ham nido qilinadi."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) فَيَدْخُلُ فِي الْمُفْرَدِ بِهَذَا الْمَعْنَى: الْمُثَنَّى وَالْجَمْعُ.",
+          "uz": "(2-izoh) Bu ma'noda «yakka» ga ikkilik va ko'plik ham kiradi."
         }
       ],
       "exercise": []

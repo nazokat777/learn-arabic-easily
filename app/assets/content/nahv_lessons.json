@@ -7735,6 +7735,105 @@
           "uz": "Odamlarga yaxshilik qil — qalblarini o'zingga bo'ysundirasan; zero yaxshilik insonni ko'p bor bandi qilgan."
         }
       ]
+    },
+    {
+      "book": 3,
+      "num": 10,
+      "page": 184,
+      "titleAr": "٤ - تَقْسِيمُ الْفِعْلِ إِلَى صَحِيحٍ وَمُعْتَلٍّ",
+      "title": "4. Fe'lning sahih va mu'tallga bo'linishi",
+      "rule": {
+        "ar": "يَنْقَسِمُ الْفِعْلُ إِلَى صَحِيحٍ وَمُعْتَلٍّ. فَالصَّحِيحُ: مَا خَلَتْ أُصُولُهُ مِنْ أَحْرُفِ الْعِلَّةِ؛ وَهِيَ: ١ - الْوَاوُ، ٢ - وَالْأَلِفُ، ٣ - وَالْيَاءُ. وَالْمُعْتَلُّ: مَا كَانَ بَعْضُ أُصُولِهِ مِنْ أَحْرُفِ الْعِلَّةِ.",
+        "uz": "Fe'l sahih va mu'tallga bo'linadi. Sahih — asl harflari illat harflaridan xoli bo'lgan fe'l; illat harflari: 1 — vov, 2 — alif, 3 — yo. Mu'tall — asl harflaridan ba'zisi illat harfi bo'lgan fe'l."
+      },
+      "blocks": [
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَالصَّحِيحُ يَكُونُ:",
+            "uz": "Sahih fe'l quyidagicha bo'ladi:"
+          },
+          "items": [
+            {
+              "ar": "١ - سَالِمًا؛ وَهُوَ: مَا خَلَا مِنَ الْهَمْزِ وَالتَّضْعِيفِ؛ كَـ: نَصَرَ، وَ: تَضْرِبُ.",
+              "uz": "1 — Solim — hamza va shaddadan xoli bo'lgani; masalan: نَصَرَ, تَضْرِبُ."
+            },
+            {
+              "ar": "٢ - وَمَهْمُوزًا؛ وَهُوَ: مَا كَانَ أَحَدُ أُصُولِهِ هَمْزَةً؛ كَـ: أَمِنَ، وَ: سَأَلَ، وَ: قَرَأَ.",
+              "uz": "2 — Mahmuz — asl harflaridan biri hamza bo'lgani; masalan: أَمِنَ (omon bo'ldi), سَأَلَ (so'radi), قَرَأَ (o'qidi)."
+            },
+            {
+              "ar": "٣ - وَمُضَعَّفًا؛ وَهُوَ: مَا كَانَتْ عَيْنُهُ وَلَامُهُ مِنْ جِنْسٍ وَاحِدٍ؛ كَـ: مَدَّ، وَ: فَرَّ.",
+              "uz": "3 — Muza'af — «ayn» va «lom» harflari bir jinsdan bo'lgani; masalan: مَدَّ (cho'zdi), فَرَّ (qochdi)."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَالْمُعْتَلُّ يَكُونُ:",
+            "uz": "Mu'tall fe'l quyidagicha bo'ladi:"
+          },
+          "items": [
+            {
+              "ar": "١ - مِثَالًا؛ وَهُوَ: مَا اعْتَلَّتْ فَاؤُهُ؛ كَـ: وَعَدَ، وَ: يَسُرَ.",
+              "uz": "1 — Misol — birinchi asl harfi («fo») illatli bo'lgani; masalan: وَعَدَ (va'da berdi), يَسُرَ (oson bo'ldi)."
+            },
+            {
+              "ar": "٢ - وَأَجْوَفَ؛ وَهُوَ: مَا اعْتَلَّتْ عَيْنُهُ؛ كَـ: قَامَ، وَ: بَاعَ.",
+              "uz": "2 — Ajvaf — o'rta harfi («ayn») illatli bo'lgani; masalan: قَامَ (turdi), بَاعَ (sotdi)."
+            },
+            {
+              "ar": "٣ - وَنَاقِصًا؛ وَهُوَ: مَا اعْتَلَّتْ لَامُهُ؛ كَـ: دَعَا، وَ: رَمَى.",
+              "uz": "3 — Noqis — oxirgi harfi («lom») illatli bo'lgani; masalan: دَعَا (chaqirdi), رَمَى (otdi)."
+            },
+            {
+              "ar": "٤ - وَلَفِيفًا مَفْرُوقًا؛ وَهُوَ: مَا اعْتَلَّتْ فَاؤُهُ وَلَامُهُ؛ كَـ: وَفَى، وَ: وَقَى.",
+              "uz": "4 — Lafifi mafruq — birinchi va oxirgi harflari illatli bo'lgani; masalan: وَفَى (vafo qildi), وَقَى (saqladi)."
+            },
+            {
+              "ar": "٥ - وَلَفِيفًا مَقْرُونًا؛ وَهُوَ: مَا اعْتَلَّتْ عَيْنُهُ وَلَامُهُ؛ كَـ: طَوَى، وَ: نَوَى.",
+              "uz": "5 — Lafifi maqrun — o'rta va oxirgi harflari illatli bo'lgani; masalan: طَوَى (o'radi), نَوَى (niyat qildi)."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "وَيُقَالُ لِلْفِعْلِ الْمُنْتَهِي بِحَرْفِ عِلَّةٍ: «مُعْتَلُّ الْآخِرِ»؛ كَـ: يَسْعَى.",
+          "uz": "Oxiri illat harfi bilan tugagan fe'l «mu'tallul-oxir» deb ataladi; masalan: يَسْعَى."
+        },
+        {
+          "type": "para",
+          "ar": "وَ: يَسْمُو، وَ: يَرْتَقِي. وَيُقَالُ لِلْمُنْتَهِي بِحَرْفٍ صَحِيحٍ: «صَحِيحُ الْآخِرِ»؛ كَـ: يُفْهَمُ، وَ: يَخَافُ، وَ: يَعِدُ.",
+          "uz": "Shuningdek: يَسْمُو, يَرْتَقِي. Oxiri sahih harf bilan tugagani esa «sahihul-oxir» deb ataladi; masalan: يُفْهَمُ, يَخَافُ, يَعِدُ."
+        },
+        {
+          "type": "para",
+          "ar": "(١) إِذَا كَانَ الْفِعْلُ الْمُعْتَلُّ الْآخِرِ مَاضِيًا، وَأُسْنِدَ لِوَاوِ الْجَمَاعَةِ حُذِفَ حَرْفُ الْعِلَّةِ، وَيُفْتَحُ مَا قَبْلَهُ إِنْ كَانَ الْمَحْذُوفُ أَلِفًا، وَيُضَمُّ إِنْ كَانَ وَاوًا، أَوْ يَاءً، فَتَقُولُ فِي نَحْوِ: سَعَى .. سَعَوْا، وَفِي: سَرُوَ، وَرَضِيَ: سَرُوا، وَرَضُوا.",
+          "uz": "(1-izoh) Oxiri illatli fe'l mozi bo'lib, jamoa voviga bog'lansa, illat harfi tushiriladi: tushirilgan alif bo'lsa, oldingi harf fatha bilan; vov yoki yo bo'lsa, damma bilan keladi. Shuning uchun «سَعَى» dan «سَعَوْا», «سَرُوَ» va «رَضِيَ» dan «سَرُوا» va «رَضُوا» deysan."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِذَا أُسْنِدَ لِغَيْرِ الْوَاوِ مِنَ الضَّمَائِرِ الْبَارِزَةِ لَمْ يُحْذَفْ حَرْفُ الْعِلَّةِ، بَلْ يَبْقَى عَلَى أَصْلِهِ، وَتُقْلَبُ الْأَلِفُ وَاوًا، أَوْ يَاءً؛ تَبَعًا لِأَصْلِهَا، إِنْ كَانَتْ ثَالِثَةً، فَنَقُولُ فِي نَحْوِ «سَرُوَ»: سَرُوَهُ، وَفِي «رَضِيَ»: رَضِينَا، وَفِي «غَزَا» وَ«رَمَى»: غَزَوْنَا وَرَمَيْنَا.",
+          "uz": "Vovdan boshqa ochiq zamirlarga bog'lansa, illat harfi tushirilmaydi, balki aslida qoladi; alif — uchinchi harf bo'lsa — asliga qarab vov yoki yoga aylanadi. Shuning uchun «رَضِيَ» dan «رَضِينَا», «غَزَا» va «رَمَى» dan «غَزَوْنَا», «رَمَيْنَا» deymiz."
+        },
+        {
+          "type": "para",
+          "ar": "وَأَمَّا إِنْ كَانَ الْفِعْلُ الْمُعْتَلُّ الْآخِرِ مُضَارِعًا، وَأُسْنِدَ لِوَاوِ الْجَمَاعَةِ، أَوْ يَاءِ الْمُخَاطَبَةِ فَيُحْذَفُ حَرْفُ الْعِلَّةِ وَيُفْتَحُ مَا قَبْلَهُ، إِنْ كَانَ الْمَحْذُوفُ أَلِفًا، وَيُؤْتَى بِحَرَكَةٍ مُجَانِسَةٍ لِوَاوِ الْجَمَاعَةِ، أَوْ يَاءِ الْمُخَاطَبَةِ إِنْ كَانَ الْمَحْذُوفُ وَاوًا، أَوْ يَاءً.",
+          "uz": "Oxiri illatli fe'l muzori' bo'lib, jamoa voviga yoki muxotaba yosiga bog'lansa: illat harfi tushiriladi; tushirilgan alif bo'lsa, oldingi harf fatha bilan keladi; vov yoki yo bo'lsa, jamoa vovi yoki muxotaba yosiga mos harakat keltiriladi."
+        },
+        {
+          "type": "para",
+          "ar": "فَنَقُولُ فِي «يَسْعَى»: الرِّجَالُ يَسْعَوْنَ، وَتَسْعَيْنَ يَا هِنْدُ، وَفِي «يَغْزُو» وَ«يَرْمِي»: الرِّجَالُ يَغْزُونَ، وَيَرْمُونَ، وَتَغْزِينَ، وَتَرْمِينَ يَا هِنْدُ.",
+          "uz": "Shunday qilib «يَسْعَى» dan: «Erkaklar harakat qiladilar», «Ey Hind, sen harakat qilasan»; «يَغْزُو» va «يَرْمِي» dan: «Erkaklar g'azot qiladilar», «otadilar», «Ey Hind, sen g'azot qilasan», «otasan» deymiz."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِذَا أُسْنِدَ لِغَيْرِهِمَا لَمْ يُحْذَفْ حَرْفُ الْعِلَّةِ، بَلْ يَبْقَى عَلَى أَصْلِهِ، وَتُقْلَبُ الْأَلِفُ يَاءً إِنْ كَانَتْ غَيْرَ ثَالِثَةٍ، أَوْ أَصْلُهَا يَاءٌ، فَنَقُولُ فِي «يَغْزُو» وَ«يَرْمِي»: النِّسَاءُ يَغْزُونَ وَيَرْمِينَ. وَفِي «يَسْعَى»: النِّسَاءُ يَسْعَيْنَ. وَالْأَمْرُ كَالْمُضَارِعِ الْمَجْزُومِ.",
+          "uz": "Bu ikkisidan boshqasiga bog'lansa, illat harfi tushirilmaydi, balki aslida qoladi; alif — uchinchi harf bo'lmasa yoki asli yo bo'lsa — yoga aylanadi. Shunday qilib «يَغْزُو» va «يَرْمِي» dan: «Ayollar g'azot qiladilar va otadilar»; «يَسْعَى» dan: «Ayollar harakat qiladilar» deymiz. Amr esa majzum muzori' kabidir."
+        }
+      ],
+      "exercise": []
     }
   ]
 }

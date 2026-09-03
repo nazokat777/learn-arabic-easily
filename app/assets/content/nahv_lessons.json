@@ -16430,6 +16430,184 @@
         }
       ],
       "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 42,
+      "page": 334,
+      "titleAr": "اسْمُ الْجَمْعِ",
+      "title": "Ismul-jam' (jamlik ismi)",
+      "rule": {
+        "ar": "وَمِنَ اللَّفْظِ مَا يَدُلُّ عَلَى الْجَمَاعَةِ، وَلَا وَاحِدَ لَهُ مِنْ لَفْظِهِ، وَيُقَالُ لَهُ: اسْمُ جَمْعٍ؛ كَ: رَكْبٍ، وَرَهْطٍ، وَقَوْمٍ، وَجَيْشٍ.",
+        "uz": "Lafzlardan jamoaga dalolat qiluvchi, ammo o'z lafzidan birligi bo'lmagani bor; unga «ismul-jam'» deyiladi; masalan: rakb (karvon), raht (guruh), qavm, jaysh (qo'shin)."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَمِنَ اللَّفْظِ مَا يَدُلُّ عَلَى الْجَمَاعَةِ وَيُفَرَّقُ بَيْنَهُ وَبَيْنَ وَاحِدِهِ بِالتَّاءِ، أَوِ الْيَاءِ؛ كَ: عِنَبٍ، وَسَفَرْجَلٍ، وَتُرْكٍ، وَيُقَالُ لَهُ: اسْمُ جِنْسٍ جَمْعِيٌّ.",
+          "uz": "Lafzlardan jamoaga dalolat qiluvchi va u bilan birligi orasi «to» yoki «yo» bilan farqlanadigani ham bor; masalan: inab (uzum), safarjal (behi), turk. Unga «ismi jinsi jam'iy» deyiladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُعَامَلُ اسْمُ الْجَمْعِ مُعَامَلَةَ الْمُفْرَدِ أَوِ الْجَمْعِ؛ فَيُقَالُ: الرَّكْبُ سَارَ، وَالْقَوْمُ خَرَجُوا.",
+          "uz": "Ismul-jam'ga birlik yoki ko'plik kabi muomala qilinadi; shuning uchun «Karvon yurdi» va «Qavm chiqdilar» deyiladi."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 43,
+      "page": 335,
+      "titleAr": "الْبَابُ الْخَامِسُ فِي الْمُذَكَّرِ وَالْمُؤَنَّثِ",
+      "title": "5-bob: muzakkar va muannas",
+      "rule": {
+        "ar": "إِذَا تَمَيَّزَ فِي الشَّيْءِ ذَكَرٌ وَأُنْثَى قِيلَ لِلَّفْظِ الدَّالِّ عَلَى الذَّكَرِ: مُذَكَّرٌ، وَالدَّالِّ عَلَى الْأُنْثَى: مُؤَنَّثٌ.",
+        "uz": "Bir narsada erkak va urg'ochi ajralib tursa, erkakka dalolat qiluvchi lafz «muzakkar», urg'ochiga dalolat qiluvchi lafz esa «muannas» deb ataladi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَيَخْتَلِفُ حُكْمُهُمَا فِي الضَّمِيرِ وَالْإِشَارَةِ وَالْمَوْصُولِ وَالصِّفَةِ وَغَيْرِ ذَلِكَ.",
+          "uz": "Ikkisining hukmi zamir, ishora, mavsul, sifat va boshqalarda farq qiladi."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَعَلَامَةُ التَّأْنِيثِ:",
+            "uz": "Muannaslik alomati:"
+          },
+          "items": [
+            {
+              "ar": "تَاءٌ مُتَحَرِّكَةٌ؛ كَ: امْرَأَةٍ وَفَاضِلَةٍ.",
+              "uz": "Harakatlangan «to»; masalan: imra'a (ayol), fozila."
+            },
+            {
+              "ar": "أَوْ أَلِفٌ مَقْصُورَةٌ؛ كَ: سَلْمَى وَفُضْلَى.",
+              "uz": "Yoki alif maqsura; masalan: Salmo, fuzlo."
+            },
+            {
+              "ar": "أَوْ أَلِفٌ مَمْدُودَةٌ؛ كَ: أَسْمَاءَ وَحَسْنَاءَ.",
+              "uz": "Yoki alif mamduda; masalan: Asmo, Hasno."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "وَإِذَا لَمْ يَتَمَيَّزْ فِيهِ ذَلِكَ فَمَا دَخَلَتْ عَلَيْهِ الْعَلَامَةُ عُدَّ مُؤَنَّثًا؛ كَ: قَلْعَةٍ وَصَحْرَاءَ، وَمَا خَلَا مِنْهَا عُدَّ مُذَكَّرًا إِلَّا أَلْفَاظًا مَحْصُورَةً سُمِعَتْ مِنَ الْعَرَبِ فَيُقْتَصَرُ عَلَيْهَا؛ كَ: شَمْسٍ وَنَارٍ وَيَمِينٍ.",
+          "uz": "Unda erkak va urg'ochi ajralib turmasa, alomat kirgani muannas hisoblanadi — «qal'a» va «sahro» kabi; alomatdan xoli bo'lgani esa muzakkar hisoblanadi — faqat arablardan eshitilgan sanoqli lafzlar bundan mustasno, ular bilan cheklaniladi; masalan: shams (quyosh), nor (olov), yamin (o'ng qo'l)."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُسَمَّى الْمُؤَنَّثُ حَيْثُ يَتَمَيَّزُ الذَّكَرُ مِنَ الْأُنْثَى حَقِيقِيًّا، وَحَيْثُ لَا يَتَمَيَّزُ مَجَازِيًّا.",
+          "uz": "Erkak urg'ochidan ajralib turgan joyda muannas «haqiqiy», ajralmagan joyda esa «majoziy» deb ataladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَكُلُّ مَا اشْتَمَلَ عَلَى عَلَامَةِ التَّأْنِيثِ يُقَالُ لَهُ: مُؤَنَّثٌ لَفْظِيٌّ؛ مِثْلُ حَمْزَةَ.",
+          "uz": "Muannaslik alomatini o'z ichiga olgan har bir so'z «lafziy muannas» deb ataladi; masalan: Hamza."
+        },
+        {
+          "type": "para",
+          "ar": "وَكُلُّ مَا تَجْرِي عَلَيْهِ أَحْكَامُ التَّأْنِيثِ مِنْ حَيْثُ ضَمِيرُهُ وَإِشَارَتُهُ يُقَالُ لَهُ: مُؤَنَّثٌ مَعْنَوِيٌّ.",
+          "uz": "Zamiri va ishorasi jihatidan muannaslik hukmlari joriy bo'ladigan har bir so'z «ma'naviy muannas» deb ataladi."
+        },
+        {
+          "type": "para",
+          "ar": "فَنَحْوُ: ظَبْيَةٍ وَامْرَأَةٍ وَحُجْرَةٍ لَفْظِيٌّ وَمَعْنَوِيٌّ مَعًا.",
+          "uz": "«Zabya» (urg'ochi kiyik), «imra'a» va «hujra» kabilar lafziy ham, ma'naviy ham muannasdir."
+        },
+        {
+          "type": "para",
+          "ar": "وَنَحْوُ: زَيْنَبَ وَضَبُعٍ وَدَارٍ مَعْنَوِيٌّ فَقَطْ.",
+          "uz": "«Zaynab», «zabu'» (sirtlon) va «dor» (uy) kabilar faqat ma'naviydir."
+        },
+        {
+          "type": "para",
+          "ar": "وَنَحْوُ: حَمْزَةَ وَزَكَرِيَّاءَ لَفْظِيٌّ فَقَطْ.",
+          "uz": "«Hamza» va «Zakariyo» kabilar esa faqat lafziydir."
+        },
+        {
+          "type": "para",
+          "ar": "وَحُكْمُهُ كَالْمُذَكَّرِ إِلَّا فِي مَنْعِ الصَّرْفِ.",
+          "uz": "Uning hukmi muzakkar kabidir — faqat sarfdan man qilishda bundan mustasno."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْأَصْلُ فِي التَّاءِ أَنْ تَدْخُلَ عَلَى الْأَوْصَافِ فَرْقًا بَيْنَ مُذَكَّرِهَا وَمُؤَنَّثِهَا؛ كَ: بَائِعٍ وَبَائِعَةٍ وَمَطْلُوبٍ وَمَطْلُوبَةٍ وَحَسَنٍ وَحَسَنَةٍ.",
+          "uz": "«To»da asl — sifatlarga, ularning muzakkari bilan muannasini farqlash uchun kirishidir; masalan: boi' — boi'a, matlub — matluba, hasan — hasana."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "إِلَّا خَمْسَ صِيَغٍ فَيَسْتَوِي فِيهَا الْمُذَكَّرُ وَالْمُؤَنَّثُ، وَهِيَ:",
+            "uz": "Faqat beshta siyg'a bundan mustasno; ularda muzakkar va muannas teng bo'ladi:"
+          },
+          "items": [
+            {
+              "ar": "١ - فَعُولٌ بِمَعْنَى فَاعِلٍ؛ كَ: صَبُورٍ وَفَخُورٍ وَشَكُورٍ.",
+              "uz": "1 — «Foil» ma'nosidagi «fa'ul»; masalan: sabur, faxur, shakur."
+            },
+            {
+              "ar": "٢ - وَفَعِيلٌ بِمَعْنَى مَفْعُولٍ؛ كَ: جَرِيحٍ وَقَتِيلٍ وَخَضِيبٍ.",
+              "uz": "2 — «Maf'ul» ma'nosidagi «fa'il»; masalan: jarih (yarador), qatil (o'ldirilgan), xazib (bo'yalgan)."
+            },
+            {
+              "ar": "٣ - وَمِفْعَالٌ؛ كَ: مِهْذَارٍ وَمِكْسَالٍ وَمِبْسَامٍ.",
+              "uz": "3 — «Mif'ol»; masalan: mihzor (ko'p bidirlovchi), miksol (juda dangasa), mibsom (ko'p tabassum qiluvchi)."
+            },
+            {
+              "ar": "٤ - وَمِفْعِيلٌ؛ كَ: مِعْطِيرٍ وَمِنْطِيقٍ وَمِسْكِيرٍ.",
+              "uz": "4 — «Mif'il»; masalan: mi'tir (ko'p atir sepuvchi), mintiq (notiq), miskir (ko'p mast bo'luvchi)."
+            },
+            {
+              "ar": "٥ - وَمِفْعَلٌ؛ كَ: مِغْشَمٍ وَمِدْعَسٍ وَمِهْذَرٍ.",
+              "uz": "5 — «Mif'al»; masalan: mig'sham (hech narsa to'sa olmaydigan jasur), mid'as (nayzabozlik qiluvchi), mihzar (ko'p bidirlovchi)."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَقَدْ تَكُونُ التَّاءُ:",
+            "uz": "«To» quyidagilar uchun ham bo'ladi:"
+          },
+          "items": [
+            {
+              "ar": "١ - لِلْوَاحِدَةِ؛ كَ: عِنَبَةٍ وَشَجَرَةٍ وَوَرَقَةٍ وَوَرْدَةٍ.",
+              "uz": "1 — Birlik uchun; masalan: inaba (bir dona uzum), shajara (bir daraxt), varaqa, varda (bir gul)."
+            },
+            {
+              "ar": "٢ - وَلِلْمُبَالَغَةِ؛ كَ: رَاوِيَةٍ وَنَابِغَةٍ، وَلِتَأْكِيدِهَا؛ كَ: عَلَّامَةٍ وَنَسَّابَةٍ.",
+              "uz": "2 — Mubolag'a uchun; masalan: roviya (ko'p rivoyat qiluvchi), nobig'a (yetuk iste'dodli); va uni ta'kidlash uchun; masalan: allomiya, nassoba (nasablarni juda yaxshi biluvchi)."
+            },
+            {
+              "ar": "٣ - وَلِلْعِوَضِ عَنْ فَاءٍ؛ كَ: زِنَةٍ، أَوْ عَنْ عَيْنٍ؛ كَ: إِقَامَةٍ، أَوْ عَنْ لَامٍ؛ كَ: سَنَةٍ.",
+              "uz": "3 — «Fo»ning o'rin bosari uchun — «zina» (o'lchov) kabi; yoki «ayn»ning o'rin bosari uchun — «iqoma» kabi; yoki «lom»ning o'rin bosari uchun — «sana» (yil) kabi."
+            },
+            {
+              "ar": "٤ - وَقَدْ تَلْحَقُ صِيغَةَ مُنْتَهَى الْجُمُوعِ لِلدَّلَالَةِ عَلَى النَّسَبِ؛ كَ: أَشَاعِرَةٍ جَمْعِ أَشْعَرِيٍّ، أَوْ لِلْعِوَضِ عَنْ يَاءٍ مَحْذُوفَةٍ؛ كَ: زَنَادِقَةٍ فِي زَنَادِيقَ جَمْعِ زِنْدِيقٍ.",
+              "uz": "4 — «Muntahal-jumu'» siyg'asiga nisbatga dalolat qilish uchun qo'shiladi — «asho'ira» («ash'ariy»ning ko'pligi) kabi; yoki tushirilgan «yo»ning o'rin bosari uchun — «zanodiqa» («zindiq»ning ko'pligi bo'lgan «zanodiq»da) kabi."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "(١) وَيُعْلَمُ مِنْ هَذَا أَنَّهَا لَا تَدْخُلُ قِيَاسًا فِي الْأَوْصَافِ الْخَاصَّةِ بِالنِّسَاءِ؛ كَ: حَائِضٍ وَطَالِقٍ وَمُرْضِعٍ وَثَيِّبٍ.",
+          "uz": "(1-izoh) Bundan ma'lum bo'ladiki, u ayollarga xos sifatlarga qiyosan kirmaydi; masalan: hoiz, toliq (taloq qilingan), murzi' (emizuvchi), sayyib."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) الْمِغْشَمُ: الشُّجَاعُ الَّذِي لَا يَثْنِيهِ شَيْءٌ عَمَّا يُرِيدُ، وَالْمِدْعَسُ: الطَّعَّانُ، وَالْمِهْذَرُ: الْهَاذِي كَالْمِهْذَارِ.",
+          "uz": "(2-izoh) «Mig'sham» — istagan narsasidan hech narsa qaytara olmaydigan jasur; «mid'as» — mohir nayzaboz; «mihzar» — «mihzor» kabi bidirlovchi."
+        },
+        {
+          "type": "para",
+          "ar": "(٣) هَذَا عَلَى أَنَّ الْمَحْذُوفَ الْعَيْنُ، لَا أَلِفُ الْإِفْعَالِ.",
+          "uz": "(3-izoh) Bu — tushirilgan narsa «ayn», «if'ol»ning alifi emas degan qavlga ko'radir."
+        }
+      ],
+      "exercise": []
     }
   ]
 }

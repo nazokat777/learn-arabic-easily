@@ -14423,6 +14423,177 @@
         }
       ],
       "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 15,
+      "page": 301,
+      "titleAr": "الْبَابُ التَّاسِعُ فِي الْمَبْنِيِّ وَالْمُعْرَبِ",
+      "title": "9-bob: mabniy va mu'rab",
+      "rule": {
+        "ar": "الْفِعْلُ عِنْدَمَا يَدْخُلُ فِي جُمْلَةٍ مُفِيدَةٍ لَا يَكُونُ عَلَى حَالَةٍ وَاحِدَةٍ فِي جَمِيعِ أَنْوَاعِهِ، بَلْ مِنْهُ مَا يَكُونُ آخِرُهُ ثَابِتًا لَا يَتَغَيَّرُ بِتَغَيُّرِ الْعَوَامِلِ، وَيُسَمَّى مَبْنِيًّا، وَعَدَمُ التَّغَيُّرِ يُسَمَّى بِنَاءً.",
+        "uz": "Fe'l foydali gapga kirganda, barcha turlarida bir xil holatda bo'lmaydi. Balki uning bir qismi oxiri sobit bo'lib, omillarning o'zgarishi bilan o'zgarmaydi — u «mabniy» deb ataladi, o'zgarmaslikning o'zi esa «bino» deyiladi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَمِنْهُ مَا يَتَغَيَّرُ آخِرُهُ بِتَغَيُّرِ الْعَوَامِلِ، وَيُسَمَّى مُعْرَبًا، وَالتَّغَيُّرُ يُسَمَّى إِعْرَابًا.",
+          "uz": "Bir qismining oxiri esa omillarning o'zgarishi bilan o'zgaradi — u «mu'rab» deb ataladi, o'zgarishning o'zi esa «i'rob» deyiladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْعَامِلُ: مَا أَوْجَبَ كَوْنَ آخِرِ الْكَلِمَةِ عَلَى وَجْهٍ مَخْصُوصٍ؛ كَ: (إِنَّ)، وَلَمْ.",
+          "uz": "Omil — so'zning oxiri ma'lum bir holatda bo'lishini talab qilgan narsadir; masalan: «inna», «lam»."
+        },
+        {
+          "type": "para",
+          "ar": "(١) الْعَامِلُ إِمَّا أَنْ يَكُونَ لَفْظِيًّا، وَإِمَّا أَنْ يَكُونَ مَعْنَوِيًّا.",
+          "uz": "(1-izoh) Omil yo lafziy, yo ma'naviy bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "فَاللَّفْظِيُّ؛ كَ: حُرُوفِ الْجَرِّ وَالنَّوَاصِبِ وَالْجَوَازِمِ وَالْفِعْلِ وَالْوَصْفِ.",
+          "uz": "Lafziysi — jarr harflari, nasb qiluvchilar, jazm qiluvchilar, fe'l va sifat kabi."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْمَعْنَوِيُّ؛ كَ: الاِبْتِدَاءِ فِي الْمُبْتَدَأِ، وَالتَّجَرُّدِ فِي الْفِعْلِ الْمُضَارِعِ، وَلَيْسَ فِي النَّحْوِ عَامِلٌ مَعْنَوِيٌّ غَيْرُهُمَا.",
+          "uz": "Ma'naviysi — mubtadodagi ibtido va muzori' fe'ldagi tajarrud kabi. Nahvda bu ikkisidan boshqa ma'naviy omil yo'q."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 16,
+      "page": 301,
+      "titleAr": "فَصْلٌ فِي الْمَبْنِيِّ",
+      "title": "Mabniy haqida fasl",
+      "rule": {
+        "ar": "الْمَبْنِيُّ مِنَ الْأَفْعَالِ هُوَ: الْمَاضِي، وَالْأَمْرُ، وَالْمُضَارِعُ الْمُتَّصِلُ بِنُونِ التَّوْكِيدِ أَوْ نُونِ الْإِنَاثِ.",
+        "uz": "Fe'llardan mabniy bo'lgani: mozi, amr hamda ta'kid nuniga yoki ayollar nuniga tutashgan muzori'dir."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "أَمَّا الْمَاضِي فَبِنَاؤُهُ عَلَى الْفَتْحِ؛ نَحْوُ: كَتَبَ وَكَتَبَتْ.",
+          "uz": "Moziga kelsak, uning binosi fatha uzradir; masalan: «kataba», «katabat»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُضَمُّ إِذَا اتَّصَلَ بِوَاوِ الْجَمَاعَةِ؛ نَحْوُ: كَتَبُوا.",
+          "uz": "Jamoa voviga tutashsa, damma qilinadi; masalan: «katabu»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُسَكَّنُ إِذَا اتَّصَلَ بِضَمِيرِ رَفْعٍ مُتَحَرِّكٍ؛ نَحْوُ: كَتَبْتُ وَكَتَبْنَا.",
+          "uz": "Harakatlangan raf' zamiriga tutashsa, sokin qilinadi; masalan: «katabtu», «katabno»."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) وَيُقَالُ: إِنَّ الْفِعْلَ مَبْنِيٌّ عَلَى الضَّمِّ، أَوْ عَلَى السُّكُونِ، أَوْ مَبْنِيٌّ عَلَى فَتْحٍ مُقَدَّرٍ مَنَعَ مِنْ ظُهُورِهِ حَرَكَةُ الْمُنَاسَبَةِ لِلْوَاوِ أَوِ السُّكُونُ الْعَارِضُ كَرَاهَةَ تَوَالِي أَرْبَعِ حَرَكَاتٍ فِيمَا هُوَ كَالْكَلِمَةِ الْوَاحِدَةِ.",
+          "uz": "(2-izoh) Shunday deyiladi: fe'l damma uzra yoki sukun uzra mabniydir; yoxud taqdir qilingan fatha uzra mabniy bo'lib, uning zohir bo'lishiga vovga moslik harakati yoki bir so'z hukmidagi narsada to'rtta harakatning ketma-ket kelishi yoqimsiz bo'lgani uchun kelgan orizi sukun to'sqinlik qilgan."
+        },
+        {
+          "type": "para",
+          "ar": "وَأَمَّا الْأَمْرُ فَبِنَاؤُهُ عَلَى مَا يُجْزَمُ بِهِ مُضَارِعُهُ؛ نَحْوُ: اسْمَعْ، وَاسْعَ، وَاسْمُ، وَارْتَقِ، وَاسْمَعَا، وَاسْمَعُوا، وَاسْمَعِي، وَاسْمَعَنَّ.",
+          "uz": "Amrga kelsak, uning binosi muzori'i jazm qilinadigan narsa uzradir; masalan: «eshit», «harakat qil», «yuksal», «ko'taril», «ikkovingiz eshiting», «eshitinglar», «sen (ayol) eshit», «albatta eshit»."
+        },
+        {
+          "type": "para",
+          "ar": "وَأَمَّا الْمُضَارِعُ الْمُتَّصِلَةُ بِهِ نُونُ التَّوْكِيدِ فَبِنَاؤُهُ عَلَى الْفَتْحِ؛ نَحْوُ: ﴿لَيُسْجَنَنَّ وَلَيَكُونًا مِنَ الصَّاغِرِينَ﴾.",
+          "uz": "Ta'kid nuni tutashgan muzori'ga kelsak, uning binosi fatha uzradir; masalan: «Albatta u zindonga tashlanadi va xor bo'lganlardan bo'ladi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَأَمَّا الْمُتَّصِلَةُ بِهِ نُونُ الْإِنَاثِ فَبِنَاؤُهُ عَلَى السُّكُونِ؛ نَحْوُ: ﴿وَالْوَالِدَاتُ يُرْضِعْنَ أَوْلَادَهُنَّ﴾.",
+          "uz": "Ayollar nuni tutashganiga kelsak, uning binosi sukun uzradir; masalan: «Onalar farzandlarini emizadilar»."
+        },
+        {
+          "type": "para",
+          "ar": "(١) اتِّصَالُ نُونِ التَّوْكِيدِ بِالْمُضَارِعِ لَا يُوجِبُ بِنَاءَهُ إِلَّا إِذَا كَانَتْ مُبَاشِرَةً لَهُ؛ نَحْوُ: ﴿لَيُنْبَذَنَّ﴾. فَإِنْ فَصَلَ بَيْنَهُمَا فَاصِلٌ لَفْظًا؛ كَ: يَنْصُرَانِّ، أَوْ تَقْدِيرًا؛ كَ: تَنْصُرُنَّ (وَتَنْصُرِنَّ) فَهُوَ مُعْرَبٌ بِالنُّونِ الْمَحْذُوفَةِ لِتَوَالِي الْأَمْثَالِ. وَالْفَاصِلُ التَّقْدِيرِيُّ هُوَ: وَاوُ الْجَمَاعَةِ أَوْ يَاءُ الْمُخَاطَبَةِ.",
+          "uz": "(1-izoh) Ta'kid nunining muzori'ga tutashishi uning binosini faqat u bevosita tutashgandagina vojib qiladi; masalan: «albatta uloqtiriladi». Ikkisi orasini lafzan ajratuvchi kirsa — «yansuronni» kabi — yoki taqdiran ajratuvchi kirsa — «tansurunna» va «tansurinna» kabi — u holda fe'l bir xil harflarning ketma-ketligi sababli tushirilgan nun bilan mu'rabdir. Taqdiriy ajratuvchi — jamoa vovi yoki muxotaba yosidir."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 17,
+      "page": 303,
+      "titleAr": "فَصْلٌ فِي الْمُعْرَبِ",
+      "title": "Mu'rab haqida fasl",
+      "rule": {
+        "ar": "الْمُعْرَبُ مِنَ الْأَفْعَالِ: هُوَ الْمُضَارِعُ الْخَالِي مِنَ النُّونَيْنِ.",
+        "uz": "Fe'llardan mu'rab bo'lgani — ikki nundan xoli bo'lgan muzori'dir."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَأَنْوَاعُ إِعْرَابِهِ ثَلَاثَةٌ: رَفْعٌ، وَنَصْبٌ، وَجَزْمٌ.",
+          "uz": "Uning i'rob turlari uchtadir: raf', nasb va jazm."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 18,
+      "page": 303,
+      "titleAr": "نَصْبُ الْفِعْلِ وَمَوَاضِعُهُ",
+      "title": "Fe'lning nasbi va o'rinlari",
+      "rule": {
+        "ar": "الْأَصْلُ فِي نَصْبِ الْفِعْلِ أَنْ يَكُونَ بِالْفَتْحَةِ، وَيَنُوبُ عَنْهَا حَذْفُ النُّونِ فِي الْأَمْثِلَةِ الْخَمْسَةِ.",
+        "uz": "Fe'lni nasb qilishda asl — uning fatha bilan bo'lishidir; uning o'rnini besh misolda nunning tushirilishi bosadi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَهِيَ: كُلُّ مُضَارِعٍ اتَّصَلَتْ بِهِ: أَلِفُ اثْنَيْنِ، أَوْ وَاوُ جَمَاعَةٍ، أَوْ يَاءُ الْمُخَاطَبَةِ؛ كَ: يَكْتُبَانِ، وَتَكْتُبَانِ، وَيَكْتُبُونَ، وَتَكْتُبُونَ، وَتَكْتُبِينَ؛ نَحْوُ: لَنْ يَتَكَلَّمَ حَتَّى تَضَعُوا.",
+          "uz": "Besh misol — ikkilik alifi, jamoa vovi yoki muxotaba yosi tutashgan har bir muzori'dir: yaktubani, taktubani, yaktubuna, taktubuna, taktubina; masalan: «Siz qo'ymaguningizcha u gapirmaydi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَهُوَ يُنْصَبُ إِذَا سَبَقَهُ أَحَدُ الْأَحْرُفِ النَّاصِبَةِ، وَهِيَ: أَنْ، وَلَنْ، وَإِذَنْ، وَكَيْ؛ نَحْوُ: ﴿وَأَنْ تَصُومُوا خَيْرٌ لَكُمْ﴾.",
+          "uz": "Oldidan nasb qiluvchi harflardan biri kelsa, u nasb qilinadi; ular: «an», «lan», «izan», «kay»; masalan: «Ro'za tutishingiz siz uchun yaxshiroqdir»."
+        },
+        {
+          "type": "para",
+          "ar": "لَا تَحْسَبِ الْمَجْدَ تَمْرًا أَنْتَ آكِلُهُ * لَنْ تَبْلُغَ الْمَجْدَ حَتَّى تَلْعَقَ الصَّبِرَا",
+          "uz": "Shon-shuhratni sen yeydigan xurmo deb o'ylama; sabr (achchiq o'simlik)ni yalamaguningcha unga yetmaysan."
+        },
+        {
+          "type": "para",
+          "ar": "إِذَنْ تَبْلُغَ الْقَصْدَ. ﴿لِكَيْلَا تَأْسَوْا عَلَى مَا فَاتَكُمْ﴾.",
+          "uz": "«Unda maqsadingga yetasan». «Sizdan ketgan narsaga afsuslanmasligingiz uchun»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(أَنْ) حَرْفٌ مَصْدَرِيٌّ؛ لِحُلُولِهَا مَعَ مَا بَعْدَهَا مَحَلَّ الْمَصْدَرِ، وَمِثْلُهَا (كَيْ).",
+          "uz": "«An» — masdar harfidir, chunki u o'zidan keyingisi bilan birga masdar o'rniga o'tadi; «kay» ham shunday."
+        },
+        {
+          "type": "para",
+          "ar": "(١) لَا تَعْمَلُ (أَنْ) النَّصْبَ إِلَّا إِنْ كَانَتْ مَصْدَرِيَّةً دَاخِلَةً عَلَى الْمُضَارِعِ، فَإِنْ كَانَتْ مُفَسِّرَةً، أَوْ زَائِدَةً، أَوْ مُخَفَّفَةً مِنْ (أَنَّ) فَلَا تَنْصِبُ.",
+          "uz": "(1-izoh) «An» faqat masdariy bo'lib muzori'ga kirgandagina nasb amalini qiladi. Agar u mufassira, ortiqcha yoki «anna»dan yengillashtirilgan bo'lsa, nasb qilmaydi."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْمُفَسِّرَةُ هِيَ الْمَسْبُوقَةُ بِجُمْلَةٍ فِيهَا مَعْنَى الْقَوْلِ دُونَ حُرُوفِهِ؛ نَحْوُ: ﴿فَأَوْحَيْنَا إِلَيْهِ أَنِ اصْنَعِ الْفُلْكَ﴾.",
+          "uz": "Mufassira — oldidan «qavl» ma'nosini o'z ichiga olgan, ammo uning harflarisiz bo'lgan gap kelgani; masalan: «Unga: kemani yasa, deb vahiy qildik»."
+        },
+        {
+          "type": "para",
+          "ar": "وَالزَّائِدَةُ هِيَ التَّالِيَةُ لِـ(لَمَّا)؛ نَحْوُ: ﴿فَلَمَّا أَنْ جَاءَ الْبَشِيرُ﴾.",
+          "uz": "Ortiqchasi — «lammo»dan keyin kelgani; masalan: «Xushxabarchi kelganda»."
+        },
+        {
+          "type": "para",
+          "ar": "أَوِ الْوَاقِعَةُ بَيْنَ الْكَافِ وَمَجْرُورِهَا؛ نَحْوُ: «كَأَنْ ظَبْيَةٍ تَعْطُو إِلَى وَارِقِ السَّلَمِ».",
+          "uz": "Yoki «kof» bilan uning majruri orasida kelgani; masalan: «Xuddi salam daraxtining bargiga bo'yin cho'zayotgan kiyikdek»."
+        }
+      ],
+      "exercise": []
     }
   ]
 }

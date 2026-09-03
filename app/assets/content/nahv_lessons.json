@@ -13414,6 +13414,179 @@
         }
       ],
       "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 7,
+      "page": 283,
+      "titleAr": "تَنْبِيهَاتٌ",
+      "title": "Tanbehlar (mujarrad va mazid haqida)",
+      "rule": {
+        "ar": "الْأَوَّلُ: لَا يَلْزَمُ فِي كُلِّ مُجَرَّدٍ أَنْ يُسْتَعْمَلَ لَهُ مَزِيدٌ، وَلَا فِي كُلِّ مَزِيدٍ أَنْ يُسْتَعْمَلَ لَهُ مُجَرَّدٌ، وَلَا فِيمَا اسْتُعْمِلَ فِيهِ بَعْضُ الْمَزِيدَاتِ أَنْ يُسْتَعْمَلَ فِيهِ الْبَعْضُ الْآخَرُ، بَلِ الْمَدَارُ فِي كُلِّ ذَلِكَ عَلَى السَّمَاعِ.",
+        "uz": "Birinchisi: har bir mujarrad uchun mazid ishlatilishi shart emas; har bir mazid uchun mujarrad ishlatilishi ham shart emas; ba'zi mazid shakllari ishlatilgan fe'lda boshqa qismi ham ishlatilishi shart emas. Bularning hammasida ish samo'ga bog'liqdir."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَيُسْتَثْنَى مِنْ ذَلِكَ الثُّلَاثِيُّ اللَّازِمُ، فَتَطَّرِدُ زِيَادَةُ الْهَمْزَةِ فِي أَوَّلِهِ لِلتَّعْدِيَةِ، فَيُقَالُ فِي ذَهَبَ: أَذْهَبَ، وَفِي خَرَجَ: أَخْرَجَ.",
+          "uz": "Bundan uch harfli lozim fe'l mustasno: uning boshiga o'timli qilish uchun hamza qo'shilishi doimiy qoidadir; shunday qilib «zahaba»da «azhaba», «xaraja»da «axraja» deyiladi."
+        },
+        {
+          "type": "para",
+          "ar": "الثَّانِي: إِذَا كَانَ الْمَاضِي عَلَى وَزْنِ (فَعَلَ) أَمْكَنَ أَنْ يَكُونَ مُضَارِعُهُ عَلَى وَزْنِ يَفْعَلُ، أَوْ يَفْعُلُ، أَوْ يَفْعِلُ.",
+          "uz": "Ikkinchisi: mozi «fa'ala» vaznida bo'lsa, uning muzori'i «yaf'alu», «yaf'ulu» yoki «yaf'ilu» vaznida bo'lishi mumkin."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِذَا كَانَ عَلَى وَزْنِ (فَعِلَ) أَمْكَنَ أَنْ يَكُونَ مُضَارِعُهُ عَلَى وَزْنِ يَفْعِلُ، أَوْ يَفْعَلُ فَقَطْ.",
+          "uz": "«Fa'ila» vaznida bo'lsa, muzori'i faqat «yaf'ilu» yoki «yaf'alu» vaznida bo'lishi mumkin."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِذَا كَانَ عَلَى وَزْنِ (فَعُلَ) كَانَ مُضَارِعُهُ عَلَى وَزْنِ يَفْعُلُ فَقَطْ.",
+          "uz": "«Fa'ula» vaznida bo'lsa, muzori'i faqat «yaf'ulu» vaznida bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَأَوْزَانُ الثُّلَاثِيِّ: فِي الْقِلَّةِ وَالْكَثْرَةِ عَلَى حَسَبِ التَّرْتِيبِ الَّذِي ذَكَرْنَاهُ أَوَّلًا، فَأَكْثَرُ الْأَبْوَابِ أَفْعَالًا بَابُ (نَصَرَ)، فَـ(ضَرَبَ)، فَـ(فَتَحَ)، فَـ(فَرِحَ)، فَـ(كَرُمَ)، وَأَقَلُّهَا بَابُ (حَسِبَ).",
+          "uz": "Uch harflining vaznlari ozlik va ko'plikda biz avval zikr qilgan tartibga ko'radir: fe'llari eng ko'p bob — «nasara», so'ng «zaraba», so'ng «fataha», so'ng «fariha», so'ng «karuma»; eng kami esa «hasiba» bobidir."
+        },
+        {
+          "type": "para",
+          "ar": "الثَّالِثُ: يُرَاعَى فِي وَزْنِ الثُّلَاثِيِّ صُورَةُ الْمَاضِي وَالْمُضَارِعِ مَعًا؛ لِاخْتِلَافِ صُوَرِ الْمُضَارِعِ لِلْمَاضِي الْوَاحِدِ، وَيُرَاعَى فِي غَيْرِهِ صُورَةُ الْمَاضِي فَقَطْ؛ لِأَنَّ لِكُلِّ مَاضٍ مُضَارِعًا لَا تَخْتَلِفُ صُورَتُهُ.",
+          "uz": "Uchinchisi: uch harflining vaznida mozi va muzori' shakli birga hisobga olinadi, chunki bitta mozi uchun muzori' shakllari turlicha bo'ladi. Boshqasida esa faqat mozi shakli hisobga olinadi, chunki har bir mozi uchun shakli o'zgarmaydigan bitta muzori' bor."
+        },
+        {
+          "type": "para",
+          "ar": "الرَّابِعُ: كَوْنُ الثُّلَاثِيِّ عَلَى وَزْنٍ مُعَيَّنٍ مِنَ الْأَوْزَانِ السِّتَّةِ الْمُتَقَدِّمَةِ سَمَاعِيٌّ؛ فَلَا يُعْتَمَدُ فِي مَعْرِفَتِهِ عَلَى قَاعِدَةٍ، غَيْرَ أَنَّهُ يُمْكِنُ تَقْرِيبُهُ بِمُرَاعَاةِ هَذِهِ الضَّوَابِطِ.",
+          "uz": "To'rtinchisi: uch harflining o'tgan oltita vazndan qaysi biriga tegishli ekani samo'iydir; uni bilishda birorta qoidaga suyanilmaydi. Faqat quyidagi qoidalarni hisobga olish bilan uni taxminan aniqlash mumkin."
+        },
+        {
+          "type": "para",
+          "ar": "(فَعَلَ) الْمَفْتُوحُ الْعَيْنِ: إِنْ كَانَ أَوَّلُهُ وَاوًا فَالْغَالِبُ أَنَّهُ مِنْ بَابِ ضَرَبَ؛ كَ: وَعَدَ يَعِدُ، وَوَزَنَ يَزِنُ.",
+          "uz": "Ayni fathali «fa'ala»: boshi «vov» bo'lsa, ko'pincha «zaraba» bobidan bo'ladi; masalan «va'ada–ya'idu» (va'da berdi), «vazana–yazinu» (tortdi)."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِنْ كَانَ مُضَعَّفًا فَالْغَالِبُ أَنَّهُ مِنْ بَابِ (نَصَرَ) إِنْ كَانَ مُتَعَدِّيًا؛ كَ: مَدَّهُ يَمُدُّهُ، وَصَدَّهُ يَصُدُّهُ.",
+          "uz": "Muzo'af bo'lsa va o'timli bo'lsa, ko'pincha «nasara» bobidan bo'ladi; masalan «maddahu–yamudduhu» (cho'zdi), «saddahu–yasudduhu» (to'sdi)."
+        },
+        {
+          "type": "para",
+          "ar": "وَمِنْ بَابِ (ضَرَبَ) إِنْ كَانَ لَازِمًا؛ كَ: خَفَّ يَخِفُّ وَشَذَّ يَشِذُّ.",
+          "uz": "Lozim bo'lsa, «zaraba» bobidan bo'ladi; masalan «xaffa–yaxiffu» (yengil bo'ldi), «shazza–yashizzu» (istisno bo'ldi)."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِنْ كَانَ أَجْوَفَ يَائِيًّا، أَوْ نَاقِصًا كَذَلِكَ يَكُونُ مِنْ بَابِ (ضَرَبَ)؛ كَ: بَاعَ يَبِيعُ، وَرَمَى يَرْمِي.",
+          "uz": "Ajvafi yoiy yoki noqisi yoiy bo'lsa, «zaraba» bobidan bo'ladi; masalan «boa–yabi'u» (sotdi), «ramo–yarmi» (otdi)."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِنْ كَانَ أَجْوَفَ وَاوِيًّا، أَوْ نَاقِصًا كَذَلِكَ يَكُونُ مِنْ بَابِ (نَصَرَ)؛ كَ: قَامَ يَقُومُ، وَدَعَا يَدْعُو.",
+          "uz": "Ajvafi voviy yoki noqisi voviy bo'lsa, «nasara» bobidan bo'ladi; masalan «qoma–yaqumu» (turdi), «da'o–yad'u» (chaqirdi)."
+        },
+        {
+          "type": "para",
+          "ar": "الْخَامِسُ: أَفْعَالُ بَابِ (كَرُمَ) كُلُّهَا لَازِمَةٌ، وَهِيَ تَدُلُّ عَلَى الْغَرَائِزِ الثَّابِتَةِ وَمَا يَجْرِي مَجْرَاهَا؛ كَ: ظَرُفَ، وَفَضُلَ، وَحَسُنَ، وَقَبُحَ.",
+          "uz": "Beshinchisi: «karuma» bobining fe'llari hammasi lozimdir; ular barqaror tabiiy xislatlarga va shu kabilarga dalolat qiladi; masalan «zarufa» (ziyrak bo'ldi), «fazula» (fazlli bo'ldi), «hasuna» (chiroyli bo'ldi), «qabuha» (xunuk bo'ldi)."
+        },
+        {
+          "type": "para",
+          "ar": "السَّادِسُ: أَفْعَالُ بَابِ فَرِحَ إِنْ كَانَتْ لَازِمَةً تَدُلُّ إِمَّا عَلَى الْفَرَحِ أَوِ الْحُزْنِ؛ كَ: طَرِبَ وَحَزِنَ.",
+          "uz": "Oltinchisi: «fariha» bobining fe'llari lozim bo'lsa, yo quvonch yoki g'amga dalolat qiladi; masalan «tariba» (shodlandi), «hazina» (g'amgin bo'ldi)."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِمَّا عَلَى الاِمْتِلَاءِ أَوِ الْخُلُوِّ؛ كَ: شَبِعَ وَعَطِشَ.",
+          "uz": "Yoki to'lish va bo'shlikka; masalan «shabi'a» (to'ydi), «atisha» (chanqadi)."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِمَّا عَلَى الْحِلْيَةِ أَوِ الْعَيْبِ؛ كَ: غَيِدَ وَعَمِشَ.",
+          "uz": "Yoki go'zallik sifati va aybga; masalan «g'ayida» (nozik bo'ldi), «amisha» (ko'zi xira bo'ldi)."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِمَّا عَلَى اللَّوْنِ؛ كَ: خَضِرَ.",
+          "uz": "Yoki rangga; masalan «xazira» (yashil bo'ldi)."
+        },
+        {
+          "type": "para",
+          "ar": "السَّابِعُ: لَا بُدَّ فِي بَابِ (فَتَحَ) أَنْ تَكُونَ عَيْنُهُ أَوْ لَامُهُ مِنْ أَحْرُفِ الْحَلْقِ، وَهِيَ: الْهَمْزَةُ وَالْحَاءُ وَالْخَاءُ وَالْعَيْنُ وَالْغَيْنُ وَالْهَاءُ.",
+          "uz": "Yettinchisi: «fataha» bobida uning ayni yoki lomi halq harflaridan bo'lishi shart; ular: hamza, ho, xo, ayn, g'ayn va ha."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 8,
+      "page": 285,
+      "titleAr": "الْبَابُ الثَّالِثُ فِي الْجَامِدِ وَالْمُتَصَرِّفِ",
+      "title": "3-bob: jomid va mutasarrif",
+      "rule": {
+        "ar": "يَنْقَسِمُ الْفِعْلُ إِلَى: جَامِدٍ وَمُتَصَرِّفٍ.",
+        "uz": "Fe'l jomid va mutasarrifga bo'linadi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "فَالْجَامِدُ: مَا يُلَازِمُ صُورَةً وَاحِدَةً.",
+          "uz": "Jomid — bir shaklda qoladigan fe'l."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْمُتَصَرِّفُ: مَا لَيْسَ كَذَلِكَ.",
+          "uz": "Mutasarrif — shunday bo'lmagani."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْأَوَّلُ: إِمَّا أَنْ يَكُونَ مُلَازِمًا لِلْمُضِيِّ؛ كَ: (عَسَى)، وَلَيْسَ، أَوْ لِلْأَمْرِيَّةِ؛ كَ: (هَبْ)، وَتَعَلَّمْ.",
+          "uz": "Birinchisi: yo mozilikda qoladi — «aso» va «laysa» kabi; yoki amrlikda qoladi — «hab» (faraz qil) va «ta'allam» (bilib qo'y) kabi."
+        },
+        {
+          "type": "para",
+          "ar": "وَالثَّانِي: إِمَّا أَنْ يَكُونَ تَامَّ التَّصَرُّفِ، وَهُوَ مَا تَأْتِي مِنْهُ الْأَفْعَالُ الثَّلَاثَةُ؛ كَ: نَصَرَ وَدَحْرَجَ.",
+          "uz": "Ikkinchisi: yo to'liq mutasarrif bo'ladi — undan uchala fe'l (mozi, muzori', amr) keladigani; masalan «nasara» va «dahraja»."
+        },
+        {
+          "type": "para",
+          "ar": "أَوْ نَاقِصَهُ، وَهُوَ: مَا لَمْ تَأْتِ مِنْهُ الْأَفْعَالُ الثَّلَاثَةُ؛ كَ: زَالَ، وَبَرِحَ.",
+          "uz": "Yoki noqis mutasarrif — undan uchala fe'l kelmaydigani; masalan «zola» va «bariha»."
+        },
+        {
+          "type": "para",
+          "ar": "وَكَيْفِيَّةُ تَصَرُّفِ الْمُضَارِعِ مِنَ الْمَاضِي: أَنْ يُزَادَ فِي أَوَّلِهِ أَحَدُ أَحْرُفِ الْمُضَارَعَةِ مَضْمُومًا فِي الرُّبَاعِيِّ؛ كَ: (يُدَحْرِجُ)، مَفْتُوحًا فِي غَيْرِهِ؛ كَ: يَكْتُبُ وَيَنْطَلِقُ وَيَسْتَغْفِرُ.",
+          "uz": "Mozidan muzori' yasash usuli: uning boshiga muzoraat harflaridan biri qo'shiladi — to'rt harflida dammali holda («yudahriju» kabi), boshqasida fathali holda («yaktubu», «yantaliqu», «yastag'firu» kabi)."
+        },
+        {
+          "type": "para",
+          "ar": "ثُمَّ إِنْ كَانَ الْمَاضِي ثُلَاثِيًّا سُكِّنَتْ فَاؤُهُ، وَحُرِّكَتْ عَيْنُهُ بِضَمَّةٍ، أَوْ فَتْحَةٍ، أَوْ كَسْرَةٍ حَسَبَ مَا يَقْتَضِيهِ نَصُّ اللُّغَةِ؛ كَ: يَنْصُرُ وَيَفْتَحُ وَيَضْرِبُ.",
+          "uz": "So'ng mozi uch harfli bo'lsa, uning fosi sokin qilinadi va ayni til nassi taqozo qilganiga ko'ra damma, fatha yoki kasra bilan harakatlanadi; masalan «yansuru», «yaftahu», «yazribu»."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِنْ كَانَ غَيْرَ ثُلَاثِيٍّ بَقِيَ عَلَى حَالِهِ إِنْ كَانَ مَبْدُوءًا بِتَاءٍ زَائِدَةٍ؛ كَ: (يَتَشَارَكُ)، وَيَتَعَلَّمُ وَيَتَدَحْرَجُ، وَإِلَّا كُسِرَ مَا قَبْلَ آخِرِهِ؛ كَ: (يُعَظِّمُ) وَيُقَاتِلُ، وَحُذِفَتِ الْهَمْزَةُ الزَّائِدَةُ فِي أَوَّلِهِ إِنْ كَانَتْ؛ كَ: (يُكْرِمُ) وَيَسْتَخْرِجُ.",
+          "uz": "Uch harfli bo'lmasa: boshi ortiqcha «to» bilan bo'lsa, o'z holicha qoladi — «yatashoraku», «yata'allamu», «yatadahraju» kabi; aks holda oxiridan oldingi harfi kasra qilinadi — «yu'azzimu», «yuqotilu» kabi; boshidagi ortiqcha hamza bo'lsa, tushiriladi — «yukrimu», «yastaxriju» kabi."
+        },
+        {
+          "type": "para",
+          "ar": "وَكَيْفِيَّةُ تَصَرُّفِ الْأَمْرِ مِنَ الْمُضَارِعِ: أَنْ يُحْذَفَ حَرْفُ الْمُضَارَعَةِ؛ كَ: (عَظِّمْ) وَتَشَارَكْ وَتَعَلَّمْ.",
+          "uz": "Muzori'dan amr yasash usuli: muzoraat harfini tushirish; masalan «azzim», «tashorak», «ta'allam»."
+        },
+        {
+          "type": "para",
+          "ar": "فَإِنْ كَانَ أَوَّلُ الْبَاقِي سَاكِنًا زِيدَ فِي أَوَّلِهِ هَمْزَةٌ؛ كَ: (انْصُرْ)، وَافْتَحْ، وَاضْرِبْ.",
+          "uz": "Qolganning boshi sokin bo'lsa, boshiga hamza qo'shiladi; masalan «unsur», «iftah», «izrib»."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِنْ كَانَ مَحْذُوفًا مِنْهُ الْهَمْزَةُ رُدَّتْ؛ كَ: أَكْرِمْ، وَانْطَلِقْ، وَاسْتَخْرِجْ.",
+          "uz": "Undan hamza tushirilgan bo'lsa, qaytariladi; masalan «akrim», «intaliq», «istaxrij»."
+        }
+      ],
+      "exercise": []
     }
   ]
 }

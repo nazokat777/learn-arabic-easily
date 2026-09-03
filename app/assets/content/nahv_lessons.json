@@ -17375,6 +17375,69 @@
         }
       ],
       "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 57,
+      "page": 348,
+      "titleAr": "الْمَبْحَثُ الْأَوَّلُ فِي الْفَاعِلِ",
+      "title": "1-mabhas: foil",
+      "rule": {
+        "ar": "هُوَ اسْمٌ تَقَدَّمَهُ فِعْلٌ مَبْنِيٌّ لِلْمَعْلُومِ أَوْ شِبْهُهُ، وَدَلَّ عَلَى مَنْ فَعَلَ أَوْ قَامَ بِهِ الْفِعْلُ؛ نَحْوُ: فَازَ السَّابِقُ فَرَسُهُ.",
+        "uz": "U — undan oldin ma'lum fe'l yoki uning o'xshashi kelgan hamda ishni bajargan yoki ish u bilan qoim bo'lgan zotga dalolat qilgan ismdir; masalan: «Oti oldinda kelgan kishi yutdi»."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَيَكُونُ ظَاهِرًا وَضَمِيرًا، مُذَكَّرًا وَمُؤَنَّثًا، مُفْرَدًا وَمُثَنًّى وَجَمْعًا.",
+          "uz": "U ochiq ism ham, zamir ham; muzakkar ham, muannas ham; birlik, ikkilik va ko'plik ham bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "فَإِذَا كَانَ مُؤَنَّثًا أُنِّثَ فِعْلُهُ بِتَاءٍ سَاكِنَةٍ فِي آخِرِ الْمَاضِي، وَبِتَاءِ الْمُضَارَعَةِ فِي أَوَّلِ الْمُضَارِعِ؛ نَحْوُ: سَافَرَتْ زَيْنَبُ، وَتُسَافِرُ دَعْدُ، وَالشَّجَرَةُ أَثْمَرَتْ أَوْ تُثْمِرُ.",
+          "uz": "Muannas bo'lsa, uning fe'li mozining oxiriga sokin «to» qo'shib, muzori'ning boshiga muzoraat «to»sini qo'yib muannas qilinadi; masalan: «Zaynab safarga chiqdi», «Da'd safarga chiqadi», «Daraxt meva berdi» yoki «meva beradi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَجُوزُ تَرْكُ التَّأْنِيثِ إِنْ كَانَ مُنْفَصِلًا عَنِ الْفِعْلِ، أَوْ ظَاهِرًا مَجَازِيَّ التَّأْنِيثِ، أَوْ جَمْعَ تَكْسِيرٍ مُطْلَقًا؛ نَحْوُ: سَافَرَتْ، أَوْ سَافَرَ الْيَوْمَ دَعْدُ، وَأَثْمَرَتْ أَوْ أَثْمَرَ الشَّجَرَةُ، وَجَاءَتْ أَوْ جَاءَ الْغِلْمَانُ أَوِ الْجَوَارِي.",
+          "uz": "Fe'ldan ajralgan bo'lsa, yoki majoziy muannas ochiq ism bo'lsa, yoxud mutlaq jam' taksir bo'lsa, muannas qilishni tark etish joizdir; masalan: «Bugun Da'd safarga chiqdi» (ikki xil), «Daraxt meva berdi» (ikki xil), «O'g'il bolalar yoki cho'rilar keldi» (ikki xil)."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِذَا كَانَ مُثَنًّى أَوْ جَمْعًا يَكُونُ الْفِعْلُ مَعَهُ كَمَا يَكُونُ مَعَ الْمُفْرَدِ؛ نَحْوُ: اقْتَتَلَتْ طَائِفَتَانِ، وَفَازَ الثَّابِتُونَ.",
+          "uz": "Ikkilik yoki ko'plik bo'lsa, fe'l u bilan xuddi birlik bilan bo'lgani kabi keladi; masalan: «Ikki toifa jang qildi», «Sobit turganlar yutdi»."
+        },
+        {
+          "type": "para",
+          "ar": "(١) كَاسْمِ الْفَاعِلِ وَالصِّفَةِ الْمُشَبَّهَةِ وَالْمَصْدَرِ.",
+          "uz": "(1-izoh) Ya'ni ism foil, sifati mushabbaha va masdar kabi."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 58,
+      "page": 348,
+      "titleAr": "الْمَبْحَثُ الثَّانِي فِي نَائِبِ الْفَاعِلِ",
+      "title": "2-mabhas: noibi foil",
+      "rule": {
+        "ar": "هُوَ اسْمٌ تَقَدَّمَهُ فِعْلٌ مَبْنِيٌّ لِلْمَجْهُولِ أَوْ شِبْهُهُ، وَحَلَّ مَحَلَّ الْفَاعِلِ بَعْدَ حَذْفِهِ؛ نَحْوُ: أُكْرِمَ الرَّجُلُ الْمَحْمُودُ فِعْلُهُ.",
+        "uz": "U — undan oldin majhul fe'l yoki uning o'xshashi kelgan hamda foil tushirilgandan keyin uning o'rniga o'tgan ismdir; masalan: «Ishi maqtalgan kishi hurmatlandi»."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَهُوَ كَالْفَاعِلِ فِي أَحْكَامِهِ السَّابِقَةِ، وَهُوَ فِي الْأَصْلِ مَفْعُولٌ بِهِ.",
+          "uz": "U yuqorida o'tgan hukmlarida foil kabidir; u aslida maf'ul bihdir."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) كَاسْمِ الْمَفْعُولِ وَالْمَنْسُوبِ؛ نَحْوُ: أَقُرَشِيٌّ جَدُّهُ؟",
+          "uz": "(2-izoh) Ya'ni ism maf'ul va mansub kabi; masalan: «Uning bobosi qurayshiymi?»"
+        }
+      ],
+      "exercise": []
     }
   ]
 }

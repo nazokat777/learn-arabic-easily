@@ -13770,6 +13770,160 @@
           "type": "para",
           "ar": "فَإِنْ كَانَ الْأَوَّلُ مُتَحَرِّكًا وَالثَّانِي سَاكِنًا وَجَبَ الْفَكُّ إِنْ كَانَ السُّكُونُ لَازِمًا.",
           "uz": "Birinchisi harakatlangan, ikkinchisi sokin bo'lsa va sukun doimiy bo'lsa, fakk (ajratish) vojib bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "لِاتِّصَالِ الْفِعْلِ بِضَمِيرِ رَفْعٍ مُتَحَرِّكٍ؛ كَ: (مَدَدْتُ، وَيَمْدُدْنَ).",
+          "uz": "Bu — fe'lning harakatlangan raf' zamiriga tutashgani sababidandir; masalan: «madadtu» (cho'zdim), «yamdudna» (ular cho'zadilar)."
+        },
+        {
+          "type": "para",
+          "ar": "وَجَازَ الْأَمْرَانِ إِنْ كَانَ: لِجَزْمِ الْمُضَارِعِ، أَوْ بِنَاءِ الْأَمْرِ؛ كَ: (لَمْ يَمُدَّ وَمُدَّ، وَلَمْ يَمْدُدْ وَامْدُدْ).",
+          "uz": "Sukun muzori'ning jazmi yoki amrning binosi sababli bo'lsa, ikki holat ham joizdir; masalan: «lam yamudda» va «mudda», «lam yamdud» va «imdud»."
+        },
+        {
+          "type": "para",
+          "ar": "وَعَلَى الْإِدْغَامِ يُحَرَّكُ آخِرُ الْفِعْلِ بِالْفَتْحِ لِخِفَّتِهِ أَوِ الْكَسْرِ؛ لِأَنَّهُ الْأَصْلُ فِي التَّخَلُّصِ مِنَ السُّكُونَيْنِ، أَوِ الضَّمِّ لِلْإِتْبَاعِ إِنْ كَانَتِ الْعَيْنُ مَضْمُومَةً، فَيَجُوزُ فِي (مُدَّ) ثَلَاثَةُ أَوْجُهٍ، وَفِي (فَرَّ) وَ(عَصَّ) وَجْهَانِ.",
+          "uz": "Idg'om holida fe'lning oxiri yengilligi uchun fatha bilan, yoxud kasra bilan (chunki ikki sukundan qutulishda asl shu) harakatlanadi; ayni dammali bo'lsa, ergashtirish uchun damma ham bo'ladi. Shunday qilib «mudda»da uch xil, «farra» va «assa»da ikki xil shakl joizdir."
+        },
+        {
+          "type": "para",
+          "ar": "٣ - وَالْمِثَالَ تُحْذَفُ فَاؤُهُ فِي الْمُضَارِعِ وَالْأَمْرِ إِنْ كَانَ وَاوِيًّا مَكْسُورَ عَيْنِ الْمُضَارِعِ؛ كَ: (يَعِدُ وَيَزِنُ)، وَ(عِدْ وَزِنْ).",
+          "uz": "3 — Misol fe'lning fosi muzori' va amrda tushiriladi — agar u voviy bo'lib, muzori'ining ayni kasrali bo'lsa; masalan: «ya'idu» va «yazinu», «id» va «zin»."
+        },
+        {
+          "type": "para",
+          "ar": "وَلَا حَذْفَ فِي نَحْوِ: يَنَعَ يَيْنَعُ.",
+          "uz": "«Yana'a–yayna'u» kabilarda esa tushirish yo'q."
+        },
+        {
+          "type": "para",
+          "ar": "وَلَا فِي نَحْوِ: وَجِلَ يَوْجَلُ.",
+          "uz": "«Vajila–yavjalu» kabilarda ham yo'q."
+        },
+        {
+          "type": "para",
+          "ar": "وَشَذَّ: يَدَعُ، وَيَذَرُ، وَيَسَعُ، وَيَضَعُ، وَيَطَأُ، وَيَقَعُ، وَيَلَغُ، وَيَهَبُ.",
+          "uz": "Qoidadan chetga chiqadi: «yada'u» (tark etadi), «yazaru» (qo'yadi), «yasa'u» (sig'adi), «yaza'u» (qo'yadi), «yata'u» (bosadi), «yaqa'u» (tushadi), «yalag'u» (yalaydi), «yahabu» (beradi)."
+        },
+        {
+          "type": "para",
+          "ar": "٤ - وَالْأَجْوَفَ تُحْذَفُ عَيْنُهُ إِذَا سُكِّنَ آخِرُهُ لِلْجَزْمِ، أَوْ بِنَاءِ الْأَمْرِ؛ كَ: (لَمْ يَقُمْ، وَلَمْ يَبِعْ، وَلَمْ يَخَفْ، وَقُمْ، وَبِعْ، وَخَفْ).",
+          "uz": "4 — Ajvaf fe'lning ayni, oxiri jazm yoki amr binosi uchun sokin qilinganda tushiriladi; masalan: «lam yaqum», «lam yabi'», «lam yaxaf», «qum», «bi'», «xaf»."
+        },
+        {
+          "type": "para",
+          "ar": "وَكَذَلِكَ إِذَا سُكِّنَ لِاتِّصَالِهِ بِضَمِيرِ رَفْعٍ مُتَحَرِّكٍ؛ كَ: (قُمْتُ، وَبِعْنَا، وَخِفْتُمْ، وَيَقُمْنَ، وَيَبِعْنَ، وَخَفْنَ).",
+          "uz": "Harakatlangan raf' zamiriga tutashgani uchun sokin qilinganda ham shunday; masalan: «qumtu», «bi'no», «xiftum», «yaqumna», «yabi'na», «xafna»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُحَرَّكُ أَوَّلُ الْمَاضِي حِينَئِذٍ بِالضَّمَّةِ، أَوِ الْكَسْرَةِ لِلدَّلَالَةِ عَلَى نَفْسِ الْمَحْذُوفِ، كَمَا تَرَى فِي قُمْتُ وَبِعْنَا، وَقَدْ تَكُونُ الْكَسْرَةُ لِلدَّلَالَةِ عَلَى حَرَكَةِ الْمَحْذُوفِ، كَمَا تَرَى فِي خِفْتُمْ.",
+          "uz": "Bunda mozining boshi tushirilgan harfning o'ziga dalolat qilish uchun damma yoki kasra bilan harakatlanadi — «qumtu» va «bi'no»da ko'rganingdek. Ba'zan kasra tushirilganning harakatiga dalolat qilish uchun bo'ladi — «xiftum»da ko'rganingdek."
+        },
+        {
+          "type": "para",
+          "ar": "٥ - وَالنَّاقِصَ تُحْذَفُ لَامُهُ إِذَا اتَّصَلَ بِوَاوِ جَمَاعَةٍ أَوْ يَاءِ مُخَاطَبَةٍ، وَتُحَرَّكُ عَيْنُهُ بِحَرَكَةٍ مُجَانِسَةٍ لِلضَّمِيرِ؛ كَ: (رَضُوا وَتَدْعِينَ)، إِلَّا إِذَا كَانَ الْمَحْذُوفُ أَلِفًا فَتَبْقَى الْفَتْحَةُ عَلَى الْعَيْنِ؛ كَ: (سَعَوْا، وَتَخْشَيْنَ).",
+          "uz": "5 — Noqis fe'lning lomi jamoa voviga yoki muxotaba yosiga tutashganda tushiriladi va uning ayni zamirga mos harakat bilan harakatlanadi; masalan: «razu», «tad'ina». Faqat tushirilgan harf alif bo'lsa, ayn ustida fatha qoladi; masalan: «sa'av», «taxshayna»."
+        },
+        {
+          "type": "para",
+          "ar": "وَتُحْذَفُ لَامُهُ أَيْضًا إِنْ كَانَتْ أَلِفًا، وَاتَّصَلَتْ بِتَاءِ التَّأْنِيثِ؛ كَ: (رَمَتْ) وَرَمَتَا.",
+          "uz": "Uning lomi alif bo'lib, ta'nis «to»siga tutashsa ham tushiriladi; masalan: «ramat», «ramato»."
+        },
+        {
+          "type": "para",
+          "ar": "فَإِنِ اتَّصَلَتِ الْأَلِفُ بِغَيْرِ الْوَاوِ وَالْيَاءِ مِنَ الضَّمَائِرِ الْبَارِزَةِ لَمْ تُحْذَفْ، بَلْ تُرَدُّ لِأَصْلِهَا إِنْ كَانَتْ ثَالِثَةً؛ كَ: (غَزَوْتُ، وَرَمَيْنَا، وَغَزَوَا، وَرَمَيَا).",
+          "uz": "Alif boriz zamirlardan vov va yodan boshqasiga tutashsa, tushirilmaydi; balki uchinchi o'rinda bo'lsa, asliga qaytariladi; masalan: «g'azavtu», «ramayno», «g'azavo», «ramayo»."
+        },
+        {
+          "type": "para",
+          "ar": "وَتُقْلَبُ يَاءً إِنْ كَانَتْ رَابِعَةً فَصَاعِدًا؛ كَ: (أَعْزَيْتُ، وَاهْتَدَيَا، وَالنِّسَاءُ يُسْتَدْعَيْنَ).",
+          "uz": "To'rtinchi yoki undan keyingi o'rinda bo'lsa, «yo»ga aylantiriladi; masalan: «a'zaytu», «ihtadayo», «ayollar chaqiriladilar»."
+        },
+        {
+          "type": "para",
+          "ar": "٦ - وَاللَّفِيفَ الْمَفْرُوقَ: يُعَامَلُ مُعَامَلَةَ الْمِثَالِ وَالنَّاقِصِ.",
+          "uz": "6 — Lafifi mafruqqa misol va noqis kabi muomala qilinadi."
+        },
+        {
+          "type": "para",
+          "ar": "٧ - وَاللَّفِيفَ الْمَقْرُونُ: يُعَامَلُ مُعَامَلَةَ النَّاقِصِ فَقَطْ.",
+          "uz": "7 — Lafifi maqrunga faqat noqis kabi muomala qilinadi."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 11,
+      "page": 291,
+      "titleAr": "الْبَابُ الْخَامِسُ فِي التَّامِّ وَالنَّاقِصِ",
+      "title": "5-bob: tom va noqis",
+      "rule": {
+        "ar": "يَنْقَسِمُ الْفِعْلُ إِلَى تَامٍّ وَنَاقِصٍ.",
+        "uz": "Fe'l tom va noqisga bo'linadi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "فَالتَّامُّ: مَا تَتِمُّ بِهِ وَبِمَرْفُوعِهِ جُمْلَةٌ؛ كَ: قَامَ صَالِحٌ، وَقَرَأْتُ الْكِتَابَ.",
+          "uz": "Tom — u va uning marfu'i bilan gap to'liq bo'ladigan fe'l; masalan: «Solih turdi», «Kitobni o'qidim»."
+        },
+        {
+          "type": "para",
+          "ar": "وَالنَّاقِصُ: مَا لَا تَتِمُّ الْجُمْلَةُ مَعَهُ إِلَّا بِمَرْفُوعٍ وَمَنْصُوبٍ؛ كَ: (كَانَ اللَّهُ غَفُورًا رَحِيمًا)، وَيُسَمَّى الْمَرْفُوعُ اسْمًا لَهُ، وَالْمَنْصُوبُ خَبَرًا.",
+          "uz": "Noqis — u bilan gap faqat marfu' va mansub bilangina to'liq bo'ladigan fe'l; masalan: «Alloh Mag'firatli va Rahmli edi». Marfu' uning ismi, mansub esa xabari deb ataladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْأَفْعَالُ النَّاقِصَةُ: كَانَ وَأَخَوَاتُهَا؛ وَهِيَ: «أَصْبَحَ، وَأَضْحَى، وَظَلَّ، وَأَمْسَى، وَبَاتَ» وَتُفِيدُ التَّوْقِيتَ بِزَمَنٍ مَخْصُوصٍ؛ نَحْوُ: أَصْبَحَ الْبَرْدُ شَدِيدًا.",
+          "uz": "Noqis fe'llar — «kona» va uning sheriklari: «asbaha», «azho», «zolla», «amso», «bota»; ular ma'lum vaqt bilan belgilashni bildiradi; masalan: «Tongda sovuq kuchli bo'ldi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ«دَامَ» وَتُفِيدُ التَّوْقِيتَ بِحَالَةٍ مَخْصُوصَةٍ؛ نَحْوُ: ﴿وَأَوْصَانِي بِالصَّلَاةِ وَالزَّكَاةِ مَا دُمْتُ حَيًّا﴾.",
+          "uz": "«Doma» — ma'lum bir holat bilan belgilashni bildiradi; masalan: «Tirik ekanman, meni namoz va zakotga buyurdi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ«صَارَ» وَتُفِيدُ التَّحَوُّلَ؛ نَحْوُ: صَارَ الْمَاءُ جَلِيدًا.",
+          "uz": "«Sora» — bir holdan boshqasiga aylanishni bildiradi; masalan: «Suv muzga aylandi»."
+        },
+        {
+          "type": "para",
+          "ar": "«وَبَرِحَ، وَانْفَكَّ، وَزَالَ، وَفَتِئَ» وَتُفِيدُ الاِسْتِمْرَارَ؛ نَحْوُ: مَا بَرِحَتِ الرِّيَاحُ عَاصِفَةً.",
+          "uz": "«Bariha», «infakka», «zola», «fati'a» — davomiylikni bildiradi; masalan: «Shamollar to'xtovsiz kuchli esib turdi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ«لَيْسَ» وَتُفِيدُ النَّفْيَ؛ نَحْوُ: لَيْسَتِ السَّمَاءُ مُصْحِيَةً.",
+          "uz": "«Laysa» — inkorni bildiradi; masalan: «Osmon ochiq emas»."
+        },
+        {
+          "type": "para",
+          "ar": "«وَكَادَ، وَكَرَبَ، وَأَوْشَكَ» وَتُفِيدُ الْمُقَارَبَةَ؛ نَحْوُ: كَادَ الشِّتَاءُ يَنْقَضِي.",
+          "uz": "«Koda», «karaba», «avshaka» — yaqinlashishni bildiradi; masalan: «Qish tugay deb qoldi»."
+        },
+        {
+          "type": "para",
+          "ar": "(١) التَّوْقِيتُ فِي أَصْبَحَ بِالصُّبْحِ، وَفِي أَضْحَى بِالضُّحَى، وَفِي ظَلَّ بِالنَّهَارِ، وَفِي أَمْسَى بِالْمَسَاءِ، وَفِي بَاتَ بِاللَّيْلِ، هَذَا أَصْلُ مَعْنَاهَا، وَقَدْ تَخْرُجُ عَنْهُ إِلَى مَعْنَى «صَارَ»؛ نَحْوُ: ﴿فَأَصْبَحْتُمْ بِنِعْمَتِهِ إِخْوَانًا﴾، ﴿فَظَلَّتْ أَعْنَاقُهُمْ لَهَا خَاضِعِينَ﴾.",
+          "uz": "(1-izoh) «Asbaha»da vaqt belgilash tong bilan, «azho»da chosht bilan, «zolla»da kunduz bilan, «amso»da kech bilan, «bota»da tun bilandir. Bu ularning asl ma'nosi; ba'zan undan chiqib «sora» ma'nosiga o'tadi; masalan: «Uning ne'mati bilan birodar bo'lib qoldingiz», «Ularning bo'yinlari unga egilib qoldi»."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) وَقَدْ جَاءَ بِمَعْنَى (صَارَ) عَشْرَةُ أَفْعَالٍ نَظَمَهَا بَعْضُهُمْ، فَقَالَ:",
+          "uz": "(2-izoh) «Sora» ma'nosida o'nta fe'l kelgan; ba'zilar ularni nazm qilib shunday deganlar:"
+        },
+        {
+          "type": "para",
+          "ar": "بِمَعْنَى صَارَ فِي الْأَفْعَالِ عَشْرُ * تَحَوَّلَ آضَ عَادَ ارْجِعْ لِتَغْنَمْ",
+          "uz": "«Sora» ma'nosida fe'llarda o'nta bor: tahavvala, oza, ada — foyda olish uchun qayt."
+        },
+        {
+          "type": "para",
+          "ar": "وَرَاحَ غَدَا اسْتَحَالَ ارْتَدَّ فَاقْعُدْ * وَحَارَ فَهَاكَهَا وَاللَّهُ أَعْلَمُ",
+          "uz": "Roha, g'ado, istahola, irtadda — endi o'tir; va hora — mana ular; Alloh biluvchiroqdir."
         }
       ],
       "exercise": []

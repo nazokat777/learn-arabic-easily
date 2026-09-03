@@ -14270,6 +14270,159 @@
         }
       ],
       "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 13,
+      "page": 298,
+      "titleAr": "الْبَابُ السَّابِعُ فِي الْمَبْنِيِّ لِلْمَعْلُومِ وَالْمَبْنِيِّ لِلْمَجْهُولِ",
+      "title": "7-bob: ma'lum va majhul fe'l",
+      "rule": {
+        "ar": "يَنْقَسِمُ الْفِعْلُ إِلَى مَبْنِيٍّ لِلْمَعْلُومِ، وَمَبْنِيٍّ لِلْمَجْهُولِ.",
+        "uz": "Fe'l ma'lum va majhulga bo'linadi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "فَالْأَوَّلُ: مَا ذُكِرَ مَعَهُ فَاعِلُهُ؛ كَ: (قَطَعَ مَحْمُودٌ الْغُصْنَ).",
+          "uz": "Birinchisi — foili birga zikr qilingani; masalan: «Mahmud shoxni kesdi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَالثَّانِي: مَا حُذِفَ فَاعِلُهُ، وَأُنِيبَ عَنْهُ غَيْرُهُ؛ كَ: قُطِعَ الْغُصْنُ.",
+          "uz": "Ikkinchisi — foili tushirilib, o'rniga boshqasi qo'yilgani; masalan: «Shox kesildi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَجِبُ عِنْدَ الْبِنَاءِ لِلْمَجْهُولِ تَغْيِيرُ صُورَةِ الْفِعْلِ؛ فَإِنْ كَانَ مَاضِيًا كُسِرَ مَا قَبْلَ آخِرِهِ وَضُمَّ كُلُّ مُتَحَرِّكٍ قَبْلَهُ؛ كَ: حُفِظَ الْكِتَابُ، وَتُعُلِّمَ الْحِسَابُ، وَاسْتُخْرِجَ الْمَعْدِنُ.",
+          "uz": "Majhulga aylantirishda fe'lning shaklini o'zgartirish vojibdir. Mozi bo'lsa, oxiridan oldingi harf kasra qilinadi va undan oldingi har bir harakatlangan harf damma qilinadi; masalan: «Kitob yodlandi», «Hisob o'rganildi», «Ma'dan chiqarildi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِنْ كَانَ مُضَارِعًا ضُمَّ أَوَّلُهُ، وَفُتِحَ مَا قَبْلَ آخِرِهِ؛ كَ: (يُقْطَعُ) الْغُصْنُ، وَيُتَعَلَّمُ الْحِسَابُ، وَيُسْتَخْرَجُ الْمَعْدِنُ.",
+          "uz": "Muzori' bo'lsa, boshi damma, oxiridan oldingi harfi fatha qilinadi; masalan: «Shox kesiladi», «Hisob o'rganiladi», «Ma'dan chiqariladi»."
+        },
+        {
+          "type": "para",
+          "ar": "فَإِنْ كَانَ مَا قَبْلَ آخِرِ الْمَاضِي أَلِفًا؛ كَ: (قَالَ)، وَاخْتَارَ، قُلِبَتْ يَاءً، وَكُسِرَ مَا قَبْلَهَا، فَتَقُولُ: قِيلَ وَاخْتِيرَ.",
+          "uz": "Mozining oxiridan oldingi harfi alif bo'lsa — «qola», «ixtora» kabi — u «yo»ga aylantiriladi va undan oldingisi kasra qilinadi; shunday deysan: «qila», «ixtira»."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِنْ كَانَ مَا قَبْلَ الْمُضَارِعِ مَدًّا؛ كَ: (يَقُولُ)، وَيَبِيعُ: قُلِبَ أَلِفًا؛ كَ: يُقَالُ وَيُبَاعُ.",
+          "uz": "Muzori'ning oxiridan oldingisi mad harfi bo'lsa — «yaqulu», «yabi'u» kabi — u alifga aylantiriladi; masalan: «yuqolu», «yubo'u»."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْفِعْلُ اللَّازِمُ لَا يُبْنَى لِلْمَجْهُولِ إِلَّا إِذَا كَانَ نَائِبُ الْفَاعِلِ مَصْدَرًا، أَوْ ظَرْفًا، أَوْ جَارًّا وَمَجْرُورًا؛ كَ: احْتُفِلَ احْتِفَالٌ عَظِيمٌ، وَذُهِبَ أَمَامَ الْأَمِيرِ، وَفُرِحَ بِهِ.",
+          "uz": "Lozim fe'l majhulga aylantirilmaydi — faqat noibi foil masdar, zarf yoki jorr-majrur bo'lgandagina; masalan: «Katta tantana o'tkazildi», «Amirning oldiga borildi», «Undan xursand bo'lindi»."
+        },
+        {
+          "type": "para",
+          "ar": "(١) فَائِدَةٌ: وَرَدَ فِي اللُّغَةِ أَفْعَالٌ مُلَازِمَةٌ لِلْبِنَاءِ لِلْمَجْهُولِ، مِنْهَا: جُنَّ فُلَانٌ، وَحُمَّ زَيْدٌ، وَفُلِجَ، وَأُغْمِيَ عَلَى زَيْدٍ، وَامْتُقِعَ، أَوِ: انْتُقِعَ لَوْنُهُ؛ أَيْ: تَغَيَّرَ، وَثُلِجَ قَلْبُهُ؛ أَيْ: بَلُدَ.",
+          "uz": "(1-izoh — foyda) Tilda doim majhul shaklda keladigan fe'llar bor; jumladan: «falonchi jinni bo'ldi», «Zayd isitmaladi», «falaj bo'ldi», «Zayd hushidan ketdi», «rangi o'zgardi», «qalbi to'nglashdi» — ya'ni o'tmas bo'ldi."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 14,
+      "page": 299,
+      "titleAr": "الْبَابُ الثَّامِنُ فِي الْمُؤَكَّدِ وَغَيْرِهِ",
+      "title": "8-bob: ta'kidlangan va ta'kidlanmagan fe'l",
+      "rule": {
+        "ar": "يَنْقَسِمُ الْفِعْلُ إِلَى مُؤَكَّدٍ، وَغَيْرِ مُؤَكَّدٍ.",
+        "uz": "Fe'l ta'kidlangan va ta'kidlanmaganga bo'linadi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "فَالْمُؤَكَّدُ: مَا لَحِقَتْهُ نُونُ التَّوْكِيدِ، ثَقِيلَةً كَانَتْ أَوْ خَفِيفَةً؛ نَحْوُ: ﴿لَيُسْجَنَنَّ وَلَيَكُونًا مِنَ الصَّاغِرِينَ﴾.",
+          "uz": "Ta'kidlangan — unga og'ir yoki yengil ta'kid nuni qo'shilgani; masalan: «Albatta u zindonga tashlanadi va xor bo'lganlardan bo'ladi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَغَيْرُ الْمُؤَكَّدِ: مَا لَمْ تَلْحَقْهُ؛ نَحْوُ: يُسْجَنُ وَيَكُونُ.",
+          "uz": "Ta'kidlanmagan — unga qo'shilmagani; masalan: «yusjanu», «yakunu»."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْمَاضِي: لَا يُؤَكَّدُ مُطْلَقًا.",
+          "uz": "Mozi mutlaq ta'kidlanmaydi."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْأَمْرُ: يَجُوزُ تَوْكِيدُهُ مُطْلَقًا.",
+          "uz": "Amrni ta'kidlash mutlaq joizdir."
+        },
+        {
+          "type": "para",
+          "ar": "وَأَمَّا الْمُضَارِعُ فَيَجِبُ تَوْكِيدُهُ إِذَا كَانَ جَوَابًا لِقَسَمٍ غَيْرَ مَفْصُولٍ مِنْ لَامِهِ بِفَاصِلٍ، وَكَانَ مُثْبَتًا مُسْتَقْبَلًا؛ نَحْوُ: ﴿وَتَاللَّهِ لَأَكِيدَنَّ أَصْنَامَكُمْ﴾.",
+          "uz": "Muzori'ga kelsak: u qasamning javobi bo'lib, lomidan ajratuvchi bilan ajralmagan, tasdiq va kelasi zamon ma'nosida bo'lsa, ta'kidlash vojibdir; masalan: «Allohga qasam, albatta butlaringizga hiyla qilaman»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَمْتَنِعُ تَأْكِيدُهُ إِذَا كَانَ جَوَابًا لِقَسَمٍ، وَلَمْ تَتَوَفَّرْ فِيهِ الشُّرُوطُ الْمَذْكُورَةُ؛ نَحْوُ: ﴿وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَى﴾. لَأَمْكُثُ هُنَا، تَاللَّهِ لَا يَذْهَبُ الْعُرْفُ.",
+          "uz": "Qasam javobi bo'lib, sanalgan shartlar to'liq bo'lmasa, ta'kidlash man qilinadi; masalan: «Robbing senga beradi va sen rozi bo'lasan», «Men shu yerda qolaman», «Allohga qasam, yaxshilik zoye ketmaydi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَجُوزُ الْأَمْرَانِ فِي غَيْرِ ذَلِكَ؛ نَحْوُ: لَيَصْبِرَنَّ عَلَى الْأَذَى. ﴿وَلَا تَحْسَبَنَّ اللَّهَ غَافِلًا عَمَّا يَعْمَلُ الظَّالِمُونَ﴾. هَلَّا تَنْصُرَنَّ أَخَاكَ، أَوْ لَيَصْبِرُ. وَلَا تَحْسِبْ. وَهَلَّا تَنْصُرُ. إِلَّا أَنَّ التَّوْكِيدَ فِي الطَّلَبِ أَكْثَرُ.",
+          "uz": "Bulardan boshqa o'rinlarda ikki holat ham joizdir; masalan: «Ozorga albatta sabr qiladi», «Zolimlar qilayotgan ishdan Allohni g'ofil deb o'ylama», «Birodaringga yordam bersang-chi» — ta'kidsiz shakllari ham. Faqat talabda ta'kidlash ko'proq uchraydi."
+        },
+        {
+          "type": "para",
+          "ar": "كَيْفَ يُؤَكَّدُ الْفِعْلُ؟ يَجِبُ أَنْ يُحْذَفَ مِنَ الْفِعْلِ الْمُؤَكَّدِ عَلَامَةُ الرَّفْعِ، حَرَكَةً كَانَتْ أَوْ حَرْفًا.",
+          "uz": "Fe'l qanday ta'kidlanadi? Ta'kidlanayotgan fe'ldan raf' alomatini — harakat bo'ladimi, harf bo'ladimi — tushirish vojibdir."
+        },
+        {
+          "type": "para",
+          "ar": "١ - ثُمَّ إِنْ كَانَ مُسْنَدًا لِلاِسْمِ الظَّاهِرِ أَوْ ضَمِيرِ الْوَاحِدِ: فُتِحَ مَا قَبْلَ النُّونِ، سَوَاءٌ كَانَ الْفِعْلُ صَحِيحًا أَوْ نَاقِصًا، فَتَقُولُ: لَيَنْصُرَنَّ عَلِيٌّ، وَلَيَدْعُوَنَّ.",
+          "uz": "1 — So'ng u ochiq ismga yoki birlik zamiriga bog'langan bo'lsa, nundan oldingi harf fatha qilinadi — fe'l sahih bo'ladimi, noqis bo'ladimi; shunday deysan: «Ali albatta yordam beradi», «albatta chaqiradi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَلَيَرْمِيَنَّ، وَلَيَسْعَيَنَّ.",
+          "uz": "«Layarmiyanna» (albatta otadi), «layas'ayanna» (albatta harakat qiladi)."
+        },
+        {
+          "type": "para",
+          "ar": "٢ - وَإِنْ كَانَ مُسْنَدًا لِأَلِفِ الاِثْنَيْنِ: كُسِرَتْ نُونُ التَّوْكِيدِ بَعْدَ الْأَلِفِ، فَتَقُولُ: لَيَنْصُرَانِّ، وَلَيَدْعُوَانِّ، وَلَيَرْمِيَانِّ وَلَيَسْعَيَانِّ.",
+          "uz": "2 — Ikkilik alifiga bog'langan bo'lsa, alifdan keyingi ta'kid nuni kasra qilinadi; shunday deysan: «layansuronni», «layad'uvonni», «layarmiyonni», «layas'ayonni»."
+        },
+        {
+          "type": "para",
+          "ar": "٣ - وَإِنْ كَانَ مُسْنَدًا لِوَاوِ الْجَمَاعَةِ: ضُمَّ مَا قَبْلَ النُّونِ، وَحُذِفَ مِنَ النَّاقِصِ آخِرُهُ مُطْلَقًا، وَحُذِفَتْ أَيْضًا وَاوُ الْجَمَاعَةِ إِلَّا فِي الْمُعْتَلِّ بِالْأَلِفِ، فَتَبْقَى مُحَرَّكَةً بِحَرَكَةٍ مُجَانِسَةٍ لَهَا، فَتَقُولُ: لَيَنْصُرُنَّ، وَلَيَدْعُنَّ، وَلَيَرْمُنَّ، وَلَيَسْعَوُنَّ.",
+          "uz": "3 — Jamoa voviga bog'langan bo'lsa, nundan oldingi harf damma qilinadi; noqisning oxiri mutlaq tushiriladi; jamoa vovi ham tushiriladi — faqat alif bilan illatlida qoladi va unga mos harakat bilan harakatlanadi. Shunday deysan: «layansurunna», «layad'unna», «layarmunna», «layas'avunna»."
+        },
+        {
+          "type": "para",
+          "ar": "٤ - وَإِنْ كَانَ مُسْنَدًا لِيَاءِ الْمُخَاطَبَةِ: كُسِرَ مَا قَبْلَ النُّونِ، وَحُذِفَ مِنَ النَّاقِصِ آخِرُهُ مُطْلَقًا، وَحُذِفَتْ أَيْضًا يَاءُ الْمُخَاطَبَةِ إِلَّا فِي الْمُعْتَلِّ بِالْأَلِفِ، فَتَبْقَى مُحَرَّكَةً بِحَرَكَةٍ مُجَانِسَةٍ، فَتَقُولُ: لَتَنْصُرِنَّ، وَلَتَدْعِنَّ، وَلَتَرْمِنَّ، وَلَتَسْعَيِنَّ.",
+          "uz": "4 — Muxotaba yosiga bog'langan bo'lsa, nundan oldingi harf kasra qilinadi; noqisning oxiri mutlaq tushiriladi; muxotaba yosi ham tushiriladi — faqat alif bilan illatlida qoladi va mos harakat bilan harakatlanadi. Shunday deysan: «latansurinna», «latad'inna», «latarminna», «latas'ayinna»."
+        },
+        {
+          "type": "para",
+          "ar": "٥ - وَإِنْ كَانَ مُسْنَدًا لِنُونِ النِّسْوَةِ: زِيدَتْ أَلِفٌ بَيْنَ النُّونَيْنِ، وَكُسِرَتْ نُونُ التَّوْكِيدِ، فَتَقُولُ: لَيَنْصُرْنَانِّ وَلَيَدْعُونَانِّ وَلَيَرْمِينَانِّ وَلَيَسْعَيْنَانِّ.",
+          "uz": "5 — Ayollar nuniga bog'langan bo'lsa, ikki nun orasiga alif qo'shiladi va ta'kid nuni kasra qilinadi; shunday deysan: «layansurnonni», «layad'unonni», «layarminonni», «layas'aynonni»."
+        },
+        {
+          "type": "para",
+          "ar": "وَكَالْمُضَارِعِ فِي ذَلِكَ الْأَمْرُ، فَتَقُولُ: انْصُرَنَّ يَا عَلِيُّ، وَادْعُوَنَّ، وَارْمِيَنَّ وَاسْعَيَنَّ، وَهَلُمَّ جَرًّا.",
+          "uz": "Amr ham bunda muzori' kabidir; shunday deysan: «Ey Ali, albatta yordam ber», «albatta chaqir», «albatta ot», «albatta harakat qil» — va shu tariqa."
+        },
+        {
+          "type": "para",
+          "ar": "وَكُلُّ مَوْضِعٍ وَقَعَتْ فِيهِ نُونُ التَّوْكِيدِ الثَّقِيلَةُ جَازَ فِيهِ وُقُوعُ الْخَفِيفَةِ، إِلَّا بَعْدَ الْأَلِفِ، فَلَا تَقَعُ إِلَّا الثَّقِيلَةُ.",
+          "uz": "Og'ir ta'kid nuni kelgan har bir o'rinda yengilining kelishi ham joizdir — faqat alifdan keyin bundan mustasno; u yerda faqat og'iri keladi."
+        },
+        {
+          "type": "para",
+          "ar": "(١) حُذِفَتْ نُونُ الرَّفْعِ فِي غَيْرِ الْمَجْزُومِ لِتَوَالِي الْأَمْثَالِ.",
+          "uz": "(1-izoh) Jazm qilinmagan holda raf' nuni bir xil harflarning ketma-ket kelishi sababli tushirilgan."
+        }
+      ],
+      "exercise": []
     }
   ]
 }

@@ -13,7 +13,10 @@ from concurrent.futures import ThreadPoolExecutor
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
-SETS = (("vocab", "vocab"), ("sentences", "sentence"), ("words", "word"))
+# Diqqat: nahv darslarining kliplari "extra" papkasida — u yerni tashlab
+# ketsangiz, audit 0 jim klip deb yolg'on "toza" natija beradi.
+SETS = (("vocab", "vocab"), ("sentences", "sentence"), ("words", "word"),
+        ("extra", "extra"), ("alifbo", "alifbo"))
 RX = re.compile(r"max_volume:\s*(-?[\d.]+) dB")
 QUIET_DB = -30.0
 

@@ -17245,6 +17245,136 @@
         }
       ],
       "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 53,
+      "page": 346,
+      "titleAr": "الْبَابُ الثَّامِنُ فِي الْمَبْنِيِّ وَالْمُعْرَبِ",
+      "title": "8-bob: mabniy va mu'rab (ism)",
+      "rule": {
+        "ar": "الاِسْمُ عِنْدَمَا يَدْخُلُ فِي جُمَلٍ مُفِيدَةٍ لَا يَكُونُ عَلَى حَالَةٍ وَاحِدَةٍ فِي جَمِيعِ أَنْوَاعِهِ، بَلْ مِنْهُ مَا يَكُونُ مَبْنِيًّا، وَمِنْهُ مَا يَكُونُ مُعْرَبًا، كَمَا فِي الْفِعْلِ.",
+        "uz": "Ism foydali gaplarga kirganda, barcha turlarida bir xil holatda bo'lmaydi; balki uning bir qismi mabniy, bir qismi mu'rab bo'ladi — xuddi fe'ldagi kabi."
+      },
+      "blocks": [],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 54,
+      "page": 346,
+      "titleAr": "فَصْلٌ فِي الْمَبْنِيِّ",
+      "title": "Mabniy haqida fasl",
+      "rule": {
+        "ar": "الْمَبْنِيُّ مِنَ الْأَسْمَاءِ هُوَ: الضَّمَائِرُ، وَالْإِشَارَاتُ، وَالْمَوْصُولَاتُ، وَأَسْمَاءُ الْأَفْعَالِ وَالْأَصْوَاتِ، وَالشَّرْطِ، وَالاِسْتِفْهَامِ، وَبَعْضُ الظُّرُوفِ.",
+        "uz": "Ismlardan mabniy bo'lgani: zamirlar, ishoralar, mavsullar, ism fe'llar va ovoz ismlari, shart va so'roq ismlari hamda ba'zi zarflardir."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَأَسْمَاءُ الاِسْتِفْهَامِ هِيَ: مَنْ، وَمَا، وَمَتَى، وَأَيَّانَ، وَأَيْنَ، وَكَيْفَ، وَأَنَّى، وَكَمْ.",
+          "uz": "So'roq ismlari: «man», «mo», «mato», «ayyona», «ayna», «kayfa», «anno», «kam»."
+        },
+        {
+          "type": "para",
+          "ar": "وَبَعْضُ الظُّرُوفِ؛ مِثْلُ: إِذْ، وَإِذَا، وَالْآنَ، وَحَيْثُ، وَأَمْسِ. وَكُلُّ ذَلِكَ يُبْنَى عَلَى مَا سُمِعَ عَلَيْهِ.",
+          "uz": "Ba'zi zarflar; masalan: «iz», «izo», «al-on», «haysu», «amsi». Bularning hammasi eshitilgan holicha mabniy bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَطَّرِدُ الْفَتْحُ فِيمَا رُكِّبَ مِنَ الْأَعْدَادِ وَالظُّرُوفِ وَالْأَحْوَالِ؛ نَحْوُ: أَرَى خَمْسَةَ عَشَرَ رَجُلًا يَتَرَدَّدُونَ صَبَاحَ مَسَاءَ عَلَيَّ، جَارِي بَيْتَ بَيْتَ.",
+          "uz": "Sonlardan, zarflardan va hollardan tarkib topganlarida fatha doimiy qoidadir; masalan: «O'n besh kishining ertayu kech oldimga qatnayotganini ko'ryapman», «Qo'shnim uyma-uy yonimda»."
+        },
+        {
+          "type": "para",
+          "ar": "وَالضَّمُّ فِيمَا قُطِعَ عَنِ الْإِضَافَةِ لَفْظًا مِنَ الْمُبْهَمَاتِ؛ كَ: قَبْلُ، وَبَعْدُ، وَحَسْبُ، وَأَوَّلُ، وَأَسْمَاءِ الْجِهَاتِ؛ نَحْوُ: ﴿لِلَّهِ الْأَمْرُ مِنْ قَبْلُ وَمِنْ بَعْدُ﴾.",
+          "uz": "Mubhamlardan lafzan izofadan uzilganlarida damma doimiy qoidadir; masalan: «qablu», «ba'du», «hasbu», «avvalu» va tomon ismlari; masalan: «Undan oldin ham, keyin ham ish Allohnikidir»."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْكَسْرُ فِيمَا خُتِمَ بِـ(وَيْهِ)؛ كَ: سِيبَوَيْهِ، وَوَزْنِ فَعَالِ عَلَمًا لِأُنْثَى؛ كَ: حَذَامِ وَرَقَاشِ.",
+          "uz": "«Vayh» bilan tugaganlarida kasra bo'ladi — «Sibavayh» kabi; ayol atoqli ismi bo'lgan «fa'oli» vaznida ham — «Hazomi» va «Raqoshi» kabi."
+        },
+        {
+          "type": "para",
+          "ar": "أَوْ سَبًّا لَهَا؛ كَ: يَا خَبَاثِ، وَيَا كَذَابِ.",
+          "uz": "Yoki unga so'kish bo'lganida; masalan: «Ey yaramas!», «Ey yolg'onchi!»"
+        },
+        {
+          "type": "para",
+          "ar": "أَوِ اسْمَ فِعْلٍ؛ كَ: نَزَالِ وَقَتَالِ.",
+          "uz": "Yoki ism fe'l bo'lganida; masalan: «nazoli» (tush!), «qatoli» (jang qil!)."
+        },
+        {
+          "type": "para",
+          "ar": "(١) يُسْتَثْنَى مِنَ الْأَعْدَادِ الْمُرَكَّبَةِ: اثْنَا عَشَرَ وَاثْنَتَا عَشْرَةَ؛ فَإِنَّهَا تُعْرَبُ إِعْرَابَ الْمُثَنَّى.",
+          "uz": "(1-izoh) Tarkibli sonlardan «isno ashara» va «isnato ashrata» mustasno; ular musanno i'robi bilan i'rob qilinadi."
+        },
+        {
+          "type": "para",
+          "ar": "= وَمِنْ أَسْمَاءِ الشَّرْطِ وَالاِسْتِفْهَامِ وَالْمَوْصُولَاتِ: (أَيٌّ)؛ فَإِنَّهَا تُعْرَبُ بِالْحَرَكَاتِ، وَيَجُوزُ فِي (أَيٍّ) الْمَوْصُولَةِ الْبِنَاءُ عَلَى الضَّمِّ إِذَا أُضِيفَتْ وَحُذِفَ صَدْرُ صِلَتِهَا؛ نَحْوُ: فَسَلِّمْ عَلَى أَيُّهُمْ أَفْضَلُ.",
+          "uz": "= Shart, so'roq va mavsul ismlaridan «ayyun» ham bor; u harakatlar bilan i'rob qilinadi. Mavsul «ayy»da izofa qilinib, silasining boshi tushirilsa, damma uzra mabniy bo'lishi joizdir; masalan: «Ularning eng afzaliga salom ber»."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 55,
+      "page": 347,
+      "titleAr": "فَصْلٌ فِي الْمُعْرَبِ",
+      "title": "Mu'rab haqida fasl",
+      "rule": {
+        "ar": "كُلُّ الْأَسْمَاءِ مُعْرَبَةٌ إِلَّا أَلْفَاظًا مَحْصُورَةً سَبَقَ الْكَلَامُ فِيهَا، وَأَنْوَاعُ إِعْرَابِهَا ثَلَاثَةٌ: رَفْعٌ، وَنَصْبٌ، وَجَرٌّ، وَلِكُلِّ نَوْعٍ مَوَاضِعُ مُعَيَّنَةٌ لَا يَصِحُّ وُقُوعُهُ فِي غَيْرِهَا.",
+        "uz": "Ismlarning hammasi mu'rabdir — faqat yuqorida so'z o'tgan sanoqli lafzlar bundan mustasno. Uning i'rob turlari uchtadir: raf', nasb va jarr. Har bir turning aniq o'rinlari bor; ulardan boshqasida kelishi to'g'ri emas."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَيَنْحَصِرُ الْكَلَامُ عَلَى ذَلِكَ فِي ثَلَاثَةِ مَطَالِبَ.",
+          "uz": "Bu haqdagi so'z uchta matlabga jamlanadi."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 56,
+      "page": 347,
+      "titleAr": "الْمَطْلَبُ الْأَوَّلُ فِي رَفْعِ الاِسْمِ وَمَوَاضِعِهِ",
+      "title": "1-matlab: ismning raf'i va o'rinlari",
+      "rule": {
+        "ar": "الْأَصْلُ فِي رَفْعِ الاِسْمِ أَنْ يَكُونَ بِضَمَّةٍ، وَيَنُوبُ عَنْهَا أَلِفٌ فِي الْمُثَنَّى، وَوَاوٌ فِي جَمْعِ الْمُذَكَّرِ السَّالِمِ وَالْأَسْمَاءِ الْخَمْسَةِ.",
+        "uz": "Ismni raf' qilishda asl — uning damma bilan bo'lishidir; uning o'rnini musannoda alif, jam' muzakkar solim va besh ismda vov bosadi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَهِيَ: أَبٌ، وَأَخٌ، وَحَمٌ، وَفُو، وَذُو؛ بِشَرْطِ أَنْ تُضَافَ لِغَيْرِ يَاءِ الْمُتَكَلِّمِ؛ نَحْوُ: قَالَ الْإِمَامُ وَصَاحِبَاهُ، وَنَقَلَ عَنْهُمُ الرَّاوُونَ، وَذُو الْفَضْلِ.",
+          "uz": "Besh ism: «ab», «ax», «ham», «fu», «zu»; sharti — mutakallim yosidan boshqasiga izofa qilinishidir; masalan: «Imom va uning ikki sherigi aytdi; ulardan roviylar va fazl egasi rivoyat qildi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَمَوَاضِعُهُ: وَيُرْفَعُ الاِسْمُ إِذَا كَانَ فَاعِلًا، أَوْ نَائِبَ فَاعِلٍ، أَوْ مُبْتَدَأً، أَوْ خَبَرًا، أَوِ اسْمًا لِـ«كَانَ وَأَخَوَاتِهَا»، أَوْ خَبَرًا لِـ«إِنَّ وَأَخَوَاتِهَا».",
+          "uz": "Uning o'rinlari: ism foil, noibi foil, mubtado, xabar, «kona» va sheriklarining ismi yoxud «inna» va sheriklarining xabari bo'lganda raf' qilinadi."
+        },
+        {
+          "type": "para",
+          "ar": "وَفِيهِ خَمْسَةُ مَبَاحِثَ.",
+          "uz": "Unda beshta mabhas bor."
+        },
+        {
+          "type": "para",
+          "ar": "(١) أَمَّا مَا لَمْ يُضَفْ مِنْهَا فَإِنَّهُ يُعْرَبُ عَلَى الْأَصْلِ؛ نَحْوُ: أَنْتَ أَخٌ، وَاخْتَرْتُكَ أَخًا، وَلَا تَثِقْ إِلَّا بِأَخٍ صَادِقٍ. وَكَذَا مَا أُضِيفَ إِلَى يَاءِ الْمُتَكَلِّمِ غَيْرَ أَنَّ إِعْرَابَهُ يَكُونُ بِحَرَكَاتٍ مُقَدَّرَةٍ.",
+          "uz": "(1-izoh) Ulardan izofa qilinmagani asl bo'yicha i'rob qilinadi; masalan: «Sen birodarsan», «Seni birodar qilib tanladim», «Faqat rostgo'y birodargagina ishon». Mutakallim yosiga izofa qilingani ham shunday; faqat uning i'robi taqdir qilingan harakatlar bilan bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُشْتَرَطُ فِيهَا أَيْضًا أَنْ تَكُونَ مُكَبَّرَةً مُفْرَدَةً، فَإِنْ صُغِّرَتْ أُعْرِبَتْ بِالْحَرَكَاتِ الظَّاهِرَةِ، وَإِنْ ثُنِّيَتْ أَوْ جُمِعَتْ أُعْرِبَتْ إِعْرَابَ الْمُثَنَّى أَوِ الْجَمْعِ.",
+          "uz": "Ularda kattalashtirilgan va birlik bo'lish ham shartdir: kichraytirilsa, zohir harakatlar bilan i'rob qilinadi; ikkilik yoki ko'plik qilinsa, musanno yoki jam' i'robi bilan i'rob qilinadi."
+        }
+      ],
+      "exercise": []
     }
   ]
 }

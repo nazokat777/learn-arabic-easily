@@ -15472,6 +15472,208 @@
         }
       ],
       "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 32,
+      "page": 319,
+      "titleAr": "عَمَلُ اسْمِ الْمَفْعُولِ",
+      "title": "Ism maf'ulning amali",
+      "rule": {
+        "ar": "يَعْمَلُ اسْمُ الْمَفْعُولِ عَمَلَ فِعْلِهِ الْمَبْنِيِّ لِلْمَجْهُولِ.",
+        "uz": "Ism maf'ul o'zining majhul fe'lining amalini qiladi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "نَحْوُ: أَمُسَمًّى أَخُوكَ صَالِحًا؟ مَا مُعْطًى صَاحِبُكَ شَيْئًا. الْأَرْضُ مَحُوطٌ سَطْحُهَا بِالْهَوَاءِ.",
+          "uz": "Masalan: «Akangga Solih deb ism qo'yilganmi?», «Do'stingga hech narsa berilmagan», «Yerning sathi havo bilan o'ralgandir»."
+        },
+        {
+          "type": "para",
+          "ar": "وَهُوَ كَاسْمِ الْفَاعِلِ فِي شُرُوطِهِ السَّابِقَةِ.",
+          "uz": "U yuqorida o'tgan shartlarida ism foil kabidir."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 33,
+      "page": 319,
+      "titleAr": "٣ - الصِّفَةُ الْمُشَبَّهَةُ بِاسْمِ الْفَاعِلِ",
+      "title": "3. Ism foilga o'xshatilgan sifat (sifati mushabbaha)",
+      "rule": {
+        "ar": "هِيَ اسْمٌ مَصُوغٌ لِمَنْ قَامَ بِهِ الْفِعْلُ، لَا عَلَى وَجْهِ الْحُدُوثِ.",
+        "uz": "U — ish u bilan qoim bo'lgan zot uchun yasalgan, ammo yangidan sodir bo'lish ma'nosida bo'lmagan ismdir."
+      },
+      "blocks": [
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَهِيَ مِنْ بَابِ فَرِحَ اللَّازِمِ عَلَى ثَلَاثَةِ أَوْزَانٍ:",
+            "uz": "U lozim «fariha» bobidan uch vaznda bo'ladi:"
+          },
+          "items": [
+            {
+              "ar": "١ - فَعِلٌ فِيمَا دَلَّ عَلَى حُزْنٍ أَوْ فَرَحٍ؛ كَ: فَرِحٍ، وَطَرِبٍ، وَأَشِرٍ، وَضَجِرٍ، وَمُؤَنَّثُهُ فَعِلَةٌ.",
+              "uz": "1 — G'am yoki quvonchga dalolat qilganida «fa'il»; masalan: farih, tarib, ashir, zajir. Uning muannasi «fa'ila»dir."
+            },
+            {
+              "ar": "٢ - وَأَفْعَلُ فِيمَا دَلَّ عَلَى عَيْبٍ، أَوْ حِلْيَةٍ، أَوْ لَوْنٍ؛ كَ: أَحْدَبَ، وَأَعْرَجَ، وَأَحْوَرَ، وَأَحْمَرَ، وَمُؤَنَّثُهُ: فَعْلَاءُ.",
+              "uz": "2 — Ayb, go'zallik sifati yoki rangga dalolat qilganida «af'al»; masalan: ahdab (bukri), a'raj (oqsoq), ahvar (qora ko'z), ahmar (qizil). Uning muannasi «fa'lo'»dir."
+            },
+            {
+              "ar": "٣ - وَفَعْلَانُ فِيمَا دَلَّ عَلَى خُلُوٍّ، أَوِ امْتِلَاءٍ؛ كَ: صَدْيَانَ وَعَطْشَانَ، وَمُؤَنَّثُهُ: فَعْلَى.",
+              "uz": "3 — Bo'shlik yoki to'lishga dalolat qilganida «fa'lon»; masalan: sadyon, atshon (chanqagan). Uning muannasi «fa'lo»dir."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "وَمِنْ بَابِ كَرُمَ عَلَى وَزْنِ فَعِيلٍ؛ كَ: شَرِيفٍ، وَقَدْ يَجِيءُ عَلَى غَيْرِهِ؛ كَ: شَهْمٍ، وَحَسَنٍ، وَجَبَانٍ، وَشُجَاعٍ، وَصَلْبٍ.",
+          "uz": "«Karuma» bobidan «fa'il» vaznida bo'ladi; masalan: sharif. Ba'zan boshqa vaznda ham keladi; masalan: shahm (jasur), hasan (chiroyli), jabon (qo'rqoq), shujo' (botir), salb (qattiq)."
+        },
+        {
+          "type": "para",
+          "ar": "وَكُلُّ مَا جَاءَ مِنَ الثُّلَاثِيِّ بِمَعْنَى فَاعِلٍ، وَلَمْ يَكُنْ عَلَى وَزْنِهِ فَهُوَ صِفَةٌ مُشَبَّهَةٌ؛ كَ: شَيْخٍ وَأَشْيَبَ، وَطَيِّبٍ، وَعَفِيفٍ.",
+          "uz": "Uch harflidan «foil» ma'nosida kelib, uning vaznida bo'lmagan har bir so'z sifati mushabbahadir; masalan: shayx (keksa), ashyab (sochi oqargan), tayyib (pok), afif (iffatli)."
+        },
+        {
+          "type": "para",
+          "ar": "وَكُلُّ اسْمِ فَاعِلٍ أَوْ مَفْعُولٍ لَمْ يُقْصَدْ مِنْهُ الْحُدُوثُ يُعْطَى حُكْمَ الصِّفَةِ الْمُشَبَّهَةِ فِي الْعَمَلِ؛ كَ: طَاهِرِ الْقَلْبِ، وَمُعْتَدِلِ الْقَامَةِ، وَمَحْمُودِ الْمَقَاصِدِ.",
+          "uz": "Undan yangidan sodir bo'lish ma'nosi ko'zda tutilmagan har bir ism foil yoki ism maf'ulga amalda sifati mushabbahaning hukmi beriladi; masalan: qalbi pok, qomati mo'tadil, maqsadlari maqtovli."
+        },
+        {
+          "type": "para",
+          "ar": "(١) إِذَا قُصِدَ الْحُدُوثُ مِنَ الصِّفَةِ الْمُشَبَّهَةِ حُوِّلَتْ إِلَى وَزْنِ (فَاعِلٍ)؛ كَ: ضَيِّقٍ وَمَيِّتٍ وَسَيِّدٍ، تَقُولُ فِيهَا: ضَائِقٌ، وَمَائِتٌ، وَسَائِدٌ.",
+          "uz": "(1-izoh) Sifati mushabbahadan sodir bo'lish ma'nosi ko'zda tutilsa, u «foil» vazniga aylantiriladi; masalan: zayyiq, mayyit, sayyid — ular haqida zoiq, moit, soid deysan."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْحَاصِلُ أَنَّ بَيْنَ اسْمِ الْفَاعِلِ وَالصِّفَةِ الْمُشَبَّهَةِ فَرْقًا مِنْ جِهَةِ اللَّفْظِ، وَفَرْقًا مِنْ جِهَةِ الْمَعْنَى، وَفَرْقًا مِنْ جِهَةِ الْعَمَلِ.",
+          "uz": "Xulosa shuki, ism foil bilan sifati mushabbaha orasida lafz jihatidan, ma'no jihatidan va amal jihatidan farq bor."
+        },
+        {
+          "type": "para",
+          "ar": "أَمَّا الْأَوَّلُ: فَاسْمُ الْفَاعِلِ مِنَ الثُّلَاثِيِّ عَلَى وَزْنِ فَاعِلٍ دَائِمًا، وَالصِّفَةُ عَلَى أَوْزَانٍ أُخَرَ، وَلَا تَجِيءُ إِلَّا مِنَ الثُّلَاثِيِّ اللَّازِمِ.",
+          "uz": "Birinchisi: ism foil uch harflidan doim «foil» vaznida bo'ladi; sifat esa boshqa vaznlarda bo'ladi va faqat lozim uch harflidan keladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَأَمَّا الثَّانِي: فَاسْمُ الْفَاعِلِ يَكُونُ لِأَحَدِ الْأَزْمِنَةِ الثَّلَاثَةِ، وَالصِّفَةُ تَكُونُ لِمُجَرَّدِ ثُبُوتِ الْحَدَثِ بِقَطْعِ النَّظَرِ عَنِ الْحُدُوثِ.",
+          "uz": "Ikkinchisi: ism foil uch zamondan biriga tegishli bo'ladi; sifat esa sodir bo'lishga qaramay, faqat ishning barqarorligini bildiradi."
+        },
+        {
+          "type": "para",
+          "ar": "فَإِذَا أُرِيدَ مِنَ اسْمِ الْفَاعِلِ الثُّبُوتُ جَرَى مَجْرَى الصِّفَةِ فِي الْعَمَلِ.",
+          "uz": "Ism foildan barqarorlik ma'nosi ko'zda tutilsa, u amalda sifat yo'lidan boradi."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 34,
+      "page": 320,
+      "titleAr": "عَمَلُ الصِّفَةِ الْمُشَبَّهَةِ",
+      "title": "Sifati mushabbahaning amali",
+      "rule": {
+        "ar": "تَعْمَلُ الصِّفَةُ الْمُشَبَّهَةُ عَمَلَ اسْمِ الْفَاعِلِ الْمُتَعَدِّي لِوَاحِدٍ.",
+        "uz": "Sifati mushabbaha bitta maf'ulga o'timli bo'lgan ism foilning amalini qiladi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَلَكَ فِي مَعْمُولِهَا - سَوَاءٌ كَانَ مَعْرِفَةً أَوْ نَكِرَةً - أَنْ تَرْفَعَهُ عَلَى الْفَاعِلِيَّةِ، أَوْ تَنْصِبَهُ عَلَى شِبْهِ الْمَفْعُولِيَّةِ إِنْ كَانَ مَعْرِفَةً، وَعَلَى التَّمْيِيزِ إِنْ كَانَ نَكِرَةً، أَوْ تَجُرَّهُ عَلَى الْإِضَافَةِ، سَوَاءٌ فِي كُلِّ ذَلِكَ كَانَتِ الصِّفَةُ مَعْرِفَةً أَوْ نَكِرَةً.",
+          "uz": "Uning ma'muli — ma'rifa bo'ladimi, nakira bo'ladimi — quyidagicha bo'lishi mumkin: uni foillik sababli raf' qilasan; ma'rifa bo'lsa maf'ullikka o'xshashlik sababli nasb qilasan, nakira bo'lsa tamyiz sababli nasb qilasan; yoki izofa sababli jarr qilasan. Bularning hammasida sifatning ma'rifa yoki nakira bo'lishi farq qilmaydi."
+        },
+        {
+          "type": "para",
+          "ar": "غَيْرَ أَنَّهُ يَمْتَنِعُ مَعَ الْجَرِّ أَنْ تَكُونَ الصِّفَةُ بِـأَلْ، وَمَعْمُولُهَا خَالٍ مِنْ أَلْ وَمِنَ الْإِضَافَةِ إِلَى الْمُحَلَّى بِهَا.",
+          "uz": "Faqat jarr holida sifatning «al» bilan bo'lishi va ma'mulining «al»dan hamda «al» bilan bezatilganga izofa qilinishdan xoli bo'lishi man qilinadi."
+        },
+        {
+          "type": "para",
+          "ar": "فَتَقُولُ: زَيْدٌ حَسَنٌ خُلُقُهُ، وَرَفِيعٌ قَدْرُ أَبِيهِ، وَهُوَ الْفَصِيحُ لِسَانًا، الْعَذْبُ سِحْرَ بَيَانٍ، وَهُوَ الْقَوِيُّ الْقَلْبِ، الْعَظِيمُ شِدَّةِ الْبَأْسِ.",
+          "uz": "Shunday deysan: «Zaydning xulqi chiroyli», «otasining qadri yuksak», «u tili fasih, bayoni sehrli shirin», «u qalbi kuchli, jasorati buyukdir»."
+        },
+        {
+          "type": "para",
+          "ar": "وَلَا تَقُولُ: الْحَسَنُ خُلُقِهِ، وَالْعَظِيمُ شِدَّةِ بَأْسٍ بِالْجَرِّ فِيهِمَا.",
+          "uz": "Lekin «al-hasanu xuluqihi» va «al-azimu shiddati ba'sin» deb ikkisida ham jarr bilan aytmaysan."
+        },
+        {
+          "type": "para",
+          "ar": "= تَحْوِيلٍ؛ كَ: طَاهِرِ الْقَلْبِ.",
+          "uz": "= o'zgartirishsiz; masalan: «qalbi pok»."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِذَا أُرِيدَ مِنَ الصِّفَةِ الْحُدُوثُ غُيِّرَتْ إِلَى اسْمِ الْفَاعِلِ؛ كَ: ضَائِقٍ.",
+          "uz": "Sifatdan sodir bo'lish ma'nosi ko'zda tutilsa, u ism foilga o'zgartiriladi; masalan: «zoiq»."
+        },
+        {
+          "type": "para",
+          "ar": "وَأَمَّا الثَّالِثُ: فَمَعْمُولُ اسْمِ الْفَاعِلِ يَجُوزُ تَقَدُّمُهُ عَلَيْهِ، وَمَعْمُولُ الصِّفَةِ لَا يَتَقَدَّمُ عَلَيْهَا أَبَدًا، وَلَا يَكُونُ إِلَّا سَبَبِيًّا لَفْظًا أَوْ تَقْدِيرًا، وَفِي بَعْضِ مَا ذَكَرْنَا خِلَافٌ لِلنُّحَاةِ يُطْلَبُ مِنَ الْمُطَوَّلَاتِ، وَلَكِنْ أَسْهَلُ الْمَذَاهِبِ مَا ذَكَرْنَاهُ.",
+          "uz": "Uchinchisi: ism foilning ma'muli undan oldin kelishi joizdir; sifatning ma'muli esa undan oldin hech qachon kelmaydi va u faqat lafzan yoki taqdiran sababiy bo'ladi. Aytganlarimizning ba'zisida nahvchilarning ixtilofi bor — u batafsil kitoblardan izlanadi; lekin mazhablarning eng osoni biz aytganimizdir."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 35,
+      "page": 321,
+      "titleAr": "٤ - اسْمُ التَّفْضِيلِ",
+      "title": "4. Ism tafzil",
+      "rule": {
+        "ar": "هُوَ اسْمٌ مَصُوغٌ عَلَى وَزْنِ أَفْعَلَ؛ لِلدَّلَالَةِ عَلَى أَنَّ شَيْئَيْنِ اشْتَرَكَا فِي صِفَةٍ، وَزَادَ أَحَدُهُمَا عَلَى الْآخَرِ فِيهَا؛ كَ: أَفْضَلَ وَأَكْبَرَ.",
+        "uz": "U — «af'al» vaznida yasalgan ism bo'lib, ikki narsa bir sifatda sherik bo'lgani va biri ikkinchisidan o'sha sifatda ortiq ekaniga dalolat qiladi; masalan: afzal, akbar."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَيُصَاغُ اسْمُ التَّفْضِيلِ مِنْ فِعْلٍ مُتَصَرِّفٍ قَابِلٍ لِلتَّفَاوُتِ بِشَرْطِ أَنْ يَكُونَ: ثُلَاثِيًّا تَامًّا مُثْبَتًا مَبْنِيًّا لِلْمَعْلُومِ، وَلَمْ يَجِئِ الْوَصْفُ مِنْهُ عَلَى أَفْعَلَ.",
+          "uz": "Ism tafzil ortiq-kamlikni qabul qiladigan mutasarrif fe'ldan yasaladi; sharti — uning uch harfli, tom, tasdiq (inkorsiz) va ma'lum bo'lishi hamda undan yasalgan sifat «af'al» vaznida kelmagan bo'lishidir."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُتَوَصَّلُ إِلَى التَّفْضِيلِ مِمَّا لَمْ يَسْتَوْفِ الشُّرُوطَ بِذِكْرِ الْمَصْدَرِ مَنْصُوبًا بَعْدَ نَحْوِ: أَشَدَّ؛ كَقَوْلِكَ: هُوَ أَشَدُّ اسْتِخْرَاجًا لِلدَّقَائِقِ، وَأَكْثَرُ ابْتِهَاجًا بِالْحَقَائِقِ.",
+          "uz": "Shartlarni to'liq bajarmagan fe'ldan ortiqlik ma'nosiga «ashadda» va shu kabilardan keyin masdarni mansub keltirish bilan erishiladi; masalan: «U nozik jihatlarni chiqarib olishda kuchliroq va haqiqatlardan quvonishi ko'proqdir»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَجِبُ إِفْرَادُهُ وَتَذْكِيرُهُ وَتَنْكِيرُهُ عِنْدَ مُقَارَنَتِهِ بِالْمُفَضَّلِ عَلَيْهِ مَجْرُورًا بِمِنْ، أَوْ نَكِرَةً مُضَافًا إِلَيْهَا اسْمُ التَّفْضِيلِ؛ نَحْوُ: الرِّجَالُ أَفْضَلُ مِنَ النِّسَاءِ، وَزَيْنَبُ أَفْضَلُ امْرَأَةٍ، وَالزَّيْنَبَاتُ أَفْضَلُ فَتَيَاتٍ.",
+          "uz": "U «min» bilan jarr qilingan «mufazzalun alayh» bilan taqqoslanganda, yoxud ism tafzil izofa qilingan nakira bilan kelganda, uni birlik, muzakkar va nakira qilish vojibdir; masalan: «Erkaklar ayollardan afzalroq», «Zaynab — ayollarning eng afzali», «Zaynablar — qizlarning eng afzali»."
+        },
+        {
+          "type": "para",
+          "ar": "وَتَجِبُ مُطَابَقَتُهُ لِمَوْصُوفِهِ عِنْدَ عَدَمِ الْمُقَارَنَةِ بِأَنْ عُرِّفَ بِأَلْ، أَوْ أُضِيفَ إِلَى مَعْرِفَةٍ، وَلَمْ يُقْصَدِ التَّفْضِيلُ؛ نَحْوُ: الرِّجَالُ الْأَفْضَلُونَ، وَزَيْنَبُ الْفُضْلَى.",
+          "uz": "Taqqoslash bo'lmaganda — ya'ni «al» bilan ma'rifa qilingan yoki ma'rifaga izofa qilingan bo'lib, ortiqlik ma'nosi ko'zda tutilmagan bo'lsa — uning mavsufiga moslashuvi vojibdir; masalan: «eng afzal erkaklar», «eng afzal Zaynab»."
+        },
+        {
+          "type": "para",
+          "ar": "(١) وَقَدْ يُصَاغُ (أَفْعَلُ) لِلدَّلَالَةِ عَلَى أَنَّ شَيْئًا زَادَ فِي صِفَتِهِ عَلَى آخَرَ فِي صِفَتِهِ؛ كَ: الْعَسَلُ أَحْلَى مِنَ الْخَلِّ، وَالصَّيْفُ أَحَرُّ مِنَ الشِّتَاءِ.",
+          "uz": "(1-izoh) «Af'al» bir narsa o'z sifatida boshqasidan o'z sifatida ortiq ekaniga dalolat qilish uchun ham yasaladi; masalan: «Asal sirkadan shirinroq», «Yoz qishdan issiqroq»."
+        },
+        {
+          "type": "para",
+          "ar": "وَقَدْ يُسْتَعْمَلُ بِمَعْنَى اسْمِ الْفَاعِلِ؛ نَحْوُ: ﴿اللَّهُ أَعْلَمُ حَيْثُ يَجْعَلُ رِسَالَتَهُ﴾.",
+          "uz": "Ba'zan ism foil ma'nosida ishlatiladi; masalan: «Alloh risolatini qayerga qo'yishni biluvchidir»."
+        },
+        {
+          "type": "para",
+          "ar": "(وَالْخُلَاصَةُ): أَنَّ لِلتَّفْضِيلِ مِنْ جِهَةِ مَعْنَاهُ ثَلَاثَةَ اسْتِعْمَالَاتٍ، وَمِنْ جِهَةِ لَفْظِهِ ثَلَاثَ أَحْوَالٍ.",
+          "uz": "(Xulosa) Tafzilning ma'nosi jihatidan uchta ishlatilishi, lafzi jihatidan esa uchta holati bor."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) وَمَعَ ذَلِكَ لَا بُدَّ مِنْ مُلَاحَظَةِ السَّمَاعِ؛ لِأَنَّهُ لَا يُسْتَغْنَى فِي الْجَمْعِ وَالتَّأْنِيثِ عَنْهُ؛ فَإِنَّ الْأَشْرَفَ وَالْأَظْرَفَ لَمْ يُقَلْ فِيهِمَا: الْأَشَارِفُ وَالشُّرْفَى وَالْأَظَارِفُ وَالظُّرْفَى.",
+          "uz": "(2-izoh) Shunga qaramay samo'ni hisobga olish shart; chunki ko'plik va muannaslikda undan behojat bo'lib bo'lmaydi. Masalan «ashraf» va «azraf» haqida «asharif», «shurfo», «azorif», «zurfo» deyilmagan."
+        }
+      ],
+      "exercise": []
     }
   ]
 }

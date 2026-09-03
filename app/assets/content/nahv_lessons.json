@@ -11889,6 +11889,174 @@
         }
       ],
       "exercise": []
+    },
+    {
+      "book": 3,
+      "num": 55,
+      "page": 251,
+      "titleAr": "٩ - الْمُنَادَى",
+      "title": "9. Munodo (chaqirilgan ism)",
+      "rule": {
+        "ar": "الْمُنَادَى: اسْمٌ يُذْكَرُ بَعْدَ «يَا»، مَطْلُوبٌ إِقْبَالُ مَدْلُولِهِ؛ كَ: يَا عَبْدَ اللَّهِ.",
+        "uz": "Munodo — «yo»dan keyin keltiriladigan va u anglatgan zotning e'tiborini qaratish talab qilinadigan ismdir; masalan: «Ey Abdulloh!»"
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَمِثْلُ «يَا»: «أَيَا»، وَ«هَيَا»، وَ«أَيْ»، وَالْهَمْزَةُ.",
+          "uz": "«Yo» kabilar: «ayo», «hayo», «ay» va hamza."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَهُوَ إِمَّا:",
+            "uz": "Munodo quyidagilardan biri bo'ladi:"
+          },
+          "items": [
+            {
+              "ar": "١ - مُضَافٌ لِاسْمٍ بَعْدَهُ؛ كَمَا مُثِّلَ.",
+              "uz": "1 — O'zidan keyingi ismga izofa qilingan; misolda ko'rsatilgani kabi."
+            },
+            {
+              "ar": "٢ - أَوْ شَبِيهٌ بِالْمُضَافِ؛ كَ: يَا سَاعِيًا فِي الْخَيْرِ.",
+              "uz": "2 — Yoki muzofga o'xshash; masalan: «Ey yaxshilikka harakat qiluvchi!»"
+            },
+            {
+              "ar": "٣ - أَوْ نَكِرَةٌ غَيْرُ مَقْصُودَةٍ؛ كَ: يَا مُغْتَرًّا دَعِ الْغُرُورَ.",
+              "uz": "3 — Yoki maqsad qilinmagan nakira; masalan: «Ey mag'rur, mag'rurlikni tashla!»"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "فَإِنْ كَانَ:",
+            "uz": "Agar u:"
+          },
+          "items": [
+            {
+              "ar": "٤ - نَكِرَةً مَقْصُودَةً.",
+              "uz": "4 — Maqsad qilingan nakira bo'lsa."
+            },
+            {
+              "ar": "٥ - أَوْ عَلَمًا مُفْرَدًا.",
+              "uz": "5 — Yoki birlikdagi atoqli ism bo'lsa."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "(وَهُوَ مَا لَيْسَ مُضَافًا، وَلَا شَبِيهًا بِالْمُضَافِ)، بُنِيَ عَلَى مَا يُرْفَعُ بِهِ؛ نَحْوُ: يَا أُسْتَاذُ، وَ: يَا فَتَيَانِ، وَ: يَا مُنْصِفُونَ، وَ: يَا إِبْرَاهِيمَانِ، وَ: يَا إِبْرَاهِيمُونَ، وَ: يَا إِبْرَاهِيمُ.",
+          "uz": "(u — muzof ham, muzofga o'xshash ham bo'lmagani) — u raf' qilinadigan alomat uzra mabniy bo'ladi; masalan: «Ey ustoz!», «Ey ikki yigit!», «Ey insofli kishilar!», «Ey ikki Ibrohim!», «Ey Ibrohimlar!», «Ey Ibrohim!»"
+        },
+        {
+          "type": "para",
+          "ar": "وَإِذَا أُرِيدَ نِدَاءُ مَا فِيهِ «أَلْ»، أُتِيَ قَبْلَهُ بِـ: «أَيُّهَا» لِلْمُذَكَّرِ، وَ«أَيَّتُهَا» لِلْمُؤَنَّثِ، أَوْ بِاسْمِ الْإِشَارَةِ؛ نَحْوُ: ﴿يَا أَيُّهَا الْإِنْسَانُ مَا غَرَّكَ﴾، ﴿يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ﴾، يَا هَذَا الْإِنْسَانُ، يَا هَاتِهِ النَّفْسُ.",
+          "uz": "«Al» bo'lgan so'zni chaqirmoqchi bo'lsa, uning oldidan muzakkar uchun «ayyuho», muannas uchun «ayyatuho», yoxud ishora ismi keltiriladi; masalan: «Ey inson, seni nima aldadi?», «Ey xotirjam nafs!», «Ey bu inson!», «Ey bu nafs!»"
+        },
+        {
+          "type": "para",
+          "ar": "إِلَّا مَعَ «اللَّهِ»؛ نَحْوُ: يَا اللَّهُ. وَالْأَكْثَرُ مَعَهُ حَذْفُ حَرْفِ النِّدَاءِ وَتَعْوِيضُهُ بِمِيمٍ مُشَدَّدَةٍ؛ فَيُقَالُ: «اللَّهُمَّ».",
+          "uz": "Faqat «Alloh» lafzi bundan mustasno; masalan: «Yo Alloh!» Ko'pincha u bilan nido harfi tushirilib, o'rniga shaddali «mim» qo'yiladi; shunda «Allohumma» deyiladi."
+        },
+        {
+          "type": "para",
+          "ar": "(١) وَيُقَالُ فِي الْإِعْرَابِ: إِنَّ «أَيَّ»، أَوْ: «أَيَّةَ»، أَوِ اسْمَ الْإِشَارَةِ: مُنَادًى، وَ«هَا» حَرْفُ تَنْبِيهٍ، وَمَا فِيهِ «أَلْ» صِفَةٌ، إِنْ كَانَ مُشْتَقًّا، وَعَطْفُ بَيَانٍ، إِنْ كَانَ اسْمَ جِنْسٍ. وَقِيلَ: بَلْ يُعْرَبُ صِفَةً مُطْلَقًا؛ لِأَنَّهُ مُؤَوَّلٌ بِالْحَاضِرِ.",
+          "uz": "(1-izoh) I'robda shunday deyiladi: «ayya», «ayyata» yoki ishora ismi — munodo; «ho» — tanbeh harfi; «al» bo'lgan so'z esa mushtaq bo'lsa sifat, jins ismi bo'lsa atfi bayondir. Bir qavlga ko'ra esa u mutlaq sifat deb i'rob qilinadi, chunki u «hozir» ma'nosiga ta'vil qilinadi."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 3,
+      "num": 56,
+      "page": 252,
+      "titleAr": "١٠، ١١ - خَبَرُ «كَانَ» وَأَخَوَاتِهَا، وَاسْمُ «إِنَّ» وَأَخَوَاتِهَا",
+      "title": "10-11. «Kona» va sheriklarining xabari, «inna» va sheriklarining ismi",
+      "rule": {
+        "ar": "خَبَرُ «كَانَ» وَأَخَوَاتِهَا، وَاسْمُ «إِنَّ» وَأَخَوَاتِهَا تَقَدَّمَ ذِكْرُهُمَا فِي الْمَرْفُوعَاتِ، غَيْرَ أَنَّ اسْمَ «لَا» لَا يُعْرَبُ إِلَّا إِذَا كَانَ مُضَافًا أَوْ شَبِيهًا بِالْمُضَافِ؛ نَحْوُ: لَا نَاصِرَ حَقٍّ مَخْذُولٌ، وَ: لَا كَرِيمًا عُنْصُرُهُ سَفِيهٌ.",
+        "uz": "«Kona» va uning sheriklarining xabari hamda «inna» va uning sheriklarining ismi haqida marfu'lar bo'limida zikr o'tgan edi. Faqat «lo»ning ismi muzof yoki muzofga o'xshash bo'lmasa, i'rob qilinmaydi; masalan: «Haqqa yordam beruvchi xor bo'lmaydi», «Asli olijanob kishi nodon bo'lmaydi»."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "أَمَّا الْمُفْرَدُ، فَيُبْنَى عَلَى مَا يُنْصَبُ بِهِ؛ نَحْوُ: لَا سَمِيرَ أَحْسَنُ مِنَ الْكِتَابِ، وَ: لَا مُتَذَاكِرَيْنِ نَاسِيَانِ، وَلَا: مُتَذَاكِرِينَ نَاسُونَ.",
+          "uz": "Birlikdagi (mufrad) ismga kelsak, u nasb qilinadigan alomat uzra mabniy bo'ladi; masalan: «Kitobdan yaxshiroq hamsuhbat yo'q», «Takrorlab turgan ikki kishi unutuvchi bo'lmaydi», «Takrorlab turganlar unutuvchi bo'lmaydilar»."
+        },
+        {
+          "type": "para",
+          "ar": "وَلَا بُدَّ أَنْ يَكُونَ اسْمُ «لَا» نَكِرَةً مُتَّصِلًا بِهَا؛ كَمَا مُثِّلَ.",
+          "uz": "«Lo»ning ismi nakira va unga tutash bo'lishi shartdir; misolda ko'rsatilgani kabi."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِلَّا بَطَلَ عَمَلُهَا، وَلَزِمَ تَكْرَارُهَا؛ نَحْوُ: لَا زَيْدٌ هُنَا، وَلَا عَمْرٌو. وَ: لَا فِي الدَّرْسِ صُعُوبَةٌ، وَلَا تَطْوِيلٌ.",
+          "uz": "Aks holda uning amali botil bo'ladi va uni takrorlash lozim bo'ladi; masalan: «Bu yerda na Zayd bor, na Amr», «Darsda na qiyinchilik bor, na cho'zilish»."
+        },
+        {
+          "type": "para",
+          "ar": "(١) «لَا» هَذِهِ تُسَمَّى «نَافِيَةً لِلْجِنْسِ»؛ لِأَنَّ الْخَبَرَ مَنْفِيٌّ بَعْدَهَا عَنْ جَمِيعِ أَفْرَادِ الْجِنْسِ، فَلَا يَصِحُّ أَنْ تَقُولَ: «لَا رَجُلَ فِي الدَّارِ، بَلْ رَجُلَانِ»، بِخِلَافِ «لَا» فِي قَوْلِكَ: «لَا رَجُلٌ فِي الدَّارِ»، فَإِنَّهَا لِنَفْيِ «الْوَحْدَةِ»، وَحِينَئِذٍ يَصِحُّ أَنْ تَقُولَ: لَا رَجُلٌ فِي الدَّارِ، بَلْ رَجُلَانِ.",
+          "uz": "(1-izoh) Bu «lo» «jinsni inkor qiluvchi lo» deb ataladi, chunki undan keyin xabar jinsning barcha a'zolaridan inkor qilinadi. Shuning uchun «Uyda kishi yo'q, balki ikki kishi bor» deb aytish to'g'ri emas. «Uyda bir kishi yo'q» degan gapdagi «lo» esa bundan farq qiladi — u «birlikni» inkor qilish uchundir; u holda «Uyda bir kishi yo'q, balki ikki kishi bor» deyish to'g'ri bo'ladi."
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "مَيِّزْ أَنْوَاعَ الْمَنْصُوبَاتِ فِي هَذِهِ الْعِبَارَاتِ:",
+          "uz": "Quyidagi iboralarda mansublarning turlarini ajrating:"
+        },
+        {
+          "ar": "أَحْزَمُ النَّاسِ مَنْ مَلَكَ جِدُّهُ هَزْلَهُ، وَقَهَرَ لُبُّهُ هَوَاهُ.",
+          "uz": "Odamlarning eng tadbirlisi — jiddiyligi hazilini boshqargan va aqli havoyi nafsini yenggan kishidir."
+        },
+        {
+          "ar": "كُنْ شَكُورًا عَلَى النِّعْمَةِ صَبُورًا فِي الشِّدَّةِ.",
+          "uz": "Ne'matda ko'p shukr qiluvchi, qiyinchilikda ko'p sabr qiluvchi bo'l."
+        },
+        {
+          "ar": "اسْتَدِمْ مَوَدَّةَ الصَّدِيقِ بِالْإِحْسَانِ.",
+          "uz": "Do'stning mehrini yaxshilik bilan davomli qil."
+        },
+        {
+          "ar": "﴿فَلَمَّا أَنْ جَاءَ الْبَشِيرُ أَلْقَاهُ عَلَى وَجْهِهِ فَارْتَدَّ بَصِيرًا﴾.",
+          "uz": "«Xushxabarchi kelganda uni (ko'ylakni) uning yuziga tashladi — va u ko'radigan holga qaytdi»."
+        },
+        {
+          "ar": "لَا تَكِلْ إِلَى غَيْرِكَ مَا يَخْتَصُّ بِمُبَاشَرَتِكَ طَلَبًا لِلدَّعَةِ.",
+          "uz": "Osoyishtalik istab, o'zing bajarishing kerak bo'lgan ishni boshqaga topshirma."
+        },
+        {
+          "ar": "﴿فَاعْلَمْ أَنَّهُ لَا إِلَهَ إِلَّا اللَّهُ وَاسْتَغْفِرْ لِذَنْبِكَ﴾.",
+          "uz": "«Bilginki, Allohdan o'zga iloh yo'q; gunohing uchun mag'firat so'ra»."
+        },
+        {
+          "ar": "﴿إِنَّا هَدَيْنَاهُ السَّبِيلَ إِمَّا شَاكِرًا وَإِمَّا كَفُورًا﴾.",
+          "uz": "«Biz unga yo'lni ko'rsatdik — yo shukr qiluvchi bo'ladi, yo noshukr»."
+        },
+        {
+          "ar": "﴿إِنَّا نَخَافُ مِنْ رَبِّنَا يَوْمًا عَبُوسًا قَمْطَرِيرًا * فَوَقَاهُمُ اللَّهُ شَرَّ ذَلِكَ الْيَوْمِ وَلَقَّاهُمْ نَضْرَةً وَسُرُورًا * وَجَزَاهُمْ بِمَا صَبَرُوا جَنَّةً وَحَرِيرًا﴾.",
+          "uz": "«Biz Robbimizdan qattiq va mashaqqatli kundan qo'rqamiz. Alloh ularni o'sha kunning yomonligidan asradi va ularga tarovat hamda quvonch berdi; sabr qilganlari evaziga ularga jannat va shohi libos berdi»."
+        },
+        {
+          "ar": "يَعِيشُ الْبَخِيلُ فِي الدُّنْيَا عَيْشَ الْفُقَرَاءِ، وَيُحَاسَبُ فِي الْآخِرَةِ حِسَابَ الْأَغْنِيَاءِ.",
+          "uz": "Baxil dunyoda kambag'allar hayotini kechiradi, oxiratda esa boylar hisobi bilan hisob beradi."
+        },
+        {
+          "ar": "﴿إِنَّ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ كَانَتْ لَهُمْ جَنَّاتُ الْفِرْدَوْسِ نُزُلًا * خَالِدِينَ فِيهَا لَا يَبْغُونَ عَنْهَا حِوَلًا﴾.",
+          "uz": "«Albatta, imon keltirib solih amal qilganlar uchun Firdavs jannatlari manzil bo'ladi; ular unda abadiy qoladilar va undan ko'chishni istamaydilar»."
+        },
+        {
+          "ar": "﴿الْأَخِلَّاءُ يَوْمَئِذٍ بَعْضُهُمْ لِبَعْضٍ عَدُوٌّ إِلَّا الْمُتَّقِينَ * يَا عِبَادِ لَا خَوْفٌ عَلَيْكُمُ الْيَوْمَ وَلَا أَنْتُمْ تَحْزَنُونَ﴾.",
+          "uz": "«O'sha kuni do'stlar bir-biriga dushmandir — taqvodorlardan boshqa. Ey bandalarim! Bugun sizlarga qo'rquv yo'q va sizlar g'amgin ham bo'lmaysizlar»."
+        },
+        {
+          "ar": "أَنْقَصُ النَّاسِ عَقْلًا مَنْ ظَلَمَ مَنْ هُوَ دُونَهُ.",
+          "uz": "Odamlarning aqli eng kami — o'zidan pastdagini zulm qilgan kishidir."
+        },
+        {
+          "ar": "الدَّهْرُ لَا يَأْتِي عَلَى شَيْءٍ إِلَّا غَيَّرَهُ.",
+          "uz": "Zamon biror narsa ustiga kelsa, albatta uni o'zgartiradi."
+        }
+      ]
     }
   ]
 }

@@ -14948,6 +14948,186 @@
         }
       ],
       "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 20,
+      "page": 310,
+      "titleAr": "رَفْعُ الْفِعْلِ وَمَوَاضِعُهُ",
+      "title": "Fe'lning raf'i va o'rinlari",
+      "rule": {
+        "ar": "الْأَصْلُ فِي رَفْعِ الْفِعْلِ أَنْ يَكُونَ بِالضَّمَّةِ، وَيَنُوبُ عَنْهَا النُّونُ فِي الْأَمْثِلَةِ الْخَمْسَةِ؛ نَحْوُ: هُوَ يَتَكَلَّمُ، وَهُمْ يَسْمَعُونَ.",
+        "uz": "Fe'lni raf' qilishda asl — uning damma bilan bo'lishidir; uning o'rnini besh misolda nun bosadi; masalan: «u gapiradi», «ular eshitadilar»."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَهُوَ يُرْفَعُ إِذَا لَمْ يَسْبِقْهُ نَاصِبٌ وَلَا جَازِمٌ؛ نَحْوُ: بِالرَّاعِي تَصْلُحُ الرَّعِيَّةُ، وَبِالْعَدْلِ تُمْلَكُ الْبَرِيَّةُ.",
+          "uz": "Oldidan nasb qiluvchi ham, jazm qiluvchi ham kelmasa, u raf' qilinadi; masalan: «Cho'pon (rahbar) bilan raiyat tuzaladi, adolat bilan xalq qo'lga olinadi»."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 21,
+      "page": 310,
+      "titleAr": "تَتِمَّةٌ فِي الْإِعْرَابِ التَّقْدِيرِيِّ لِلْفِعْلِ",
+      "title": "To'ldirma: fe'lning taqdiriy i'robi",
+      "rule": {
+        "ar": "إِذَا كَانَ مُعْتَلًّا بِالْأَلِفِ: فَلِتَعَذُّرِ تَحْرِيكِهَا تُقَدَّرُ عَلَى آخِرِهِ الضَّمَّةُ عِنْدَ الرَّفْعِ، وَالْفَتْحَةُ عِنْدَ النَّصْبِ؛ نَحْوُ: يَسْعَى وَلَنْ يَسْعَى.",
+        "uz": "Fe'l alif bilan illatli bo'lsa, alifni harakatlantirish mumkin bo'lmagani uchun uning oxirida raf' holida damma, nasb holida fatha taqdir qilinadi; masalan: «harakat qiladi», «harakat qilmaydi»."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَإِذَا كَانَ مُعْتَلًّا بِالْوَاوِ أَوِ الْيَاءِ فَلِاسْتِثْقَالِ ضَمِّهِمَا تُقَدَّرُ عَلَى آخِرِهِ الضَّمَّةُ عِنْدَ الرَّفْعِ؛ نَحْوُ: يَسْمُو وَيَرْتَقِي، وَذَلِكَ طَرْدًا لِقَوَاعِدِ الْإِعْرَابِ.",
+          "uz": "Vov yoki yo bilan illatli bo'lsa, ularni damma qilish og'ir bo'lgani uchun raf' holida oxirida damma taqdir qilinadi; masalan: «yuksaladi», «ko'tariladi» — bu i'rob qoidalarini bir tekis qo'llash uchundir."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 22,
+      "page": 311,
+      "titleAr": "الْكَلَامُ عَلَى الاِسْمِ: الْبَابُ الْأَوَّلُ فِي الْجَامِدِ وَالْمُشْتَقِّ",
+      "title": "Ism haqida so'z: 1-bob — jomid va mushtaq",
+      "rule": {
+        "ar": "يَنْقَسِمُ الاِسْمُ إِلَى جَامِدٍ وَمُشْتَقٍّ.",
+        "uz": "Ism jomid va mushtaqqa bo'linadi. (Ism haqidagi so'zda sakkiz bob bor.)"
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "فَالْجَامِدُ: مَا لَمْ يُؤْخَذْ مِنْ غَيْرِهِ؛ كَ: رَجُلٍ وَعِلْمٍ.",
+          "uz": "Jomid — boshqasidan olinmagani; masalan: rajul (kishi), ilm."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْمُشْتَقُّ: مَا أُخِذَ مِنْ غَيْرِهِ؛ كَ: عَالِمٍ وَمَعْلُومٍ فَإِنَّهُمَا مَأْخُوذَانِ مِنَ الْعِلْمِ.",
+          "uz": "Mushtaq — boshqasidan olingani; masalan: olim va ma'lum — ikkalasi «ilm»dan olingandir."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 23,
+      "page": 311,
+      "titleAr": "فَصْلٌ فِي الْجَامِدِ: الْمَصْدَرُ",
+      "title": "Jomid haqida fasl: masdar",
+      "rule": {
+        "ar": "الاِسْمُ الْجَامِدُ نَوْعَانِ: اسْمُ ذَاتٍ؛ كَإِنْسَانٍ وَأَسَدٍ، وَاسْمُ مَعْنًى؛ كَ: فَهْمٍ وَشَجَاعَةٍ.",
+        "uz": "Jomid ism ikki turdir: zot ismi — inson va sher kabi; va ma'no ismi — tushunish va jasorat kabi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَمِنِ اسْمِ الْمَعْنَى يَكُونُ الاِشْتِقَاقُ، وَهُوَ أَخْذُ كَلِمَةٍ مِنْ أُخْرَى مَعَ تَنَاسُبٍ بَيْنَهُمَا فِي الْمَعْنَى وَتَغْيِيرٍ فِي اللَّفْظِ.",
+          "uz": "Ishtiqoq ma'no ismidan bo'ladi; u — bir so'zni boshqasidan, ikkisi orasida ma'no munosabati va lafzdagi o'zgarish bilan olishdir."
+        },
+        {
+          "type": "para",
+          "ar": "أَصْلُ الْمُشْتَقَّاتِ كُلِّهَا الْمَصْدَرُ، وَهُوَ: مَا دَلَّ عَلَى الْحَدَثِ مُجَرَّدًا عَنِ الزَّمَانِ؛ كَ: نَصْرٍ وَإِكْرَامٍ، وَقَدْ سَبَقَ أَنَّ الْفِعْلَ ثُلَاثِيٌّ، وَرُبَاعِيٌّ، وَخُمَاسِيٌّ، وَسُدَاسِيٌّ.",
+          "uz": "Barcha mushtaqlarning asli masdardir; u — zamondan xoli holda ishga dalolat qiluvchi so'zdir; masalan: nasr (yordam), ikrom (hurmat). Fe'lning uch, to'rt, besh va olti harfli bo'lishi oldin o'tgan edi."
+        },
+        {
+          "type": "para",
+          "ar": "أَمَّا الثُّلَاثِيُّ فَلِمَصْدَرِهِ أَوْزَانٌ كَثِيرَةٌ، الْمَدَارُ فِي مَعْرِفَتِهَا عَلَى السَّمَاعِ، غَيْرَ أَنَّ الْغَالِبَ:",
+          "uz": "Uch harflining masdari uchun ko'p vaznlar bor; ularni bilish samo'ga bog'liqdir. Faqat ko'p uchraydigani quyidagilardir:"
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَهُوَ:",
+            "uz": "Ular:"
+          },
+          "items": [
+            {
+              "ar": "١ - فِيمَا دَلَّ عَلَى حِرْفَةٍ أَنْ يَكُونَ عَلَى وَزْنِ فِعَالَةٍ؛ كَ: زِرَاعَةٍ وَتِجَارَةٍ وَحِيَاكَةٍ.",
+              "uz": "1 — Hunarga dalolat qilganida «fi'ola» vaznida bo'lishi; masalan: dehqonchilik, savdo, to'quvchilik."
+            },
+            {
+              "ar": "٢ - وَفِيمَا دَلَّ عَلَى امْتِنَاعٍ أَنْ يَكُونَ عَلَى وَزْنِ فِعَالٍ؛ كَ: إِبَاءٍ وَشِرَادٍ وَجِمَاحٍ.",
+              "uz": "2 — Bosh tortishga dalolat qilganida «fi'ol» vaznida bo'lishi; masalan: bosh tortish, qochish, itoatsizlik."
+            },
+            {
+              "ar": "٣ - وَفِيمَا دَلَّ عَلَى اضْطِرَابٍ أَنْ يَكُونَ عَلَى وَزْنِ فَعَلَانٍ؛ كَ: غَلَيَانٍ وَجَوَلَانٍ.",
+              "uz": "3 — Talvasa-tebranishga dalolat qilganida «fa'alon» vaznida bo'lishi; masalan: qaynash, aylanish."
+            },
+            {
+              "ar": "٤ - وَفِيمَا دَلَّ عَلَى دَاءٍ أَنْ يَكُونَ عَلَى وَزْنِ فُعَالٍ؛ كَ: صُدَاعٍ وَزُكَامٍ وَدُوَارٍ.",
+              "uz": "4 — Kasallikka dalolat qilganida «fu'ol» vaznida bo'lishi; masalan: bosh og'rig'i, tumov, boshaylanish."
+            },
+            {
+              "ar": "٥ - وَفِيمَا دَلَّ عَلَى سَيْرٍ أَنْ يَكُونَ عَلَى وَزْنِ فَعِيلٍ؛ كَ: رَحِيلٍ وَذَمِيلٍ وَرَسِيمٍ.",
+              "uz": "5 — Yurishga dalolat qilganida «fa'il» vaznida bo'lishi; masalan: ko'chish, mayin yurish, tez yurish."
+            },
+            {
+              "ar": "٦ - وَفِيمَا دَلَّ عَلَى صَوْتٍ أَنْ يَكُونَ عَلَى وَزْنِ فُعَالٍ أَوْ فَعِيلٍ؛ كَ: صُرَاخٍ وَزَئِيرٍ.",
+              "uz": "6 — Tovushga dalolat qilganida «fu'ol» yoki «fa'il» vaznida bo'lishi; masalan: qichqiriq, na'ra."
+            },
+            {
+              "ar": "٧ - وَفِيمَا دَلَّ عَلَى لَوْنٍ أَنْ يَكُونَ عَلَى وَزْنِ فُعْلَةٍ؛ كَ: حُمْرَةٍ وَزُرْقَةٍ وَخُضْرَةٍ.",
+              "uz": "7 — Rangga dalolat qilganida «fu'la» vaznida bo'lishi; masalan: qizillik, ko'klik, yashillik."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "فَإِنْ لَمْ يَدُلَّ عَلَى شَيْءٍ مِنْ ذَلِكَ فَالْغَالِبُ:",
+            "uz": "Bulardan hech biriga dalolat qilmasa, ko'p uchraydigani quyidagilardir:"
+          },
+          "items": [
+            {
+              "ar": "١ - فِي فَعُلَ: أَنْ يَكُونَ مَصْدَرُهُ عَلَى فُعُولَةٍ أَوْ فَعَالَةٍ؛ كَ: سُهُولَةٍ وَنَبَاهَةٍ.",
+              "uz": "1 — «Fa'ula»da: masdari «fu'ula» yoki «fa'ola» vaznida bo'lishi; masalan: osonlik, obro'lilik."
+            },
+            {
+              "ar": "٢ - وَفِي فَعِلَ اللَّازِمِ: أَنْ يَكُونَ مَصْدَرُهُ عَلَى فَعَلٍ؛ كَ: فَرَحٍ وَعَطَشٍ وَبَلَجٍ.",
+              "uz": "2 — Lozim «fa'ila»da: masdari «fa'al» vaznida bo'lishi; masalan: quvonch, chanqoq, yuz yorishishi."
+            },
+            {
+              "ar": "٣ - وَفِي فَعَلَ اللَّازِمِ: أَنْ يَكُونَ مَصْدَرُهُ عَلَى فُعُولٍ؛ كَ: قُعُودٍ وَخُرُوجٍ وَنُهُوضٍ.",
+              "uz": "3 — Lozim «fa'ala»da: masdari «fu'ul» vaznida bo'lishi; masalan: o'tirish, chiqish, turish."
+            },
+            {
+              "ar": "٤ - وَفِي الْمُتَعَدِّي مِنْ فَعِلَ وَفَعَلَ: أَنْ يَكُونَ مَصْدَرُهُ عَلَى فَعْلٍ؛ كَ: فَهْمٍ وَنَصْرٍ.",
+              "uz": "4 — «Fa'ila» va «fa'ala»dan bo'lgan muta'addiyda: masdari «fa'l» vaznida bo'lishi; masalan: tushunish, yordam."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَأَمَّا الرُّبَاعِيُّ:",
+            "uz": "To'rt harfliga kelsak:"
+          },
+          "items": [
+            {
+              "ar": "١ - فَإِنْ كَانَ عَلَى وَزْنِ أَفْعَلَ: فَمَصْدَرُهُ عَلَى وَزْنِ إِفْعَالٍ؛ كَ: أَكْرَمَ إِكْرَامًا.",
+              "uz": "1 — «Af'ala» vaznida bo'lsa, masdari «if'ol» vaznida bo'ladi; masalan: akrama — ikroman."
+            },
+            {
+              "ar": "٢ - وَإِنْ كَانَ عَلَى وَزْنِ فَعَّلَ: فَمَصْدَرُهُ عَلَى وَزْنِ تَفْعِيلٍ؛ كَ: قَدَّمَ تَقْدِيمًا.",
+              "uz": "2 — «Fa''ala» vaznida bo'lsa, masdari «taf'il» vaznida bo'ladi; masalan: qaddama — taqdiman."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "(١) الذَّمِيلُ وَالرَّسِيمُ: نَوْعَانِ مِنَ السَّيْرِ.",
+          "uz": "(1-izoh) «Zamil» va «rasim» — yurishning ikki turidir."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) بَلِجَ وَجْهُهُ بَلَجًا: تَنَضَّرَ سُرُورًا.",
+          "uz": "(2-izoh) «Balija vajhuhu balajan» — yuzi quvonchdan yorishdi."
+        }
+      ],
+      "exercise": []
     }
   ]
 }

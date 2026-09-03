@@ -13587,6 +13587,192 @@
         }
       ],
       "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 9,
+      "page": 286,
+      "titleAr": "هَمْزَتَا الْوَصْلِ وَالْقَطْعِ",
+      "title": "Vasl va qat' hamzalari",
+      "rule": {
+        "ar": "الْهَمْزَةُ الْمَزِيدَةُ فِي: مَاضِي الْخُمَاسِيِّ وَالسُّدَاسِيِّ وَأَمْرِهِمَا وَمَصْدَرِهِمَا وَأَمْرِ الثُّلَاثِيِّ، تُسَمَّى هَمْزَةَ وَصْلٍ؛ لِلتَّوَصُّلِ بِهَا إِلَى النُّطْقِ بِالسَّاكِنِ، وَلِذَلِكَ تَسْقُطُ فِي دَرْجِ الْكَلَامِ.",
+        "uz": "Besh va olti harflining mozisiga, ularning amri va masdariga hamda uch harflining amriga qo'shilgan hamza «vasl hamzasi» deb ataladi; u sokin harfni talaffuz qilishga yetishish uchundir, shuning uchun so'z oqimida tushib qoladi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "نَحْوُ: انْطَلَقَ وَاسْتَغْفَرَ، وَانْطَلِقْ وَاسْتَغْفِرْ، وَانْطِلَاقٍ وَاسْتِغْفَارٍ، وَاعْلَمْ.",
+          "uz": "Masalan: «intalaqa» va «istag'fara», «intaliq» va «istag'fir», «intiloq» va «istig'for», «i'lam»."
+        },
+        {
+          "type": "para",
+          "ar": "وَفِي ابْنٍ، وَابْنَةٍ، وَابْنِمٍ، وَامْرِئٍ، وَامْرَأَةٍ، وَاسْمٍ، وَاسْتٍ، وَاثْنَيْنِ، وَاثْنَتَيْنِ، وَايْمُنَ، وَفِي (ال).",
+          "uz": "Shuningdek «ibn», «ibna», «ibnim», «imru'», «imra'a», «ism», «ist», «isnayn», «isnatayn», «aymun» so'zlarida va «al»da."
+        },
+        {
+          "type": "para",
+          "ar": "وَمَا سِوَى مَا ذُكِرَ فَهَمْزَتُهُ تُسَمَّى هَمْزَةَ قَطْعٍ، لَا تَسْقُطُ أَبَدًا؛ نَحْوُ: أَكْرِمِ الضَّيْفَ، وَأَعْطِ السَّائِلَ.",
+          "uz": "Zikr qilinganlardan boshqasining hamzasi «qat' hamzasi» deb ataladi; u hech qachon tushib qolmaydi; masalan: «Mehmonni hurmat qil», «So'rovchiga ber»."
+        },
+        {
+          "type": "para",
+          "ar": "وَهَمْزَةُ الْوَصْلِ مَكْسُورَةٌ دَائِمًا إِلَّا فِي (أَلْ) وَ(ايْمُنَ) فَتُفْتَحُ، وَإِلَّا فِي الْأَمْرِ الْمَضْمُومِ الْعَيْنِ، وَالْمَاضِي الْمَبْنِيِّ لِلْمَجْهُولِ فَتُضَمُّ.",
+          "uz": "Vasl hamzasi doim kasralidir — faqat «al» va «aymuna»da fatha qilinadi; ayni dammali amrda va majhul mozida esa damma qilinadi."
+        },
+        {
+          "type": "para",
+          "ar": "وَهَمْزَةُ الْقَطْعِ مَفْتُوحَةٌ فِي الْأَفْعَالِ الرُّبَاعِيَّةِ؛ كَ: أَكْرَمَ وَأَكْرِمْ.",
+          "uz": "Qat' hamzasi to'rt harfli fe'llarda fathalidir; masalan «akrama» va «akrim»."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 10,
+      "page": 287,
+      "titleAr": "الْبَابُ الرَّابِعُ فِي الصَّحِيحِ وَالْمُعْتَلِّ",
+      "title": "4-bob: sahih va mu'tall",
+      "rule": {
+        "ar": "يَنْقَسِمُ الْفِعْلُ إِلَى صَحِيحٍ وَمُعْتَلٍّ.",
+        "uz": "Fe'l sahih va mu'tallga bo'linadi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "فَالصَّحِيحُ: مَا خَلَتْ أُصُولُهُ مِنْ أَحْرُفِ الْعِلَّةِ، وَهِيَ: الْوَاوُ وَالْأَلِفُ وَالْيَاءُ.",
+          "uz": "Sahih — asllari illat harflaridan xoli bo'lgan fe'l; illat harflari: vov, alif va yo."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْمُعْتَلُّ: مَا كَانَ أَحَدُ أُصُولِهِ، أَوِ اثْنَانِ مِنْهَا مِنْ أَحْرُفِ الْعِلَّةِ.",
+          "uz": "Mu'tall — asllaridan biri yoki ikkitasi illat harflaridan bo'lgan fe'l."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَكُلٌّ مِنْهُمَا يَكُونُ:",
+            "uz": "Ikkovining har biri quyidagicha bo'ladi:"
+          },
+          "items": [
+            {
+              "ar": "١ - مَهْمُوزًا وَهُوَ: مَا كَانَ أَحَدُ أُصُولِهِ هَمْزَةً؛ كَ: أَمِنَ، وَسَأَلَ، وَقَرَأَ، وَأَتَى، وَنَأَى، وَجَاءَ.",
+              "uz": "1 — Mahmuz — asllaridan biri hamza bo'lgani; masalan: «amina» (omon bo'ldi), «sa'ala» (so'radi), «qara'a» (o'qidi), «ato» (keldi), «na'o» (uzoqlashdi), «jo'a» (keldi)."
+            },
+            {
+              "ar": "٢ - وَمُضَعَّفًا وَهُوَ: مَا كَانَتْ عَيْنُهُ وَلَامُهُ مِنْ جِنْسٍ وَاحِدٍ؛ كَ: مَدَّ، وَفَرَّ، وَوَدَّ.",
+              "uz": "2 — Muzo'af — ayni va lomi bir jinsdan bo'lgani; masalan: «madda» (cho'zdi), «farra» (qochdi), «vadda» (sevdi)."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَالْمُعْتَلُّ يَكُونُ:",
+            "uz": "Mu'tall quyidagicha bo'ladi:"
+          },
+          "items": [
+            {
+              "ar": "١ - مِثَالًا وَهُوَ: مَا اعْتَلَّتْ فَاؤُهُ؛ كَ: وَعَدَ، وَيَسُرَ.",
+              "uz": "1 — Misol — fosi illatli bo'lgani; masalan: «va'ada» (va'da berdi), «yasura» (oson bo'ldi)."
+            },
+            {
+              "ar": "٢ - وَأَجْوَفَ وَهُوَ: مَا اعْتَلَّتْ عَيْنُهُ؛ كَ: قَامَ، وَبَاعَ.",
+              "uz": "2 — Ajvaf — ayni illatli bo'lgani; masalan: «qoma» (turdi), «boa» (sotdi)."
+            },
+            {
+              "ar": "٣ - وَنَاقِصًا وَهُوَ: مَا اعْتَلَّتْ لَامُهُ؛ كَ: دَعَا، وَرَمَى.",
+              "uz": "3 — Noqis — lomi illatli bo'lgani; masalan: «da'o» (chaqirdi), «ramo» (otdi)."
+            },
+            {
+              "ar": "٤ - وَلَفِيفًا مَفْرُوقًا وَهُوَ: مَا اعْتَلَّتْ فَاؤُهُ وَلَامُهُ؛ كَ: وَفَى، وَوَقَى، وَيَدِيَ.",
+              "uz": "4 — Lafifi mafruq — fosi va lomi illatli bo'lgani; masalan: «vafo» (vafo qildi), «vaqo» (saqladi), «yadiya»."
+            },
+            {
+              "ar": "٥ - وَلَفِيفًا مَقْرُونًا: وَهُوَ مَا اعْتَلَّتْ عَيْنُهُ وَلَامُهُ؛ كَ: (طَوَى)، وَنَوَى.",
+              "uz": "5 — Lafifi maqrun — ayni va lomi illatli bo'lgani; masalan: «tavo» (o'radi), «navo» (niyat qildi)."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "(١) هَذَا مُضَعَّفُ الثُّلَاثِيِّ، وَأَمَّا مُضَعَّفُ الرُّبَاعِيِّ فَهُوَ مَا كَانَتْ فَاؤُهُ وَلَامُهُ الْأُولَى مِنْ جِنْسٍ، وَعَيْنُهُ وَلَامُهُ الثَّانِيَةُ مِنْ جِنْسٍ؛ كَ: زَلْزَلَ وَوَسْوَسَ.",
+          "uz": "(1-izoh) Bu — uch harflining muzo'afidir. To'rt harflining muzo'afi esa fosi bilan birinchi lomi bir jinsdan, ayni bilan ikkinchi lomi bir jinsdan bo'lganidir; masalan: «zalzala» (silkitdi), «vasvasa» (vasvasa qildi)."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) يُقَالُ: يَدِيَ فُلَانٌ: ذَهَبَتْ يَدُهُ.",
+          "uz": "(2-izoh) «Yadiya falonchi» deyiladi — ya'ni uning qo'li ketdi."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِذَا خَلَا الْفِعْلُ مِنَ الْهَمْزِ وَالتَّضْعِيفِ وَالاِعْتِلَالِ، سُمِّيَ سَالِمًا؛ كَ: نَصَرَ وَضَرَبَ.",
+          "uz": "Fe'l hamza, tash'if (ikkilanish) va i'loldan xoli bo'lsa, «solim» deb ataladi; masalan «nasara» va «zaraba»."
+        },
+        {
+          "type": "para",
+          "ar": "وَلَا يَتَغَيَّرُ السَّالِمُ إِذَا أُسْنِدَ لِلضَّمَائِرِ، أَوِ الاِسْمِ الظَّاهِرِ، فَتَقُولُ فِي (نَصَرَ) مَثَلًا:",
+          "uz": "Solim fe'l zamirlarga yoki ochiq ismga bog'langanda o'zgarmaydi; masalan «nasara»da shunday deysan:"
+        },
+        {
+          "type": "para",
+          "ar": "لِلْغَائِبِ: نَصَرَ، نَصَرَا، نَصَرُوا، يَنْصُرُ، يَنْصُرَانِ، يَنْصُرُونَ.",
+          "uz": "G'oyib uchun: nasara, nasaro, nasaru, yansuru, yansuroni, yansuruna."
+        },
+        {
+          "type": "para",
+          "ar": "نَصَرَتْ، نَصَرَتَا، نَصَرْنَ، تَنْصُرُ، تَنْصُرَانِ، يَنْصُرْنَ.",
+          "uz": "Nasarat, nasarato, nasarna, tansuru, tansuroni, yansurna."
+        },
+        {
+          "type": "para",
+          "ar": "وَلِلْمُخَاطَبِ: نَصَرْتَ، نَصَرْتُمَا، نَصَرْتُمْ، تَنْصُرُ، تَنْصُرَانِ، تَنْصُرُونَ، انْصُرْ، انْصُرَا، انْصُرُوا.",
+          "uz": "Muxotab uchun: nasarta, nasartumo, nasartum, tansuru, tansuroni, tansuruna, unsur, unsuro, unsuru."
+        },
+        {
+          "type": "para",
+          "ar": "نَصَرْتِ، نَصَرْتُمَا، نَصَرْتُنَّ، تَنْصُرِينَ، تَنْصُرَانِ، تَنْصُرْنَ، انْصُرِي، انْصُرَا، انْصُرْنَ.",
+          "uz": "Nasarti, nasartumo, nasartunna, tansurina, tansuroni, tansurna, unsuri, unsuro, unsurna."
+        },
+        {
+          "type": "para",
+          "ar": "وَلِلْمُتَكَلِّمِ: نَصَرْتُ، نَصَرْنَا، أَنْصُرُ، نَنْصُرُ.",
+          "uz": "Mutakallim uchun: nasartu, nasarno, ansuru, nansuru."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَيَتَصَرَّفُ غَيْرُ السَّالِمِ كَالسَّالِمِ إِلَّا أَنَّ:",
+            "uz": "Solim bo'lmagan fe'l ham solim kabi tasarruf qilinadi; faqat:"
+          },
+          "items": [
+            {
+              "ar": "١ - الْمَهْمُوزَ: إِذَا تَوَالَى فِي أَوَّلِهِ هَمْزَتَانِ، وَسَكَنَتْ ثَانِيَتُهُمَا قُلِبَتِ الثَّانِيَةُ مَدًّا مُجَانِسًا لِحَرَكَةِ الْأُولَى؛ كَ: (آمَنْتُ، أُومِنُ، إِيمَانًا).",
+              "uz": "1 — Mahmuz fe'lda: boshida ketma-ket ikki hamza kelib, ikkinchisi sokin bo'lsa, ikkinchisi birinchisining harakatiga mos mad harfiga aylantiriladi; masalan: «omantu», «umin», «imonan»."
+            },
+            {
+              "ar": "٢ - وَالْمُضَعَّفَ يَدْخُلُهُ الْإِدْغَامُ، وَهُوَ إِدْخَالُ أَحَدِ الْحَرْفَيْنِ الْمُتَمَاثِلَيْنِ فِي الْآخَرِ، وَيَجِبُ الْإِدْغَامُ إِنْ كَانَ الْحَرْفَانِ الْمُتَمَاثِلَانِ مُتَحَرِّكَيْنِ؛ كَ: (مَدَّ يَمُدُّ).",
+              "uz": "2 — Muzo'af fe'lga idg'om kiradi. Idg'om — ikki bir xil harfning birini ikkinchisiga kiritishdir. Ikki bir xil harf harakatlangan bo'lsa, idg'om vojibdir; masalan: «madda–yamuddu»."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "وَشَذَّ: أَخَذَ وَأَكَلَ وَأَمَرَ فَتُحْذَفُ الْهَمْزَتَانِ مِنْ أَمْرِهَا؛ كَ: (خُذْ وَكُلْ وَمُرْ).",
+          "uz": "«Axaza», «akala» va «amara» qoidadan chetga chiqadi: ularning amrida ikki hamza tushiriladi; masalan: «xuz» (ol), «kul» (ye), «mur» (buyur)."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِلَّا (رَأَى) فَتُحْذَفُ الْعَيْنُ مِنْ مُضَارِعِهَا وَأَمْرِهَا؛ كَ: (يَرَى، وَرَهْ)، وَ(أَرَى) فَتُحْذَفُ الْعَيْنُ فِي جَمِيعِ تَصَارِيفِهَا؛ كَ: (أَرَى، وَيُرِي وَأَرِهْ).",
+          "uz": "«Ra'o» ham istisno: uning muzori'i va amridan ayni tushiriladi — «yaro», «rah» kabi. «Aro» esa barcha tasarruflarida aynini tushiradi — «aro», «yuri», «arih» kabi."
+        },
+        {
+          "type": "para",
+          "ar": "فَإِنْ كَانَ الْأَوَّلُ مُتَحَرِّكًا وَالثَّانِي سَاكِنًا وَجَبَ الْفَكُّ إِنْ كَانَ السُّكُونُ لَازِمًا.",
+          "uz": "Birinchisi harakatlangan, ikkinchisi sokin bo'lsa va sukun doimiy bo'lsa, fakk (ajratish) vojib bo'ladi."
+        }
+      ],
+      "exercise": []
     }
   ]
 }

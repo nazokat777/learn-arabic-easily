@@ -13183,6 +13183,234 @@
           "type": "para",
           "ar": "(١) الضَّمِيرُ يَعُودُ عَلَى الْكَافِ.",
           "uz": "(1-izoh) Zamir «kof»ga qaytadi."
+        },
+        {
+          "type": "para",
+          "ar": "وَكُلُّهَا سَمَاعِيَّةٌ إِلَّا مَا كَانَ عَلَى وَزْنِ فَعَالِ؛ كَ: نَزَالِ وَقَتَالِ، فَيُقَاسُ فِي كُلِّ فِعْلٍ ثُلَاثِيٍّ مُتَصَرِّفٍ غَيْرِ نَاقِصٍ.",
+          "uz": "Ularning hammasi samo'iydir — «fa'oli» vaznida bo'lganidan boshqasi; masalan «nazoli» (tush!), «qatoli» (jang qil!). U esa noqis bo'lmagan har bir uch harfli mutasarrif fe'lda qiyos qilinadi."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 5,
+      "page": 280,
+      "titleAr": "أَسْمَاءُ الْأَصْوَاتِ",
+      "title": "Ovoz ismlari",
+      "rule": {
+        "ar": "وَيَلْحَقُ بِأَسْمَاءِ الْأَفْعَالِ أَسْمَاءُ الْأَصْوَاتِ.",
+        "uz": "Ism fe'llarga ovoz ismlari ham qo'shiladi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَهِيَ عَلَى نَوْعَيْنِ: نَوْعٌ يُخَاطَبُ بِهِ مَا لَا يَعْقِلُ مِنَ الْحَيَوَانِ؛ كَ: (هُسْ) لِلْغَنَمِ، وَ(هِيدْ) لِلْجَمَلِ.",
+          "uz": "Ular ikki turdir: biri — hayvonlardan aqlsizlariga murojaat qilinadigan turi; masalan qo'yga «hus», tuyaga «hid»."
+        },
+        {
+          "type": "para",
+          "ar": "وَنَوْعٌ يُحْكَى بِهِ صَوْتٌ؛ كَ: (غَاقِ) لِصَوْتِ الْغُرَابِ، وَ(طَقْ) لِصَوْتِ الْحَجَرِ.",
+          "uz": "Ikkinchisi — bir ovoz taqlid qilinadigan turi; masalan qarg'a ovozi uchun «g'oqi», tosh ovozi uchun «taq»."
+        },
+        {
+          "type": "para",
+          "ar": "وَأَسْمَاءُ الْأَصْوَاتِ كُلُّهَا سَمَاعِيَّةٌ.",
+          "uz": "Ovoz ismlarining hammasi samo'iydir."
+        },
+        {
+          "type": "para",
+          "ar": "(١) أَيْ: فِي الْبِنَاءِ؛ لِمَا بَيْنَهُمَا مِنَ الْمُشَابَهَةِ ظَاهِرًا فِي أَنَّ كُلًّا مِنْهُمَا كَافٍ وَحْدَهُ بِدُونِ لَفْظٍ آخَرَ فِي الدَّلَالَةِ عَلَى الْمَعْنَى الْمَقْصُودِ.",
+          "uz": "(1-izoh) Ya'ni binoda; chunki ular orasida ochiq o'xshashlik bor: har biri ko'zda tutilgan ma'noga dalolat qilishda boshqa lafzsiz, yolg'iz o'zi yetarlidir."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) يَحْسُنُ أَنْ يُلْقِيَ الْمُعَلِّمُ عَلَى التَّلَامِيذِ قَدْرًا صَالِحًا مِنْ أَسْمَاءِ الْأَفْعَالِ وَالْأَصْوَاتِ.",
+          "uz": "(2-izoh) O'qituvchining o'quvchilarga ism fe'llar va ovoz ismlaridan yetarli miqdorini o'rgatishi yaxshidir."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 6,
+      "page": 281,
+      "titleAr": "الْبَابُ الثَّانِي فِي الْمُجَرَّدِ وَالْمَزِيدِ",
+      "title": "2-bob: mujarrad va mazid",
+      "rule": {
+        "ar": "يَنْقَسِمُ الْفِعْلُ إِلَى مُجَرَّدٍ وَمَزِيدٍ.",
+        "uz": "Fe'l mujarrad va mazidga bo'linadi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "فَالْمُجَرَّدُ: مَا كَانَتْ جَمِيعُ حُرُوفِهِ أَصْلِيَّةً.",
+          "uz": "Mujarrad — barcha harflari asliy bo'lgan fe'l."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْمَزِيدُ: مَا زِيدَ فِيهِ حَرْفٌ أَوْ أَكْثَرُ عَلَى حُرُوفِهِ الْأَصْلِيَّةِ.",
+          "uz": "Mazid — asliy harflariga bir yoki bir nechta harf qo'shilgan fe'l."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْمُجَرَّدُ قِسْمَانِ: ثُلَاثِيٌّ، وَرُبَاعِيٌّ.",
+          "uz": "Mujarrad ikki qismdir: uch harfli va to'rt harfli."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "أَمَّا الثُّلَاثِيُّ فَلَهُ سِتَّةُ أَوْزَانٍ:",
+            "uz": "Uch harflining oltita vazni bor:"
+          },
+          "items": [
+            {
+              "ar": "الْأَوَّلُ: فَعَلَ يَفْعُلُ؛ كَ: (نَصَرَ) يَنْصُرُ، وَقَتَلَ يَقْتُلُ.",
+              "uz": "Birinchisi: «fa'ala yaf'ulu»; masalan «nasara–yansuru» (yordam berdi), «qatala–yaqtulu» (o'ldirdi)."
+            },
+            {
+              "ar": "وَالثَّانِي: فَعَلَ يَفْعِلُ؛ كَ: (ضَرَبَ) يَضْرِبُ، وَجَلَسَ يَجْلِسُ.",
+              "uz": "Ikkinchisi: «fa'ala yaf'ilu»; masalan «zaraba–yazribu» (urdi), «jalasa–yajlisu» (o'tirdi)."
+            },
+            {
+              "ar": "وَالثَّالِثُ: فَعَلَ يَفْعَلُ؛ كَ: (فَتَحَ) يَفْتَحُ، وَمَنَعَ يَمْنَعُ.",
+              "uz": "Uchinchisi: «fa'ala yaf'alu»; masalan «fataha–yaftahu» (ochdi), «mana'a–yamna'u» (man qildi)."
+            },
+            {
+              "ar": "وَالرَّابِعُ: فَعِلَ يَفْعَلُ؛ كَ: (فَرِحَ) يَفْرَحُ، وَعَلِمَ يَعْلَمُ.",
+              "uz": "To'rtinchisi: «fa'ila yaf'alu»; masalan «fariha–yafrahu» (quvondi), «alima–ya'lamu» (bildi)."
+            },
+            {
+              "ar": "وَالْخَامِسُ: فَعُلَ يَفْعُلُ؛ كَ: (كَرُمَ) يَكْرُمُ، وَشَرُفَ يَشْرُفُ.",
+              "uz": "Beshinchisi: «fa'ula yaf'ulu»; masalan «karuma–yakrumu» (karam qildi), «sharufa–yashrufu» (sharafli bo'ldi)."
+            },
+            {
+              "ar": "وَالسَّادِسُ: فَعِلَ يَفْعِلُ؛ كَ: (حَسِبَ) يَحْسِبُ، وَنَعِمَ يَنْعِمُ.",
+              "uz": "Oltinchisi: «fa'ila yaf'ilu»; masalan «hasiba–yahsibu» (hisobladi), «na'ima–yan'imu» (ne'matda bo'ldi)."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "وَأَمَّا الرُّبَاعِيُّ فَلَهُ وَزْنٌ وَاحِدٌ، وَهُوَ: فَعْلَلَ يُفَعْلِلُ؛ كَ: دَحْرَجَ يُدَحْرِجُ، وَوَسْوَسَ يُوَسْوِسُ.",
+          "uz": "To'rt harflining esa bitta vazni bor: «fa'lala yufa'lilu»; masalan «dahraja–yudahriju» (dumaladi), «vasvasa–yuvasvisu» (vasvasa qildi)."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْمَزِيدُ قِسْمَانِ: مَزِيدُ الثُّلَاثِيِّ، وَمَزِيدُ الرُّبَاعِيِّ.",
+          "uz": "Mazid ikki qismdir: uch harflining mazidi va to'rt harflining mazidi."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "فَمَزِيدُ الثُّلَاثِيِّ: إِمَّا أَنْ تَكُونَ زِيَادَتُهُ بِحَرْفٍ وَاحِدٍ؛ وَلَهُ ثَلَاثَةُ أَوْزَانٍ:",
+            "uz": "Uch harflining mazidi: ortiqchaligi bitta harf bo'lishi mumkin; uning uchta vazni bor:"
+          },
+          "items": [
+            {
+              "ar": "أَفْعَلَ يُفْعِلُ؛ كَ: أَكْرَمَ يُكْرِمُ، وَأَحْسَنَ يُحْسِنُ.",
+              "uz": "«Af'ala yuf'ilu»; masalan «akrama–yukrimu» (hurmat qildi), «ahsana–yuhsinu» (yaxshilik qildi)."
+            },
+            {
+              "ar": "وَفَعَّلَ يُفَعِّلُ؛ كَ: قَدَّمَ يُقَدِّمُ، وَعَظَّمَ يُعَظِّمُ.",
+              "uz": "«Fa''ala yufa''ilu»; masalan «qaddama–yuqaddimu» (taqdim qildi), «azzama–yu'azzimu» (ulug'ladi)."
+            },
+            {
+              "ar": "وَفَاعَلَ يُفَاعِلُ؛ كَ: قَاتَلَ يُقَاتِلُ، وَضَارَبَ يُضَارِبُ.",
+              "uz": "«Fo'ala yufo'ilu»; masalan «qotala–yuqotilu» (jang qildi), «zoraba–yuzoribu» (urishdi)."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَإِمَّا أَنْ تَكُونَ زِيَادَتُهُ بِحَرْفَيْنِ، وَلَهُ خَمْسَةُ أَوْزَانٍ:",
+            "uz": "Yoki ortiqchaligi ikki harf bo'ladi; uning beshta vazni bor:"
+          },
+          "items": [
+            {
+              "ar": "انْفَعَلَ يَنْفَعِلُ؛ كَ: انْطَلَقَ يَنْطَلِقُ، وَانْكَسَرَ يَنْكَسِرُ.",
+              "uz": "«Infa'ala yanfa'ilu»; masalan «intalaqa–yantaliqu» (yo'lga chiqdi), «inkasara–yankasiru» (sindi)."
+            },
+            {
+              "ar": "وَافْتَعَلَ يَفْتَعِلُ؛ كَ: اجْتَمَعَ يَجْتَمِعُ، وَاقْتَدَرَ يَقْتَدِرُ.",
+              "uz": "«Ifta'ala yafta'ilu»; masalan «ijtama'a–yajtami'u» (yig'ildi), «iqtadara–yaqtadiru» (qodir bo'ldi)."
+            },
+            {
+              "ar": "وَافْعَلَّ يَفْعَلُّ؛ كَ: احْمَرَّ يَحْمَرُّ، وَابْيَضَّ يَبْيَضُّ.",
+              "uz": "«If'alla yaf'allu»; masalan «ihmarra–yahmarru» (qizardi), «ibyazza–yabyazzu» (oqardi)."
+            },
+            {
+              "ar": "وَتَفَاعَلَ يَتَفَاعَلُ؛ كَ: تَشَارَكَ يَتَشَارَكُ، وَتَسَابَقَ يَتَسَابَقُ.",
+              "uz": "«Tafo'ala yatafo'alu»; masalan «tashoraka–yatashoraku» (sherik bo'ldi), «tasobaqa–yatasobaqu» (musobaqalashdi)."
+            },
+            {
+              "ar": "وَتَفَعَّلَ يَتَفَعَّلُ؛ كَ: تَعَلَّمَ يَتَعَلَّمُ، وَتَبَصَّرَ يَتَبَصَّرُ.",
+              "uz": "«Tafa''ala yatafa''alu»; masalan «ta'allama–yata'allamu» (o'rgandi), «tabassara–yatabassaru» (basirat bilan qaradi)."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَإِمَّا أَنْ تَكُونَ بِثَلَاثَةِ أَحْرُفٍ، وَلَهُ أَرْبَعَةُ أَوْزَانٍ:",
+            "uz": "Yoki uch harf bilan bo'ladi; uning to'rtta vazni bor:"
+          },
+          "items": [
+            {
+              "ar": "اسْتَفْعَلَ يَسْتَفْعِلُ؛ كَ: اسْتَغْفَرَ يَسْتَغْفِرُ، وَاسْتَخْرَجَ يَسْتَخْرِجُ.",
+              "uz": "«Istaf'ala yastaf'ilu»; masalan «istag'fara–yastag'firu» (mag'firat so'radi), «istaxraja–yastaxriju» (chiqarib oldi)."
+            },
+            {
+              "ar": "وَافْعَوْعَلَ يَفْعَوْعِلُ؛ كَ: اخْشَوْشَنَ يَخْشَوْشِنُ، وَاغْرَوْرَقَ يَغْرَوْرِقُ.",
+              "uz": "«If'av'ala yaf'av'ilu»; masalan «ixshavshana–yaxshavshinu» (juda qo'pol bo'ldi), «ig'ravraqa–yag'ravriqu» (ko'z yoshga to'ldi)."
+            },
+            {
+              "ar": "وَافْعَوَّلَ يَفْعَوِّلُ؛ كَ: اجْلَوَّذَ يَجْلَوِّذُ، وَاعْلَوَّطَ يَعْلَوِّطُ.",
+              "uz": "«If'avvala yaf'avvilu»; masalan «ijlavvaza–yajlavvizu», «i'lavvata–ya'lavvitu»."
+            },
+            {
+              "ar": "وَافْعَالَّ يَفْعَالُّ؛ كَ: احْمَارَّ يَحْمَارُّ، وَابْيَاضَّ يَبْيَاضُّ.",
+              "uz": "«If'olla yaf'ollu»; masalan «ihmorra–yahmorru» (asta-sekin qizardi), «ibyozza–yabyozzu» (asta-sekin oqardi)."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "وَمَزِيدُ الرُّبَاعِيِّ: إِمَّا أَنْ تَكُونَ زِيَادَتُهُ بِحَرْفٍ وَاحِدٍ، وَلَهُ وَزْنٌ وَاحِدٌ، وَهُوَ: تَفَعْلَلَ يَتَفَعْلَلُ؛ كَ: تَدَحْرَجَ يَتَدَحْرَجُ، وَتَبَعْثَرَ يَتَبَعْثَرُ.",
+          "uz": "To'rt harflining mazidi: ortiqchaligi bitta harf bo'lishi mumkin; uning bitta vazni bor — «tafa'lala yatafa'lalu»; masalan «tadahraja–yatadahraju» (dumalandi), «taba'sara–yataba'saru» (sochilib ketdi)."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَإِمَّا أَنْ تَكُونَ زِيَادَتُهُ بِحَرْفَيْنِ، وَلَهُ وَزْنَانِ:",
+            "uz": "Yoki ortiqchaligi ikki harf bo'ladi; uning ikkita vazni bor:"
+          },
+          "items": [
+            {
+              "ar": "افْعَنْلَلَ يَفْعَنْلِلُ؛ كَ: اخْرَنْجَمَ يَخْرَنْجِمُ، وَافْرَنْقَعَ يَفْرَنْقِعُ.",
+              "uz": "«If'anlala yaf'anlilu»; masalan «ixranjama–yaxranjimu» (to'planib qoldi), «ifranqa'a–yafranqi'u» (tarqaldi)."
+            },
+            {
+              "ar": "وَافْعَلَلَّ يَفْعَلِلُّ؛ كَ: اطْمَأَنَّ يَطْمَئِنُّ، وَاقْشَعَرَّ يَقْشَعِرُّ.",
+              "uz": "«If'alalla yaf'alillu»; masalan «itma'anna–yatma'innu» (xotirjam bo'ldi), «iqsha'arra–yaqsha'irru» (badani junjikdi)."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "فَالْفِعْلُ بِاعْتِبَارِ مَادَّتِهِ أَرْبَعَةُ أَنْوَاعٍ: ثُلَاثِيٌّ، وَرُبَاعِيٌّ، وَخُمَاسِيٌّ، وَسُدَاسِيٌّ، وَبِاعْتِبَارِ صُوَرِهِ: اثْنَانِ وَعِشْرُونَ.",
+          "uz": "Demak, fe'l moddasi jihatidan to'rt turdir: uch harfli, to'rt harfli, besh harfli va olti harfli; shakllari jihatidan esa yigirma ikkitadir."
+        },
+        {
+          "type": "para",
+          "ar": "(١) اجْلَوَّذَ فُلَانٌ: أَسْرَعَ فِي سَيْرِهِ، وَاعْلَوَّطَ الْبَعِيرَ: رَكِبَهُ.",
+          "uz": "(1-izoh) «Ijlavvaza falonchi» — yurishida shoshildi; «i'lavvata tuyani» — unga mindi."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) الْفَرْقُ بَيْنَ احْمَرَّ وَاحْمَارَّ: أَنَّ فِي الثَّانِي نَصًّا عَلَى التَّدَرُّجِ؛ كَأَنَّهُ قَالَ: احْمَرَّ شَيْئًا فَشَيْئًا.",
+          "uz": "(2-izoh) «Ihmarra» bilan «ihmorra» orasidagi farq: ikkinchisida bosqichma-bosqichlikka ochiq ishora bor; go'yo «asta-sekin qizardi» degandek."
         }
       ],
       "exercise": []

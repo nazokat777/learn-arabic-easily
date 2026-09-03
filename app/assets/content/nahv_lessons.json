@@ -16800,6 +16800,233 @@
         }
       ],
       "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 46,
+      "page": 340,
+      "titleAr": "الْفَصْلُ الثَّانِي فِي الْعَلَمِ",
+      "title": "2-fasl: alam (atoqli ism)",
+      "rule": {
+        "ar": "وَهُوَ مَا وُضِعَ لِمُسَمًّى مُعَيَّنٍ بِدُونِ احْتِيَاجٍ إِلَى قَرِينَةٍ؛ كَ: أَحْمَدَ وَسُعَادَ وَبَغْدَادَ وَالْعِرَاقِ.",
+        "uz": "U — qarinaga muhtoj bo'lmagan holda aniq bir nomlanuvchi uchun qo'yilgan ismdir; masalan: Ahmad, Su'od, Bag'dod, Iroq."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَيَنْقَسِمُ إِلَى مُفْرَدٍ؛ كَ: مَحْمُودٍ وَإِبْرَاهِيمَ.",
+          "uz": "U mufradga bo'linadi; masalan: Mahmud, Ibrohim."
+        },
+        {
+          "type": "para",
+          "ar": "وَمُرَكَّبٍ إِضَافِيٍّ؛ كَ: عَبْدِ اللَّهِ وَزَيْنِ الْعَابِدِينَ.",
+          "uz": "Va izofiy tarkibga; masalan: Abdulloh, Zaynulobidin."
+        },
+        {
+          "type": "para",
+          "ar": "أَوْ مَزْجِيٍّ؛ كَ: بُخْتُنَصَّرَ وَسِيبَوَيْهِ.",
+          "uz": "Yoki mazjiy (qo'shilib ketgan) tarkibga; masalan: Buxtunassar, Sibavayh."
+        },
+        {
+          "type": "para",
+          "ar": "أَوْ إِسْنَادِيٍّ؛ كَ: جَادَ الْحَقُّ.",
+          "uz": "Yoki isnodiy (gap shaklidagi) tarkibga; masalan: «Jodal-Haqq»."
+        },
+        {
+          "type": "para",
+          "ar": "وَحُكْمُ الْإِضَافِيِّ: أَنْ يُعْرَبَ صَدْرُهُ عَلَى حَسَبِ الْعَوَامِلِ، وَعَجُزُهُ بِالْإِضَافَةِ.",
+          "uz": "Izofiyning hukmi: uning boshi omillarga ko'ra i'rob qilinadi, oxiri esa izofa bilan."
+        },
+        {
+          "type": "para",
+          "ar": "وَحُكْمُ الْمَزْجِيِّ: أَنْ يُمْنَعَ مِنَ الصَّرْفِ إِلَّا إِذَا خُتِمَ بِـ(وَيْهِ)، فَيُبْنَى عَلَى الْكَسْرِ.",
+          "uz": "Mazjiyning hukmi: u sarfdan man qilinadi — faqat «vayh» bilan tugagan bo'lsa, kasra uzra mabniy bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَحُكْمُ الْإِسْنَادِيِّ: أَنْ يَبْقَى عَلَى حَالِهِ قَبْلَ الْعَلَمِيَّةِ وَيُحْكَى.",
+          "uz": "Isnodiyning hukmi: u alamlikdan oldingi holicha qoladi va shu holda hikoya qilinadi."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَنْقَسِمُ أَيْضًا إِلَى اسْمٍ وَكُنْيَةٍ وَلَقَبٍ.",
+          "uz": "U yana ism, kunya va laqabga bo'linadi."
+        },
+        {
+          "type": "para",
+          "ar": "فَالْكُنْيَةُ: كُلُّ مُرَكَّبٍ إِضَافِيٍّ صَدْرُهُ أَبٌ أَوْ أُمٌّ؛ كَ: أَبِي بَكْرٍ وَأُمِّ عَمْرٍو.",
+          "uz": "Kunya — boshi «ab» yoki «umm» bo'lgan har bir izofiy tarkib; masalan: Abu Bakr, Ummu Amr."
+        },
+        {
+          "type": "para",
+          "ar": "وَاللَّقَبُ: كُلُّ مَا أَشْعَرَ بِرِفْعَةٍ أَوْ ضَعَةٍ؛ كَ: الرَّشِيدِ وَالْجَاحِظِ.",
+          "uz": "Laqab — yuksaklikka yoki pastlikka ishora qiladigan har bir nom; masalan: ar-Rashid, al-Johiz."
+        },
+        {
+          "type": "para",
+          "ar": "وَالاِسْمُ: مَا عَدَاهُمَا؛ كَ: هَارُونَ وَعَمْرٍو.",
+          "uz": "Ism — bu ikkisidan boshqasi; masalan: Horun, Amr."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُؤَخَّرُ اللَّقَبُ عَنِ الاِسْمِ؛ كَ: هَارُونَ الرَّشِيدِ وَعَمْرٍو الْجَاحِظِ، وَلَا تَرْتِيبَ بَيْنَ الْكُنْيَةِ وَغَيْرِهَا.",
+          "uz": "Laqab ismdan keyin keltiriladi; masalan: Horun ar-Rashid, Amr al-Johiz. Kunya bilan boshqalari orasida tartib yo'q."
+        },
+        {
+          "type": "para",
+          "ar": "وَقَدْ يُعَامَلُ اللَّفْظُ الدَّالُّ عَلَى الْجِنْسِ مُعَامَلَةَ الْعَلَمِ، فَلَا تَدْخُلُهُ أَلْ، وَلَا يُضَافُ، وَيَأْتِي مِنْهُ الْحَالُ، وَيُمْنَعُ مِنَ الصَّرْفِ مَعَ سَبَبٍ آخَرَ، وَيُسَمَّى (عَلَمَ جِنْسٍ)؛ كَ: أُسَامَةَ لِلْأَسَدِ، وَكَيْسَانَ لِلْغَدْرِ، وَشَعُوبَ، وَأُمِّ قَشْعَمٍ لِلْمَوْتِ. وَهُوَ مَقْصُورٌ عَلَى السَّمَاعِ.",
+          "uz": "Ba'zan jinsga dalolat qiluvchi lafzga alam kabi muomala qilinadi: unga «al» kirmaydi, izofa qilinmaydi, undan hol keladi va boshqa sabab bilan birga sarfdan man qilinadi; u «alami jins» deb ataladi; masalan: sher uchun «Usoma», xiyonat uchun «Kayson», o'lim uchun «Shu'ub» va «Ummu Qash'am». U samo'ga bog'liqdir."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 47,
+      "page": 341,
+      "titleAr": "الْفَصْلُ الثَّالِثُ فِي اسْمِ الْإِشَارَةِ",
+      "title": "3-fasl: ishora ismi",
+      "rule": {
+        "ar": "هُوَ مَا وُضِعَ لِمُعَيَّنٍ بِوَاسِطَةِ إِشَارَةٍ حِسِّيَّةٍ.",
+        "uz": "U — hissiy ishora vositasida aniq bir narsa uchun qo'yilgan ismdir."
+      },
+      "blocks": [
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَأَلْفَاظُهُ:",
+            "uz": "Uning lafzlari:"
+          },
+          "items": [
+            {
+              "ar": "ذَا (لِلْوَاحِدِ).",
+              "uz": "«Zo» — birlik (erkak) uchun."
+            },
+            {
+              "ar": "وَذِي وَذِهِ وَتِي وَتِهِ (لِلْوَاحِدَةِ).",
+              "uz": "«Zi», «zihi», «ti», «tihi» — birlik (ayol) uchun."
+            },
+            {
+              "ar": "وَذَانِ أَوْ ذَيْنِ (لِلاِثْنَيْنِ).",
+              "uz": "«Zoni» yoki «zayni» — ikkilik (erkak) uchun."
+            },
+            {
+              "ar": "وَتَانِ أَوْ تَيْنِ (لِلاِثْنَتَيْنِ).",
+              "uz": "«Toni» yoki «tayni» — ikkilik (ayol) uchun."
+            },
+            {
+              "ar": "وَأُولَاءِ (لِلْجَمَاعَةِ مُطْلَقًا).",
+              "uz": "«Ulo'i» — mutlaq jamoa uchun."
+            },
+            {
+              "ar": "وَهُنَا (لِلْمَكَانِ).",
+              "uz": "«Huno» — makon uchun."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "وَكَثِيرًا مَا تَسْبِقُهَا هَا التَّنْبِيهِ، فَيُقَالُ: هَذَا، وَهَذِي، وَهَذِهِ، وَهَلُمَّ جَرًّا.",
+          "uz": "Ko'pincha ulardan oldin tanbeh «ho»si keladi; shunda: hazo, hazi, hazihi va shu tariqa deyiladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَقَدْ تَلْحَقُ (ذَا) وَ(تِي) وَ(هُنَا) الْكَافُ وَحْدَهَا، أَوْ مَعَ اللَّامِ، فَيُقَالُ: ذَاكَ وَتِيكَ وَهُنَاكَ وَذَلِكَ وَتِلْكَ وَهُنَالِكَ.",
+          "uz": "«Zo», «ti» va «huno»ga «kof» yolg'iz yoki «lom» bilan birga qo'shilishi mumkin; shunda: zoka, tika, hunoka, zolika, tilka, hunolika deyiladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَتَلْحَقُ ذَيْنِ وَتَيْنِ وَأُولَاءِ الْكَافُ وَحْدَهَا، فَيُقَالُ: ذَانِكَ وَتَانِكَ وَأُولَئِكَ.",
+          "uz": "«Zayni», «tayni» va «ulo'i»ga «kof» yolg'iz qo'shiladi; shunda: zonika, tonika, ulo'ika deyiladi."
+        },
+        {
+          "type": "para",
+          "ar": "(١) هَذِهِ الْكَافُ حَرْفُ خِطَابٍ، وَتَتَصَرَّفُ تَصَرُّفَ الْكَافِ الاِسْمِيَّةِ، فَتَقُولُ: ذَلِكَ وَذَلِكِ وَذَلِكُمَا وَذَلِكُمْ وَذَلِكُنَّ نَظَرًا لِلْمُخَاطَبِ.",
+          "uz": "(1-izoh) Bu «kof» xitob harfidir; u ismiy «kof» kabi tasarruf qilinadi. Shuning uchun muxotabga qarab: zolika, zoliki, zolikumo, zolikum, zolikunna deysan."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَجُوزُ الْجَمْعُ بَيْنَ الْكَافِ وَحْدَهَا وَهَا، فَيُقَالُ: هَذَاكَ وَهَاتِيكَ، بِخِلَافِ الْكَافِ الْمَصْحُوبَةِ بِاللَّامِ فَلَا يُقَالُ: هَذَلِكَ.",
+          "uz": "«Kof»ni yolg'iz holda «ho» bilan birga keltirish joizdir; shunda «hazoka» va «hotika» deyiladi. «Lom» bilan kelgan «kof» esa bundan farq qiladi: «hazolika» deyilmaydi."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 48,
+      "page": 342,
+      "titleAr": "الْفَصْلُ الرَّابِعُ فِي الْمَوْصُولِ",
+      "title": "4-fasl: mavsul",
+      "rule": {
+        "ar": "هُوَ مَا وُضِعَ لِمُعَيَّنٍ بِوَاسِطَةِ جُمْلَةٍ تُذْكَرُ بَعْدَهُ تُسَمَّى صِلَةً.",
+        "uz": "U — o'zidan keyin keltiriladigan va «sila» deb ataladigan gap vositasida aniq bir narsa uchun qo'yilgan ismdir."
+      },
+      "blocks": [
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَأَلْفَاظُهُ:",
+            "uz": "Uning lafzlari:"
+          },
+          "items": [
+            {
+              "ar": "الَّذِي لِلْوَاحِدِ.",
+              "uz": "«Allazi» — birlik (erkak) uchun."
+            },
+            {
+              "ar": "وَالَّتِي لِلْوَاحِدَةِ.",
+              "uz": "«Allati» — birlik (ayol) uchun."
+            },
+            {
+              "ar": "وَاللَّذَانِ أَوِ اللَّذَيْنِ لِلاِثْنَيْنِ.",
+              "uz": "«Allazani» yoki «allazayni» — ikkilik (erkak) uchun."
+            },
+            {
+              "ar": "وَاللَّتَانِ أَوِ اللَّتَيْنِ لِلاِثْنَتَيْنِ.",
+              "uz": "«Allatani» yoki «allatayni» — ikkilik (ayol) uchun."
+            },
+            {
+              "ar": "وَالَّذِينَ وَالْأُولَى لِجَمَاعَةِ الذُّكُورِ الْعُقَلَاءِ.",
+              "uz": "«Allazina» va «al-ulo» — aqlli erkaklar jamoasi uchun."
+            },
+            {
+              "ar": "وَاللَّاتِي وَاللَّائِي لِجَمَاعَاتِ الْإِنَاثِ.",
+              "uz": "«Allati» va «alloi» — ayollar jamoalari uchun."
+            },
+            {
+              "ar": "وَمَنْ وَمَا وَأَيٌّ لِجَمِيعِ مَا ذُكِرَ.",
+              "uz": "«Man», «mo» va «ayyun» — sanalganlarning hammasi uchun."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "غَيْرَ أَنَّ مَنْ تَكُونُ لِلْعَاقِلِ، وَمَا لِغَيْرِهِ، وَأَيٌّ بِحَسَبِ مَا تُضَافُ إِلَيْهِ.",
+          "uz": "Faqat «man» aqlli zot uchun, «mo» undan boshqasi uchun bo'ladi; «ayyun» esa nimaga izofa qilinishiga qarab bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُشْتَرَطُ فِي جُمْلَةِ الصِّلَةِ أَنْ تَكُونَ: خَبَرِيَّةً، مَعْهُودَةً، مُشْتَمِلَةً عَلَى ضَمِيرٍ يُطَابِقُ الْمَوْصُولَ، وَيُسَمَّى عَائِدًا.",
+          "uz": "Sila gapida shu shart: u xabariy, ma'lum bo'lishi va mavsulga mos keladigan — «oid» deb ataladigan — zamirni o'z ichiga olishi kerak."
+        },
+        {
+          "type": "para",
+          "ar": "تَقُولُ: أَكْرِمِ الَّذِي عَلَّمَكَ، وَالَّتِي عَلَّمَتْكَ، وَاللَّذَيْنِ عَلَّمَاكَ، وَاللَّتَيْنِ عَلَّمَتَاكَ، وَالَّذِينَ عَلَّمُوكَ، وَاللَّاتِي عَلَّمْنَكَ، وَمَنْ عَلَّمَكَ أَوْ عَلَّمَتْكَ، وَاحْفَظْ مَا تَعَلَّمْتَهُ، وَسَلِّمْ عَلَى أَيِّهِمْ أَفْضَلُ، وَهَكَذَا.",
+          "uz": "Shunday deysan: «Senga o'rgatgan kishini hurmat qil», «senga o'rgatgan ayolni», «senga o'rgatgan ikki kishini», «senga o'rgatgan ikki ayolni», «senga o'rgatganlarni», «senga o'rgatgan ayollarni», «senga o'rgatgan kimsani», «o'rgangan narsangni yodda saqla», «ularning eng afzaliga salom ber» — va shu tariqa."
+        },
+        {
+          "type": "para",
+          "ar": "وَقَدْ تَقَعُ الصِّلَةُ ظَرْفًا أَوْ جَارًّا وَمَجْرُورًا؛ كَ: الَّذِي عِنْدَكَ، أَوِ الَّذِي فِي الدَّارِ.",
+          "uz": "Sila zarf yoki jorr va majrur bo'lib ham kelishi mumkin; masalan: «senda bo'lgani», «uydagi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَقَدْ يُحْذَفُ الْعَائِدُ؛ نَحْوُ: فَسَلِّمْ عَلَى أَيِّهِمْ أَفْضَلُ. ﴿يَعْلَمُ مَا يُسِرُّونَ وَمَا يُعْلِنُونَ﴾. ﴿فَاقْضِ مَا أَنْتَ قَاضٍ﴾. ﴿وَتَشْرَبُ مِمَّا تَشْرَبُونَ﴾.",
+          "uz": "«Oid» tushirilishi ham mumkin; masalan: «Ularning eng afzaliga salom ber», «U sirlarini ham, oshkor qilganlarini ham biladi», «Nima hukm qilsang, hukm qilaver», «Siz ichadigan narsadan ichadi»."
+        }
+      ],
+      "exercise": []
     }
   ]
 }

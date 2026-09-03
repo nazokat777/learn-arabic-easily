@@ -13033,6 +13033,159 @@
         }
       ],
       "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 3,
+      "page": 277,
+      "titleAr": "الْكَلَامُ عَلَى الْفِعْلِ: الْبَابُ الْأَوَّلُ - فِي الْمَاضِي وَالْمُضَارِعِ وَالْأَمْرِ",
+      "title": "Fe'l haqida so'z: 1-bob — mozi, muzori' va amr",
+      "rule": {
+        "ar": "يَنْقَسِمُ الْفِعْلُ إِلَى: مَاضٍ، وَمُضَارِعٍ، وَأَمْرٍ.",
+        "uz": "Fe'l mozi, muzori' va amrga bo'linadi. (Fe'l haqidagi so'zda to'qqiz bob bor.)"
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "فَالْمَاضِي: مَا يَدُلُّ عَلَى حُدُوثِ شَيْءٍ مَضَى قَبْلَ زَمَنِ التَّكَلُّمِ؛ مِثْلُ: قَرَأَ.",
+          "uz": "Mozi — gapirish paytidan oldin o'tgan bir ishning sodir bo'lganiga dalolat qiluvchi fe'ldir; masalan: «o'qidi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَعَلَامَتُهُ: أَنْ يَقْبَلَ تَاءَ الْفَاعِلِ؛ كَ: قَرَأْتُ. وَتَاءَ التَّأْنِيثِ السَّاكِنَةَ: كَقَرَأَتْ.",
+          "uz": "Uning alomati: foil «to»sini qabul qilishidir — «qara'tu» kabi; hamda sokin ta'nis «to»sini — «qara'at» kabi."
+        },
+        {
+          "type": "para",
+          "ar": "(١) هَذِهِ التَّاءُ تَكُونُ سَاكِنَةً إِذَا وَلِيَهَا مُتَحَرِّكٌ؛ نَحْوُ: قَالَتْ فَاطِمَةُ، فَإِنْ وَلِيَهَا سَاكِنٌ كُسِرَتْ لِلتَّخَلُّصِ مِنَ الْتِقَاءِ السَّاكِنَيْنِ؛ كَ: ﴿وَقَالَتِ امْرَأَتُ الْعَزِيزِ﴾، إِلَّا إِذَا كَانَ السَّاكِنُ أَلِفَ اثْنَتَيْنِ فَتُفْتَحُ؛ نَحْوُ قَوْلِهِ تَعَالَى: ﴿قَالَتَا أَتَيْنَا طَائِعِينَ﴾.",
+          "uz": "(1-izoh) Bu «to» o'zidan keyin harakatlangan harf kelsa, sokin bo'ladi; masalan: «Fotima aytdi». Undan keyin sokin harf kelsa, ikki sokinning uchrashuvidan qutulish uchun kasra qilinadi; masalan: «Aziz ayoli aytdi». Faqat o'sha sokin ikkilik alifi bo'lsa, fatha qilinadi; masalan Alloh taoloning: «Ikkovi aytdi: itoat qilgan holda keldik» degan so'zi kabi."
+        },
+        {
+          "type": "para",
+          "ar": "وَكُلُّ حَرْفٍ صَحِيحٍ سَاكِنٍ فِي آخِرِ الْكَلِمَةِ يُحَرَّكُ بِالْكَسْرِ إِذَا تَلَاهُ سَاكِنٌ آخَرُ؛ نَحْوُ: خُذِ الْكِتَابَ، وَلَا تُهْمِلِ الْمُطَالَعَةَ.",
+          "uz": "So'z oxiridagi har bir sokin sahih harf, undan keyin boshqa sokin kelsa, kasra bilan harakatlanadi; masalan: «Kitobni ol», «Mutolaani tark etma»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُسْتَثْنَى مِنْ ذَلِكَ مَوْضِعَانِ: الْأَوَّلُ: إِذَا كَانَتِ الْكَلِمَةُ الْأُولَى «مِنْ»، وَالثَّانِيَةُ: «أَلْ»، فَإِنَّ السَّاكِنَ الْأَوَّلَ يُحَرَّكُ حِينَئِذٍ بِالْفَتْحِ؛ نَحْوُ: مِنَ الْكِتَابِ.",
+          "uz": "Bundan ikki o'rin mustasno qilinadi. Birinchisi: birinchi so'z «min», ikkinchisi «al» bo'lsa — u holda birinchi sokin fatha bilan harakatlanadi; masalan: «kitobdan»."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْمَوْضِعُ الثَّانِي: إِذَا كَانَتِ الْكَلِمَةُ الْأُولَى مُنْتَهِيَةً بِمِيمِ الْجَمْعِ، فَإِنَّ السَّاكِنَ الْأَوَّلَ يُحَرَّكُ بِالضَّمِّ؛ نَحْوُ: ﴿لَهُمُ الْبُشْرَى﴾.",
+          "uz": "Ikkinchi o'rin: birinchi so'z jam' «mim»i bilan tugagan bo'lsa — u holda birinchi sokin damma bilan harakatlanadi; masalan: «Ular uchun xushxabar bor»."
+        },
+        {
+          "type": "para",
+          "ar": "فَإِنْ كَانَ آخِرُ الْكَلِمَةِ الْأُولَى حَرْفَ مَدٍّ، أَوْ وَاوَ جَمَاعَةٍ، أَوْ يَاءَ مُخَاطَبَةٍ حُذِفَ لِلتَّخَلُّصِ؛ نَحْوُ: ﴿اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ﴾، ﴿وَقَالُوا الْحَمْدُ لِلَّهِ﴾. الْبَسِي الثَّوْبَ.",
+          "uz": "Birinchi so'zning oxiri mad harfi, jamoa vovi yoki muxotaba yosi bo'lsa, qutulish uchun u tushiriladi; masalan: «Bizni to'g'ri yo'lga hidoyat qil», «Ular dedilar: hamd Allohga», «Kiyimni kiy»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُغْتَفَرُ الْتِقَاءُ السَّاكِنَيْنِ إِذَا كَانَا فِي كَلِمَةٍ وَاحِدَةٍ، وَأَوَّلُهُمَا حَرْفُ لِينٍ، وَثَانِيهِمَا مُدْغَمٌ فِي مِثْلِهِ؛ نَحْوُ: خَاصَّةٍ، وَالضَّالِّينَ.",
+          "uz": "Ikki sokinning uchrashuviga kechirim beriladi — agar ikkisi bir so'zda bo'lib, birinchisi «lin» harfi, ikkinchisi o'ziga o'xshashiga idg'om qilingan bo'lsa; masalan: «xossa», «az-zollin»."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْمُضَارِعُ: مَا يَدُلُّ عَلَى حُدُوثِ شَيْءٍ فِي زَمَنِ التَّكَلُّمِ أَوْ بَعْدَهُ؛ فَهُوَ صَالِحٌ لِلْحَالِ وَالاِسْتِقْبَالِ.",
+          "uz": "Muzori' — bir ishning gapirish paytida yoki undan keyin sodir bo'lishiga dalolat qiluvchi fe'ldir; u hozirgi va kelasi zamon uchun yaraydi."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُعَيِّنُهُ لِلْحَالِ: لَامُ التَّوْكِيدِ، وَ«مَا» النَّافِيَةُ؛ نَحْوُ: ﴿إِنِّي لَيَحْزُنُنِي أَنْ تَذْهَبُوا بِهِ﴾، وَ﴿وَمَا تَدْرِي نَفْسٌ مَاذَا تَكْسِبُ غَدًا وَمَا تَدْرِي نَفْسٌ بِأَيِّ أَرْضٍ تَمُوتُ﴾.",
+          "uz": "Uni hozirgi zamonga xoslaydi: ta'kid lomi va inkor «mo»si; masalan: «Uni olib ketishingiz meni qayg'uga soladi», «Hech bir jon ertaga nima kasb qilishini bilmaydi va hech bir jon qaysi yerda o'lishini bilmaydi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُعَيِّنُهُ لِلاِسْتِقْبَالِ: السِّينُ وَسَوْفَ وَأَنْ وَلَنْ وَإِنْ؛ نَحْوُ: ﴿سَيَصْلَى نَارًا﴾، ﴿سَوْفَ يُرَى﴾، ﴿لَنْ تَرَانِي﴾، ﴿وَأَنْ تَصُومُوا خَيْرٌ لَكُمْ﴾، ﴿وَإِنْ يَتَفَرَّقَا يُغْنِ اللَّهُ كُلًّا مِنْ سَعَتِهِ﴾.",
+          "uz": "Uni kelasi zamonga xoslaydi: «sin», «savfa», «an», «lan» va «in»; masalan: «U olovga kiradi», «Ko'riladi», «Meni ko'ra olmaysan», «Ro'za tutishingiz siz uchun yaxshiroqdir», «Agar ikkovi ajrashsa, Alloh har birini O'z kengligidan boy qiladi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَعَلَامَتُهُ: أَنْ يَصِحَّ وُقُوعُهُ بَعْدَ (لَمْ)؛ كَ: (لَمْ يَقْرَأْ).",
+          "uz": "Uning alomati: «lam»dan keyin kelishi to'g'ri bo'lishidir; masalan: «lam yaqra'» (o'qimadi)."
+        },
+        {
+          "type": "para",
+          "ar": "وَلَا بُدَّ أَنْ يُبْدَأَ الْمُضَارِعُ بِحَرْفٍ مِنْ أَحْرُفِ (أَنَيْتُ)، فَالْهَمْزَةُ لِلْمُتَكَلِّمِ الْوَاحِدِ أَوِ الْمُتَكَلِّمَةِ، وَالنُّونُ لَهُ مَعَ غَيْرِهِ، أَوْ لَهَا مَعَ غَيْرِهَا، وَالْيَاءُ لِلْغَائِبِ الْمُذَكَّرِ وَجَمْعِ الْغَائِبَةِ، وَالتَّاءُ لِلْمُخَاطَبِ مُطْلَقًا، وَمُفْرَدِ الْغَائِبَةِ، وَمُثَنَّاهَا.",
+          "uz": "Muzori' «anaytu» harflaridan biri bilan boshlanishi shart. Hamza — yolg'iz mutakallim (erkak yoki ayol) uchun; nun — u boshqalar bilan birga bo'lganda; yo — g'oyib muzakkar va g'oiba ko'pligi uchun; to — mutlaq muxotab uchun hamda g'oibaning birligi va ikkiligi uchundir."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْأَمْرُ: مَا يُطْلَبُ بِهِ حُصُولُ شَيْءٍ بَعْدَ زَمَنِ التَّكَلُّمِ؛ مِثْلُ: اقْرَأْ.",
+          "uz": "Amr — gapirish paytidan keyin bir ishning hosil bo'lishi u bilan talab qilinadigan fe'ldir; masalan: «o'qi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَعَلَامَتُهُ: أَنْ يَقْبَلَ نُونَ التَّوْكِيدِ مَعَ دَلَالَتِهِ عَلَى الطَّلَبِ.",
+          "uz": "Uning alomati: talabga dalolat qilishi bilan birga ta'kid nunini qabul qilishidir."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 4,
+      "page": 279,
+      "titleAr": "أَسْمَاءُ الْأَفْعَالِ",
+      "title": "Ism fe'llar",
+      "rule": {
+        "ar": "أَسْمَاءُ الْأَفْعَالِ: هِيَ الْأَلْفَاظُ الَّتِي تَدُلُّ عَلَى مَعَانِي الْأَفْعَالِ، وَلَا تَقْبَلُ عَلَامَاتِهَا.",
+        "uz": "Ism fe'llar — fe'llarning ma'nolariga dalolat qiluvchi, lekin ularning alomatlarini qabul qilmaydigan lafzlardir."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَهِيَ عَلَى ثَلَاثَةِ أَنْوَاعٍ: اسْمُ فِعْلٍ مَاضٍ؛ كَ: هَيْهَاتَ بِمَعْنَى: بَعُدَ، وَشَتَّانَ بِمَعْنَى: افْتَرَقَ.",
+          "uz": "Ular uch turdir: mozi ism fe'l — masalan «hayhota» («uzoq bo'ldi» ma'nosida), «shattona» («ajralib ketdi» ma'nosida)."
+        },
+        {
+          "type": "para",
+          "ar": "وَاسْمُ فِعْلٍ مُضَارِعٍ؛ كَ: (وَيْ) بِمَعْنَى: أَتَعَجَّبُ، وَأُفٍّ بِمَعْنَى: أَتَضَجَّرُ، وَأَوَّهْ، وَآهِ.",
+          "uz": "Muzori' ism fe'l — masalan «vay» («hayron qolaman» ma'nosida), «uffin» («zerikaman» ma'nosida), «avvah», «ohi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَاسْمُ فِعْلِ أَمْرٍ؛ كَ: صَهْ بِمَعْنَى: اسْكُتْ، وَآمِينَ بِمَعْنَى: اسْتَجِبْ.",
+          "uz": "Amr ism fe'l — masalan «sah» («jim tur» ma'nosida), «omin» («ijobat qil» ma'nosida)."
+        },
+        {
+          "type": "para",
+          "ar": "وَتَنْقَسِمُ إِلَى: مُرْتَجَلَةٍ، وَهِيَ: مَا وُضِعَتْ مِنْ أَوَّلِ أَمْرِهَا أَسْمَاءَ أَفْعَالٍ، كَمَا مُثِّلَ.",
+          "uz": "Ular bo'linadi: murtajala — dastlabdanoq ism fe'l qilib qo'yilganlari; misolda ko'rsatilgani kabi."
+        },
+        {
+          "type": "para",
+          "ar": "وَمَنْقُولَةٍ، وَهِيَ: مَا اسْتُعْمِلَتْ فِي غَيْرِ اسْمِ الْفِعْلِ ثُمَّ نُقِلَتْ إِلَيْهِ.",
+          "uz": "Va manqula — ism fe'ldan boshqa o'rinda ishlatilib, so'ng unga ko'chirilganlari."
+        },
+        {
+          "type": "para",
+          "ar": "وَالنَّقْلُ إِمَّا: عَنْ جَارٍّ وَمَجْرُورٍ؛ كَ: عَلَيْكَ نَفْسَكَ؛ أَيْ: الْزَمْهَا. وَإِلَيْكَ عَنِّي؛ أَيْ: تَنَحَّ.",
+          "uz": "Ko'chirish yo jorr va majrurdan bo'ladi — masalan «Nafsingni ushla» (ya'ni «unga yopish»), «Mendan nari!» (ya'ni «chekin»)."
+        },
+        {
+          "type": "para",
+          "ar": "أَوْ عَنْ ظَرْفٍ؛ كَ: دُونَكَ الدِّرْهَمَ؛ أَيْ: خُذْهُ، وَمَكَانَكَ؛ أَيِ: اثْبُتْ.",
+          "uz": "Yoki zarfdan — masalan «Dirhamni ol» (ya'ni «uni ol»), «Joyingda!» (ya'ni «qimirlama»)."
+        },
+        {
+          "type": "para",
+          "ar": "أَوْ عَنْ مَصْدَرٍ؛ كَ: رُوَيْدَ أَخَاكَ؛ أَيْ: أَمْهِلْهُ، وَبَلْهَ الْأَكُفَّ؛ أَيِ: اتْرُكْهَا.",
+          "uz": "Yoki masdardan — masalan «Birodaringga sekinroq» (ya'ni «unga muhlat ber»), «Kaftlarni qo'y» (ya'ni «ularni tark et»)."
+        },
+        {
+          "type": "para",
+          "ar": "وَأَسْمَاءُ الْأَفْعَالِ تَكُونُ بِحَالَةٍ وَاحِدَةٍ لِلْوَاحِدِ، وَالاِثْنَيْنِ، وَالْجَمَاعَةِ، سَوَاءٌ فِي التَّذْكِيرِ وَالتَّأْنِيثِ، إِلَّا إِذَا كَانَ فِيهَا كَافُ الْخِطَابِ؛ كَ: عَلَيْكَ وَإِلَيْكَ فَتَتَصَرَّفُ عَلَى حَسَبِ هَذِهِ الْأَحْوَالِ، فَتَقُولُ: عَلَيْكَ وَعَلَيْكِ، وَعَلَيْكُمَا، وَعَلَيْكُمْ، وَعَلَيْكُنَّ.",
+          "uz": "Ism fe'llar birlik, ikkilik va ko'plik uchun bir xil holatda bo'ladi; muzakkarlik va muannaslikda ham teng. Faqat ularda xitob «kof»i bo'lsa — «alayka» va «ilayka» kabi — u holda ular shu holatlarga ko'ra o'zgaradi; shunday deysan: alayka, alayki, alaykumo, alaykum, alaykunna."
+        },
+        {
+          "type": "para",
+          "ar": "(١) الضَّمِيرُ يَعُودُ عَلَى الْكَافِ.",
+          "uz": "(1-izoh) Zamir «kof»ga qaytadi."
+        }
+      ],
+      "exercise": []
     }
   ]
 }

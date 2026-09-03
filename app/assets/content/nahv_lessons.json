@@ -16245,8 +16245,188 @@
             {
               "ar": "١ - أَعْلَامِ الْإِنَاثِ؛ كَ: مَرْيَمَ وَزَيْنَبَ وَسُعَادَ وَهِنْدَ وَدَعْدَ.",
               "uz": "1 — Ayollarning atoqli ismlari; masalan: Maryam, Zaynab, Su'od, Hind, Da'd."
+            },
+            {
+              "ar": "٢ - وَمَا خُتِمَ بِالتَّاءِ؛ كَ: صَفِيَّةٍ وَفَائِقَةٍ وَجَمِيلَةٍ وَسَعَادَةٍ.",
+              "uz": "2 — «To» bilan tugagani; masalan: Safiya, Foiqa, Jamila, Sa'oda."
+            },
+            {
+              "ar": "٣ - وَمَا خُتِمَ بِأَلِفِ التَّأْنِيثِ الْمَقْصُورَةِ أَوِ الْمَمْدُودَةِ؛ كَ: حُبْلَى وَصَحْرَاءَ.",
+              "uz": "3 — Ta'nis alifi bilan — maqsura yoki mamduda — tugagani; masalan: hublo, sahro."
+            },
+            {
+              "ar": "٤ - وَمُصَغَّرِ غَيْرِ الْعَاقِلِ؛ كَ: دُرَيْهِمٍ وَجُبَيْلٍ وَفُرَيْعٍ وَجُزَيْءٍ.",
+              "uz": "4 — Aqlsizning kichraytirilgani; masalan: durayhim (kichkina dirham), jubayl (kichkina tog'), furay' (kichkina shox), juzay' (kichkina bo'lak)."
+            },
+            {
+              "ar": "٥ - وَوَصْفِهِ؛ كَ: شَامِخٍ (وَصْفُ جَبَلٍ)، وَمَعْدُودٍ (وَصْفُ يَوْمٍ).",
+              "uz": "5 — Uning sifati; masalan: shomix (tog'ning sifati), ma'dud (kunning sifati)."
+            },
+            {
+              "ar": "٦ - وَكُلُّ خُمَاسِيٍّ لَمْ يُسْمَعْ لَهُ جَمْعُ تَكْسِيرٍ؛ كَ: سُرَادِقٍ وَحَمَّامٍ وَإِصْطَبْلٍ.",
+              "uz": "6 — Jam' taksiri eshitilmagan har bir besh harfli so'z; masalan: surodiq (chodir), hammom, istabl (otxona)."
             }
           ]
+        },
+        {
+          "type": "para",
+          "ar": "وَمَا عَدَا ذَلِكَ فَهُوَ مَقْصُورٌ عَلَى السَّمَاعِ؛ كَ: سَمَاوَاتٍ وَسِجِلَّاتٍ وَأُمَّهَاتٍ.",
+          "uz": "Bulardan boshqasi samo'ga bog'liqdir; masalan: samovot, sijillot, ummahot."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُلْحَقُ بِجَمْعِ الْمُؤَنَّثِ السَّالِمِ فِي إِعْرَابِهِ: أُولَاتُ، وَمَا سُمِّيَ بِهِ؛ كَ: عَرَفَاتٍ.",
+          "uz": "I'robida jam' muannas solimga mulhaq qilinadi: «ulot» va u bilan nom qo'yilgan so'zlar; masalan: Arafot."
+        },
+        {
+          "type": "para",
+          "ar": "وَجَمْعُ التَّكْسِيرِ لَهُ وَاحِدٌ وَعِشْرُونَ وَزْنًا.",
+          "uz": "Jam' taksirning yigirma bitta vazni bor."
+        },
+        {
+          "type": "para",
+          "ar": "لِلْقِلَّةِ مِنْهَا أَرْبَعَةٌ، وَهِيَ: أَفْعُلٌ، وَأَفْعَالٌ، وَأَفْعِلَةٌ، وَفِعْلَةٌ؛ كَ: أَنْفُسٍ وَأَجْدَادٍ وَأَعْمِدَةٍ وَفِتْيَةٍ.",
+          "uz": "Ulardan ozlik uchun to'rttasi: «af'ul», «af'ol», «af'ila», «fi'la»; masalan: anfus (jonlar), ajdod (bobolar), a'mida (ustunlar), fitya (yigitlar)."
+        },
+        {
+          "type": "para",
+          "ar": "وَلِلْكَثْرَةِ سَبْعَةَ عَشَرَ وَزْنًا؛ نَحْوُ: حُمْرٍ، وَكُتُبٍ، وَصُوَرٍ، وَقِطَعٍ، وَهُدَاةٍ.",
+          "uz": "Ko'plik uchun o'n yettita vazn; masalan: humr (qizillar), kutub (kitoblar), suvar (suratlar), qita' (bo'laklar), hudot (yo'l ko'rsatuvchilar)."
+        },
+        {
+          "type": "para",
+          "ar": "(١) يُسْتَثْنَى مِنَ الْمَخْتُومِ بِالتَّاءِ: امْرَأَةٌ وَشَاةٌ وَأَمَةٌ، وَمِنَ الْمَخْتُومِ بِأَلِفِ التَّأْنِيثِ: فَعْلَاءُ وَفَعْلَى مُؤَنَّثَا أَفْعَلَ وَفَعْلَانَ؛ كَ: حَمْرَاءَ وَسَكْرَى، فَلَا يُجْمَعَانِ جَمْعَ مُؤَنَّثٍ سَالِمًا، كَمَا لَا يُجْمَعُ مُذَكَّرُهُمَا جَمْعَ مُذَكَّرٍ سَالِمًا.",
+          "uz": "(1-izoh) «To» bilan tugaganlardan «imra'a», «shot» va «ama» mustasno; ta'nis alifi bilan tugaganlardan esa «af'al» va «fa'lon»ning muannaslari bo'lgan «fa'lo'» va «fa'lo» mustasno — masalan «hamro» va «sakro»; ular jam' muannas solim qilinmaydi — xuddi ularning muzakkari jam' muzakkar solim qilinmagani kabi."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) جَمَعَ ذَلِكَ بَعْضُهُمْ بِقَوْلِهِ: بِأَفْعُلٍ وَبِأَفْعَالٍ وَأَفْعِلَةٍ * وَفِعْلَةٍ يُعْرَفُ الْأَدْنَى مِنَ الْعَدَدِ",
+          "uz": "(2-izoh) Ba'zilar buni shunday jamlaganlar: «“Af'ul”, “af'ol”, “af'ila” va “fi'la” bilan sonning ozi bilinadi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَجَمْعُ الْقِلَّةِ يُبْتَدَأُ مِنَ الثَّلَاثَةِ، وَيَنْتَهِي بِالْعَشَرَةِ، وَجَمْعُ الْكَثْرَةِ يُبْتَدَأُ مِنْ أَحَدَ عَشَرَ، وَلَا نِهَايَةَ لَهُ.",
+          "uz": "Ozlik ko'pligi uchtadan boshlanib, o'ntada tugaydi; ko'plik ko'pligi esa o'n birdan boshlanadi va cheki yo'q."
+        },
+        {
+          "type": "para",
+          "ar": "وَمَحَلُّ الْفَرْقِ إِذَا سُمِعَ لِلْمُفْرَدِ الْجَمْعَانِ، أَمَّا إِذَا سُمِعَ أَحَدُهُمَا فَقَطْ يُسْتَعْمَلُ لِلْقِلَّةِ وَالْكَثْرَةِ مَعًا، وَالتَّمْيِيزُ بِالْقَرَائِنِ.",
+          "uz": "Farqning o'rni — birlik uchun ikkala ko'plik ham eshitilgan bo'lsa. Faqat bittasi eshitilgan bo'lsa, u ozlik uchun ham, ko'plik uchun ham ishlatiladi; farqlash esa qarinalar bilan bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَسَحَرَةٍ، وَفِيَلَةٍ، وَرُكَّعٍ، وَعُذَّالٍ، وَمَرْضَى، وَجِبَالٍ، وَقُلُوبٍ، وَنُبَهَاءَ، وَأَنْبِيَاءَ، وَغِلْمَانٍ، وَقُضْبَانٍ.",
+          "uz": "Va sahara (sehrgarlar), fiyala (fillar), rukka' (ruku' qiluvchilar), uzzol (malomat qiluvchilar), marzo (kasallar), jibol (tog'lar), qulub (qalblar), nubaho (ziyraklar), anbiyo (payg'ambarlar), g'ilmon (o'g'il bolalar), quzbon (novdalar)."
+        },
+        {
+          "type": "para",
+          "ar": "وَصِيغَةُ مُنْتَهَى الْجُمُوعِ، وَهِيَ: كُلُّ جَمْعٍ بَعْدَ أَلِفِ تَكْسِيرِهِ حَرْفَانِ، أَوْ ثَلَاثَةٌ وَسَطُهَا سَاكِنٌ؛ كَ: دَرَاهِمَ وَدَنَانِيرَ.",
+          "uz": "«Muntahal-jumu'» siyg'asi — u taksir alifidan keyin ikki harf, yoki o'rtasi sokin bo'lgan uch harf kelgan har bir ko'plikdir; masalan: darohim, danonir."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَلَهَا سَبْعَةُ أَوْزَانٍ:",
+            "uz": "Uning yettita vazni bor:"
+          },
+          "items": [
+            {
+              "ar": "١ - فَعَائِلُ: وَيَطَّرِدُ فِي كُلِّ رُبَاعِيٍّ مُؤَنَّثٍ ثَالِثُهُ حَرْفُ مَدٍّ زَائِدٍ؛ كَ: سَحَابَةٍ، وَحَمُولَةٍ، وَصَحِيفَةٍ، وَعَجُوزٍ.",
+              "uz": "1 — «Fao'il»: uchinchi harfi ortiqcha mad harfi bo'lgan har bir to'rt harfli muannasda doimiy qoidadir; masalan: sahoba (bulut), hamula (yuk ulovi), sahifa, ajuz (kampir)."
+            },
+            {
+              "ar": "٢ - وَفَعَالَى: وَيَطَّرِدُ فِي كُلِّ ثُلَاثِيٍّ آخِرُهُ يَاءٌ مُشَدَّدَةٌ لِغَيْرِ النَّسَبِ؛ كَ: قُمْرِيٍّ وَكُرْسِيٍّ وَبُخْتِيٍّ.",
+              "uz": "2 — «Fa'olo»: oxiri nisbat uchun bo'lmagan shaddali «yo» bo'lgan har bir uch harflida doimiy qoidadir; masalan: qumriy (kaptar), kursiy, buxtiy (bir tur tuya)."
+            },
+            {
+              "ar": "٣ - وَفَوَاعِلُ: وَيَطَّرِدُ فِيمَا كَانَ عَلَى وَزْنِ جَوْهَرٍ وَزَوْبَعَةٍ وَخَاتَمٍ وَنَافِقَاءَ وَعَاذِلَةٍ وَفَاعِلٍ إِنْ لَمْ يَكُنْ وَصْفًا لِمُذَكَّرٍ عَاقِلٍ؛ كَ: كَاهِلٍ، وَصَاهِلٍ، وَطَالِبٍ، وَخَاتِمٍ.",
+              "uz": "3 — «Favo'il»: «javhar», «zavba'a», «xotam», «nofiqo'», «ozila» va — aqlli muzakkarning sifati bo'lmasa — «foil» vaznidagilarda doimiy qoidadir; masalan: kohil (yelka), sohil (kishnovchi), tolib, xotim."
+            },
+            {
+              "ar": "٤، ٥ - وَفَعَالِي وَفَعَالَى: وَيَشْتَرِكَانِ فِي فَعْلَاءَ إِذَا لَمْ يَكُنْ لَهُ مُذَكَّرٌ؛ كَ: عَذْرَاءَ وَصَحْرَاءَ، وَفِي فُعْلَى؛ كَ: حُبْلَى، وَفَتْوَى، وَذِفْرَى، وَيَنْفَرِدُ الْأَوَّلُ فِي نَحْوِ: سِعْلَاةٍ، وَمَوْمَاةٍ، وَهِبْرِيَةٍ، وَتَرْقُوَةٍ، وَقَلَنْسُوَةٍ.",
+              "uz": "4-5 — «Fa'oli» va «fa'olo»: muzakkari bo'lmagan «fa'lo'»da ikkisi ham keladi — «azro» (qiz) va «sahro» kabi; «fu'lo»da ham — «hublo», «fatvo», «zifro» kabi. Birinchisi «si'lot» (g'ul), «mavmot» (sahro), «hibriya» (bosh qazg'og'i), «tarquva» (o'mrov suyagi), «qalansuva» (bosh kiyim) kabilarda yolg'iz keladi."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "(١) أَشَارَ لِجُمُوعِ الْكَثْرَةِ بَعْضُهُمْ بِقَوْلِهِ: فِي السُّفُنِ الشُّهْبِ الْبُغَاةُ صُوَرْ * مَرْضَى الْقُلُوبِ وَالْبِحَارُ عِبَرْ",
+          "uz": "(1-izoh) Ba'zilar ko'plik ko'pliklariga shunday ishora qilganlar: «Oq kemalarda tajovuzkorlar bir suratdir; qalblari kasal, dengizlar esa ibratdir»."
+        },
+        {
+          "type": "para",
+          "ar": "غِلْمَانُهُمْ لِلْأَشْقِيَاءِ عَمَلَهْ * قُطَّاعُ قُضْبَانٍ لِأَجْلِ الْفِيَلَهْ",
+          "uz": "«Ularning o'g'il bolalari baxtsizlarga ishchidir; fillar uchun novda kesuvchilardir»."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْعُقَلَاءُ شُرَّدٌ وَمُنْتَهَى * جُمُوعِهِمْ فِي السَّبْعِ وَالْعَشْرِ انْتَهَى",
+          "uz": "«Aqllilar esa tarqoqdir; ularning ko'pliklarining eng chekkasi yetti va o'nda tugaydi»."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) النَّافِقَاءُ: أَحَدُ أَبْوَابِ جُحْرِ الْيَرْبُوعِ.",
+          "uz": "(2-izoh) «Nofiqo'» — yumronqoziq inining eshiklaridan biri."
+        },
+        {
+          "type": "para",
+          "ar": "(٣) السِّعْلَاةُ: الْغُولُ، وَالْمَوْمَاةُ: الصَّحْرَاءُ، وَالْهِبْرِيَةُ: مَا يَسْقُطُ مِنَ الرَّأْسِ شِبْهَ النُّخَالَةِ، وَالتَّرْقُوَةُ: عَظْمٌ بَيْنَ الصَّدْرِ وَالْعُنُقِ، وَالْقَلَنْسُوَةُ: مَا يُلْبَسُ فِي الرَّأْسِ.",
+          "uz": "(3-izoh) «Si'lot» — g'ul; «mavmot» — sahro; «hibriya» — boshdan tushadigan kepak kabi narsa; «tarquva» — ko'krak bilan bo'yin orasidagi suyak; «qalansuva» — boshga kiyiladigan narsa."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَنْفَرِدُ الثَّانِي فِي: فَعْلَانَ، وَمُؤَنَّثُهُ فَعْلَى؛ كَ: سَكْرَانَ وَسَكْرَى وَغَضْبَانَ وَغَضْبَى.",
+          "uz": "Ikkinchisi «fa'lon» va uning muannasi «fa'lo»da yolg'iz keladi; masalan: sakron va sakro, g'azbon va g'azbo."
+        },
+        {
+          "type": "para",
+          "ar": "٦ - وَفُعَالَى: وَيَطَّرِدُ فِي نَحْوِ: سَكْرَانَ وَسَكْرَى، وَسُمِعَ فِي أَسِيرٍ وَقَدِيمٍ.",
+          "uz": "6 — «Fu'olo»: «sakron» va «sakro» kabilarda doimiy qoidadir; «asir» va «qadim»da ham eshitilgan."
+        },
+        {
+          "type": "para",
+          "ar": "٧ - وَفَعَالِلَ وَشِبْهُهَا: وَيَطَّرِدُ فِي الْأَسْمَاءِ الرُّبَاعِيَّةِ؛ كَ: جَعْفَرٍ وَأَفْضَلَ وَمَسْجِدٍ وَصَيْرَفٍ، وَكَذَلِكَ الْخُمَاسِيَّةُ وَالسُّدَاسِيَّةُ وَالسُّبَاعِيَّةُ.",
+          "uz": "7 — «Fa'olil» va unga o'xshashlar: to'rt harfli ismlarda doimiy qoidadir; masalan: ja'far, afzal, masjid, sayraf. Besh, olti va yetti harflilar ham shunday."
+        },
+        {
+          "type": "para",
+          "ar": "فَالْخُمَاسِيُّ إِنْ كَانَ مُجَرَّدًا: حُذِفَ خَامِسُهُ؛ كَ: سَفَرْجَلٍ وَسَفَارِجَ.",
+          "uz": "Besh harfli mujarrad bo'lsa, beshinchi harfi tushiriladi; masalan: safarjal — saforij."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِنْ كَانَ مَزِيدًا بِحَرْفٍ حُذِفَ؛ كَ: غَضَنْفَرٍ وَغَضَافِرَ، إِلَّا إِذَا كَانَ الزَّائِدُ حَرْفَ لِينٍ قَبْلَ الْآخِرِ فَيُقْلَبُ يَاءً؛ كَ: قِرْطَاسٍ وَقَرَاطِيسَ، وَعُصْفُورٍ وَعَصَافِيرَ.",
+          "uz": "Bir harf bilan mazid bo'lsa, o'sha tushiriladi; masalan: g'azanfar — g'azofir. Faqat ortiqcha harf oxiridan oldingi «lin» harfi bo'lsa, u «yo»ga aylantiriladi; masalan: qirtos — qarotis, usfur — asofir."
+        },
+        {
+          "type": "para",
+          "ar": "فَإِنِ اشْتَمَلَ الاِسْمُ عَلَى زِيَادَتَيْنِ فَأَكْثَرَ حُذِفَ مِنَ الزَّوَائِدِ مَا يُخِلُّ وُجُودُهُ بِصِيغَةِ الْجَمْعِ، وَخُيِّرَ فِي مِثْلِ: عَلَنْدَى لِلْجَرِيءِ، وَسَرَنْدَى لِلضَّخْمِ مِنَ الْإِبِلِ؛ تَقُولُ فِي جَمْعِهِمَا: عَلَانِدُ وَعَلَادِي، وَسَرَانِدُ وَسَرَادِي.",
+          "uz": "Ism ikki yoki undan ko'p ortiqcha harfni o'z ichiga olsa, ortiqchalardan borligi ko'plik siyg'asini buzadigani tushiriladi. «Alando» (jasur) va «sarando» (yirik tuya) kabilarda esa ixtiyor beriladi; ularning ko'pligida: alonid va alodi, saronid va sarodi deysan."
+        },
+        {
+          "type": "para",
+          "ar": "وَتَقُولُ فِي جَمْعِ زَعْفَرَانٍ وَأُسْطُوَانَةٍ وَعَاشُورَاءَ: زَعَافِرُ وَأَسَاطِينُ وَعَوَاشِيرُ.",
+          "uz": "«Za'faron», «ustuvona» (ustun) va «Oshuro»ning ko'pligida: za'ofir, asotin, avoshir deysan."
+        },
+        {
+          "type": "para",
+          "ar": "وَلَا يُحْذَفُ مِنَ الزَّوَائِدِ مَا لَهُ مَزِيَّةٌ عَلَى غَيْرِهِ كَالْمِيمِ فِي: مُنْطَلِقٍ وَمُسْتَخْرَجٍ؛ لِأَنَّهَا لِتَحْقِيقِ صِيغَةٍ، وَالتَّاءِ فِي اسْتِخْرَاجٍ؛ لِأَنَّ سَخَارِيجَ خَارِجٌ عَنِ النَّظَائِرِ.",
+          "uz": "Ortiqchalardan boshqasidan ustunligi bo'lgani tushirilmaydi — «muntaliq» va «mustaxraj»dagi «mim» kabi, chunki u siyg'ani tayin qilish uchundir; «istixroj»dagi «to» ham shunday, chunki «saxorij» o'xshashlaridan chetda qoladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَكُلُّ اسْمٍ حُذِفَ مِنْهُ شَيْءٌ لِتَصْحِيحِ صِيغَةِ فَعَالِلَ وَشِبْهِهَا يَجُوزُ أَنْ يُزَادَ قَبْلَ آخِرِ جَمْعِهِ يَاءٌ؛ كَ: سَفَارِيجَ جَمْعُ سَفَرْجَلٍ، وَزَعَافِيرَ جَمْعُ زَعْفَرَانٍ.",
+          "uz": "«Fa'olil» va unga o'xshash siyg'ani to'g'rilash uchun undan biror narsa tushirilgan har bir ismning ko'pligida oxiridan oldin «yo» qo'shish joizdir; masalan: «safarij» — «safarjal»ning ko'pligi, «za'ofir» — «za'faron»ning ko'pligi."
+        },
+        {
+          "type": "para",
+          "ar": "وَقَدْ يُعَامَلُ الْجَمْعُ مُعَامَلَةَ الْمُفْرَدِ فَيُجْمَعُ مَرَّةً ثَانِيَةً لِلدَّلَالَةِ عَلَى تَنَوُّعِ أَفْرَادِهِ؛ كَ: جِمَالَاتٍ وَبُيُوتَاتٍ وَأَكَالِبَ فِي جِمَالٍ وَبُيُوتٍ وَأَكْلُبٍ.",
+          "uz": "Ba'zan ko'plikka birlik kabi muomala qilinadi va uning a'zolari turli-tuman ekaniga dalolat qilish uchun ikkinchi marta ko'plik qilinadi; masalan: «jimolot», «buyutot», «akolib» — «jimol», «buyut», «aklub»dan."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَقِفُ الْجَمْعُ مَتَى وَصَلَ إِلَى صِيغَةِ مُنْتَهَى الْجُمُوعِ السَّابِقَةِ، وَلَا يُصَارُ إِلَى جَمْعِ الْجَمْعِ إِلَّا بِالسَّمَاعِ.",
+          "uz": "Ko'plik yuqorida o'tgan «muntahal-jumu'» siyg'asiga yetganda to'xtaydi; ko'plikning ko'pligiga esa faqat samo' bilan o'tiladi."
         }
       ],
       "exercise": []

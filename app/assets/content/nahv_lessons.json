@@ -12057,6 +12057,428 @@
           "uz": "Zamon biror narsa ustiga kelsa, albatta uni o'zgartiradi."
         }
       ]
+    },
+    {
+      "book": 3,
+      "num": 57,
+      "page": 254,
+      "titleAr": "جَرُّ الاِسْمِ وَمَوَاضِعُهُ",
+      "title": "Ismning jarri va uning o'rinlari",
+      "rule": {
+        "ar": "الْأَصْلُ فِي الْجَرِّ أَنْ يَكُونَ بِكَسْرَةٍ.",
+        "uz": "Jarrda asl — uning kasra bilan bo'lishidir."
+      },
+      "blocks": [
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَيَنُوبُ عَنْهَا:",
+            "uz": "Kasraning o'rnini bosadi:"
+          },
+          "items": [
+            {
+              "ar": "١ - يَاءٌ فِي الْمُثَنَّى، وَجَمْعِ الْمُذَكَّرِ السَّالِمِ، وَالْأَسْمَاءِ الْخَمْسَةِ.",
+              "uz": "1 — Musanno, jam' muzakkar solim va besh ismdagi «yo»."
+            },
+            {
+              "ar": "٢ - وَفَتْحَةٌ فِي الْمَمْنُوعِ مِنَ الصَّرْفِ، إِذَا تَجَرَّدَ مِنْ «أَلْ» وَالْإِضَافَةِ؛ نَحْوُ: خُذْ بِقَوْلِ النُّعْمَانِ وَالصَّاحِبَيْنِ وَالتَّابِعِينَ لِأَبِي حَنِيفَةَ.",
+              "uz": "2 — «Al»dan va izofadan xoli bo'lgan, sarfdan man qilingan ismdagi fatha; masalan: «Nu'mon, ikki sohib va Abu Hanifaga ergashganlarning so'zini ol»."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "(١) فَإِنْ دَخَلَتْ «أَلْ» عَلَى الْمَمْنُوعِ مِنَ الصَّرْفِ، أَوْ أُضِيفَ جُرَّ بِالْكَسْرَةِ عَلَى الْأَصْلِ؛ نَحْوُ: أَخَذْتُ بِالْأَحْسَنِ، أَوْ: بِأَحْسَنِ الْأَقْوَالِ.",
+          "uz": "(1-izoh) Sarfdan man qilingan ismga «al» kirsa yoki u izofa qilinsa, asl bo'yicha kasra bilan jarr qilinadi; masalan: «Eng yaxshisini oldim» yoki «so'zlarning eng yaxshisini»."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 3,
+      "num": 58,
+      "page": 254,
+      "titleAr": "١ - الْمَجْرُورُ بِالْحَرْفِ",
+      "title": "1. Harf bilan majrur bo'lgan ism",
+      "rule": {
+        "ar": "وَالاِسْمُ يُجَرُّ، إِذَا كَانَ مَسْبُوقًا بِحَرْفٍ مِنْ حُرُوفِ الْجَرِّ، أَوْ كَانَ مُضَافًا إِلَيْهِ.",
+        "uz": "Ism jarr harflaridan biri oldidan kelsa yoki muzofun ilayh bo'lsa, jarr qilinadi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "حُرُوفُ الْجَرِّ هِيَ: «مِنْ»، وَ«إِلَى»، وَ«عَنْ»، وَ«عَلَى»، وَ«فِي»، وَ«رُبَّ»، وَ«الْبَاءُ»، وَ«الْكَافُ»، وَ«اللَّامُ»، وَ«الْوَاوُ»، وَ«التَّاءُ»، وَ«مُذْ»، وَ«مُنْذُ»، وَ«حَتَّى»، وَ«خَلَا»، وَ«عَدَا»، وَ«حَاشَا».",
+          "uz": "Jarr harflari: «min» (dan), «ilo» (ga), «an» (haqida), «alo» (ustida), «fi» (ichida), «rubba» (ba'zan), «bo», «kof», «lom», «vov», «to», «muz», «munzu», «hatta», «xalo», «ado», «hosho»."
+        },
+        {
+          "type": "para",
+          "ar": "نَحْوُ: ﴿سُبْحَانَ الَّذِي أَسْرَى بِعَبْدِهِ لَيْلًا مِنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى﴾.",
+          "uz": "Masalan: «Bandasini kechasi Masjidul Haromdan Masjidul Aqsoga sayr qildirgan Zot pokdir»."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْأَشْهَرُ: أَنَّ «مِنْ»: لِلاِبْتِدَاءِ، وَ«إِلَى»، وَ«حَتَّى»: لِلاِنْتِهَاءِ، وَ«عَنْ»: لِلْمُجَاوَزَةِ، وَ«عَلَى»: لِلاِسْتِعْلَاءِ، وَ«فِي»: لِلظَّرْفِيَّةِ، وَ«رُبَّ»: لِلتَّقْلِيلِ، وَ«الْبَاءُ»: لِلسَّبَبِيَّةِ وَالْقَسَمِ، وَ«الْكَافُ»: لِلتَّشْبِيهِ، وَ«اللَّامُ»: لِلْمِلْكِ، وَ«الْوَاوُ وَالتَّاءُ»: لِلْقَسَمِ.",
+          "uz": "Mashhur qavlga ko'ra: «min» — boshlanish uchun; «ilo» va «hatta» — tugash uchun; «an» — o'tish uchun; «alo» — ustunlik uchun; «fi» — zarflik uchun; «rubba» — ozlik uchun; «bo» — sabab va qasam uchun; «kof» — o'xshatish uchun; «lom» — egalik uchun; «vov» va «to» — qasam uchundir."
+        },
+        {
+          "type": "para",
+          "ar": "وَ«مُذْ»، وَ«مُنْذُ»: لِلاِبْتِدَاءِ، إِنْ كَانَ مَا بَعْدَهُمَا زَمَنًا مَاضِيًا، وَلِلظَّرْفِيَّةِ إِنْ كَانَ زَمَنًا حَاضِرًا.",
+          "uz": "«Muz» va «munzu» — ulardan keyingisi o'tgan zamon bo'lsa boshlanish uchun, hozirgi zamon bo'lsa zarflik uchundir."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَحْتَاجُ الْجَارُّ وَالْمَجْرُورُ، وَكَذَا الظَّرْفُ إِلَى مُتَعَلَّقٍ.",
+          "uz": "Jorr va majrur, shuningdek zarf ham mutaalliqqa (bog'lanadigan so'zga) muhtojdir."
+        },
+        {
+          "type": "para",
+          "ar": "(١) أَمْثِلَةٌ: يَصِلُ النُّورُ مِنَ الشَّمْسِ إِلَى الْأَرْضِ فِي ثَمَانِي دَقَائِقَ. سِرْتُ عَنِ الْبَلَدِ. ﴿وَعَلَى الْفُلْكِ تُحْمَلُونَ﴾. يَكْثُرُ اللُّؤْلُؤُ فِي بَحْرِ الْهِنْدِ. رُبَّ إِشَارَةٍ أَبْلَغُ مِنْ عِبَارَةٍ. رِفْعَةُ الْأَقْدَارِ بِاقْتِحَامِ الْأَخْطَارِ.",
+          "uz": "(1-izoh) Misollar: «Nur quyoshdan yerga sakkiz daqiqada yetib keladi», «Shahardan chiqib yurdim», «Va kemalarda tashiladilar», «Hind dengizida marvarid ko'p bo'ladi», «Ba'zan bir ishora bir iboradan ta'sirliroq bo'ladi», «Qadrlarning yuksalishi xatarlarga kirish bilandir»."
+        },
+        {
+          "type": "para",
+          "ar": "﴿وَلَهُ الْجَوَارِ الْمُنْشَآتُ فِي الْبَحْرِ كَالْأَعْلَامِ﴾. ﴿وَلِلَّهِ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ﴾.",
+          "uz": "«Dengizda tog'lar kabi barpo qilingan kemalar Uniki», «Osmonlardagi va yerdagi narsalar Allohnikidir»."
+        },
+        {
+          "type": "para",
+          "ar": "وَحَقِّكَ إِنِّي قَانِعٌ بِالَّذِي تَهْوَى * وَرَاضٍ وَلَوْ حَمَّلْتَنِي فِي الْهَوَى رِضْوَى",
+          "uz": "Haqqing bilan qasamki, sen istagan narsaga qanoat qildim va roziman — garchi muhabbat yo'lida menga Rizvo tog'ini yuklasang ham."
+        },
+        {
+          "type": "para",
+          "ar": "﴿تَاللَّهِ لَقَدْ آثَرَكَ اللَّهُ عَلَيْنَا﴾. مَا كَلَّمْتُهُ مُذْ سَنَةٍ، وَلَا قَابَلْتُهُ مُنْذُ شَهْرٍ، وَ: مُذْ يَوْمِنَا، وَ: مُنْذُ يَوْمِنَا. ﴿سَلَامٌ هِيَ حَتَّى مَطْلَعِ الْفَجْرِ﴾.",
+          "uz": "«Allohga qasam, Alloh seni bizdan afzal qildi». «Bir yildan beri u bilan gaplashmadim», «Bir oydan beri uni uchratmadim», «Bugundan boshlab» (ikki xil shakl bilan). «U tong otguncha salomatlikdir»."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "(٢) مُتَعَلَّقُ الظَّرْفِ وَالْجَارِّ وَالْمَجْرُورِ، وَهُوَ فِعْلٌ، أَوْ مَا فِيهِ مَعْنَى الْفِعْلِ؛ كَ:",
+            "uz": "(2-izoh) Zarf hamda jorr va majrurning mutaalliqi — fe'l yoki fe'l ma'nosini o'z ichiga olgan so'zdir; masalan:"
+          },
+          "items": [
+            {
+              "ar": "١ - الْمَصْدَرُ.",
+              "uz": "1 — Masdar."
+            },
+            {
+              "ar": "٢، ٣ - وَاسْمَا الْفَاعِلِ وَالْمَفْعُولِ.",
+              "uz": "2-3 — Ism foil va ism maf'ul."
+            },
+            {
+              "ar": "٤ - وَالصِّفَةُ الْمُشَبَّهَةُ.",
+              "uz": "4 — Sifati mushabbaha."
+            },
+            {
+              "ar": "٥ - وَاسْمُ التَّفْضِيلِ.",
+              "uz": "5 — Ism tafzil."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "وَيَجِبُ حَذْفُهُ: إِنْ كَانَ كَوْنًا عَامًّا؛ وَهُوَ: مَا يُفْهَمُ بِدُونِ ذِكْرِهِ؛ كَ: الْعِلْمُ فِي الصُّدُورِ. فَلَا يَصِحُّ أَنْ تَقُولَ: كَائِنٌ فِي الصُّدُورِ.",
+          "uz": "Uni tushirish vojib bo'ladi — agar u umumiy «kavn» bo'lsa; ya'ni zikr qilinmasa ham tushuniladigan bo'lsa; masalan: «Ilm ko'kraklarda». Shuning uchun «ko'kraklarda mavjud» deyish to'g'ri emas."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَمْتَنِعُ حَذْفُهُ: إِنْ كَانَ كَوْنًا خَاصًّا؛ وَهُوَ مَا لَا يُفْهَمُ عِنْدَ حَذْفِهِ؛ نَحْوُ: أَنَا وَاثِقٌ بِكَ؛ إِذْ لَوْ قُلْتَ: «أَنَا بِكَ» لَا يُفْهَمُ الْمَعْنَى الْمَقْصُودُ.",
+          "uz": "Uni tushirish man qilinadi — agar u xos «kavn» bo'lsa; ya'ni tushirilganda tushunilmaydigan bo'lsa; masalan: «Men senga ishonaman» — chunki «men senga» desang, ko'zda tutilgan ma'no tushunilmaydi."
+        },
+        {
+          "type": "para",
+          "ar": "نَعَمْ، إِذَا دَلَّتْ عَلَيْهِ قَرِينَةٌ، فَلَا يَجِبُ ذِكْرُهُ، كَمَا إِذَا قِيلَ لَكَ: بِمَنْ تَثِقُ؟ فَقُلْتَ: بِكَ.",
+          "uz": "Ha, unga qarina dalolat qilsa, uni zikr qilish vojib emas; masalan senga «Kimga ishonasan?» deyilsa, «Senga» deb javob berasan."
+        },
+        {
+          "type": "para",
+          "ar": "وَمِمَّا تَقَرَّرَ تَعْلَمُ أَنَّ التَّصْرِيحَ بِالْمُتَعَلَّقِ خَطَأٌ فِي مِثْلِ: دَخَلَ فِي مَحَلٍّ كَائِنٍ بِالْبَيْتِ، وَ: رَأَى رَجُلًا مَوْجُودًا فِيهِ، وَدَعَاهُ لِلْحُضُورِ فِي مَنْزِلِهِ الْكَائِنِ بِالشَّارِعِ الْجَدِيدِ. وَالصَّوَابُ حَذْفُهُ.",
+          "uz": "Yuqorida belgilangan narsadan bilasanki, mutaalliqni oshkor keltirish quyidagi kabi o'rinlarda xatodir: «Uyda joylashgan bir joyga kirdi», «Unda mavjud bo'lgan bir kishini ko'rdi», «Uni yangi ko'chada joylashgan uyiga taklif qildi». To'g'risi — uni tushirishdir."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 3,
+      "num": 59,
+      "page": 256,
+      "titleAr": "٢ - الْمُضَافُ إِلَيْهِ",
+      "title": "2. Muzofun ilayh",
+      "rule": {
+        "ar": "الْمُضَافُ إِلَيْهِ: اسْمٌ نُسِبَ إِلَيْهِ اسْمٌ سَابِقٌ لِيَتَعَرَّفَ السَّابِقُ بِاللَّاحِقِ، أَوْ يَتَخَصَّصَ بِهِ؛ نَحْوُ: سَفِينَةُ نُوحٍ، وَ: سَفِينَةُ بُخَارٍ.",
+        "uz": "Muzofun ilayh — o'zidan oldingi ism unga nisbat berilgan ismdir; bunda oldingisi keyingisi bilan ma'rifa bo'ladi yoki xoslanadi; masalan: «Nuhning kemasi», «bug' kemasi»."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَإِذَا كَانَ الاِسْمُ الْمُرَادُ إِضَافَتُهُ مُنَوَّنًا، حُذِفَ تَنْوِينُهُ؛ كَمَا مُثِّلَ.",
+          "uz": "Izofa qilinmoqchi bo'lgan ism tanvinli bo'lsa, tanvini tushiriladi; misolda ko'rsatilgani kabi."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِذَا كَانَ مُثَنًّى، أَوْ جَمْعَ مُذَكَّرٍ سَالِمًا، حُذِفَتْ نُونُهُ؛ نَحْوُ: عَلَى ضَفَّتَيِ النَّهْرِ مُهَنْدِسُو الْمَدِينَةِ.",
+          "uz": "Musanno yoki jam' muzakkar solim bo'lsa, nuni tushiriladi; masalan: «Daryoning ikki sohilida shahar muhandislari bor»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَمْتَنِعُ دُخُولُ «أَلْ» عَلَى الْمُضَافِ، إِلَّا إِذَا كَانَ وَصْفًا فَيَجُوزُ بِشَرْطِ أَنْ يَكُونَ مُثَنًّى، أَوْ جَمْعَ مُذَكَّرٍ سَالِمًا، أَوْ يَكُونَ فِي الْمُضَافِ إِلَيْهِ «أَلْ»؛ نَحْوُ: الْفَاتِحَا دِمَشْقَ خَالِدٌ وَأَبُو عُبَيْدَةَ، وَ: السَّاكِنُو مِصْرَ آمِنُونَ، وَ: الْمُتَّبِعُ الْحَقَّ مَنْصُورٌ، وَ: السَّالِكُ طَرِيقَ الْبَاطِلِ مَخْذُولٌ.",
+          "uz": "Muzofga «al» kirishi man qilinadi — faqat u sifat bo'lsa joizdir; sharti: u musanno yoki jam' muzakkar solim bo'lishi, yoxud muzofun ilayhda «al» bo'lishi. Masalan: «Damashqni fath qilgan ikkovi — Xolid va Abu Ubayda», «Misrda yashovchilar omondadirlar», «Haqqa ergashuvchi nusratlangandir», «Botil yo'lidan yuruvchi xor bo'lgandir»."
+        },
+        {
+          "type": "para",
+          "ar": "تَتِمَّةٌ: إِذَا كَانَ الاِسْمُ الْمُعْرَبُ مُضَافًا لِيَاءِ الْمُتَكَلِّمِ؛ فَلِاشْتِغَالِ آخِرِهِ بِكَسْرَةِ الْمُنَاسَبَةِ، تُقَدَّرُ عَلَيْهِ الْحَرَكَاتُ الثَّلَاثُ؛ نَحْوُ: إِنَّ مَذْهَبِي نُصْحِي لِصَدِيقِي.",
+          "uz": "To'ldirma: mu'rab ism mutakallim yosiga izofa qilingan bo'lsa, oxiri moslik kasrasi bilan band bo'lgani uchun unda uchala harakat taqdir qilinadi; masalan: «Mening yo'lim — do'stimga nasihat qilishimdir»."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِذَا كَانَ «مَقْصُورًا»؛ فَلِتَعَذُّرِ تَحْرِيكِ الْأَلِفِ، تُقَدَّرُ عَلَى آخِرِهِ الْحَرَكَاتُ الثَّلَاثُ أَيْضًا؛ نَحْوُ: ﴿إِنَّ الْهُدَى هُدَى اللَّهِ﴾.",
+          "uz": "Maqsur bo'lsa, alifni harakatlantirish mumkin bo'lmagani uchun uning oxirida ham uchala harakat taqdir qilinadi; masalan: «Albatta, hidoyat — Allohning hidoyatidir»."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِذَا كَانَ مَنْقُوصًا؛ فَلِاسْتِثْقَالِ ضَمِّ الْيَاءِ وَكَسْرِهَا تُقَدَّرُ عَلَى آخِرِهِ الضَّمَّةُ لِلرَّفْعِ، وَالْكَسْرَةُ لِلْجَرِّ؛ نَحْوُ: حَكَمَ الْقَاضِي عَلَى الْجَانِي.",
+          "uz": "Manqus bo'lsa, «yo»ni damma va kasra qilish og'ir bo'lgani uchun uning oxirida raf' uchun damma, jarr uchun kasra taqdir qilinadi; masalan: «Qozi jinoyatchiga hukm chiqardi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَذَلِكَ طَرْدًا لِقَوَاعِدِ الْإِعْرَابِ.",
+          "uz": "Bu esa i'rob qoidalarini bir tekis qo'llash uchundir."
+        }
+      ],
+      "exercise": [
+        {
+          "ar": "بَيِّنْ أَنْوَاعَ الْمَجْرُورَاتِ فِي هَذِهِ الْعِبَارَاتِ:",
+          "uz": "Quyidagi iboralarda majrurlarning turlarini ko'rsating:"
+        },
+        {
+          "ar": "حِلْمُكَ عَلَى السَّفِيهِ يُكْثِرُ أَنْصَارَكَ عَلَيْهِ.",
+          "uz": "Nodonga qilgan halimliging unga qarshi yordamchilaringni ko'paytiradi."
+        },
+        {
+          "ar": "أَوْلَى النَّاسِ بِالْعَفْوِ أَقْدَرُهُمْ عَلَى الْعُقُوبَةِ.",
+          "uz": "Kechirimga eng loyiq kishi — jazolashga eng qodir bo'lganidir."
+        },
+        {
+          "ar": "﴿وَأُفَوِّضُ أَمْرِي إِلَى اللَّهِ إِنَّ اللَّهَ بَصِيرٌ بِالْعِبَادِ﴾.",
+          "uz": "«Ishimni Allohga topshiraman; albatta, Alloh bandalarni ko'ruvchidir»."
+        },
+        {
+          "ar": "﴿وَإِنْ كُنْتُمْ فِي رَيْبٍ مِمَّا نَزَّلْنَا عَلَى عَبْدِنَا فَأْتُوا بِسُورَةٍ مِنْ مِثْلِهِ﴾.",
+          "uz": "«Agar bandamizga nozil qilgan narsamizdan shubhada bo'lsangiz, unga o'xshash bir sura keltiringlar»."
+        },
+        {
+          "ar": "الْمَطْلُوبُ بِجَمِيلِ الْأَخْلَاقِ أُولُو الْأَلْبَابِ.",
+          "uz": "Go'zal xulqlar talab qilinadigan kishilar — aql egalaridir."
+        },
+        {
+          "ar": "﴿يَا زَكَرِيَّا إِنَّا نُبَشِّرُكَ بِغُلَامٍ اسْمُهُ يَحْيَى﴾.",
+          "uz": "«Ey Zakariyo! Biz senga ismi Yahyo bo'lgan o'g'il haqida xushxabar beramiz»."
+        },
+        {
+          "ar": "مَبْدَأُ رَأْيِ الْعَاقِلِ غَايَةُ رَأْيِ الْجَاهِلِ.",
+          "uz": "Oqilning fikri boshlanadigan joy — johilning fikri tugaydigan joydir."
+        },
+        {
+          "ar": "لِكُلِّ سُؤَالٍ جَوَابٌ، وَلِكُلِّ أَجَلٍ كِتَابٌ.",
+          "uz": "Har bir savolning javobi bor, har bir ajalning yozug'i bor."
+        },
+        {
+          "ar": "وَلَا تَعْجَلْ بِظَنِّكَ قَبْلَ خُبْرٍ * فَعِنْدَ الْخُبْرِ تَنْقَطِعُ الظُّنُونُ",
+          "uz": "Sinab ko'rmasdan turib gumoning bilan shoshilma; sinaganda gumonlar uziladi."
+        },
+        {
+          "ar": "تَرَى بَيْنَ الرِّجَالِ الْعَيْنَ فَضْلًا * وَفِيمَا أَخَّرُوا الْفَضْلُ الْمُبِينُ",
+          "uz": "Erkaklar orasida ko'zga ko'ringanini fazlli deb bilasan; holbuki ular orqada qoldirganlarida ochiq-oydin fazl bor."
+        },
+        {
+          "ar": "كَلَوْنِ الْمَاءِ مُشْتَبِهًا وَلَيْسَتْ * تُخَبِّرُ عَنْ مَذَاقَتِهِ الْعُيُونُ",
+          "uz": "Suvning rangi kabi bir-biriga o'xshash; ko'zlar esa uning ta'mi haqida xabar bera olmaydi."
+        }
+      ]
+    },
+    {
+      "book": 3,
+      "num": 60,
+      "page": 258,
+      "titleAr": "التَّوَابِعُ",
+      "title": "Tobelar (tavobi')",
+      "rule": {
+        "ar": "قَدْ يَسْرِي إِعْرَابُ الْكَلِمَةِ عَلَى مَا بَعْدَهَا بِحَيْثُ يُرْفَعُ عِنْدَ رَفْعِهَا، وَيُنْصَبُ عِنْدَ نَصْبِهَا، وَيُجَرُّ عِنْدَ جَرِّهَا، وَيُجْزَمُ عِنْدَ جَزْمِهَا، وَيُسَمَّى الْمُتَأَخِّرُ «تَابِعًا».",
+        "uz": "So'zning i'robi undan keyingi so'zga o'tishi mumkin: u raf' bo'lganda bu ham raf' bo'ladi, nasb bo'lganda nasb, jarr bo'lganda jarr, jazm bo'lganda jazm bo'ladi. Keyin kelgani «tobe'» deb ataladi."
+      },
+      "blocks": [
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَالتَّوَابِعُ أَرْبَعَةٌ:",
+            "uz": "Tobelar to'rttadir:"
+          },
+          "items": [
+            {
+              "ar": "١ - نَعْتٌ.",
+              "uz": "1 — Na't (sifat)."
+            },
+            {
+              "ar": "٢ - وَعَطْفٌ.",
+              "uz": "2 — Va atf."
+            },
+            {
+              "ar": "٣ - وَتَوْكِيدٌ.",
+              "uz": "3 — Va ta'kid."
+            },
+            {
+              "ar": "٤ - وَبَدَلٌ.",
+              "uz": "4 — Va badal."
+            }
+          ]
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 3,
+      "num": 61,
+      "page": 258,
+      "titleAr": "١ - النَّعْتُ",
+      "title": "1. Na't (sifat)",
+      "rule": {
+        "ar": "النَّعْتُ: تَابِعٌ يُذْكَرُ لِبَيَانِ صِفَةِ مَتْبُوعِهِ.",
+        "uz": "Na't — o'zi ergashgan so'zning sifatini bayon qilish uchun keltiriladigan tobedir."
+      },
+      "blocks": [
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَهُوَ قِسْمَانِ:",
+            "uz": "U ikki qismdir:"
+          },
+          "items": [
+            {
+              "ar": "١ - حَقِيقِيٌّ.",
+              "uz": "1 — Haqiqiy."
+            },
+            {
+              "ar": "٢ - وَسَبَبِيٌّ.",
+              "uz": "2 — Va sababiy."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "فَالْحَقِيقِيُّ: مَا يَدُلُّ عَلَى صِفَةٍ فِي نَفْسِ مَتْبُوعِهِ؛ كَ: دَخَلْتُ الْحَدِيقَةَ الْغَنَّاءَ.",
+          "uz": "Haqiqiy — o'zi ergashgan so'zning o'zidagi sifatga dalolat qiladigani; masalan: «Ko'm-ko'k bog'ga kirdim»."
+        },
+        {
+          "type": "para",
+          "ar": "وَالسَّبَبِيُّ: مَا يَدُلُّ عَلَى صِفَةٍ فِيمَا لَهُ ارْتِبَاطٌ بِالْمَتْبُوعِ؛ كَ: دَخَلْتُ الْحَدِيقَةَ الْحَسَنَ شَكْلُهَا.",
+          "uz": "Sababiy — ergashgan so'z bilan bog'liq bo'lgan narsadagi sifatga dalolat qiladigani; masalan: «Shakli chiroyli bo'lgan bog'ga kirdim»."
+        },
+        {
+          "type": "para",
+          "ar": "وَهُوَ بِقِسْمَيْهِ يَتْبَعُ مَنْعُوتَهُ فِي تَعْرِيفِهِ وَتَنْكِيرِهِ.",
+          "uz": "U ikkala qismida ham man'utiga ma'rifalik va nakiralikda ergashadi."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَيَخْتَصُّ الْحَقِيقِيُّ بِأَنْ يَتْبَعَهُ أَيْضًا فِي:",
+            "uz": "Haqiqiy na't shu bilan xoslanadiki, u man'utiga quyidagilarda ham ergashadi:"
+          },
+          "items": [
+            {
+              "ar": "١ - إِفْرَادِهِ.",
+              "uz": "1 — Birligida."
+            },
+            {
+              "ar": "٢ - وَتَثْنِيَتِهِ.",
+              "uz": "2 — Va ikkiligida."
+            },
+            {
+              "ar": "٣ - وَجَمْعِهِ.",
+              "uz": "3 — Va ko'pligida."
+            },
+            {
+              "ar": "٤ - وَتَذْكِيرِهِ.",
+              "uz": "4 — Va muzakkarligida."
+            },
+            {
+              "ar": "٥ - وَتَأْنِيثِهِ.",
+              "uz": "5 — Va muannasligida."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "أَمَّا السَّبَبِيُّ فَيَكُونُ مُفْرَدًا دَائِمًا، وَيُرَاعَى فِي تَذْكِيرِهِ وَتَأْنِيثِهِ مَا بَعْدَهُ.",
+          "uz": "Sababiy na'tga kelsak, u doim birlikda bo'ladi; uning muzakkarligi va muannasligida esa o'zidan keyingi so'zga qaraladi."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَيُسْتَثْنَى مِنْ ذَلِكَ:",
+            "uz": "Bundan mustasno qilinadi:"
+          },
+          "items": [
+            {
+              "ar": "١ - الْمَصْدَرُ إِذَا نُعِتَ بِهِ.",
+              "uz": "1 — Masdar — u bilan sifatlansa."
+            },
+            {
+              "ar": "٢ - وَأَفْعَلُ التَّفْضِيلِ النَّكِرَةُ؛ فَإِنَّهُمَا يَلْزَمَانِ الْإِفْرَادَ وَالتَّذْكِيرَ؛ تَقُولُ: هُمْ شُهُودٌ عَدْلٌ. وَ: هُنَّ بَنَاتٌ أَكْرَمُ فَتَيَاتٍ.",
+              "uz": "2 — Va nakira «af'alut-tafzil»; bu ikkisi birlik va muzakkarlikda qoladi. Shunday deysan: «Ular adolatli guvohlardir», «Ular qizlarning eng hurmatlisidir»."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَكَذَلِكَ:",
+            "uz": "Shuningdek:"
+          },
+          "items": [
+            {
+              "ar": "٣ - صِفَةُ جَمْعِ مَا لَا يَعْقِلُ؛ فَإِنَّهَا تُعَامَلُ مُعَامَلَةَ الْمُؤَنَّثِ الْمُفْرَدِ، أَوِ الْجَمْعِ. تَقُولُ: أَيَّامًا مَعْدُودَةً. أَوْ: مَعْدُودَاتٍ.",
+              "uz": "3 — Aqlsiz narsalar ko'pligining sifati; u birlik muannas yoki ko'plik muomalasini oladi. Shunday deysan: «sanoqli kunlar» — ikki xil shakl bilan."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "وَلِلْخَبَرِ وَالْحَالِ مِنَ الْمُطَابَقَةِ لِلْمُبْتَدَأِ وَصَاحِبِ الْحَالِ، أَوْ عَدَمِهَا، مَا لِلنَّعْتِ.",
+          "uz": "Xabar va hol uchun ham mubtado va sohibul-holga moslashish yoxud moslashmaslikda na'tdagi hukm amal qiladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْجُمَلُ بَعْدَ النَّكِرَاتِ صِفَاتٌ، وَبَعْدَ الْمَعَارِفِ أَحْوَالٌ.",
+          "uz": "Nakiralardan keyingi gaplar sifat, ma'rifalardan keyingi gaplar esa holdir."
+        },
+        {
+          "type": "para",
+          "ar": "(١) لِأَنَّ الْخَبَرَ فِي الْحَقِيقَةِ صِفَةٌ لِلْمُبْتَدَأِ، وَالْحَالَ صِفَةٌ لِصَاحِبِهِ.",
+          "uz": "(1-izoh) Chunki xabar haqiqatda mubtadoning sifati, hol esa o'z sohibining sifatidir."
+        },
+        {
+          "type": "para",
+          "ar": "فَتَقُولُ فِي الْحَقِيقِيِّ: هُمْ صَادِقُونَ، وَ: هُنَّ صَادِقَاتٌ، وَ: أَخْبَرَ رِجَالٌ صَادِقُونَ، وَ: نِسَاءٌ صَادِقَاتٌ، وَ: أَخْبَرَ الرِّجَالُ الصَّادِقِينَ، وَ: النِّسَاءُ الصَّادِقَاتِ.",
+          "uz": "Haqiqiy na'tda shunday deysan: «Ular rostgo'ydirlar», «Ular (ayollar) rostgo'ydirlar», «Rostgo'y erkaklar xabar berdi», «rostgo'y ayollar», «Erkaklar rostgo'ylarga xabar berdi», «rostgo'y ayollarga»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ: هُمْ عَدْلٌ، وَ: هُنَّ عَدْلٌ، وَ: شَهِدَ رِجَالٌ عَدْلٌ، وَ: نِسَاءٌ عَدْلٌ، وَ: شَهِدَ الرِّجَالَ عَدْلًا، وَ: النِّسَاءَ عَدْلًا.",
+          "uz": "Yana: «Ular adolatlidir», «Ular (ayollar) adolatlidir», «Adolatli erkaklar guvohlik berdi», «adolatli ayollar», «Erkaklarga adolatli holda guvohlik berdi», «ayollarga adolatli holda»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ: هُمْ أَفْضَلُ مِنْ غَيْرِهِمْ، وَ: هُنَّ أَفْضَلُ مِنْ غَيْرِهِنَّ، وَ: سِرْتُ مَعَ رِجَالٍ أَفْضَلَ مِنْ غَيْرِهِمْ، وَ: النِّسَاءُ أَفْضَلُ مِنْ غَيْرِهِنَّ. وَ: سِرْتُ مَعَ الرِّجَالِ أَفْضَلَ مِنْ غَيْرِهِمْ، وَ: مَعَ النِّسَاءِ أَفْضَلَ مِنْ غَيْرِهِنَّ.",
+          "uz": "Yana: «Ular boshqalardan afzalroqdir», «Ular (ayollar) boshqalardan afzalroqdir», «Boshqalardan afzalroq erkaklar bilan yurdim», «Ayollar boshqalardan afzalroqdir», «Erkaklar bilan — boshqalardan afzalroq holda — yurdim», «ayollar bilan ham shunday»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ: الْأَقْلَامُ جَيِّدَةٌ، وَ: الصُّحُفُ جَيِّدَةٌ، وَ: اشْتَرَيْتُ أَقْلَامًا جَيِّدَةً، وَصُحُفًا جَيِّدَةً، وَاشْتَرِ الْأَقْلَامَ جَيِّدَةً، وَالصُّحُفَ جَيِّدَةً.",
+          "uz": "Yana: «Qalamlar yaxshidir», «Gazetalar yaxshidir», «Yaxshi qalamlar va yaxshi gazetalar sotib oldim», «Qalamlarni yaxshisidan ol, gazetalarni ham yaxshisidan»."
+        }
+      ],
+      "exercise": []
     }
   ]
 }

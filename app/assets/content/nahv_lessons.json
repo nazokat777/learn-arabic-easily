@@ -17435,6 +17435,85 @@
           "type": "para",
           "ar": "(٢) كَاسْمِ الْمَفْعُولِ وَالْمَنْسُوبِ؛ نَحْوُ: أَقُرَشِيٌّ جَدُّهُ؟",
           "uz": "(2-izoh) Ya'ni ism maf'ul va mansub kabi; masalan: «Uning bobosi qurayshiymi?»"
+        },
+        {
+          "type": "para",
+          "ar": "وَقَدْ يَكُونُ ظَرْفًا أَوْ مَصْدَرًا أَوْ جَارًّا وَمَجْرُورًا؛ نَحْوُ: سُهِرَتِ اللَّيْلَةُ، وَكُتِبَتْ كِتَابَةٌ حَسَنَةٌ، وَنُظِرَ فِي الْأَمْرِ.",
+          "uz": "U zarf, masdar yoki jorr va majrur bo'lishi ham mumkin; masalan: «Kecha bedor o'tildi», «Chiroyli yozuv yozildi», «Ish ko'rib chiqildi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُشْتَرَطُ فِي الظَّرْفِ وَالْمَصْدَرِ أَنْ يَكُونَا مُتَصَرِّفَيْنِ مُخْتَصَّيْنِ، فَلَا يَصِحُّ نَحْوُ: جُلِسَ مَعَكَ، وَعِيذَ مَعَاذُ اللَّهِ، وَلَا جُلِسَ زَمَانٌ، وَسِيرَ سَيْرٌ.",
+          "uz": "Zarf va masdarda ikkisining mutasarrif va muxtass bo'lishi shartdir; shuning uchun «sen bilan o'tirildi», «Allohning panohiga panoh izlandi», «zamon o'tirildi», «yurish yurildi» kabilar to'g'ri emas."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِذَا تَعَدَّدَ الْمَفْعُولُ بِهِ أُنِيبَ الْأَوَّلُ؛ نَحْوُ: أُعْطِيَ السَّائِلُ دِرْهَمًا، وَوُجِدَ الْخَبَرُ صَحِيحًا، وَأُعْلِمَ الْمُسْتَفْهِمُ الْأَمْرَ وَاقِعًا.",
+          "uz": "Maf'ul bih bir nechta bo'lsa, birinchisi noib qilinadi; masalan: «So'rovchiga bir dirham berildi», «Xabar to'g'ri topildi», «So'ragan kishiga ish sodir bo'lgani bildirildi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَتُسَمَّى الْجُمْلَةُ الْمُرَكَّبَةُ مِنَ الْفِعْلِ وَفَاعِلِهِ أَوْ نَائِبِ فَاعِلِهِ جُمْلَةً فِعْلِيَّةً.",
+          "uz": "Fe'l va uning foilidan yoki noibi foilidan tarkib topgan gap «fe'liy gap» deb ataladi."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 59,
+      "page": 350,
+      "titleAr": "الْمَبْحَثُ الثَّالِثُ فِي الْمُبْتَدَإِ وَالْخَبَرِ",
+      "title": "3-mabhas: mubtado va xabar",
+      "rule": {
+        "ar": "الْمُبْتَدَأُ وَالْخَبَرُ اسْمَانِ تَتَأَلَّفُ مِنْهُمَا جُمْلَةٌ مُفِيدَةٌ؛ نَحْوُ: السَّابِقُ فَائِزٌ.",
+        "uz": "Mubtado va xabar — ulardan foydali gap tuziladigan ikki ismdir; masalan: «Oldinda kelgan g'olibdir»."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَيَتَمَيَّزَانِ بِكَوْنِ الْأَوَّلِ هُوَ الْمُحَدَّثَ عَنْهُ، وَالثَّانِي هُوَ الْمُحَدَّثَ بِهِ، وَتُسَمَّى الْجُمْلَةُ الْمُرَكَّبَةُ مِنْهُمَا جُمْلَةً اسْمِيَّةً.",
+          "uz": "Ular shu bilan farqlanadi: birinchisi haqida xabar berilayotgan, ikkinchisi esa u bilan xabar berilayotgandir. Ulardan tarkib topgan gap «ismiy gap» deb ataladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْأَصْلُ فِي الْمُبْتَدَإِ أَنْ يَكُونَ مَعْرِفَةً، وَيَقَعُ نَكِرَةً إِذَا أَفَادَتْ؛ بِأَنْ يَتَقَدَّمَ عَلَيْهَا الْخَبَرُ الظَّرْفُ أَوِ الْجَارُّ وَالْمَجْرُورُ؛ نَحْوُ: عِنْدَكَ فَضْلٌ، وَفِيكَ خَيْرٌ.",
+          "uz": "Mubtadoda asl — uning ma'rifa bo'lishidir; foyda bersa, nakira ham bo'lib keladi — masalan oldiga zarf yoki jorr-majrur bo'lgan xabar kelsa; masalan: «Senda fazl bor», «Senda yaxshilik bor»."
+        },
+        {
+          "type": "para",
+          "ar": "أَوْ كَانَتْ عَامَّةً كَمَا إِذَا وَقَعَتْ بَعْدَ الاِسْتِفْهَامِ أَوِ النَّفْيِ؛ نَحْوُ: مَا مُجِدٌّ مَذْمُومٌ، وَهَلْ فَتًى هُنَا؟",
+          "uz": "Yoki umumiy bo'lsa — masalan so'roq yoki inkordan keyin kelsa; masalan: «Tirishqoq kishi malomat qilinmaydi», «Bu yerda biror yigit bormi?»"
+        },
+        {
+          "type": "para",
+          "ar": "أَوْ كَانَتْ خَاصَّةً بِأَنْ وُصِفَتْ أَوْ أُضِيفَتْ؛ نَحْوُ: رَجُلٌ فَاضِلٌ مُقْبِلٌ، وَطَالِبُ خَيْرٍ حَاضِرٌ.",
+          "uz": "Yoki xos bo'lsa — ya'ni sifatlansa yoki izofa qilinsa; masalan: «Fozil bir kishi kelmoqda», «Yaxshilik talab qiluvchi hozirdir»."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْخَبَرُ يَكُونُ مُطَابِقًا لِلْمُبْتَدَإِ فِي الْإِفْرَادِ وَالتَّثْنِيَةِ وَالْجَمْعِ مَعَ التَّذْكِيرِ أَوِ التَّأْنِيثِ؛ فَتَقُولُ: السَّابِقُ فَائِزٌ، وَالسَّابِقَانِ فَائِزَانِ، وَالسَّابِقُونَ فَائِزُونَ، وَالسَّابِقَةُ فَائِزَةٌ، وَالسَّابِقَتَانِ فَائِزَتَانِ، وَالسَّابِقَاتُ فَائِزَاتٌ.",
+          "uz": "Xabar mubtadoga birlik, ikkilik va ko'plikda hamda muzakkarlik yoki muannaslikda mos keladi; shunday deysan: «Oldinda kelgan g'olib», «Oldinda kelgan ikkovi g'olib», «Oldinda kelganlar g'olib», «Oldinda kelgan ayol g'olib», «Oldinda kelgan ikki ayol g'olib», «Oldinda kelgan ayollar g'olib»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَقَعُ الْخَبَرُ جُمْلَةً؛ نَحْوُ: الْحِلْمُ يَسْمُو صَاحِبُهُ، وَالْغَضَبُ آخِرُهُ نَدَمٌ. وَلَا بُدَّ مِنِ اشْتِمَالِهَا عَلَى ضَمِيرٍ يَرْبِطُهَا بِالْمُبْتَدَإِ كَمَا رَأَيْتَ.",
+          "uz": "Xabar gap bo'lib ham keladi; masalan: «Halimlik — egasi yuksaladi», «G'azabning oxiri pushaymondir». U gap mubtado bilan bog'laydigan zamirni o'z ichiga olishi shart — ko'rganingdek."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَقَعُ الْخَبَرُ ظَرْفًا أَوْ جَارًّا وَمَجْرُورًا؛ نَحْوُ: الْعَفْوُ عِنْدَ الْمَقْدِرَةِ، وَالْعِلْمُ فِي الصُّدُورِ.",
+          "uz": "Xabar zarf yoki jorr va majrur bo'lib ham keladi; masalan: «Kechirim — qudrat paytida», «Ilm ko'kraklardadir»."
+        },
+        {
+          "type": "para",
+          "ar": "(١) الْخَبَرُ عِنْدَ بَعْضِهِمْ هُوَ نَفْسُ الظَّرْفِ أَوِ الْجَارِّ وَالْمَجْرُورِ، فَتَكُونُ أَقْسَامُ الْخَبَرِ حِينَئِذٍ ثَلَاثَةً: مُفْرَدٌ، وَجُمْلَةٌ، وَشِبْهُ جُمْلَةٍ.",
+          "uz": "(1-izoh) Ba'zilarga ko'ra xabar — zarfning yoki jorr va majrurning o'zi; u holda xabarning qismlari uchta bo'ladi: mufrad, gap va gapga o'xshash."
+        },
+        {
+          "type": "para",
+          "ar": "وَعِنْدَ بَعْضِهِمْ هُوَ الْمُتَعَلَّقُ الْمَحْذُوفُ؛ فَإِنْ قَدَّرْتَهُ كَائِنًا كَانَ مِنْ قَبِيلِ الْخَبَرِ الْمُفْرَدِ، وَإِنْ قَدَّرْتَهُ اسْتَقَرَّ كَانَ مِنْ قَبِيلِ الْخَبَرِ الْجُمْلَةِ، فَيَكُونُ الْخَبَرُ قِسْمَيْنِ فَقَطْ.",
+          "uz": "Ba'zilarga ko'ra esa xabar — tushirilgan mutaalliqdir: uni «koinan» deb taqdir qilsang, mufrad xabar turidan bo'ladi; «istaqarra» deb taqdir qilsang, gap-xabar turidan bo'ladi; shunda xabar faqat ikki qism bo'ladi."
         }
       ],
       "exercise": []

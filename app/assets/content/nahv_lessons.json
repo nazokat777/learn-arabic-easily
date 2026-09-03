@@ -15113,6 +15113,14 @@
             {
               "ar": "٢ - وَإِنْ كَانَ عَلَى وَزْنِ فَعَّلَ: فَمَصْدَرُهُ عَلَى وَزْنِ تَفْعِيلٍ؛ كَ: قَدَّمَ تَقْدِيمًا.",
               "uz": "2 — «Fa''ala» vaznida bo'lsa, masdari «taf'il» vaznida bo'ladi; masalan: qaddama — taqdiman."
+            },
+            {
+              "ar": "٣ - وَإِنْ كَانَ عَلَى وَزْنِ فَاعَلَ: فَمَصْدَرُهُ عَلَى فِعَالٍ أَوْ مُفَاعَلَةٍ؛ كَ: قَاتَلَ قِتَالًا وَمُقَاتَلَةً.",
+              "uz": "3 — «Fo'ala» vaznida bo'lsa, masdari «fi'ol» yoki «mufo'ala» vaznida bo'ladi; masalan: qotala — qitolan va muqotalatan."
+            },
+            {
+              "ar": "٤ - وَإِنْ كَانَ عَلَى وَزْنِ فَعْلَلَ: فَمَصْدَرُهُ عَلَى وَزْنِ فَعْلَلَةٍ؛ كَ: دَحْرَجَ دَحْرَجَةً.",
+              "uz": "4 — «Fa'lala» vaznida bo'lsa, masdari «fa'lala» vaznida bo'ladi; masalan: dahraja — dahrajatan."
             }
           ]
         },
@@ -15125,6 +15133,168 @@
           "type": "para",
           "ar": "(٢) بَلِجَ وَجْهُهُ بَلَجًا: تَنَضَّرَ سُرُورًا.",
           "uz": "(2-izoh) «Balija vajhuhu balajan» — yuzi quvonchdan yorishdi."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَجِيءُ فِي فَعْلَلَ فِعْلَالٌ أَيْضًا إِنْ كَانَ مُضَاعَفًا؛ كَ: (وَسْوَسَ وَسْوَسَةً وَوِسْوَاسًا).",
+          "uz": "«Fa'lala» muzo'af bo'lsa, «fi'lol» vazni ham keladi; masalan: vasvasa — vasvasatan va visvosan."
+        },
+        {
+          "type": "para",
+          "ar": "وَأَمَّا الْخُمَاسِيُّ وَالسُّدَاسِيُّ فَالْمَصْدَرُ مِنْهُمَا يَكُونُ عَلَى وَزْنِ مَاضِيهِ مَعَ كَسْرِ ثَالِثِهِ وَزِيَادَةِ أَلِفٍ قَبْلَ آخِرِهِ إِنْ كَانَ مَبْدُوءًا بِهَمْزَةِ وَصْلٍ؛ كَ: انْطَلَقَ انْطِلَاقًا، وَاسْتَخْرَجَ اسْتِخْرَاجًا.",
+          "uz": "Besh va olti harfliga kelsak, ularning masdari mozisining vaznida bo'ladi; boshi vasl hamzasi bilan bo'lsa, uchinchi harfi kasra qilinib, oxiridan oldin alif qo'shiladi; masalan: intalaqa — intiloqan, istaxraja — istixrojan."
+        },
+        {
+          "type": "para",
+          "ar": "وَمَعَ ضَمِّ مَا قَبْلَ آخِرِهِ فَقَطْ إِنْ كَانَ مَبْدُوءًا بِتَاءٍ زَائِدَةٍ؛ كَ: تَقَدَّمَ تَقَدُّمًا، وَتَدَحْرَجَ تَدَحْرُجًا.",
+          "uz": "Boshi ortiqcha «to» bilan bo'lsa, faqat oxiridan oldingi harfi damma qilinadi; masalan: taqaddama — taqadduman, tadahraja — tadahrujan."
+        },
+        {
+          "type": "para",
+          "ar": "(تَنْبِيهٌ): الْفِعْلُ إِذَا كَانَتْ عَيْنُهُ أَلِفًا تُحْذَفُ مِنْهُ أَلِفُ الْإِفْعَالِ وَالاِسْتِفْعَالِ، وَيُعَوَّضُ عَنْهَا تَاءٌ فِي الْآخِرِ؛ كَ: (أَقَامَ إِقَامَةً، وَاسْتَقَامَ اسْتِقَامَةً).",
+          "uz": "(Tanbeh) Fe'lning ayni alif bo'lsa, undan «if'ol» va «istif'ol»ning alifi tushiriladi va o'rniga oxirida «to» qo'yiladi; masalan: aqoma — iqomatan, istaqoma — istiqomatan."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِذَا كَانَتْ لَامُهُ أَلِفًا فَفِي فَعَّلَ تُحْذَفُ يَاءُ التَّفْعِيلِ، وَيُعَوَّضُ عَنْهَا تَاءٌ أَيْضًا؛ كَ: زَكَّى تَزْكِيَةً.",
+          "uz": "Lomi alif bo'lsa, «fa''ala»da «taf'il»ning yosi tushiriladi va o'rniga ham «to» qo'yiladi; masalan: zakko — tazkiyatan."
+        },
+        {
+          "type": "para",
+          "ar": "وَفِي تَفَعَّلَ وَتَفَاعَلَ تُقْلَبُ الْأَلِفُ يَاءً، وَيُكْسَرُ مَا قَبْلَهَا؛ كَ: «تَأَنَّى تَأَنِّيًا، وَتَغَاضَى تَغَاضِيًا».",
+          "uz": "«Tafa''ala» va «tafo'ala»da alif «yo»ga aylantiriladi va undan oldingisi kasra qilinadi; masalan: taanno — taanniyan, tag'ozo — tag'oziyan."
+        },
+        {
+          "type": "para",
+          "ar": "وَفِي غَيْرِ ذَلِكَ تُقْلَبُ هَمْزَةً إِنْ سَبَقَتْهَا أَلِفٌ؛ كَ: أَلْقَى إِلْقَاءً، وَوَالَى وِلَاءً، وَانْطَوَى انْطِوَاءً، وَاقْتَدَى اقْتِدَاءً، وَارْعَوَى ارْعِوَاءً، وَاسْتَوْلَى اسْتِيلَاءً، وَاحْلَوْلَى احْلِيلَاءً.",
+          "uz": "Bulardan boshqasida, oldidan alif kelgan bo'lsa, hamzaga aylantiriladi; masalan: alqo — ilqo'an, volo — viloan, intavo — intivo'an, iqtado — iqtido'an, ir'avo — ir'ivo'an, istavlo — istilo'an, ihlavlo — ihlilo'an."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 24,
+      "page": 314,
+      "titleAr": "الْمَرَّةُ وَالْهَيْئَةُ",
+      "title": "Marra va hay'a masdarlari",
+      "rule": {
+        "ar": "يُصَاغُ لِلدَّلَالَةِ عَلَى الْمَرَّةِ مِنَ الْفِعْلِ الثُّلَاثِيِّ مَصْدَرٌ عَلَى وَزْنِ فَعْلَةٍ، وَلِلدَّلَالَةِ عَلَى الْهَيْئَةِ مَصْدَرٌ عَلَى وَزْنِ فِعْلَةٍ.",
+        "uz": "Uch harfli fe'ldan bir marta bajarilishga dalolat qilish uchun «fa'la» vaznida masdar yasaladi; holat-tarzga dalolat qilish uchun esa «fi'la» vaznida masdar yasaladi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "فَتَقُولُ: هُوَ يَأْكُلُ فِي الْيَوْمِ أَكْلَةً غَيْرَ أَنَّهُ يَأْكُلُ إِكْلَةَ الشَّرِهِ.",
+          "uz": "Shunday deysan: «U kuniga bir marta yeydi, faqat ochko'zlarcha yeydi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَدُلُّ عَلَى الْمَرَّةِ مِنْ غَيْرِ الثُّلَاثِيِّ بِزِيَادَةِ تَاءٍ عَلَى مَصْدَرِهِ؛ كَ: انْطَلَقَ انْطِلَاقَةً، وَاسْتَخْرَجَ اسْتِخْرَاجَةً، وَلَا صِيغَةَ مِنْهُ لِلْهَيْئَةِ.",
+          "uz": "Uch harfli bo'lmagan fe'ldan bir martaga dalolat qilish masdariga «to» qo'shish bilan bo'ladi; masalan: intalaqa — intiloqatan, istaxraja — istixrojatan. Undan hay'a siyg'asi esa yasalmaydi."
+        },
+        {
+          "type": "para",
+          "ar": "(١) إِذَا كَانَتْ صِيغَةُ الْمَصْدَرِ مُشَابِهَةً لِصِيغَةِ الْمَرَّةِ دُلَّ عَلَى الْمَرَّةِ بِالْوَصْفِ؛ كَ: دَعْوَةٍ وَاحِدَةٍ وَاسْتِمَالَةٍ وَاحِدَةٍ، وَإِذَا كَانَتْ مُشَابِهَةً لِصِيغَةِ الْهَيْئَةِ دُلَّ عَلَى الْهَيْئَةِ بِالْوَصْفِ أَوِ الْإِضَافَةِ؛ نَحْوُ: نِشْدَةً بَالِغَةً.",
+          "uz": "(1-izoh) Masdarning siyg'asi «marra» siyg'asiga o'xshash bo'lsa, bir martaga sifat bilan dalolat qilinadi; masalan: «bir da'vat», «bir moyil qilish». Hay'a siyg'asiga o'xshash bo'lsa, holatga sifat yoki izofa bilan dalolat qilinadi; masalan: «juda qattiq so'rash»."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 25,
+      "page": 314,
+      "titleAr": "الْمَصْدَرُ الْمِيمِيُّ",
+      "title": "Masdari mimiy",
+      "rule": {
+        "ar": "يُصَاغُ مِنَ الْفِعْلِ مَصْدَرٌ مَبْدُوءٌ بِمِيمٍ زَائِدَةٍ يُقَالُ لَهُ: الْمَصْدَرُ الْمِيمِيُّ.",
+        "uz": "Fe'ldan boshi ortiqcha «mim» bilan boshlanadigan masdar yasaladi; unga «masdari mimiy» deyiladi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَهُوَ: مِنَ الثُّلَاثِيِّ عَلَى وَزْنِ (مَفْعَلٍ) بِفَتْحِ الْعَيْنِ؛ كَ: مَنْظَرٍ، وَمَضْرَبٍ، وَمَوْقًى، مَا لَمْ يَكُنْ مِثَالًا، صَحِيحَ اللَّامِ، مُعَلَّ الْفَاءِ فِي الْمُضَارِعِ فَتُكْسَرُ الْعَيْنُ؛ كَ: مَوْعِدٍ وَمَوْقِعٍ.",
+          "uz": "U uch harflidan «maf'al» vaznida (ayni fathali) bo'ladi; masalan: manzar, mazrab, mavqo. Faqat u misol, lomi sahih va muzori'da fosi illatli bo'lmasa; u holda ayn kasra qilinadi; masalan: mav'id, mavqi'."
+        },
+        {
+          "type": "para",
+          "ar": "وَمِنْ غَيْرِ الثُّلَاثِيِّ عَلَى وَزْنِ اسْمِ مَفْعُولِهِ؛ كَمُتَقَدَّمٍ وَمُتَأَخَّرٍ.",
+          "uz": "Uch harfli bo'lmaganidan esa o'zining ism maf'uli vaznida bo'ladi; masalan: mutaqaddam, muta'axxar."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) وَثَمَّ مَصْدَرٌ يُقَالُ لَهُ: الْمَصْدَرُ الصِّنَاعِيُّ يُصَاغُ مِنَ اللَّفْظِ بِزِيَادَةِ يَاءٍ مُشَدَّدَةٍ بَعْدَهَا تَاءٌ؛ كَ: الْحَجَرِيَّةِ، وَالْحُرِّيَّةِ، وَالْإِنْسَانِيَّةِ.",
+          "uz": "(2-izoh) Yana bir masdar bor — unga «masdari sinoiy» deyiladi; u lafzga shaddali «yo» va undan keyin «to» qo'shish bilan yasaladi; masalan: hajariyya (toshlik), hurriyya (erkinlik), insoniyya (insoniylik)."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 26,
+      "page": 315,
+      "titleAr": "عَمَلُ الْمَصْدَرِ",
+      "title": "Masdarning amali",
+      "rule": {
+        "ar": "يَعْمَلُ الْمَصْدَرُ عَمَلَ فِعْلِهِ مُضَافًا أَوْ مُجَرَّدًا مِنْ أَلْ وَالْإِضَافَةِ، أَوْ مُعَرَّفًا بِأَلْ.",
+        "uz": "Masdar o'z fe'lining amalini qiladi — izofa qilingan holda ham, «al»dan va izofadan xoli holda ham, «al» bilan ma'rifa qilingan holda ham."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "نَحْوُ: ﴿وَلَوْلَا دَفْعُ اللَّهِ النَّاسَ بَعْضَهُمْ بِبَعْضٍ لَفَسَدَتِ الْأَرْضُ﴾.",
+          "uz": "Masalan: «Agar Alloh odamlarning ba'zisini ba'zisi bilan daf qilmaganida, yer buzilib ketardi»."
+        },
+        {
+          "type": "para",
+          "ar": "﴿أَوْ إِطْعَامٌ فِي يَوْمٍ ذِي مَسْغَبَةٍ * يَتِيمًا﴾.",
+          "uz": "«Yoki ochlik kunida yetimni taomlantirish»."
+        },
+        {
+          "type": "para",
+          "ar": "(ضَعِيفُ النِّكَايَةِ أَعْدَاءَهُ).",
+          "uz": "«Dushmanlariga zarar yetkazishi zaif kishi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِضَافَتُهُ لِفَاعِلِهِ كَمَا رَأَيْتَ أَكْثَرُ مِنْ إِضَافَتِهِ لِمَفْعُولِهِ؛ نَحْوُ: ﴿وَلِلَّهِ عَلَى النَّاسِ حِجُّ الْبَيْتِ مَنِ اسْتَطَاعَ إِلَيْهِ سَبِيلًا﴾.",
+          "uz": "Uning foiliga izofa qilinishi — ko'rganingdek — maf'uliga izofa qilinishidan ko'ra ko'proq uchraydi; masalan: «Allohning odamlar zimmasidagi haqqi — unga yo'l topa olganlarning Baytni haj qilishidir»."
+        },
+        {
+          "type": "para",
+          "ar": "وَشَرْطُ عَمَلِهِ صِحَّةُ حُلُولِ الْفِعْلِ مَعَ (أَنْ)، أَوْ (مَا) مَحَلَّهُ كَمَا مُثِّلَ، أَوْ نِيَابَتُهُ عَنْ فِعْلِهِ؛ نَحْوُ: حَبْسًا اللِّصَّ، أَوْ تَرْكًا الْعَذْلَ.",
+          "uz": "Uning amal qilish sharti — fe'lning «an» yoki «mo» bilan birga uning o'rniga o'ta olishi (misolda ko'rsatilganidek), yoxud uning o'z fe'li o'rnini bosishidir; masalan: «O'g'rini hibsga ol!», «Malomatni tark et!»"
+        },
+        {
+          "type": "para",
+          "ar": "فَلَا عَمَلَ لِلْمَصْدَرِ الْمُؤَكِّدِ أَوِ الْمُبَيِّنِ لِلْعَدَدِ، وَمَا لَمْ يُرَدْ بِهِ الْحُدُوثُ، فَلَا يَصِحُّ: عَلَّمْتُهُ تَعْلِيمًا الْمَسْأَلَةَ، وَفَهَّمْتُهُ تَفْهِيمَتَيْنِ الْحَقِيقَةَ، وَلَهُ صَوْتٌ صَوْتَ سَبُعٍ.",
+          "uz": "Shuning uchun ta'kidlovchi masdarning, sonni bayon qiluvchi masdarning va sodir bo'lish ma'nosi ko'zda tutilmagan masdarning amali yo'q. Shuning uchun «Unga masalani o'rgatib o'rgatdim», «Unga haqiqatni ikki marta tushuntirib tushuntirdim», «Uning yirtqich ovozidek ovozi bor» deb (masdarni amal qildirib) aytish to'g'ri emas."
+        },
+        {
+          "type": "para",
+          "ar": "عَلَى أَنَّ مَا بَعْدَ الْمَصْدَرِ مَنْصُوبٌ بِهِ؛ بَلِ الْمَفْعُولُ فِي الْمِثَالَيْنِ الْأَوَّلَيْنِ مَنْصُوبٌ بِالْفِعْلِ الْمَذْكُورِ، وَفِي الثَّالِثِ بِفِعْلٍ مَحْذُوفٍ؛ أَيْ: يُصَوِّتُ صَوْتَ سَبُعٍ.",
+          "uz": "Ya'ni masdardan keyingisi u bilan nasb qilingan emas; balki birinchi ikki misolda maf'ul zikr qilingan fe'l bilan nasb qilingan, uchinchisida esa tushirilgan fe'l bilan; ya'ni «u yirtqich ovozidek ovoz chiqaradi»."
+        },
+        {
+          "type": "para",
+          "ar": "(١) هَذَا صَدْرُ بَيْتٍ مِنْ شَوَاهِدِ سِيبَوَيْهِ الَّتِي لَا يُعْرَفُ لَهَا قَائِلٌ، وَعَجُزُهُ: «يَخَالُ الْفِرَارَ يُرَاخِي الْأَجَلَ».",
+          "uz": "(1-izoh) Bu — Sibavayhning shohidlaridan bo'lgan, aytuvchisi noma'lum baytning birinchi yarmi; ikkinchi yarmi: «U qochish ajalni kechiktiradi deb o'ylaydi»."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) فَفِي نَحْوِ: عَجِبْتُ مِنْ تَأْدِيبِكَ أَخَاكَ الْآنَ، يَصِحُّ أَنْ تَقُولَ: عَجِبْتُ مِمَّا تُؤَدِّبُ أَخَاكَ.",
+          "uz": "(2-izoh) «Hozir akangni tarbiyalayotganingdan hayron bo'ldim» kabi gapda «Akangni tarbiyalayotganingdan hayron bo'ldim» deyish to'g'ri bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَفِي نَحْوِ: عَجِبْتُ مِنْ إِكْرَامِكَ أَخَاكَ أَمْسِ، يَصِحُّ أَنْ تَقُولَ: عَجِبْتُ مِنْ أَنْ أَكْرَمْتَ أَخَاكَ.",
+          "uz": "«Kecha akangni hurmat qilganingdan hayron bo'ldim» kabi gapda ham «an» bilan aytish to'g'ri bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَفِي نَحْوِ: عَجِبْتُ مِنْ لِقَائِكَ أَخَاكَ غَدًا، يَصِحُّ أَنْ تَقُولَ: عَجِبْتُ مِنْ أَنْ تَلْقَى أَخَاكَ.",
+          "uz": "«Ertaga akang bilan uchrashishingdan hayron bo'ldim» kabi gapda ham «an» bilan aytish to'g'ri bo'ladi."
         }
       ],
       "exercise": []

@@ -19577,6 +19577,160 @@
           "type": "para",
           "ar": "وَالثَّالِثُ: الْمَنْقُوصُ؛ فَإِنَّ يَاءَهُ تُعَامَلُ مُعَامَلَةَ أَلِفِ الْمَقْصُورِ؛ فَتَقُولُ فِي شَجٍ وَعَمٍ: شَجَوِيٌّ، وَعَمَوِيٌّ.",
           "uz": "Uchinchisi: manqus — uning «yo»siga maqsurning alifi kabi muomala qilinadi; shunday qilib «shajin» va «amin»da: shajaviy, amaviy deysan."
+        },
+        {
+          "type": "para",
+          "ar": "وَفِي مُعْتَدٍ وَمُسْتَقْصٍ: مُعْتَدِيٌّ، وَمُسْتَقْصِيٌّ.",
+          "uz": "«Mu'tad» va «mustaqs»da: mu'tadiy, mustaqsiy."
+        },
+        {
+          "type": "para",
+          "ar": "وَفِي قَاضٍ وَرَامٍ: قَاضِيٌّ، وَرَامِيٌّ، أَوْ قَاضَوِيٌّ، وَرَامَوِيٌّ، بِقَلْبِ الْيَاءِ وَاوًا بَعْدَ فَتْحِ الْعَيْنِ.",
+          "uz": "«Qozi» va «romi»da: qoziyy va romiyy, yoki aynni fatha qilgandan keyin «yo»ni vovga aylantirib qozaviy va romaviy."
+        },
+        {
+          "type": "para",
+          "ar": "وَالرَّابِعُ: الْمَمْدُودُ؛ فَإِنَّهُ يُعَامَلُ مُعَامَلَتَهُ فِي التَّثْنِيَةِ؛ فَتَقُولُ فِي صَحْرَاءَ: صَحْرَاوِيٌّ.",
+          "uz": "To'rtinchisi: mamdud — unga ikkilikdagi kabi muomala qilinadi; shunday qilib «sahro»da «sahroviy» deysan."
+        },
+        {
+          "type": "para",
+          "ar": "وَفِي قَرَّاءٍ: قَرَّائِيٌّ، وَفِي عِلْبَاءٍ وَسَمَاءٍ: عِلْبَاوِيٌّ وَسَمَاوِيٌّ، أَوْ عِلْبَائِيٌّ وَسَمَائِيٌّ.",
+          "uz": "«Qarro'»da: qarro'iy; «ilbo'» va «samo'»da: ilboviy va samoviy, yoki ilbo'iy va samo'iy."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْخَامِسُ: الْمَخْتُومُ بِيَاءٍ مُشَدَّدَةٍ؛ فَإِنْ كَانَتْ بَعْدَ حَرْفٍ وَاحِدٍ؛ كَ: حَيٍّ، وَطَيٍّ، قُلِبَتِ الْيَاءُ الثَّانِيَةُ مِنَ الْحَرْفِ الْمُشَدَّدِ وَاوًا، وَرُدَّتِ الْأُولَى لِأَصْلِهَا؛ فَتَقُولُ: حَيَوِيٌّ وَطَوَوِيٌّ.",
+          "uz": "Beshinchisi: shaddali «yo» bilan tugagani. U bitta harfdan keyin bo'lsa — «hayy» va «tayy» kabi — shaddali harfdagi ikkinchi «yo» vovga aylantiriladi va birinchisi asliga qaytariladi; shunday deysan: hayaviy, tavaviy."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِنْ كَانَتْ بَعْدَ حَرْفَيْنِ؛ كَ: عَدِيٍّ، وَقُصَيٍّ، حُذِفَتِ الْيَاءُ الْأُولَى، وَقُلِبَتِ الثَّانِيَةُ وَاوًا، وَفُتِحَ الْحَرْفُ الثَّانِي؛ فَتَقُولُ: عَدَوِيٌّ وَقُصَوِيٌّ.",
+          "uz": "Ikki harfdan keyin bo'lsa — «Adiy» va «Qusay» kabi — birinchi «yo» tushiriladi, ikkinchisi vovga aylantiriladi va ikkinchi harf fatha qilinadi; shunday deysan: adaviy, qusaviy."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِنْ كَانَتْ بَعْدَ ثَلَاثَةٍ فَأَكْثَرَ؛ كَ: كُرْسِيٍّ، وَشَافِعِيٍّ، وَمَرْمِيٍّ، حُذِفَتْ؛ فَتَقُولُ: كُرْسِيٌّ، وَشَافِعِيٌّ، وَمَرْمِيٌّ. فَيَتَّحِدُ الْمَنْسُوبُ وَالْمَنْسُوبُ إِلَيْهِ فِي اللَّفْظِ، وَيَخْتَلِفَانِ فِي التَّقْدِيرِ.",
+          "uz": "Uch yoki undan ko'p harfdan keyin bo'lsa — «kursiy», «shofi'iy», «marmiy» kabi — u tushiriladi; shunday deysan: kursiy, shofi'iy, marmiy. Shunda mansub va mansub ilayh lafzda birlashadi, taqdirda esa farq qiladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَالسَّادِسُ: مَا كَانَ عَلَى وَزْنِ فُعَيْلَةٍ أَوْ فَعِيلَةٍ؛ كَ: جُهَيْنَةَ وَمَدِينَةٍ، فَتُحْذَفُ يَاؤُهُ مَعَ التَّاءِ، وَيُفْتَحُ الْحَرْفُ الثَّانِي؛ فَتَقُولُ: جُهَنِيٌّ وَمَدَنِيٌّ، مَا لَمْ يَكُنْ مُضَاعَفًا؛ كَ: قُلَيْلَةٍ وَجَلِيلَةٍ، أَوْ وَاوِيَّ الْعَيْنِ؛ كَ: طَوِيلَةٍ؛ فَتَقُولُ: قُلَيْلِيٌّ وَجَلِيلِيٌّ وَطَوِيلِيٌّ.",
+          "uz": "Oltinchisi: «fu'ayla» yoki «fa'ila» vaznida bo'lgani — «Juhayna» va «Madina» kabi; uning «yo»si «to» bilan birga tushiriladi va ikkinchi harf fatha qilinadi; shunday deysan: juhaniy, madaniy. Bu — u muzo'af («qulayla», «jalila» kabi) yoki ayni voviy («tavila» kabi) bo'lmagan holdadir; u holda: qulayliy, jaliliy, taviliy deysan."
+        },
+        {
+          "type": "para",
+          "ar": "وَالسَّابِعُ: مَا تَوَسَّطَهُ يَاءٌ مُشَدَّدَةٌ مَكْسُورَةٌ؛ كَ: طَيِّبٍ، وَغُزَيِّلٍ، فَتُحْذَفُ يَاؤُهُ الثَّانِيَةُ؛ فَتَقُولُ: طَيِبِيٌّ وَغُزَيْلِيٌّ.",
+          "uz": "Yettinchisi: o'rtasida kasrali shaddali «yo» bo'lgani — «tayyib» va «g'uzayyil» kabi; uning ikkinchi «yo»si tushiriladi; shunday deysan: tayibiy, g'uzayliy."
+        },
+        {
+          "type": "para",
+          "ar": "وَالثَّامِنُ: كُلُّ ثُلَاثِيٍّ مَكْسُورِ الْعَيْنِ؛ كَ: مَلِكٍ، وَإِبِلٍ، وَدُئِلٍ؛ فَإِنَّهَا تُفْتَحُ فِي النَّسَبِ؛ فَتَقُولُ: مَلَكِيٌّ وَإِبَلِيٌّ وَدُؤَلِيٌّ.",
+          "uz": "Sakkizinchisi: ayni kasrali har bir uch harfli ism — «malik», «ibil», «Duil» kabi; nisbatda ular fatha qilinadi; shunday deysan: malakiy, ibaliy, du'aliy."
+        },
+        {
+          "type": "para",
+          "ar": "وَالتَّاسِعُ: كُلُّ ثُلَاثِيٍّ حُذِفَتْ لَامُهُ؛ كَ: أَبٍ، وَابْنٍ، وَيَدٍ، وَدَمٍ، وَأُخْتٍ؛ فَتُرَدُّ إِلَيْهِ عِنْدَ النَّسَبِ؛ فَتَقُولُ: أَبَوِيٌّ، وَبَنَوِيٌّ، وَيَدَوِيٌّ، وَدَمَوِيٌّ، وَأَخَوِيٌّ.",
+          "uz": "To'qqizinchisi: lomi tushirilgan har bir uch harfli ism — «ab», «ibn», «yad», «dam», «uxt» kabi; nisbat berishda u qaytariladi; shunday deysan: abaviy, banaviy, yadaviy, damaviy, axaviy."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِذَا أَرَدْتَ النِّسْبَةَ إِلَى الْمُرَكَّبِ نَسَبْتَ إِلَى صَدْرِهِ؛ فَتَقُولُ فِي امْرِئِ الْقَيْسِ، وَبَعْلَبَكَّ، وَجَادَ الْحَقُّ: امْرِئِيٌّ، وَبَعْلِيٌّ، وَجَادِيٌّ.",
+          "uz": "Tarkibli ismga nisbat bermoqchi bo'lsang, uning boshiga nisbat berasan; shunday qilib «Imru'ul-Qays», «Ba'labakk» va «Jodal-Haqq»da: imri'iy, ba'liy, jodiy deysan."
+        },
+        {
+          "type": "para",
+          "ar": "إِلَّا إِذَا كَانَ الْمُرَكَّبُ كُنْيَةً كَأَبِي بَكْرٍ، أَوْ عَلَمًا بِالْغَلَبَةِ كَابْنِ عُمَرَ، أَوْ خِيفَ اللَّبْسُ كَعَبْدِ مَنَافٍ وَعَبْدِ الدَّارِ، فَتُنْسَبُ إِلَى الْعَجُزِ؛ فَتَقُولُ: بَكْرِيٌّ، وَعُمَرِيٌّ، وَمَنَافِيٌّ، وَدَارِيٌّ.",
+          "uz": "Faqat tarkib «Abu Bakr» kabi kunya, «Ibn Umar» kabi g'alaba bilan atoqli ism bo'lsa, yoxud «Abdu Manof» va «Abduddor» kabi chalkashlikdan qo'rqilsa — u holda oxiriga nisbat beriladi; shunday deysan: bakriy, umariy, manofiy, doriy."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِذَا أَرَدْتَ النِّسْبَةَ إِلَى الْمُثَنَّى؛ كَ: الْحَرَمَيْنِ، أَوِ الْمَجْمُوعِ؛ كَ: الْفَرَائِضِ، نَسَبْتَ إِلَى مُفْرَدِهِ؛ كَ: حَرَمِيٌّ، وَفَرَضِيٌّ.",
+          "uz": "Musannoga — «al-Haramayn» kabi — yoki ko'plikka — «al-faroiz» kabi — nisbat bermoqchi bo'lsang, uning birligiga nisbat berasan; masalan: haramiy, farziy."
+        },
+        {
+          "type": "para",
+          "ar": "إِلَّا إِذَا جَرَى مَجْرَى الْعَلَمِ؛ كَ: أَنْصَارٍ، أَوْ لَمْ يَكُنْ لَهُ مُفْرَدٌ؛ كَ: أَبَابِيلَ، فَتُنْسَبُ إِلَيْهِ عَلَى لَفْظِهِ؛ كَ: اسْمِ الْجَمْعِ وَاسْمِ الْجِنْسِ؛ فَتَقُولُ: أَنْصَارِيٌّ، وَأَبَابِيلِيٌّ، وَأَهْلِيٌّ، وَشَجَرِيٌّ.",
+          "uz": "Faqat u «Ansor» kabi atoqli ism o'rnida bo'lsa, yoki «ababil» kabi birligi bo'lmasa — u holda o'z lafziga nisbat beriladi; ismul-jam' va ismi jins kabi; shunday deysan: ansoriy, ababiliy, ahliy, shajariy."
+        },
+        {
+          "type": "para",
+          "ar": "وَقَدْ يُسْتَغْنَى عَنْ يَاءِ النَّسَبِ بِصَوْغِ اسْمٍ مِنَ الْمَنْسُوبِ إِلَيْهِ عَلَى وَزْنِ فَعَّالٍ؛ كَ: نَجَّارٍ وَعَطَّارٍ.",
+          "uz": "Nisbat «yo»sidan behojat bo'lish uchun mansub ilayhdan «fa''ol» vaznida ism yasalishi mumkin; masalan: najjor (duradgor), attor (atrfurush)."
+        },
+        {
+          "type": "para",
+          "ar": "أَوْ فَاعِلٍ؛ كَ: طَاعِمٍ وَكَاسٍ.",
+          "uz": "Yoki «foil» vaznida; masalan: to'im (taomli), kosi (kiyimli)."
+        },
+        {
+          "type": "para",
+          "ar": "أَوْ فَعِلٍ؛ كَ: نَهِرٍ.",
+          "uz": "Yoki «fa'il» vaznida; masalan: nahir (daryoli)."
+        },
+        {
+          "type": "para",
+          "ar": "(١) هَذَا الرَّدُّ وَاجِبٌ إِنْ كَانَتِ اللَّامُ الْمَحْذُوفَةُ مِنَ الْمُفْرَدِ تُرَدُّ إِلَيْهِ فِي التَّثْنِيَةِ وَالْجَمْعِ، كَمَا فِي: أَبٍ وَأَخٍ، وَجَائِزٌ إِنْ لَمْ تُرَدَّ فِيهِمَا، كَمَا فِي: ابْنٍ، وَيَدٍ، وَدَمٍ.",
+          "uz": "(1-izoh) Bu qaytarish — birlikdan tushirilgan lom ikkilik va ko'plikda unga qaytariladigan bo'lsa — vojibdir («ab» va «ax»dagi kabi); ikkisida qaytarilmasa, joizdir («ibn», «yad», «dam»dagi kabi)."
+        },
+        {
+          "type": "para",
+          "ar": "فَالْأَوَّلُ عَلَى مَعْنَى: مُحْتَرِفٍ بِالنِّجَارَةِ وَالْعِطَارَةِ.",
+          "uz": "Birinchisi «duradgorlik va atrfurushlik hunarini qiluvchi» ma'nosidadir."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْأَخِيرَانِ عَلَى مَعْنَى: ذِي طَعَامٍ وَكِسْوَةٍ وَنَهَارٍ.",
+          "uz": "Oxirgi ikkisi «taom, kiyim va daryo egasi» ma'nosidadir."
+        },
+        {
+          "type": "para",
+          "ar": "وَكَثِيرًا مَا يَرِدُ النَّسَبُ عَلَى غَيْرِ هَذِهِ الْقَوَاعِدِ؛ كَأُمَوِيٍّ وَصَنْعَانِيٍّ وَرَازِيٍّ فِي النِّسْبَةِ إِلَى أُمَيَّةَ وَصَنْعَاءَ وَالرَّيِّ، فَيُقْتَصَرُ عَلَى مَا سُمِعَ مِنْهُ.",
+          "uz": "Nisbat ko'pincha bu qoidalardan tashqari ham keladi; masalan «Umayya», «San'o» va «Rayy»ga nisbat berishda «umaviy», «san'oniy» va «roziy». Bunda eshitilgani bilan cheklaniladi."
+        },
+        {
+          "type": "para",
+          "ar": "(١) الرَّيُّ: بَلَدٌ مِنْ بِلَادِ فَارِسَ، وَالنَّسَبُ إِلَيْهِ: رَازِيٌّ عَلَى غَيْرِ قِيَاسٍ (لِسَانُ الْعَرَبِ).",
+          "uz": "(1-izoh) «Rayy» — Fors shaharlaridan biri; unga nisbat «roziy» bo'lib, qiyosga xilofdir («Lisonul arab»)."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 92,
+      "page": 389,
+      "titleAr": "الْإِغْرَاءُ وَالتَّحْذِيرُ",
+      "title": "Ig'ro va tahzir (rag'batlantirish va ogohlantirish)",
+      "rule": {
+        "ar": "الْإِغْرَاءُ: تَنْبِيهُ الْمُخَاطَبِ عَلَى أَمْرٍ مَحْمُودٍ لِيَفْعَلَهُ؛ نَحْوُ: الاِجْتِهَادَ، الْغَزَالَ الْغَزَالَ، الْمُرُوءَةَ وَالنَّجْدَةَ.",
+        "uz": "Ig'ro — muxotabni maqtovli ishga, uni bajarishi uchun ogohlantirishdir; masalan: «Tirishqoqlik!», «Kiyik, kiyik!», «Muruvvat va mardlik!»"
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَهُوَ مَنْصُوبٌ بِفِعْلٍ مَحْذُوفٍ؛ أَيْ: الْزَمِ الاِجْتِهَادَ، وَاطْلُبِ الْغَزَالَ، وَافْعَلِ الْمُرُوءَةَ.",
+          "uz": "U tushirilgan fe'l bilan mansubdir; ya'ni: «Tirishqoqlikni lozim tut», «Kiyikni izla», «Muruvvat qil»."
+        },
+        {
+          "type": "para",
+          "ar": "وَالتَّحْذِيرُ: تَنْبِيهُ الْمُخَاطَبِ عَلَى أَمْرٍ مَكْرُوهٍ لِيَجْتَنِبَهُ؛ نَحْوُ: الْكَسَلَ، الْأَسَدَ الْأَسَدَ، رَأْسَكَ وَالسَّيْفَ، إِيَّاكَ مِنَ الْكَذِبِ، إِيَّاكَ مِنَ النَّمِيمَةِ، إِيَّاكَ وَالشَّرَّ.",
+          "uz": "Tahzir — muxotabni yoqimsiz ishdan, undan chetlanishi uchun ogohlantirishdir; masalan: «Dangasalikdan!», «Sher, sher!», «Boshingni va qilichni!», «Yolg'ondan ehtiyot bo'l!», «G'iybatdan ehtiyot bo'l!», «Sen va yomonlik!»"
+        },
+        {
+          "type": "para",
+          "ar": "وَهُوَ أَيْضًا مَنْصُوبٌ بِفِعْلٍ مَحْذُوفٍ؛ أَيْ: احْذَرِ الْكَسَلَ، وَخَفِ الْأَسَدَ، وَبَاعِدْ رَأْسَكَ مِنَ السَّيْفِ، وَالسَّيْفَ مِنْ رَأْسِكَ، وَإِيَّاكَ أُحَذِّرُ مِنَ الْكَذِبِ وَمِنَ النَّمِيمَةِ، وَبَاعِدْ نَفْسَكَ مِنَ الشَّرِّ، وَالشَّرَّ مِنْكَ.",
+          "uz": "U ham tushirilgan fe'l bilan mansubdir; ya'ni: «Dangasalikdan ehtiyot bo'l», «Sherdan qo'rq», «Boshingni qilichdan uzoqlashtir», «qilichni boshingdan», «Seni yolg'ondan va g'iybatdan ogohlantiraman», «O'zingni yomonlikdan uzoqlashtir», «yomonlikni o'zingdan»."
+        },
+        {
+          "type": "para",
+          "ar": "وَلَا يَجُوزُ فِي الْإِغْرَاءِ وَالتَّحْذِيرِ ذِكْرُ الْعَامِلِ مَعَ التَّكْرَارِ أَوِ الْعَطْفِ، وَلَا مَعَ إِيَّاكَ.",
+          "uz": "Ig'ro va tahzirda takror yoki atf bilan birga omilni zikr qilish joiz emas; «iyyoka» bilan ham joiz emas."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) تَنْبِيهٌ: الْمَنْصُوبُ فِي تَرْكِيبِ الْإِغْرَاءِ وَالتَّحْذِيرِ وَالاِخْتِصَاصِ وَالاِشْتِغَالِ مِنْ أَقْسَامِ الْمَفْعُولِ بِهِ.",
+          "uz": "(2-izoh) Tanbeh: ig'ro, tahzir, ixtisos va ishtig'ol tarkiblaridagi mansub — maf'ul bihning qismlaridandir."
         }
       ],
       "exercise": []

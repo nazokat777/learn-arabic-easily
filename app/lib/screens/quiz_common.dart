@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 import '../main.dart';
 import '../theme.dart';
@@ -29,6 +30,18 @@ class Question {
   });
 }
 
+/// Navbatdagi bitta savol.
+///
+/// [retried] — bu savol xatodan keyin qaytarilganmi. Qaytarilgan savol
+/// to'g'ri yechilsa ham «birinchi urinishda to'g'ri» hisobiga kirmaydi,
+/// aks holda «xato qil, javobni ko'r, keyin bos» ham o'zlashtirish
+/// sanalardi.
+class _QItem {
+  final Question q;
+  final bool retried;
+  _QItem(this.q, this.retried);
+}
+
 /// Ko'p variantli interaktiv test — feedback, XP va yakuniy natija bilan.
 class MultipleChoiceQuiz extends StatefulWidget {
   final String title;
@@ -48,12 +61,58 @@ class MultipleChoiceQuiz extends StatefulWidget {
 }
 
 class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
-  int _index = 0;
-  int _correctCount = 0;
+  final _rnd = Random();
+
+  /// Yechilmagan savollar navbati. Xato qilingan savol o'chmaydi — navbat
+  /// OXIRIGA qaytadi, shuning uchun test hamma savol to'g'ri yechilmaguncha
+  /// tugamaydi. Ilgari savollar bir marta berilib, 60% bilan «tugatildi»
+  /// deb belgilanardi; o'quvchi harflarning yarmini bilmay o'tib ketardi.
+  final List<_QItem> _queue = [];
+
+  int _total = 0; // noyob savollar soni
+  int _done = 0; // to'g'ri yechilgan noyob savollar
+  int _firstTry = 0; // birinchi urinishdayoq to'g'ri yechilganlari
   int? _selected;
   bool _answered = false;
 
-  Question get _q => widget.questions[_index];
+  @override
+  void initState() {
+    super.initState();
+    _reset();
+  }
+
+  void _reset() {
+    _queue
+      ..clear()
+      ..addAll(widget.questions.map((q) => _QItem(q, false)));
+    _total = _queue.length;
+    _done = 0;
+    _firstTry = 0;
+    _selected = null;
+    _answered = false;
+  }
+
+  Question get _q => _queue.first.q;
+
+  /// Xato savolni qaytarishdan oldin variantlar aralashtiriladi — aks holda
+  /// o'quvchi javobning JOYINI yodlaydi, o'zini emas.
+  Question _reshuffle(Question q) {
+    final answer = q.options[q.correct];
+    final opts = List<String>.from(q.options)..shuffle(_rnd);
+    return Question(
+      prompt: q.prompt,
+      promptLabel: q.promptLabel,
+      options: opts,
+      correct: opts.indexOf(answer),
+      speak: q.speak,
+      speakRevealsAnswer: q.speakRevealsAnswer,
+    );
+  }
+
+  void _requeue() {
+    final cur = _queue.first;
+    _queue.add(_QItem(_reshuffle(cur.q), true));
+  }
 
   void _choose(int i) {
     if (_answered) return;
@@ -61,11 +120,15 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
     setState(() {
       _selected = i;
       _answered = true;
-      if (correct) _correctCount++;
     });
+    if (correct) {
+      _done++;
+      if (!_queue.first.retried) _firstTry++;
+    } else {
+      _requeue();
+    }
     // To'g'ri talaffuzni eshittiramiz.
     if (_q.speak != null) Tts.instance.speak(_q.speak!, id: 'q');
-    // Avtomatik keyingi savolga o'tish — tugma bosish shart emas.
     Future.delayed(Duration(milliseconds: correct ? 700 : 1500), () {
       if (mounted && _answered) _next();
     });
@@ -73,12 +136,14 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
 
   /// «Bilmadim» — bilmagan odamni jazolamaymiz, balki O'RGATAMIZ:
   /// to'g'ri javobni ko'rsatamiz, audio o'qiymiz, keyin sekinroq o'tamiz.
+  /// Savol baribir navbatga qaytadi: ko'rsatib berish o'rganish emas.
   void _dontKnow() {
     if (_answered) return;
     setState(() {
       _selected = null; // hech bir variant xato deb belgilanmaydi
       _answered = true;
     });
+    _requeue();
     if (_q.speak != null) Tts.instance.speak(_q.speak!, id: 'q');
     Future.delayed(const Duration(milliseconds: 2100), () {
       if (mounted && _answered) _next();
@@ -86,39 +151,33 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
   }
 
   void _next() {
-    if (_index < widget.questions.length - 1) {
-      setState(() {
-        _index++;
-        _selected = null;
-        _answered = false;
-      });
-    } else {
-      _finish();
-    }
+    setState(() {
+      _queue.removeAt(0);
+      _selected = null;
+      _answered = false;
+    });
+    if (_queue.isEmpty) _finish();
   }
 
   Future<void> _finish() async {
-    final earned = _correctCount * widget.xpPerCorrect;
+    final earned = _firstTry * widget.xpPerCorrect;
     await progress.addXp(earned);
-    if (_correctCount >= (widget.questions.length * 0.6).ceil()) {
-      await progress.markCompleted(widget.lessonId);
-    }
+    // Dars faqat test BITTA HAM xatosiz o'tilganda o'zlashtirilgan bo'ladi.
+    final mastered =
+        await progress.recordAttempt(widget.lessonId, _firstTry, _total);
     if (!mounted) return;
     showDialog(
       context: context,
       barrierDismissible: false,
       builder: (_) => _ResultDialog(
-        correct: _correctCount,
-        total: widget.questions.length,
+        firstTry: _firstTry,
+        total: _total,
         earned: earned,
+        mastered: mastered,
+        best: progress.bestPercent(widget.lessonId),
         onAgain: () {
           Navigator.pop(context);
-          setState(() {
-            _index = 0;
-            _correctCount = 0;
-            _selected = null;
-            _answered = false;
-          });
+          setState(_reset);
         },
         onDone: () {
           Navigator.pop(context);
@@ -130,13 +189,14 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
 
   @override
   Widget build(BuildContext context) {
+    if (_queue.isEmpty) return const Scaffold(body: SizedBox());
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(6),
           child: LinearProgressIndicator(
-            value: (_index + 1) / widget.questions.length,
+            value: _total == 0 ? 0 : _done / _total,
             minHeight: 6,
             backgroundColor: AppColors.softGreen,
             valueColor: const AlwaysStoppedAnimation(AppColors.emerald),
@@ -147,7 +207,7 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
-            Text('${_index + 1} / ${widget.questions.length}',
+            Text('$_done / $_total',
                 style: const TextStyle(color: Colors.black45, fontWeight: FontWeight.w700)),
             const SizedBox(height: 20),
             Text(_q.promptLabel, style: const TextStyle(color: Colors.black54, fontSize: 14)),
@@ -269,25 +329,21 @@ class _ListenButton extends StatelessWidget {
 }
 
 class _ResultDialog extends StatelessWidget {
-  final int correct, total, earned;
+  final int firstTry, total, earned, best;
+  final bool mastered;
   final VoidCallback onAgain, onDone;
   const _ResultDialog({
-    required this.correct,
+    required this.firstTry,
     required this.total,
     required this.earned,
+    required this.mastered,
+    required this.best,
     required this.onAgain,
     required this.onDone,
   });
 
   @override
   Widget build(BuildContext context) {
-    final pct = correct / total;
-    final emoji = pct >= 0.9 ? '🏆' : pct >= 0.6 ? '🎉' : '💪';
-    final msg = pct >= 0.9
-        ? 'Ajoyib! Mukammal natija!'
-        : pct >= 0.6
-            ? 'Barakalla! Yaxshi natija.'
-            : 'Yaxshi harakat! Yana takrorlang.';
     return Dialog(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
       child: Padding(
@@ -295,12 +351,14 @@ class _ResultDialog extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(emoji, style: const TextStyle(fontSize: 56)),
+            Text(mastered ? '🏆' : '💪', style: const TextStyle(fontSize: 56)),
             const SizedBox(height: 8),
-            Text(msg, textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: AppColors.ink)),
+            Text(mastered ? "Mukammal — o'zlashtirildi!" : 'Yaqin qoldi',
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                    fontSize: 18, fontWeight: FontWeight.w800, color: AppColors.ink)),
             const SizedBox(height: 12),
-            Text('$correct / $total to\'g\'ri',
+            Text("Birinchi urinishda: $firstTry / $total",
                 style: const TextStyle(fontSize: 16, color: Colors.black54)),
             const SizedBox(height: 6),
             Container(
@@ -309,32 +367,64 @@ class _ResultDialog extends StatelessWidget {
                   color: AppColors.gold.withValues(alpha: 0.15),
                   borderRadius: BorderRadius.circular(12)),
               child: Text('+$earned XP',
-                  style: const TextStyle(fontWeight: FontWeight.w800, color: AppColors.gold, fontSize: 16)),
+                  style: const TextStyle(
+                      fontWeight: FontWeight.w800, color: AppColors.gold, fontSize: 16)),
             ),
+            if (!mastered) ...[
+              const SizedBox(height: 14),
+              Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: AppColors.cream,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Column(
+                  children: [
+                    const Text(
+                      "«O'zlashtirildi» belgisi uchun testni bitta ham "
+                      "xatosiz o'tish kerak.",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 13, height: 1.35),
+                    ),
+                    const SizedBox(height: 6),
+                    Text('Eng yaxshi natijangiz: $best%',
+                        style: const TextStyle(
+                            fontWeight: FontWeight.w800,
+                            color: AppColors.gold,
+                            fontSize: 13)),
+                  ],
+                ),
+              ),
+            ],
             const SizedBox(height: 20),
             Row(
               children: [
                 Expanded(
                   child: OutlinedButton(
-                    onPressed: onAgain,
+                    onPressed: mastered ? onDone : onAgain,
                     style: OutlinedButton.styleFrom(
                       padding: const EdgeInsets.symmetric(vertical: 14),
                       side: const BorderSide(color: AppColors.emerald),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12)),
                     ),
-                    child: const Text('Yana', style: TextStyle(color: AppColors.emerald, fontWeight: FontWeight.w700)),
+                    child: Text(mastered ? 'Chiqish' : 'Keyinroq',
+                        style: const TextStyle(
+                            color: AppColors.emerald, fontWeight: FontWeight.w700)),
                   ),
                 ),
                 const SizedBox(width: 12),
                 Expanded(
                   child: FilledButton(
-                    onPressed: onDone,
+                    onPressed: mastered ? onDone : onAgain,
                     style: FilledButton.styleFrom(
                       backgroundColor: AppColors.emerald,
                       padding: const EdgeInsets.symmetric(vertical: 14),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12)),
                     ),
-                    child: const Text('Tayyor', style: TextStyle(fontWeight: FontWeight.w700)),
+                    child: Text(mastered ? 'Tayyor' : 'Qaytadan',
+                        style: const TextStyle(fontWeight: FontWeight.w700)),
                   ),
                 ),
               ],

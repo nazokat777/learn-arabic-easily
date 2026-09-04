@@ -4,6 +4,7 @@ import '../main.dart';
 import '../content.dart';
 import '../theme.dart';
 import '../widgets/entrance.dart';
+import '../widgets/mastery_badge.dart';
 import '../widgets/grammar_table.dart';
 import '../widgets/speak_button.dart';
 import 'lesson/sentence_text.dart';
@@ -136,12 +137,10 @@ class NahvHome extends StatelessWidget {
                       ],
                     ),
                   ),
-                  if (progress.isCompleted('nahv-${l.book}-${l.num}'))
-                    const Padding(
-                      padding: EdgeInsets.only(right: 4),
-                      child:
-                          Icon(Icons.check_circle, color: AppColors.success, size: 20),
-                    ),
+                  // O'zlashtirish holati: ✅ faqat test XATOSIZ o'tilganda
+                  // chiqadi. Shunchaki darsni ochib chiqish belgi bermaydi —
+                  // aks holda belgining ma'nosi qolmasdi.
+                  MasteryBadge(lessonId: 'nahv-${l.book}-${l.num}'),
                   const Icon(Icons.chevron_right, color: AppColors.emerald),
                 ],
               ),
@@ -212,19 +211,12 @@ class NahvLessonScreen extends StatelessWidget {
           const SizedBox(height: 20),
           // Duolingo uslubidagi test: darsdagi juftliklardan avtomatik
           // tuziladi, xato savollar to'g'ri yechilguncha qaytaveradi.
-          ElevatedButton.icon(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: AppColors.emerald,
-              foregroundColor: Colors.white,
-              padding: const EdgeInsets.symmetric(vertical: 14),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16)),
-            ),
-            onPressed: () => Navigator.push(context,
+          // Dars «o'zlashtirildi» belgisini faqat xatosiz o'tishda oladi.
+          MasteryCallToAction(
+            lessonId: 'nahv-${lesson.book}-${lesson.num}',
+            what: 'qoida va misollar',
+            onStart: () => Navigator.push(context,
                 MaterialPageRoute(builder: (_) => NahvQuiz(lesson: lesson))),
-            icon: const Text('🎯', style: TextStyle(fontSize: 18)),
-            label: const Text('Darsni testda mustahkamlash',
-                style: TextStyle(fontWeight: FontWeight.w800, fontSize: 15)),
           ),
         ],
       ),

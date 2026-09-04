@@ -4,6 +4,8 @@ import '../theme.dart';
 import 'letters_lesson.dart';
 import 'letter_test.dart';
 import 'harakat_lesson.dart';
+import 'harakat_test.dart';
+import '../widgets/mastery_badge.dart';
 
 /// «Alifbo» fani — harf va talaffuzni o'rgatadi (harflar, testlar, harakatlar).
 class AlifboHome extends StatelessWidget {
@@ -20,24 +22,34 @@ class AlifboHome extends StatelessWidget {
           children: [
             _intro(),
             const SizedBox(height: 16),
+            // Har mavzu = dars + test. Belgi (✅ yoki foiz) MAVZUniki,
+            // shuning uchun dars va test kartochkalari bitta o'zlashtirish
+            // holatini ko'rsatadi — o'quvchi mavzuni bilishini bir joydan
+            // ko'radi.
             _tile(context,
-                id: 'letters',
+                masteryId: 'letter_test',
                 emoji: '🔤',
                 title: 'Harflar darsi',
                 sub: '28 harf — nomi, махраж va holatlari',
                 page: const LettersLesson()),
             _tile(context,
-                id: 'letter_test',
+                masteryId: 'letter_test',
                 emoji: '🎯',
                 title: 'Harflar testi',
-                sub: 'Harfni nomidan tanish (qayta-qayta)',
+                sub: "28 harfning hammasi — xatosiz o'tilishi kerak",
                 page: const LetterTest()),
             _tile(context,
-                id: 'harakat',
+                masteryId: 'harakat_test',
                 emoji: '◌َ',
                 title: 'Harakatlar darsi',
                 sub: 'Fatha, kasra, zamma, sukun, shadda, tanvin',
                 page: const HarakatLesson()),
+            _tile(context,
+                masteryId: 'harakat_test',
+                emoji: '🎯',
+                title: 'Harakatlar testi',
+                sub: "Belgini tanish va qanday o'qilishini bilish",
+                page: const HarakatTest()),
           ],
         ),
       ),
@@ -65,12 +77,11 @@ class AlifboHome extends StatelessWidget {
       );
 
   Widget _tile(BuildContext context,
-      {required String id,
+      {required String masteryId,
       required String emoji,
       required String title,
       required String sub,
       required Widget page}) {
-    final done = progress.isCompleted(id);
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
       child: Material(
@@ -105,10 +116,8 @@ class AlifboHome extends StatelessWidget {
                     ],
                   ),
                 ),
-                if (done)
-                  const Icon(Icons.check_circle, color: AppColors.success)
-                else
-                  const Icon(Icons.chevron_right, color: AppColors.emerald),
+                MasteryBadge(lessonId: masteryId, size: 22),
+                const Icon(Icons.chevron_right, color: AppColors.emerald),
               ],
             ),
           ),

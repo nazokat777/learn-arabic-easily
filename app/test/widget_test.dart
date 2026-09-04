@@ -37,6 +37,59 @@ void main() {
     });
   });
 
+  // Dars «o'zlashtirildi» belgisini FAQAT xatosiz test beradi. Bu shartning
+  // buzilishi eng qimmat xato bo'lardi: belgisi bor, bilimi yo'q o'quvchi
+  // keyingi darsga o'tib ketardi.
+  group('Darsni o\'zlashtirish', () {
+    test('xatosiz o\'tish o\'zlashtirilgan deb belgilaydi', () async {
+      final p = Progress();
+      expect(p.isUntried('d1'), isTrue);
+      final ok = await p.recordAttempt('d1', 8, 8);
+      expect(ok, isTrue);
+      expect(p.isMastered('d1'), isTrue);
+      expect(p.bestPercent('d1'), 100);
+      // O'zlashtirgan bo'lsa, darsni ko'rib chiqqani ham aniq.
+      expect(p.isCompleted('d1'), isTrue);
+    });
+
+    test('bitta xato ham o\'zlashtirishga yo\'l bermaydi', () async {
+      final p = Progress();
+      final ok = await p.recordAttempt('d2', 7, 8);
+      expect(ok, isFalse);
+      expect(p.isMastered('d2'), isFalse);
+      expect(p.bestPercent('d2'), 88);
+      expect(p.isUntried('d2'), isFalse);
+    });
+
+    test('eng yaxshi natija saqlanadi, yomoni uni tushirmaydi', () async {
+      final p = Progress();
+      await p.recordAttempt('d3', 9, 10);
+      expect(p.bestPercent('d3'), 90);
+      await p.recordAttempt('d3', 3, 10); // yomonroq urinish
+      expect(p.bestPercent('d3'), 90);
+      await p.recordAttempt('d3', 10, 10);
+      expect(p.bestPercent('d3'), 100);
+      expect(p.isMastered('d3'), isTrue);
+    });
+
+    test('savolsiz test o\'zlashtirish bermaydi', () async {
+      final p = Progress();
+      final ok = await p.recordAttempt('d4', 0, 0);
+      expect(ok, isFalse);
+      expect(p.isMastered('d4'), isFalse);
+      // Urinish sanalmaydi — «0%» deb ko'rsatib o'quvchini chalg'itmaymiz.
+      expect(p.isUntried('d4'), isTrue);
+    });
+
+    test('o\'zlashtirilmagan dars belgisiz qoladi', () async {
+      final p = Progress();
+      await p.recordAttempt('d5', 0, 5);
+      expect(p.isMastered('d5'), isFalse);
+      expect(p.isCompleted('d5'), isFalse);
+      expect(p.bestPercent('d5'), 0);
+    });
+  });
+
   group('Kontent yaxlitligi', () {
     test("harakatlar o'z harfiga ulangan (ajralib qolmagan)", () {
       final buzuq = <String>[];

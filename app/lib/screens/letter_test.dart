@@ -11,8 +11,10 @@ class LetterTest extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final rnd = Random();
-    final letters = List<Letter>.from(repo.letters)..shuffle(rnd);
-    final pick = letters.take(10).toList();
+    // Alifboni «bilish» — 28 harfning hammasini tanish demak. Ilgari
+    // tasodifiy 10 tasi so'ralardi, ya'ni 18 harfni bilmagan o'quvchi ham
+    // testdan o'tib ketishi mumkin edi.
+    final pick = List<Letter>.from(repo.letters)..shuffle(rnd);
 
     final questions = pick.map((L) {
       // Chalg'ituvchi javoblar (boshqa harflar nomlari).

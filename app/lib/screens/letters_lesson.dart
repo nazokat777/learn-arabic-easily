@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import '../main.dart';
 import '../content.dart';
 import '../theme.dart';
+import '../widgets/mastery_badge.dart';
 import '../widgets/speak_button.dart';
+import 'letter_test.dart';
 
 class LettersLesson extends StatelessWidget {
   const LettersLesson({super.key});
@@ -12,42 +14,59 @@ class LettersLesson extends StatelessWidget {
     final letters = repo.letters;
     return Scaffold(
       appBar: AppBar(title: const Text('Harflar darsi')),
-      body: GridView.builder(
-        padding: const EdgeInsets.all(16),
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 4,
-          crossAxisSpacing: 12,
-          mainAxisSpacing: 12,
-          childAspectRatio: 0.82,
-        ),
-        itemCount: letters.length,
-        itemBuilder: (context, i) {
-          final L = letters[i];
-          return Material(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(16),
-            child: InkWell(
+      // Panjara + pastda test chaqirig'i: harflarni ko'rib chiqish
+      // o'rganish emas, mavzu testda xatosiz o'tilishi kerak.
+      body: Column(
+        children: [
+          Expanded(
+            child: GridView.builder(
+          padding: const EdgeInsets.all(16),
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 4,
+            crossAxisSpacing: 12,
+            mainAxisSpacing: 12,
+            childAspectRatio: 0.82,
+          ),
+          itemCount: letters.length,
+          itemBuilder: (context, i) {
+            final L = letters[i];
+            return Material(
+              color: Colors.white,
               borderRadius: BorderRadius.circular(16),
-              onTap: () => _showDetail(context, L),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 6),
-                child: FittedBox(
-                  fit: BoxFit.scaleDown,
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(L.ar, style: AppTheme.arabic(size: 40, color: AppColors.emerald)),
-                      const SizedBox(height: 4),
-                      Text(L.nameUz,
-                          style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 12.5, color: AppColors.ink)),
-                      Text(L.translit, style: const TextStyle(color: Colors.black45, fontSize: 11)),
-                    ],
+              child: InkWell(
+                borderRadius: BorderRadius.circular(16),
+                onTap: () => _showDetail(context, L),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 6),
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(L.ar, style: AppTheme.arabic(size: 40, color: AppColors.emerald)),
+                        const SizedBox(height: 4),
+                        Text(L.nameUz,
+                            style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 12.5, color: AppColors.ink)),
+                        Text(L.translit, style: const TextStyle(color: Colors.black45, fontSize: 11)),
+                      ],
+                    ),
                   ),
                 ),
               ),
+            );
+          },
             ),
-          );
-        },
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+            child: MasteryCallToAction(
+              lessonId: 'letter_test',
+              what: '28 harf',
+              onStart: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => const LetterTest())),
+            ),
+          ),
+        ],
       ),
     );
   }

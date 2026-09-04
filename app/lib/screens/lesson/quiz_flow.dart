@@ -12,7 +12,11 @@ import 'word_sheet.dart';
 /// Xato javob berilgan so'zlar «xatolar» ro'yxatiga tushadi (keyin ko'riladi).
 class QuizStage extends StatefulWidget {
   final QiroatLesson lesson;
-  final void Function(List<QiroatVocab> missed) onFinish;
+  /// [missed] — xato javob berilgan so'zlar, [total] — jami savollar soni.
+  /// Ikkalasi ham kerak: dars «o'zlashtirildi» belgisini faqat
+  /// `missed.isEmpty` bo'lganda oladi, foizni hisoblash uchun esa jami
+  /// savol soni zarur.
+  final void Function(List<QiroatVocab> missed, int total) onFinish;
   final AwardXp award;
   const QuizStage({super.key, required this.lesson, required this.onFinish, required this.award});
 
@@ -50,7 +54,7 @@ class _QuizStageState extends State<QuizStage> {
     }
     _questions = _pool.map(_build).toList()..shuffle(_rnd);
     if (_questions.isEmpty) {
-      WidgetsBinding.instance.addPostFrameCallback((_) => widget.onFinish(const []));
+      WidgetsBinding.instance.addPostFrameCallback((_) => widget.onFinish(const [], 0));
     }
   }
 
@@ -93,7 +97,7 @@ class _QuizStageState extends State<QuizStage> {
           _answered = false;
         });
       } else {
-        widget.onFinish(_missed);
+        widget.onFinish(_missed, _questions.length);
       }
     });
   }

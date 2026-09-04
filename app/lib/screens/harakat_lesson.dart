@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import '../main.dart';
 import '../content.dart';
 import '../theme.dart';
+import '../widgets/mastery_badge.dart';
 import '../widgets/speak_button.dart';
+import 'harakat_test.dart';
 
 class HarakatLesson extends StatelessWidget {
   const HarakatLesson({super.key});
@@ -27,6 +29,15 @@ class HarakatLesson extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           ...repo.harakat.map((h) => _card(h)),
+          const SizedBox(height: 20),
+          // Kartochkalarni ko'rib chiqish o'rganish emas — mavzu testda
+          // xatosiz o'tilgandagina o'zlashtirilgan hisoblanadi.
+          MasteryCallToAction(
+            lessonId: HarakatTest.lessonId,
+            what: 'harakat belgilari',
+            onStart: () => Navigator.push(context,
+                MaterialPageRoute(builder: (_) => const HarakatTest())),
+          ),
         ],
       ),
     );

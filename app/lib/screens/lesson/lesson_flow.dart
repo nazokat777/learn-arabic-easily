@@ -27,6 +27,7 @@ class _LessonFlowState extends State<LessonFlow> {
   _Step _step = _Step.intro;
   int _sessionXp = 0;
   List<QiroatVocab> _missed = const [];
+  int _quizTotal = 0; // oxirgi testdagi savollar soni (o'zlashtirishni hisoblash uchun)
 
   void _award(int xp) {
     progress.addXp(xp); // fon rejimida saqlanadi
@@ -44,7 +45,23 @@ class _LessonFlowState extends State<LessonFlow> {
       _award(15); // darsni tugatgani uchun bonus
       progress.markCompleted(widget.lesson.completionId);
     }
+    // Dars «o'zlashtirildi» belgisini faqat test BITTA HAM xatosiz
+    // o'tilganda oladi. Xatolarni «Xatolar» bosqichida ko'rib chiqish
+    // foydali, ammo o'zlashtirish o'rnini bosmaydi.
+    if (_quizTotal > 0) {
+      progress.recordAttempt(
+          widget.lesson.completionId, _quizTotal - _missed.length, _quizTotal);
+    }
     setState(() => _step = _Step.done);
+  }
+
+  /// Testni boshidan topshirish — o'zlashtira olmaganlar uchun.
+  void _retakeQuiz() {
+    setState(() {
+      _missed = const [];
+      _quizTotal = 0;
+      _step = _Step.quiz;
+    });
   }
 
   @override
@@ -160,8 +177,9 @@ class _LessonFlowState extends State<LessonFlow> {
         return QuizStage(
             lesson: l,
             award: _award,
-            onFinish: (missed) {
+            onFinish: (missed, total) {
               _missed = missed;
+              _quizTotal = total;
               if (missed.isEmpty) {
                 _goDone();
               } else {
@@ -171,7 +189,8 @@ class _LessonFlowState extends State<LessonFlow> {
       case _Step.review:
         return ReviewStage(lesson: l, missed: _missed, onDone: _goDone);
       case _Step.done:
-        return _DoneView(lesson: l, xp: _sessionXp);
+        return _DoneView(
+            lesson: l, xp: _sessionXp, onRetakeQuiz: _retakeQuiz);
     }
   }
 }
@@ -276,7 +295,9 @@ class _IntroView extends StatelessWidget {
 class _DoneView extends StatefulWidget {
   final QiroatLesson lesson;
   final int xp;
-  const _DoneView({required this.lesson, required this.xp});
+  final VoidCallback onRetakeQuiz;
+  const _DoneView(
+      {required this.lesson, required this.xp, required this.onRetakeQuiz});
 
   @override
   State<_DoneView> createState() => _DoneViewState();
@@ -297,6 +318,10 @@ class _DoneViewState extends State<_DoneView> with SingleTickerProviderStateMixi
     final circle = CurvedAnimation(parent: _c, curve: const Interval(0.0, 0.5, curve: Curves.elasticOut));
     final text = CurvedAnimation(parent: _c, curve: const Interval(0.35, 0.7, curve: Curves.easeOut));
     final emojis = ['🎉', '⭐', '🌟', '✨', '🏅'];
+    // Dars tugadi — lekin «o'zlashtirildi» degani emas. Ikkalasini ajratib
+    // ko'rsatamiz, aks holda o'quvchi yarim bilim bilan oldinga ketadi.
+    final mastered = progress.isMastered(widget.lesson.completionId);
+    final best = progress.bestPercent(widget.lesson.completionId);
     return Center(
       child: Padding(
         padding: const EdgeInsets.all(28),
@@ -340,13 +365,42 @@ class _DoneViewState extends State<_DoneView> with SingleTickerProviderStateMixi
               opacity: text,
               child: Column(
                 children: [
-                  const Text('Barakalla! 🎊',
-                      style: TextStyle(fontSize: 28, fontWeight: FontWeight.w800, color: AppColors.emerald)),
+                  Text(mastered ? 'Barakalla! 🎊' : 'Yaqin qoldi 💪',
+                      style: TextStyle(
+                          fontSize: 28,
+                          fontWeight: FontWeight.w800,
+                          color: mastered ? AppColors.emerald : AppColors.gold)),
                   const SizedBox(height: 8),
                   Text('«${widget.lesson.titleAr}» darsini tugatdingiz!',
                       textAlign: TextAlign.center,
                       textDirection: TextDirection.rtl,
                       style: AppTheme.arabic(size: 20, color: AppColors.ink, w: FontWeight.w500)),
+                  if (!mastered) ...[
+                    const SizedBox(height: 12),
+                    Container(
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: AppColors.cream,
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Column(
+                        children: [
+                          const Text(
+                            "Dars «o'zlashtirildi» belgisini olishi uchun "
+                            "testni bitta ham xatosiz o'tish kerak.",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(fontSize: 13, height: 1.35),
+                          ),
+                          const SizedBox(height: 6),
+                          Text('Eng yaxshi natijangiz: $best%',
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.w800,
+                                  color: AppColors.gold,
+                                  fontSize: 13)),
+                        ],
+                      ),
+                    ),
+                  ],
                   const SizedBox(height: 14),
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 12),
@@ -362,6 +416,24 @@ class _DoneViewState extends State<_DoneView> with SingleTickerProviderStateMixi
               ),
             ),
             const SizedBox(height: 28),
+            if (!mastered) ...[
+              SizedBox(
+                width: double.infinity,
+                child: FilledButton.icon(
+                  onPressed: widget.onRetakeQuiz,
+                  icon: const Icon(Icons.replay_rounded, size: 20),
+                  label: const Text('Testni qaytadan topshirish',
+                      style: TextStyle(fontWeight: FontWeight.w800, fontSize: 15)),
+                  style: FilledButton.styleFrom(
+                    backgroundColor: AppColors.gold,
+                    padding: const EdgeInsets.symmetric(vertical: 14),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(14)),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 10),
+            ],
             SizedBox(
               width: double.infinity,
               child: OutlinedButton.icon(

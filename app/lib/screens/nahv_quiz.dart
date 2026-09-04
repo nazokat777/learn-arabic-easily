@@ -18,6 +18,13 @@ import '../theme.dart';
 /// qaytib qo'shiladi va TO'G'RI javob berilmaguncha test tugamaydi.
 /// Shuning uchun xotirasi eng past o'quvchi ham darsni yodlab chiqadi —
 /// shunchaki bir necha marta ko'proq urinadi.
+///
+/// O'ZLASHTIRISH SHARTI: dars faqat butun test BITTA HAM xatosiz
+/// o'tilganda «o'zlashtirildi» belgisini oladi. Xato qilingan savol
+/// qaytib, oxiri to'g'ri yechilsa ham — o'sha urinish o'zlashtirish
+/// hisoblanmaydi, testni boshidan toza o'tish kerak. Shunday qilmasak,
+/// «to'g'ri javobni ko'rib, ikkinchi marta bosish» ham o'tkazib
+/// yuborardi va belgining ma'nosi qolmasdi.
 class NahvQuiz extends StatefulWidget {
   final NahvLesson lesson;
   const NahvQuiz({super.key, required this.lesson});
@@ -54,14 +61,40 @@ class _NahvQuizState extends State<NahvQuiz> {
   }
 
   /// Darsdan test tuzish. Juftliklar: qoida, xatboshilar, ro'yxat bandlari.
-  /// Juda uzun matnlar savol sifatida og'ir, shuning uchun qisqaroqlari
-  /// afzal ko'riladi; savollar soni 8 ta bilan cheklanadi.
+  ///
+  /// Savollar darsning BUTUN matnidan tasodifiy olinadi — avval faqat eng
+  /// qisqa 8 tasi olinardi, natijada uzun xatboshilar hech qachon
+  /// so'ralmasdi va o'quvchi darsning yarmini ko'rmay «tugatgan» bo'lardi.
+  ///
+  /// Juda uzun matn 4 ta variant ichida o'qib bo'lmaydi, shuning uchun
+  /// [_maxPromptLen] dan uzunlari chetga suriladi; agar qisqalari yetmasa,
+  /// boricha olinadi (aks holda ba'zi darslarda test umuman chiqmasdi).
+  /// Qoida — darsning o'zagi — imkon boricha doim so'raladi.
+  static const int _maxPromptLen = 160;
+  static const int _maxQuestions = 12;
+
   void _build() {
     final pairs = _collect(widget.lesson)
         .where((p) => p.ar.trim().isNotEmpty && p.uz.trim().isNotEmpty)
-        .toList()
-      ..sort((a, b) => a.ar.length.compareTo(b.ar.length));
-    final picked = pairs.take(8).toList()..shuffle(_rnd);
+        .toList();
+    var usable = pairs.where((p) => p.ar.length <= _maxPromptLen).toList();
+    if (usable.length < 6) usable = pairs;
+
+    // Har urinishda boshqacha tanlansin — shunda dars bir necha marta
+    // takrorlanganda butun matn qamrab olinadi.
+    final shuffled = List<NahvPair>.from(usable)..shuffle(_rnd);
+    final rule = widget.lesson.rule;
+    final picked = <NahvPair>[];
+    if (rule.ar.trim().isNotEmpty &&
+        rule.uz.trim().isNotEmpty &&
+        usable.contains(rule)) {
+      picked.add(rule);
+    }
+    for (final p in shuffled) {
+      if (picked.length >= _maxQuestions) break;
+      if (!picked.contains(p)) picked.add(p);
+    }
+    picked.shuffle(_rnd);
 
     // Chalg'ituvchi javoblar shu darsdan, yetmasa shu kitobning boshqa
     // darslaridan olinadi - mavzuga yaqin bo'lsin.
@@ -144,9 +177,10 @@ class _NahvQuizState extends State<NahvQuiz> {
   Future<void> _finish() async {
     final earned = _firstTry * 5;
     await progress.addXp(earned);
-    await progress.markCompleted(_lessonId);
+    // Dars faqat xatosiz o'tilganda o'zlashtirilgan hisoblanadi.
+    final mastered = await progress.recordAttempt(_lessonId, _firstTry, _total);
     if (!mounted) return;
-    final stars = _firstTry >= _total ? 3 : (_firstTry >= (_total * 0.6).ceil() ? 2 : 1);
+    final best = progress.bestPercent(_lessonId);
     showDialog(
       context: context,
       barrierDismissible: false,
@@ -154,41 +188,90 @@ class _NahvQuizState extends State<NahvQuiz> {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(22)),
         title: Column(
           children: [
-            Text('⭐' * stars, style: const TextStyle(fontSize: 34)),
+            Text(mastered ? '⭐⭐⭐' : '💪', style: const TextStyle(fontSize: 34)),
             const SizedBox(height: 6),
-            const Text('Dars mustahkamlandi!',
-                style: TextStyle(fontWeight: FontWeight.w800, fontSize: 18)),
+            Text(mastered ? 'Dars o\'zlashtirildi!' : 'Yaqin qoldi',
+                textAlign: TextAlign.center,
+                style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 18)),
           ],
         ),
-        content: Text(
-          'Birinchi urinishda: $_firstTry / $_total\n+$earned XP',
-          textAlign: TextAlign.center,
-          style: const TextStyle(fontSize: 15, height: 1.5),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              'Birinchi urinishda: $_firstTry / $_total\n+$earned XP',
+              textAlign: TextAlign.center,
+              style: const TextStyle(fontSize: 15, height: 1.5),
+            ),
+            if (!mastered) ...[
+              const SizedBox(height: 12),
+              Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: AppColors.cream,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Column(
+                  children: [
+                    const Text(
+                      'Dars «o\'zlashtirildi» belgisini olishi uchun testni '
+                      'bitta ham xatosiz o\'tish kerak.',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 13.5, height: 1.4),
+                    ),
+                    const SizedBox(height: 6),
+                    Text('Eng yaxshi natijangiz: $best%',
+                        style: const TextStyle(
+                            fontWeight: FontWeight.w800,
+                            color: AppColors.gold,
+                            fontSize: 13)),
+                  ],
+                ),
+              ),
+            ],
+          ],
         ),
         actionsAlignment: MainAxisAlignment.center,
         actions: [
           OutlinedButton(
             onPressed: () {
               Navigator.pop(context);
-              setState(() {
-                _queue.clear();
-                _done = 0;
-                _firstTry = 0;
-                _build();
-              });
+              if (mastered) {
+                _restart();
+              } else {
+                Navigator.pop(context);
+              }
             },
-            child: const Text('Yana bir marta'),
+            child: Text(mastered ? 'Yana bir marta' : 'Keyinroq'),
           ),
           ElevatedButton(
             onPressed: () {
               Navigator.pop(context);
-              Navigator.pop(context);
+              if (mastered) {
+                Navigator.pop(context);
+              } else {
+                _restart();
+              }
             },
-            child: const Text('Tayyor'),
+            child: Text(mastered ? 'Tayyor' : 'Qaytadan'),
           ),
         ],
       ),
     );
+  }
+
+  /// Testni boshidan qurish — savollar qaytadan tanlanadi, shuning uchun
+  /// o'quvchi javoblarning JOYINI emas, o'zini yodlaydi.
+  void _restart() {
+    setState(() {
+      _queue.clear();
+      _done = 0;
+      _firstTry = 0;
+      _total = 0;
+      _picked = null;
+      _answered = false;
+      _build();
+    });
   }
 
   @override

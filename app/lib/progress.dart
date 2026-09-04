@@ -22,6 +22,18 @@ class Progress extends ChangeNotifier {
   static const int allModesMask = (1 << masterModeCount) - 1; // 63
   final Map<String, int> _modeMask = {}; // darsId::arabcha -> bajarilgan usullar bitmaskasi
 
+  /// «O'zlashtirilgan» darslar — testdan BITTA HAM xatosiz o'tilganlari.
+  ///
+  /// Nega `_completed` dan alohida: `_completed` «darsni ko'rib chiqdi»
+  /// degani, u eski qoida bo'yicha (60% yetarli edi) yig'ilgan. Yangi qoida
+  /// qattiqroq, ammo eski belgilarni o'chirib tashlash o'quvchining
+  /// mehnatini yo'qqa chiqaradi — shuning uchun ikkalasi yonma-yon turadi.
+  final Set<String> _mastered = {};
+
+  /// Har bir dars uchun eng yaxshi natija — birinchi urinishda to'g'ri
+  /// javoblar foizi (0..100). O'quvchi «qancha qoldi» ni ko'rib tursin.
+  final Map<String, int> _best = {};
+
   SharedPreferences? _prefs;
 
   int get level => (xp ~/ 100) + 1;
@@ -47,6 +59,11 @@ class Progress extends ChangeNotifier {
     final mm = _prefs!.getString('modeMask');
     if (mm != null) {
       (json.decode(mm) as Map).forEach((k, v) => _modeMask[k as String] = (v as num).toInt());
+    }
+    _mastered.addAll(_prefs!.getStringList('mastered') ?? []);
+    final bs = _prefs!.getString('best');
+    if (bs != null) {
+      (json.decode(bs) as Map).forEach((k, v) => _best[k as String] = (v as num).toInt());
     }
     _refreshStreak();
     notifyListeners();
@@ -132,6 +149,40 @@ class Progress extends ChangeNotifier {
     notifyListeners();
   }
 
+  // --- Darsni o'zlashtirish (test natijasi bo'yicha) ---
+
+  /// Dars o'zlashtirilganmi — ya'ni test bir marta xatosiz topshirilganmi.
+  bool isMastered(String lessonId) => _mastered.contains(lessonId);
+
+  /// Shu darsdagi eng yaxshi natija, foizda (hech urinilmagan bo'lsa 0).
+  int bestPercent(String lessonId) => _best[lessonId] ?? 0;
+
+  /// Testda hech urinib ko'rilmaganmi.
+  bool isUntried(String lessonId) => !_best.containsKey(lessonId);
+
+  /// Test urinishini yozib qo'yadi.
+  ///
+  /// [firstTry] — BIRINCHI urinishda to'g'ri javob berilgan savollar soni.
+  /// Xatodan keyin qaytarilgan savol to'g'ri yechilsa ham bu songa kirmaydi:
+  /// aks holda «xatosiz o'tish» sharti ma'nosini yo'qotardi.
+  ///
+  /// Dars faqat [firstTry] == [total] bo'lgandagina o'zlashtirilgan
+  /// hisoblanadi. Natija oldingisidan yomon bo'lsa, eng yaxshisi saqlanadi.
+  /// Qaytaradi: shu urinishda o'zlashtirildimi.
+  Future<bool> recordAttempt(String lessonId, int firstTry, int total) async {
+    if (total <= 0) return false;
+    final pct = (firstTry * 100 / total).round();
+    if (pct > (_best[lessonId] ?? -1)) _best[lessonId] = pct;
+    final ok = firstTry >= total;
+    if (ok) {
+      _mastered.add(lessonId);
+      _completed.add(lessonId); // o'zlashtirgan bo'lsa, ko'rib chiqqani aniq
+    }
+    await _save();
+    notifyListeners();
+    return ok;
+  }
+
   Future<void> _save() async {
     final p = _prefs;
     if (p == null) return;
@@ -141,5 +192,7 @@ class Progress extends ChangeNotifier {
     await p.setStringList('completed', _completed.toList());
     await p.setString('mastery', json.encode(_mastery));
     await p.setString('modeMask', json.encode(_modeMask));
+    await p.setStringList('mastered', _mastered.toList());
+    await p.setString('best', json.encode(_best));
   }
 }

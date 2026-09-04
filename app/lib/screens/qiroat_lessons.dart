@@ -6,6 +6,7 @@ import '../services/tts.dart';
 import '../theme.dart';
 import '../widgets/entrance.dart';
 import '../widgets/grammar_table.dart';
+import '../widgets/mastery_badge.dart';
 import '../widgets/speak_button.dart';
 import 'qiroat_drill.dart';
 import 'qiroat_match.dart';
@@ -63,9 +64,11 @@ class QiroatBooksHome extends StatelessWidget {
   }
 
   Widget _bookTile(BuildContext context, int book, int count) {
-    // Kitobdagi tugatilgan darslar soni.
+    // Kitobda O'ZLASHTIRILGAN darslar soni. Ataylab `isCompleted` emas:
+    // ro'yxatdagi ✅ ham o'zlashtirishni bildiradi, ikkisi bir xil narsani
+    // sanamasa raqam belgilar bilan zid chiqadi.
     final done = repo.qiroatLessons
-        .where((l) => l.book == book && progress.isCompleted(l.completionId))
+        .where((l) => l.book == book && progress.isMastered(l.completionId))
         .length;
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
@@ -167,7 +170,6 @@ class QiroatLessonsList extends StatelessWidget {
       );
 
   Widget _lessonTile(BuildContext context, QiroatLesson l) {
-    final done = progress.isCompleted(l.completionId);
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
       child: Material(
@@ -210,10 +212,8 @@ class QiroatLessonsList extends StatelessWidget {
                     ],
                   ),
                 ),
-                if (done)
-                  const Icon(Icons.check_circle, color: AppColors.success)
-                else
-                  const Icon(Icons.chevron_right, color: AppColors.emerald),
+                MasteryBadge(lessonId: l.completionId, size: 22),
+                const Icon(Icons.chevron_right, color: AppColors.emerald),
               ],
             ),
           ),
@@ -308,7 +308,7 @@ class QiroatLessonDetail extends StatelessWidget {
               page: QiroatMatchGame(lesson: lesson),
             ),
             const SizedBox(height: 16),
-            _CompleteButton(lessonId: lesson.completionId),
+            _CompleteButton(lesson: lesson),
           ],
         ),
       ),
@@ -502,43 +502,22 @@ class _VocabRow extends StatelessWidget {
   }
 }
 
-/// «Tugatdim» tugmasi — XP beradi va darsni tugatilgan deb belgilaydi.
+/// Dars ekranining pastidagi o'zlashtirish holati va testga o'tish tugmasi.
+///
+/// Ilgari bu yerda «Darsni tugatdim (+15 XP)» tugmasi turardi: o'quvchi
+/// hech narsa tekshirilmasdan o'zini tugatdim deb belgilardi. Endi belgini
+/// faqat test beradi — matnni ko'zdan kechirish bilimni isbotlamaydi.
 class _CompleteButton extends StatelessWidget {
-  final String lessonId;
-  const _CompleteButton({required this.lessonId});
+  final QiroatLesson lesson;
+  const _CompleteButton({required this.lesson});
 
   @override
   Widget build(BuildContext context) {
-    final done = progress.isCompleted(lessonId);
-    if (done) {
-      return Container(
-        padding: const EdgeInsets.symmetric(vertical: 14),
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-          color: AppColors.success.withValues(alpha: 0.12),
-          borderRadius: BorderRadius.circular(14),
-        ),
-        child: const Text('✅ Bu dars tugatildi',
-            style: TextStyle(color: AppColors.success, fontWeight: FontWeight.w800)),
-      );
-    }
-    return FilledButton(
-      onPressed: () async {
-        await progress.addXp(15);
-        await progress.markCompleted(lessonId);
-        if (context.mounted) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Barakalla! +15 XP'), duration: Duration(seconds: 2)),
-          );
-        }
-      },
-      style: FilledButton.styleFrom(
-        backgroundColor: AppColors.emerald,
-        padding: const EdgeInsets.symmetric(vertical: 16),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-      ),
-      child: const Text('Darsni tugatdim  (+15 XP)',
-          style: TextStyle(fontWeight: FontWeight.w800, fontSize: 16)),
+    return MasteryCallToAction(
+      lessonId: lesson.completionId,
+      what: 'lug\'at va matn',
+      onStart: () => Navigator.push(context,
+          MaterialPageRoute(builder: (_) => LessonFlow(lesson: lesson))),
     );
   }
 }

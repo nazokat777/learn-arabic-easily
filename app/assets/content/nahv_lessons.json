@@ -19734,6 +19734,182 @@
         }
       ],
       "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 93,
+      "page": 390,
+      "titleAr": "الاِخْتِصَاصُ",
+      "title": "Ixtisos",
+      "rule": {
+        "ar": "هُوَ أَنْ يُذْكَرَ اسْمٌ ظَاهِرٌ بَعْدَ ضَمِيرٍ لِبَيَانِ الْمَقْصُودِ مِنْهُ؛ نَحْوُ: «نَحْنُ مَعَاشِرَ الْأَنْبِيَاءِ لَا نُوَرَّثُ». وَنَحْنُ الْعَرَبَ نُكْرِمُ الضَّيْفَ.",
+        "uz": "Ixtisos — zamirdan keyin, undan nima ko'zda tutilganini bayon qilish uchun ochiq ism zikr qilishdir; masalan: «Biz payg'ambarlar jamoasi meros qoldirmaymiz», «Biz — arablar — mehmonni siylaymiz»."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَهُوَ مَنْصُوبٌ بِفِعْلٍ مَحْذُوفٍ وُجُوبًا؛ أَيْ: أَخُصُّ مَعَاشِرَ الْأَنْبِيَاءِ، وَأَقْصِدُ الْعَرَبَ.",
+          "uz": "U vojib ravishda tushirilgan fe'l bilan mansubdir; ya'ni: «Payg'ambarlar jamoasini xoslayman», «Arablarni ko'zda tutaman»."
+        },
+        {
+          "type": "para",
+          "ar": "وَقَدْ يَكُونُ لِمُجَرَّدِ الْفَخْرِ أَوِ التَّوَاضُعِ؛ نَحْوُ: عَلَيَّ أَيُّهَا الْكَرِيمُ يُعْتَمَدُ، وَإِنِّي أَيُّهَا الْعَبْدُ فَقِيرٌ إِلَى عَفْوِ رَبِّي.",
+          "uz": "U faqat faxrlanish yoki kamtarlik uchun ham bo'lishi mumkin; masalan: «Menga — bu karim kishiga — suyaniladi», «Men — bu banda — Robbimning kechirimiga muhtojman»."
+        },
+        {
+          "type": "para",
+          "ar": "وَأَيٌّ وَأَيَّةُ هُنَا يُبْنَيَانِ عَلَى الضَّمِّ لَفْظًا بِاسْمٍ مَقْرُونٍ بِأَلْ.",
+          "uz": "Bu yerda «ayyun» va «ayyatun» «al» bilan kelgan ism bilan lafzan damma uzra mabniy bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "(١) حَدِيثٌ شَرِيفٌ.",
+          "uz": "(1-izoh) Sharif hadis."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 94,
+      "page": 390,
+      "titleAr": "الاِشْتِغَالُ",
+      "title": "Ishtig'ol",
+      "rule": {
+        "ar": "هُوَ أَنْ يَتَقَدَّمَ اسْمٌ وَيَتَأَخَّرَ عَنْهُ عَامِلٌ مُشْتَغِلٌ عَنْهُ بِضَمِيرِهِ، أَوْ بِمُلَابِسِ ضَمِيرِهِ بِحَيْثُ لَوْ تَفَرَّغَ لَهُ لَنَصَبَهُ لَفْظًا أَوْ مَحَلًّا؛ نَحْوُ: كِتَابَكَ قَرَأْتُهُ، وَالدَّارَ سَكَنَّاهَا.",
+        "uz": "Ishtig'ol — bir ism oldin kelib, undan keyin uning zamiri bilan yoxud zamiri bilan bog'liq narsa bilan band bo'lgan omil kelishidir; agar omil bo'sh bo'lganida uni lafzan yoki mahallan nasb qilardi; masalan: «Kitobingni — men uni o'qidim», «Uyni — biz unda yashadik»."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَهُوَ مَنْصُوبٌ بِفِعْلٍ مَحْذُوفٍ يُفَسِّرُهُ الْمَذْكُورُ؛ أَيْ: قَرَأْتُ كِتَابَكَ، وَسَكَنَّا الدَّارَ.",
+          "uz": "U tushirilgan fe'l bilan mansubdir; zikr qilingan fe'l uni tafsir qiladi; ya'ni: «Kitobingni o'qidim», «Uyda yashadik»."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) هَذَا إِذَا اشْتَغَلَ الْعَامِلُ بِالضَّمِيرِ كَمَا هُوَ الْغَالِبُ، أَمَّا إِذَا اشْتَغَلَ بِمَا اتَّصَلَ بِالضَّمِيرِ فَيُقَدَّرُ مَا يُنَاسِبُ الْمَقَامَ؛ نَحْوُ: زَيْدًا ضَرَبْتُ أَخَاهُ؛ أَيْ: أَهَنْتُ زَيْدًا. وَعَمْرًا اشْتَرَيْتُ فَرَسَهُ؛ أَيْ: بَايَعْتُ عَمْرًا.",
+          "uz": "(2-izoh) Bu — omil zamir bilan band bo'lganda (ko'p uchraydigani); zamirga tutashgan narsa bilan band bo'lsa, o'ringa mos keladigani taqdir qilinadi; masalan: «Zaydni — uning akasini urdim», ya'ni «Zaydni xor qildim»; «Amrni — uning otini sotib oldim», ya'ni «Amr bilan savdo qildim»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَجِبُ فِي الاِسْمِ الْمَشْغُولِ عَنْهُ النَّصْبُ إِنْ وَقَعَ بَعْدَ مَا يَخْتَصُّ بِالْفِعْلِ؛ كَ: أَدَوَاتِ الشَّرْطِ وَالتَّحْضِيضِ؛ نَحْوُ: إِنِ الدِّينَارَ وَجَدْتَهُ فَخُذْهُ، وَهَلَّا كِتَابًا تَقْرَؤُهُ.",
+          "uz": "Band bo'lingan ismda nasb vojib bo'ladi — agar u fe'lga xos narsadan keyin kelsa; masalan shart va tahziz adotlari; masalan: «Agar dinorni topsang, uni ol», «Bir kitobni o'qisang bo'lmasmidi?»"
+        },
+        {
+          "type": "para",
+          "ar": "وَيَجِبُ فِيهِ الرَّفْعُ إِنْ وَقَعَ بَعْدَ مَا يَخْتَصُّ بِالاِبْتِدَاءِ؛ كَ: إِذَا الْفُجَائِيَّةِ؛ نَحْوُ: خَرَجْتُ فَإِذَا الْعَبْدُ يَضْرِبُهُ سَيِّدُهُ.",
+          "uz": "Unda raf' vojib bo'ladi — agar u ibtidoga xos narsadan keyin kelsa; masalan kutilmaganlik «izo»si; masalan: «Chiqdim — birdan qulni xo'jayini urayotgan ekan»."
+        },
+        {
+          "type": "para",
+          "ar": "أَوْ قَبْلَ مَا لَهُ الصَّدَارَةُ؛ نَحْوُ: رَئِيسُكَ إِنْ قَابَلْتَهُ فَعَظِّمْهُ، وَأَخُوكَ هَلَّا كَلَّمْتَهُ، وَالْحَدِيقَةُ هَلْ أَصْلَحْتَهَا، وَالْأَلْتِفَاتُ مَا أَحْسَنَهُ.",
+          "uz": "Yoki boshda kelish huquqiga ega narsadan oldin kelsa; masalan: «Rahbaringni uchratsang, uni ulug'la», «Akangga gapirsang bo'lmasmidi?», «Bog'ni tuzatdingmi?», «Iltifot naqadar go'zal!»"
+        },
+        {
+          "type": "para",
+          "ar": "وَيَجُوزُ الْأَمْرَانِ فِيمَا عَدَا ذَلِكَ؛ نَحْوُ: صَدِيقَكَ سَامِحْ، ﴿أَبَشَرًا مِنَّا وَاحِدًا نَتَّبِعُهُ﴾، سَعِيدٌ كَرُمَتْ شَمَائِلُهُ، وَالْإِحْسَانُ تَحَقَّقْتُهُ مِنْهُ، الْمُجْتَهِدُ أُحِبُّهُ، الْكَسُولُ أُبْغِضُهُ.",
+          "uz": "Bulardan boshqasida ikki holat ham joizdir; masalan: «Do'stingni kechir», «Bizdan bo'lgan bir insongami ergashamiz?», «Sa'idning xulqlari karamli», «Yaxshilikni undan aniqladim», «Tirishqoqni sevaman», «Dangasani yomon ko'raman»."
+        },
+        {
+          "type": "para",
+          "ar": "(١) وَمِمَّا يَخْتَصُّ بِالْفِعْلِ أَدَوَاتُ الاِسْتِفْهَامِ سِوَى الْهَمْزَةِ، لَكِنْ لَا يَقَعُ الاِشْتِغَالُ بَعْدَ أَدَوَاتِ الشَّرْطِ وَالاِسْتِفْهَامِ إِلَّا فِي الشِّعْرِ، أَمَّا فِي النَّثْرِ فَلَا يَلِيهَا إِلَّا صَرِيحُ الْفِعْلِ مَا عَدَا إِنْ وَإِذَا وَلَوْ، فَيَلِيهَا ظَاهِرًا أَوْ مُقَدَّرًا.",
+          "uz": "(1-izoh) Fe'lga xos narsalardan biri — hamzadan boshqa so'roq adotlaridir. Lekin shart va so'roq adotlaridan keyin ishtig'ol faqat she'rdagina keladi; nasrda esa ulardan keyin faqat ochiq fe'l keladi — «in», «izo» va «lav»dan boshqa; ularda esa ochiq yoki taqdir qilingan holda keladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَمَحَلُّ اخْتِصَاصِ أَدَوَاتِ الاِسْتِفْهَامِ بِالْفِعْلِ إِذَا ذُكِرَ فِي حَيِّزِهَا، وَإِلَّا فَلَا اخْتِصَاصَ؛ نَحْوُ: مَتَى نَصْرُ اللَّهِ؟",
+          "uz": "So'roq adotlarining fe'lga xosligi — fe'l ularning doirasida zikr qilingan holdadir; aks holda xoslik yo'q; masalan: «Allohning nusrati qachon?»"
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 95,
+      "page": 391,
+      "titleAr": "الاِسْتِغَاثَةُ",
+      "title": "Istig'osa (yordam so'rash)",
+      "rule": {
+        "ar": "هِيَ نِدَاءُ مَنْ يُعِينُ عَلَى دَفْعِ شِدَّةٍ؛ كَ: يَا لَلْكِرَامِ لِلْفُقَرَاءِ، وَيَكُونُ بِـ(يَا) خَاصَّةً.",
+        "uz": "Istig'osa — qiyinchilikni daf qilishda yordam beradigan kishini chaqirishdir; masalan: «Ey karamlilar, kambag'allar uchun (yordam bering)!» U faqat «yo» bilan bo'ladi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَلَكَ فِي الْمُسْتَغَاثِ بِهِ ثَلَاثَةُ أَوْجُهٍ:",
+          "uz": "Yordam so'ralayotgan kishida uch xil shakl bor:"
+        },
+        {
+          "type": "para",
+          "ar": "الْأَوَّلُ: أَنْ تَجُرَّهُ بِلَامٍ مَفْتُوحَةٍ؛ كَ: يَا لَلْقَوْمِ، وَلَا تُكْسَرُ إِلَّا إِذَا تَكَرَّرَ خَالِيًا مِنْ (يَا)؛ كَ: يَا لَلرِّجَالِ وَلِلشُّبَّانِ.",
+          "uz": "Birinchisi: uni fathali lom bilan jarr qilishing; masalan: «Ey qavm!» U faqat «yo»dan xoli holda takrorlanganda kasra qilinadi; masalan: «Ey erkaklar va yoshlar!»"
+        },
+        {
+          "type": "para",
+          "ar": "وَإِذَا ذُكِرَ الْمُسْتَغَاثُ لِأَجْلِهِ وَجَبَ جَرُّهُ بِلَامٍ مَكْسُورَةٍ دَائِمًا؛ كَ: يَا لَزَيْدٍ لِعَمْرٍو.",
+          "uz": "Kim uchun yordam so'ralayotgani zikr qilinsa, uni doim kasrali lom bilan jarr qilish vojibdir; masalan: «Ey Zayd, Amr uchun!»"
+        },
+        {
+          "type": "para",
+          "ar": "وَقَدْ يُجَرُّ بِـ(مِنْ) إِنْ كَانَ مُسْتَغَاثًا مِنْهُ؛ نَحْوُ:",
+          "uz": "Kimdan yordam so'ralayotgan bo'lsa, u «min» bilan jarr qilinishi mumkin; masalan:"
+        },
+        {
+          "type": "para",
+          "ar": "يَا لَلرِّجَالِ ذَوِي الْأَلْبَابِ مِنْ نَفَرٍ * لَا يَبْرَحُ السَّفَهُ الْمُرْدِي لَهُمْ دِينًا",
+          "uz": "«Ey aql egalari bo'lgan erkaklar — halok qiluvchi nodonlik ularga din bo'lib qolgan bir guruhdan (yordam bering)!»"
+        },
+        {
+          "type": "para",
+          "ar": "وَكَالْمُسْتَغَاثِ بِهِ فِي أَحْوَالِهِ السَّابِقَةِ: الْمُتَعَجَّبُ مِنْهُ؛ فَتَقُولُ: يَا لَلْمَاءِ، وَيَا لَلْعُشْبِ إِذَا تَعَجَّبْتَ مِنْ كَثْرَتِهِمَا، وَيَا مَاءً، وَيَا عُشْبًا، وَيَا مَاءُ، وَيَا عُشْبُ.",
+          "uz": "Yordam so'ralayotgan kishi kabi, o'tgan holatlarida ta'ajjub qilinayotgan narsa ham shunday bo'ladi; shunday deysan: «Ey suv!», «Ey o't!» — ikkisining ko'pligidan hayratlansang; hamda boshqa shakllarida ham."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 96,
+      "page": 392,
+      "titleAr": "النُّدْبَةُ",
+      "title": "Nudba (nola qilish)",
+      "rule": {
+        "ar": "هِيَ نِدَاءُ الْمُتَفَجَّعِ عَلَيْهِ، أَوِ الْمُتَوَجَّعِ مِنْهُ؛ كَ: وَا وَلَدَاهْ، وَيَا كَبِدَاهْ.",
+        "uz": "Nudba — yo'qotilganidan qattiq qayg'urilgan yoki og'rig'idan noliladigan narsani chaqirishdir; masalan: «Voy bolam!», «Voy jigarim!»"
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَيَكُونُ بِـ(وَا)، وَكَذَا بِـ(يَا) عِنْدَ أَمْنِ اللَّبْسِ.",
+          "uz": "U «vo» bilan bo'ladi; chalkashlikdan xotirjam bo'lganda «yo» bilan ham bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَلَكَ فِي الْمَنْدُوبِ ثَلَاثَةُ أَوْجُهٍ:",
+          "uz": "Manduboda uch xil shakl bor:"
+        },
+        {
+          "type": "para",
+          "ar": "الْأَوَّلُ: أَنْ تُبْقِيَهُ عَلَى حَالِهِ؛ كَ: وَا حُسَيْنُ، وَيَا حَرَّ قَلْبِي.",
+          "uz": "Birinchisi: uni o'z holicha qoldirish; masalan: «Vo Husayn!», «Yo qalbimning yong'ini!»"
+        },
+        {
+          "type": "para",
+          "ar": "الثَّانِي: أَنْ تَخْتِمَهُ بِأَلِفٍ؛ كَ: وَا حُسَيْنَا، وَيَا حَرَّ قَلْبَا.",
+          "uz": "Ikkinchisi: uni alif bilan tugatish; masalan: «Vo Husayno!», «Yo qalbimning yong'ini!»"
+        },
+        {
+          "type": "para",
+          "ar": "الثَّالِثُ: أَنْ تَخْتِمَهُ بِأَلِفٍ وَهَاءِ السَّكْتِ فِي الْوَقْفِ؛ كَ: وَاحُسَيْنَاهْ، وَيَا حَرَّ قَلْبَاهْ.",
+          "uz": "Uchinchisi: vaqf holida uni alif va sakt «ho»si bilan tugatish; masalan: «Vo Husaynoh!», «Yo qalbimning yong'inih!»"
+        },
+        {
+          "type": "para",
+          "ar": "وَلَا تُنْدَبُ النَّكِرَةُ، وَلَا الْمُبْهَمُ؛ فَلَا يُقَالُ: وَا رَجُلُ، وَلَا: وَا هَؤُلَاءِ، إِلَّا إِذَا كَانَ الْمُبْهَمُ مَوْصُولًا غَيْرَ مَبْدُوءٍ بِـ(أَلْ) مُشْتَهِرًا بِصِلَةٍ؛ نَحْوُ: وَا مَنْ فَتَحَ مِصْرَاهْ.",
+          "uz": "Nakira ham, mubham ham nudba qilinmaydi; shuning uchun «Vo kishi!» va «Vo bular!» deyilmaydi. Faqat mubham «al» bilan boshlanmagan, silasi bilan mashhur bo'lgan mavsul bo'lsa bundan mustasno; masalan: «Voy Misrni fath qilgan zot!»"
+        }
+      ],
+      "exercise": []
     }
   ]
 }

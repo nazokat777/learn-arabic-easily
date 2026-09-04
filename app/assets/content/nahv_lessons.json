@@ -20771,6 +20771,89 @@
           "type": "para",
           "ar": "وَتَجِيءُ لِلشَّرْطِ؛ نَحْوُ: ﴿وَلَمَّا فَتَحُوا مَتَاعَهُمْ وَجَدُوا بِضَاعَتَهُمْ﴾.",
           "uz": "U shart uchun ham keladi; masalan: «Yuklarini ochganlarida, mollarini topdilar»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُقَالُ لَهَا حِينَئِذٍ: حَرْفُ وُجُودٍ لِوُجُودٍ، وَالْأَشْهَرُ فِي نَحْوِ هَذَا أَنَّهَا ظَرْفٌ بِمَعْنَى حِينَ.",
+          "uz": "Bu holda unga «bor bo'lishi uchun bor bo'lish harfi» deyiladi. Bunday o'rinda mashhur qavlga ko'ra u «hiyna» ma'nosidagi zarfdir."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(لَوْلَا): لِلتَّحْضِيضِ وَلِلشَّرْطِ؛ نَحْوُ: ﴿لَوْلَا تَسْتَغْفِرُونَ اللَّهَ﴾. ﴿وَلَوْلَا دَفْعُ اللَّهِ النَّاسَ بَعْضَهُمْ بِبَعْضٍ لَفَسَدَتِ الْأَرْضُ﴾.",
+          "uz": "(Lavlo) Undash va shart uchundir; masalan: «Nega Allohdan mag'firat so'ramaysizlar?», «Agar Alloh odamlarning ba'zilarini ba'zilari bilan daf qilmaganida, yer buzilib ketardi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُقَالُ لَهَا حِينَئِذٍ: حَرْفُ امْتِنَاعٍ لِوُجُودٍ؛ أَيْ: انْتِفَاءُ الْجَوَابِ لِوُجُودِ الشَّرْطِ.",
+          "uz": "Bu holda unga «bor bo'lishi sababli man qilish harfi» deyiladi; ya'ni shart mavjud bo'lgani uchun javob yo'qqa chiqadi."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(لَوْمَا): كَ «لَوْلَا» فِي مَعْنَيَيْهَا الْمَذْكُورَيْنِ؛ نَحْوُ: ﴿لَوْ مَا تَأْتِينَا بِالْمَلَائِكَةِ﴾.",
+          "uz": "(Lavmo) Yuqorida aytilgan ikki ma'noda «lavlo» kabidir; masalan: «Nega bizga farishtalarni keltirmaysan?»"
+        },
+        {
+          "type": "para",
+          "ar": "لَوْمَا الْإِصَاخَةُ لِلْوُشَاةِ لَكَانَ لِي * مِنْ بَعْدِ سُخْطِكَ فِي رِضَاكَ رَجَاءُ",
+          "uz": "«Agar chaqimchilarga quloq solinmaganida, g'azabingdan keyin ham rizoingga umidim bo'lardi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(هَلَّا): لِلتَّحْضِيضِ؛ نَحْوُ: هَلَّا تُرْسِلُ إِلَى صَدِيقِكَ.",
+          "uz": "(Hallo) Undash uchundir; masalan: «Nega do'stingga (xat) yubormaysan?»"
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 103,
+      "page": 407,
+      "titleAr": "الْحُرُوفُ الْخُمَاسِيَّةُ",
+      "title": "Besh harfli harflar",
+      "rule": {
+        "ar": "وَأَمَّا الْخُمَاسِيَّةُ فَلَمْ يَأْتِ مِنْهَا إِلَّا (لَكِنَّ)، وَهِيَ لِلِاسْتِدْرَاكِ.",
+        "uz": "Besh harflilariga kelsak, ulardan faqat «lakinna» kelgan bo'lib, u istidrok uchundir."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "نَحْوُ: فُلَانٌ عَالِمٌ لَكِنَّهُ جَبَانٌ.",
+          "uz": "Masalan: «Falonchi olim, lekin u qo'rqoq»."
+        },
+        {
+          "type": "para",
+          "ar": "وَالِاسْتِدْرَاكُ: رَفْعُ وَهْمٍ نَشَأَ مِنَ الْكَلَامِ السَّابِقِ.",
+          "uz": "Istidrok — oldingi gapdan tug'ilgan noto'g'ri tasavvurni ko'tarishdir."
+        },
+        {
+          "type": "para",
+          "ar": "وَقَدْ تُخَفَّفُ فَتُهْمَلُ وُجُوبًا؛ نَحْوُ: ﴿فَلَمْ تَقْتُلُوهُمْ وَلَكِنَّ اللَّهَ قَتَلَهُمْ﴾.",
+          "uz": "Ba'zan u yengillashtiriladi va shunda amali vojib ravishda bekor bo'ladi; masalan: «Ularni sizlar o'ldirmadingizlar, balki Alloh o'ldirdi»."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 104,
+      "page": 407,
+      "titleAr": "طَوَائِفُ الْحُرُوفِ",
+      "title": "Harflarning turkumlari",
+      "rule": {
+        "ar": "وَمِمَّا تَقَدَّمَ يُعْلَمُ أَنَّ الْحُرُوفَ تَنْقَسِمُ إِلَى أَصْنَافٍ، فَكُلُّ طَائِفَةٍ مِنْهَا اشْتَرَكَتْ فِي مَعْنًى أَوْ عَمَلٍ تُنْسَبُ إِلَيْهِ.",
+        "uz": "Yuqoridagilardan ma'lum bo'ladiki, harflar turlarga bo'linadi. Ulardan har bir turkum bir ma'no yoki amalda birlashsa, o'shanga nisbat beriladi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "(أَحْرُفُ الْجَوَابِ): لَا، وَنَعَمْ، وَبَلَى، وَإِي، وَأَجَلْ، وَجَلَلْ، وَجَيْرِ، وَإِنَّ.",
+          "uz": "(Javob harflari): «lo», «na'am», «balo», «iy», «ajal», «jalal», «jayri», «inna»."
+        },
+        {
+          "type": "para",
+          "ar": "(وَأَحْرُفُ النَّفْيِ): لَمْ، وَلَمَّا، وَلَنْ، وَمَا، وَلَا، وَلَاتَ، وَإِنْ.",
+          "uz": "(Inkor harflari): «lam», «lammo», «lan», «mo», «lo», «lot», «in»."
         }
       ],
       "exercise": []

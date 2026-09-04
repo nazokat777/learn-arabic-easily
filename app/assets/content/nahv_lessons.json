@@ -18562,6 +18562,99 @@
           "type": "para",
           "ar": "أَوْ شَبِيهُ الْمُضَافِ؛ كَ: يَا سَاعِيًا فِي الْخَيْرِ.",
           "uz": "Yoki muzofga o'xshash bo'ladi; masalan: «Ey yaxshilikka harakat qiluvchi!»"
+        },
+        {
+          "type": "para",
+          "ar": "أَوْ نَكِرَةٌ غَيْرُ مَقْصُودَةٍ؛ كَ: يَا مُغْتَرًّا دَعِ الْغُرُورَ.",
+          "uz": "Yoki maqsad qilinmagan nakira; masalan: «Ey mag'rur, mag'rurlikni tashla!»"
+        },
+        {
+          "type": "para",
+          "ar": "فَإِنْ كَانَ نَكِرَةً مَقْصُودَةً، أَوْ عَلَمًا مُفْرَدًا (وَالْمُفْرَدُ هُنَا مَا لَيْسَ مُضَافًا وَلَا شَبِيهَهَا بِالْمُضَافِ) بُنِيَ عَلَى مَا يُرْفَعُ بِهِ؛ نَحْوُ: يَا أُسْتَاذُ، وَيَا فَتَيَانِ، وَيَا مُنْصِفُونَ، وَيَا إِبْرَاهِيمَانِ، وَيَا إِبْرَاهِيمُونَ، وَيَا إِبْرَاهِيمُ.",
+          "uz": "Maqsad qilingan nakira yoki birlikdagi atoqli ism bo'lsa (bu yerda «mufrad» — muzof ham, muzofga o'xshash ham bo'lmagani), u raf' qilinadigan alomat uzra mabniy bo'ladi; masalan: «Ey ustoz!», «Ey ikki yigit!», «Ey insofli kishilar!», «Ey ikki Ibrohim!», «Ey Ibrohimlar!», «Ey Ibrohim!»"
+        },
+        {
+          "type": "para",
+          "ar": "وَإِذَا أُرِيدَ نِدَاءُ مَا فِيهِ أَلْ أُتِيَ قَبْلَهُ بِـ(أَيُّهَا) لِلْمُذَكَّرِ، وَ(أَيَّتُهَا) لِلْمُؤَنَّثِ، أَوْ بِاسْمِ الْإِشَارَةِ؛ نَحْوُ: ﴿يَا أَيُّهَا الْإِنْسَانُ مَا غَرَّكَ﴾. ﴿يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ﴾. يَا هَذَا الْإِنْسَانُ. يَا هَذِهِ النَّفْسُ.",
+          "uz": "«Al» bo'lgan so'zni chaqirmoqchi bo'lsa, uning oldidan muzakkar uchun «ayyuho», muannas uchun «ayyatuho», yoxud ishora ismi keltiriladi; masalan: «Ey inson, seni nima aldadi?», «Ey xotirjam nafs!», «Ey bu inson!», «Ey bu nafs!»"
+        },
+        {
+          "type": "para",
+          "ar": "إِلَّا مَعَ (اللَّهِ)؛ نَحْوُ: يَا اللَّهُ، وَالْأَكْثَرُ مَعَهُ حَذْفُ حَرْفِ النِّدَاءِ وَتَعْوِيضُهُ بِمِيمٍ مُشَدَّدَةٍ، فَيُقَالُ: اللَّهُمَّ.",
+          "uz": "Faqat «Alloh» lafzi bundan mustasno; masalan: «Yo Alloh!» Ko'pincha u bilan nido harfi tushirilib, o'rniga shaddali «mim» qo'yiladi; shunda «Allohumma» deyiladi."
+        },
+        {
+          "type": "para",
+          "ar": "(١) وَيُقَالُ فِي الْإِعْرَابِ: إِنَّ (أَيَّ) أَوْ (أَيَّةَ) أَوِ اسْمَ الْإِشَارَةِ مُنَادًى، وَهَا حَرْفُ تَنْبِيهٍ، وَمَا فِيهِ أَلْ بَدَلٌ مِنَ الْمُنَادَى إِذَا كَانَ جَامِدًا، وَإِلَّا أُعْرِبَ نَعْتًا.",
+          "uz": "(1-izoh) I'robda shunday deyiladi: «ayya», «ayyata» yoki ishora ismi — munodo; «ho» — tanbeh harfi; «al» bo'lgan so'z esa jomid bo'lsa munododan badal, aks holda na't deb i'rob qilinadi."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 74,
+      "page": 369,
+      "titleAr": "تَابِعُ الْمُنَادَى",
+      "title": "Munodoning tobesi",
+      "rule": {
+        "ar": "إِذَا كَانَ الاِسْمُ الْوَاقِعُ بَعْدَ الْمُنَادَى الْمَبْنِيِّ نَعْتًا لَهُ مُضَافًا خَالِيًا مِنْ أَلْ وَجَبَ نَصْبُهُ؛ نَحْوُ: يَا مُحَمَّدُ صَاحِبَ الْعِلْمِ.",
+        "uz": "Mabniy munododan keyin kelgan ism unga na't bo'lib, muzof va «al»dan xoli bo'lsa, uni nasb qilish vojibdir; masalan: «Ey Muhammad, ilm egasi!»"
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَإِنْ كَانَ مُضَافًا مَقْرُونًا بِأَلْ، أَوْ مُفْرَدًا مُعَرَّفًا بِهَا جَازَ فِيهِ الرَّفْعُ مُرَاعَاةً لِلَفْظِهِ، وَالنَّصْبُ مُرَاعَاةً لِلْمَحَلِّ؛ فَتَقُولُ: يَا عَلِيُّ الْكَرِيمُ الْأَبِ، وَيَا عَلِيُّ الظَّرِيفُ.",
+          "uz": "«Al» bilan kelgan muzof yoki «al» bilan ma'rifa qilingan birlik bo'lsa, lafziga qarab raf' qilish ham, mahalliga qarab nasb qilish ham joizdir; shunday deysan: «Ey Ali, otasi karim!», «Ey Ali, zarif!»"
+        },
+        {
+          "type": "para",
+          "ar": "وَمِثْلُ النَّعْتِ: عَطْفُ الْبَيَانِ وَالتَّوْكِيدُ.",
+          "uz": "Na't kabidir: atfi bayon va ta'kid."
+        },
+        {
+          "type": "para",
+          "ar": "أَمَّا عَطْفُ النَّسَقِ وَالْبَدَلُ فَكَالْمُنَادَى الْمُسْتَقِلِّ، إِلَّا إِذَا كَانَ الْمَنْسُوقُ فِيهِ أَلْ.",
+          "uz": "Atfi nasaq va badalga kelsak, ular mustaqil munodo kabidir — faqat atf qilingan so'zda «al» bo'lgan hol bundan mustasno."
+        },
+        {
+          "type": "para",
+          "ar": "فَيَجُوزُ ضَمُّهُ وَنَصْبُهُ؛ نَحْوُ قَوْلِهِ تَعَالَى: ﴿يَا جِبَالُ أَوِّبِي مَعَهُ وَالطَّيْرَ﴾ بِالرَّفْعِ وَالنَّصْبِ.",
+          "uz": "U holda uni damma qilish ham, nasb qilish ham joizdir; masalan Alloh taoloning: «Ey tog'lar, u bilan birga tasbeh ayting, qushlar ham!» degan so'zi — raf' bilan ham, nasb bilan ham o'qiladi."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 75,
+      "page": 370,
+      "titleAr": "الْمَبْحَثُ الْعَاشِرُ فِي خَبَرِ كَانَ وَأَخَوَاتِهَا وَاسْمِ إِنَّ وَأَخَوَاتِهَا",
+      "title": "10-mabhas: «kona» xabari va «inna» ismi",
+      "rule": {
+        "ar": "خَبَرُ كَانَ وَأَخَوَاتِهَا وَاسْمُ إِنَّ وَأَخَوَاتِهَا تَقَدَّمَ ذِكْرُهُمَا فِي الْمَرْفُوعَاتِ، غَيْرَ أَنَّ اسْمَ (لَا) لَا يُعْرَبُ إِلَّا إِذَا كَانَ مُضَافًا أَوْ شَبِيهًا بِالْمُضَافِ؛ نَحْوُ: لَا نَاصِرَ حَقٍّ مَخْذُولٌ، وَلَا كَرِيمًا عُنْصُرُهُ سَفِيهٌ.",
+        "uz": "«Kona» va sheriklarining xabari hamda «inna» va sheriklarining ismi haqida marfu'lar bo'limida zikr o'tgan edi. Faqat «lo»ning ismi muzof yoki muzofga o'xshash bo'lmasa, i'rob qilinmaydi; masalan: «Haqqa yordam beruvchi xor bo'lmaydi», «Asli olijanob kishi nodon bo'lmaydi»."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "أَمَّا الْمُفْرَدُ فَيُبْنَى عَلَى مَا يُنْصَبُ بِهِ؛ نَحْوُ: لَا سَمِيرَ أَحْسَنُ مِنَ الْكِتَابِ، وَلَا مُتَذَاكِرَيْنِ نَاسِيَانِ، وَلَا مُتَذَاكِرِينَ نَاسُونَ.",
+          "uz": "Birlikdagi ismga kelsak, u nasb qilinadigan alomat uzra mabniy bo'ladi; masalan: «Kitobdan yaxshiroq hamsuhbat yo'q», «Takrorlab turgan ikki kishi unutuvchi bo'lmaydi», «Takrorlab turganlar unutuvchi bo'lmaydilar»."
+        },
+        {
+          "type": "para",
+          "ar": "وَلَا بُدَّ أَنْ يَكُونَ اسْمُ (لَا) نَكِرَةً مُتَّصِلًا بِهَا، كَمَا مُثِّلَ، وَإِلَّا بَطَلَ عَمَلُهَا، وَلَزِمَ تَكْرَارُهَا؛ نَحْوُ: لَا زَيْدٌ هُنَا وَلَا عَمْرٌو. وَلَا فِي الدَّرْسِ صُعُوبَةٌ وَلَا تَطْوِيلٌ.",
+          "uz": "«Lo»ning ismi nakira va unga tutash bo'lishi shart (misolda ko'rsatilgani kabi); aks holda uning amali botil bo'ladi va uni takrorlash lozim bo'ladi; masalan: «Bu yerda na Zayd bor, na Amr», «Darsda na qiyinchilik bor, na cho'zilish»."
+        },
+        {
+          "type": "para",
+          "ar": "(١) لَا هَذِهِ تُسَمَّى نَافِيَةً لِلْجِنْسِ؛ لِأَنَّ الْخَبَرَ مَنْفِيٌّ بَعْدَهَا عَنْ جَمِيعِ أَفْرَادِ الْجِنْسِ، فَلَا يَصِحُّ أَنْ تَقُولَ: لَا رَجُلَ فِي الدَّارِ، بَلْ رَجُلَانِ.",
+          "uz": "(1-izoh) Bu «lo» «jinsni inkor qiluvchi» deb ataladi, chunki undan keyin xabar jinsning barcha a'zolaridan inkor qilinadi. Shuning uchun «Uyda kishi yo'q, balki ikki kishi bor» deb aytish to'g'ri emas."
+        },
+        {
+          "type": "para",
+          "ar": "بِخِلَافِ (لَا) فِي قَوْلِكَ: لَا رَجُلٌ فِي الدَّارِ؛ فَإِنَّهَا لِنَفْيِ الْوَحْدَةِ، وَحِينَئِذٍ يَصِحُّ أَنْ تَقُولَ: لَا رَجُلٌ فِي الدَّارِ، بَلْ رَجُلَانِ.",
+          "uz": "«Uyda bir kishi yo'q» degan gapdagi «lo» esa bundan farq qiladi — u birlikni inkor qilish uchundir; u holda «Uyda bir kishi yo'q, balki ikki kishi bor» deyish to'g'ri bo'ladi."
         }
       ],
       "exercise": []

@@ -20854,6 +20854,51 @@
           "type": "para",
           "ar": "(وَأَحْرُفُ النَّفْيِ): لَمْ، وَلَمَّا، وَلَنْ، وَمَا، وَلَا، وَلَاتَ، وَإِنْ.",
           "uz": "(Inkor harflari): «lam», «lammo», «lan», «mo», «lo», «lot», «in»."
+        },
+        {
+          "type": "para",
+          "ar": "(وَأَحْرُفُ الشَّرْطِ): إِنْ، وَإِذْمَا، وَلَوْ، وَلَوْلَا، وَلَوْمَا، وَأَمَّا.",
+          "uz": "(Shart harflari): «in», «izmo», «lav», «lavlo», «lavmo», «ammo»."
+        },
+        {
+          "type": "para",
+          "ar": "(وَأَحْرُفُ التَّحْضِيضِ): أَلَا، وَأَلَّا، وَهَلَّا، وَلَوْلَا، وَلَوْمَا.",
+          "uz": "(Undash harflari): «alo», «allo», «hallo», «lavlo», «lavmo»."
+        },
+        {
+          "type": "para",
+          "ar": "(وَالْأَحْرُفُ الْمَصْدَرِيَّةُ): أَنْ، وَأَنَّ، وَكَيْ، وَلَوْ، وَمَا.",
+          "uz": "(Masdariy harflar): «an», «anna», «kay», «lav», «mo»."
+        },
+        {
+          "type": "para",
+          "ar": "(وَأَحْرُفُ الِاسْتِقْبَالِ): السِّينُ، وَسَوْفَ، وَأَنْ، وَإِنْ، وَلَنْ، وَهَلْ.",
+          "uz": "(Kelasi zamon harflari): «sin», «savfa», «an», «in», «lan», «hal»."
+        },
+        {
+          "type": "para",
+          "ar": "(وَأَحْرُفُ التَّنْبِيهِ): أَلَا، وَأَمَا، وَهَا، وَيَا.",
+          "uz": "(Tanbeh harflari): «alo», «amo», «ho», «yo»."
+        },
+        {
+          "type": "para",
+          "ar": "(وَأَحْرُفُ التَّوْكِيدِ): إِنَّ، وَأَنَّ، وَالنُّونُ، وَلَامُ الِابْتِدَاءِ، وَقَدْ.",
+          "uz": "(Ta'kid harflari): «inna», «anna», «nun», «lomul ibtido», «qad»."
+        },
+        {
+          "type": "para",
+          "ar": "وَمِنْ ذَلِكَ حُرُوفُ الْجَرِّ، وَالْعَطْفِ، وَالنِّدَاءِ، وَنَوَاصِبُ الْمُضَارِعِ، وَجَوَازِمُهُ. وَقَدْ مَرَّ بَيَانُهَا.",
+          "uz": "Shuningdek jorr harflari, atf harflari, nido harflari, muzoreni nasb qiluvchilar va jazm qiluvchilar ham shulardandir. Ularning bayoni o'tdi."
+        },
+        {
+          "type": "para",
+          "ar": "وَتَنْقَسِمُ الْحُرُوفُ إِلَى: عَامِلَةٍ؛ كَ: إِنَّ وَأَخَوَاتِهَا. وَغَيْرِ عَامِلَةٍ؛ كَ: أَحْرُفِ الْجَوَابِ.",
+          "uz": "Harflar quyidagilarga bo'linadi: amal qiluvchi — «inna» va uning singillari kabi; va amal qilmaydigan — javob harflari kabi."
+        },
+        {
+          "type": "para",
+          "ar": "وَتَنْقَسِمُ أَيْضًا إِلَى: مُخْتَصَّةٍ بِالْأَفْعَالِ؛ كَ: أَحْرُفِ التَّحْضِيضِ. وَمُخْتَصَّةٍ بِالْأَسْمَاءِ؛ كَ: حُرُوفِ الْجَرِّ. وَمُشْتَرَكَةٍ؛ كَ: مَا، وَلَا النَّافِيَتَيْنِ، وَالْوَاوِ وَالْفَاءِ الْعَاطِفَتَيْنِ.",
+          "uz": "Ular yana quyidagilarga bo'linadi: fe'llarga xos — undash harflari kabi; ismlarga xos — jorr harflari kabi; va mushtarak — inkor «mo» va «lo», hamda atf qiluvchi «vov» va «fo» kabi."
         }
       ],
       "exercise": []

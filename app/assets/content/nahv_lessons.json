@@ -19384,6 +19384,133 @@
         }
       ],
       "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 90,
+      "page": 383,
+      "titleAr": "الْبَابُ التَّاسِعُ فِي الْمُكَبَّرِ وَالْمُصَغَّرِ",
+      "title": "9-bob: mukabbar va musag'g'ar (kichraytirish)",
+      "rule": {
+        "ar": "يَنْقَسِمُ الاِسْمُ إِلَى مُكَبَّرٍ وَمُصَغَّرٍ.",
+        "uz": "Ism mukabbar (kattalashtirilgan) va musag'g'ar (kichraytirilgan)ga bo'linadi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "فَالْمُكَبَّرُ: مَا نُطِقَ بِهِ عَلَى صِيغَتِهِ الْأَصْلِيَّةِ؛ نَحْوُ: رَجُلٌ وَكِتَابٌ.",
+          "uz": "Mukabbar — o'zining asliy siyg'asida talaffuz qilingani; masalan: rajul, kitob."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْمُصَغَّرُ: مَا حُوِّلَ إِلَى صِيغَةِ فُعَيْلٍ أَوْ فُعَيْعِلٍ أَوْ فُعَيْعِيلٍ؛ لِلدَّلَالَةِ عَلَى صِغَرِ حَجْمِهِ، أَوْ حَقَارَةِ قَدْرِهِ.",
+          "uz": "Musag'g'ar — hajmining kichikligiga yoki qadrining pastligiga dalolat qilish uchun «fu'ayl», «fu'ay'il» yoki «fu'ay'il» siyg'asiga aylantirilgani."
+        },
+        {
+          "type": "para",
+          "ar": "فَـ(فُعَيْلٌ) لِلْأَسْمَاءِ الثُّلَاثِيَّةِ؛ كَ: رُجَيْلٍ، وَقُلَيْبٍ، وَقُمَيْرٍ، فِي تَصْغِيرِ: رَجُلٍ، وَقَلْبٍ، وَقَمَرٍ.",
+          "uz": "«Fu'ayl» — uch harfli ismlar uchun; masalan: rujayl, qulayb, qumayr — «rajul», «qalb», «qamar»ning kichraytirilgani."
+        },
+        {
+          "type": "para",
+          "ar": "وَفُعَيْعِلٌ وَفُعَيْعِيلٌ لِمَا فَوْقَ الثُّلَاثِيِّ؛ فَتَقُولُ فِي تَصْغِيرِ: جَعْفَرٍ، وَسَفَرْجَلٍ، وَغَضَنْفَرٍ، وَقِرْطَاسٍ، وَعُصْفُورٍ: جُعَيْفِرٌ، وَسُفَيْرِجٌ، وَغُضَيْفِرٌ، وَقُرَيْطِيسٌ، وَعُصَيْفِيرٌ.",
+          "uz": "«Fu'ay'il» va «fu'ay'iyl» — uch harflidan ortiq bo'lganlari uchun; shunday qilib «ja'far», «safarjal», «g'azanfar», «qirtos» va «usfur»ning kichraytirilganida: ju'ayfir, sufayrij, g'uzayfir, qurraytis, usayfir deysan."
+        },
+        {
+          "type": "para",
+          "ar": "كَمَا تَقُولُ فِي تَكْسِيرِهَا: جَعَافِرُ، وَسَفَارِجُ، وَغَضَافِرُ، وَقَرَاطِيسُ، وَعَصَافِيرُ.",
+          "uz": "Xuddi ularning jam' taksirida: ja'ofir, saforij, g'azofir, qarotis, asofir deganing kabi."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُسْتَثْنَى مِنْ أَنَّ التَّصْغِيرَ كَالتَّكْسِيرِ فِي الْحَذْفِ: مَا خُتِمَ بِتَاءِ التَّأْنِيثِ، أَوْ أَلِفِهِ الْمَمْدُودَةِ، أَوْ يَاءِ النَّسَبِ، أَوِ الْأَلِفِ وَالنُّونِ الْمَزِيدَتَيْنِ.",
+          "uz": "Kichraytirish tushirishda jam' taksir kabi ekanidan mustasno qilinadi: ta'nis «to»si, mamduda alifi, nisbat «yo»si yoxud ortiqcha alif va nun bilan tugagani."
+        },
+        {
+          "type": "para",
+          "ar": "فَلَا يُحْذَفُ مِنْهُ فِي التَّصْغِيرِ مَا كَانَ يُحْذَفُ فِي التَّكْسِيرِ، بَلْ تُعْتَبَرُ الزِّيَادَةُ مُنْفَصِلَةً، وَالتَّصْغِيرُ وَارِدًا عَلَى مَا قَبْلَهَا؛ فَتَقُولُ فِي تَصْغِيرِ: حَنْظَلَةَ، وَأَرْبِعَاءَ، وَعَبْقَرِيٍّ، وَزَعْفَرَانٍ: حُنَيْظِلَةَ، وَأُرَيْبِعَاءَ، وَعُبَيْقِرِيٍّ، وَزُعَيْفِرَانٍ.",
+          "uz": "Shuning uchun kichraytirishda jam' taksirda tushiriladigani tushirilmaydi; balki qo'shimcha ajralgan deb hisoblanadi va kichraytirish undan oldingisiga tushadi. Shunday qilib «hanzala», «arbi'o», «abqariy» va «za'faron»ning kichraytirilganida: hunayzila, urayb'a, ubayqiriy, zu'ayfiron deysan."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُعْتَبَرُ ثُلَاثِيًّا؛ نَحْوُ: زَهْرَةٍ، وَحُبْلَى، وَحَمْرَاءَ، وَسَكْرَانَ، وَأَصْحَابٍ، فَلَا يُكْسَرُ مَا بَعْدَ يَاءِ التَّصْغِيرِ، بَلْ يَبْقَى عَلَى أَصْلِهِ؛ فَتَقُولُ: زُهَيْرَةٌ، وَحُبَيْلَى.",
+          "uz": "Bunday so'z uch harfli hisoblanadi; masalan: zahra, hublo, hamro, sakron, ashob. Shuning uchun kichraytirish «yo»sidan keyingisi kasra qilinmaydi, balki o'z aslida qoladi; shunday deysan: zuhayra, hubaylo."
+        },
+        {
+          "type": "para",
+          "ar": "(١) أَوْ تَقْلِيلِ عَدَدِهِ؛ كَ: دُرَيْهِمَاتٍ، أَوْ قُرْبِ زَمَانِهِ أَوْ مَكَانِهِ؛ كَ: قُبَيْلِ الْعَصْرِ، وَفُوَيْقَ الْبَابِ، وَقَدْ يُسْتَعْمَلُ لِلتَّمْلِيحِ؛ كَ: غُزَيِّلٍ، أَوْ لِلتَّعْظِيمِ؛ كَ: دُوَيْهِيَةٍ.",
+          "uz": "(1-izoh) Yoki sonining ozligiga; masalan «durayhimot». Yoki zamoni yoxud makonining yaqinligiga; masalan «asrdan sal oldin», «eshikdan sal tepada». Ba'zan mayinlik uchun ishlatiladi — «g'uzayyil» kabi; yoki ulug'lash uchun — «duvayhiya» kabi."
+        },
+        {
+          "type": "para",
+          "ar": "وَحُمَيْرَاءُ، وَسُكَيْرَانُ، وَأُصَيْحَابٌ، وَكَأَنَّ الزَّائِدَ مُنْفَصِلٌ.",
+          "uz": "Va humayro, sukayron, usayhob — go'yo ortiqcha harf ajralgandek."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَالتَّصْغِيرُ كَالتَّكْسِيرِ يَرُدُّ الْأَشْيَاءَ إِلَى أُصُولِهَا:",
+            "uz": "Kichraytirish jam' taksir kabi narsalarni asliga qaytaradi:"
+          },
+          "items": [
+            {
+              "ar": "١ - فَإِذَا كَانَ ثَانِي الاِسْمِ حَرْفَ عِلَّةٍ مُنْقَلِبًا عَنْ غَيْرِهِ رُدَّ إِلَى أَصْلِهِ؛ فَتَقُولُ فِي تَصْغِيرِ: مِيزَانٍ، وَمُوقِنٍ، وَبَابٍ، وَنَابٍ، وَدِينَارٍ: مُوَيْزِينٌ، وَمُيَيْقِنٌ، وَبُوَيْبٌ، وَنُيَيْبٌ، وَدُنَيْنِيرٌ.",
+              "uz": "1 — Ismning ikkinchi harfi boshqasidan aylangan illat harfi bo'lsa, asliga qaytariladi; shunday qilib «mizon», «muqin», «bob», «nob» va «dinor»ning kichraytirilganida: muvayzin, muyayqin, buvayb, nuyayb, dunaynir deysan."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "إِلَّا الْأَلِفَ الْمُنْقَلِبَةَ عَنْ هَمْزَةٍ؛ كَ: آدَمَ، فَتُقْلَبُ وَاوًا، كَالْأَلِفِ الزَّائِدَةِ وَالْمَجْهُولَةِ الْأَصْلِ؛ نَحْوُ: كُوَيْمِلٌ، وَعُوَيْجٌ فِي تَصْغِيرِ كَامِلٍ وَعَاجٍ.",
+          "uz": "Faqat hamzadan aylangan alif — «Odam» kabi — bundan mustasno: u vovga aylantiriladi; xuddi ortiqcha va asli noma'lum alif kabi; masalan «komil» va «oj»ning kichraytirilganida «kuvaymil» va «uvayj» deyiladi."
+        },
+        {
+          "type": "para",
+          "ar": "٢ - وَإِذَا كَانَ الاِسْمُ الثُّلَاثِيُّ مَعْنَوِيَّ التَّأْنِيثِ؛ كَ: دَارٍ، وَشَمْسٍ، وَهِنْدٍ، صُغِّرَ عَلَى فُعَيْلَةٍ؛ كَ: دُوَيْرَةٍ، وَشُمَيْسَةٍ، وَهُنَيْدَةٍ.",
+          "uz": "2 — Uch harfli ism ma'naviy muannas bo'lsa — «dor», «shams», «Hind» kabi — u «fu'ayla» vaznida kichraytiriladi; masalan: duvayra, shumaysa, Hunayda."
+        },
+        {
+          "type": "para",
+          "ar": "٣ - وَإِذَا حُذِفَ مِنَ الاِسْمِ قَبْلَ تَصْغِيرِهِ حَرْفٌ رُدَّ إِلَيْهِ؛ فَتَقُولُ فِي تَصْغِيرِ: يَدٍ، وَدَمٍ، وَعِدَةٍ، وَسَنَةٍ، وَابْنٍ، وَأُخْتٍ: يُدَيَّةٌ، وَدُمَيٌّ، وَوُعَيْدَةٌ، وَسُنَيَّةٌ، وَبُنَيٌّ، وَأُخَيَّةٌ.",
+          "uz": "3 — Ismdan kichraytirishdan oldin bir harf tushirilgan bo'lsa, u qaytariladi; shunday qilib «yad», «dam», «ida», «sana», «ibn» va «uxt»ning kichraytirilganida: yudayya, dumayy, vu'ayda, sunayya, bunayy, uxayya deysan."
+        },
+        {
+          "type": "para",
+          "ar": "٤ - وَقَدْ يُقْتَصَرُ مِنَ الاِسْمِ عَلَى أُصُولِهِ، ثُمَّ يُصَغَّرُ، وَيُسَمَّى تَصْغِيرَ التَّرْخِيمِ؛ كَ: رُوَيْدٍ فِي إِزْوَادٍ، وَحُمَيْدٍ فِي: مُحَمَّدٍ، وَمَحْمُودٍ، وَحَمَّادٍ، وَأَحْمَدَ.",
+          "uz": "4 — Ba'zan ismdan faqat asl harflari olinib, so'ng kichraytiriladi; u «tarxim kichraytirishi» deb ataladi; masalan «izvod»da «ruvayd», «Muhammad», «Mahmud», «Hammod» va «Ahmad»da «Humayd»."
+        },
+        {
+          "type": "para",
+          "ar": "تَنْبِيهَانِ: الْأَوَّلُ: لَا بُدَّ فِي كُلِّ تَصْغِيرٍ مِنْ ثَلَاثَةِ أَعْمَالٍ: ضَمُّ الْأَوَّلِ، وَفَتْحُ الثَّانِي، وَزِيَادَةُ يَاءٍ سَاكِنَةٍ بَعْدَهُ.",
+          "uz": "Ikki tanbeh. Birinchisi: har bir kichraytirishda uchta amal shart: birinchi harfni damma qilish, ikkinchisini fatha qilish va undan keyin sokin «yo» qo'shish."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَخْتَصُّ مَا فَوْقَ الثُّلَاثِيِّ بِعَمَلٍ رَابِعٍ، وَهُوَ كَسْرُ مَا بَعْدَ الْيَاءِ، إِلَّا مَا اسْتُثْنِيَ مِنْ نَحْوِ: زَهْرَةٍ، وَحُبْلَى، وَحَمْرَاءَ، وَسَكْرَانَ، وَأَصْحَابٍ.",
+          "uz": "Uch harflidan ortiq bo'lgani to'rtinchi amal bilan xoslanadi — u «yo»dan keyingisini kasra qilishdir; faqat «zahra», «hublo», «hamro», «sakron», «ashob» kabi mustasno qilinganlar bundan tashqari."
+        },
+        {
+          "type": "para",
+          "ar": "الثَّانِي: التَّصْغِيرُ خَاصٌّ بِالْأَسْمَاءِ الْمُتَمَكِّنَةِ، وَشَذَّ تَصْغِيرُ أَفْعَلَ فِي التَّعَجُّبِ، وَبَعْضِ أَسْمَاءِ الْإِشَارَةِ، وَالْأَسْمَاءِ الْمَوْصُولَةِ؛ نَحْوُ:",
+          "uz": "Ikkinchisi: kichraytirish mutamakkin ismlarga xosdir. Ta'ajjubdagi «af'al»ning, ba'zi ishora ismlarining va mavsul ismlarning kichraytirilishi qoidadan chetga chiqqandir; masalan:"
+        },
+        {
+          "type": "para",
+          "ar": "يَا مَا أُمَيْلِحَ غِزْلَانًا شَدَنَّ لَنَا * مِنْ هَؤُلَيَّائِكُنَّ الضَّالُ وَالسَّمُرُ",
+          "uz": "«Ey, bizga bo'y yetgan kiyikchalar naqadar go'zal — mana shu zol va samur daraxtlari orasidagilar!»"
+        },
+        {
+          "type": "para",
+          "ar": "وَاللَّذَيَّا وَاللَّتَيَّا فِي تَصْغِيرِ الَّذِي وَالَّتِي.",
+          "uz": "«Allazi» va «allati»ning kichraytirilganida «allazayyo» va «allatayyo»."
+        },
+        {
+          "type": "para",
+          "ar": "(١) شَدَنَ الظَّبْيُ: تَرَعْرَعَ وَقَوِيَ، وَالضَّالُ وَالسَّمُرُ: نَوْعَانِ مِنَ الشَّجَرِ.",
+          "uz": "(1-izoh) «Shadanaz-zaby» — kiyik bola bo'y yetdi va kuchaydi; «zol» va «samur» — daraxtning ikki turi."
+        }
+      ],
+      "exercise": []
     }
   ]
 }

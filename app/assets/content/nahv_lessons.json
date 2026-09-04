@@ -19061,6 +19061,228 @@
           "type": "para",
           "ar": "﴿لَبِثْنَا يَوْمًا أَوْ بَعْضَ يَوْمٍ﴾.",
           "uz": "«Bir kun yoki kunning bir qismi turdik»."
+        },
+        {
+          "type": "para",
+          "ar": "﴿أَقَرِيبٌ أَمْ بَعِيدٌ مَا تُوعَدُونَ﴾.",
+          "uz": "«Sizga va'da qilinayotgan narsa yaqinmi yoki uzoqmi?»"
+        },
+        {
+          "type": "para",
+          "ar": "﴿سَوَاءٌ عَلَيْنَا أَوَعَظْتَ أَمْ لَمْ تَكُنْ مِنَ الْوَاعِظِينَ﴾.",
+          "uz": "«Bizga baribir — va'z qildingmi yoki va'z qiluvchilardan bo'lmadingmi»."
+        },
+        {
+          "type": "para",
+          "ar": "لَا تُكْرِمْ خَالِدًا، لَكِنْ أَخَاهُ.",
+          "uz": "«Xolidni emas, balki uning akasini hurmat qil»."
+        },
+        {
+          "type": "para",
+          "ar": "أَكْرِمِ الصَّالِحَ، لَا الطَّالِحَ.",
+          "uz": "«Solihni hurmat qil, buzuqni emas»."
+        },
+        {
+          "type": "para",
+          "ar": "مَا سَافَرَ مَحْمُودٌ، بَلْ يُوسُفُ.",
+          "uz": "«Mahmud safarga chiqmadi, balki Yusuf chiqdi»."
+        },
+        {
+          "type": "para",
+          "ar": "قَدِمَ الْحُجَّاجُ حَتَّى الْمُشَاةُ.",
+          "uz": "«Hojilar keldi — hatto piyodalari ham»."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْوَاوُ: لِمُطْلَقِ الْجَمْعِ.",
+          "uz": "Vov — mutlaq jamlash uchundir."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْفَاءُ: لِلتَّرْتِيبِ مَعَ التَّعْقِيبِ.",
+          "uz": "Fo — ketma-ketlik va darhol ergashish uchundir."
+        },
+        {
+          "type": "para",
+          "ar": "وَثُمَّ: لِلتَّرْتِيبِ مَعَ التَّرَاخِي.",
+          "uz": "«Summa» — ketma-ketlik va oraliq bilan kelish uchundir."
+        },
+        {
+          "type": "para",
+          "ar": "وَأَوْ: لِأَحَدِ الشَّيْئَيْنِ.",
+          "uz": "«Av» — ikki narsadan birini bildirish uchundir."
+        },
+        {
+          "type": "para",
+          "ar": "وَأَمْ: لِلْمُعَادَلَةِ.",
+          "uz": "«Am» — muodala (tenglashtirib so'rash) uchundir."
+        },
+        {
+          "type": "para",
+          "ar": "وَلَكِنْ: لِلاِسْتِدْرَاكِ.",
+          "uz": "«Lakin» — istidrok uchundir."
+        },
+        {
+          "type": "para",
+          "ar": "وَلَا: لِلنَّفْيِ.",
+          "uz": "«Lo» — inkor uchundir."
+        },
+        {
+          "type": "para",
+          "ar": "وَبَلْ: لِلْإِضْرَابِ.",
+          "uz": "«Bal» — izrob uchundir."
+        },
+        {
+          "type": "para",
+          "ar": "وَحَتَّى: لِلْغَايَةِ.",
+          "uz": "«Hatta» — g'oya (chegara) uchundir."
+        },
+        {
+          "type": "para",
+          "ar": "وَلَا يَحْسُنُ الْعَطْفُ عَلَى الضَّمِيرِ الْمُسْتَتِرِ أَوْ ضَمِيرِ الرَّفْعِ الْمُتَّصِلِ إِلَّا بَعْدَ الْفَصْلِ؛ نَحْوُ: ﴿اسْكُنْ أَنْتَ وَزَوْجُكَ الْجَنَّةَ﴾. نَجَوْتُمْ أَنْتُمْ وَمَنْ مَعَكُمْ.",
+          "uz": "Mustatir zamirga yoki muttasil raf' zamiriga atf qilish faqat ajratuvchidan keyingina chiroyli bo'ladi; masalan: «Sen va juftingiz jannatda turinglar», «Sizlar va sizlar bilan birga bo'lganlar najot topdingiz»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُعْطَفُ الْفِعْلُ عَلَى الْفِعْلِ؛ نَحْوُ: ﴿وَإِنْ تُؤْمِنُوا وَتَتَّقُوا يُؤْتِكُمْ أُجُورَكُمْ وَلَا يَسْأَلْكُمْ أَمْوَالَكُمْ﴾.",
+          "uz": "Fe'lga fe'l atf qilinadi; masalan: «Agar imon keltirib taqvo qilsangiz, U sizlarga ajrlaringizni beradi va mol-mulklaringizni sizdan so'ramaydi»."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 85,
+      "page": 379,
+      "titleAr": "٣ - التَّوْكِيدُ",
+      "title": "3. Ta'kid",
+      "rule": {
+        "ar": "هُوَ تَابِعٌ يُذْكَرُ تَقْرِيرًا لِمَتْبُوعِهِ لِرَفْعِ احْتِمَالِ التَّجَوُّزِ أَوِ السَّهْوِ، وَهُوَ قِسْمَانِ: لَفْظِيٌّ وَمَعْنَوِيٌّ.",
+        "uz": "U — o'zi ergashgan so'zni tasdiqlash uchun, majoziy ma'no yoki e'tiborsizlik ehtimolini ko'tarish maqsadida keltiriladigan tobedir; u ikki qismdir: lafziy va ma'naviy."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "فَاللَّفْظِيُّ: يَكُونُ بِإِعَادَةِ اللَّفْظِ الْأَوَّلِ فِعْلًا كَانَ أَوِ اسْمًا أَوْ حَرْفًا أَوْ جُمْلَةً؛ نَحْوُ: قَدِمَ قَدِمَ الْحَاجُّ. الْحَقُّ وَاضِحٌ وَاضِحٌ. نَعَمْ نَعَمْ. طَلَعَ النَّهَارُ طَلَعَ النَّهَارُ.",
+          "uz": "Lafziy ta'kid — birinchi lafzni takrorlash bilan bo'ladi; u fe'l, ism, harf yoki gap bo'lishi mumkin; masalan: «Keldi, keldi hoji», «Haq ravshan, ravshan», «Ha, ha», «Kun yorishdi, kun yorishdi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُؤَكَّدُ الضَّمِيرُ الْمُسْتَتِرُ أَوِ الْمُتَّصِلُ بِضَمِيرِ رَفْعٍ مُنْفَصِلٍ؛ نَحْوُ: أَكْتُبُ أَنَا. ﴿كُنْتَ أَنْتَ الرَّقِيبَ عَلَيْهِمْ﴾.",
+          "uz": "Mustatir yoki muttasil zamir munfasil raf' zamiri bilan ta'kidlanadi; masalan: «Men yozaman», «Sen ularning ustidan kuzatuvchi eding»."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْمَعْنَوِيُّ: يَكُونُ بِسَبْعَةِ أَلْفَاظٍ، وَهِيَ: النَّفْسُ، وَالْعَيْنُ، وَكُلٌّ، وَجَمِيعٌ، وَعَامَّةٌ، وَكِلَا، وَكِلْتَا.",
+          "uz": "Ma'naviy ta'kid yettita lafz bilan bo'ladi; ular: «nafs», «ayn», «kull», «jami'», «omma», «kilo», «kilto»."
+        },
+        {
+          "type": "para",
+          "ar": "نَحْوُ: خَاطَبْتُ الْأَمِيرَ نَفْسَهُ، أَوْ عَيْنَهُ، وَاشْتَرَيْتُ الْبَيْتَ كُلَّهُ، أَوْ جَمِيعَهُ، أَوْ عَامَّتَهُ، وَبَرَّ وَالِدَيْكَ كِلَيْهِمَا، وَصُنْ يَدَيْكَ كِلْتَيْهِمَا عَنِ الْأَذَى.",
+          "uz": "Masalan: «Amirning o'ziga murojaat qildim» (ikki xil), «Uyning hammasini sotib oldim» (uch xil), «Ota-onangning ikkoviga ham yaxshilik qil», «Ikki qo'lingni ham ozordan saqla»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَجِبُ أَنْ يَتَّصِلَ بِضَمِيرٍ يُطَابِقُ الْمُؤَكَّدَ كَمَا رَأَيْتَ.",
+          "uz": "Ta'kid lafzi ta'kidlanayotgan so'zga mos keladigan zamirga tutashishi vojibdir — ko'rganingdek."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِذَا أُرِيدَ تَوْكِيدُ ضَمِيرِ الرَّفْعِ الْمُتَّصِلِ أَوِ الْمُسْتَتِرِ بِالنَّفْسِ أَوِ الْعَيْنِ وَجَبَ تَوْكِيدُهُ أَوَّلًا بِالضَّمِيرِ الْمُنْفَصِلِ؛ نَحْوُ: قُمْتُ أَنَا نَفْسِي. قُمْ أَنْتَ عَيْنُكَ.",
+          "uz": "Muttasil yoki mustatir raf' zamirini «nafs» yoki «ayn» bilan ta'kidlamoqchi bo'lsa, avval uni munfasil zamir bilan ta'kidlash vojib bo'ladi; masalan: «Men o'zim turdim», «Sen o'zing tur»."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 86,
+      "page": 379,
+      "titleAr": "٤ - الْبَدَلُ",
+      "title": "4. Badal",
+      "rule": {
+        "ar": "هُوَ تَابِعٌ مُمَهَّدٌ لَهُ بِذِكْرِ اسْمٍ قَبْلَهُ غَيْرِ مَقْصُودٍ لِذَاتِهِ، وَهُوَ أَرْبَعَةُ أَنْوَاعٍ.",
+        "uz": "U — o'zidan oldin, o'zi uchun maqsad qilinmagan bir ism zikr qilinishi bilan zamin tayyorlangan tobedir; u to'rt turdir."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "١ - بَدَلٌ مُطَابِقٌ؛ نَحْوُ: ﴿اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ * صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ﴾.",
+          "uz": "1 — Mos badal; masalan: «Bizni to'g'ri yo'lga hidoyat qil — Sen ne'mat bergan kishilarning yo'liga»."
+        },
+        {
+          "type": "para",
+          "ar": "﴿أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ﴾.",
+          "uz": "«Sen ne'mat berganlarning yo'liga — g'azabga uchraganlarnikiga emas»."
+        },
+        {
+          "type": "para",
+          "ar": "٢ - وَبَدَلُ بَعْضٍ مِنْ كُلٍّ؛ نَحْوُ: خَسَفَ الْقَمَرُ جُزْؤُهُ.",
+          "uz": "2 — Butundan bir qismning badali; masalan: «Oy — uning bir qismi — tutildi»."
+        },
+        {
+          "type": "para",
+          "ar": "٣ - وَبَدَلُ اشْتِمَالٍ؛ نَحْوُ: يَسَعُكَ الْأَمِيرُ عَفْوُهُ.",
+          "uz": "3 — Ishtimol badali; masalan: «Amir — uning kechirimi — senga yetarli bo'ladi»."
+        },
+        {
+          "type": "para",
+          "ar": "٤ - وَبَدَلٌ مُبَايِنٌ؛ نَحْوُ: أَعْطِ السَّائِلَ ثَلَاثَةً أَرْبَعَةً.",
+          "uz": "4 — Farqli badal; masalan: «So'rovchiga uchta — yo'q, to'rtta ber»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَجِبُ فِي بَدَلِ الْبَعْضِ وَالاِشْتِمَالِ أَنْ يَتَّصِلَا بِضَمِيرٍ يَعُودُ عَلَى الْمُبْدَلِ مِنْهُ كَمَا رَأَيْتَ.",
+          "uz": "Ba'z badali va ishtimol badalida ikkisining mubdal minhga qaytadigan zamirga tutashishi vojibdir — ko'rganingdek."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُبْدَلُ الْفِعْلُ مِنَ الْفِعْلِ؛ نَحْوُ: ﴿وَمَنْ يَفْعَلْ ذَلِكَ يَلْقَ أَثَامًا * يُضَاعَفْ لَهُ الْعَذَابُ﴾.",
+          "uz": "Fe'ldan fe'l badal qilinadi; masalan: «Kim shuni qilsa, jazoga yo'liqadi — unga azob ikki barobar qilinadi»."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 87,
+      "page": 380,
+      "titleAr": "٥ - عَطْفُ الْبَيَانِ",
+      "title": "5. Atfi bayon",
+      "rule": {
+        "ar": "وَقَدْ زَادَ أَكْثَرُ النُّحَاةِ تَابِعًا خَامِسًا سَمَّوْهُ عَطْفَ الْبَيَانِ، وَعَرَّفُوهُ بِأَنَّهُ: تَابِعٌ يُشْبِهُ الصِّفَةَ فِي تَوْضِيحِ مَتْبُوعِهِ.",
+        "uz": "Nahvchilarning ko'pchiligi beshinchi tobeni qo'shib, uni «atfi bayon» deb ataganlar. Uni shunday ta'riflaganlar: u — o'zi ergashgan so'zni oydinlashtirishda sifatga o'xshaydigan tobedir."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "كَاللَّقَبِ بَعْدَ الاِسْمِ فِي نَحْوِ: عَلِيٌّ زَيْنُ الْعَابِدِينَ.",
+          "uz": "Masalan ismdan keyingi laqab; «Ali Zaynulobidin» kabi."
+        },
+        {
+          "type": "para",
+          "ar": "وَالاِسْمِ بَعْدَ الْكُنْيَةِ فِي نَحْوِ: أَبُو حَفْصٍ عُمَرُ.",
+          "uz": "Va kunyadan keyingi ism; «Abu Hafs Umar» kabi."
+        },
+        {
+          "type": "para",
+          "ar": "وَالظَّاهِرِ بَعْدَ الْإِشَارَةِ فِي نَحْوِ: هَذَا الْكِتَابُ.",
+          "uz": "Va ishoradan keyingi ochiq ism; «bu kitob» kabi."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْمَوْصُوفِ بَعْدَ الصِّفَةِ فِي نَحْوِ: الْكَلِيمُ مُوسَى.",
+          "uz": "Va sifatdan keyingi mavsuf; «Kalim Muso» kabi."
+        },
+        {
+          "type": "para",
+          "ar": "وَالتَّفْسِيرِ بَعْدَ الْمُفَسَّرِ فِي نَحْوِ: الْعَسْجَدُ؛ أَيِ: الذَّهَبُ.",
+          "uz": "Va tafsir qilinuvchidan keyingi izoh; «asjad», ya'ni «oltin» kabi."
+        },
+        {
+          "type": "para",
+          "ar": "وَمَنْ لَمْ يُثْبِتْهُ جَعَلَهُ مِنَ الْبَدَلِ الْمُطَابِقِ.",
+          "uz": "Uni tasdiqlamagan kishi esa uni mos badaldan deb hisoblagan."
         }
       ],
       "exercise": []

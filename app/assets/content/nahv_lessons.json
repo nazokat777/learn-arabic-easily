@@ -20353,6 +20353,61 @@
           "type": "para",
           "ar": "وَ(عَنْ): لِلْمُجَاوَزَةِ، وَلِلْبَدَلِيَّةِ؛ نَحْوُ: خَرَجْتُ عَنِ الْبَلَدِ. ﴿وَلَا تَجْزِي نَفْسٌ عَنْ نَفْسٍ شَيْئًا﴾.",
           "uz": "(An) O'tish va o'rin bosish uchundir; masalan: «Shahardan chiqdim», «Hech bir jon boshqa jon uchun hech narsa to'lay olmaydi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(فِي): لِلظَّرْفِيَّةِ، وَلِلْمُصَاحَبَةِ، وَلِلسَّبَبِيَّةِ؛ نَحْوُ: فِي الْبَلَدِ لُصُوصٌ. ﴿ادْخُلُوا فِي أُمَمٍ﴾. «دَخَلَتِ امْرَأَةٌ النَّارَ فِي هِرَّةٍ حَبَسَتْهَا».",
+          "uz": "(Fi) Zarflik, hamrohlik va sabab uchundir; masalan: «Shaharda o'g'rilar bor», «Ummatlar bilan birga kiringlar», «Bir ayol o'zi bog'lab qo'ygan mushuk sababli do'zaxga kirdi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(قَدْ): لِلتَّحْقِيقِ، وَلِلتَّقْلِيلِ، وَلِلتَّوَقُّعِ؛ نَحْوُ: ﴿قَدْ أَفْلَحَ مَنْ زَكَّاهَا﴾. قَدْ يَجُودُ الْبَخِيلُ. قَدْ يَقْدَمُ الْمُسَافِرُ اللَّيْلَةَ.",
+          "uz": "(Qad) Tasdiqlash, ozlik va kutish uchundir; masalan: «Uni poklagan kishi najot topdi», «Baxil ba'zan saxovat qiladi», «Safardagi kishi bugun kechasi kelishi mumkin»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(كَيْ): لِلتَّعْلِيلِ، أَوْ لِلْمَصْدَرِيَّةِ، وَهَذِهِ مَعَ مَا بَعْدَهَا فِي تَأْوِيلِ مَصْدَرٍ؛ كَ: (أَنْ)؛ نَحْوُ: أَخْلِصُوا النِّيَّاتِ كَيْ تَنَالُوا أَعْلَى الدَّرَجَاتِ، جُدْ لِكَيْ تَجِدَ.",
+          "uz": "(Kay) Sabab yoki masdariylik uchundir; bu — «an» kabi o'zidan keyingisi bilan masdar ta'vilidadir; masalan: «Eng yuqori darajalarga yetish uchun niyatlaringizni xolis qilinglar», «Topish uchun saxovat qil»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(لَا): تَكُونُ نَاهِيَةً، وَزَائِدَةً، وَنَافِيَةً؛ نَحْوُ: ﴿لَا تَقْنَطُوا مِنْ رَحْمَةِ اللَّهِ﴾، ﴿مَا مَنَعَكَ أَلَّا تَسْجُدَ﴾، ﴿فَلَا صَدَّقَ وَلَا صَلَّى﴾.",
+          "uz": "(Lo) Qaytariq, ortiqcha va inkor bo'ladi; masalan: «Allohning rahmatidan umid uzmanglar», «Sajda qilishingdan seni nima to'sdi?», «U na tasdiq qildi, na namoz o'qidi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَقَدْ تَقَعُ النَّافِيَةُ جَوَابًا، وَعَاطِفَةً، وَعَامِلَةً عَمَلَ إِنَّ؛ نَحْوُ: قَالُوا: أَتَصْبِرُ؟ قُلْتُ: لَا.",
+          "uz": "Inkor «lo» javob, atf qiluvchi va «inna»ning amalini qiluvchi bo'lib ham keladi; masalan: «Ular dedilar: sabr qilasanmi? Dedim: yo'q»."
+        },
+        {
+          "type": "para",
+          "ar": "أَكْرِمِ الصَّالِحَ لَا الطَّالِحَ.",
+          "uz": "«Solihni hurmat qil, buzuqni emas»."
+        },
+        {
+          "type": "para",
+          "ar": "لَا سَمِيرَ أَحْسَنُ مِنَ الْكِتَابِ.",
+          "uz": "«Kitobdan yaxshiroq hamsuhbat yo'q»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(لَمْ): لِنَفْيِ الْمُضَارِعِ، وَجَزْمِهِ، وَقَلْبِهِ إِلَى الْمُضِيِّ؛ نَحْوُ: ﴿لَمْ يَلِدْ وَلَمْ يُولَدْ﴾.",
+          "uz": "(Lam) Muzori'ni inkor qilish, jazm qilish va o'tgan zamonga aylantirish uchundir; masalan: «U tug'magan va tug'ilmagan»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(لَنْ): لِنَفْيِ الْمُضَارِعِ وَنَصْبِهِ، وَتَخْلِيصِهِ لِلاِسْتِقْبَالِ؛ نَحْوُ: لَنْ تَبْلُغَ الْمَجْدَ حَتَّى تَلْعَقَ الصَّبِرَا",
+          "uz": "(Lan) Muzori'ni inkor qilish, nasb qilish va uni kelasi zamonga xoslash uchundir; masalan: «Sabrni yalamaguningcha shon-shuhratga yetmaysan»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(لَوْ): لِلشَّرْطِ، وَلِلْمَصْدَرِيَّةِ؛ نَحْوُ: لَوْ أَنْصَفَ النَّاسُ اسْتَرَاحَ الْقَاضِي. ﴿يَوَدُّ أَحَدُهُمْ لَوْ يُعَمَّرُ أَلْفَ سَنَةٍ﴾.",
+          "uz": "(Lav) Shart va masdariylik uchundir; masalan: «Odamlar insof qilganida, qozi rohat qilardi», «Ularning har biri ming yil umr ko'rishni istaydi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُقَالُ لَهَا فِي نَحْوِ الْمِثَالِ الْأَوَّلِ: حَرْفُ امْتِنَاعٍ لِامْتِنَاعٍ؛ أَيْ: انْتِفَاءُ الْجَوَابِ لِانْتِفَاءِ الشَّرْطِ.",
+          "uz": "Birinchi misol kabi o'rinlarda unga «imtino' uchun imtino' harfi» deyiladi; ya'ni shart yo'qligi sababli javob ham yo'qdir."
         }
       ],
       "exercise": []

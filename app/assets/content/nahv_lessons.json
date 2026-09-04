@@ -18196,6 +18196,203 @@
         }
       ],
       "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 68,
+      "page": 363,
+      "titleAr": "الْمَبْحَثُ السَّادِسُ فِي الْمُسْتَثْنَى بِإِلَّا",
+      "title": "6-mabhas: «illa» bilan istisno qilingan ism",
+      "rule": {
+        "ar": "هُوَ اسْمٌ يُذْكَرُ بَعْدَ (إِلَّا) مُخَالِفًا فِي الْحُكْمِ لِمَا قَبْلَهَا؛ نَحْوُ: لِكُلِّ دَاءٍ دَوَاءٌ إِلَّا الْمَوْتَ.",
+        "uz": "U — «illa»dan keyin keltiriladigan va hukmda o'zidan oldingisiga muxolif bo'lgan ismdir; masalan: «Har bir dardning davosi bor — o'limdan boshqa»."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَإِنَّمَا يَجِبُ نَصْبُهُ إِذَا كَانَ الْكَلَامُ تَامًّا مُوجَبًا؛ بِأَنْ ذُكِرَ الْمُسْتَثْنَى مِنْهُ، وَلَمْ يَتَقَدَّمْهُ نَفْيٌ، كَمَا مُثِّلَ.",
+          "uz": "Uni nasb qilish faqat kalom tom va mujab bo'lganda — ya'ni mustasno minh zikr qilinib, oldidan inkor kelmaganda — vojib bo'ladi; misolda ko'rsatilgani kabi."
+        },
+        {
+          "type": "para",
+          "ar": "فَإِنْ كَانَ الْكَلَامُ مَنْفِيًّا جَازَ نَصْبُهُ عَلَى الاِسْتِثْنَاءِ، وَإِتْبَاعُهُ عَلَى الْبَدَلِيَّةِ؛ تَقُولُ: لَا تَظْهَرُ الْكَوَاكِبُ نَهَارًا إِلَّا النَّيِّرَيْنِ، أَوْ إِلَّا النَّيِّرَانِ.",
+          "uz": "Kalom inkor bo'lsa, uni istisno sababli nasb qilish ham, badallik bilan ergashtirish ham joizdir; shunday deysan: «Kunduzi yulduzlar ko'rinmaydi — ikki nur sochuvchidan boshqa» — ikki xil i'rob bilan."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِنْ كَانَ الْكَلَامُ نَاقِصًا بِأَنْ لَمْ يُذْكَرِ الْمُسْتَثْنَى مِنْهُ: كَانَ الْمُسْتَثْنَى عَلَى حَسَبِ مَا يَقْتَضِيهِ الْعَامِلُ الَّذِي قَبْلَهُ فِي التَّرْكِيبِ، كَمَا لَوْ كَانَتْ (إِلَّا) غَيْرَ مَوْجُودَةٍ؛ نَحْوُ: لَا يَقَعُ فِي السُّوءِ إِلَّا فَاعِلُهُ. لَا أَتَّبِعُ إِلَّا الْحَقَّ. ﴿وَلَا يَحِيقُ الْمَكْرُ السَّيِّئُ إِلَّا بِأَهْلِهِ﴾، وَيُسَمَّى الاِسْتِثْنَاءُ حِينَئِذٍ مُفَرَّغًا.",
+          "uz": "Kalom noqis bo'lsa — ya'ni mustasno minh zikr qilinmasa — mustasno tarkibda o'zidan oldingi omil taqozo qilgan holatda bo'ladi; go'yo «illa» yo'qdek. Masalan: «Yomonlikka faqat uni qiluvchining o'zi tushadi», «Men faqat haqqa ergashaman», «Yomon hiyla faqat egasining o'ziga qaytadi». Bunday holdagi istisno «mufarrag'» deb ataladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَقَدْ يُسْتَثْنَى بِـ(غَيْرِ) وَسِوَى، فَيُجَرُّ مَا بَعْدَهُمَا بِالْإِضَافَةِ، وَيَثْبُتُ لَهُمَا مَا لِلاِسْمِ الْوَاقِعِ بَعْدَ إِلَّا؛ تَقُولُ: لِكُلِّ دَاءٍ دَوَاءٌ غَيْرَ الْمَوْتِ. لَا تَظْهَرُ الْكَوَاكِبُ نَهَارًا غَيْرَ النَّيِّرَيْنِ، أَوْ غَيْرُ النَّيِّرَيْنِ.",
+          "uz": "Istisno «g'ayr» va «sivo» bilan ham qilinadi; ulardan keyingi so'z izofa bilan jarr qilinadi, ularning o'ziga esa «illa»dan keyin kelgan ismning hukmi beriladi. Shunday deysan: «Har bir dardning davosi bor — o'limdan boshqa», «Kunduzi yulduzlar ko'rinmaydi — ikki nur sochuvchidan boshqa» (ikki xil i'rob bilan)."
+        },
+        {
+          "type": "para",
+          "ar": "لَا يَقَعُ فِي السُّوءِ غَيْرُ فَاعِلِهِ. لَا أَتَّبِعُ غَيْرَ الْحَقِّ. لَا يَحِيقُ الْمَكْرُ السَّيِّئُ بِغَيْرِ أَهْلِهِ.",
+          "uz": "«Yomonlikka uni qiluvchidan boshqasi tushmaydi», «Men haqdan boshqasiga ergashmayman», «Yomon hiyla egasidan boshqasiga qaytmaydi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَقَدْ يُسْتَثْنَى بِخَلَا وَعَدَا وَحَاشَا، فَيُجَرُّ مَا بَعْدَهَا عَلَى أَنَّهَا أَحْرُفُ جَرٍّ، أَوْ يُنْصَبُ مَفْعُولًا بِهِ عَلَى أَنَّهَا أَفْعَالٌ؛ نَحْوُ: قَامَ الرِّجَالُ عَدَا وَاحِدٍ أَوْ وَاحِدًا.",
+          "uz": "Istisno «xalo», «ado» va «hosho» bilan ham qilinadi: ulardan keyingi so'z ular jarr harflari deb qaralib jarr qilinadi, yoki ular fe'llar deb qaralib maf'ul bih sifatida nasb qilinadi; masalan: «Erkaklar turdi — bittasidan boshqa» (ikki xil i'rob bilan)."
+        },
+        {
+          "type": "para",
+          "ar": "فَإِنْ سُبِقَتْ بِـ(مَا) تَعَيَّنَ النَّصْبُ؛ نَحْوُ: أَلَا كُلُّ شَيْءٍ مَا خَلَا اللَّهَ بَاطِلُ * وَكُلُّ نَعِيمٍ لَا مَحَالَةَ زَائِلُ",
+          "uz": "Ulardan oldin «mo» kelsa, nasb shart bo'ladi; masalan: «Ogoh bo'l: Allohdan boshqa har bir narsa botildir; har bir ne'mat esa shubhasiz zoil bo'ladi»."
+        },
+        {
+          "type": "para",
+          "ar": "(١) الْبَيْتُ لِلَبِيدِ بْنِ رَبِيعَةَ الْعَامِرِيِّ الصَّحَابِيِّ.",
+          "uz": "(1-izoh) Bu bayt sahoba Labid ibn Rabia al-Omiriynikidir."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 69,
+      "page": 364,
+      "titleAr": "الْمَبْحَثُ السَّابِعُ فِي الْحَالِ",
+      "title": "7-mabhas: hol",
+      "rule": {
+        "ar": "هُوَ اسْمٌ يُذْكَرُ لِبَيَانِ هَيْئَةِ الْفَاعِلِ أَوِ الْمَفْعُولِ حِينَ وُقُوعِ الْفِعْلِ؛ نَحْوُ: تَكَلَّمْ صَادِقًا، وَانْقُلِ الْخَبَرَ صَحِيحًا.",
+        "uz": "U — ish sodir bo'lgan paytda foilning yoki maf'ulning holatini bayon qilish uchun keltiriladigan ismdir; masalan: «Rostgo'y holingda gapir», «Xabarni to'g'ri holida yetkaz»."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَالْأَصْلُ فِي الْحَالِ أَنْ تَكُونَ نَكِرَةً مُشْتَقَّةً، وَوُقُوعُهَا مَعْرِفَةً قَلِيلٌ؛ نَحْوُ: آمَنْتُ بِاللَّهِ وَحْدَهُ.",
+          "uz": "Holda asl — uning nakira va mushtaq bo'lishidir; ma'rifa bo'lib kelishi kamdan-kamdir; masalan: «Yolg'iz Allohga imon keltirdim»."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَتَقَعُ جَامِدَةً:",
+            "uz": "Hol jomid bo'lib ham keladi:"
+          },
+          "items": [
+            {
+              "ar": "١ - إِذَا دَلَّتْ عَلَى تَشْبِيهٍ؛ نَحْوُ: كَرَّ عَلِيٌّ أَسَدًا. وَبَدَتْ هِنْدٌ قَمَرًا.",
+              "uz": "1 — O'xshatishga dalolat qilganda; masalan: «Ali sherdek hujum qildi», «Hind oydek ko'rindi»."
+            },
+            {
+              "ar": "٢ - أَوْ عَلَى مُفَاعَلَةٍ؛ نَحْوُ: بِعْتُهُ يَدًا بِيَدٍ. وَكَلَّمْتُهُ فَاهُ إِلَى فِيَّ.",
+              "uz": "2 — Yoki mufoalaga dalolat qilganda; masalan: «Unga qo'lma-qo'l sotdim», «U bilan og'zim og'ziga so'zlashdim»."
+            },
+            {
+              "ar": "٣ - أَوْ عَلَى تَرْتِيبٍ؛ نَحْوُ: ادْخُلُوا رَجُلًا رَجُلًا. وَاقْرَإِ الْكِتَابَ بَابًا بَابًا.",
+              "uz": "3 — Yoki tartibga dalolat qilganda; masalan: «Bir-bir kiringlar», «Kitobni bob-bob o'qi»."
+            },
+            {
+              "ar": "٤ - أَوْ عَلَى سِعْرٍ؛ نَحْوُ: بِعْتُ الشَّيْءَ رِطْلًا بِدِرْهَمٍ، وَاشْتَرَيْتُهُ ذِرَاعًا بِدِينَارٍ.",
+              "uz": "4 — Yoki narxga dalolat qilganda; masalan: «Narsani bir ratl bir dirhamdan sotdim», «Uni bir ziro' bir dinordan sotib oldim»."
+            },
+            {
+              "ar": "٥ - أَوْ كَانَتْ مَوْصُوفَةً؛ نَحْوُ: ﴿إِنَّا أَنْزَلْنَاهُ قُرْآنًا عَرَبِيًّا﴾. وَخُذْهُ مَقَالًا صَرِيحًا.",
+              "uz": "5 — Yoki mavsuf bo'lganda; masalan: «Biz uni arabcha Qur'on qilib nozil qildik», «Uni ochiq-oydin so'z sifatida qabul qil»."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "وَتَقَعُ الْحَالُ جُمْلَةً، وَلَا بُدَّ مِنِ اشْتِمَالِهَا عَلَى رَابِطٍ، وَهُوَ: إِمَّا الْوَاوُ فَقَطْ؛ نَحْوُ: ﴿قَالُوا لَئِنْ أَكَلَهُ الذِّئْبُ وَنَحْنُ عُصْبَةٌ إِنَّا إِذًا لَخَاسِرُونَ﴾.",
+          "uz": "Hol gap bo'lib ham keladi; u bog'lovchini o'z ichiga olishi shart. Bog'lovchi yo faqat vov bo'ladi; masalan: «Ular dedilar: agar biz bir guruh bo'la turib uni bo'ri yeb ketsa, biz albatta ziyon ko'ruvchilarmiz»."
+        },
+        {
+          "type": "para",
+          "ar": "أَوِ الضَّمِيرُ فَقَطْ؛ نَحْوُ: ﴿اهْبِطُوا بَعْضُكُمْ لِبَعْضٍ عَدُوٌّ﴾.",
+          "uz": "Yoki faqat zamir; masalan: «Bir-biringizga dushman holingizda tushinglar»."
+        },
+        {
+          "type": "para",
+          "ar": "(١) الْمُفَاعَلَةُ: وُقُوعُ الْفِعْلِ مِنْ جَانِبَيْنِ؛ كَ: ضَارَبْتُ فُلَانًا مُضَارَبَةً؛ أَيْ: ضَرَبْتُهُ وَضَرَبَنِي.",
+          "uz": "(1-izoh) Mufoala — ishning ikki tomondan sodir bo'lishidir; masalan: «Falonchi bilan urishdim» — ya'ni «men uni urdim, u meni urdi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَقَوْلُنَا: بِعْتُهُ يَدًا بِيَدٍ. مَعْنَاهُ: بِعْتُهُ مُتَقَابِضَيْنِ. وَمَعْنَى كَلَّمْتُهُ فَاهُ إِلَى فِيَّ: كَلَّمْتُهُ مُتَشَافِهَيْنِ.",
+          "uz": "«Qo'lma-qo'l sotdim» degan so'zimizning ma'nosi: «ikkimiz qo'lma-qo'l olishib sotdim». «Og'zim og'ziga so'zlashdim» degani esa: «yuzma-yuz turib so'zlashdim» ma'nosidadir."
+        },
+        {
+          "type": "para",
+          "ar": "أَوْ هُمَا مَعًا؛ نَحْوُ: ﴿خَرَجُوا مِنْ دِيَارِهِمْ وَهُمْ أُلُوفٌ﴾.",
+          "uz": "Yoki ikkalasi birgalikda; masalan: «Ular minglab bo'lgan holda diyorlaridan chiqdilar»."
+        },
+        {
+          "type": "para",
+          "ar": "وَتَقَعُ ظَرْفًا أَوْ جَارًّا وَمَجْرُورًا؛ نَحْوُ: رَأَيْتُ الْهِلَالَ بَيْنَ السَّحَابِ، وَأَبْصَرْتُ شُعَاعَهُ فِي الْمَاءِ.",
+          "uz": "Hol zarf yoki jorr va majrur bo'lib ham keladi; masalan: «Yangi oyni bulutlar orasida ko'rdim», «Uning nurini suvda ko'rdim»."
+        },
+        {
+          "type": "para",
+          "ar": "وَتَتَعَدَّدُ الْحَالُ؛ نَحْوُ: ﴿رَجَعَ مُوسَى إِلَى قَوْمِهِ غَضْبَانَ أَسِفًا﴾.",
+          "uz": "Hol bir nechta bo'lishi ham mumkin; masalan: «Muso o'z qavmiga g'azablangan va afsuslangan holda qaytdi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَلِلْحَالِ عَامِلٌ وَصَاحِبٌ.",
+          "uz": "Holning omili va sohibi bor."
+        },
+        {
+          "type": "para",
+          "ar": "فَعَامِلُهَا: مَا تَقَدَّمَ عَلَيْهَا مِنْ فِعْلٍ، أَوْ مَا فِيهِ مَعْنَى الْفِعْلِ؛ نَحْوُ: ﴿وَهَذَا بَعْلِي شَيْخًا إِنَّ هَذَا لَشَيْءٌ عَجِيبٌ﴾.",
+          "uz": "Uning omili — undan oldin kelgan fe'l yoki fe'l ma'nosini o'z ichiga olgan so'zdir; masalan: «Mana bu erim — keksa holida! Albatta bu ajoyib narsadir»."
+        },
+        {
+          "type": "para",
+          "ar": "وَقَوْلُ الشَّاعِرِ: كَأَنَّ قُلُوبَ الطَّيْرِ رَطْبًا وَيَابِسًا",
+          "uz": "Va shoirning so'zi: «Go'yo qushlarning yuraklari — ho'l va quruq holida»."
+        },
+        {
+          "type": "para",
+          "ar": "وَصَاحِبُهَا: مَا كَانَتْ وَصْفًا لَهُ فِي الْمَعْنَى، وَالْأَصْلُ فِيهِ أَنْ يَكُونَ مَعْرِفَةً، وَقَدْ يُنَكَّرُ إِذَا تَأَخَّرَ عَنِ الْحَالِ؛ كَ: جَاءَ رَاكِبًا رَجُلٌ.",
+          "uz": "Uning sohibi — hol ma'no jihatidan uning sifati bo'lgan narsadir. Unda asl — ma'rifa bo'lishidir; holdan keyin kelsa, nakira bo'lishi ham mumkin; masalan: «Otliq holda bir kishi keldi»."
+        },
+        {
+          "type": "para",
+          "ar": "أَوْ تَخَصَّصَ؛ كَ: ﴿كِتَابًا أُنْزِلَ مِنْ بَعْدِ مُوسَى مُصَدِّقًا﴾.",
+          "uz": "Yoki xoslansa; masalan: «Musodan keyin nozil qilingan, tasdiqlovchi bir kitob»."
+        },
+        {
+          "type": "para",
+          "ar": "أَوْ سَبَقَهُ نَفْيٌ أَوْ شِبْهُهُ؛ نَحْوُ: ﴿وَمَا أَهْلَكْنَا مِنْ قَرْيَةٍ إِلَّا وَلَهَا كِتَابٌ مَعْلُومٌ﴾.",
+          "uz": "Yoki oldidan inkor yoki unga o'xshash narsa kelsa; masalan: «Biz hech bir shaharni halok qilmadik — magar uning ma'lum yozug'i bo'lgan holda»."
+        },
+        {
+          "type": "para",
+          "ar": "(لَا يَبْغِ امْرُؤٌ عَلَى امْرِئٍ مُسْتَسْهِلًا)",
+          "uz": "«Hech kim hech kimga — buni oson deb bilgan holda — tajovuz qilmasin»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(يَا صَاحِ هَلْ حُمَّ عَيْشٌ بَاقِيًا فَتَرَى)",
+          "uz": "«Ey do'st, boqiy qoladigan bir hayot muqarrar qilinganmi — sen ko'ryapsanmi?»"
+        },
+        {
+          "type": "para",
+          "ar": "وَالْحَالُ تُطَابِقُ صَاحِبَهَا فِي التَّذْكِيرِ وَالتَّأْنِيثِ، وَفِي الْإِفْرَادِ وَالتَّثْنِيَةِ وَالْجَمْعِ.",
+          "uz": "Hol o'z sohibiga muzakkarlik va muannaslikda hamda birlik, ikkilik va ko'plikda mos keladi."
+        },
+        {
+          "type": "para",
+          "ar": "(١) هَذَا صَدْرُ بَيْتٍ لِامْرِئِ الْقَيْسِ، وَعَجُزُهُ: (لَدَى وَكْرِهَا الْعُنَّابُ وَالْحَشَفُ الْبَالِي).",
+          "uz": "(1-izoh) Bu — Imru'ul-Qaysning baytining birinchi yarmi; ikkinchi yarmi: «Uning uyasi yonida — anor va eskirgan quruq xurmodek»."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) هَذَا عَجُزُ بَيْتٍ مِنْ أَلْفِيَّةِ ابْنِ مَالِكٍ، وَصَدْرُهُ: مِنْ بَعْدِ نَفْيٍ أَوْ مُضَاهِيهِ.",
+          "uz": "(2-izoh) Bu — Ibn Molikning «Alfiyya»sidan bir baytning ikkinchi yarmi; birinchi yarmi: «Inkordan yoki unga o'xshashdan keyin»."
+        },
+        {
+          "type": "para",
+          "ar": "(٣) هَذَا صَدْرُ بَيْتٍ لِرَجُلٍ مِنْ طَيِّئٍ لَمْ يُعَيِّنْهُ أَحَدٌ، وَعَجُزُهُ: لِتَفْسِيكَ الْعُذْرَ فِي إِبْعَادِهَا الْأَمَلَا.",
+          "uz": "(3-izoh) Bu — Tayy qabilasidan bo'lgan, hech kim aniqlamagan bir kishining baytining birinchi yarmi."
+        }
+      ],
+      "exercise": []
     }
   ]
 }

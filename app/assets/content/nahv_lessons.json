@@ -20463,6 +20463,80 @@
           "type": "para",
           "ar": "وَ(يَا): لِلنِّدَاءِ، وَلِلنُّدْبَةِ، وَلِلتَّنْبِيهِ؛ نَحْوُ: ﴿يَا أَيُّهَا النَّاسُ﴾. يَا حُسَيْنَاهْ. ﴿يَا لَيْتَ قَوْمِي يَعْلَمُونَ * بِمَا غَفَرَ لِي رَبِّي وَجَعَلَنِي مِنَ الْمُكْرَمِينَ﴾.",
           "uz": "(Yo) Nido, nudba va tanbeh uchundir; masalan: «Ey odamlar!», «Yo Husaynoh!», «Koshki qavmim Robbim meni kechirgani va meni hurmatlanganlardan qilganini bilsalar edi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(النُّونُ الثَّقِيلَةُ): تَدْخُلُ عَلَى الْفِعْلِ لِتَوْكِيدِهِ؛ نَحْوُ: ﴿لَيُسْجَنَنَّ﴾، وَلَا تَلْحَقُ الْمَاضِيَ أَبَدًا.",
+          "uz": "(Og'ir nun) Fe'lni ta'kidlash uchun unga kiradi; masalan: «albatta zindonga tashlanadi». U hech qachon moziga qo'shilmaydi."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 101,
+      "page": 403,
+      "titleAr": "الْحُرُوفُ الثُّلَاثِيَّةُ",
+      "title": "Uch harfli harflar",
+      "rule": {
+        "ar": "وَأَمَّا الثُّلَاثِيَّةُ فَخَمْسَةٌ وَعِشْرُونَ، وَهِيَ: آيْ، وَأَجَلْ، وَإِذَا، وَإِذَنْ، وَأَلَا، وَإِلَى، وَأَمَا، وَأَنَّ، وَإِنَّ، وَأَيَا، وَبَلَى، وَثُمَّ، وَجَلَلْ، وَجَيْرِ، وَخَلَا، وَرُبَّ، وَسَوْفَ، وَعَدَا، وَعَلَّ، وَعَلَى، وَلَاتَ، وَلَيْتَ، وَمُنْذُ، وَنَعَمْ، وَهَيَا.",
+        "uz": "Uch harflilariga kelsak, ular yigirma beshtadir: «oy», «ajal», «izo», «izan», «alo», «ilo», «amo», «anna», «inna», «ayo», «balo», «summa», «jalal», «jayri», «xalo», «rubba», «savfa», «ado», «alla», «alo» (ustida), «lot», «layta», «munzu», «na'am», «hayo»."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَ(آيْ): لِلنِّدَاءِ؛ نَحْوُ: آيْ صَاعِدَ الْجَبَلِ.",
+          "uz": "(Oy) Nido uchundir; masalan: «Ey tog'ga chiquvchi!»"
+        },
+        {
+          "type": "para",
+          "ar": "وَ(أَجَلْ) لِلْجَوَابِ؛ نَحْوُ:",
+          "uz": "(Ajal) Javob uchundir; masalan:"
+        },
+        {
+          "type": "para",
+          "ar": "يَقُولُونَ لِي صِفْهَا فَأَنْتَ بِوَصْفِهَا * خَبِيرٌ أَجَلْ عِنْدِي بِأَوْصَافِهَا عِلْمُ",
+          "uz": "«Menga: uni ta'riflab ber, sen uning ta'rifini yaxshi bilasan, deydilar. Ha, mening uning sifatlari haqida bilimim bor»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(إِذَا): لِلْمُفَاجَأَةِ؛ نَحْوُ: ظَنَنْتُهُ غَائِبًا إِذَا إِنَّهُ حَاضِرٌ.",
+          "uz": "(Izo) Kutilmaganlik uchundir; masalan: «Uni yo'q deb o'ylagandim — birdan u hozir ekan»."
+        },
+        {
+          "type": "para",
+          "ar": "وَتَرْبِطُ الْجَوَابَ بِالشَّرْطِ؛ نَحْوُ: ﴿وَإِنْ تُصِبْهُمْ سَيِّئَةٌ بِمَا قَدَّمَتْ أَيْدِيهِمْ إِذَا هُمْ يَقْنَطُونَ﴾. وَالْأَشْهَرُ أَنَّهَا ظَرْفٌ.",
+          "uz": "U javobni shartga bog'laydi; masalan: «Agar qo'llari qilgan ish sababli ularga yomonlik yetsa, birdan umidsizlanadilar». Mashhur qavlga ko'ra u zarfdir."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(إِذَنْ): لِلْجَوَابِ وَالْجَزَاءِ؛ نَحْوُ: إِذَنْ تَبْلُغَ الْقَصْدَ. فِي جَوَابِ: (سَأَجْتَهِدُ) مَثَلًا.",
+          "uz": "(Izan) Javob va jazo uchundir; masalan: «Unda maqsadingga yetasan» — «Tirishaman» degan gapga javoban."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(أَلَا): لِلتَّنْبِيهِ، وَالاِسْتِفْتَاحِ، وَلِلطَّلَبِ بِرِفْقٍ، وَهُوَ الْعَرْضُ.",
+          "uz": "(Alo) Tanbeh, istiftoh (so'z boshlash) va mayin talab — ya'ni arz — uchundir."
+        },
+        {
+          "type": "para",
+          "ar": "أَوْ بِحَثٍّ، وَهُوَ التَّحْضِيضُ؛ نَحْوُ: ﴿أَلَا إِنَّ أَوْلِيَاءَ اللَّهِ لَا خَوْفٌ عَلَيْهِمْ﴾. أَلَا تَحُلُّ بِنَادِينَا؟ أَلَا تَجْتَهِدُ؟",
+          "uz": "Yoki qattiq undash — ya'ni tahziz — uchundir; masalan: «Ogoh bo'linglar! Allohning do'stlariga qo'rquv yo'qdir», «Majlisimizga tushsang-chi?», «Tirishsang-chi?»"
+        },
+        {
+          "type": "para",
+          "ar": "وَ(إِلَى): لِلاِنْتِهَاءِ؛ نَحْوُ: ﴿سُبْحَانَ الَّذِي أَسْرَى بِعَبْدِهِ لَيْلًا مِنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى﴾.",
+          "uz": "(Ilo) Tugash uchundir; masalan: «Bandasini kechasi Masjidul Haromdan Masjidul Aqsoga sayr qildirgan Zot pokdir»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(أَمَا): لِلتَّنْبِيهِ، وَيَكْثُرُ بَعْدَهَا الْقَسَمُ؛ نَحْوُ: أَمَا وَاللَّهِ لَأُعَاتِبَنَّهُ.",
+          "uz": "(Amo) Tanbeh uchundir; undan keyin qasam ko'p keladi; masalan: «Ogoh bo'l, Allohga qasam, albatta uni malomat qilaman»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(أَنَّ): لِلتَّوْكِيدِ، وَالْمَصْدَرِيَّةِ؛ نَحْوُ: أَعْطَيْتُهُ؛ لِأَنَّهُ مُسْتَحِقٌّ.",
+          "uz": "(Anna) Ta'kid va masdariylik uchundir; masalan: «Unga haqli bo'lgani uchun berdim»."
         }
       ],
       "exercise": []

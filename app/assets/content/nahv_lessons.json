@@ -19511,6 +19511,75 @@
         }
       ],
       "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 91,
+      "page": 386,
+      "titleAr": "الْبَابُ الْعَاشِرُ فِي الْمَنْسُوبِ وَغَيْرِ الْمَنْسُوبِ",
+      "title": "10-bob: mansub va mansub bo'lmagan ism",
+      "rule": {
+        "ar": "يَنْقَسِمُ الاِسْمُ إِلَى مَنْسُوبٍ وَغَيْرِ مَنْسُوبٍ.",
+        "uz": "Ism mansub (nisbat berilgan) va mansub bo'lmaganga bo'linadi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "فَالْمَنْسُوبُ: مَا لَحِقَ آخِرَهُ يَاءٌ مُشَدَّدَةٌ لِلدَّلَالَةِ عَلَى نِسْبَتِهِ إِلَى الْمُجَرَّدِ مِنْهَا؛ كَ: مِصْرِيٍّ وَبَغْدَادِيٍّ فِي النِّسْبَةِ إِلَى مِصْرَ وَبَغْدَادَ.",
+          "uz": "Mansub — undan xoli bo'lgan so'zga nisbat berilganiga dalolat qilish uchun oxiriga shaddali «yo» qo'shilgan ismdir; masalan: «Misr» va «Bag'dod»ga nisbat berishda «misriy» va «bag'dodiy»."
+        },
+        {
+          "type": "para",
+          "ar": "وَغَيْرُ الْمَنْسُوبِ: مَا لَمْ تَلْحَقْهُ تِلْكَ الْيَاءُ؛ كَ: مِصْرَ وَبَغْدَادَ.",
+          "uz": "Mansub bo'lmagani — o'sha «yo» qo'shilmagani; masalan: Misr, Bag'dod."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْقَاعِدَةُ الْعَامَّةُ لِلنَّسَبِ: أَنْ تَكْسِرَ آخِرَ الاِسْمِ، وَتُلْحِقَهُ الْيَاءَ بِدُونِ تَغْيِيرٍ فِيهِ؛ فَتَقُولُ فِي النِّسْبَةِ إِلَى دِمَشْقَ، وَالشَّامِ، وَالْعِرَاقِ، وَالْحِجَازِ: دِمَشْقِيٌّ، وَشَامِيٌّ، وَعِرَاقِيٌّ، وَحِجَازِيٌّ.",
+          "uz": "Nisbatning umumiy qoidasi: ismning oxirini kasra qilib, unga o'zgarish kiritmay «yo» qo'shishdir; shunday qilib «Dimashq», «Shom», «Iroq» va «Hijoz»ga nisbat berishda: dimashqiy, shomiy, iroqiy, hijoziy deysan."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُسْتَثْنَى مِنْ ذَلِكَ تِسْعَةُ أَشْيَاءَ:",
+          "uz": "Bundan to'qqizta narsa mustasno qilinadi:"
+        },
+        {
+          "type": "para",
+          "ar": "الْأَوَّلُ: مَا خُتِمَ بِالتَّاءِ، فَتُحْذَفُ تَاؤُهُ؛ كَ: مَكَّةَ، وَالْقَاهِرَةِ، وَفَاطِمَةَ؛ تَقُولُ فِي النِّسْبَةِ إِلَيْهَا: مَكِّيٌّ، وَقَاهِرِيٌّ، وَفَاطِمِيٌّ.",
+          "uz": "Birinchisi: «to» bilan tugagani — uning «to»si tushiriladi; masalan: Makka, Qohira, Fotima; ularga nisbat berishda: makkiy, qohiriy, fotimiy deysan."
+        },
+        {
+          "type": "para",
+          "ar": "وَالثَّانِي: الْمَقْصُورُ؛ فَإِنَّ أَلِفَهُ تُقْلَبُ وَاوًا إِنْ كَانَتْ ثَالِثَةً، وَتُحْذَفُ إِنْ كَانَتْ خَامِسَةً فَصَاعِدًا، وَيَجُوزُ الْأَمْرَانِ إِنْ كَانَتْ رَابِعَةً، وَسَكَنَ ثَانِي الْكَلِمَةِ، وَإِلَّا تَعَيَّنَ الْحَذْفُ؛ كَ: بَرَدَى.",
+          "uz": "Ikkinchisi: maqsur — uning alifi uchinchi o'rinda bo'lsa vovga aylantiriladi; beshinchi yoki undan keyingi o'rinda bo'lsa tushiriladi; to'rtinchi o'rinda bo'lib, so'zning ikkinchi harfi sokin bo'lsa, ikki holat ham joizdir; aks holda tushirish shart bo'ladi — «Baradu» kabi."
+        },
+        {
+          "type": "para",
+          "ar": "فَتَقُولُ فِي سَخَا وَقِنَا: سَخَوِيٌّ، وَقِنَوِيٌّ.",
+          "uz": "Shunday qilib «Saxo» va «Qino»da: saxaviy, qinaviy deysan."
+        },
+        {
+          "type": "para",
+          "ar": "وَفِي بُخَارَى وَسُقُطْرَى: بُخَارِيٌّ، وَسُقُطْرِيٌّ.",
+          "uz": "«Buxoro» va «Suqutro»da: buxoriy, suqutriy."
+        },
+        {
+          "type": "para",
+          "ar": "وَفِي شَبْرَا وَبَنْهَا: شَبْرِيٌّ، وَبَنْهِيٌّ، أَوْ شَبْرَوِيٌّ، وَبَنْهَوِيٌّ.",
+          "uz": "«Shabro» va «Banho»da: shabriy va banhiy, yoki shabraviy va banhaviy."
+        },
+        {
+          "type": "para",
+          "ar": "وَفِي بَرَدَى: بَرَدِيٌّ.",
+          "uz": "«Baradu»da: baradiy."
+        },
+        {
+          "type": "para",
+          "ar": "وَالثَّالِثُ: الْمَنْقُوصُ؛ فَإِنَّ يَاءَهُ تُعَامَلُ مُعَامَلَةَ أَلِفِ الْمَقْصُورِ؛ فَتَقُولُ فِي شَجٍ وَعَمٍ: شَجَوِيٌّ، وَعَمَوِيٌّ.",
+          "uz": "Uchinchisi: manqus — uning «yo»siga maqsurning alifi kabi muomala qilinadi; shunday qilib «shajin» va «amin»da: shajaviy, amaviy deysan."
+        }
+      ],
+      "exercise": []
     }
   ]
 }

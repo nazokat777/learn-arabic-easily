@@ -20084,7 +20084,107 @@
         "ar": "إِذَا وَقَفْتَ عَلَى اللَّفْظِ: فَإِنْ كَانَ سَاكِنَ الْآخِرِ بَقِيَ عَلَى سُكُونِهِ؛ كَ: مَنْ، وَبَلْ، وَلَمْ، وَيَكُنْ.",
         "uz": "Bir lafzda vaqf qilsang: uning oxiri sokin bo'lsa, sukunida qoladi; masalan: «man», «bal», «lam», «yakun»."
       },
-      "blocks": [],
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَإِنْ كَانَ مُتَحَرِّكًا سُكِّنَ؛ كَ: الْقَلَمْ.",
+          "uz": "Oxiri harakatlangan bo'lsa, sokin qilinadi; masalan: «al-qalam»."
+        },
+        {
+          "type": "para",
+          "ar": "وَالتَّنْوِينُ يُحْذَفُ فِي الرَّفْعِ وَالْجَرِّ، وَيُقْلَبُ أَلِفًا فِي النَّصْبِ؛ كَ: هَذَا قَلَمْ، وَكَتَبْتُ بِقَلَمْ، وَبَرَيْتُ قَلَمَا.",
+          "uz": "Tanvin raf' va jarrda tushiriladi, nasbda esa alifga aylantiriladi; masalan: «Bu qalam», «Qalam bilan yozdim», «Qalamni yo'ndim»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَجُوزُ فِي الْمَنْقُوصِ إِثْبَاتُ الْيَاءِ وَتَرْكُهَا، سَوَاءٌ كَانَ مَعْرِفَةً أَوْ نَكِرَةً؛ نَحْوُ: الْجَوَارِ ﴿وَلَهُ الْجَوَارِ﴾، أَوِ الْجَوَارِي، أَوْ هَادٍ، ﴿وَلِكُلِّ قَوْمٍ هَادٍ﴾.",
+          "uz": "Manqusda «yo»ni keltirish ham, tark etish ham joizdir — u ma'rifa bo'ladimi, nakira bo'ladimi; masalan: «al-javor» («Kemalar Uniki»), yoki «al-javori»; yoki «hod» («Har bir qavm uchun hidoyat qiluvchi bor»)."
+        },
+        {
+          "type": "para",
+          "ar": "غَيْرَ أَنَّ الْأَكْثَرَ فِي الْمَعْرِفَةِ الْإِثْبَاتُ، وَفِي النَّكِرَةِ الْحَذْفُ.",
+          "uz": "Faqat ma'rifada ko'proq keltiriladi, nakirada esa ko'proq tushiriladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَتَثْبُتُ أَلِفُ الْمَقْصُورِ عَلَى كُلِّ حَالٍ.",
+          "uz": "Maqsurning alifi har holatda ham saqlanadi."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُحْذَفُ إِشْبَاعُ هَاءِ الضَّمِيرِ إِلَّا إِذَا كَانَتْ مَفْتُوحَةً؛ كَ: أَكْرَمْتُهْ، وَاحْتَفَلْتُ بِهْ، وَأَكْرَمْتُهَا.",
+          "uz": "Zamir «ho»sining ishbo'i tushiriladi — faqat u fathali bo'lsa bundan mustasno; masalan: «akramtuh», «ihtafaltu bih», «akramtuho»."
+        },
+        {
+          "type": "para",
+          "ar": "وَتُقْلَبُ تَاءُ التَّأْنِيثِ هَاءً إِذَا كَانَتْ فِي اسْمٍ لَيْسَ جَمْعَ مُؤَنَّثٍ سَالِمًا، وَلَا مُلْحَقًا بِهِ، وَقَبْلَهَا مُتَحَرِّكٌ أَوْ أَلِفٌ؛ كَ: فَاضِلَهْ وَفَتَاهْ، وَتَبْقَى تَاءً فِي غَيْرِ ذَلِكَ؛ كَ: ثُمَّتْ، وَقَامَتْ، وَأُخْتْ، وَمُسْلِمَاتْ، وَعَرَفَاتْ.",
+          "uz": "Ta'nis «to»si jam' muannas solim ham, unga mulhaq ham bo'lmagan ismda bo'lib, undan oldin harakatlangan harf yoki alif kelsa, «ho»ga aylantiriladi; masalan: «fozilah», «fatoh». Boshqasida «to» bo'lib qoladi; masalan: «summat», «qomat», «uxt», «muslimot», «Arafot»."
+        },
+        {
+          "type": "para",
+          "ar": "وَتَلْحَقُ (مَا) الاِسْتِفْهَامِيَّةَ إِذَا حُذِفَتْ أَلِفُهَا لِلْجَرِّ هَاءٌ تُسَمَّى هَاءَ السَّكْتِ؛ فَتَقُولُ فِي لِمَ وَعَمَّ: لِمَهْ، وَعَمَّهْ.",
+          "uz": "So'roq «mo»ning alifi jarr sababli tushirilsa, unga «sakt hosi» deb ataladigan «ho» qo'shiladi; shunday qilib «lima» va «amma»da: «limah» va «ammah» deysan."
+        },
+        {
+          "type": "para",
+          "ar": "وَتَلْحَقُ أَيْضًا أَمْرَ اللَّفِيفِ الْمَفْرُوقِ، وَمُضَارِعَهُ الْمَجْزُومَ؛ فَتَقُولُ فِي: قِ وَلَمْ يَقِ: قِهْ، وَلَمْ يَقِهْ.",
+          "uz": "U lafifi mafruqning amriga va jazm qilingan muzori'iga ham qo'shiladi; shunday qilib «qi» va «lam yaqi»da: «qih» va «lam yaqih» deysan."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَجُوزُ أَنْ تَلْحَقَ هَذِهِ الْهَاءُ كُلَّ مُتَحَرِّكٍ بِحَرَكَةِ بِنَاءٍ أَصْلِيَّةٍ؛ كَقَوْلِهِ تَعَالَى: ﴿فَأَمَّا مَنْ أُوتِيَ كِتَابَهُ بِيَمِينِهِ فَيَقُولُ هَاؤُمُ اقْرَءُوا كِتَابِيَهْ﴾.",
+          "uz": "Bu «ho»ning asliy bino harakati bilan harakatlangan har bir so'zga qo'shilishi joizdir; masalan Alloh taoloning: «Kimning kitobi o'ng qo'liga berilsa, u aytadi: mana, kitobimni o'qinglar» degan so'zi kabi."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 100,
+      "page": 397,
+      "titleAr": "الْكَلَامُ عَلَى الْحَرْفِ",
+      "title": "Harf haqida so'z",
+      "rule": {
+        "ar": "الْحُرُوفُ كُلُّهَا مَبْنِيَّةٌ، وَهِيَ قَلِيلَةٌ بِحَيْثُ لَا يَتَجَاوَزُ عَدَدُهَا ثَمَانِينَ، وَيُقَالُ لَهَا: حُرُوفُ الْمَعَانِي.",
+        "uz": "Harflarning hammasi mabniydir; ular ozdir — soni sakson tadan oshmaydi. Ularga «ma'no harflari» deyiladi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "كَمَا أَنَّ حُرُوفَ الْهِجَاءِ يُقَالُ لَهَا: حُرُوفُ الْمَبَانِي، وَهِيَ عَلَى خَمْسَةِ أَقْسَامٍ: أُحَادِيَّةٌ، وَثُنَائِيَّةٌ، وَثُلَاثِيَّةٌ، وَرُبَاعِيَّةٌ، وَخُمَاسِيَّةٌ.",
+          "uz": "Alifbo harflariga esa «bino harflari» deyiladi. Ular besh qismdir: bir harfli, ikki harfli, uch harfli, to'rt harfli va besh harfli."
+        },
+        {
+          "type": "para",
+          "ar": "(أَمَّا الْأُحَادِيَّةُ) فَثَلَاثَةَ عَشَرَ، وَهِيَ: الْهَمْزَةُ، وَالْأَلِفُ، وَالْبَاءُ، وَالتَّاءُ، وَالسِّينُ، وَالْفَاءُ، وَالْكَافُ، وَاللَّامُ، وَالْمِيمُ، وَالنُّونُ، وَالْهَاءُ، وَالْوَاوُ، وَالْيَاءُ.",
+          "uz": "Bir harflilari o'n uchtadir: hamza, alif, bo, to, sin, fo, kof, lom, mim, nun, ho, vov, yo."
+        },
+        {
+          "type": "para",
+          "ar": "(فَالْهَمْزَةُ): لِلاِسْتِفْهَامِ، وَلِلتَّسْوِيَةِ، وَلِلنِّدَاءِ؛ نَحْوُ: ﴿أَقَرِيبٌ أَمْ بَعِيدٌ مَا تُوعَدُونَ﴾، ﴿سَوَاءٌ عَلَيْهِمْ أَأَنْذَرْتَهُمْ أَمْ لَمْ تُنْذِرْهُمْ لَا يُؤْمِنُونَ﴾. أَجَارَتَنَا إِنَّا مُقِيمَانِ هَا هُنَا.",
+          "uz": "(Hamza) So'roq, tenglashtirish va nido uchundir; masalan: «Sizga va'da qilinayotgan narsa yaqinmi yoki uzoqmi?», «Ularni ogohlantirasanmi yoki ogohlantirmaysanmi — ularga baribir, imon keltirmaydilar». «Ey qo'shnimiz, biz shu yerda muqimmiz»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(الْأَلِفُ): لِلاِسْتِغَاثَةِ، وَلِلتَّعَجُّبِ، وَلِلنُّدْبَةِ، وَلِلْفَصْلِ بَيْنَ النُّونَيْنِ، وَلِلدَّلَالَةِ عَلَى التَّثْنِيَةِ؛ نَحْوُ: يَا يَزِيدَا لِآمِلٍ نَيْلَ بِرٍّ، يَا مَاءً وَيَا عُشْبَا، وَاحُسَيْنَا، اضْرِبْنَانِّ يَا نِسَاءُ، وَقَدْ أَسْلَمَاهُ مُبْعَدٌ وَحَمِيمٌ.",
+          "uz": "(Alif) Istig'osa, ta'ajjub, nudba, ikki nunni ajratish va ikkilikka dalolat qilish uchundir; masalan: «Ey Yazid, yaxshilikka umid qilgan kishi uchun!», «Ey suv, ey o't!», «Vo Husayno!», «Ey ayollar, albatta uringlar!», «Uni uzoq ham, yaqin ham tark etdi»."
+        },
+        {
+          "type": "para",
+          "ar": "(وَالْبَاءُ): لِلْإِلْصَاقِ، وَلِلسَّبَبِيَّةِ، وَلِلْقَسَمِ، وَلِلاِسْتِعَانَةِ؛ نَحْوُ: أَمْسَكْتُ بِأَخِي. ﴿فَبِمَا نَقْضِهِمْ مِيثَاقَهُمْ لَعَنَّاهُمْ﴾، أُقْسِمُ بِاللَّهِ وَآيَاتِهِ. كَتَبْتُ بِالْقَلَمِ.",
+          "uz": "(Bo) Yopishtirish, sabab, qasam va vosita uchundir; masalan: «Akamdan ushladim», «Ahdlarini buzganlari sababli ularni la'natladik», «Alloh va Uning oyatlari bilan qasam ichaman», «Qalam bilan yozdim»."
+        },
+        {
+          "type": "para",
+          "ar": "وَتَجِيءُ زَائِدَةً؛ نَحْوُ: ﴿أَلَيْسَ اللَّهُ بِكَافٍ عَبْدَهُ﴾.",
+          "uz": "U ortiqcha bo'lib ham keladi; masalan: «Alloh O'z bandasiga kifoya qiluvchi emasmi?»"
+        },
+        {
+          "type": "para",
+          "ar": "(وَالتَّاءُ): لِلتَّأْنِيثِ، وَلِلْقَسَمِ؛ نَحْوُ: ﴿قَالَتِ امْرَأَتُ الْعَزِيزِ﴾، ﴿قَالُوا تَاللَّهِ لَقَدْ آثَرَكَ اللَّهُ عَلَيْنَا﴾.",
+          "uz": "(To) Muannaslik va qasam uchundir; masalan: «Aziz ayoli aytdi», «Ular dedilar: Allohga qasam, Alloh seni bizdan afzal qildi»."
+        }
+      ],
       "exercise": []
     }
   ]

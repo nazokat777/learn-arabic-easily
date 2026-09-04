@@ -20537,6 +20537,86 @@
           "type": "para",
           "ar": "وَ(أَنَّ): لِلتَّوْكِيدِ، وَالْمَصْدَرِيَّةِ؛ نَحْوُ: أَعْطَيْتُهُ؛ لِأَنَّهُ مُسْتَحِقٌّ.",
           "uz": "(Anna) Ta'kid va masdariylik uchundir; masalan: «Unga haqli bo'lgani uchun berdim»."
+        },
+        {
+          "type": "para",
+          "ar": "وَتَلْحَقُهَا (مَا) فَتَنْكَفُّ عَنِ الْعَمَلِ، وَتُفِيدُ الْحَصْرَ؛ نَحْوُ: ﴿يُوحَى إِلَيَّ أَنَّمَا إِلَهُكُمْ إِلَهٌ وَاحِدٌ﴾.",
+          "uz": "Unga «mo» qo'shiladi va u amaldan to'xtaydi hamda hasr (chegaralash) ma'nosini beradi; masalan: «Menga: sizlarning ilohingiz yagona Ilohdir, deb vahiy qilinmoqda»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(إِنَّ): لِلتَّوْكِيدِ؛ نَحْوُ: ﴿إِنَّ اللَّهَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ﴾.",
+          "uz": "(Inna) Ta'kid uchundir; masalan: «Albatta, Alloh har narsaga qodirdir»."
+        },
+        {
+          "type": "para",
+          "ar": "وَتَلْحَقُهَا (مَا) فَتَنْكَفُّ أَيْضًا، وَتُفِيدُ الْحَصْرَ؛ نَحْوُ: ﴿إِنَّمَا يَتَذَكَّرُ أُولُو الْأَلْبَابِ﴾، وَقَدْ تَجِيءُ لِلْجَوَابِ؛ نَحْوُ:",
+          "uz": "Unga ham «mo» qo'shiladi va u ham amaldan to'xtab, hasr ma'nosini beradi; masalan: «Faqat aql egalarigina eslaydilar». Ba'zan u javob uchun ham keladi; masalan:"
+        },
+        {
+          "type": "para",
+          "ar": "وَيَقُلْنَ شَيْبٌ قَدْ عَلَا * كَ وَقَدْ كَبِرْتَ فَقُلْتُ: إِنَّهْ",
+          "uz": "«Ular: seni oqargan soch bosibdi, sen qaribsan, deydilar. Men esa: ha, shundaydir, dedim»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(أَيَا): لِلنِّدَاءِ؛ نَحْوُ:",
+          "uz": "(Ayo) Nido uchundir; masalan:"
+        },
+        {
+          "type": "para",
+          "ar": "أَيَا جَبَلَيْ نَعْمَانَ بِاللَّهِ خَلِّيَا * نَسِيمَ الصَّبَا يَخْلُصْ إِلَيَّ نَسِيمُهَا",
+          "uz": "«Ey Na'monning ikki tog'i! Alloh haqqi, sabo shabadasini qo'yib yuboringlar, uning nasimi menga yetib kelsin»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(بَلَى): لِلْجَوَابِ؛ نَحْوُ: ﴿أَلَسْتُ بِرَبِّكُمْ قَالُوا بَلَى﴾، وَأَكْثَرُ مَا تَقَعُ بَعْدَ الِاسْتِفْهَامِ، وَيُجَابُ بِهَا بَعْدَ النَّفْيِ، كَمَا رَأَيْتَ.",
+          "uz": "(Balo) Javob uchundir; masalan: «Men sizlarning Rabbingiz emasmanmi? Ular: ha, dedilar». U ko'pincha so'roqdan keyin keladi va inkordan keyin u bilan javob beriladi — ko'rganingdek."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(ثُمَّ): لِلتَّرْتِيبِ مَعَ التَّرَاخِي؛ نَحْوُ: خَرَجَ الشُّبَّانُ، ثُمَّ الشُّيُوخُ.",
+          "uz": "(Summa) Tartib bilan birga kechikish uchundir; masalan: «Yigitlar chiqdi, so'ngra keksalar»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(جَلَلْ): لِلْجَوَابِ؛ كَ: نَعَمْ؛ نَحْوُ: قَالُوا: نَظَمْتَ عُقُودَ الدُّرِّ؟ قُلْتُ: جَلَلْ.",
+          "uz": "(Jalal) «Na'am» kabi javob uchundir; masalan: «Ular: durlar shodasini terdingmi? — dedilar. Men: ha, dedim»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(جَيْرِ): لِلْجَوَابِ أَيْضًا؛ نَحْوُ: أَتَقْتَحِمُ الْمَنُونَ؟ فَقُلْتُ: جَيْرِ.",
+          "uz": "(Jayri) Ham javob uchundir; masalan: «O'limga o'zingni tashlaysanmi? — dedilar. Men: ha, dedim»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(خَلَا): لِلِاسْتِثْنَاءِ؛ نَحْوُ: رَافِقِ النَّاسَ خَلَا الْمُضِلِّينَ.",
+          "uz": "(Xalo) Istisno uchundir; masalan: «Odamlarga hamroh bo'l, adashtiruvchilardan boshqa»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(رُبَّ): لِلتَّقْلِيلِ وَلِلتَّكْثِيرِ؛ نَحْوُ: رُبَّ أُمْنِيَّةٍ جَلَبَتْ مَنِيَّةً، رُبَّ سَاعٍ لِقَاعِدٍ.",
+          "uz": "(Rubba) Ozlik va ko'plik uchundir; masalan: «Qancha orzular o'lim keltirgan», «Nechog'li harakat qiluvchi o'tirgan kishi uchun (mehnat qiladi)»."
+        },
+        {
+          "type": "para",
+          "ar": "وَقَدْ تُحْذَفُ بَعْدَ الْوَاوِ، وَيَبْقَى عَمَلُهَا؛ نَحْوُ:",
+          "uz": "Ba'zan u «vov»dan keyin tushirib qoldiriladi, ammo amali qoladi; masalan:"
+        },
+        {
+          "type": "para",
+          "ar": "وَلَيْلٍ كَمَوْجِ الْبَحْرِ أَرْخَى سُدُولَهُ * عَلَيَّ بِأَنْوَاعِ الْهُمُومِ لِيَبْتَلِي",
+          "uz": "«Nechog'li tun — dengiz to'lqiniday — pardalarini ustimga tushirdi, turli g'amlar bilan sinash uchun»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُقَالُ لِلْوَاوِ: وَاوُ رُبَّ.",
+          "uz": "Bu «vov»ga «vovu rubba» deyiladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(سَوْفَ): لِلِاسْتِقْبَالِ؛ نَحْوُ: سَوْفَ يَرَى.",
+          "uz": "(Savfa) Kelasi zamon uchundir; masalan: «Tez orada ko'radi»."
         }
       ],
       "exercise": []

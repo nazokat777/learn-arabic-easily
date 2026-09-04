@@ -19286,6 +19286,104 @@
         }
       ],
       "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 88,
+      "page": 381,
+      "titleAr": "التَّعَجُّبُ",
+      "title": "Ta'ajjub (hayratlanish)",
+      "rule": {
+        "ar": "التَّعَجُّبُ لَهُ صِيغَتَانِ، وَهُمَا: مَا أَفْعَلَهُ، وَأَفْعِلْ بِهِ؛ نَحْوُ: مَا أَحْسَنَ الصِّدْقَ وَأَحْسِنْ بِهِ.",
+        "uz": "Ta'ajjubning ikkita siyg'asi bor: «mo af'alahu» va «af'il bihi»; masalan: «Rostgo'ylik naqadar go'zal!» — ikki xil siyg'a bilan."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَإِنَّمَا يُصَاغَانِ مِمَّا يُصَاغُ مِنْهُ اسْمُ التَّفْضِيلِ، فَلَا يُتَعَجَّبُ مِنْ نَحْوِ عَسَى وَمَاتَ.",
+          "uz": "Bu ikkisi faqat ism tafzil yasaladigan fe'llardan yasaladi; shuning uchun «aso» va «mota» kabilardan ta'ajjub qilinmaydi."
+        },
+        {
+          "type": "para",
+          "ar": "وَيُتَوَصَّلُ لِلتَّعَجُّبِ مِمَّا لَمْ يَسْتَوْفِ الشُّرُوطَ بِذِكْرِ مَصْدَرِهِ مَنْصُوبًا بَعْدَ نَحْوِ: مَا أَشَدَّ، وَمَجْرُورًا بَعْدَ نَحْوِ: أَشْدِدْ.",
+          "uz": "Shartlarni to'liq bajarmagan fe'ldan ta'ajjubga erishish uning masdarini «mo ashadda» kabidan keyin mansub, «ashdid» kabidan keyin majrur keltirish bilan bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "فَتَقُولُ: مَا أَشَدَّ احْتِرَاسَ الْعَدُوِّ، وَمَا أَقْوَى كَوْنَهُ خَائِفًا، وَمَا أَكْثَرَ أَلَّا يُضْرَبَ، وَأَعْظِمْ بِأَنْ يُغْلَبَ، وَأَشْدِدْ بِسَوَادِ يَوْمِهِ.",
+          "uz": "Shunday deysan: «Dushmanning ehtiyotkorligi naqadar kuchli!», «Uning qo'rquvda bo'lishi naqadar kuchli!», «Uning urilmasligi naqadar ko'p!», «Uning yengilishi naqadar buyuk!», «Uning kuni naqadar qora!»"
+        },
+        {
+          "type": "para",
+          "ar": "وَلَا يَتَقَدَّمُ مَعْمُولُ فِعْلِ التَّعَجُّبِ عَلَيْهِ، وَلَا يَكُونُ نَكِرَةً، فَلَا يُقَالُ: زَيْدًا مَا أَحْسَنَ، وَلَا مَا أَحْسَنَ رَجُلًا.",
+          "uz": "Ta'ajjub fe'lining ma'muli undan oldin kelmaydi va nakira ham bo'lmaydi; shuning uchun «Zaydni naqadar yaxshi!» (ma'mulni oldin keltirib) va «Naqadar yaxshi bir kishi!» (nakira bilan) deyilmaydi."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 89,
+      "page": 382,
+      "titleAr": "نِعْمَ وَبِئْسَ",
+      "title": "«Ni'ma» va «bi'sa»",
+      "rule": {
+        "ar": "نِعْمَ وَبِئْسَ فِعْلَانِ يُسْتَعْمَلَانِ لِمَدْحِ الْجِنْسِ وَذَمِّهِ، وَالْمَقْصُودُ بِالذَّاتِ فَرْدٌ مِنْ ذَلِكَ الْجِنْسِ، وَيُسَمَّى ذَلِكَ الْفَرْدُ بِالْمَخْصُوصِ بِالْمَدْحِ أَوِ الذَّمِّ.",
+        "uz": "«Ni'ma» va «bi'sa» — jinsni maqtash va zamlash uchun ishlatiladigan ikki fe'ldir; asl maqsad esa o'sha jinsdan bo'lgan bir a'zodir. U a'zo «maxsus bil-madh» yoki «maxsus biz-zamm» deb ataladi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَيَجِبُ فِي فَاعِلِهِمَا أَنْ يَكُونَ: مُقْتَرِنًا بِأَلْ، أَوْ مُضَافًا لِمُقْتَرِنٍ بِهَا، أَوْ ضَمِيرًا مُمَيَّزًا بِنَكِرَةٍ، أَوْ كَلِمَةَ (مَا)؛ نَحْوُ: ﴿نِعْمَ الْعَبْدُ﴾.",
+          "uz": "Ularning foilida shu vojib: u «al» bilan kelgan, yoki «al» bilan kelganiga izofa qilingan, yoki nakira bilan tamyizlangan zamir, yoxud «mo» so'zi bo'lishi; masalan: «Naqadar yaxshi banda!»"
+        },
+        {
+          "type": "para",
+          "ar": "﴿فَنِعْمَ عُقْبَى الدَّارِ﴾.",
+          "uz": "«Oxirat diyorining oqibati naqadar yaxshi!»"
+        },
+        {
+          "type": "para",
+          "ar": "﴿بِئْسَ لِلظَّالِمِينَ بَدَلًا﴾.",
+          "uz": "«Zolimlar uchun naqadar yomon almashuv!»"
+        },
+        {
+          "type": "para",
+          "ar": "﴿بِئْسَمَا اشْتَرَوْا بِهِ أَنْفُسَهُمْ﴾.",
+          "uz": "«O'zlarini sotgan narsalari naqadar yomon!»"
+        },
+        {
+          "type": "para",
+          "ar": "وَقَدْ يُذْكَرُ الْمَخْصُوصُ بِالْمَدْحِ أَوِ الذَّمِّ بَعْدَ الْفَاعِلِ أَوْ قَبْلَ الْجُمْلَةِ؛ نَحْوُ: نِعْمَ الْعَبْدُ صُهَيْبٌ، وَهِنْدٌ بِئْسَتِ الْمَرْأَةُ.",
+          "uz": "Maqtov yoki zam bilan xoslangan so'z foildan keyin yoki gapdan oldin zikr qilinishi mumkin; masalan: «Naqadar yaxshi banda — Suhayb!», «Hind — naqadar yomon ayol!»"
+        },
+        {
+          "type": "para",
+          "ar": "وَيُسْتَعْمَلُ كَـ(نِعْمَ وَبِئْسَ): حَبَّذَا، وَلَا حَبَّذَا؛ نَحْوُ: حَبَّذَا الْمُجْتَهِدُ.",
+          "uz": "«Ni'ma» va «bi'sa» kabi «habbazo» va «lo habbazo» ham ishlatiladi; masalan: «Tirishqoq naqadar yaxshi!»"
+        },
+        {
+          "type": "para",
+          "ar": "أَلَا حَبَّذَا عَاذِرِي فِي الْهَوَى * وَلَا حَبَّذَا الْعَاذِلُ الْجَاهِلُ",
+          "uz": "«Muhabbat yo'lida meni uzrli sanagan naqadar yaxshi; johil malomatchi esa naqadar yomon!»"
+        },
+        {
+          "type": "para",
+          "ar": "وَلَكَ أَنْ تَنْقُلَ كُلَّ فِعْلٍ ثُلَاثِيٍّ قَابِلٍ لِلتَّعَجُّبِ إِلَى بَابِ كَرُمَ لِلدَّلَالَةِ عَلَى الْمَدْحِ وَالذَّمِّ مَعَ التَّعَجُّبِ؛ نَحْوُ: طَابَ الرَّجُلُ أَصْلًا، وَ﴿كَبُرَتْ كَلِمَةً تَخْرُجُ مِنْ أَفْوَاهِهِمْ﴾.",
+          "uz": "Ta'ajjubni qabul qiladigan har bir uch harfli fe'lni «karuma» bobiga ko'chirib, ta'ajjub bilan birga maqtov va zamga dalolat qilishing mumkin; masalan: «Kishining asli naqadar yaxshi!», «Og'izlaridan chiqadigan so'z naqadar buyuk (yomon)!»"
+        },
+        {
+          "type": "para",
+          "ar": "(١) وَالْمَشْهُورُ فِي إِعْرَابِهِ أَنَّهُ خَبَرٌ لِمُبْتَدَإٍ مَحْذُوفٍ؛ أَيْ: هُوَ صُهَيْبٌ. وَإِذَا تَقَدَّمَ أُعْرِبَ مُبْتَدَأً خَبَرُهُ الْجُمْلَةُ بَعْدَهُ.",
+          "uz": "(1-izoh) Uning i'robida mashhur qavl — u tushirilgan mubtadoning xabari ekanidir; ya'ni «u Suhaybdir». Oldin kelsa, mubtado deb i'rob qilinadi va undan keyingi gap uning xabari bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) لَا يَتَحَتَّمُ فِي الْفَاعِلِ هُنَا أَنْ يَكُونَ أَحَدَ الْأَرْبَعَةِ السَّابِقَةِ، فَيُقَالُ: حَبَّذَا زَيْدٌ، وَذَا اسْمُ إِشَارَةٍ مُفْرَدٌ دَائِمًا، وَيُعْرَبُ فَاعِلًا، وَالْمَخْصُوصُ بَعْدَهُ خَبَرًا لِمُبْتَدَإٍ مَحْذُوفٍ.",
+          "uz": "(2-izoh) Bu yerda foilning yuqoridagi to'rttadan biri bo'lishi shart emas; shuning uchun «Habbazo Zayd» deyiladi. «Zo» — doim birlikdagi ishora ismi bo'lib, foil deb i'rob qilinadi; undan keyingi maxsus esa tushirilgan mubtadoning xabari deb i'rob qilinadi."
+        }
+      ],
+      "exercise": []
     }
   ]
 }

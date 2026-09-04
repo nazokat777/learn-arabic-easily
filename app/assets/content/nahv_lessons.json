@@ -20701,6 +20701,76 @@
           "type": "para",
           "ar": "وَ(أَلَّا): لِلتَّحْضِيضِ؛ نَحْوُ: أَلَّا رَاعَيْتُمْ حَقَّ الْأُخُوَّةِ.",
           "uz": "(Allo) Undash uchundir; masalan: «Nega birodarlik haqqiga rioya qilmadingizlar?»"
+        },
+        {
+          "type": "para",
+          "ar": "وَ(إِلَّا): لِلِاسْتِثْنَاءِ؛ نَحْوُ: لِكُلِّ دَاءٍ دَوَاءٌ إِلَّا الْمَوْتَ.",
+          "uz": "(Illo) Istisno uchundir; masalan: «Har bir dardning davosi bor, o'limdan boshqa»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(أَمَّا): لِلشَّرْطِ، وَالتَّفْصِيلِ، وَالتَّوْكِيدِ؛ نَحْوُ: ﴿فَأَمَّا الَّذِينَ آمَنُوا فَيَعْلَمُونَ أَنَّهُ الْحَقُّ﴾.",
+          "uz": "(Ammo) Shart, tafsil va ta'kid uchundir; masalan: «Iymon keltirganlar esa uning haq ekanini biladilar»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(إِمَّا): لِلتَّفْصِيلِ؛ نَحْوُ: ﴿إِنَّا هَدَيْنَاهُ السَّبِيلَ إِمَّا شَاكِرًا وَإِمَّا كَفُورًا﴾.",
+          "uz": "(Immo) Tafsil uchundir; masalan: «Biz unga yo'lni ko'rsatdik — yo shukr qiluvchi, yo kufr qiluvchi bo'ladi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(حَاشَا): لِلِاسْتِثْنَاءِ؛ نَحْوُ: أَقْدَمُوا عَلَى الْبُهْتَانِ حَاشَا وَاحِدٍ.",
+          "uz": "(Hoshao) Istisno uchundir; masalan: «Ular bo'htonga qo'l urdilar, bittasidan boshqasi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(حَتَّى): تَقَعُ حَرْفَ جَرٍّ لِلِانْتِهَاءِ؛ نَحْوُ: ﴿حَتَّى مَطْلَعِ الْفَجْرِ﴾. ﴿حَتَّى يَتَبَيَّنَ لَكُمُ الْخَيْطُ الْأَبْيَضُ﴾.",
+          "uz": "(Hatto) Tugash ma'nosidagi jorr harfi bo'lib keladi; masalan: «Tong otguncha», «Toki sizga oq ip ravshan bo'lguncha»."
+        },
+        {
+          "type": "para",
+          "ar": "وَحَرْفَ عَطْفٍ لِلْغَايَةِ؛ نَحْوُ: قَدِمَ الْحُجَّاجُ حَتَّى الْمُشَاةُ.",
+          "uz": "Va g'oya (chegara) ma'nosidagi atf harfi bo'ladi; masalan: «Hojilar keldi, hatto piyodalari ham»."
+        },
+        {
+          "type": "para",
+          "ar": "وَحَرْفَ ابْتِدَاءٍ؛ نَحْوُ: (فَوَاعَجَبًا حَتَّى كُلَيْبٌ تَسُبُّنِي!).",
+          "uz": "Va ibtido (boshlash) harfi bo'ladi; masalan: «Ajablanarli! Hatto Kulayb ham meni so'kadimi?!»"
+        },
+        {
+          "type": "para",
+          "ar": "وَ(كَأَنَّ): لِلتَّشْبِيهِ وَلِلظَّنِّ؛ نَحْوُ: كَأَنَّ لَفْظَهُ الدُّرُّ الْمَنْثُورُ. كَأَنَّهُ ظَفِرَ بِبُغْيَتِهِ.",
+          "uz": "(Kaanna) O'xshatish va gumon uchundir; masalan: «Uning so'zi go'yo sochilgan durdir», «U go'yo maqsadiga erishganday»."
+        },
+        {
+          "type": "para",
+          "ar": "وَقَدْ تُخَفَّفُ؛ نَحْوُ: ﴿كَأَنْ لَمْ تَغْنَ بِالْأَمْسِ﴾.",
+          "uz": "Ba'zan u yengillashtiriladi; masalan: «Go'yo kecha u yerda bo'lmagandek»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(كَلَّا): لِلرَّدْعِ وَالزَّجْرِ؛ نَحْوُ: ﴿كَلَّا إِنَّهَا كَلِمَةٌ هُوَ قَائِلُهَا﴾، وَقَدْ تَجِيءُ لِلتَّنْبِيهِ وَالِاسْتِفْتَاحِ؛ نَحْوُ: ﴿كَلَّا إِنَّهُمْ عَنْ رَبِّهِمْ يَوْمَئِذٍ لَمَحْجُوبُونَ﴾.",
+          "uz": "(Kallo) Qaytarish va do'q uchundir; masalan: «Yo'q! Bu — u aytadigan (quruq) so'zdir». Ba'zan tanbeh va so'z boshlash uchun ham keladi; masalan: «Yo'q! Ular o'sha kuni Rabbilaridan albatta to'silgandirlar»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(لَكِنْ): لِلْعَطْفِ، أَوِ الِاسْتِدْرَاكِ؛ نَحْوُ: مَا قَامَ زَيْدٌ، لَكِنْ عَمْرٌو.",
+          "uz": "(Lakin) Atf yoki istidrok (tuzatish) uchundir; masalan: «Zayd turmadi, lekin Amr (turdi)»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(لَعَلَّ): لِلتَّرَجِّي، وَالتَّوَقُّعِ؛ نَحْوُ: لَعَلَّ الْجَوَّ يَعْتَدِلُ.",
+          "uz": "(La'alla) Umid va kutish uchundir; masalan: «Shoyad havo me'yorga kelsa»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(لَمَّا): لِنَفْيِ الْمُضَارِعِ وَجَزْمِهِ وَقَلْبِهِ إِلَى الْمُضِيِّ؛ نَحْوُ: (أَشَوْقًا وَلَمَّا يَمْضِ لِي غَيْرُ لَيْلَةٍ).",
+          "uz": "(Lammo) Muzorening inkori, jazmi va uni o'tgan zamonga aylantirish uchundir; masalan: «Shu qadar sog'inchmi — hali menga bir kechadan boshqa vaqt o'tmagan bo'lsa?»"
+        },
+        {
+          "type": "para",
+          "ar": "وَتَجِيءُ لِلشَّرْطِ؛ نَحْوُ: ﴿وَلَمَّا فَتَحُوا مَتَاعَهُمْ وَجَدُوا بِضَاعَتَهُمْ﴾.",
+          "uz": "U shart uchun ham keladi; masalan: «Yuklarini ochganlarida, mollarini topdilar»."
         }
       ],
       "exercise": []

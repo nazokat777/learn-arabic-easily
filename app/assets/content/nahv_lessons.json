@@ -17514,6 +17514,158 @@
           "type": "para",
           "ar": "وَعِنْدَ بَعْضِهِمْ هُوَ الْمُتَعَلَّقُ الْمَحْذُوفُ؛ فَإِنْ قَدَّرْتَهُ كَائِنًا كَانَ مِنْ قَبِيلِ الْخَبَرِ الْمُفْرَدِ، وَإِنْ قَدَّرْتَهُ اسْتَقَرَّ كَانَ مِنْ قَبِيلِ الْخَبَرِ الْجُمْلَةِ، فَيَكُونُ الْخَبَرُ قِسْمَيْنِ فَقَطْ.",
           "uz": "Ba'zilarga ko'ra esa xabar — tushirilgan mutaalliqdir: uni «koinan» deb taqdir qilsang, mufrad xabar turidan bo'ladi; «istaqarra» deb taqdir qilsang, gap-xabar turidan bo'ladi; shunda xabar faqat ikki qism bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَتَعَدَّدُ الْخَبَرُ؛ نَحْوُ: ﴿وَهُوَ الْغَفُورُ الْوَدُودُ * ذُو الْعَرْشِ الْمَجِيدُ﴾.",
+          "uz": "Xabar bir nechta bo'lishi ham mumkin; masalan: «U — Mag'firat qiluvchi, Vadud, Arsh egasi, Majiddir»."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْأَصْلُ أَنْ يَتَقَدَّمَ الْمُبْتَدَأُ عَلَى الْخَبَرِ كَمَا رَأَيْتَ، وَيَجُوزُ أَنْ يَتَأَخَّرَ عَنْهُ؛ نَحْوُ: فِي الدَّارِ عَلِيٌّ.",
+          "uz": "Asl — mubtadoning xabardan oldin kelishidir (ko'rganingdek); undan keyin kelishi ham joizdir; masalan: «Uyda Ali bor»."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَيُلْتَزَمُ تَقْدِيمُ الْمُبْتَدَإِ فِي أَرْبَعَةِ مَوَاضِعَ:",
+            "uz": "Mubtadoni oldin keltirish to'rt o'rinda lozim bo'ladi:"
+          },
+          "items": [
+            {
+              "ar": "الْأَوَّلُ: أَنْ يَكُونَ مِنَ الْأَلْفَاظِ الَّتِي لَهَا الصَّدَارَةُ، وَهِيَ: أَسْمَاءُ الاِسْتِفْهَامِ، وَالشَّرْطِ، وَمَا التَّعَجُّبِيَّةُ، وَكَمِ الْخَبَرِيَّةُ، وَضَمِيرُ الشَّأْنِ، وَمَا اقْتَرَنَ بِلَامِ الاِبْتِدَاءِ، وَالْمَوْصُولُ إِذَا اقْتَرَنَ خَبَرُهُ بِالْفَاءِ.",
+              "uz": "Birinchisi: u boshda kelish huquqiga ega lafzlardan bo'lishi. Ular: so'roq va shart ismlari, ta'ajjub «mo»si, xabariy «kam», sha'n zamiri, ibtido lomi bilan kelgan so'z va xabari «fo» bilan kelgan mavsul."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "نَحْوُ: مَنْ أَنْتَ؟ مَنْ يَقُمْ أَقُمْ مَعَهُ. مَا أَحْسَنَ الصِّدْقَ. كَمْ عَبِيدٍ لِي؟ ﴿قُلْ هُوَ اللَّهُ أَحَدٌ﴾. لَزَيْدٌ قَائِمٌ. الَّذِي يَدُلُّنِي عَلَى مَطْلُوبِي فَلَهُ دِينَارٌ.",
+          "uz": "Masalan: «Sen kimsan?», «Kim tursa, men ham u bilan turaman», «Rostgo'ylik naqadar go'zal!», «Menda qancha qul bor!», «Ayt: U — Alloh yagonadir», «Albatta Zayd turuvchidir», «Menga izlaganimni ko'rsatgan kishiga bir dinor bor»."
+        },
+        {
+          "type": "para",
+          "ar": "وَالثَّانِي: أَنْ يُقْصَرَ عَلَى الْخَبَرِ؛ نَحْوُ: إِنَّمَا عَلِيٌّ شُجَاعٌ. وَمَا عَمْرٌو إِلَّا مُدْبِرٌ.",
+          "uz": "Ikkinchisi: u xabarga qasr qilinishi (faqat unga xoslanishi); masalan: «Ali faqat jasurdir», «Amr faqat orqaga qaytuvchidir»."
+        },
+        {
+          "type": "para",
+          "ar": "وَالثَّالِثُ: أَنْ يَلْتَبِسَ بِالْفَاعِلِ؛ نَحْوُ: زَيْدٌ فَهِمَ. وَكُلُّ إِنْسَانٍ لَا يَبْلُغُ حَقِيقَةَ الشُّكْرِ.",
+          "uz": "Uchinchisi: foil bilan chalkashib ketishi; masalan: «Zayd tushundi», «Har bir inson shukrning haqiqatiga yeta olmaydi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَالرَّابِعُ: أَنْ يَلْتَبِسَ بِالْخَبَرِ؛ نَحْوُ: صَدِيقُكَ عَدُوِّي. وَأَفْضَلُ مِنْكَ أَفْضَلُ مِنِّي.",
+          "uz": "To'rtinchisi: xabar bilan chalkashib ketishi; masalan: «Sening do'sting mening dushmanimdir», «Sendan afzali mendan afzaldir»."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَيُلْتَزَمُ تَقْدِيمُ الْخَبَرِ فِي أَرْبَعَةِ مَوَاضِعَ:",
+            "uz": "Xabarni oldin keltirish to'rt o'rinda lozim bo'ladi:"
+          },
+          "items": [
+            {
+              "ar": "الْأَوَّلُ: أَنْ يَكُونَ مِنَ الْأَلْفَاظِ الَّتِي لَهَا الصَّدَارَةُ؛ نَحْوُ: أَيْنَ أَبُوكَ؟ وَ﴿مَتَى نَصْرُ اللَّهِ﴾.",
+              "uz": "Birinchisi: u boshda kelish huquqiga ega lafzlardan bo'lishi; masalan: «Otang qayerda?», «Allohning nusrati qachon?»"
+            },
+            {
+              "ar": "وَالثَّانِي: أَنْ يُقْصَرَ عَلَى الْمُبْتَدَإِ؛ نَحْوُ: إِنَّمَا الشُّجَاعُ عَلِيٌّ، وَمَا مُدْبِرٌ إِلَّا عَمْرٌو.",
+              "uz": "Ikkinchisi: u mubtadoga qasr qilinishi; masalan: «Jasur faqat Alidir», «Orqaga qaytuvchi faqat Amrdir»."
+            },
+            {
+              "ar": "وَالثَّالِثُ: أَنْ يَلْتَبِسَ بِالصِّفَةِ؛ نَحْوُ: عِنْدِي دِرْهَمٌ، وَلِي حَاجَةٌ.",
+              "uz": "Uchinchisi: sifat bilan chalkashib ketishi; masalan: «Menda bir dirham bor», «Mening bir hojatim bor»."
+            },
+            {
+              "ar": "وَالرَّابِعُ: أَنْ يَعُودَ عَلَى بَعْضِهِ ضَمِيرٌ فِي الْمُبْتَدَإِ؛ نَحْوُ: فِي الدَّارِ صَاحِبُهَا، ﴿أَمْ عَلَى قُلُوبٍ أَقْفَالُهَا﴾.",
+              "uz": "To'rtinchisi: mubtadodagi zamir uning bir qismiga qaytishi; masalan: «Uyda uning egasi bor», «Yoki qalblar ustida ularning qulflari bormi?»"
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "وَقَدْ يُحْذَفُ الْمُبْتَدَأُ أَوِ الْخَبَرُ إِذَا دَلَّ عَلَيْهِ دَلِيلٌ؛ كَقَوْلِكَ لِمَنْ يَسْأَلُكَ: كَيْفَ زَيْدٌ؟: مَرِيضٌ. وَلِمَنْ يَسْأَلُكَ: مَنْ فِي الدَّارِ؟: إِبْرَاهِيمُ.",
+          "uz": "Unga dalil dalolat qilsa, mubtado yoki xabar tushirilishi mumkin; masalan «Zayd qanday?» deb so'ragan kishiga «Kasal» deb javob berishing; «Uyda kim bor?» deb so'raganga «Ibrohim» deyishing."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَيُلْتَزَمُ حَذْفُ الْمُبْتَدَإِ فِي أَرْبَعَةِ مَوَاضِعَ:",
+            "uz": "Mubtadoni tushirish to'rt o'rinda lozim bo'ladi:"
+          },
+          "items": [
+            {
+              "ar": "الْأَوَّلُ: أَنْ يُخْبَرَ عَنْهُ بِمَخْصُوصِ (نِعْمَ) وَ(بِئْسَ)؛ نَحْوُ: نِعْمَ الْعَبْدُ صُهَيْبٌ، وَبِئْسَتِ الْمَرْأَةُ هِنْدٌ؛ أَيْ: هُوَ صُهَيْبٌ، وَهِيَ هِنْدٌ.",
+              "uz": "Birinchisi: undan «ni'ma» va «bi'sa»ning maxsusi bilan xabar berilishi; masalan: «Naqadar yaxshi banda — Suhayb!», «Naqadar yomon ayol — Hind!»; ya'ni «u Suhaybdir», «u Hinddir»."
+            },
+            {
+              "ar": "وَالثَّانِي: أَنْ يُخْبَرَ عَنْهُ بِنَعْتٍ مَقْطُوعٍ؛ نَحْوُ: مَرَرْتُ بِإِبْرَاهِيمَ الْهُمَامُ، وَأَعُوذُ بِاللَّهِ مِنْ إِبْلِيسَ اللَّعِينُ، وَتَرَفَّقْ بِخَالِدٍ الْمِسْكِينُ؛ أَيْ: هُوَ الْهُمَامُ، وَهُوَ اللَّعِينُ، وَهُوَ الْمِسْكِينُ.",
+              "uz": "Ikkinchisi: undan uzilgan na't bilan xabar berilishi; masalan: «Ibrohimning oldidan o'tdim — u jasur zotdir», «Iblisdan Allohga panoh tilayman — u la'natlangandir», «Xolidga yumshoq muomala qil — u miskindir»."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "وَلَا يُقْطَعُ النَّعْتُ إِلَّا إِذَا كَانَ لِلْمَدْحِ، أَوِ الذَّمِّ، أَوِ التَّرَحُّمِ.",
+          "uz": "Na't faqat maqtov, zam yoki rahm-shafqat uchun bo'lgandagina uziladi."
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَبَقِيَّةُ الْمَوَاضِعِ:",
+            "uz": "Qolgan o'rinlar:"
+          },
+          "items": [
+            {
+              "ar": "وَالثَّالِثُ: أَنْ يُخْبَرَ عَنْهُ بِمَصْدَرٍ نَائِبٍ عَنْ فِعْلِهِ؛ نَحْوُ: صَبْرٌ جَمِيلٌ، وَسَمْعٌ وَطَاعَةٌ؛ أَيْ: حَالِي صَبْرٌ، وَأَمْرِي سَمْعٌ.",
+              "uz": "Uchinchisi: undan o'z fe'lining o'rnini bosuvchi masdar bilan xabar berilishi; masalan: «Chiroyli sabr», «Eshitish va itoat»; ya'ni «holim sabrdir», «ishim eshitishdir»."
+            },
+            {
+              "ar": "وَالرَّابِعُ: أَنْ يُخْبَرَ عَنْهُ بِمَا يُشْعِرُ بِالْقَسَمِ؛ نَحْوُ: فِي ذِمَّتِي لَأَخْرُجَنَّ، وَفِي عُنُقِي لَأَذْهَبَنَّ؛ أَيْ: فِي ذِمَّتِي عَهْدٌ، وَفِي عُنُقِي مِيثَاقٌ.",
+              "uz": "To'rtinchisi: undan qasamga ishora qiluvchi so'z bilan xabar berilishi; masalan: «Zimmamda — albatta chiqaman», «Bo'ynimda — albatta boraman»; ya'ni «zimmamda ahd bor», «bo'ynimda misoq bor»."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "intro": {
+            "ar": "وَيُلْتَزَمُ حَذْفُ الْخَبَرِ فِي أَرْبَعَةِ مَوَاضِعَ أَيْضًا:",
+            "uz": "Xabarni tushirish ham to'rt o'rinda lozim bo'ladi:"
+          },
+          "items": [
+            {
+              "ar": "الْأَوَّلُ: بَعْدَ مَا هُوَ صَرِيحٌ فِي الْقَسَمِ؛ نَحْوُ: لَعَمْرُكَ لَأَقُومَنَّ، وَايْمُنُ اللَّهِ لَأُسَافِرَنَّ؛ أَيْ: قَسَمِي.",
+              "uz": "Birinchisi: qasamda ochiq bo'lgan so'zdan keyin; masalan: «Umring bilan qasam — albatta turaman», «Allohning barakoti bilan qasam — albatta safarga chiqaman»; ya'ni «qasamimdir»."
+            },
+            {
+              "ar": "وَالثَّانِي: إِذَا كَانَ كَوْنًا عَامًّا وَسَبَقَتْهُ (لَوْلَا)؛ نَحْوُ: لَوْلَا زَيْدٌ لَهَلَكَ عَمْرٌو؛ أَيْ: مَوْجُودٌ، بِخِلَافِ لَوْلَا زَيْدٌ سَالَمَنَا مَا سَلِمَ.",
+              "uz": "Ikkinchisi: u umumiy «kavn» bo'lib, oldidan «lavlo» kelganda; masalan: «Zayd bo'lmaganida, Amr halok bo'lardi»; ya'ni «mavjud». «Zayd biz bilan sulh qilmaganida omon qolmasdi» kabilar esa bundan farq qiladi."
+            },
+            {
+              "ar": "وَالثَّالِثُ: بَعْدَ وَاوِ الْمَعِيَّةِ؛ نَحْوُ: كُلُّ صَانِعٍ وَمَا صَنَعَ.",
+              "uz": "Uchinchisi: maiyyat vovidan keyin; masalan: «Har bir ustaning o'zi bilan yasagan narsasi (birgadir)»."
+            },
+            {
+              "ar": "وَالرَّابِعُ: إِذَا أَغْنَى عَنْهُ حَالٌ لَا يَصْلُحُ أَنْ يَكُونَ خَبَرًا؛ نَحْوُ: ضَرْبِي الْعَبْدَ مُسِيئًا، وَأَقْرَبُ مَا يَكُونُ الْعَبْدُ مِنْ رَبِّهِ وَهُوَ سَاجِدٌ؛ أَيْ: ضَرْبِي الْعَبْدَ إِذْ كَانَ مُسِيئًا، أَوْ إِذَا كَانَ مُسِيئًا.",
+              "uz": "To'rtinchisi: xabar bo'lishga yaramaydigan hol undan behojat qilganda; masalan: «Qulni yomonlik qilgan holida urishim», «Banda Robbiga eng yaqin bo'ladigan payti — u sajda qilgan holidir»; ya'ni «qulni yomonlik qilganida urishim»."
+            }
+          ]
+        },
+        {
+          "type": "para",
+          "ar": "وَلَا يُغْنِي الْحَالُ عَنِ الْخَبَرِ إِلَّا إِذَا كَانَ الْمُبْتَدَأُ مَصْدَرًا مُضَافًا لِمَعْمُولِهِ، أَوْ أَفْعَلَ تَفْضِيلٍ مُضَافًا لِمَصْدَرٍ كَذَلِكَ، كَمَا رَأَيْتَ.",
+          "uz": "Hol xabardan behojat qilishi faqat mubtado o'z ma'muliga izofa qilingan masdar bo'lsa, yoxud shunday masdarga izofa qilingan «af'alut-tafzil» bo'lsagina bo'ladi — ko'rganingdek."
+        },
+        {
+          "type": "para",
+          "ar": "وَقَدْ يَكُونُ الاِسْمُ الْوَاقِعُ بَعْدَ الْمُبْتَدَإِ فَاعِلًا، أَوْ نَائِبَ فَاعِلٍ سَادًّا مَسَدَّ الْخَبَرِ إِذَا كَانَ الْمُبْتَدَأُ وَصْفًا مُعْتَمِدًا عَلَى نَفْيٍ أَوِ اسْتِفْهَامٍ؛ نَحْوُ: أَقَائِمٌ أَخَوَاكَ؟ وَمَا مَخْذُولٌ تَابِعُوكَ.",
+          "uz": "Mubtadodan keyin kelgan ism xabar o'rnini bosuvchi foil yoki noibi foil bo'lishi mumkin — mubtado inkor yoki so'roqqa suyangan sifat bo'lganda; masalan: «Ikki birodaring turibdimi?», «Ergashuvchilaring xor bo'lgan emas»."
+        },
+        {
+          "type": "para",
+          "ar": "(١) يُقَدَّرُ الظَّرْفُ بِـ(إِذْ) عِنْدَ إِرَادَةِ الْمُضِيِّ، وَيُقَدَّرُ بِـ(إِذَا) عِنْدَ إِرَادَةِ الاِسْتِقْبَالِ.",
+          "uz": "(1-izoh) O'tgan zamon ko'zda tutilganda zarf «iz» bilan, kelasi zamon ko'zda tutilganda «izo» bilan taqdir qilinadi."
         }
       ],
       "exercise": []

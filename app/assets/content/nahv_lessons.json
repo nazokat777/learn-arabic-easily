@@ -20408,6 +20408,61 @@
           "type": "para",
           "ar": "وَيُقَالُ لَهَا فِي نَحْوِ الْمِثَالِ الْأَوَّلِ: حَرْفُ امْتِنَاعٍ لِامْتِنَاعٍ؛ أَيْ: انْتِفَاءُ الْجَوَابِ لِانْتِفَاءِ الشَّرْطِ.",
           "uz": "Birinchi misol kabi o'rinlarda unga «imtino' uchun imtino' harfi» deyiladi; ya'ni shart yo'qligi sababli javob ham yo'qdir."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(مَا): تَكُونُ نَافِيَةً، وَزَائِدَةً، وَكَافَّةً عَنِ الْعَمَلِ، وَمَصْدَرِيَّةً؛ نَحْوُ: ﴿مَا هَذَا بَشَرًا﴾، ﴿فَبِمَا رَحْمَةٍ مِنَ اللَّهِ لِنْتَ لَهُمْ﴾، ﴿كَأَنَّمَا يُسَاقُونَ إِلَى الْمَوْتِ﴾، ﴿وَضَاقَتْ عَلَيْهِمُ الْأَرْضُ بِمَا رَحُبَتْ﴾.",
+          "uz": "(Mo) Inkor, ortiqcha, amaldan to'suvchi va masdariy bo'ladi; masalan: «Bu bashar emas», «Allohdan bo'lgan rahmat sababli sen ularga yumshoq bo'lding», «Go'yo ular o'limga haydalayotgandek», «Yer o'zining kengligiga qaramay ularga tor bo'ldi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَقَدْ يُلْحَظُ الْوَقْتُ مَعَ الْمَصْدَرِيَّةِ، فَيُقَالُ لَهَا: مَصْدَرِيَّةٌ ظَرْفِيَّةٌ؛ نَحْوُ: ﴿وَأَوْصَانِي بِالصَّلَاةِ وَالزَّكَاةِ مَا دُمْتُ حَيًّا﴾.",
+          "uz": "Masdariylik bilan birga vaqt ham nazarda tutilishi mumkin; u holda unga «masdariy-zarfiy» deyiladi; masalan: «Tirik ekanman, meni namoz va zakotga buyurdi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(مُذْ): لِلاِبْتِدَاءِ، أَوِ الظَّرْفِيَّةِ؛ نَحْوُ: مَا كَلَّمْتُهُ مُذْ سَنَةٍ، وَلَا قَابَلْتُهُ مُذْ يَوْمِنَا.",
+          "uz": "(Muz) Boshlanish yoki zarflik uchundir; masalan: «Bir yildan beri u bilan gaplashmadim», «Bugundan beri uni uchratmadim»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(مِنْ): لِلاِبْتِدَاءِ، وَلِلتَّبْعِيضِ، وَلِلتَّعْلِيلِ؛ نَحْوُ: ﴿سُبْحَانَ الَّذِي أَسْرَى بِعَبْدِهِ لَيْلًا مِنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى﴾. ﴿مِنْهُمْ مَنْ كَلَّمَ اللَّهُ﴾. ﴿مِمَّا خَطِيئَاتِهِمْ أُغْرِقُوا﴾.",
+          "uz": "(Min) Boshlanish, bir qismini bildirish va sabab uchundir; masalan: «Bandasini kechasi Masjidul Haromdan Masjidul Aqsoga sayr qildirgan Zot pokdir», «Ulardan Alloh so'zlashgani bor», «Xatolari sababli g'arq qilindilar»."
+        },
+        {
+          "type": "para",
+          "ar": "وَتَجِيءُ زَائِدَةً بَعْدَ النَّفْيِ، وَالنَّهْيِ، وَالاِسْتِفْهَامِ؛ نَحْوُ: مَا لَنَا مِنْ شَفِيعٍ. لَا يَبْرَحْ مِنْ أَحَدٍ. ﴿هَلْ مِنْ خَالِقٍ غَيْرُ اللَّهِ﴾.",
+          "uz": "U inkor, qaytariq va so'roqdan keyin ortiqcha bo'lib keladi; masalan: «Bizga hech bir shafoatchi yo'q», «Hech kim joyidan qimirlamasin», «Allohdan o'zga yaratuvchi bormi?»"
+        },
+        {
+          "type": "para",
+          "ar": "وَ(هَا): لِلتَّنْبِيهِ تَدْخُلُ عَلَى أَسْمَاءِ الْإِشَارَةِ؛ كَ: هَذَا وَهَذِهِ.",
+          "uz": "(Ho) Tanbeh uchundir; u ishora ismlariga kiradi; masalan: «hazo» va «hazihi»."
+        },
+        {
+          "type": "para",
+          "ar": "وَالضَّمَائِرِ؛ كَ: هَأَنَذَا وَهَأَنْتُمْ.",
+          "uz": "Va zamirlarga; masalan: «ha anazo» va «ha antum»."
+        },
+        {
+          "type": "para",
+          "ar": "وَالْجُمَلِ؛ نَحْوُ: هَا إِنَّ صَاحِبَكَ بِالْبَابِ.",
+          "uz": "Va gaplarga; masalan: «Mana, do'sting eshik oldida»."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(هَلْ): لِلاِسْتِفْهَامِ؛ نَحْوُ: هَلْ طَلَعَ النَّهَارُ؟ وَتُفَارِقُ الْهَمْزَةَ فِي أَنَّهَا لَا تَدْخُلُ عَلَى نَفْيٍ وَلَا شَرْطٍ وَلَا مُضَارِعٍ حَالِيٍّ، وَلَا إِنَّ.",
+          "uz": "(Hal) So'roq uchundir; masalan: «Kun yorishdimi?» U hamzadan shu bilan farq qiladi: inkorga ham, shartga ham, hozirgi zamon muzori'iga ham, «inna»ga ham kirmaydi."
+        },
+        {
+          "type": "para",
+          "ar": "وَ(وَا): لِلنُّدْبَةِ؛ نَحْوُ: وَاحُسَيْنَاهْ.",
+          "uz": "(Vo) Nudba uchundir; masalan: «Vo Husaynoh!»"
+        },
+        {
+          "type": "para",
+          "ar": "وَ(يَا): لِلنِّدَاءِ، وَلِلنُّدْبَةِ، وَلِلتَّنْبِيهِ؛ نَحْوُ: ﴿يَا أَيُّهَا النَّاسُ﴾. يَا حُسَيْنَاهْ. ﴿يَا لَيْتَ قَوْمِي يَعْلَمُونَ * بِمَا غَفَرَ لِي رَبِّي وَجَعَلَنِي مِنَ الْمُكْرَمِينَ﴾.",
+          "uz": "(Yo) Nido, nudba va tanbeh uchundir; masalan: «Ey odamlar!», «Yo Husaynoh!», «Koshki qavmim Robbim meni kechirgani va meni hurmatlanganlardan qilganini bilsalar edi»."
         }
       ],
       "exercise": []

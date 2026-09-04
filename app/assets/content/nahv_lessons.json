@@ -19910,6 +19910,182 @@
         }
       ],
       "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 97,
+      "page": 393,
+      "titleAr": "خَاتِمَةٌ فِي الْإِبْدَالِ وَالْإِعْلَالِ وَالْوَقْفِ: الْإِبْدَالُ",
+      "title": "Xotima: ibdol, i'lol va vaqf — Ibdol (harf almashtirish)",
+      "rule": {
+        "ar": "هُوَ جَعْلُ حَرْفٍ مَكَانَ حَرْفٍ آخَرَ.",
+        "uz": "Ibdol — bir harfni boshqa harf o'rniga qo'yishdir."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَالْحُرُوفُ الَّتِي تُبْدَلُ مِنْ غَيْرِهَا إِبْدَالًا مُطَّرِدًا تِسْعَةٌ: أَحْرُفُ الْعِلَّةِ الثَّلَاثَةُ، وَالْهَمْزَةُ، وَالتَّاءُ، وَالدَّالُ، وَالطَّاءُ، وَالْمِيمُ، وَالْهَاءُ، وَيَجْمَعُهَا قَوْلُكَ: (هَدَأْتُ مُوطِيًا).",
+          "uz": "Boshqasidan doimiy qoida bo'yicha almashtiriladigan harflar to'qqizta: uchta illat harfi, hamza, to, dol, to (tutuq), mim va ho. Ularni «hada'tu mutiyan» so'zi jamlaydi."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِلَيْكَ بَيَانُهَا فِي هَذِهِ الْقَوَاعِدِ:",
+          "uz": "Mana ularning bayoni quyidagi qoidalarda:"
+        },
+        {
+          "type": "para",
+          "ar": "(الْوَاوُ): إِذَا وَقَعَتِ الْأَلِفُ بَعْدَ ضَمَّةٍ تُقْلَبُ وَاوًا؛ نَحْوُ: (ضُورِبَ وَقُوتِلَ) مَجْهُولُ ضَارَبَ وَقَاتَلَ.",
+          "uz": "(Vov) Alif dammadan keyin kelsa, vovga aylantiriladi; masalan: «zoraba» va «qotala»ning majhuli bo'lgan «zuriba» va «qutila»."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِذَا وَقَعَتِ الْيَاءُ سَاكِنَةً بَعْدَ ضَمَّةٍ تُقْلَبُ وَاوًا؛ نَحْوُ: (مُوقِنٌ وَمُوسِرٌ) مِنْ: أَيْقَنَ وَأَيْسَرَ.",
+          "uz": "«Yo» sokin holda dammadan keyin kelsa, vovga aylantiriladi; masalan: «ayqana» va «aysara»dan «muqin» va «musir»."
+        },
+        {
+          "type": "para",
+          "ar": "(الْأَلِفُ): إِذَا تَحَرَّكَتِ الْوَاوُ أَوِ الْيَاءُ، وَانْفَتَحَ مَا قَبْلَهَا قُلِبَتْ أَلِفًا؛ نَحْوُ: (قَالَ، وَغَزَا، وَبَاعَ، وَرَمَى) فَإِنَّ الْأَوَّلَيْنِ؛ كَ: نَصَرَ، وَالْأَخِيرَيْنِ؛ كَضَرَبَ.",
+          "uz": "(Alif) Vov yoki yo harakatlansa va undan oldingisi fatha bo'lsa, alifga aylantiriladi; masalan: «qola», «g'azo», «boa», «ramo» — birinchi ikkitasi «nasara» kabi, oxirgi ikkitasi «zaraba» kabidir."
+        },
+        {
+          "type": "para",
+          "ar": "(١) أَيِ: الْفِعْلُ الْمَبْنِيُّ لِلْمَجْهُولِ.",
+          "uz": "(1-izoh) Ya'ni majhul fe'l."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) وَيُشْتَرَطُ فِي هَذِهِ الْقَاعِدَةِ أَنْ تَكُونَ الْحَرَكَةُ أَصْلِيَّةً وَالْفَتْحَةُ فِي نَفْسِ الْكَلِمَةِ، وَأَنْ لَا يَكُونَ عَيْنًا لِفَعِلَ الَّذِي وَصْفُهُ عَلَى أَفْعَلَ، وَلِمَصْدَرِهِ، أَوْ لِافْتَعَلَ الدَّالِّ عَلَى التَّشَارُكِ إِنْ كَانَتْ وَاوًا.",
+          "uz": "(2-izoh) Bu qoidada shu shart: harakat asliy va fatha so'zning o'zida bo'lishi; sifati «af'al» vaznida bo'lgan «fa'ila»ning va uning masdarining ayni bo'lmasligi; vov bo'lsa, sheriklikka dalolat qiluvchi «ifta'ala»ning ayni bo'lmasligi."
+        },
+        {
+          "type": "para",
+          "ar": "أَوْ لِمَا يَنْتَهِي بِزِيَادَةٍ خَاصَّةٍ بِالْأَسْمَاءِ، وَأَنْ لَا يَلِيَهَا حَرْفٌ أُعِلَّ بِهَذَا الْإِعْلَالِ، وَأَنْ يَتَحَرَّكَ مَا بَعْدَهَا إِنْ كَانَتْ عَيْنًا، وَلَا يَلِيهَا أَلِفٌ أَوْ يَاءٌ مُشَدَّدَةٌ إِنْ كَانَتْ لَامًا.",
+          "uz": "Yoki ismlarga xos qo'shimcha bilan tugaydigan so'zning ayni bo'lmasligi; undan keyin shu i'lol bilan i'lol qilingan harf kelmasligi; ayn bo'lsa, undan keyingisi harakatlanishi; lom bo'lsa, undan keyin alif yoki shaddali «yo» kelmasligi."
+        },
+        {
+          "type": "para",
+          "ar": "فَخَرَجَ نَحْوُ: اخْشَوُا اللَّهَ، وَاخْشَ اللَّهَ، وَأَخَذَ وَرَقَةً، وَقَطَفَ يَاسَمِينًا، وَهَيِفَ وَعَوِرَ، وَاشْتَوَرُوا وَجَوَلَانٌ، وَهَيَمَانٌ، وَالْهَوَى، وَالْحَيَا، وَطَوِيلٌ، وَبَيَانٌ، وَغَزَوَا، وَرَمَيَا، وَعِصْوَانِ، وَفِتْيَانِ، وَعُلْوِيٌّ.",
+          "uz": "Shu bilan bulardan chiqadi: «Allohdan qo'rqinglar», «Allohdan qo'rq», «bir varaq oldi», «yosumin uzdi», «hayifa» va «avira», «ishtavaru» va «javalon», «hayamon», «al-havo», «al-hayo», «tavil», «bayon», «g'azavo», «ramayo», «isvoni», «fityoni», «ulviy»."
+        },
+        {
+          "type": "para",
+          "ar": "(الْيَاءُ): إِذَا اجْتَمَعَتِ الْوَاوُ وَالْيَاءُ فِي كَلِمَةٍ، وَسُبِقَتْ إِحْدَاهُمَا بِالسُّكُونِ قُلِبَتِ الْوَاوُ يَاءً؛ نَحْوُ: (طَيٌّ، وَمَيِّتٌ، وَمَرْمِيٌّ)، الْأَصْلُ: طَوْيٌ، وَمَيْوِتٌ، وَمَرْمَوِيٌّ.",
+          "uz": "(Yo) Bir so'zda vov va yo to'plansa va ulardan biri sukun bilan kelsa, vov «yo»ga aylantiriladi; masalan: «tayy», «mayyit», «marmiy» — asli «tavy», «mayvit», «marmaviy»."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِذَا وَقَعَتِ الْوَاوُ سَاكِنَةً بَعْدَ كَسْرَةٍ قُلِبَتْ يَاءً؛ نَحْوُ: (مِيزَانٌ، وَمِيقَاتٌ) مِنَ الْوَزْنِ وَالْوَقْتِ.",
+          "uz": "Vov sokin holda kasradan keyin kelsa, «yo»ga aylantiriladi; masalan: «vazn» va «vaqt»dan «mizon» va «miqot»."
+        },
+        {
+          "type": "para",
+          "ar": "حَرْفُ الْعِلَّةِ السَّاكِنُ بَعْدَ كَسْرَةٍ يُقْلَبُ يَاءً؛ كَ: عُصْفُورٍ، وَمِصْبَاحٍ، إِذَا صُغِّرَ أَوْ كُسِّرَ؛ نَحْوُ: عُصَيْفِيرٍ، وَمَصَابِيحَ.",
+          "uz": "Kasradan keyingi sokin illat harfi «yo»ga aylantiriladi; masalan «usfur» va «misboh» kichraytirilganda yoki ko'plik qilinganda: «usayfir» va «masobih»."
+        },
+        {
+          "type": "para",
+          "ar": "(الْهَمْزَةُ): إِذَا تَطَرَّفَتِ الْوَاوُ أَوِ الْيَاءُ بَعْدَ أَلِفٍ زَائِدَةٍ قُلِبَتْ هَمْزَةً؛ نَحْوُ: (كِسَاءٌ، وَسَمَاءٌ، وَبِنَاءٌ، وَظِبَاءٌ).",
+          "uz": "(Hamza) Vov yoki yo ortiqcha alifdan keyin so'z oxirida kelsa, hamzaga aylantiriladi; masalan: «kiso'», «samo'», «bino'», «zibo'»."
+        },
+        {
+          "type": "para",
+          "ar": "حَرْفُ الْمَدِّ الزَّائِدُ فِي الْمُفْرَدِ إِذَا وَقَعَ بَعْدَ أَلِفِ فَعَالِلَ وَنَحْوِهَا يُقْلَبُ هَمْزَةً؛ نَحْوُ: (عَجَائِزُ، وَقَلَائِدُ، وَصَحَائِفُ) جَمْعُ: عَجُوزٍ، وَقِلَادَةٍ، وَصَحِيفَةٍ.",
+          "uz": "Birlikdagi ortiqcha mad harfi «fa'olil» va shu kabilarning alifidan keyin kelsa, hamzaga aylantiriladi; masalan: «ajuz», «qiloda» va «sahifa»ning ko'pligi bo'lgan «ajoiz», «qaloid» va «sahoif»."
+        },
+        {
+          "type": "para",
+          "ar": "(التَّاءُ): إِذَا وَقَعَتِ الْوَاوُ أَوِ الْيَاءُ فَاءً لِـ(افْتَعَلَ) تُقْلَبُ تَاءً؛ نَحْوُ: (اتَّصَلَ، وَاتَّسَرَ) مِنَ الْوَصْلِ وَالْيُسْرِ.",
+          "uz": "(To) Vov yoki yo «ifta'ala»ning fosi bo'lib kelsa, «to»ga aylantiriladi; masalan: «vasl» va «yusr»dan «ittasala» va «ittasara»."
+        },
+        {
+          "type": "para",
+          "ar": "(الدَّالُ): إِذَا وَقَعَتْ تَاءُ (افْتَعَلَ) بَعْدَ دَالٍ، أَوْ ذَالٍ، أَوْ زَايٍ تُقْلَبُ دَالًا؛ نَحْوُ: (ادَّانَ، وَاذْدَكَرَ، وَازْدَانَ) مِنَ الدَّيْنِ، وَالذِّكْرِ، وَالزِّينَةِ.",
+          "uz": "(Dol) «Ifta'ala»ning «to»si dol, zol yoki zoydan keyin kelsa, dolga aylantiriladi; masalan: «dayn», «zikr» va «zina»dan «iddana», «izdakara» va «izdana»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَجُوزُ فِي نَحْوِ: اذْدَكَرَ قَلْبُ الذَّالِ دَالًا، أَوِ الدَّالِ ذَالًا؛ فَتَقُولُ: ادَّكَرَ، وَاذَّكَرَ.",
+          "uz": "«Izdakara» kabilarda zolni dolga yoki dolni zolga aylantirish joizdir; shunday deysan: «iddakara» va «izzakara»."
+        },
+        {
+          "type": "para",
+          "ar": "(الطَّاءُ): إِذَا وَقَعَتْ تَاءُ (افْتَعَلَ) بَعْدَ صَادٍ، أَوْ ضَادٍ، أَوْ طَاءٍ، أَوْ ظَاءٍ تُقْلَبُ طَاءً؛ نَحْوُ: (اصْطَبَرَ، وَاضْطَرَبَ، وَاطَّرَدَ، وَاظْطَلَمَ) مِنَ الصَّبْرِ، وَالضَّرْبِ، وَالطَّرْدِ، وَالظُّلْمِ.",
+          "uz": "(To — tutuq) «Ifta'ala»ning «to»si sod, zod, to yoki zodan keyin kelsa, «to» (tutuq)ga aylantiriladi; masalan: «sabr», «zarb», «tard» va «zulm»dan «istabara», «iztaraba», «ittarada» va «iztalama»."
+        },
+        {
+          "type": "para",
+          "ar": "وَيَجُوزُ فِي نَحْوِ: اظْطَلَمَ قَلْبُ الظَّاءِ طَاءً وَالطَّاءِ ظَاءً؛ فَتَقُولُ: اطَّلَمَ، وَاظَّلَمَ.",
+          "uz": "«Iztalama» kabilarda zoni «to»ga yoki «to»ni zoga aylantirish joizdir; shunday deysan: «ittalama» va «izzalama»."
+        },
+        {
+          "type": "para",
+          "ar": "(الْمِيمُ): إِذَا وَقَعَتِ النُّونُ السَّاكِنَةُ قَبْلَ بَاءٍ قُلِبَتْ مِيمًا؛ نَحْوُ: (مَنْ بَعَثَنَا).",
+          "uz": "(Mim) Sokin nun «bo»dan oldin kelsa, mimga aylantiriladi; masalan: «man ba'asano»."
+        },
+        {
+          "type": "para",
+          "ar": "وَالتَّنْوِينُ فِي الْحَقِيقَةِ نُونٌ سَاكِنَةٌ، فَيُقْلَبُ قَبْلَ الْبَاءِ أَيْضًا؛ نَحْوُ: (خَالِدٌ بَاعَ).",
+          "uz": "Tanvin haqiqatda sokin nundir; shuning uchun «bo»dan oldin u ham aylantiriladi; masalan: «Xolidun boa»."
+        },
+        {
+          "type": "para",
+          "ar": "(الْهَاءُ): تَاءُ التَّأْنِيثِ فِي الْوَقْفِ تُقْلَبُ هَاءً؛ نَحْوُ: (فَاطِمَةْ وَقَائِمَةْ).",
+          "uz": "(Ho) Ta'nis «to»si vaqf holida «ho»ga aylantiriladi; masalan: «Fotimah» va «qoimah»."
+        },
+        {
+          "type": "para",
+          "ar": "(١) الْإِبْدَالُ هُنَا فِي النُّطْقِ، لَا فِي الْخَطِّ.",
+          "uz": "(1-izoh) Bu yerdagi almashtirish talaffuzda, yozuvda emas."
+        },
+        {
+          "type": "para",
+          "ar": "(٢) الْإِبْدَالُ هُنَا فِي النُّطْقِ لَا فِي الْخَطِّ.",
+          "uz": "(2-izoh) Bu yerdagi almashtirish ham talaffuzda, yozuvda emas."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 98,
+      "page": 395,
+      "titleAr": "الْإِعْلَالُ",
+      "title": "I'lol",
+      "rule": {
+        "ar": "هُوَ تَغْيِيرُ حَرْفِ الْعِلَّةِ بِالْقَلْبِ أَوِ التَّسْكِينِ أَوِ الْحَذْفِ.",
+        "uz": "I'lol — illat harfini aylantirish, sokin qilish yoki tushirish bilan o'zgartirishdir."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "فَالْأَوَّلُ: كَقَلْبِ حَرْفِ الْعِلَّةِ فِي نَحْوِ: عَجُوزٍ، وَقِلَادَةٍ، وَصَحِيفَةٍ هَمْزَةً فِي الْجَمْعِ.",
+          "uz": "Birinchisi: «ajuz», «qiloda» va «sahifa» kabilardagi illat harfini ko'plikda hamzaga aylantirish kabi."
+        },
+        {
+          "type": "para",
+          "ar": "وَالثَّانِي: كَتَسْكِينِ الْعَيْنِ فِي نَحْوِ: يَقُومُ وَيَبِيعُ، وَاللَّامِ فِي نَحْوِ: يَدْعُو وَيَرْمِي؛ لِاسْتِثْقَالِ الضَّمَّةِ وَالْكَسْرَةِ عَلَى الْوَاوِ وَالْيَاءِ، وَالْأَصْلُ؛ كَ: يَنْصُرُ وَيَضْرِبُ.",
+          "uz": "Ikkinchisi: «yaqumu» va «yabi'u» kabilarda aynni, «yad'u» va «yarmi» kabilarda lomni sokin qilish kabi — chunki damma va kasra vov va yo ustida og'irdir; asli esa «yansuru» va «yazribu» kabidir."
+        },
+        {
+          "type": "para",
+          "ar": "وَالثَّالِثُ: كَحَذْفِ فَاءِ الْمِثَالِ فِي نَحْوِ: يَعِدُ وَيَزِنُ، وَعِدْ وَزِنْ، وَقَدْ تَقَدَّمَ كَثِيرٌ مِنْ قَوَاعِدِ الْإِعْلَالِ فِي مَوَاضِعَ مُتَفَرِّقَةٍ، فَلَا حَاجَةَ لِلتَّكْرَارِ بِإِعَادَتِهِ.",
+          "uz": "Uchinchisi: «ya'idu», «yazinu», «id» va «zin» kabilarda misolning fosini tushirish kabi. I'lol qoidalarining ko'pi turli o'rinlarda o'tgan edi; shuning uchun uni takrorlashga hojat yo'q."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 99,
+      "page": 395,
+      "titleAr": "الْوَقْفُ",
+      "title": "Vaqf",
+      "rule": {
+        "ar": "إِذَا وَقَفْتَ عَلَى اللَّفْظِ: فَإِنْ كَانَ سَاكِنَ الْآخِرِ بَقِيَ عَلَى سُكُونِهِ؛ كَ: مَنْ، وَبَلْ، وَلَمْ، وَيَكُنْ.",
+        "uz": "Bir lafzda vaqf qilsang: uning oxiri sokin bo'lsa, sukunida qoladi; masalan: «man», «bal», «lam», «yakun»."
+      },
+      "blocks": [],
+      "exercise": []
     }
   ]
 }

@@ -18658,6 +18658,103 @@
         }
       ],
       "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 76,
+      "page": 371,
+      "titleAr": "لَا سِيَّمَا",
+      "title": "«Lo siyyamo»",
+      "rule": {
+        "ar": "الاِسْمُ الْوَاقِعُ بَعْدَهَا إِنْ كَانَ نَكِرَةً جَازَ فِيهِ الرَّفْعُ عَلَى أَنَّهُ خَبَرٌ لِمُبْتَدَإٍ مَحْذُوفٍ، تَقْدِيرُهُ هُوَ، وَالْجُمْلَةُ صِلَةُ (مَا) عَلَى أَنَّهَا اسْمٌ مَوْصُولٌ، أَوْ صِفَتُهَا عَلَى أَنَّهَا نَكِرَةٌ مَوْصُوفَةٌ.",
+        "uz": "Undan keyin kelgan ism nakira bo'lsa, unda raf' joizdir — u tushirilgan mubtadoning xabari deb qaralib (taqdiri «huva»), gap esa «mo» mavsul ism deb qaralganda uning silasi, «mo» mavsufli nakira deb qaralganda esa uning sifati bo'ladi."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَيَجُوزُ فِيهِ النَّصْبُ عَلَى أَنَّهُ تَمْيِيزٌ لِـ(مَا)، وَالْجَرُّ بِإِضَافَةِ سِيٍّ إِلَيْهِ، وَ(مَا) زَائِدَةٌ؛ نَحْوُ: (وَلَا سِيَّمَا يَوْمٍ بِدَارَةِ جُلْجُلِ).",
+          "uz": "Unda nasb ham joizdir — u «mo»ning tamyizi deb qaralib; jarr ham joizdir — «siyy» unga izofa qilinib, «mo» ortiqcha bo'lgan holda; masalan: «Ayniqsa Doratu Julqulda o'tgan kun»."
+        },
+        {
+          "type": "para",
+          "ar": "وَإِنْ كَانَ مَعْرِفَةً جَازَ فِيهِ الرَّفْعُ وَالْجَرُّ فَقَطْ عَلَى الاِعْتِبَارَيْنِ السَّالِفَيْنِ.",
+          "uz": "Ma'rifa bo'lsa, o'tgan ikki e'tiborga ko'ra faqat raf' va jarr joiz bo'ladi."
+        },
+        {
+          "type": "para",
+          "ar": "وَفِي جَمِيعِ هَذِهِ الْأَحْوَالِ خَبَرُ (لَا) مَحْذُوفٌ، تَقْدِيرُهُ: مَوْجُودٌ، وَاسْمُهَا سِيٌّ، وَهِيَ بِمَعْنَى مِثْلٍ.",
+          "uz": "Bu holatlarning hammasida «lo»ning xabari tushirilgan bo'lib, taqdiri «mavjud»dir; uning ismi esa «siyy»dir — u «misl» (o'xshash) ma'nosidadir."
+        },
+        {
+          "type": "para",
+          "ar": "(١) هَذَا عَجُزُ بَيْتٍ لِامْرِئِ الْقَيْسِ، صَدْرُهُ: أَلَا رُبَّ يَوْمٍ صَالِحٍ لَكَ مِنْهُمَا.",
+          "uz": "(1-izoh) Bu — Imru'ul-Qaysning baytining ikkinchi yarmi; birinchi yarmi: «Ogoh bo'l, ulardan senga qancha yaxshi kunlar bo'lgan»."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 77,
+      "page": 372,
+      "titleAr": "الْمَطْلَبُ الثَّالِثُ فِي جَرِّ الاِسْمِ وَمَوَاضِعِهِ",
+      "title": "3-matlab: ismning jarri va o'rinlari",
+      "rule": {
+        "ar": "الْأَصْلُ فِي الْجَرِّ أَنْ يَكُونَ بِكَسْرَةٍ، وَيَنُوبُ عَنْهَا يَاءٌ فِي: الْمُثَنَّى، وَجَمْعِ الْمُذَكَّرِ السَّالِمِ، وَالْأَسْمَاءِ الْخَمْسَةِ، وَفَتْحَةٌ فِي الْمَمْنُوعِ مِنَ الصَّرْفِ إِذَا تَجَرَّدَ مِنْ أَلْ وَالْإِضَافَةِ؛ نَحْوُ: اقْتَدِ بِمُحَمَّدٍ وَالصَّاحِبَيْنِ وَالتَّابِعِينَ لِأَبِي حَنِيفَةَ.",
+        "uz": "Jarrda asl — uning kasra bilan bo'lishidir; uning o'rnini musanno, jam' muzakkar solim va besh ismda «yo»; «al»dan va izofadan xoli bo'lgan, sarfdan man qilingan ismda esa fatha bosadi; masalan: «Muhammadga, ikki sohibga va Abu Hanifaga ergashganlarga iqtido qil»."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "وَالاِسْمُ يُجَرُّ إِذَا كَانَ مَسْبُوقًا بِحَرْفٍ مِنْ حُرُوفِ الْجَرِّ، أَوْ كَانَ مُضَافًا إِلَيْهِ، وَفِيهِ مَبْحَثَانِ.",
+          "uz": "Ism jarr harflaridan biri oldidan kelsa yoki muzofun ilayh bo'lsa, jarr qilinadi. Unda ikkita mabhas bor."
+        },
+        {
+          "type": "para",
+          "ar": "(١) فَإِنْ دَخَلَتْ أَلْ عَلَى الْمَمْنُوعِ مِنَ الصَّرْفِ، أَوْ أُضِيفَ جُرَّ بِالْكَسْرَةِ عَلَى الْأَصْلِ؛ نَحْوُ: أَخَذْتُ بِالْأَحْسَنِ، أَوْ بِأَحْسَنِ الْأَقْوَالِ.",
+          "uz": "(1-izoh) Sarfdan man qilingan ismga «al» kirsa yoki u izofa qilinsa, asl bo'yicha kasra bilan jarr qilinadi; masalan: «Eng yaxshisini oldim» yoki «so'zlarning eng yaxshisini»."
+        }
+      ],
+      "exercise": []
+    },
+    {
+      "book": 4,
+      "num": 78,
+      "page": 372,
+      "titleAr": "الْمَبْحَثُ الْأَوَّلُ فِي الْمَجْرُورِ بِحَرْفِ الْجَرِّ",
+      "title": "1-mabhas: jarr harfi bilan majrur bo'lgan ism",
+      "rule": {
+        "ar": "حُرُوفُ الْجَرِّ هِيَ: مِنْ، وَإِلَى، وَعَنْ، وَعَلَى، وَفِي، وَرُبَّ، وَالْبَاءُ، وَالْكَافُ، وَاللَّامُ، وَالْوَاوُ، وَالتَّاءُ، وَمُذْ، وَمُنْذُ، وَحَتَّى، وَخَلَا، وَعَدَا، وَحَاشَا.",
+        "uz": "Jarr harflari: «min», «ilo», «an», «alo», «fi», «rubba», «bo», «kof», «lom», «vov», «to», «muz», «munzu», «hatta», «xalo», «ado», «hosho»."
+      },
+      "blocks": [
+        {
+          "type": "para",
+          "ar": "﴿سُبْحَانَ الَّذِي أَسْرَى بِعَبْدِهِ لَيْلًا مِنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى﴾.",
+          "uz": "«Bandasini kechasi Masjidul Haromdan Masjidul Aqsoga sayr qildirgan Zot pokdir»."
+        },
+        {
+          "type": "para",
+          "ar": "وَسِرْتُ عَنِ الْبَلَدِ.",
+          "uz": "«Shahardan chiqib yurdim»."
+        },
+        {
+          "type": "para",
+          "ar": "﴿وَعَلَيْهَا وَعَلَى الْفُلْكِ تُحْمَلُونَ﴾.",
+          "uz": "«Ularda va kemalarda tashiladilar»."
+        },
+        {
+          "type": "para",
+          "ar": "يَكْثُرُ اللُّؤْلُؤُ فِي بَحْرِ الْهِنْدِ.",
+          "uz": "«Hind dengizida marvarid ko'p bo'ladi»."
+        },
+        {
+          "type": "para",
+          "ar": "رُبَّ إِشَارَةٍ أَبْلَغُ مِنْ عِبَارَةٍ.",
+          "uz": "«Ba'zan bir ishora bir iboradan ta'sirliroq bo'ladi»."
+        }
+      ],
+      "exercise": []
     }
   ]
 }

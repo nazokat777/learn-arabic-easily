@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../main.dart';
 import '../theme.dart';
+import '../widgets/mastery_badge.dart';
 import 'vocab_test.dart';
 import 'word_game.dart';
 
@@ -19,8 +20,11 @@ class MashqlarHome extends StatelessWidget {
           children: [
             _intro(),
             const SizedBox(height: 16),
+            // Lug'at testi — haqiqiy test, shuning uchun belgisi ham
+            // o'zlashtirish belgisi: xatosiz o'tilmaguncha berilmaydi.
             _tile(context,
                 id: 'vocab_test',
+                mastery: true,
                 emoji: '📚',
                 title: 'Lug\'at testi',
                 sub: 'Arabcha so\'z → o\'zbekcha ma\'no',
@@ -57,12 +61,16 @@ class MashqlarHome extends StatelessWidget {
         ),
       );
 
+  /// [mastery] — belgi o'zlashtirish (xatosiz test) bo'yicha ko'rsatilsinmi.
+  /// So'z yasash o'yinida bu ma'nosiz: unda belgilangan savollar to'plami
+  /// yo'q, shuning uchun u eski «bajarildi» belgisida qoladi.
   Widget _tile(BuildContext context,
       {required String id,
       required String emoji,
       required String title,
       required String sub,
-      required Widget page}) {
+      required Widget page,
+      bool mastery = false}) {
     final done = progress.isCompleted(id);
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
@@ -98,10 +106,11 @@ class MashqlarHome extends StatelessWidget {
                     ],
                   ),
                 ),
-                if (done)
-                  const Icon(Icons.check_circle, color: AppColors.success)
-                else
-                  const Icon(Icons.chevron_right, color: AppColors.emerald),
+                if (mastery)
+                  MasteryBadge(lessonId: id, size: 22)
+                else if (done)
+                  const Icon(Icons.check_circle, color: AppColors.success),
+                const Icon(Icons.chevron_right, color: AppColors.emerald),
               ],
             ),
           ),

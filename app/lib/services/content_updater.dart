@@ -36,6 +36,7 @@ class ContentUpdater {
     'vocabulary.json',
     'qiroat_lessons.json',
     'nahv_lessons.json',
+    'ulash.json',
   ];
 
   Directory? _dir;

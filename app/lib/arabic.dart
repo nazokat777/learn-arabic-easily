@@ -179,3 +179,38 @@ String approxTranslit(String word) {
   }
   return b.toString();
 }
+
+/// So'zni HARF bo'laklariga ajratadi: har bo'lak — bitta asosiy harf va
+/// unga tegishli harakatlar («بَابٌ» → «بَ», «ا», «بٌ»).
+///
+/// Nega kerak: «harflarni ulash» darsida so'zni avval ajratilgan holda,
+/// keyin ulangan holda ko'rsatamiz. Oddiy `split('')` yaramaydi — u
+/// harakatni harfdan uzib yuboradi va ekranda harakat yolg'iz suzib
+/// qoladi.
+List<String> splitLetters(String word) {
+  final out = <String>[];
+  for (final ch in word.trim().split('')) {
+    if (ch.trim().isEmpty) continue;
+    if (ch == '‍') continue; // ZWJ — ulash belgisi, ko'rinmaydi
+    // Harakat/belgi bo'lsa — oldingi harfga qo'shiladi, alohida turmaydi.
+    if (_diacritics.hasMatch(ch) && out.isNotEmpty) {
+      out[out.length - 1] += ch;
+    } else {
+      out.add(ch);
+    }
+  }
+  return out;
+}
+
+/// Chapdagi harfga ULANMAYDIGAN harflar.
+///
+/// Bular so'z ichida zanjirni uzadi: o'zidan oldingisiga qo'shiladi, lekin
+/// o'zidan keyingisiga qo'shilmaydi. Ulash darsining o'zak qoidasi shu.
+const Set<String> ulanmasHarflar = {'ا', 'د', 'ذ', 'ر', 'ز', 'و',
+    'أ', 'إ', 'آ', 'ؤ'};
+
+/// Shu harf o'zidan keyingi harfga ulanadimi.
+bool ulanadi(String letter) {
+  final b = stripDiacritics(letter);
+  return b.isNotEmpty && !ulanmasHarflar.contains(b);
+}

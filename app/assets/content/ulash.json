@@ -1,0 +1,404 @@
+{
+  "meta": {
+    "title": "Harflarni ulash",
+    "note": "So'zlar ilovaning o'z lug'atidan olingan (vocabulary.json va qiroat darslari) — arabchasi ham, tarjimasi ham qo'lda yozilmagan. Qayta yasash: .qiroat_render/build_ulash.py"
+  },
+  "stages": [
+    {
+      "num": 1,
+      "title": "Ulanmaydigan harflar",
+      "titleAr": "الحُرُوفُ الَّتِي لَا تَتَّصِلُ",
+      "explain": "Olti harf o'zidan keyingi harfga ULANMAYDI: ا د ذ ر ز و. Shuning uchun bu so'zlarda harflar shaklini umuman o'zgartirmaydi — shunchaki yonma-yon turadi. Eng oson bosqich.",
+      "words": [
+        {
+          "ar": "دَارٌ",
+          "uz": "hovli"
+        },
+        {
+          "ar": "زِرٌّ",
+          "uz": "tugma"
+        },
+        {
+          "ar": "وَرَدَ",
+          "uz": "tushmoq, bormoq"
+        },
+        {
+          "ar": "زُورٌ",
+          "uz": "yolg'on"
+        },
+        {
+          "ar": "إِذْ",
+          "uz": "shu payt"
+        },
+        {
+          "ar": "إِذَا",
+          "uz": "qachon, agar"
+        },
+        {
+          "ar": "أَرَادَ",
+          "uz": "xohlamoq"
+        },
+        {
+          "ar": "أَدَارَ",
+          "uz": "aylanmoq"
+        },
+        {
+          "ar": "وَارِدٌ",
+          "uz": "suv ichadigan joy"
+        }
+      ]
+    },
+    {
+      "num": 2,
+      "title": "Aralash — qisqa so'zlar",
+      "titleAr": "كَلِمَاتٌ قَصِيرَةٌ",
+      "explain": "Endi ulanadigan harf ham qatnashadi. Ulanadigan harf o'zidan keyingisiga bog'lanib, shaklini o'zgartiradi; ulanmaydigani esa zanjirni uzadi. Masalan «باب»: birinchi ب ga ا ulanadi, lekin ا dan keyingi ب alohida turadi.",
+      "words": [
+        {
+          "ar": "أَبٌ",
+          "uz": "ota"
+        },
+        {
+          "ar": "أُمٌّ",
+          "uz": "ona"
+        },
+        {
+          "ar": "أَخٌ",
+          "uz": "aka (birodar)"
+        },
+        {
+          "ar": "جَدٌّ",
+          "uz": "bobo"
+        },
+        {
+          "ar": "يَدٌ",
+          "uz": "qo'l"
+        },
+        {
+          "ar": "فَمٌ",
+          "uz": "og'iz"
+        },
+        {
+          "ar": "سِنٌّ",
+          "uz": "tish"
+        },
+        {
+          "ar": "قِطٌّ",
+          "uz": "mushuk"
+        },
+        {
+          "ar": "بَابٌ",
+          "uz": "eshik"
+        },
+        {
+          "ar": "مَاءٌ",
+          "uz": "suv"
+        },
+        {
+          "ar": "مَوْزٌ",
+          "uz": "banan"
+        },
+        {
+          "ar": "دِيكٌ",
+          "uz": "xo'roz"
+        },
+        {
+          "ar": "رَأْسٌ",
+          "uz": "bosh"
+        },
+        {
+          "ar": "أَرْضٌ",
+          "uz": "yer"
+        },
+        {
+          "ar": "أَنْفٌ",
+          "uz": "burun"
+        },
+        {
+          "ar": "أُذُنٌ",
+          "uz": "quloq"
+        },
+        {
+          "ar": "رِيحٌ",
+          "uz": "shamol"
+        },
+        {
+          "ar": "شَايٌ",
+          "uz": "choy"
+        },
+        {
+          "ar": "جَدَّةٌ",
+          "uz": "buvi"
+        },
+        {
+          "ar": "أُخْتٌ",
+          "uz": "opa-singil"
+        },
+        {
+          "ar": "اِبْنٌ",
+          "uz": "o'g'il"
+        },
+        {
+          "ar": "رَجُلٌ",
+          "uz": "erkak kishi"
+        }
+      ]
+    },
+    {
+      "num": 3,
+      "title": "To'liq ulanadigan so'zlar",
+      "titleAr": "كَلِمَاتٌ مُتَّصِلَةٌ",
+      "explain": "Bu so'zlarda hamma harf bir-biriga ulanadi — so'z boshidan oxirigacha bitta zanjir bo'lib chiziladi. Harfning boshdagi, o'rtadagi va oxiridagi shakli aniq ko'rinadi.",
+      "words": [
+        {
+          "ar": "بَيْتٌ",
+          "uz": "uy"
+        },
+        {
+          "ar": "قَلَمٌ",
+          "uz": "qalam"
+        },
+        {
+          "ar": "شَمْسٌ",
+          "uz": "quyosh"
+        },
+        {
+          "ar": "قَمَرٌ",
+          "uz": "oy"
+        },
+        {
+          "ar": "كَلْبٌ",
+          "uz": "kuchuk"
+        },
+        {
+          "ar": "سَمَكٌ",
+          "uz": "baliq"
+        },
+        {
+          "ar": "لَبَنٌ",
+          "uz": "sut"
+        },
+        {
+          "ar": "عَسَلٌ",
+          "uz": "asal"
+        },
+        {
+          "ar": "عِنَبٌ",
+          "uz": "uzum"
+        },
+        {
+          "ar": "خُبْزٌ",
+          "uz": "non"
+        },
+        {
+          "ar": "جَبَلٌ",
+          "uz": "tog'"
+        },
+        {
+          "ar": "بَحْرٌ",
+          "uz": "dengiz"
+        },
+        {
+          "ar": "ثَلْجٌ",
+          "uz": "qor"
+        },
+        {
+          "ar": "حَجَرٌ",
+          "uz": "tosh"
+        },
+        {
+          "ar": "جَمَلٌ",
+          "uz": "tuya"
+        },
+        {
+          "ar": "بِنْتٌ",
+          "uz": "qiz (farzand)"
+        },
+        {
+          "ar": "عَيْنٌ",
+          "uz": "ko'z"
+        },
+        {
+          "ar": "قَلْبٌ",
+          "uz": "yurak"
+        },
+        {
+          "ar": "شَعْرٌ",
+          "uz": "soch"
+        },
+        {
+          "ar": "سُكَّرٌ",
+          "uz": "shakar"
+        },
+        {
+          "ar": "بَطَّةٌ",
+          "uz": "o'rdak"
+        },
+        {
+          "ar": "سِتَّةٌ",
+          "uz": "olti"
+        }
+      ]
+    },
+    {
+      "num": 4,
+      "title": "To'rt harfli so'zlar",
+      "titleAr": "كَلِمَاتٌ رُبَاعِيَّةٌ",
+      "explain": "So'z uzayadi, ammo qoida o'sha-o'sha. Endi bir so'z ichida ham ulanadigan, ham ulanmaydigan harflar aralash keladi.",
+      "words": [
+        {
+          "ar": "بَقَرَةٌ",
+          "uz": "sigir"
+        },
+        {
+          "ar": "بَيْضَةٌ",
+          "uz": "tuxum"
+        },
+        {
+          "ar": "تُفَّاحٌ",
+          "uz": "olma"
+        },
+        {
+          "ar": "حِصَانٌ",
+          "uz": "ot"
+        },
+        {
+          "ar": "حِمَارٌ",
+          "uz": "eshak"
+        },
+        {
+          "ar": "دَفْتَرٌ",
+          "uz": "daftar"
+        },
+        {
+          "ar": "دُكَّانٌ",
+          "uz": "do'kon"
+        },
+        {
+          "ar": "زَهْرَةٌ",
+          "uz": "gul"
+        },
+        {
+          "ar": "سَرِيرٌ",
+          "uz": "krovat"
+        },
+        {
+          "ar": "سِكِّينٌ",
+          "uz": "pichoq"
+        },
+        {
+          "ar": "سَمَاءٌ",
+          "uz": "osmon"
+        },
+        {
+          "ar": "خَمْسَةٌ",
+          "uz": "besh"
+        },
+        {
+          "ar": "سَبْعَةٌ",
+          "uz": "yetti"
+        },
+        {
+          "ar": "تِسْعَةٌ",
+          "uz": "to'qqiz"
+        },
+        {
+          "ar": "أَبْيَضُ",
+          "uz": "oq"
+        },
+        {
+          "ar": "أَحْمَرُ",
+          "uz": "qizil"
+        },
+        {
+          "ar": "أَخْضَرُ",
+          "uz": "yashil"
+        },
+        {
+          "ar": "أَزْرَقُ",
+          "uz": "ko'k"
+        },
+        {
+          "ar": "أَسْوَدُ",
+          "uz": "qora"
+        },
+        {
+          "ar": "أَصْفَرُ",
+          "uz": "sariq"
+        },
+        {
+          "ar": "حَمَّامٌ",
+          "uz": "hammom"
+        },
+        {
+          "ar": "تَاجِرٌ",
+          "uz": "tijoratchi"
+        }
+      ]
+    },
+    {
+      "num": 5,
+      "title": "Uzun so'zlar",
+      "titleAr": "كَلِمَاتٌ طَوِيلَةٌ",
+      "explain": "Oxirgi bosqich: besh-olti harfli so'zlar. Bularni ravon o'qiy olsangiz, arabcha matnni bo'g'inlab emas, so'z sifatida o'qiy boshlaysiz.",
+      "words": [
+        {
+          "ar": "مِفْتَاحٌ",
+          "uz": "kalit"
+        },
+        {
+          "ar": "نَافِذَةٌ",
+          "uz": "deraza"
+        },
+        {
+          "ar": "حَدِيقَةٌ",
+          "uz": "bog'"
+        },
+        {
+          "ar": "جَامِعَةٌ",
+          "uz": "universitet"
+        },
+        {
+          "ar": "سَحَابَةٌ",
+          "uz": "bulut"
+        },
+        {
+          "ar": "مِنْدِيلٌ",
+          "uz": "ro'molcha"
+        },
+        {
+          "ar": "ثَلَاثَةٌ",
+          "uz": "uch"
+        },
+        {
+          "ar": "أَرْبَعَةٌ",
+          "uz": "to'rt"
+        },
+        {
+          "ar": "اِثْنَانِ",
+          "uz": "ikki"
+        },
+        {
+          "ar": "ثَمَانِيَةٌ",
+          "uz": "sakkiz"
+        },
+        {
+          "ar": "بُرْتُقَالٌ",
+          "uz": "apelsin"
+        },
+        {
+          "ar": "إِنْسَانٌ",
+          "uz": "inson"
+        },
+        {
+          "ar": "أُسْبُوعٌ",
+          "uz": "hafta"
+        },
+        {
+          "ar": "إِبْرِيقٌ",
+          "uz": "choynak, ko'za"
+        }
+      ]
+    }
+  ]
+}

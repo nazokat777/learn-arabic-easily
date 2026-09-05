@@ -7,6 +7,7 @@ import 'dart:io';
 // Progress.xp ochiq maydon bo'lgani uchun asset/prefs yuklashsiz test qilamiz.
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:learn_arabic/arabic.dart';
 import 'package:learn_arabic/progress.dart';
 
 void main() {
@@ -87,6 +88,39 @@ void main() {
       expect(p.isMastered('d5'), isFalse);
       expect(p.isCompleted('d5'), isFalse);
       expect(p.bestPercent('d5'), 0);
+    });
+  });
+
+  // «Harflarni ulash» darsi so'zni harf bo'laklariga ajratib ko'rsatadi.
+  // Eng nozik joy — harakat: agar u harfdan uzilib qolsa, ekranda yolg'iz
+  // suzib qoladi va dars mazmunini yo'qotadi. Shadda va tanvin bitta
+  // harfda birga kelishi ham tekshiriladi.
+  group('Harflarga ajratish', () {
+    test('harakat o\'z harfiga qo\'shilib qoladi', () {
+      expect(splitLetters('بَابٌ'), ['بَ', 'ا', 'بٌ']);
+    });
+
+    test('shadda va tanvin birga kelganda ham uzilmaydi', () {
+      expect(splitLetters('زِرٌّ'), ['زِ', 'رٌّ']);
+      expect(splitLetters('أُمٌّ'), ['أُ', 'مٌّ']);
+    });
+
+    test('harakatsiz so\'z ham to\'g\'ri bo\'linadi', () {
+      expect(splitLetters('دار'), ['د', 'ا', 'ر']);
+    });
+
+    test('ulanmaydigan olti harf to\'g\'ri aniqlanadi', () {
+      for (final h in ['ا', 'د', 'ذ', 'ر', 'ز', 'و']) {
+        expect(ulanadi(h), isFalse, reason: '$h chapga ulanmasligi kerak');
+      }
+      for (final h in ['ب', 'ت', 'س', 'ع', 'ق', 'م']) {
+        expect(ulanadi(h), isTrue, reason: '$h chapga ulanishi kerak');
+      }
+    });
+
+    test('harakatli harf ham to\'g\'ri aniqlanadi', () {
+      expect(ulanadi('بَ'), isTrue);
+      expect(ulanadi('رٌّ'), isFalse);
     });
   });
 

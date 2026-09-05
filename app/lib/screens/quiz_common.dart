@@ -12,6 +12,13 @@ class Question {
   final int correct; // to'g'ri javob indeksi
   final String? speak; // ixtiyoriy: audio uchun arabcha matn
 
+  /// Javob variantlari ARABCHAMI.
+  ///
+  /// Kerak, chunki arabcha variant lotin shriftida va chapdan o'ngga
+  /// chizilsa o'qib bo'lmaydi: harakatlar harfdan uzilib ketadi.
+  /// Bayroq qo'yilganda variant Amiri shriftida, o'ngdan chapga chiziladi.
+  final bool arabicOptions;
+
   /// Ovoz javobni oshkor qiladimi.
   ///
   /// Harflar testida variantlar harf NOMLARI, ovoz esa aynan o'sha nom —
@@ -27,6 +34,7 @@ class Question {
     required this.correct,
     this.speak,
     this.speakRevealsAnswer = false,
+    this.arabicOptions = false,
   });
 }
 
@@ -106,6 +114,7 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
       correct: opts.indexOf(answer),
       speak: q.speak,
       speakRevealsAnswer: q.speakRevealsAnswer,
+      arabicOptions: q.arabicOptions,
     );
   }
 
@@ -295,8 +304,18 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
             child: Row(
               children: [
                 Expanded(
-                  child: Text(_q.options[i],
-                      style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: AppColors.ink)),
+                  child: _q.arabicOptions
+                      ? Directionality(
+                          textDirection: TextDirection.rtl,
+                          child: Text(_q.options[i],
+                              style: AppTheme.arabic(
+                                  size: 24, color: AppColors.ink)),
+                        )
+                      : Text(_q.options[i],
+                          style: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              color: AppColors.ink)),
                 ),
                 if (trailing != null) trailing,
               ],

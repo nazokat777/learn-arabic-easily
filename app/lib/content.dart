@@ -304,12 +304,54 @@ class QiroatLesson {
 /// Fayllar to'g'ridan-to'g'ri assets'dan emas, [ContentUpdater] orqali
 /// o'qiladi: agar saytdan yangi darslar yuklab olingan bo'lsa, o'shalar
 /// ishlatiladi; aks holda APK ichidagi nusxa.
+/// «Harflarni ulash» darsining bitta so'zi.
+class UlashWord {
+  final String ar;
+  final String uz;
+  const UlashWord({required this.ar, required this.uz});
+
+  factory UlashWord.fromJson(Map<String, dynamic> j) =>
+      UlashWord(ar: j['ar'] ?? '', uz: j['uz'] ?? '');
+}
+
+/// Ulash darsining bir bosqichi — oddiydan murakkabgacha.
+///
+/// Bosqichlar arab yozuvini o'rgatishning klassik tartibida: avval
+/// harflari chapga ulanmaydigan so'zlar (shakl o'zgarmaydi), keyin
+/// aralash qisqa so'zlar, so'ng to'liq ulanadiganlari va uzunlari.
+class UlashStage {
+  final int num;
+  final String title;
+  final String titleAr;
+  final String explain;
+  final List<UlashWord> words;
+
+  const UlashStage({
+    required this.num,
+    required this.title,
+    required this.titleAr,
+    required this.explain,
+    required this.words,
+  });
+
+  factory UlashStage.fromJson(Map<String, dynamic> j) => UlashStage(
+        num: j['num'] ?? 0,
+        title: j['title'] ?? '',
+        titleAr: j['titleAr'] ?? '',
+        explain: j['explain'] ?? '',
+        words: ((j['words'] as List?) ?? const [])
+            .map((e) => UlashWord.fromJson(e))
+            .toList(),
+      );
+}
+
 class ContentRepository {
   List<Letter> letters = [];
   List<Haraka> harakat = [];
   List<VocabWord> words = [];
   List<QiroatLesson> qiroatLessons = [];
   List<NahvLesson> nahvLessons = [];
+  List<UlashStage> ulashStages = [];
 
   bool _loaded = false;
 
@@ -329,6 +371,16 @@ class ContentRepository {
 
     final n = json.decode(await ContentUpdater.instance.read('nahv_lessons.json'));
     nahvLessons = (n['lessons'] as List).map((e) => NahvLesson.fromJson(e)).toList();
+
+    // Ulash darsi keyinroq qo'shilgan — eski APK'da fayl bo'lmasligi mumkin,
+    // shuning uchun yo'qligi ilovani to'xtatmasin.
+    try {
+      final u = json.decode(await ContentUpdater.instance.read('ulash.json'));
+      ulashStages =
+          (u['stages'] as List).map((e) => UlashStage.fromJson(e)).toList();
+    } catch (_) {
+      ulashStages = [];
+    }
 
     _loaded = true;
   }

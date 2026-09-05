@@ -5,6 +5,7 @@ import 'letters_lesson.dart';
 import 'letter_test.dart';
 import 'harakat_lesson.dart';
 import 'harakat_test.dart';
+import 'ulash_lesson.dart';
 import '../widgets/mastery_badge.dart';
 
 /// «Alifbo» fani — harf va talaffuzni o'rgatadi (harflar, testlar, harakatlar).
@@ -50,6 +51,14 @@ class AlifboHome extends StatelessWidget {
                 title: 'Harakatlar testi',
                 sub: "Belgini tanish va qanday o'qilishini bilish",
                 page: const HarakatTest()),
+            const SizedBox(height: 4),
+            const Divider(height: 24),
+            _tile(context,
+                masteryId: 'ulash_1',
+                emoji: '🔗',
+                title: 'Harflarni ulash',
+                sub: "Harflarni bog'lab o'qish — 5 bosqich, 89 ta so'z",
+                page: const UlashLesson()),
           ],
         ),
       ),

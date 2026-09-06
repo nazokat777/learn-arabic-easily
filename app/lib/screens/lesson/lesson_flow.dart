@@ -313,7 +313,11 @@ class _IntroView extends StatelessWidget {
             children: [
               const Row(
                 children: [
-                  Text('👋', style: TextStyle(fontSize: 22)),
+                  Icon(
+                    Icons.waving_hand_rounded,
+                    color: AppColors.gold,
+                    size: 22,
+                  ),
                   SizedBox(width: 8),
                   Expanded(
                     child: Text(
@@ -328,11 +332,20 @@ class _IntroView extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 12),
-              _row('📚', 'Avval $words ta so\'zni kichik guruhlarda yodlaymiz'),
-              _row('🎧', 'So\'ng $sentences ta jumlani tinglaymiz'),
-              _row('📖', 'Keyin matnni o\'zimiz o\'qib tushunamiz'),
               _row(
-                '❓',
+                Icons.style_rounded,
+                'Avval $words ta so\'zni kichik guruhlarda yodlaymiz',
+              ),
+              _row(
+                Icons.headphones_rounded,
+                'So\'ng $sentences ta jumlani tinglaymiz',
+              ),
+              _row(
+                Icons.menu_book_rounded,
+                'Keyin matnni o\'zimiz o\'qib tushunamiz',
+              ),
+              _row(
+                Icons.quiz_rounded,
                 'Oxirida savollarga javob beramiz va xatolarni ko\'ramiz',
               ),
             ],
@@ -385,12 +398,12 @@ class _IntroView extends StatelessWidget {
     );
   }
 
-  Widget _row(String e, String t) => Padding(
+  Widget _row(IconData e, String t) => Padding(
     padding: const EdgeInsets.only(bottom: 8),
     child: Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(e, style: const TextStyle(fontSize: 16)),
+        Icon(e, size: 18, color: AppColors.emerald),
         const SizedBox(width: 10),
         Expanded(
           child: Text(

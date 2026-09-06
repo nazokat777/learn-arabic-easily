@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Text;
+import 'uz_text.dart';
 
 import '../theme.dart';
 import 'motion.dart';

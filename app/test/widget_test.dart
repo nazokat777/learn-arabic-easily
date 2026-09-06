@@ -9,6 +9,7 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:learn_arabic/arabic.dart';
 import 'package:learn_arabic/progress.dart';
+import 'package:learn_arabic/uz_yozuv.dart';
 import 'package:learn_arabic/services/content_updater.dart';
 
 void main() {
@@ -246,7 +247,10 @@ void main() {
   // emas edi. Shart shu: bu turda faqat UNLI beradigan harakatlar
   // qatnashsin va ular 4 ta variantga yetsin.
   group('Harakat savoli', () {
-    const unliBermaydi = {'-', 'bb'};
+    // Testning 2-turi bo'g'inni o'qishni so'raydi: «بِ» → «bi».
+    // O'qilishi «b» + tovush deb hisoblanadi, chunki misollar «ب» harfi
+    // bilan berilgan — quyidagi birinchi test aynan shuni qo'riqlaydi.
+    const shadda = 'bb';
 
     List<Map<String, dynamic>> harakatlar() =>
         (json.decode(
@@ -255,37 +259,129 @@ void main() {
                 as List)
             .cast<Map<String, dynamic>>();
 
-    test('unli beradigan harakatlar 4 ta variantga yetadi', () {
-      final unlilar = harakatlar()
-          .map((h) => (h['sound_uz'] as String).trim())
-          .where((s) => !unliBermaydi.contains(s))
-          .toSet();
+    String oqilishi(String tovush) => tovush == '-' ? 'b' : 'b$tovush';
+
+    List<String> bogindagilar() => harakatlar()
+        .map((h) => (h['sound_uz'] as String).trim())
+        .where((t) => t != shadda)
+        .map(oqilishi)
+        .toList();
+
+    test('misollar «ب» harfi bilan berilgan', () {
+      // Agar misol boshqa harfga o'tsa, «b...» deb o'qish yolg'on bo'ladi.
+      for (final h in harakatlar()) {
+        expect(
+          (h['example_ar'] as String).startsWith('\u0628'),
+          isTrue,
+          reason: '${h['name_uz']}: ${h['example_ar']}',
+        );
+      }
+    });
+
+    test("bo'g'inlar 4 ta variantga yetadi", () {
       expect(
-        unlilar.length,
+        bogindagilar().toSet().length,
         greaterThanOrEqualTo(4),
-        reason: 'to\'rt variant yasash uchun kamida 4 xil unli kerak',
+        reason: 'to\'rt variant yasash uchun kamida 4 xil bo\'g\'in kerak',
       );
     });
 
-    test('unli tovushlar takrorlanmaydi', () {
-      // Ikki harakatning tovushi bir xil bo'lsa, variantlar ichida bir xil
-      // javob ikki marta chiqadi va biri «xato» deb belgilanadi.
-      final ro = harakatlar()
-          .map((h) => (h['sound_uz'] as String).trim())
-          .where((s) => !unliBermaydi.contains(s))
-          .toList();
-      expect(ro.toSet().length, ro.length, reason: 'takror tovush: $ro');
+    test("bo'g'inlar takrorlanmaydi", () {
+      // Ikkitasi bir xil bo'lsa, variantlar ichida bitta javob ikki marta
+      // chiqadi va biri «xato» deb belgilanadi.
+      final ro = bogindagilar();
+      expect(ro.toSet().length, ro.length, reason: 'takror: $ro');
     });
 
-    test('sukun va shadda unli sifatida so\'ralmaydi', () {
+    test("shadda bo'g'in turida so'ralmaydi", () {
+      // «بَّ» yolg'iz holda «bba» deb o'qiladi — u harfni ikkilantiradi,
+      // unli bermaydi. Nomini topish 1-turda so'raladi.
       final nomlar = <String, String>{
         for (final h in harakatlar())
           (h['sound_uz'] as String).trim(): h['name_uz'] as String,
       };
-      // Sukun unli bermaydi, shadda esa undoshni ikkilantiradi — ikkalasi
-      // ham «qanday unli beradi?» savoliga javob bo'la olmaydi.
-      expect(nomlar['-'], 'Sukun');
-      expect(nomlar['bb'], 'Shadda');
+      expect(nomlar[shadda], 'Shadda');
+      expect(bogindagilar().contains(oqilishi(shadda)), isFalse);
+    });
+
+    test('sukun unlisiz — faqat undosh', () {
+      expect(oqilishi('-'), 'b');
+      expect(oqilishi('i'), 'bi');
+    });
+  });
+
+  group('Kirill yozuvi', () {
+    test('asosiy harflar', () {
+      expect(kirillga('kitob'), 'китоб');
+      expect(kirillga('harf'), 'ҳарф');
+      expect(kirillga('qalam'), 'қалам');
+      expect(kirillga('vaqt'), 'вақт');
+      expect(kirillga('jumla'), 'жумла');
+      expect(kirillga('xato'), 'хато');
+    });
+
+    test("o' va g' — ў va ғ", () {
+      expect(kirillga("so'z"), 'сўз');
+      expect(kirillga("lug'at"), 'луғат');
+      expect(kirillga("To'g'ri"), 'Тўғри');
+      expect(kirillga("o'qish"), 'ўқиш');
+    });
+
+    test("yo' — «yo» emas, «y» + «o'»", () {
+      // Bu eng oson adashadigan joy: «yo'q» ni «ёъқ» qilib yuborish.
+      expect(kirillga("yo'q"), 'йўқ');
+      expect(kirillga("yo'l"), 'йўл');
+      expect(kirillga('yomon'), 'ёмон');
+    });
+
+    test('sh, ch va y qo\'shbirikmalari', () {
+      expect(kirillga('shu'), 'шу');
+      expect(kirillga('choy'), 'чой');
+      expect(kirillga('yaxshi'), 'яхши');
+      expect(kirillga('tayyor'), 'тайёр');
+      expect(kirillga('yuz'), 'юз');
+    });
+
+    test('e — so\'z boshida э, ichida е', () {
+      expect(kirillga('eshik'), 'эшик');
+      expect(kirillga('kel'), 'кел');
+      expect(kirillga('Endi kelasan'), 'Энди келасан');
+    });
+
+    test('tutuq belgisi — ъ', () {
+      expect(kirillga("ma'no"), 'маъно');
+      expect(kirillga("ya'ni"), 'яъни');
+      expect(kirillga("fe'l"), 'феъл');
+    });
+
+    test('arabcha, raqam va qisqartma o\'zgarmaydi', () {
+      expect(kirillga('كِتَابٌ'), 'كِتَابٌ');
+      expect(kirillga('169 dars'), '169 дарс');
+      expect(kirillga('APK yuklab oling'), 'APK юклаб олинг');
+      // Aralash satr: faqat lotin qismi o'giriladi.
+      expect(kirillga('Nahv — «النحو» kitobidan'), 'Наҳв — «النحو» китобидан');
+    });
+
+    test('ilovaning haqiqiy satrlari', () {
+      expect(kirillga('Umumiy ball'), 'Умумий балл');
+      expect(kirillga("Bo'limlar"), 'Бўлимлар');
+      expect(kirillga('Alifbo (Harflar)'), 'Алифбо (Ҳарфлар)');
+      expect(
+        kirillga("Darslar ro'yxatiga qaytish"),
+        'Дарслар рўйхатига қайтиш',
+      );
+      expect(
+        kirillga("Bu bo'g'in qanday o'qiladi?"),
+        'Бу бўғин қандай ўқилади?',
+      );
+    });
+
+    test('uz() faqat kirill rejimida o\'giradi', () {
+      UzYozuv.instance.value = Yozuv.lotin;
+      expect(uz("so'z"), "so'z");
+      UzYozuv.instance.value = Yozuv.kirill;
+      expect(uz("so'z"), 'сўз');
+      UzYozuv.instance.value = Yozuv.lotin; // keyingi testlarga toza qoldiramiz
     });
   });
 

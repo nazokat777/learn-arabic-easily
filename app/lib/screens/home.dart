@@ -1,9 +1,11 @@
 import 'package:flutter/foundation.dart' show kIsWeb;
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Text;
+import '../widgets/uz_text.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../main.dart';
 import '../theme.dart';
+import '../uz_yozuv.dart';
 import '../widgets/motion.dart';
 import '../widgets/ornament.dart';
 import 'alifbo_home.dart';
@@ -310,6 +312,7 @@ class _Hero extends StatelessWidget {
                               text: '${progress.streak} kun',
                               color: AppColors.coral,
                             ),
+                            const _YozuvTugmasi(),
                           ],
                         ),
                       ],
@@ -318,6 +321,64 @@ class _Hero extends StatelessWidget {
                 ],
               ),
             ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Lotin ↔ kirill almashtirgichi — daraja va seriya chiplari yonida.
+///
+/// Yozuvi doim O'TILADIGAN yozuvda: lotin rejimida «Кирилл» deb turadi,
+/// bosilsa kirillga o'tadi. Shu sababli o'quvchi tugmani o'qiy oladi —
+/// hatto hozirgi yozuvni qiynalib o'qiyotgan bo'lsa ham.
+///
+/// Nega hero'ning burchagida emas: u yerda `Stack` ning ustki qatlamlari
+/// (oltin nur, sarlavha qatori) bosishni yutib yuborardi — tugma ko'rinib
+/// turib, bosilmasdi. Chiplar qatorida esa hech narsa ustida turmaydi.
+class _YozuvTugmasi extends StatelessWidget {
+  const _YozuvTugmasi();
+
+  @override
+  Widget build(BuildContext context) {
+    // Tugmaning o'z yozuvi ham darrov almashishi kerak — shuning uchun u
+    // ham tinglaydi (matnlar bilan bir xil sabab: hero const shox ichida).
+    return ListenableBuilder(
+      listenable: UzYozuv.instance,
+      builder: (context, _) => _tugma(UzYozuv.instance.kirill),
+    );
+  }
+
+  Widget _tugma(bool kirill) {
+    return Tactile(
+      child: Material(
+        color: Colors.white.withValues(alpha: 0.14),
+        borderRadius: BorderRadius.circular(999),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(999),
+          onTap: UzYozuv.instance.almashtir,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Icon(
+                  Icons.translate_rounded,
+                  size: 15,
+                  color: AppColors.goldLight,
+                ),
+                const SizedBox(width: 5),
+                XomText(
+                  kirill ? 'Lotin' : 'Кирилл',
+                  style: const TextStyle(
+                    color: AppColors.goldLight,
+                    fontWeight: FontWeight.w800,
+                    fontSize: 12.5,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

@@ -1,6 +1,7 @@
 import 'dart:math';
 
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Text;
+import '../widgets/uz_text.dart';
 
 import '../content.dart';
 import '../main.dart';
@@ -16,8 +17,8 @@ import 'quiz_common.dart';
 ///
 /// Ikki xil savol beriladi:
 ///  1. belgini KO'RIB nomini topish (بَ → Fatha);
-///  2. belgining qanday O'QILISHINI topish (بِ → «i»).
-/// Ikkinchisi muhim: nomini yodlab, tovushini bilmaslik ko'p uchraydi.
+///  2. bo'g'inni O'QISH (بِ → «bi»).
+/// Ikkinchisi muhim: nomini yodlab, o'qiy olmaslik ko'p uchraydi.
 class HarakatTest extends StatelessWidget {
   const HarakatTest({super.key});
 
@@ -60,30 +61,42 @@ class HarakatTest extends StatelessWidget {
       );
     }
 
-    // 2-tur: belgi qanday UNLI beradi.
+    // 2-tur: bo'g'inni o'qish.
     //
-    // Savol ataylab «unli» deb aniq qo'yilgan. Ilgari «bu belgi qanday
-    // o'qiladi?» deb so'ralardi va ekranda «بَ» turardi — u esa «ba» deb
-    // o'qiladi, «a» deb emas. O'quvchi «ba» ni izlab topa olmasdi va
-    // savolda to'g'ri javob yo'qdek tuyulardi.
+    // Ekranda «بِ» turadi — bu bitta belgi emas, BO'G'IN: «ب» harfi va
+    // ostidagi kasra. U «bi» deb o'qiladi. Savol shuni so'raydi va
+    // variantlar ham bo'g'in bo'ladi: bi, ba, bu, bun...
     //
-    // Sukun va shadda bu turdan chiqariladi: sukun UNLI BERMAYDI, shadda
-    // esa unli emas — undoshni ikkilantiradi. Ularni unli variantlari
-    // orasiga qo'shish savolni mantiqsiz qilardi (masalan «a, un, bb, i»
-    // degan ro'yxat). Ikkalasi 1-turda — nomini topishda — baribir keladi.
-    const unliBermaydi = {'-', 'bb'};
-    final tovushli = all
-        .where((h) => !unliBermaydi.contains(h.soundUz.trim()))
-        .toList();
-    final tovushlar = tovushli.map((h) => h.soundUz).toList();
-    for (final h in tovushli) {
-      final opts = variantlar(h.soundUz, tovushlar);
+    // Ilgari bu tur ikki marta noto'g'ri qo'yilgan edi va ikkalasida ham
+    // o'quvchi to'g'ri javobni topa olmadi: avval «bu belgi qanday
+    // o'qiladi?» deb so'ralib, variantlar unli (a, i, u) edi; keyin savol
+    // «qanday unli tovush beradi?» ga o'zgartirildi, lekin ekranda baribir
+    // bo'g'in turgani uchun o'quvchi «bi» ni izlab, ro'yxatda topmadi.
+    // Xulosa: savol ekranda KO'RINIB TURGAN narsa haqida bo'lishi kerak.
+    //
+    // Shadda bu turdan chiqariladi: «بَّ» yolg'iz holda «bba» deb o'qiladi
+    // — u harfni ikkilantiradi, unli bermaydi va bo'g'in mashqiga
+    // to'g'ri kelmaydi. Nomini topish 1-turda baribir so'raladi.
+    //
+    // Misollar doim «ب» harfi bilan berilgan (harakat.json), shuning uchun
+    // o'qilishi «b» + tovush; sukunda esa unli yo'q — «b».
+    const shadda = 'bb';
+    final bogin = all.where((h) => h.soundUz.trim() != shadda).toList();
+    String oqilishi(Haraka h) {
+      final t = h.soundUz.trim();
+      return t == '-' ? 'b' : 'b$t';
+    }
+
+    final oqilishlar = bogin.map(oqilishi).toList();
+    for (final h in bogin) {
+      final togri = oqilishi(h);
+      final opts = variantlar(togri, oqilishlar);
       questions.add(
         Question(
-          promptLabel: 'Bu harakat qanday unli tovush beradi?',
+          promptLabel: 'Bu bo\'g\'in qanday o\'qiladi?',
           prompt: belgi(h),
           options: opts,
-          correct: opts.indexOf(h.soundUz),
+          correct: opts.indexOf(togri),
           // Bu yerda ovoz javobning O'ZI — faqat javobdan keyin.
           speak: h.exampleAr,
           speakRevealsAnswer: true,

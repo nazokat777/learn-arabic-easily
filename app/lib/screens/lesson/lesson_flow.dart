@@ -1,4 +1,6 @@
-import 'package:flutter/material.dart';
+import '../../uz_yozuv.dart';
+import 'package:flutter/material.dart' hide Text;
+import '../../widgets/uz_text.dart';
 import '../../arabic.dart';
 import '../../content.dart';
 import '../../main.dart';
@@ -77,7 +79,7 @@ class _LessonFlowState extends State<LessonFlow> {
         title: Text('${widget.lesson.num}-dars'),
         actions: [
           IconButton(
-            tooltip: 'To\'liq dars (matn + lug\'at)',
+            tooltip: uz('To\'liq dars (matn + lug\'at)'),
             icon: const Icon(Icons.menu_book_rounded),
             onPressed: () => Navigator.push(
               context,

@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Text;
+import '../../widgets/uz_text.dart';
 import '../../arabic.dart';
 import '../../content.dart';
 import '../../services/tts.dart';

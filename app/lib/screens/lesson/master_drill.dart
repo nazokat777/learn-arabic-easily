@@ -1,5 +1,7 @@
 import 'dart:math';
-import 'package:flutter/material.dart';
+import '../../uz_yozuv.dart';
+import 'package:flutter/material.dart' hide Text;
+import '../../widgets/uz_text.dart';
 import '../../arabic.dart';
 import '../../content.dart';
 import '../../main.dart';
@@ -924,7 +926,7 @@ class _MasterDrillState extends State<MasterDrill> {
             onPressed: () =>
                 showWordSheet(context, v, reading: widget.lesson.reading),
             icon: const Icon(Icons.info_outline, color: AppColors.emerald),
-            tooltip: 'Grammatik tahlil',
+            tooltip: uz('Grammatik tahlil'),
           ),
         ],
       ),

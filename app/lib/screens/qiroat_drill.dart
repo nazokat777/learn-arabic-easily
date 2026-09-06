@@ -1,5 +1,6 @@
 import 'dart:math';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Text;
+import '../widgets/uz_text.dart';
 import '../main.dart';
 import '../content.dart';
 import '../progress.dart';

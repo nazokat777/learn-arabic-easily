@@ -8,6 +8,7 @@ import 'services/content_updater.dart';
 import 'services/tts.dart';
 import 'services/vocab_audio.dart';
 import 'theme.dart';
+import 'uz_yozuv.dart';
 import 'screens/home.dart';
 
 late final ContentRepository repo;
@@ -19,6 +20,7 @@ Future<void> main() async {
   progress = Progress();
   await repo.load();
   await progress.load();
+  await UzYozuv.instance.load(); // lotin yoki kirill
   // Ovozni oldindan sozlaymiz — tugma bosilganda kutish bo'lmasin
   // (telefon brauzerlari kutishdan keyingi ovozni bloklaydi).
   await VocabAudio.instance.load(); // tayyor ovozlar ro'yxati
@@ -34,6 +36,8 @@ class ArabApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Diqqat: yozuv almashtirilganda bu yerdan qayta chizish SHART EMAS —
+    // har bir matn vidjeti o'zgarishni o'zi tinglaydi (widgets/uz_text.dart).
     return MaterialApp(
       title: "Arab tilini oson o'rganamiz",
       debugShowCheckedModeBanner: false,

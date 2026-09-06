@@ -1,4 +1,6 @@
-import 'package:flutter/material.dart';
+import '../uz_yozuv.dart';
+import 'package:flutter/material.dart' hide Text;
+import '../widgets/uz_text.dart';
 import '../main.dart';
 import '../arabic.dart';
 import '../content.dart';
@@ -444,7 +446,7 @@ class _VocabRow extends StatelessWidget {
               id: 'vj${v.ar}',
               size: 17,
               icon: Icons.format_quote_rounded,
-              tooltip: "Jumlada tinglash — so'z to'liq o'qiladi",
+              tooltip: uz("Jumlada tinglash — so'z to'liq o'qiladi"),
             ),
           Expanded(
             child: Text(

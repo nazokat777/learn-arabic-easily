@@ -67,8 +67,14 @@ class _ListenStageState extends State<ListenStage> {
           padding: const EdgeInsets.fromLTRB(20, 6, 20, 10),
           child: Row(
             children: [
+              const Icon(
+                Icons.headphones_rounded,
+                size: 18,
+                color: AppColors.emerald,
+              ),
+              const SizedBox(width: 6),
               const Text(
-                '🎧  Avval tinglang',
+                'Avval tinglang',
                 style: TextStyle(
                   fontWeight: FontWeight.w800,
                   color: AppColors.ink,
@@ -232,8 +238,14 @@ class _ReadStageState extends State<ReadStage> {
             children: [
               Row(
                 children: [
+                  const Icon(
+                    Icons.menu_book_rounded,
+                    size: 18,
+                    color: AppColors.emerald,
+                  ),
+                  const SizedBox(width: 6),
                   const Text(
-                    '📖  O\'qing va tushuning',
+                    'O\'qing va tushuning',
                     style: TextStyle(
                       fontWeight: FontWeight.w800,
                       color: AppColors.ink,
@@ -261,7 +273,7 @@ class _ReadStageState extends State<ReadStage> {
               ),
               const SizedBox(height: 4),
               const Text(
-                'So\'zga bosib — ma\'nosini ko\'ring. Jumlani tushunsangiz ✓ bosing.',
+                'So\'zga bosib — ma\'nosini ko\'ring. Jumlani tushunsangiz «Tushundim» ni bosing.',
                 style: TextStyle(fontSize: 11.5, color: Colors.black45),
               ),
             ],

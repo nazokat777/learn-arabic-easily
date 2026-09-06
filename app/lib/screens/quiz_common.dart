@@ -51,7 +51,7 @@ class _QItem {
   _QItem(this.q, this.retried);
 }
 
-/// Ko'p variantli interaktiv test — feedback, XP va yakuniy natija bilan.
+/// Ko'p variantli interaktiv test — feedback, ball va yakuniy natija bilan.
 class MultipleChoiceQuiz extends StatefulWidget {
   final String title;
   final String lessonId;
@@ -262,7 +262,7 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
 
   Widget _dontKnowButton() => OutlinedButton.icon(
     onPressed: _dontKnow,
-    icon: const Text('🤔', style: TextStyle(fontSize: 18)),
+    icon: const Icon(Icons.help_outline_rounded, size: 18),
     label: const Text(
       'Bilmadim — javobni ko\'rsat',
       style: TextStyle(fontWeight: FontWeight.w700),
@@ -278,7 +278,7 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
   Widget _feedback() {
     if (_selected == null) {
       return const Text(
-        '📖 Mana to\'g\'ri javob — yodlab oling',
+        'Mana to\'g\'ri javob — yodlab oling',
         style: TextStyle(
           fontWeight: FontWeight.w800,
           fontSize: 15,
@@ -288,7 +288,7 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
     }
     final ok = _selected == _q.correct;
     return Text(
-      ok ? '✅ To\'g\'ri!' : '❌ To\'g\'ri javob belgilandi',
+      ok ? 'To\'g\'ri!' : 'To\'g\'ri javob belgilandi',
       style: TextStyle(
         fontWeight: FontWeight.w800,
         fontSize: 16,
@@ -422,7 +422,11 @@ class _ResultDialog extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(mastered ? '🏆' : '💪', style: const TextStyle(fontSize: 56)),
+            Icon(
+              mastered ? Icons.emoji_events_rounded : Icons.trending_up_rounded,
+              size: 56,
+              color: mastered ? AppColors.gold : AppColors.emerald,
+            ),
             const SizedBox(height: 8),
             Text(
               mastered ? "Mukammal — o'zlashtirildi!" : 'Yaqin qoldi',
@@ -446,7 +450,7 @@ class _ResultDialog extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Text(
-                '+$earned XP',
+                '+$earned ball',
                 style: const TextStyle(
                   fontWeight: FontWeight.w800,
                   color: AppColors.gold,

@@ -82,7 +82,8 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       _ModuleCard(
                         title: 'Alifbo (Harflar)',
-                        subtitle: 'Harf va talaffuz: 28 harf, махраж, harakatlar',
+                        subtitle:
+                            'Harf va talaffuz: 28 harf, махраж, harakatlar',
                         arabic: 'أ ب ت',
                         accent: AppColors.emerald,
                         onTap: () => Navigator.push(
@@ -119,7 +120,8 @@ class HomeScreen extends StatelessWidget {
                       const SizedBox(height: 14),
                       _ModuleCard(
                         title: 'Nahv',
-                        subtitle: "Jumla tuzilishi — «الدروس النحوية» kitobidan",
+                        subtitle:
+                            "Jumla tuzilishi — «الدروس النحوية» kitobidan",
                         arabic: 'نَحْو',
                         accent: AppColors.coral,
                         onTap: () => Navigator.push(
@@ -182,7 +184,11 @@ class _Hero extends StatelessWidget {
             gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              colors: [AppColors.deep, AppColors.emeraldDark, AppColors.emerald],
+              colors: [
+                AppColors.deep,
+                AppColors.emeraldDark,
+                AppColors.emerald,
+              ],
               stops: [0, 0.55, 1],
             ),
           ),
@@ -294,12 +300,14 @@ class _Hero extends StatelessWidget {
                           runSpacing: 8,
                           children: [
                             _Chip(
-                              text: '${progress.levelName} · '
+                              text:
+                                  '${progress.levelName} · '
                                   '${progress.level}-daraja',
                               color: AppColors.gold,
                             ),
                             _Chip(
-                              text: '🔥 ${progress.streak}',
+                              icon: Icons.local_fire_department_rounded,
+                              text: '${progress.streak} kun',
                               color: AppColors.coral,
                             ),
                           ],
@@ -320,16 +328,17 @@ class _Hero extends StatelessWidget {
 /// Kun vaqtiga qarab salomlashish.
 String _salom() {
   final h = DateTime.now().hour;
-  if (h < 5) return 'Xayrli tun 🌙';
-  if (h < 12) return 'Xayrli tong ☀️';
-  if (h < 18) return 'Xayrli kun 👋';
-  return 'Xayrli kech 🌆';
+  if (h < 5) return 'Xayrli tun';
+  if (h < 12) return 'Xayrli tong';
+  if (h < 18) return 'Xayrli kun';
+  return 'Xayrli kech';
 }
 
 class _Chip extends StatelessWidget {
   final String text;
   final Color color;
-  const _Chip({required this.text, required this.color});
+  final IconData? icon;
+  const _Chip({required this.text, required this.color, this.icon});
 
   @override
   Widget build(BuildContext context) {
@@ -340,16 +349,27 @@ class _Chip extends StatelessWidget {
         borderRadius: BorderRadius.circular(999),
         border: Border.all(color: color.withValues(alpha: 0.55), width: 1),
       ),
-      child: Text(
-        text,
-        style: TextStyle(
-          color: color == AppColors.gold ? AppColors.goldLight : Colors.white,
-          fontWeight: FontWeight.w800,
-          fontSize: 12.5,
-        ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          if (icon != null) ...[
+            Icon(icon, size: 14, color: fg),
+            const SizedBox(width: 4),
+          ],
+          Text(
+            text,
+            style: TextStyle(
+              color: fg,
+              fontWeight: FontWeight.w800,
+              fontSize: 12.5,
+            ),
+          ),
+        ],
       ),
     );
   }
+
+  Color get fg => color == AppColors.gold ? AppColors.goldLight : Colors.white;
 }
 
 /// XP paneli — raqam yugurib o'sadi, chiziq silliq to'ladi.
@@ -379,7 +399,7 @@ class _XpPanel extends StatelessWidget {
             children: [
               const Expanded(
                 child: Text(
-                  'Umumiy XP',
+                  'Umumiy ball',
                   style: TextStyle(
                     color: Colors.black54,
                     fontWeight: FontWeight.w700,
@@ -390,7 +410,7 @@ class _XpPanel extends StatelessWidget {
               ),
               CountUp(
                 value: progress.xp,
-                suffix: ' XP',
+                suffix: ' ball',
                 style: const TextStyle(
                   color: AppColors.emerald,
                   fontWeight: FontWeight.w900,
@@ -410,7 +430,7 @@ class _XpPanel extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            'Keyingi darajagacha: ${100 - progress.xpInLevel} XP',
+            'Keyingi darajagacha: ${100 - progress.xpInLevel} ball',
             style: const TextStyle(color: Colors.black45, fontSize: 12.5),
           ),
         ],

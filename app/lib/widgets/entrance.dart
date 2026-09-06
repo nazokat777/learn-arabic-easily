@@ -32,10 +32,6 @@ class EntranceFade extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) => Reveal(
-    delay: delay,
-    duration: duration,
-    offsetY: offsetY,
-    child: child,
-  );
+  Widget build(BuildContext context) =>
+      Reveal(delay: delay, duration: duration, offsetY: offsetY, child: child);
 }

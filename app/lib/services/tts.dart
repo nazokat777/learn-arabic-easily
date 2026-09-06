@@ -24,7 +24,9 @@ class Tts {
     if (_ready) return;
     try {
       await _tts.setLanguage('ar-SA');
-      await _tts.setSpeechRate(kIsWeb ? 0.9 : 0.42); // sekinroq — o'rganish uchun
+      await _tts.setSpeechRate(
+        kIsWeb ? 0.9 : 0.42,
+      ); // sekinroq — o'rganish uchun
       await _tts.setPitch(1.0);
       await _tts.setVolume(1.0);
       await _tts.awaitSpeakCompletion(true);
@@ -36,8 +38,6 @@ class Tts {
     }
     _ready = true;
   }
-
-
 
   /// Ilova ishga tushganda chaqiriladi — sozlashni oldindan bajarib qo'yadi.
   ///

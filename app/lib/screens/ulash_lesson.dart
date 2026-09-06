@@ -80,7 +80,8 @@ class _QoidaCard extends StatelessWidget {
         children: [
           const Row(
             children: [
-              Text('📌 ', style: TextStyle(fontSize: 15)),
+              Icon(Icons.push_pin_rounded, size: 16, color: AppColors.gold),
+              SizedBox(width: 6),
               Text(
                 'Asosiy qoida',
                 style: TextStyle(

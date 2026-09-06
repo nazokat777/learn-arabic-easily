@@ -671,7 +671,7 @@ class Haptic {
   }
 }
 
-/// XP chipi — qiymat oshganda puls beradi va «+N» oltin yozuv yuqoriga
+/// Ball chipi — qiymat oshganda puls beradi va «+N» oltin yozuv yuqoriga
 /// uchib so'nadi. Foydalanuvchi har to'g'ri javobda mukofotni KO'RADI,
 /// faqat raqam o'zgarganini emas.
 class XpChip extends StatefulWidget {
@@ -751,11 +751,11 @@ class _XpChipState extends State<XpChip> with SingleTickerProviderStateMixin {
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Icon(Icons.bolt_rounded, size: 16, color: gold),
+                const Icon(Icons.star_rounded, size: 16, color: gold),
                 const SizedBox(width: 2),
                 CountUp(
                   value: widget.value,
-                  suffix: ' XP',
+                  suffix: ' ball',
                   duration: const Duration(milliseconds: 500),
                   style: const TextStyle(
                     fontWeight: FontWeight.w800,

@@ -34,10 +34,16 @@ class SpeakButton extends StatelessWidget {
         return IconButton(
           visualDensity: VisualDensity.compact,
           padding: EdgeInsets.zero,
-          constraints: BoxConstraints.tightFor(width: size + 16, height: size + 16),
+          constraints: BoxConstraints.tightFor(
+            width: size + 16,
+            height: size + 16,
+          ),
           tooltip: active ? 'To\'xtatish' : 'Tinglash',
-          icon: Icon(active ? Icons.stop_circle : (icon ?? Icons.volume_up_rounded),
-              size: size, color: active ? AppColors.gold : AppColors.emerald),
+          icon: Icon(
+            active ? Icons.stop_circle : (icon ?? Icons.volume_up_rounded),
+            size: size,
+            color: active ? AppColors.gold : AppColors.emerald,
+          ),
           onPressed: () {
             if (active) {
               Tts.instance.stop();

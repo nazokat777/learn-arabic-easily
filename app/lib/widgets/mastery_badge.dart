@@ -30,8 +30,11 @@ class MasteryBadge extends StatelessWidget {
         if (progress.isMastered(lessonId)) {
           return Padding(
             padding: const EdgeInsets.only(right: 4),
-            child: Icon(Icons.check_circle,
-                color: AppColors.success, size: size),
+            child: Icon(
+              Icons.check_circle,
+              color: AppColors.success,
+              size: size,
+            ),
           );
         }
         if (progress.isUntried(lessonId)) return const SizedBox.shrink();
@@ -43,13 +46,18 @@ class MasteryBadge extends StatelessWidget {
               color: AppColors.cream,
               borderRadius: BorderRadius.circular(9),
               border: Border.all(
-                  color: AppColors.gold.withValues(alpha: 0.5), width: 1),
+                color: AppColors.gold.withValues(alpha: 0.5),
+                width: 1,
+              ),
             ),
-            child: Text('${progress.bestPercent(lessonId)}%',
-                style: TextStyle(
-                    fontWeight: FontWeight.w800,
-                    fontSize: size * 0.55,
-                    color: AppColors.gold)),
+            child: Text(
+              '${progress.bestPercent(lessonId)}%',
+              style: TextStyle(
+                fontWeight: FontWeight.w800,
+                fontSize: size * 0.55,
+                color: AppColors.gold,
+              ),
+            ),
           ),
         );
       },
@@ -95,21 +103,29 @@ class MasteryCallToAction extends StatelessWidget {
               ),
               child: Row(
                 children: [
-                  Text(mastered ? '✅' : '🎯',
-                      style: const TextStyle(fontSize: 18)),
+                  Icon(
+                    mastered
+                        ? Icons.check_circle_rounded
+                        : Icons.flag_circle_rounded,
+                    size: 20,
+                    color: mastered ? AppColors.success : AppColors.gold,
+                  ),
                   const SizedBox(width: 10),
                   Expanded(
                     child: Text(
                       mastered
                           ? 'Bu dars o\'zlashtirilgan. Xohlasangiz yana '
-                              'takrorlab ko\'ring.'
+                                'takrorlab ko\'ring.'
                           : untried
-                              ? 'Dars «o\'zlashtirildi» belgisini olishi uchun '
-                                  'testni bitta ham xatosiz o\'tish kerak.'
-                              : 'Eng yaxshi natijangiz: $best%. Xatosiz '
-                                  'o\'tsangiz, dars o\'zlashtirilgan bo\'ladi.',
+                          ? 'Dars «o\'zlashtirildi» belgisini olishi uchun '
+                                'testni bitta ham xatosiz o\'tish kerak.'
+                          : 'Eng yaxshi natijangiz: $best%. Xatosiz '
+                                'o\'tsangiz, dars o\'zlashtirilgan bo\'ladi.',
                       style: const TextStyle(
-                          fontSize: 13, height: 1.35, color: AppColors.ink),
+                        fontSize: 13,
+                        height: 1.35,
+                        color: AppColors.ink,
+                      ),
                     ),
                   ),
                 ],
@@ -118,22 +134,25 @@ class MasteryCallToAction extends StatelessWidget {
             const SizedBox(height: 10),
             ElevatedButton.icon(
               style: ElevatedButton.styleFrom(
-                backgroundColor:
-                    mastered ? AppColors.gold : AppColors.emerald,
+                backgroundColor: mastered ? AppColors.gold : AppColors.emerald,
                 foregroundColor: Colors.white,
                 padding: const EdgeInsets.symmetric(vertical: 14),
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16)),
+                  borderRadius: BorderRadius.circular(16),
+                ),
               ),
               onPressed: onStart,
-              icon: Text(mastered ? '🔁' : '🎯',
-                  style: const TextStyle(fontSize: 18)),
+              icon: Icon(
+                mastered ? Icons.replay_rounded : Icons.flag_circle_rounded,
+                size: 20,
+              ),
               label: Text(
-                  mastered
-                      ? 'Yana takrorlash'
-                      : 'Testni boshlash — $what',
-                  style: const TextStyle(
-                      fontWeight: FontWeight.w800, fontSize: 15)),
+                mastered ? 'Yana takrorlash' : 'Testni boshlash — $what',
+                style: const TextStyle(
+                  fontWeight: FontWeight.w800,
+                  fontSize: 15,
+                ),
+              ),
             ),
           ],
         );

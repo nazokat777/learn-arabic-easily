@@ -15,7 +15,7 @@ void main() {
     t,
   ) async {
     await t.pumpWidget(host(const XpChip(value: 0)));
-    expect(find.textContaining('XP'), findsOneWidget);
+    expect(find.textContaining('ball'), findsOneWidget);
     await t.pumpWidget(host(const XpChip(value: 3)));
     await t.pump(const Duration(milliseconds: 100));
     expect(find.text('+3'), findsOneWidget);

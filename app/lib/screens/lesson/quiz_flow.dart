@@ -328,7 +328,9 @@ class _QuizStageState extends State<QuizStage> {
           const SizedBox(width: 8),
           Expanded(
             child: Text(
-              ok ? "To'g'ri! +2 XP" : "To'g'ri javob: ${q.options[q.correct]}",
+              ok
+                  ? "To'g'ri! +2 ball"
+                  : "To'g'ri javob: ${q.options[q.correct]}",
               style: TextStyle(
                 fontWeight: FontWeight.w800,
                 color: ok ? AppColors.success : AppColors.coral,

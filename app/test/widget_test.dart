@@ -33,9 +33,9 @@ void main() {
     });
 
     test('levelName daraja bilan mos keladi va chegaradan oshmaydi', () {
-      expect((Progress()..xp = 0).levelName, 'Mubtadi\'');
+      expect((Progress()..xp = 0).levelName, 'Bronza');
       // Juda katta XP oxirgi nom bilan cheklanadi (indeks xatosi bo'lmaydi).
-      expect((Progress()..xp = 99999).levelName, 'Alloma');
+      expect((Progress()..xp = 99999).levelName, 'Legenda');
     });
   });
 

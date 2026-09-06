@@ -67,7 +67,11 @@ class AppTheme {
   /// Amiri'da faqat 400 va 700 og'irlik bor. Oradagi qiymat so'ralsa Flutter
   /// eng yaqinini oladi, «sun'iy qalinlashtirish» qilmaydi — shuning uchun
   /// harakatlar joyida qoladi.
-  static TextStyle arabic({double size = 40, Color color = AppColors.ink, FontWeight w = FontWeight.w600}) {
+  static TextStyle arabic({
+    double size = 40,
+    Color color = AppColors.ink,
+    FontWeight w = FontWeight.w600,
+  }) {
     return TextStyle(
       fontFamily: 'Amiri',
       fontSize: size,

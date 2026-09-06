@@ -531,7 +531,7 @@ class _DoneView extends StatelessWidget {
                       const SizedBox(width: 6),
                       CountUp(
                         value: xp,
-                        suffix: ' XP',
+                        suffix: ' ball',
                         style: const TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w900,

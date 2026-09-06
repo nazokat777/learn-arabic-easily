@@ -34,8 +34,7 @@ class _WordGameState extends State<WordGame> {
     _pool = repo.words.where((w) {
       final n = baseLetters(w.ar).length;
       return n >= 3 && n <= 5;
-    }).toList()
-      ..shuffle(_rnd);
+    }).toList()..shuffle(_rnd);
     _load(0);
   }
 
@@ -99,10 +98,19 @@ class _WordGameState extends State<WordGame> {
               ),
               child: Column(
                 children: [
-                  const Text('Tuzing:', style: TextStyle(color: Colors.black54)),
+                  const Text(
+                    'Tuzing:',
+                    style: TextStyle(color: Colors.black54),
+                  ),
                   const SizedBox(height: 4),
-                  Text('«${_word.uz}»',
-                      style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 22, color: AppColors.emerald)),
+                  Text(
+                    '«${_word.uz}»',
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w800,
+                      fontSize: 22,
+                      color: AppColors.emerald,
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -118,15 +126,17 @@ class _WordGameState extends State<WordGame> {
                   color: _result == null
                       ? Colors.black12
                       : _result!
-                          ? AppColors.success
-                          : AppColors.coral,
+                      ? AppColors.success
+                      : AppColors.coral,
                   width: 2,
                 ),
               ),
               child: Directionality(
                 textDirection: TextDirection.rtl,
-                child: Text(built.isEmpty ? '…' : built,
-                    style: AppTheme.arabic(size: 52, color: AppColors.ink)),
+                child: Text(
+                  built.isEmpty ? '…' : built,
+                  style: AppTheme.arabic(size: 52, color: AppColors.ink),
+                ),
               ),
             ),
             const SizedBox(height: 8),
@@ -134,16 +144,24 @@ class _WordGameState extends State<WordGame> {
               height: 28,
               child: _result == null
                   ? (_picked.isNotEmpty
-                      ? TextButton.icon(
-                          onPressed: _undo,
-                          icon: const Icon(Icons.backspace_outlined, size: 18),
-                          label: const Text('Orqaga'))
-                      : const SizedBox())
+                        ? TextButton.icon(
+                            onPressed: _undo,
+                            icon: const Icon(
+                              Icons.backspace_outlined,
+                              size: 18,
+                            ),
+                            label: const Text('Orqaga'),
+                          )
+                        : const SizedBox())
                   : Text(
-                      _result! ? '✅ To\'g\'ri! +8 XP' : '❌ Noto\'g\'ri, qayta urinib ko\'ring',
+                      _result!
+                          ? 'To\'g\'ri! +8 ball'
+                          : 'Noto\'g\'ri, qayta urinib ko\'ring',
                       style: TextStyle(
-                          fontWeight: FontWeight.w800,
-                          color: _result! ? AppColors.success : AppColors.coral)),
+                        fontWeight: FontWeight.w800,
+                        color: _result! ? AppColors.success : AppColors.coral,
+                      ),
+                    ),
             ),
             const SizedBox(height: 24),
             // Harf tugmalari
@@ -164,11 +182,25 @@ class _WordGameState extends State<WordGame> {
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(16),
-                        border: Border.all(color: AppColors.emerald.withValues(alpha: 0.3), width: 1.5),
-                        boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.04), blurRadius: 6)],
+                        border: Border.all(
+                          color: AppColors.emerald.withValues(alpha: 0.3),
+                          width: 1.5,
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withValues(alpha: 0.04),
+                            blurRadius: 6,
+                          ),
+                        ],
                       ),
                       child: Center(
-                        child: Text(_tiles[i].letter, style: AppTheme.arabic(size: 36, color: AppColors.emerald)),
+                        child: Text(
+                          _tiles[i].letter,
+                          style: AppTheme.arabic(
+                            size: 36,
+                            color: AppColors.emerald,
+                          ),
+                        ),
                       ),
                     ),
                   ),
@@ -186,11 +218,20 @@ class _WordGameState extends State<WordGame> {
                       children: [
                         Directionality(
                           textDirection: TextDirection.rtl,
-                          child: Text(_word.ar,
-                              style: AppTheme.arabic(size: 40, color: AppColors.gold)),
+                          child: Text(
+                            _word.ar,
+                            style: AppTheme.arabic(
+                              size: 40,
+                              color: AppColors.gold,
+                            ),
+                          ),
                         ),
                         const SizedBox(width: 8),
-                        SpeakButton(text: _word.ar, id: 'oyin-${_word.ar}', size: 24),
+                        SpeakButton(
+                          text: _word.ar,
+                          id: 'oyin-${_word.ar}',
+                          size: 24,
+                        ),
                       ],
                     ),
                   const SizedBox(height: 12),
@@ -206,9 +247,17 @@ class _WordGameState extends State<WordGame> {
                             style: OutlinedButton.styleFrom(
                               padding: const EdgeInsets.symmetric(vertical: 14),
                               side: const BorderSide(color: AppColors.coral),
-                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12),
+                              ),
                             ),
-                            child: const Text('Qayta', style: TextStyle(color: AppColors.coral, fontWeight: FontWeight.w700)),
+                            child: const Text(
+                              'Qayta',
+                              style: TextStyle(
+                                color: AppColors.coral,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
                           ),
                         ),
                       if (!_result!) const SizedBox(width: 12),
@@ -218,9 +267,14 @@ class _WordGameState extends State<WordGame> {
                           style: FilledButton.styleFrom(
                             backgroundColor: AppColors.emerald,
                             padding: const EdgeInsets.symmetric(vertical: 14),
-                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
                           ),
-                          child: const Text('Keyingi so\'z', style: TextStyle(fontWeight: FontWeight.w800)),
+                          child: const Text(
+                            'Keyingi so\'z',
+                            style: TextStyle(fontWeight: FontWeight.w800),
+                          ),
                         ),
                       ),
                     ],

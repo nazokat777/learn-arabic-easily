@@ -18,9 +18,11 @@ class Progress extends ChangeNotifier {
 
   /// Ko'p usulli yodlash: so'z HAR usulda kamida bir marta to'g'ri o'tilishi kerak.
   /// Har usul — bitta bit. So'z «to'liq yodlangan» = barcha usullar bitlari yoqilgan.
-  static const int masterModeCount = 6; // tanish, teskari, eshit, top, harflar, gap
+  static const int masterModeCount =
+      6; // tanish, teskari, eshit, top, harflar, gap
   static const int allModesMask = (1 << masterModeCount) - 1; // 63
-  final Map<String, int> _modeMask = {}; // darsId::arabcha -> bajarilgan usullar bitmaskasi
+  final Map<String, int> _modeMask =
+      {}; // darsId::arabcha -> bajarilgan usullar bitmaskasi
 
   /// «O'zlashtirilgan» darslar — testdan BITTA HAM xatosiz o'tilganlari.
   ///
@@ -41,10 +43,13 @@ class Progress extends ChangeNotifier {
   double get levelProgress => xpInLevel / 100.0;
 
   static const List<String> levelNames = [
-    'Mubtadi\'', 'Mubtadi\' +', 'Mutavassit', 'Mutavassit +', 'Mutaqaddim',
-    'Mutaqaddim +', 'Muntahiy', 'Muntahiy +', 'Ustoz', 'Alloma',
+    // Xalqaro «metall» zinapoyasi — har kim tushunadi, oltin/zumrad
+    // ranglarga mos. Har 100 ball = keyingi pog'ona.
+    'Bronza', 'Bronza +', 'Kumush', 'Kumush +', 'Oltin',
+    'Oltin +', 'Platina', 'Platina +', 'Olmos', 'Legenda',
   ];
-  String get levelName => levelNames[(level - 1).clamp(0, levelNames.length - 1)];
+  String get levelName =>
+      levelNames[(level - 1).clamp(0, levelNames.length - 1)];
 
   Future<void> load() async {
     _prefs = await SharedPreferences.getInstance();
@@ -54,16 +59,22 @@ class Progress extends ChangeNotifier {
     _completed.addAll(_prefs!.getStringList('completed') ?? []);
     final ms = _prefs!.getString('mastery');
     if (ms != null) {
-      (json.decode(ms) as Map).forEach((k, v) => _mastery[k as String] = (v as num).toInt());
+      (json.decode(ms) as Map).forEach(
+        (k, v) => _mastery[k as String] = (v as num).toInt(),
+      );
     }
     final mm = _prefs!.getString('modeMask');
     if (mm != null) {
-      (json.decode(mm) as Map).forEach((k, v) => _modeMask[k as String] = (v as num).toInt());
+      (json.decode(mm) as Map).forEach(
+        (k, v) => _modeMask[k as String] = (v as num).toInt(),
+      );
     }
     _mastered.addAll(_prefs!.getStringList('mastered') ?? []);
     final bs = _prefs!.getString('best');
     if (bs != null) {
-      (json.decode(bs) as Map).forEach((k, v) => _best[k as String] = (v as num).toInt());
+      (json.decode(bs) as Map).forEach(
+        (k, v) => _best[k as String] = (v as num).toInt(),
+      );
     }
     _refreshStreak();
     notifyListeners();
@@ -91,7 +102,8 @@ class Progress extends ChangeNotifier {
   int wordModeMask(String key) => _modeMask[key] ?? 0;
 
   /// So'z shu usulda o'tilganmi.
-  bool isModeDone(String key, int mode) => (wordModeMask(key) & (1 << mode)) != 0;
+  bool isModeDone(String key, int mode) =>
+      (wordModeMask(key) & (1 << mode)) != 0;
 
   /// Bajarilgan usullar soni (0..masterModeCount).
   int masterCount(String key) {
@@ -104,7 +116,8 @@ class Progress extends ChangeNotifier {
   }
 
   /// So'z barcha usullarda yodlanganmi.
-  bool isWordMastered(String key) => (wordModeMask(key) & allModesMask) == allModesMask;
+  bool isWordMastered(String key) =>
+      (wordModeMask(key) & allModesMask) == allModesMask;
 
   /// Usul natijasini belgilash: to'g'ri bo'lsa bitni yoqadi; xato bo'lsa o'sha bitni o'chiradi.
   Future<void> markMode(String key, int mode, bool correct) async {
@@ -124,7 +137,8 @@ class Progress extends ChangeNotifier {
     if (_lastActiveDay == null) return;
     if (_lastActiveDay == today) return;
     final yesterday = DateTime.now().subtract(const Duration(days: 1));
-    final y = '${yesterday.year}-${yesterday.month.toString().padLeft(2, '0')}-${yesterday.day.toString().padLeft(2, '0')}';
+    final y =
+        '${yesterday.year}-${yesterday.month.toString().padLeft(2, '0')}-${yesterday.day.toString().padLeft(2, '0')}';
     if (_lastActiveDay != y) {
       streak = 0; // seriya uzildi
     }

@@ -292,13 +292,7 @@ class _MasterDrillState extends State<MasterDrill> {
           Center(
             child: Padding(
               padding: const EdgeInsets.only(right: 14),
-              child: Text(
-                '⭐ $_xpEarned',
-                style: const TextStyle(
-                  fontWeight: FontWeight.w800,
-                  color: AppColors.gold,
-                ),
-              ),
+              child: XpChip(value: _xpEarned),
             ),
           ),
         ],
@@ -315,7 +309,11 @@ class _MasterDrillState extends State<MasterDrill> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text('🏆', style: TextStyle(fontSize: 64)),
+            const Icon(
+              Icons.emoji_events_rounded,
+              size: 64,
+              color: AppColors.gold,
+            ),
             const SizedBox(height: 12),
             const Text(
               'Zo\'r natija!',
@@ -328,8 +326,8 @@ class _MasterDrillState extends State<MasterDrill> {
             const SizedBox(height: 8),
             Text(
               all
-                  ? 'Bu darsning barcha ${_pool.length} so\'zi 6 xil usulda chuqur yodlandi! +$_xpEarned XP'
-                  : 'Yodlangan: $_doneCount / ${_pool.length} so\'z. +$_xpEarned XP',
+                  ? 'Bu darsning barcha ${_pool.length} so\'zi 6 xil usulda chuqur yodlandi! +$_xpEarned ball'
+                  : 'Yodlangan: $_doneCount / ${_pool.length} so\'z. +$_xpEarned ball',
               textAlign: TextAlign.center,
               style: const TextStyle(
                 fontSize: 15,
@@ -883,7 +881,7 @@ class _MasterDrillState extends State<MasterDrill> {
         alignment: Alignment.center,
         child: TextButton.icon(
           onPressed: _dontKnow,
-          icon: const Text('🤔', style: TextStyle(fontSize: 18)),
+          icon: const Icon(Icons.help_outline_rounded, size: 18),
           label: const Text(
             'Bilmadim — javobni ko\'rsat',
             style: TextStyle(
@@ -904,10 +902,10 @@ class _MasterDrillState extends State<MasterDrill> {
         ? AppColors.gold
         : (ok ? AppColors.success : AppColors.coral);
     final msg = _dk
-        ? '📖 To\'g\'ri javob: $answer — yodlang'
+        ? 'To\'g\'ri javob: $answer — yodlang'
         : ok
-        ? (_mastered(v) ? '🏆 «${_head(v)}» to\'liq yodlandi!' : '✅ To\'g\'ri!')
-        : '❌ To\'g\'ri javob: $answer';
+        ? (_mastered(v) ? '«${_head(v)}» to\'liq yodlandi!' : 'To\'g\'ri!')
+        : 'To\'g\'ri javob: $answer';
     return Container(
       width: double.infinity,
       constraints: const BoxConstraints(minHeight: 58),

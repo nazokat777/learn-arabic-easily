@@ -127,7 +127,8 @@ class ContentUpdater {
       // Raqam oshgan bo'lsa YOKI kontent izi boshqacha bo'lsa yuklaymiz.
       // Iz bo'yicha tekshiruv «versiyani oshirish esdan chiqdi» degan
       // xatoni butunlay yo'q qiladi.
-      final yangilik = uzoqVersion > joriy.version ||
+      final yangilik =
+          uzoqVersion > joriy.version ||
           (uzoqHash.isNotEmpty && uzoqHash != joriy.hash);
       if (!yangilik) return false;
 
@@ -148,8 +149,9 @@ class ContentUpdater {
       }
       // Versiyani ENG OXIRIDA yozamiz — yozish yarmida uzilib qolsa,
       // ilova eski versiyada qolib, keyingi safar yana urinadi.
-      await File('${d.path}/version.json')
-          .writeAsString(utf8.decode(head.bodyBytes));
+      await File(
+        '${d.path}/version.json',
+      ).writeAsString(utf8.decode(head.bodyBytes));
       return true;
     } catch (_) {
       return false;

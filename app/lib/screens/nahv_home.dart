@@ -177,7 +177,12 @@ class NahvLessonScreen extends StatelessWidget {
             const SizedBox(height: 8),
             Row(
               children: [
-                const Text('✍️ ', style: TextStyle(fontSize: 16)),
+                const Icon(
+                  Icons.edit_note_rounded,
+                  size: 18,
+                  color: AppColors.emerald,
+                ),
+                const SizedBox(width: 6),
                 Text(
                   'Mashq — تَمْرِينٌ',
                   style: const TextStyle(
@@ -232,7 +237,12 @@ class _RuleBox extends StatelessWidget {
         children: [
           Row(
             children: [
-              const Text('📌 ', style: TextStyle(fontSize: 15)),
+              const Icon(
+                Icons.push_pin_rounded,
+                size: 16,
+                color: AppColors.gold,
+              ),
+              const SizedBox(width: 6),
               const Text(
                 'Qoida',
                 style: TextStyle(

@@ -56,7 +56,7 @@ class MashqlarHome extends StatelessWidget {
     ),
     child: const Row(
       children: [
-        Text('🧠', style: TextStyle(fontSize: 26)),
+        Icon(Icons.psychology_rounded, size: 28, color: AppColors.emerald),
         SizedBox(width: 14),
         Expanded(
           child: Text(

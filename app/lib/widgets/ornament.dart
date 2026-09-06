@@ -242,10 +242,7 @@ class OrnamentDivider extends StatelessWidget {
         height: 1,
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [
-              color.withValues(alpha: 0),
-              color.withValues(alpha: 0.55),
-            ],
+            colors: [color.withValues(alpha: 0), color.withValues(alpha: 0.55)],
           ),
         ),
       ),
@@ -255,10 +252,7 @@ class OrnamentDivider extends StatelessWidget {
         height: 1,
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [
-              color.withValues(alpha: 0.55),
-              color.withValues(alpha: 0),
-            ],
+            colors: [color.withValues(alpha: 0.55), color.withValues(alpha: 0)],
           ),
         ),
       ),

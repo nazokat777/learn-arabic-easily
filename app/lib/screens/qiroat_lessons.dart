@@ -184,25 +184,29 @@ class QiroatLessonDetail extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
-            _sectionLabel('📖', 'O\'qish matni'),
+            _sectionLabel(Icons.menu_book_rounded, 'O\'qish matni'),
             const SizedBox(height: 8),
             _ReadingBlock(lesson: lesson),
             if (lesson.translation.isNotEmpty) ...[
               const SizedBox(height: 12),
               _FoldBlock(
-                icon: '🇺🇿',
+                icon: Icons.translate_rounded,
                 title: 'Tarjimasi',
                 text: lesson.translation,
               ),
             ],
             if (lesson.exercise.isNotEmpty) ...[
               const SizedBox(height: 8),
-              _FoldBlock(icon: '✍️', title: 'Mashq', text: lesson.exercise),
+              _FoldBlock(
+                icon: Icons.edit_note_rounded,
+                title: 'Mashq',
+                text: lesson.exercise,
+              ),
             ],
             if (lesson.exerciseAnswer.isNotEmpty) ...[
               const SizedBox(height: 8),
               _FoldBlock(
-                icon: '✅',
+                icon: Icons.check_circle_rounded,
                 title: 'Mashqning javobi',
                 text: lesson.exerciseAnswer,
                 arabic: true,
@@ -211,20 +215,23 @@ class QiroatLessonDetail extends StatelessWidget {
               ),
             ],
             const SizedBox(height: 24),
-            _sectionLabel('📚', 'Lug\'at (${lesson.vocab.length} so\'z)'),
+            _sectionLabel(
+              Icons.style_rounded,
+              'Lug\'at (${lesson.vocab.length} so\'z)',
+            ),
             const SizedBox(height: 8),
             ...lesson.vocab.map(
               (v) => _VocabRow(v: v, reading: lesson.reading),
             ),
             for (final t in lesson.tables) ...[
               const SizedBox(height: 24),
-              _sectionLabel('🧾', t.title),
+              _sectionLabel(Icons.table_chart_rounded, t.title),
               const SizedBox(height: 8),
               GrammarTable(table: t),
             ],
             const SizedBox(height: 24),
             const Text(
-              '🎮 Mashqlar',
+              'Mashqlar',
               style: TextStyle(
                 fontWeight: FontWeight.w800,
                 fontSize: 15,
@@ -304,9 +311,9 @@ class QiroatLessonDetail extends StatelessWidget {
     );
   }
 
-  Widget _sectionLabel(String emoji, String text) => Row(
+  Widget _sectionLabel(IconData icon, String text) => Row(
     children: [
-      Text(emoji, style: const TextStyle(fontSize: 18)),
+      Icon(icon, size: 20, color: AppColors.emerald),
       const SizedBox(width: 8),
       Text(
         text,
@@ -508,7 +515,7 @@ class _CompleteButton extends StatelessWidget {
 /// bo'lib chiqadi: arabcha katak + uning o'zbekcha ma'nosi. Shu bilan jadval
 /// mazmuni to'liq saqlanadi va har bir arabcha shaklni tinglash mumkin.
 class _FoldBlock extends StatefulWidget {
-  final String icon;
+  final IconData icon;
   final String title;
   final String text;
   final bool arabic;
@@ -550,7 +557,8 @@ class _FoldBlockState extends State<_FoldBlock> {
               padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
               child: Row(
                 children: [
-                  Text('${widget.icon} ', style: const TextStyle(fontSize: 15)),
+                  Icon(widget.icon, size: 18, color: AppColors.emerald),
+                  const SizedBox(width: 8),
                   Expanded(
                     child: Text(
                       widget.title,

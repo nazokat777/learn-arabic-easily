@@ -25,7 +25,10 @@ class VocabTest extends StatelessWidget {
         promptLabel: 'Bu so\'z nima degani?',
         prompt: Directionality(
           textDirection: TextDirection.rtl,
-          child: Text(w.ar, style: AppTheme.arabic(size: 64, color: AppColors.emerald)),
+          child: Text(
+            w.ar,
+            style: AppTheme.arabic(size: 64, color: AppColors.emerald),
+          ),
         ),
         options: options,
         correct: options.indexOf(w.uz),

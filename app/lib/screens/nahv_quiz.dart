@@ -197,7 +197,13 @@ class _NahvQuizState extends State<NahvQuiz> {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(22)),
         title: Column(
           children: [
-            Text(mastered ? '⭐⭐⭐' : '💪', style: const TextStyle(fontSize: 34)),
+            Icon(
+              mastered
+                  ? Icons.workspace_premium_rounded
+                  : Icons.trending_up_rounded,
+              size: 40,
+              color: mastered ? AppColors.gold : AppColors.emerald,
+            ),
             const SizedBox(height: 6),
             Text(
               mastered ? 'Dars o\'zlashtirildi!' : 'Yaqin qoldi',
@@ -210,7 +216,7 @@ class _NahvQuizState extends State<NahvQuiz> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              'Birinchi urinishda: $_firstTry / $_total\n+$earned XP',
+              'Birinchi urinishda: $_firstTry / $_total\n+$earned ball',
               textAlign: TextAlign.center,
               style: const TextStyle(fontSize: 15, height: 1.5),
             ),
@@ -459,7 +465,7 @@ class _NahvQuizState extends State<NahvQuiz> {
     if (!_answered) return const SizedBox();
     final ok = _picked == _q.correct;
     return Text(
-      ok ? "✅ To'g'ri!" : '🔁 Bu savol yana qaytadi — yodlab oling',
+      ok ? "To'g'ri!" : 'Bu savol yana qaytadi — yodlab oling',
       style: TextStyle(
         fontWeight: FontWeight.w800,
         fontSize: 15,

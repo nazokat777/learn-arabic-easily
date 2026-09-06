@@ -91,7 +91,7 @@ class _WordSheet extends StatelessWidget {
             const SizedBox(height: 18),
             // Ma'no
             _card(
-              icon: '🇺🇿',
+              icon: Icons.translate_rounded,
               label: 'Ma\'nosi',
               child: Text(
                 v.uz,
@@ -107,7 +107,7 @@ class _WordSheet extends StatelessWidget {
             // Harflar
             if (letters.isNotEmpty)
               _card(
-                icon: '🔤',
+                icon: Icons.spellcheck_rounded,
                 label: 'Harflar',
                 child: Wrap(
                   spacing: 8,
@@ -138,7 +138,7 @@ class _WordSheet extends StatelessWidget {
             // Misol jumla (matndan)
             if (example != null)
               _card(
-                icon: '📖',
+                icon: Icons.menu_book_rounded,
                 label: 'Misol (dars matnidan)',
                 trailing: _PlayButton(text: example, big: false),
                 child: Directionality(
@@ -191,7 +191,7 @@ class _WordSheet extends StatelessWidget {
     }
     if (rows.isEmpty) return const SizedBox.shrink();
     return _card(
-      icon: '📐',
+      icon: Icons.account_tree_rounded,
       label: 'Grammatika',
       child: Column(children: rows),
     );
@@ -226,7 +226,7 @@ class _WordSheet extends StatelessWidget {
   );
 
   Widget _card({
-    required String icon,
+    required IconData icon,
     required String label,
     required Widget child,
     Widget? trailing,
@@ -245,7 +245,7 @@ class _WordSheet extends StatelessWidget {
       children: [
         Row(
           children: [
-            Text(icon, style: const TextStyle(fontSize: 15)),
+            Icon(icon, size: 16, color: AppColors.gold),
             const SizedBox(width: 7),
             Text(
               label,

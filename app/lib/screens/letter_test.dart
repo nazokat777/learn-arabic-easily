@@ -32,7 +32,10 @@ class LetterTest extends StatelessWidget {
       final options = [L.nameUz, ...distractors]..shuffle(rnd);
       return Question(
         promptLabel: 'Bu qaysi harf?',
-        prompt: Text(L.ar, style: AppTheme.arabic(size: 96, color: AppColors.emerald)),
+        prompt: Text(
+          L.ar,
+          style: AppTheme.arabic(size: 96, color: AppColors.emerald),
+        ),
         options: options,
         correct: options.indexOf(L.nameUz),
         // Javobdan KEYIN harf nomi o'qiladi — nomning o'zi javob bo'lgani

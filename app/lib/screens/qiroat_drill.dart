@@ -54,7 +54,8 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
   }
 
   void _buildQueue() {
-    _queue = _pool.where((v) => !progress.isWordLearned(_key(v))).toList()..shuffle(_rnd);
+    _queue = _pool.where((v) => !progress.isWordLearned(_key(v))).toList()
+      ..shuffle(_rnd);
   }
 
   void _next() {
@@ -63,17 +64,20 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
       return;
     }
     final word = _queue.first;
-    final canReverse = !word.ar.contains('،') && word.ar.characters.length <= 10;
+    final canReverse =
+        !word.ar.contains('،') && word.ar.characters.length <= 10;
     final arToUz = !canReverse || _rnd.nextBool();
     final correctVal = arToUz ? word.uz : word.ar;
-    final distractPool = _pool
-        .where((v) => v != word)
-        .map((v) => arToUz ? v.uz : v.ar)
-        .where((s) => s != correctVal)
-        .toSet()
-        .toList()
+    final distractPool =
+        _pool
+            .where((v) => v != word)
+            .map((v) => arToUz ? v.uz : v.ar)
+            .where((s) => s != correctVal)
+            .toSet()
+            .toList()
+          ..shuffle(_rnd);
+    final options = <String>[correctVal, ...distractPool.take(3)]
       ..shuffle(_rnd);
-    final options = <String>[correctVal, ...distractPool.take(3)]..shuffle(_rnd);
     _q = _Question(word, arToUz, options, options.indexOf(correctVal));
     _picked = null;
     _answered = false;
@@ -133,12 +137,15 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
     }
   }
 
-  int get _learned => _pool.where((v) => progress.isWordLearned(_key(v))).length;
+  int get _learned =>
+      _pool.where((v) => progress.isWordLearned(_key(v))).length;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('${widget.lesson.num}-dars — so\'zlarni yodlash')),
+      appBar: AppBar(
+        title: Text('${widget.lesson.num}-dars — so\'zlarni yodlash'),
+      ),
       body: SafeArea(child: _q == null ? _doneView() : _questionView()),
     );
   }
@@ -151,17 +158,31 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text('🎉', style: TextStyle(fontSize: 64)),
+            const Icon(
+              Icons.celebration_rounded,
+              size: 64,
+              color: AppColors.gold,
+            ),
             const SizedBox(height: 12),
-            const Text('Barakalla!',
-                style: TextStyle(fontSize: 26, fontWeight: FontWeight.w800, color: AppColors.emerald)),
+            const Text(
+              'Barakalla!',
+              style: TextStyle(
+                fontSize: 26,
+                fontWeight: FontWeight.w800,
+                color: AppColors.emerald,
+              ),
+            ),
             const SizedBox(height: 8),
             Text(
               allLearned
-                  ? 'Bu darsning barcha ${_pool.length} so\'zi yodlandi (har biri ${Progress.masteryGoal} marta)! +$_xpEarned XP'
-                  : 'Zo\'r! +$_xpEarned XP. Yodlangan: $_learned / ${_pool.length} so\'z.',
+                  ? 'Bu darsning barcha ${_pool.length} so\'zi yodlandi (har biri ${Progress.masteryGoal} marta)! +$_xpEarned ball'
+                  : 'Zo\'r! +$_xpEarned ball. Yodlangan: $_learned / ${_pool.length} so\'z.',
               textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 15, color: AppColors.ink, height: 1.4),
+              style: const TextStyle(
+                fontSize: 15,
+                color: AppColors.ink,
+                height: 1.4,
+              ),
             ),
             const SizedBox(height: 28),
             if (!allLearned)
@@ -177,10 +198,14 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
                   style: FilledButton.styleFrom(
                     backgroundColor: AppColors.gold,
                     padding: const EdgeInsets.symmetric(vertical: 15),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(14),
+                    ),
                   ),
-                  child: const Text('Davom etish',
-                      style: TextStyle(fontWeight: FontWeight.w800, fontSize: 16)),
+                  child: const Text(
+                    'Davom etish',
+                    style: TextStyle(fontWeight: FontWeight.w800, fontSize: 16),
+                  ),
                 ),
               ),
             if (!allLearned) const SizedBox(height: 10),
@@ -191,10 +216,18 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
                 style: OutlinedButton.styleFrom(
                   padding: const EdgeInsets.symmetric(vertical: 15),
                   side: const BorderSide(color: AppColors.emerald),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(14),
+                  ),
                 ),
-                child: const Text('Darsga qaytish',
-                    style: TextStyle(color: AppColors.emerald, fontWeight: FontWeight.w700, fontSize: 16)),
+                child: const Text(
+                  'Darsga qaytish',
+                  style: TextStyle(
+                    color: AppColors.emerald,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 16,
+                  ),
+                ),
               ),
             ),
           ],
@@ -206,8 +239,13 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
   Widget _questionView() {
     final q = _q!;
     final total = _pool.length;
-    final masterySum = _pool.fold<int>(0, (s, w) => s + progress.wordMastery(_key(w)));
-    final value = total == 0 ? 0.0 : masterySum / (total * Progress.masteryGoal);
+    final masterySum = _pool.fold<int>(
+      0,
+      (s, w) => s + progress.wordMastery(_key(w)),
+    );
+    final value = total == 0
+        ? 0.0
+        : masterySum / (total * Progress.masteryGoal);
     final wordLvl = progress.wordMastery(_key(q.word));
     return Column(
       children: [
@@ -227,10 +265,19 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
                 ),
               ),
               const SizedBox(width: 12),
-              const Text('🔥', style: TextStyle(fontSize: 18)),
+              const Icon(
+                Icons.local_fire_department_rounded,
+                size: 18,
+                color: AppColors.coral,
+              ),
               const SizedBox(width: 2),
-              Text('$_correctStreak',
-                  style: const TextStyle(fontWeight: FontWeight.w800, color: AppColors.coral)),
+              Text(
+                '$_correctStreak',
+                style: const TextStyle(
+                  fontWeight: FontWeight.w800,
+                  color: AppColors.coral,
+                ),
+              ),
             ],
           ),
         ),
@@ -239,16 +286,22 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('Yodlangan: $_learned / $total so\'z',
-                  style: const TextStyle(fontSize: 12, color: Colors.black45)),
+              Text(
+                'Yodlangan: $_learned / $total so\'z',
+                style: const TextStyle(fontSize: 12, color: Colors.black45),
+              ),
               // Shu so'zning yodlash darajasi (nuqtalar): ●●●○○
               _masteryDots(wordLvl),
             ],
           ),
         ),
         const Spacer(),
-        Text(q.arToUz ? 'Bu so\'z nima degani?' : 'Qaysi so\'z «${q.word.uz}» degani?',
-            style: const TextStyle(fontSize: 14, color: Colors.black54)),
+        Text(
+          q.arToUz
+              ? 'Bu so\'z nima degani?'
+              : 'Qaysi so\'z «${q.word.uz}» degani?',
+          style: const TextStyle(fontSize: 14, color: Colors.black54),
+        ),
         const SizedBox(height: 16),
         Container(
           margin: const EdgeInsets.symmetric(horizontal: 24),
@@ -256,24 +309,38 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(20),
-            boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 10)],
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withValues(alpha: 0.05),
+                blurRadius: 10,
+              ),
+            ],
           ),
           child: q.arToUz
               ? Directionality(
                   textDirection: TextDirection.rtl,
-                  child: Text(q.word.ar,
-                      textAlign: TextAlign.center,
-                      style: AppTheme.arabic(size: 40, color: AppColors.emerald)),
+                  child: Text(
+                    q.word.ar,
+                    textAlign: TextAlign.center,
+                    style: AppTheme.arabic(size: 40, color: AppColors.emerald),
+                  ),
                 )
-              : Text(q.word.uz,
+              : Text(
+                  q.word.uz,
                   textAlign: TextAlign.center,
                   style: const TextStyle(
-                      fontSize: 26, fontWeight: FontWeight.w800, color: AppColors.emerald)),
+                    fontSize: 26,
+                    fontWeight: FontWeight.w800,
+                    color: AppColors.emerald,
+                  ),
+                ),
         ),
         const Spacer(),
         Padding(
           padding: const EdgeInsets.fromLTRB(20, 0, 20, 8),
-          child: Column(children: List.generate(q.options.length, (i) => _optionTile(q, i))),
+          child: Column(
+            children: List.generate(q.options.length, (i) => _optionTile(q, i)),
+          ),
         ),
         _feedbackBar(q),
       ],
@@ -286,8 +353,11 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
         final on = i < lvl;
         return Padding(
           padding: const EdgeInsets.only(left: 3),
-          child: Icon(on ? Icons.circle : Icons.circle_outlined,
-              size: 9, color: on ? AppColors.success : Colors.black26),
+          child: Icon(
+            on ? Icons.circle : Icons.circle_outlined,
+            size: 9,
+            color: on ? AppColors.success : Colors.black26,
+          ),
         );
       }),
     );
@@ -324,11 +394,19 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
             child: isArabic
                 ? Directionality(
                     textDirection: TextDirection.rtl,
-                    child: Text(q.options[i], style: AppTheme.arabic(size: 24, color: AppColors.ink)),
+                    child: Text(
+                      q.options[i],
+                      style: AppTheme.arabic(size: 24, color: AppColors.ink),
+                    ),
                   )
-                : Text(q.options[i],
+                : Text(
+                    q.options[i],
                     style: const TextStyle(
-                        fontSize: 16, fontWeight: FontWeight.w600, color: AppColors.ink)),
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: AppColors.ink,
+                    ),
+                  ),
           ),
         ),
       ),
@@ -342,27 +420,37 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
         child: Center(
           child: TextButton.icon(
             onPressed: _dontKnow,
-            icon: const Text('🤔', style: TextStyle(fontSize: 18)),
-            label: const Text('Bilmadim — javobni ko\'rsat',
-                style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w700)),
+            icon: const Icon(Icons.help_outline_rounded, size: 18),
+            label: const Text(
+              'Bilmadim — javobni ko\'rsat',
+              style: TextStyle(
+                color: AppColors.gold,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
           ),
         ),
       );
     }
     final ok = !_dk && _picked == q.correct;
-    final color = _dk ? AppColors.gold : (ok ? AppColors.success : AppColors.coral);
+    final color = _dk
+        ? AppColors.gold
+        : (ok ? AppColors.success : AppColors.coral);
     final msg = _dk
-        ? '📖 To\'g\'ri javob: ${q.options[q.correct]} — yodlang'
+        ? 'To\'g\'ri javob: ${q.options[q.correct]} — yodlang'
         : ok
-            ? '✅ To\'g\'ri! +2 XP'
-            : '❌ To\'g\'ri javob: ${q.options[q.correct]}';
+        ? 'To\'g\'ri! +2 ball'
+        : 'To\'g\'ri javob: ${q.options[q.correct]}';
     return Container(
       width: double.infinity,
       height: 56,
       alignment: Alignment.centerLeft,
       color: color.withValues(alpha: 0.12),
       padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: Text(msg, style: TextStyle(fontWeight: FontWeight.w800, color: color)),
+      child: Text(
+        msg,
+        style: TextStyle(fontWeight: FontWeight.w800, color: color),
+      ),
     );
   }
 }

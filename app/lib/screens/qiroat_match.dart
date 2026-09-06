@@ -123,13 +123,25 @@ class _QiroatMatchGameState extends State<QiroatMatchGame> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Text('🎯', style: TextStyle(fontSize: 56)),
+              const Icon(
+                Icons.celebration_rounded,
+                size: 56,
+                color: AppColors.gold,
+              ),
               const SizedBox(height: 8),
-              const Text('Ajoyib!',
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.w800, color: AppColors.emerald)),
+              const Text(
+                'Ajoyib!',
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.w800,
+                  color: AppColors.emerald,
+                ),
+              ),
               const SizedBox(height: 8),
-              Text('${_all.length} juft · $_mistakes xato · +$_xp XP',
-                  style: const TextStyle(fontSize: 15, color: Colors.black54)),
+              Text(
+                '${_all.length} juft · $_mistakes xato · +$_xp ball',
+                style: const TextStyle(fontSize: 15, color: Colors.black54),
+              ),
               const SizedBox(height: 20),
               Row(
                 children: [
@@ -149,10 +161,17 @@ class _QiroatMatchGameState extends State<QiroatMatchGame> {
                       style: OutlinedButton.styleFrom(
                         padding: const EdgeInsets.symmetric(vertical: 14),
                         side: const BorderSide(color: AppColors.emerald),
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
                       ),
-                      child: const Text('Yana',
-                          style: TextStyle(color: AppColors.emerald, fontWeight: FontWeight.w700)),
+                      child: const Text(
+                        'Yana',
+                        style: TextStyle(
+                          color: AppColors.emerald,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
                     ),
                   ),
                   const SizedBox(width: 12),
@@ -165,9 +184,14 @@ class _QiroatMatchGameState extends State<QiroatMatchGame> {
                       style: FilledButton.styleFrom(
                         backgroundColor: AppColors.emerald,
                         padding: const EdgeInsets.symmetric(vertical: 14),
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
                       ),
-                      child: const Text('Tayyor', style: TextStyle(fontWeight: FontWeight.w700)),
+                      child: const Text(
+                        'Tayyor',
+                        style: TextStyle(fontWeight: FontWeight.w700),
+                      ),
                     ),
                   ),
                 ],
@@ -198,8 +222,10 @@ class _QiroatMatchGameState extends State<QiroatMatchGame> {
         padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
         child: Column(
           children: [
-            const Text('Arabcha so\'zni ma\'nosi bilan juftlang',
-                style: TextStyle(color: Colors.black54, fontSize: 14)),
+            const Text(
+              'Arabcha so\'zni ma\'nosi bilan juftlang',
+              style: TextStyle(color: Colors.black54, fontSize: 14),
+            ),
             const SizedBox(height: 16),
             Expanded(
               child: Row(
@@ -209,7 +235,9 @@ class _QiroatMatchGameState extends State<QiroatMatchGame> {
                   Expanded(
                     child: Column(
                       children: List.generate(
-                          _left.length, (i) => _tile(i, true)),
+                        _left.length,
+                        (i) => _tile(i, true),
+                      ),
                     ),
                   ),
                   const SizedBox(width: 12),
@@ -217,7 +245,9 @@ class _QiroatMatchGameState extends State<QiroatMatchGame> {
                   Expanded(
                     child: Column(
                       children: List.generate(
-                          _right.length, (j) => _tile(j, false)),
+                        _right.length,
+                        (j) => _tile(j, false),
+                      ),
                     ),
                   ),
                 ],
@@ -272,14 +302,24 @@ class _QiroatMatchGameState extends State<QiroatMatchGame> {
                       textDirection: TextDirection.rtl,
                       child: FittedBox(
                         fit: BoxFit.scaleDown,
-                        child: Text(_firstForm(word.ar),
-                            style: AppTheme.arabic(size: 24, color: AppColors.emerald)),
+                        child: Text(
+                          _firstForm(word.ar),
+                          style: AppTheme.arabic(
+                            size: 24,
+                            color: AppColors.emerald,
+                          ),
+                        ),
                       ),
                     )
-                  : Text(word.uz,
+                  : Text(
+                      word.uz,
                       textAlign: TextAlign.center,
                       style: const TextStyle(
-                          fontSize: 14.5, fontWeight: FontWeight.w600, color: AppColors.ink)),
+                        fontSize: 14.5,
+                        fontWeight: FontWeight.w600,
+                        color: AppColors.ink,
+                      ),
+                    ),
             ),
           ),
         ),

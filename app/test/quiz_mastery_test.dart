@@ -16,28 +16,30 @@ import 'package:learn_arabic/progress.dart';
 import 'package:learn_arabic/screens/quiz_common.dart';
 
 List<Question> _ikkiSavol() => [
-      Question(
-        prompt: const Text('P1'),
-        promptLabel: 'Savol 1',
-        options: const ['A', 'B'],
-        correct: 0,
-      ),
-      Question(
-        prompt: const Text('P2'),
-        promptLabel: 'Savol 2',
-        options: const ['C', 'D'],
-        correct: 1,
-      ),
-    ];
+  Question(
+    prompt: const Text('P1'),
+    promptLabel: 'Savol 1',
+    options: const ['A', 'B'],
+    correct: 0,
+  ),
+  Question(
+    prompt: const Text('P2'),
+    promptLabel: 'Savol 2',
+    options: const ['C', 'D'],
+    correct: 1,
+  ),
+];
 
 Future<void> _ochish(WidgetTester tester, String lessonId) async {
-  await tester.pumpWidget(MaterialApp(
-    home: MultipleChoiceQuiz(
-      title: 'Sinov',
-      lessonId: lessonId,
-      questions: _ikkiSavol(),
+  await tester.pumpWidget(
+    MaterialApp(
+      home: MultipleChoiceQuiz(
+        title: 'Sinov',
+        lessonId: lessonId,
+        questions: _ikkiSavol(),
+      ),
     ),
-  ));
+  );
   await tester.pump();
 }
 
@@ -46,23 +48,26 @@ void main() {
   // marta beriladi.
   progress = Progress();
 
-  testWidgets('hamma javob birinchi urinishda to\'g\'ri bo\'lsa — o\'zlashtirildi',
-      (tester) async {
-    await _ochish(tester, 'w_ok');
-    await tester.tap(find.text('A'));
-    await tester.pump();
-    await tester.pump(const Duration(milliseconds: 800));
-    await tester.tap(find.text('D'));
-    await tester.pump();
-    await tester.pump(const Duration(milliseconds: 800));
-    await tester.pump();
+  testWidgets(
+    'hamma javob birinchi urinishda to\'g\'ri bo\'lsa — o\'zlashtirildi',
+    (tester) async {
+      await _ochish(tester, 'w_ok');
+      await tester.tap(find.text('A'));
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 800));
+      await tester.tap(find.text('D'));
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 800));
+      await tester.pump();
 
-    expect(progress.isMastered('w_ok'), isTrue);
-    expect(progress.bestPercent('w_ok'), 100);
-  });
+      expect(progress.isMastered('w_ok'), isTrue);
+      expect(progress.bestPercent('w_ok'), 100);
+    },
+  );
 
-  testWidgets('bitta xato bo\'lsa — savol qaytadi va o\'zlashtirish berilmaydi',
-      (tester) async {
+  testWidgets('bitta xato bo\'lsa — savol qaytadi va o\'zlashtirish berilmaydi', (
+    tester,
+  ) async {
     await _ochish(tester, 'w_bad');
 
     // 1-savolga XATO javob.
@@ -76,8 +81,11 @@ void main() {
     await tester.pump(const Duration(milliseconds: 800));
 
     // Xato savol navbat oxiriga qaytgan bo'lishi kerak — test tugamagan.
-    expect(find.text('A'), findsOneWidget,
-        reason: 'xato qilingan savol qaytmadi');
+    expect(
+      find.text('A'),
+      findsOneWidget,
+      reason: 'xato qilingan savol qaytmadi',
+    );
 
     // Endi uni to'g'ri yechamiz — test tugaydi, lekin belgi berilmaydi.
     await tester.tap(find.text('A'));
@@ -85,8 +93,15 @@ void main() {
     await tester.pump(const Duration(milliseconds: 800));
     await tester.pump();
 
-    expect(progress.isMastered('w_bad'), isFalse,
-        reason: 'xatodan keyin qayta to\'g\'ri javob o\'zlashtirish bermasligi kerak');
-    expect(progress.bestPercent('w_bad'), 50); // 2 tadan 1 tasi birinchi urinishda
+    expect(
+      progress.isMastered('w_bad'),
+      isFalse,
+      reason:
+          'xatodan keyin qayta to\'g\'ri javob o\'zlashtirish bermasligi kerak',
+    );
+    expect(
+      progress.bestPercent('w_bad'),
+      50,
+    ); // 2 tadan 1 tasi birinchi urinishda
   });
 }

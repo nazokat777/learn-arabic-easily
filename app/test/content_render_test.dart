@@ -11,7 +11,8 @@ import 'package:learn_arabic/arabic.dart';
 
 void main() {
   final raw = File('assets/content/qiroat_lessons.json').readAsStringSync();
-  final lessons = (json.decode(raw)['lessons'] as List).cast<Map<String, dynamic>>();
+  final lessons = (json.decode(raw)['lessons'] as List)
+      .cast<Map<String, dynamic>>();
 
   String id(Map l) => 'b${l['book'] ?? 1}-L${l['num']}';
 
@@ -31,8 +32,10 @@ void main() {
         // lessons 30, 36, 42, 47 and 53 were each checked against the page
         // image and are faithful).
         if (s.length > 600) {
-          problems.add('${id(l)}: sentence of ${s.length} chars — '
-              '"${s.substring(0, 60)}…"');
+          problems.add(
+            '${id(l)}: sentence of ${s.length} chars — '
+            '"${s.substring(0, 60)}…"',
+          );
         }
         if (tokenize(s).where((t) => t.isWord).isEmpty) {
           problems.add('${id(l)}: sentence with no tappable word — "$s"');
@@ -77,15 +80,21 @@ void main() {
       final nums = byBook[book]!..sort();
       expect(nums.length, count, reason: 'book $book lesson count');
       expect(nums.toSet().length, count, reason: 'book $book has duplicates');
-      expect(nums, List.generate(count, (i) => i + 1),
-          reason: 'book $book numbering has a gap');
+      expect(
+        nums,
+        List.generate(count, (i) => i + 1),
+        reason: 'book $book numbering has a gap',
+      );
     });
   });
 
   test('alphabet data matches standard Arabic', () {
-    final letters = (json.decode(
-            File('assets/content/letters.json').readAsStringSync())['letters']
-        as List).cast<Map<String, dynamic>>();
+    final letters =
+        (json.decode(
+                  File('assets/content/letters.json').readAsStringSync(),
+                )['letters']
+                as List)
+            .cast<Map<String, dynamic>>();
 
     // Standart hijoiy tartib — kitoblar ham shu tartibda o'rgatadi.
     const order = 'ابتثجحخدذرزسشصضطظعغفقكلمنهوي';
@@ -95,23 +104,32 @@ void main() {
     // Faqat shu olti harf o'zidan keyingisiga ulanmaydi.
     const nonConnecting = {'ا', 'د', 'ذ', 'ر', 'ز', 'و'};
     for (final l in letters) {
-      expect(l['connectsLeft'], !nonConnecting.contains(l['ar']),
-          reason: 'ulanish belgisi: ${l['ar']}');
+      expect(
+        l['connectsLeft'],
+        !nonConnecting.contains(l['ar']),
+        reason: 'ulanish belgisi: ${l['ar']}',
+      );
       expect((l['name_ar'] as String).trim(), isNotEmpty);
     }
   });
 
   test('letter quiz can always build four distinct options', () {
-    final letters = (json.decode(
-            File('assets/content/letters.json').readAsStringSync())['letters']
-        as List).cast<Map<String, dynamic>>();
+    final letters =
+        (json.decode(
+                  File('assets/content/letters.json').readAsStringSync(),
+                )['letters']
+                as List)
+            .cast<Map<String, dynamic>>();
     // ح va ه ning o'zbekcha nomi bir xil («Haa»), shuning uchun variantlar
     // NOM bo'yicha ajratiladi. Har bir harf uchun kamida 3 ta boshqa nom
     // topilishi shart, aks holda test savoli to'liq chiqmaydi.
     final names = letters.map((l) => l['name_uz'] as String).toList();
     for (final n in names) {
-      expect(names.where((x) => x != n).toSet().length, greaterThanOrEqualTo(3),
-          reason: 'variant yetarli emas: $n');
+      expect(
+        names.where((x) => x != n).toSet().length,
+        greaterThanOrEqualTo(3),
+        reason: 'variant yetarli emas: $n',
+      );
     }
   });
 }

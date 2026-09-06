@@ -16,6 +16,13 @@ class PremiumTile extends StatelessWidget {
   final String title;
   final String subtitle;
 
+  /// Arabcha izoh — sarlavha ostida, Amiri shriftida va o'ngdan chapga.
+  ///
+  /// Nega alohida slot: dars sarlavhalari arabcha keladi va ularni oddiy
+  /// [subtitle] ga qo'ysak, Nunito shriftida chiziladi — harakatlar
+  /// harfdan ajralib, so'z ustida suzib qoladi.
+  final String? arabicSubtitle;
+
   /// Ikonka tilesida ko'rsatiladigan narsa — uchalasidan bittasi.
   /// [label] — oddiy matn (masalan kitob raqami), Nunito shriftida.
   final IconData? icon;
@@ -33,7 +40,8 @@ class PremiumTile extends StatelessWidget {
   const PremiumTile({
     super.key,
     required this.title,
-    required this.subtitle,
+    this.subtitle = '',
+    this.arabicSubtitle,
     this.icon,
     this.arabic,
     this.label,
@@ -130,15 +138,30 @@ class PremiumTile extends StatelessWidget {
                                 letterSpacing: -0.2,
                               ),
                             ),
-                            const SizedBox(height: 3),
-                            Text(
-                              subtitle,
-                              style: const TextStyle(
-                                color: Colors.black54,
-                                fontSize: 12.5,
-                                height: 1.3,
+                            if (arabicSubtitle != null) ...[
+                              const SizedBox(height: 2),
+                              Directionality(
+                                textDirection: TextDirection.rtl,
+                                child: Text(
+                                  arabicSubtitle!,
+                                  style: AppTheme.arabic(
+                                    size: 17,
+                                    color: accent,
+                                  ),
+                                ),
                               ),
-                            ),
+                            ],
+                            if (subtitle.isNotEmpty) ...[
+                              const SizedBox(height: 3),
+                              Text(
+                                subtitle,
+                                style: const TextStyle(
+                                  color: Colors.black54,
+                                  fontSize: 12.5,
+                                  height: 1.3,
+                                ),
+                              ),
+                            ],
                           ],
                         ),
                       ),

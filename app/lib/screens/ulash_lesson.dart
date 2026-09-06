@@ -5,6 +5,7 @@ import '../content.dart';
 import '../main.dart';
 import '../theme.dart';
 import '../widgets/mastery_badge.dart';
+import '../widgets/premium_tile.dart';
 import '../widgets/speak_button.dart';
 import 'ulash_test.dart';
 
@@ -44,71 +45,15 @@ class UlashLesson extends StatelessWidget {
     );
   }
 
-  Widget _stageTile(BuildContext context, UlashStage st) => Padding(
-    padding: const EdgeInsets.only(bottom: 12),
-    child: Material(
-      color: Colors.white,
-      borderRadius: BorderRadius.circular(18),
-      child: InkWell(
-        borderRadius: BorderRadius.circular(18),
-        onTap: () => Navigator.push(
-          context,
-          MaterialPageRoute(builder: (_) => UlashStageScreen(stage: st)),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(14),
-          child: Row(
-            children: [
-              Container(
-                width: 52,
-                height: 52,
-                decoration: BoxDecoration(
-                  gradient: const LinearGradient(
-                    colors: [AppColors.emerald, AppColors.emeraldDark],
-                  ),
-                  borderRadius: BorderRadius.circular(14),
-                ),
-                child: Center(
-                  child: Text(
-                    '${st.num}',
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w800,
-                      fontSize: 22,
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(width: 14),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      st.title,
-                      style: const TextStyle(
-                        fontWeight: FontWeight.w800,
-                        fontSize: 15.5,
-                        color: AppColors.ink,
-                      ),
-                    ),
-                    const SizedBox(height: 2),
-                    Text(
-                      "${st.words.length} ta so'z",
-                      style: const TextStyle(
-                        color: Colors.black54,
-                        fontSize: 12.5,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              MasteryBadge(lessonId: ulashLessonId(st.num), size: 22),
-              const Icon(Icons.chevron_right, color: AppColors.emerald),
-            ],
-          ),
-        ),
-      ),
+  Widget _stageTile(BuildContext context, UlashStage st) => PremiumTile(
+    title: st.title,
+    subtitle: "${st.words.length} ta so'z",
+    label: '${st.num}',
+    accent: AppColors.amber,
+    trailing: MasteryBadge(lessonId: ulashLessonId(st.num), size: 22),
+    onTap: () => Navigator.push(
+      context,
+      MaterialPageRoute(builder: (_) => UlashStageScreen(stage: st)),
     ),
   );
 }

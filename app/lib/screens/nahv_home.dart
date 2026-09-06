@@ -5,6 +5,7 @@ import '../content.dart';
 import '../theme.dart';
 import '../widgets/entrance.dart';
 import '../widgets/mastery_badge.dart';
+import '../widgets/premium_tile.dart';
 import '../widgets/grammar_table.dart';
 import '../widgets/speak_button.dart';
 import 'lesson/sentence_text.dart';
@@ -36,8 +37,10 @@ class NahvHome extends StatelessWidget {
             ),
             child: Row(
               children: [
-                Text('نَحْو',
-                    style: AppTheme.arabic(size: 30, color: AppColors.emerald)),
+                Text(
+                  'نَحْو',
+                  style: AppTheme.arabic(size: 30, color: AppColors.emerald),
+                ),
                 const SizedBox(width: 14),
                 const Expanded(
                   child: Text(
@@ -51,8 +54,10 @@ class NahvHome extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           if (lessons.isEmpty)
-            const Text('Darslar hali qo\'shilmagan.',
-                style: TextStyle(color: Colors.black54))
+            const Text(
+              'Darslar hali qo\'shilmagan.',
+              style: TextStyle(color: Colors.black54),
+            )
           else
             // Kitoblar bo'yicha ajratamiz: dars raqamlari har kitobda
             // qaytadan boshlanadi, aralashsa o'quvchi adashadi.
@@ -63,25 +68,35 @@ class NahvHome extends StatelessWidget {
                 final l = lessons[i];
                 if (l.book != oxirgiKitob) {
                   oxirgiKitob = l.book;
-                  out.add(Padding(
-                    padding: EdgeInsets.only(top: i == 0 ? 0 : 14, bottom: 10),
-                    child: Row(
-                      children: [
-                        Text('${l.book}-kitob',
+                  out.add(
+                    Padding(
+                      padding: EdgeInsets.only(
+                        top: i == 0 ? 0 : 14,
+                        bottom: 10,
+                      ),
+                      child: Row(
+                        children: [
+                          Text(
+                            '${l.book}-kitob',
                             style: const TextStyle(
-                                fontWeight: FontWeight.w800,
-                                color: AppColors.gold,
-                                fontSize: 13)),
-                        const SizedBox(width: 10),
-                        const Expanded(child: Divider(height: 1)),
-                      ],
+                              fontWeight: FontWeight.w800,
+                              color: AppColors.gold,
+                              fontSize: 13,
+                            ),
+                          ),
+                          const SizedBox(width: 10),
+                          const Expanded(child: Divider(height: 1)),
+                        ],
+                      ),
                     ),
-                  ));
+                  );
                 }
-                out.add(EntranceFade(
-                  delay: Duration(milliseconds: 40 + (i < 12 ? i : 12) * 45),
-                  child: _tile(context, l),
-                ));
+                out.add(
+                  EntranceFade(
+                    delay: Duration(milliseconds: 40 + (i < 12 ? i : 12) * 45),
+                    child: _tile(context, l),
+                  ),
+                );
               }
               return out;
             }(),
@@ -90,64 +105,19 @@ class NahvHome extends StatelessWidget {
     );
   }
 
-  Widget _tile(BuildContext context, NahvLesson l) => Padding(
-        padding: const EdgeInsets.only(bottom: 12),
-        child: Material(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(18),
-          child: InkWell(
-            borderRadius: BorderRadius.circular(18),
-            onTap: () => Navigator.push(context,
-                MaterialPageRoute(builder: (_) => NahvLessonScreen(lesson: l))),
-            child: Padding(
-              padding: const EdgeInsets.all(14),
-              child: Row(
-                children: [
-                  Container(
-                    width: 52,
-                    height: 52,
-                    decoration: BoxDecoration(
-                      gradient: const LinearGradient(
-                          colors: [AppColors.emerald, AppColors.emeraldDark]),
-                      borderRadius: BorderRadius.circular(14),
-                    ),
-                    child: Center(
-                      child: Text('${l.num}',
-                          style: const TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w800,
-                              fontSize: 22)),
-                    ),
-                  ),
-                  const SizedBox(width: 14),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(l.title,
-                            style: const TextStyle(
-                                fontWeight: FontWeight.w800,
-                                fontSize: 16,
-                                color: AppColors.ink)),
-                        const SizedBox(height: 2),
-                        Text(l.titleAr,
-                            textDirection: TextDirection.rtl,
-                            style: AppTheme.arabic(
-                                size: 18, color: AppColors.emerald)),
-                      ],
-                    ),
-                  ),
-                  // O'zlashtirish holati: ✅ faqat test XATOSIZ o'tilganda
-                  // chiqadi. Shunchaki darsni ochib chiqish belgi bermaydi —
-                  // aks holda belgining ma'nosi qolmasdi.
-                  MasteryBadge(lessonId: 'nahv-${l.book}-${l.num}'),
-                  const Icon(Icons.chevron_right, color: AppColors.emerald),
-                ],
-              ),
-            ),
-          ),
-        ),
-      );
+  Widget _tile(BuildContext context, NahvLesson l) => PremiumTile(
+    title: l.title,
+    arabicSubtitle: l.titleAr,
+    label: '${l.num}',
+    accent: AppColors.coral,
+    // O'zlashtirish holati: belgi faqat test XATOSIZ o'tilganda chiqadi.
+    // Shunchaki darsni ochib chiqish belgi bermaydi.
+    trailing: MasteryBadge(lessonId: 'nahv-${l.book}-${l.num}', size: 22),
+    onTap: () => Navigator.push(
+      context,
+      MaterialPageRoute(builder: (_) => NahvLessonScreen(lesson: l)),
+    ),
+  );
 }
 
 /// Bitta nahv darsi: qoida, izoh va misollar.
@@ -163,15 +133,24 @@ class NahvLessonScreen extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
         children: [
           Center(
-            child: Text(lesson.titleAr,
-                textDirection: TextDirection.rtl,
-                style: AppTheme.arabic(
-                    size: 28, color: AppColors.emerald, w: FontWeight.w700)),
+            child: Text(
+              lesson.titleAr,
+              textDirection: TextDirection.rtl,
+              style: AppTheme.arabic(
+                size: 28,
+                color: AppColors.emerald,
+                w: FontWeight.w700,
+              ),
+            ),
           ),
           Center(
-            child: Text(lesson.title,
-                style: const TextStyle(
-                    fontWeight: FontWeight.w700, color: Colors.black54)),
+            child: Text(
+              lesson.title,
+              style: const TextStyle(
+                fontWeight: FontWeight.w700,
+                color: Colors.black54,
+              ),
+            ),
           ),
           const SizedBox(height: 18),
           // Qoida - kitobda ramka ichida beriladi, bu yerda ham ajratib turadi.
@@ -199,9 +178,13 @@ class NahvLessonScreen extends StatelessWidget {
             Row(
               children: [
                 const Text('✍️ ', style: TextStyle(fontSize: 16)),
-                Text('Mashq — تَمْرِينٌ',
-                    style: const TextStyle(
-                        fontWeight: FontWeight.w800, color: AppColors.gold)),
+                Text(
+                  'Mashq — تَمْرِينٌ',
+                  style: const TextStyle(
+                    fontWeight: FontWeight.w800,
+                    color: AppColors.gold,
+                  ),
+                ),
               ],
             ),
             const SizedBox(height: 8),
@@ -215,8 +198,10 @@ class NahvLessonScreen extends StatelessWidget {
           MasteryCallToAction(
             lessonId: 'nahv-${lesson.book}-${lesson.num}',
             what: 'qoida va misollar',
-            onStart: () => Navigator.push(context,
-                MaterialPageRoute(builder: (_) => NahvQuiz(lesson: lesson))),
+            onStart: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => NahvQuiz(lesson: lesson)),
+            ),
           ),
         ],
       ),
@@ -237,7 +222,10 @@ class _RuleBox extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppColors.cream,
         borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: AppColors.emerald.withValues(alpha: 0.35), width: 1.5),
+        border: Border.all(
+          color: AppColors.emerald.withValues(alpha: 0.35),
+          width: 1.5,
+        ),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -245,9 +233,14 @@ class _RuleBox extends StatelessWidget {
           Row(
             children: [
               const Text('📌 ', style: TextStyle(fontSize: 15)),
-              const Text('Qoida',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w800, color: AppColors.gold, fontSize: 13)),
+              const Text(
+                'Qoida',
+                style: TextStyle(
+                  fontWeight: FontWeight.w800,
+                  color: AppColors.gold,
+                  fontSize: 13,
+                ),
+              ),
               const Spacer(),
               SpeakButton(text: rule.ar, id: 'nahv-qoida-${rule.ar}', size: 20),
             ],
@@ -281,22 +274,32 @@ class _Bilingual extends StatelessWidget {
               if (bullet != null)
                 Padding(
                   padding: const EdgeInsets.only(top: 6, right: 2),
-                  child: Text(bullet!,
-                      style: const TextStyle(
-                          fontWeight: FontWeight.w700, color: AppColors.gold)),
+                  child: Text(
+                    bullet!,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w700,
+                      color: AppColors.gold,
+                    ),
+                  ),
                 ),
               SpeakButton(text: pair.ar, id: 'nahv-${pair.ar}', size: 18),
               const SizedBox(width: 4),
               Expanded(
                 child: SentenceText(
-                    sentence: pair.ar, vocab: const [], reading: '', size: arabicSize),
+                  sentence: pair.ar,
+                  vocab: const [],
+                  reading: '',
+                  size: arabicSize,
+                ),
               ),
             ],
           ),
           Padding(
             padding: const EdgeInsets.only(left: 26, top: 2),
-            child: Text(pair.uz,
-                style: const TextStyle(color: Colors.black54, height: 1.35)),
+            child: Text(
+              pair.uz,
+              style: const TextStyle(color: Colors.black54, height: 1.35),
+            ),
           ),
         ],
       ),

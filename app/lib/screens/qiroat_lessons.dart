@@ -144,76 +144,17 @@ class QiroatLessonsList extends StatelessWidget {
     ),
   );
 
-  Widget _lessonTile(BuildContext context, QiroatLesson l) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 12),
-      child: Material(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(18),
-        child: InkWell(
-          borderRadius: BorderRadius.circular(18),
-          onTap: () => Navigator.push(
-            context,
-            MaterialPageRoute(builder: (_) => LessonFlow(lesson: l)),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(14),
-            child: Row(
-              children: [
-                Container(
-                  width: 52,
-                  height: 52,
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: [AppColors.emerald, AppColors.emeraldDark],
-                    ),
-                    borderRadius: BorderRadius.circular(14),
-                  ),
-                  child: Center(
-                    child: Text(
-                      '${l.num}',
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w800,
-                        fontSize: 22,
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(width: 14),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        '${l.num}-dars',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.w800,
-                          fontSize: 16,
-                          color: AppColors.ink,
-                        ),
-                      ),
-                      const SizedBox(height: 4),
-                      Text(
-                        l.titleAr,
-                        textDirection: TextDirection.rtl,
-                        style: AppTheme.arabic(
-                          size: 18,
-                          color: AppColors.emerald,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                MasteryBadge(lessonId: l.completionId, size: 22),
-                const Icon(Icons.chevron_right, color: AppColors.emerald),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
+  Widget _lessonTile(BuildContext context, QiroatLesson l) => PremiumTile(
+    title: '${l.num}-dars',
+    arabicSubtitle: l.titleAr,
+    label: '${l.num}',
+    accent: AppColors.teal,
+    trailing: MasteryBadge(lessonId: l.completionId, size: 22),
+    onTap: () => Navigator.push(
+      context,
+      MaterialPageRoute(builder: (_) => LessonFlow(lesson: l)),
+    ),
+  );
 }
 
 /// Bitta darsning sahifasi: o'qish matni + lug'at jadvali.

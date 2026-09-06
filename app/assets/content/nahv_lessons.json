@@ -13047,6 +13047,11 @@
       "blocks": [
         {
           "type": "para",
+          "ar": "(وَفِيهِ تِسْعَةُ أَبْوَابٍ)",
+          "uz": "(Unda to'qqizta bob bor)"
+        },
+        {
+          "type": "para",
           "ar": "فَالْمَاضِي: مَا يَدُلُّ عَلَى حُدُوثِ شَيْءٍ مَضَى قَبْلَ زَمَنِ التَّكَلُّمِ؛ مِثْلُ: قَرَأَ.",
           "uz": "Mozi — gapirish paytidan oldin o'tgan bir ishning sodir bo'lganiga dalolat qiluvchi fe'ldir; masalan: «o'qidi»."
         },
@@ -14998,6 +15003,11 @@
         "uz": "Ism jomid va mushtaqqa bo'linadi. (Ism haqidagi so'zda sakkiz bob bor.)"
       },
       "blocks": [
+        {
+          "type": "para",
+          "ar": "(وَفِيهِ ثَمَانِيَةُ أَبْوَابٍ):",
+          "uz": "(Unda sakkizta bob bor):"
+        },
         {
           "type": "para",
           "ar": "فَالْجَامِدُ: مَا لَمْ يُؤْخَذْ مِنْ غَيْرِهِ؛ كَ: رَجُلٍ وَعِلْمٍ.",

@@ -41,6 +41,16 @@ jobs:
           flutter-version: 3.41.9
           cache: true
 
+      - name: Kontent izini yangilash
+        # version.json ga kontent fayllarining sha256 izini bosadi.
+        # Nega CI'da: ilgari "version" raqamini qo'lda oshirardim va bir
+        # marta unutilsa, telefondagi ilova eski darslarda qolib ketardi.
+        # Iz avtomatik hisoblanadi, ya'ni unutib bo'lmaydi. Build'lardan
+        # OLDIN ishlaydi - shunda saytdagi va APK ichidagi iz bir xil
+        # bo'ladi va ilova o'zi bilgan kontentni qayta yuklamaydi.
+        working-directory: app
+        run: python3 .qiroat_render/stamp_version.py
+
       - name: Web build (project-page base-href bilan)
         working-directory: app
         run: |

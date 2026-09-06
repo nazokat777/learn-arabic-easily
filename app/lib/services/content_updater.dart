@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:flutter/foundation.dart' show kIsWeb, visibleForTesting;
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
@@ -16,8 +16,9 @@ import 'package:path_provider/path_provider.dart';
 ///   1. Kontent har doim shu joydan o'qiladi: avval YUKLANGAN nusxa
 ///      (telefon xotirasidagi papka), u yo'q bo'lsa — APK ichidagi nusxa.
 ///      Ya'ni internet bo'lmasa ham ilova to'liq ishlaydi.
-///   2. Ilova ochilgach, orqa fonda `version.json` tekshiriladi. Saytdagi
-///      raqam kattaroq bo'lsa, fayllar yuklab olinadi va saqlanadi.
+///   2. Ilova HAR ochilganda orqa fonda `version.json` tekshiriladi.
+///      Saytdagi raqam kattaroq BO'LSA YOKI kontentning barmoq izi
+///      (`hash`) boshqacha bo'lsa, fayllar yuklab olinadi va saqlanadi.
 ///   3. Yangi kontent KEYINGI ochilishda kuchga kiradi — dars o'qib
 ///      turgan odamning ostidan matn almashib ketmasligi uchun.
 ///
@@ -75,14 +76,36 @@ class ContentUpdater {
     return rootBundle.loadString('assets/content/$name');
   }
 
-  /// Hozir ishlatilayotgan kontent versiyasi.
-  Future<int> currentVersion() async {
+  /// Hozir ishlatilayotgan kontent versiyasi va barmoq izi.
+  Future<({int version, String hash})> _joriy() async {
     try {
-      return (json.decode(await read('version.json'))['version'] as num).toInt();
+      final d = json.decode(await read('version.json')) as Map;
+      return (
+        version: (d['version'] as num?)?.toInt() ?? 0,
+        hash: (d['hash'] as String?) ?? '',
+      );
     } catch (_) {
-      return 0;
+      return (version: 0, hash: '');
     }
   }
+
+  /// Hozir ishlatilayotgan kontent versiyasi.
+  Future<int> currentVersion() async => (await _joriy()).version;
+
+  /// Keshni chetlab o'tuvchi manzil.
+  ///
+  /// Nega kerak: GitHub Pages javoblarni bir necha daqiqa keshlashga
+  /// ruxsat beradi va telefon eski `version.json` ni qaytaraverishi
+  /// mumkin — o'shanda yangi darslar yetib bormaydi. Manzilga har safar
+  /// boshqacha parametr qo'shilsa, kesh chetlab o'tiladi.
+  @visibleForTesting
+  Uri uriFor(String name) =>
+      Uri.parse('$baseUrl/$name?t=${DateTime.now().millisecondsSinceEpoch}');
+
+  static const Map<String, String> _noCache = {
+    'Cache-Control': 'no-cache, no-store',
+    'Pragma': 'no-cache',
+  };
 
   /// Saytdagi versiyani tekshiradi, yangisi bo'lsa yuklab oladi.
   ///
@@ -93,19 +116,27 @@ class ContentUpdater {
     if (d == null) return false;
     try {
       final head = await http
-          .get(Uri.parse('$baseUrl/version.json'))
+          .get(uriFor('version.json'), headers: _noCache)
           .timeout(const Duration(seconds: 10));
       if (head.statusCode != 200) return false;
-      final remote =
-          (json.decode(utf8.decode(head.bodyBytes))['version'] as num).toInt();
-      if (remote <= await currentVersion()) return false;
+      final uzoq = json.decode(utf8.decode(head.bodyBytes)) as Map;
+      final uzoqVersion = (uzoq['version'] as num?)?.toInt() ?? 0;
+      final uzoqHash = (uzoq['hash'] as String?) ?? '';
+      final joriy = await _joriy();
+
+      // Raqam oshgan bo'lsa YOKI kontent izi boshqacha bo'lsa yuklaymiz.
+      // Iz bo'yicha tekshiruv «versiyani oshirish esdan chiqdi» degan
+      // xatoni butunlay yo'q qiladi.
+      final yangilik = uzoqVersion > joriy.version ||
+          (uzoqHash.isNotEmpty && uzoqHash != joriy.hash);
+      if (!yangilik) return false;
 
       // Avval hammasini yuklab olamiz, keyin yozamiz: yarim yangilangan
       // holat qolmasin (masalan yangi darslar, eski lug'at).
       final fetched = <String, String>{};
       for (final name in files) {
         final r = await http
-            .get(Uri.parse('$baseUrl/$name'))
+            .get(uriFor(name), headers: _noCache)
             .timeout(const Duration(seconds: 60));
         if (r.statusCode != 200) return false;
         final body = utf8.decode(r.bodyBytes);

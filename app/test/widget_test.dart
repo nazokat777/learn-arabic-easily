@@ -9,6 +9,7 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:learn_arabic/arabic.dart';
 import 'package:learn_arabic/progress.dart';
+import 'package:learn_arabic/services/content_updater.dart';
 
 void main() {
   group('Progress daraja mantig\'i', () {
@@ -163,6 +164,49 @@ void main() {
       expect(holatShakli('بَ', HarfHolati.ortada), '\u200Dب\u200D');
       expect(holatShakli('بٌ', HarfHolati.oxirida), '\u200Dب');
       expect(holatShakli('بٌ', HarfHolati.alohida), 'ب');
+    });
+  });
+
+  // Yangilanish manzili. Bu yerda bir marta xato qilingandi: Dart satrida
+  // dollar belgilari qochirib qo'yilgani uchun manzil so'zma-so'z
+  // "$baseUrl/$name?t=${...}" bo'lib chiqqandi. `flutter analyze` buni
+  // ushlamaydi — satrning o'zi to'g'ri. Natijada BARCHA yangilanishlar
+  // jimgina ishlamay qolardi, ya'ni telefondagi ilova yangi darslarni
+  // hech qachon ko'rmasdi. Shuning uchun manzil shakli testga bog'landi.
+  group('Kontent yangilanishi', () {
+    test('manzil to\'g\'ri yasaladi (interpolatsiya ishlaydi)', () {
+      final u = ContentUpdater.instance.uriFor('nahv_lessons.json');
+      expect(u.scheme, 'https');
+      expect(u.host, 'nazokat777.github.io');
+      expect(u.path, endsWith('/content/nahv_lessons.json'));
+      expect(u.toString(), isNot(contains(r'$')),
+          reason: 'manzilda so\'zma-so\'z dollar qolmasligi kerak');
+    });
+
+    test('har chaqiruvda kesh chetlab o\'tiladi', () async {
+      final a = ContentUpdater.instance.uriFor('version.json');
+      await Future<void>.delayed(const Duration(milliseconds: 5));
+      final b = ContentUpdater.instance.uriFor('version.json');
+      expect(a.queryParameters['t'], isNotNull,
+          reason: 'kesh chetlab o\'tish parametri yo\'q');
+      expect(a.toString(), isNot(b.toString()),
+          reason: 'manzil har safar boshqacha bo\'lishi kerak');
+    });
+
+    test('yangilanadigan fayllar ro\'yxati to\'liq', () {
+      // Yangi kontent fayli qo'shilganda uni ro'yxatga kiritish esdan
+      // chiqsa, u telefonga hech qachon yetib bormaydi.
+      expect(
+        ContentUpdater.files,
+        containsAll([
+          'letters.json',
+          'harakat.json',
+          'vocabulary.json',
+          'qiroat_lessons.json',
+          'nahv_lessons.json',
+          'ulash.json',
+        ]),
+      );
     });
   });
 

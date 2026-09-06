@@ -4,14 +4,10 @@
 library;
 
 /// Harakat, shadda, sukun, tanvin, tatvil va boshqa belgilar.
-final RegExp _diacritics = RegExp(
-  '[ً-ْٓ-ٕٖ-ٰٟـۖ-ۭ࣓-ࣿ]',
-);
+final RegExp _diacritics = RegExp('[ً-ْٓ-ٕٖ-ٰٟـۖ-ۭ࣓-ࣿ]');
 
 /// So'z belgilari: arab harflari + harakatlar + ZWJ (ulash belgisi).
-final RegExp _wordChar = RegExp(
-  '[ء-يً-ْٰـ‍]',
-);
+final RegExp _wordChar = RegExp('[ء-يً-ْٰـ‍]');
 
 /// Harakatlarni olib tashlaydi (qidirish/solishtirish uchun).
 String stripDiacritics(String s) =>
@@ -33,7 +29,10 @@ List<String> splitSentences(String reading) {
       if (ch == '.' || ch == '؟' || ch == '!' || ch == '؛' || ch == '?') {
         // ketma-ket ajratuvchilarni birga oling
         while (i + 1 < t.length &&
-            (t[i + 1] == '.' || t[i + 1] == '؟' || t[i + 1] == '!' || t[i + 1] == '؛')) {
+            (t[i + 1] == '.' ||
+                t[i + 1] == '؟' ||
+                t[i + 1] == '!' ||
+                t[i + 1] == '؛')) {
           i++;
           buf.write(t[i]);
         }
@@ -103,7 +102,9 @@ List<String> splitForms(String ar) => ar
 /// ichida kelishiga ham roziday bo'lamiz. Bir nechta jumla mos kelsa eng
 /// qisqasi olinadi - misol qisqa bo'lgani tushunarli.
 String? findSentenceFor(String vocabAr, String reading) {
-  final forms = splitForms(vocabAr).map(stripDiacritics).where((e) => e.isNotEmpty).toList();
+  final forms = splitForms(
+    vocabAr,
+  ).map(stripDiacritics).where((e) => e.isNotEmpty).toList();
   if (forms.isEmpty || reading.trim().isEmpty) return null;
 
   String? exact, loose;
@@ -127,13 +128,43 @@ String? findSentenceFor(String vocabAr, String reading) {
 // --- Taxminiy talaffuz (lotin) — o'qishga yordam, aniq transkripsiya emas. ---
 
 const Map<String, String> _cons = {
-  'ا': 'ā', 'أ': 'a', 'إ': 'i', 'آ': 'ā', 'ٱ': 'a',
-  'ب': 'b', 'ت': 't', 'ث': 's', 'ج': 'j', 'ح': 'h', 'خ': 'x',
-  'د': 'd', 'ذ': 'z', 'ر': 'r', 'ز': 'z', 'س': 's', 'ش': 'sh',
-  'ص': 's', 'ض': 'd', 'ط': 't', 'ظ': 'z', 'ع': 'ʼ', 'غ': "g'",
-  'ف': 'f', 'ق': 'q', 'ك': 'k', 'ل': 'l', 'م': 'm', 'ن': 'n',
-  'ه': 'h', 'و': 'w', 'ي': 'y', 'ء': 'ʼ', 'ؤ': 'ʼ', 'ئ': 'ʼ',
-  'ى': 'ā', 'ة': 'h',
+  'ا': 'ā',
+  'أ': 'a',
+  'إ': 'i',
+  'آ': 'ā',
+  'ٱ': 'a',
+  'ب': 'b',
+  'ت': 't',
+  'ث': 's',
+  'ج': 'j',
+  'ح': 'h',
+  'خ': 'x',
+  'د': 'd',
+  'ذ': 'z',
+  'ر': 'r',
+  'ز': 'z',
+  'س': 's',
+  'ش': 'sh',
+  'ص': 's',
+  'ض': 'd',
+  'ط': 't',
+  'ظ': 'z',
+  'ع': 'ʼ',
+  'غ': "g'",
+  'ف': 'f',
+  'ق': 'q',
+  'ك': 'k',
+  'ل': 'l',
+  'م': 'm',
+  'ن': 'n',
+  'ه': 'h',
+  'و': 'w',
+  'ي': 'y',
+  'ء': 'ʼ',
+  'ؤ': 'ʼ',
+  'ئ': 'ʼ',
+  'ى': 'ā',
+  'ة': 'h',
 };
 
 /// So'zning taxminiy lotin o'qilishi (talaffuzga yordam).
@@ -206,11 +237,74 @@ List<String> splitLetters(String word) {
 ///
 /// Bular so'z ichida zanjirni uzadi: o'zidan oldingisiga qo'shiladi, lekin
 /// o'zidan keyingisiga qo'shilmaydi. Ulash darsining o'zak qoidasi shu.
-const Set<String> ulanmasHarflar = {'ا', 'د', 'ذ', 'ر', 'ز', 'و',
-    'أ', 'إ', 'آ', 'ؤ'};
+const Set<String> ulanmasHarflar = {
+  'ا',
+  'د',
+  'ذ',
+  'ر',
+  'ز',
+  'و',
+  'أ',
+  'إ',
+  'آ',
+  'ؤ',
+};
 
 /// Shu harf o'zidan keyingi harfga ulanadimi.
 bool ulanadi(String letter) {
   final b = stripDiacritics(letter);
   return b.isNotEmpty && !ulanmasHarflar.contains(b);
 }
+
+/// Harfning so'z ichidagi holati.
+enum HarfHolati { alohida, boshda, ortada, oxirida }
+
+/// So'zdagi har bir harfning holatini aniqlaydi.
+///
+/// Holat ikki narsaga bog'liq: OLDINGI harf shu harfga ulana oladimi va
+/// shu harf O'ZIDAN KEYINGISIGA ulana oladimi. Shuning uchun «ا» dan
+/// keyingi harf har doim so'z boshidagidek chiziladi — zanjir uzilgan.
+List<HarfHolati> harfHolatlari(List<String> letters) {
+  final out = <HarfHolati>[];
+  for (var i = 0; i < letters.length; i++) {
+    final oldinUlagan = i > 0 && ulanadi(letters[i - 1]);
+    final keyinUlaydi = i < letters.length - 1 && ulanadi(letters[i]);
+    if (oldinUlagan && keyinUlaydi) {
+      out.add(HarfHolati.ortada);
+    } else if (oldinUlagan) {
+      out.add(HarfHolati.oxirida);
+    } else if (keyinUlaydi) {
+      out.add(HarfHolati.boshda);
+    } else {
+      out.add(HarfHolati.alohida);
+    }
+  }
+  return out;
+}
+
+/// Harfning shu holatdagi SHAKLI (ZWJ orqali shrift o'zi to'g'ri chizadi).
+///
+/// Harakat ataylab olib tashlanadi: bu yerda maqsad shaklni ko'rsatish,
+/// harakat esa ZWJ bilan yonma-yon kelganda shakl buzilishi mumkin.
+String holatShakli(String letter, HarfHolati holat) {
+  const z = '\u200D';
+  final b = stripDiacritics(letter);
+  switch (holat) {
+    case HarfHolati.boshda:
+      return '$b$z';
+    case HarfHolati.ortada:
+      return '$z$b$z';
+    case HarfHolati.oxirida:
+      return '$z$b';
+    case HarfHolati.alohida:
+      return b;
+  }
+}
+
+/// Holatning o'zbekcha nomi.
+String holatNomi(HarfHolati h) => switch (h) {
+  HarfHolati.boshda => 'boshda',
+  HarfHolati.ortada => "o'rtada",
+  HarfHolati.oxirida => 'oxirida',
+  HarfHolati.alohida => 'alohida',
+};

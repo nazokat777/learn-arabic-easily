@@ -33,8 +33,10 @@ class UlashLesson extends StatelessWidget {
           const _QoidaCard(),
           const SizedBox(height: 18),
           if (stages.isEmpty)
-            const Text('Dars hali yuklanmagan.',
-                style: TextStyle(color: Colors.black54))
+            const Text(
+              'Dars hali yuklanmagan.',
+              style: TextStyle(color: Colors.black54),
+            )
           else
             for (final st in stages) _stageTile(context, st),
         ],
@@ -43,59 +45,72 @@ class UlashLesson extends StatelessWidget {
   }
 
   Widget _stageTile(BuildContext context, UlashStage st) => Padding(
-        padding: const EdgeInsets.only(bottom: 12),
-        child: Material(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(18),
-          child: InkWell(
-            borderRadius: BorderRadius.circular(18),
-            onTap: () => Navigator.push(context,
-                MaterialPageRoute(builder: (_) => UlashStageScreen(stage: st))),
-            child: Padding(
-              padding: const EdgeInsets.all(14),
-              child: Row(
-                children: [
-                  Container(
-                    width: 52,
-                    height: 52,
-                    decoration: BoxDecoration(
-                      gradient: const LinearGradient(
-                          colors: [AppColors.emerald, AppColors.emeraldDark]),
-                      borderRadius: BorderRadius.circular(14),
-                    ),
-                    child: Center(
-                      child: Text('${st.num}',
-                          style: const TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w800,
-                              fontSize: 22)),
+    padding: const EdgeInsets.only(bottom: 12),
+    child: Material(
+      color: Colors.white,
+      borderRadius: BorderRadius.circular(18),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(18),
+        onTap: () => Navigator.push(
+          context,
+          MaterialPageRoute(builder: (_) => UlashStageScreen(stage: st)),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(14),
+          child: Row(
+            children: [
+              Container(
+                width: 52,
+                height: 52,
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(
+                    colors: [AppColors.emerald, AppColors.emeraldDark],
+                  ),
+                  borderRadius: BorderRadius.circular(14),
+                ),
+                child: Center(
+                  child: Text(
+                    '${st.num}',
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w800,
+                      fontSize: 22,
                     ),
                   ),
-                  const SizedBox(width: 14),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(st.title,
-                            style: const TextStyle(
-                                fontWeight: FontWeight.w800,
-                                fontSize: 15.5,
-                                color: AppColors.ink)),
-                        const SizedBox(height: 2),
-                        Text("${st.words.length} ta so'z",
-                            style: const TextStyle(
-                                color: Colors.black54, fontSize: 12.5)),
-                      ],
-                    ),
-                  ),
-                  MasteryBadge(lessonId: ulashLessonId(st.num), size: 22),
-                  const Icon(Icons.chevron_right, color: AppColors.emerald),
-                ],
+                ),
               ),
-            ),
+              const SizedBox(width: 14),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      st.title,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.w800,
+                        fontSize: 15.5,
+                        color: AppColors.ink,
+                      ),
+                    ),
+                    const SizedBox(height: 2),
+                    Text(
+                      "${st.words.length} ta so'z",
+                      style: const TextStyle(
+                        color: Colors.black54,
+                        fontSize: 12.5,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              MasteryBadge(lessonId: ulashLessonId(st.num), size: 22),
+              const Icon(Icons.chevron_right, color: AppColors.emerald),
+            ],
           ),
         ),
-      );
+      ),
+    ),
+  );
 }
 
 /// Darsning o'zak qoidasi — oltita harf chapga ulanmaydi.
@@ -110,8 +125,10 @@ class _QoidaCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppColors.cream,
         borderRadius: BorderRadius.circular(16),
-        border:
-            Border.all(color: AppColors.gold.withValues(alpha: 0.45), width: 1.5),
+        border: Border.all(
+          color: AppColors.gold.withValues(alpha: 0.45),
+          width: 1.5,
+        ),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -119,11 +136,14 @@ class _QoidaCard extends StatelessWidget {
           const Row(
             children: [
               Text('📌 ', style: TextStyle(fontSize: 15)),
-              Text('Asosiy qoida',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w800,
-                      color: AppColors.gold,
-                      fontSize: 13)),
+              Text(
+                'Asosiy qoida',
+                style: TextStyle(
+                  fontWeight: FontWeight.w800,
+                  color: AppColors.gold,
+                  fontSize: 13,
+                ),
+              ),
             ],
           ),
           const SizedBox(height: 8),
@@ -148,12 +168,14 @@ class _QoidaCard extends StatelessWidget {
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(
-                          color: AppColors.gold.withValues(alpha: 0.5)),
+                        color: AppColors.gold.withValues(alpha: 0.5),
+                      ),
                     ),
                     child: Center(
-                      child: Text(h,
-                          style:
-                              AppTheme.arabic(size: 28, color: AppColors.gold)),
+                      child: Text(
+                        h,
+                        style: AppTheme.arabic(size: 28, color: AppColors.gold),
+                      ),
                     ),
                   ),
               ],
@@ -185,15 +207,24 @@ class UlashStageScreen extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
         children: [
           Center(
-            child: Text(stage.titleAr,
-                textDirection: TextDirection.rtl,
-                style: AppTheme.arabic(
-                    size: 26, color: AppColors.emerald, w: FontWeight.w700)),
+            child: Text(
+              stage.titleAr,
+              textDirection: TextDirection.rtl,
+              style: AppTheme.arabic(
+                size: 26,
+                color: AppColors.emerald,
+                w: FontWeight.w700,
+              ),
+            ),
           ),
           Center(
-            child: Text(stage.title,
-                style: const TextStyle(
-                    fontWeight: FontWeight.w700, color: Colors.black54)),
+            child: Text(
+              stage.title,
+              style: const TextStyle(
+                fontWeight: FontWeight.w700,
+                color: Colors.black54,
+              ),
+            ),
           ),
           const SizedBox(height: 14),
           Container(
@@ -202,9 +233,14 @@ class UlashStageScreen extends StatelessWidget {
               color: AppColors.softGreen,
               borderRadius: BorderRadius.circular(14),
             ),
-            child: Text(stage.explain,
-                style: const TextStyle(
-                    color: AppColors.ink, height: 1.4, fontSize: 13.5)),
+            child: Text(
+              stage.explain,
+              style: const TextStyle(
+                color: AppColors.ink,
+                height: 1.4,
+                fontSize: 13.5,
+              ),
+            ),
           ),
           const SizedBox(height: 16),
           for (final w in stage.words) _WordCard(word: w),
@@ -212,8 +248,10 @@ class UlashStageScreen extends StatelessWidget {
           MasteryCallToAction(
             lessonId: ulashLessonId(stage.num),
             what: "${stage.words.length} ta so'z",
-            onStart: () => Navigator.push(context,
-                MaterialPageRoute(builder: (_) => UlashTest(stage: stage))),
+            onStart: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => UlashTest(stage: stage)),
+            ),
           ),
         ],
       ),
@@ -225,6 +263,10 @@ class UlashStageScreen extends StatelessWidget {
 ///
 /// Ulanmaydigan harf OLTIN rangda ko'rsatiladi — o'quvchi zanjir qayerda
 /// uzilishini ko'zi bilan ko'rib turadi, qoidani yodlashi shart emas.
+///
+/// Kartochka bosilsa, har harfning shu so'zdagi HOLATI va o'sha joyda
+/// qanday chizilishi ochiladi. Aynan shu bilim yetishmasa, o'quvchi
+/// «بـ» ni ko'rib uni «ب» ekanini tanimaydi.
 class _WordCard extends StatelessWidget {
   final UlashWord word;
   const _WordCard({required this.word});
@@ -234,58 +276,270 @@ class _WordCard extends StatelessWidget {
     final letters = splitLetters(word.ar);
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
-        decoration: BoxDecoration(
-          color: Colors.white,
+      child: Material(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        child: InkWell(
           borderRadius: BorderRadius.circular(16),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Directionality(
-              textDirection: TextDirection.rtl,
-              child: Wrap(
-                crossAxisAlignment: WrapCrossAlignment.center,
-                spacing: 6,
-                runSpacing: 6,
-                children: [
-                  for (var i = 0; i < letters.length; i++) ...[
-                    Text(letters[i],
-                        style: AppTheme.arabic(
+          onTap: () => _showHarfSheet(context, word),
+          // Ataylab rangsiz: fonni Material chizadi. Bu yerga oq fon
+          // qo'yilsa, bosish to'lqini (ripple) uning ostida qolib
+          // ko'rinmaydi va kartochka bosilmaydigandek tuyuladi.
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Directionality(
+                  textDirection: TextDirection.rtl,
+                  child: Wrap(
+                    crossAxisAlignment: WrapCrossAlignment.center,
+                    spacing: 6,
+                    runSpacing: 6,
+                    children: [
+                      for (var i = 0; i < letters.length; i++) ...[
+                        Text(
+                          letters[i],
+                          style: AppTheme.arabic(
                             size: 26,
                             color: ulanadi(letters[i])
                                 ? AppColors.ink
-                                : AppColors.gold)),
-                    if (i < letters.length - 1)
-                      const Text('+',
-                          style: TextStyle(
+                                : AppColors.gold,
+                          ),
+                        ),
+                        if (i < letters.length - 1)
+                          const Text(
+                            '+',
+                            style: TextStyle(
                               color: Colors.black26,
-                              fontWeight: FontWeight.w700)),
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                      ],
+                      const Text(
+                        '  =  ',
+                        style: TextStyle(
+                          color: Colors.black26,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      Text(
+                        word.ar,
+                        style: AppTheme.arabic(
+                          size: 30,
+                          color: AppColors.emerald,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 6),
+                Row(
+                  children: [
+                    SpeakButton(
+                      text: word.ar,
+                      id: 'ulash-${word.ar}',
+                      size: 20,
+                    ),
+                    const SizedBox(width: 6),
+                    Expanded(
+                      child: Text(
+                        word.uz,
+                        style: const TextStyle(
+                          color: Colors.black54,
+                          fontSize: 13.5,
+                        ),
+                      ),
+                    ),
+                    const Icon(
+                      Icons.info_outline,
+                      size: 16,
+                      color: Colors.black26,
+                    ),
                   ],
-                  const Text('  =  ',
-                      style: TextStyle(
-                          color: Colors.black26, fontWeight: FontWeight.w700)),
-                  Text(word.ar,
-                      style:
-                          AppTheme.arabic(size: 30, color: AppColors.emerald)),
-                ],
-              ),
-            ),
-            const SizedBox(height: 6),
-            Row(
-              children: [
-                SpeakButton(text: word.ar, id: 'ulash-${word.ar}', size: 20),
-                const SizedBox(width: 6),
-                Expanded(
-                  child: Text(word.uz,
-                      style: const TextStyle(
-                          color: Colors.black54, fontSize: 13.5)),
                 ),
               ],
             ),
-          ],
+          ),
         ),
+      ),
+    );
+  }
+}
+
+/// Har harfning so'zdagi holati va o'sha joydagi shakli.
+void _showHarfSheet(BuildContext context, UlashWord word) {
+  final letters = splitLetters(word.ar);
+  final holatlar = harfHolatlari(letters);
+  showModalBottomSheet(
+    context: context,
+    backgroundColor: Colors.white,
+    // Olti harfli so'zda ro'yxat past ekranga sig'may qoladi — shuning
+    // uchun oyna balandligi cheklanmaydi va ichi aylanadi.
+    isScrollControlled: true,
+    shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(top: Radius.circular(28)),
+    ),
+    builder: (ctx) => ConstrainedBox(
+      constraints: BoxConstraints(
+        maxHeight: MediaQuery.of(ctx).size.height * 0.85,
+      ),
+      child: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(22, 16, 22, 28),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Center(
+                child: Container(
+                  width: 40,
+                  height: 4,
+                  decoration: BoxDecoration(
+                    color: Colors.black12,
+                    borderRadius: BorderRadius.circular(2),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 14),
+              Center(
+                child: Directionality(
+                  textDirection: TextDirection.rtl,
+                  child: Text(
+                    word.ar,
+                    style: AppTheme.arabic(size: 44, color: AppColors.emerald),
+                  ),
+                ),
+              ),
+              Center(
+                child: Text(
+                  word.uz,
+                  style: const TextStyle(
+                    color: Colors.black54,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 16),
+              const Text(
+                'Harflar so\'zda qanday chiziladi:',
+                style: TextStyle(
+                  fontWeight: FontWeight.w800,
+                  fontSize: 13,
+                  color: AppColors.gold,
+                ),
+              ),
+              const SizedBox(height: 8),
+              for (var i = 0; i < letters.length; i++)
+                _HarfRow(
+                  letter: letters[i],
+                  holat: holatlar[i],
+                  tartib: i + 1,
+                  oxirgi: i == letters.length - 1,
+                ),
+              const SizedBox(height: 12),
+              Text(
+                "«${stripDiacritics(word.ar)}» — ${letters.length} harf. "
+                'Oltin rangdagi harf o\'zidan keyingisiga ulanmaydi.',
+                style: const TextStyle(
+                  color: Colors.black45,
+                  fontSize: 12.5,
+                  height: 1.4,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    ),
+  );
+}
+
+class _HarfRow extends StatelessWidget {
+  final String letter;
+  final HarfHolati holat;
+  final int tartib;
+
+  /// So'zning oxirgi harfimi.
+  ///
+  /// Kerak, chunki oxirgi harf uchun «keyingi harfga ulanadi» degan izoh
+  /// ma'nosiz: undan keyin harf yo'q. Bu izoh o'quvchiga noto'g'ri
+  /// tasavvur berardi.
+  final bool oxirgi;
+
+  const _HarfRow({
+    required this.letter,
+    required this.holat,
+    required this.tartib,
+    required this.oxirgi,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final ulanar = ulanadi(letter);
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 8),
+      child: Row(
+        children: [
+          SizedBox(
+            width: 22,
+            child: Text(
+              '$tartib.',
+              style: const TextStyle(
+                color: Colors.black26,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+          ),
+          Container(
+            width: 52,
+            height: 52,
+            decoration: BoxDecoration(
+              color: AppColors.cream,
+              borderRadius: BorderRadius.circular(13),
+            ),
+            child: Center(
+              child: Text(
+                holatShakli(letter, holat),
+                style: AppTheme.arabic(
+                  size: 30,
+                  color: ulanar ? AppColors.ink : AppColors.gold,
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  holatNomi(holat),
+                  style: const TextStyle(
+                    fontWeight: FontWeight.w800,
+                    fontSize: 14,
+                    color: AppColors.ink,
+                  ),
+                ),
+                Text(
+                  oxirgi
+                      ? "so'z shu yerda tugaydi"
+                      : ulanar
+                      ? "keyingi harfga ulanadi"
+                      : "keyingi harfga ULANMAYDI",
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: (ulanar || oxirgi) ? Colors.black45 : AppColors.gold,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Text(
+            stripDiacritics(letter),
+            style: AppTheme.arabic(size: 24, color: Colors.black26),
+          ),
+        ],
       ),
     );
   }

@@ -54,32 +54,38 @@ class UlashTest extends StatelessWidget {
       // Savol turlari navbatlashadi — bittasi zeriktirmasin.
       if (i.isEven) {
         final opts = variantlar(w.ar, hammaAr);
-        questions.add(Question(
-          promptLabel: 'Bu harflar qaysi so\'zni beradi?',
-          prompt: _AjratilganHarflar(word: w.ar),
-          options: opts,
-          correct: opts.indexOf(w.ar),
-          arabicOptions: true,
-          // Ovoz javobni oshkor qiladi (variantlar — yozilgan so'zlar),
-          // shuning uchun faqat javobdan keyin eshittiriladi.
-          speak: w.ar,
-          speakRevealsAnswer: true,
-        ));
+        questions.add(
+          Question(
+            promptLabel: 'Bu harflar qaysi so\'zni beradi?',
+            prompt: _AjratilganHarflar(word: w.ar),
+            options: opts,
+            correct: opts.indexOf(w.ar),
+            arabicOptions: true,
+            // Ovoz javobni oshkor qiladi (variantlar — yozilgan so'zlar),
+            // shuning uchun faqat javobdan keyin eshittiriladi.
+            speak: w.ar,
+            speakRevealsAnswer: true,
+          ),
+        );
       } else {
         final opts = variantlar(w.uz, hammaUz);
-        questions.add(Question(
-          promptLabel: 'Bu so\'zning ma\'nosi nima?',
-          prompt: Directionality(
-            textDirection: TextDirection.rtl,
-            child: Text(w.ar,
-                style: AppTheme.arabic(size: 46, color: AppColors.emerald)),
+        questions.add(
+          Question(
+            promptLabel: 'Bu so\'zning ma\'nosi nima?',
+            prompt: Directionality(
+              textDirection: TextDirection.rtl,
+              child: Text(
+                w.ar,
+                style: AppTheme.arabic(size: 46, color: AppColors.emerald),
+              ),
+            ),
+            options: opts,
+            correct: opts.indexOf(w.uz),
+            // Bu yerda ovoz javobni oshkor qilmaydi: eshitilgani arabcha,
+            // variantlar esa o'zbekcha.
+            speak: w.ar,
           ),
-          options: opts,
-          correct: opts.indexOf(w.uz),
-          // Bu yerda ovoz javobni oshkor qilmaydi: eshitilgani arabcha,
-          // variantlar esa o'zbekcha.
-          speak: w.ar,
-        ));
+        );
       }
     }
     questions.shuffle(rnd);
@@ -114,14 +120,19 @@ class _AjratilganHarflar extends StatelessWidget {
         runSpacing: 8,
         children: [
           for (var i = 0; i < letters.length; i++) ...[
-            Text(letters[i],
-                style: AppTheme.arabic(size: 40, color: AppColors.ink)),
+            Text(
+              letters[i],
+              style: AppTheme.arabic(size: 40, color: AppColors.ink),
+            ),
             if (i < letters.length - 1)
-              const Text('+',
-                  style: TextStyle(
-                      color: Colors.black26,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w700)),
+              const Text(
+                '+',
+                style: TextStyle(
+                  color: Colors.black26,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
           ],
         ],
       ),

@@ -124,6 +124,48 @@ void main() {
     });
   });
 
+  // Harfning so'zdagi holati — ulash darsining o'zak bilimi. Bu yerda
+  // xato bo'lsa, dars o'quvchiga NOTO'G'RI narsa o'rgatadi, shuning uchun
+  // klassik misollar bilan qattiq bog'lab qo'yamiz.
+  group('Harf holati', () {
+    test("«باب» — ا zanjirni uzadi, oxirgi ب alohida qoladi", () {
+      final h = harfHolatlari(splitLetters('بَابٌ'));
+      expect(h, [
+        HarfHolati.boshda, // ب — ا ga ulanadi
+        HarfHolati.oxirida, // ا — o'ngdan ulangan, chapga ulanmaydi
+        HarfHolati.alohida, // ب — oldingi ا ulanmagani uchun yolg'iz
+      ]);
+    });
+
+    test("«كتاب» — o'rtadagi ت ikki tomondan ulanadi", () {
+      final h = harfHolatlari(splitLetters('كِتَابٌ'));
+      expect(h, [
+        HarfHolati.boshda,
+        HarfHolati.ortada,
+        HarfHolati.oxirida,
+        HarfHolati.alohida,
+      ]);
+    });
+
+    test("«دار» — hamma harfi ulanmaydigan so'zda o'rta holat bo'lmaydi", () {
+      final h = harfHolatlari(splitLetters('دَارٌ'));
+      expect(h.contains(HarfHolati.ortada), isFalse);
+      expect(h.first, HarfHolati.alohida); // د chapga ulanmaydi
+    });
+
+    test("«قلم» — hammasi ulanadigan so'z: bosh, o'rta, oxir", () {
+      final h = harfHolatlari(splitLetters('قَلَمٌ'));
+      expect(h, [HarfHolati.boshda, HarfHolati.ortada, HarfHolati.oxirida]);
+    });
+
+    test('shakl ZWJ bilan to\'g\'ri yasaladi va harakatsiz bo\'ladi', () {
+      expect(holatShakli('بَ', HarfHolati.boshda), 'ب\u200D');
+      expect(holatShakli('بَ', HarfHolati.ortada), '\u200Dب\u200D');
+      expect(holatShakli('بٌ', HarfHolati.oxirida), '\u200Dب');
+      expect(holatShakli('بٌ', HarfHolati.alohida), 'ب');
+    });
+  });
+
   group('Kontent yaxlitligi', () {
     test("harakatlar o'z harfiga ulangan (ajralib qolmagan)", () {
       final buzuq = <String>[];

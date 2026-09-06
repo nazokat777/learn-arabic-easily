@@ -36,6 +36,16 @@ class Progress extends ChangeNotifier {
   /// javoblar foizi (0..100). O'quvchi «qancha qoldi» ni ko'rib tursin.
   final Map<String, int> _best = {};
 
+  /// Har bir mashq elementi bo'yicha XATO soni va URINISHLAR soni.
+  ///
+  /// Nega kerak: «daraja» (`_mastery`) faqat hozirgi holatni ko'rsatadi —
+  /// bugun to'g'ri javob bergan so'z 5 ga chiqadi va o'tmishdagi qiynalish
+  /// izsiz yo'qoladi. Holbuki qaysi so'z QIYIN kelayotganini bilish uchun
+  /// aynan xatolar tarixi kerak: shu ikki raqam «zaif ro'yxat» ni yasaydi
+  /// va takrorlash aynan o'sha elementlarga qaratiladi.
+  final Map<String, int> _xato = {};
+  final Map<String, int> _urinish = {};
+
   SharedPreferences? _prefs;
 
   int get level => (xp ~/ 100) + 1;
@@ -76,6 +86,18 @@ class Progress extends ChangeNotifier {
         (k, v) => _best[k as String] = (v as num).toInt(),
       );
     }
+    final xs = _prefs!.getString('xato');
+    if (xs != null) {
+      (json.decode(xs) as Map).forEach(
+        (k, v) => _xato[k as String] = (v as num).toInt(),
+      );
+    }
+    final us = _prefs!.getString('urinish');
+    if (us != null) {
+      (json.decode(us) as Map).forEach(
+        (k, v) => _urinish[k as String] = (v as num).toInt(),
+      );
+    }
     _refreshStreak();
     notifyListeners();
   }
@@ -91,9 +113,33 @@ class Progress extends ChangeNotifier {
     final cur = _mastery[key] ?? 0;
     final next = (correct ? cur + 1 : cur - 1).clamp(0, masteryGoal);
     _mastery[key] = next;
+    _urinish[key] = (_urinish[key] ?? 0) + 1;
+    if (!correct) _xato[key] = (_xato[key] ?? 0) + 1;
     await _save();
     notifyListeners();
     return next;
+  }
+
+  /// Element bo'yicha xatolar soni (butun tarix bo'yicha).
+  int xatoSoni(String key) => _xato[key] ?? 0;
+
+  /// Element necha marta so'ralgan.
+  int urinishSoni(String key) => _urinish[key] ?? 0;
+
+  /// Element hech qachon so'ralmaganmi.
+  bool yangiElement(String key) => !_urinish.containsKey(key);
+
+  /// Elementning «zaiflik» og'irligi — takrorlashda qaysi element ko'proq
+  /// chiqishini shu belgilaydi. Katta son = ko'proq mashq kerak.
+  ///
+  /// Hisob: xatolar eng og'ir turadi, past daraja qo'shimcha og'irlik
+  /// beradi, hech ko'rilmagan element esa o'rtacha og'irlik oladi — u
+  /// hali «zaif» emas, lekin baribir so'ralishi kerak.
+  double zaiflik(String key) {
+    if (yangiElement(key)) return 2.0;
+    final xato = _xato[key] ?? 0;
+    final daraja = _mastery[key] ?? 0;
+    return 1.0 + xato * 2.0 + (masteryGoal - daraja) * 0.5;
   }
 
   // --- Ko'p usulli mastery (master drill) ---
@@ -208,5 +254,7 @@ class Progress extends ChangeNotifier {
     await p.setString('modeMask', json.encode(_modeMask));
     await p.setStringList('mastered', _mastered.toList());
     await p.setString('best', json.encode(_best));
+    await p.setString('xato', json.encode(_xato));
+    await p.setString('urinish', json.encode(_urinish));
   }
 }

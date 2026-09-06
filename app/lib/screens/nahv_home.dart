@@ -3,6 +3,8 @@ import '../widgets/uz_text.dart';
 
 import '../main.dart';
 import '../content.dart';
+import '../mashq/bank.dart';
+import '../mashq/mashq_ekran.dart';
 import '../theme.dart';
 import '../widgets/entrance.dart';
 import '../widgets/mastery_badge.dart';
@@ -10,7 +12,6 @@ import '../widgets/premium_tile.dart';
 import '../widgets/grammar_table.dart';
 import '../widgets/speak_button.dart';
 import 'lesson/sentence_text.dart';
-import 'nahv_quiz.dart';
 
 /// «Nahv» — arab tili grammatikasi (jumla tuzilishi) bo'limi.
 ///
@@ -212,7 +213,14 @@ class NahvLessonScreen extends StatelessWidget {
                 what: 'qoida va misollar',
                 onStart: () => Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (_) => NahvQuiz(lesson: lesson)),
+                  MaterialPageRoute(
+                    builder: (_) => MashqEkran(
+                      sarlavha: '${lesson.num}-dars mashqi',
+                      darsniki: MashqBank.nahvDars(lesson),
+                      oldingilar: MashqBank.nahvGacha(lesson),
+                      darsId: 'nahv-${lesson.book}-${lesson.num}',
+                    ),
+                  ),
                 ),
               ),
             ],

@@ -3,6 +3,8 @@ import '../widgets/uz_text.dart';
 
 import '../content.dart';
 import '../main.dart';
+import '../mashq/bank.dart';
+import '../mashq/mashq_ekran.dart';
 import '../theme.dart';
 import '../widgets/aralash_matn.dart';
 import '../widgets/mastery_badge.dart';
@@ -159,6 +161,22 @@ class SarfLessonScreen extends StatelessWidget {
                 _blok(b),
                 const SizedBox(height: 10),
               ],
+              const SizedBox(height: 14),
+              MasteryCallToAction(
+                lessonId: lesson.completionId,
+                what: 'atamalar va misollar',
+                onStart: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => MashqEkran(
+                      sarlavha: '${lesson.num}-dars mashqi',
+                      darsniki: MashqBank.sarfDars(lesson),
+                      oldingilar: MashqBank.sarfGacha(lesson),
+                      darsId: lesson.completionId,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),

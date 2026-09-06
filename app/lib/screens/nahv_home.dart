@@ -130,86 +130,94 @@ class NahvLessonScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('${lesson.num}-dars')),
-      body: ListView(
-        padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
-        children: [
-          Center(
-            child: Text(
-              lesson.titleAr,
-              textDirection: TextDirection.rtl,
-              style: AppTheme.arabic(
-                size: 28,
-                color: AppColors.emerald,
-                w: FontWeight.w700,
-              ),
-            ),
-          ),
-          Center(
-            child: Text(
-              lesson.title,
-              style: const TextStyle(
-                fontWeight: FontWeight.w700,
-                color: Colors.black54,
-              ),
-            ),
-          ),
-          const SizedBox(height: 18),
-          // Qoida - kitobda ramka ichida beriladi, bu yerda ham ajratib turadi.
-          if (lesson.rule.ar.isNotEmpty) _RuleBox(rule: lesson.rule),
-          const SizedBox(height: 18),
-          for (final b in lesson.blocks) ...[
-            if (b.type == 'list' && (b.intro?.ar.isNotEmpty ?? false))
-              _Bilingual(pair: b.intro!),
-            if (b.type != 'list') _Bilingual(pair: b.main!),
-            if (b.type == 'list')
-              for (var i = 0; i < b.items.length; i++)
-                Padding(
-                  padding: const EdgeInsets.only(left: 6, bottom: 2),
-                  child: _Bilingual(pair: b.items[i], bullet: '${i + 1}.'),
-                ),
-            const SizedBox(height: 12),
-          ],
-          for (final t in lesson.tables) ...[
-            const SizedBox(height: 8),
-            GrammarTable(table: t),
-            const SizedBox(height: 8),
-          ],
-          if (lesson.exercise.isNotEmpty) ...[
-            const SizedBox(height: 8),
-            Row(
-              children: [
-                const Icon(
-                  Icons.edit_note_rounded,
-                  size: 18,
-                  color: AppColors.emerald,
-                ),
-                const SizedBox(width: 6),
-                Text(
-                  'Mashq — تَمْرِينٌ',
-                  style: const TextStyle(
-                    fontWeight: FontWeight.w800,
-                    color: AppColors.gold,
+      // Matn ustuni cheklanadi: keng ekranda (planshet, brauzer) arabcha
+      // satrlar butun kenglikka cho'zilib ketadi va ko'z satr boshini
+      // yo'qotadi — ayniqsa o'ngdan chapga o'qilganda.
+      body: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 820),
+          child: ListView(
+            padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
+            children: [
+              Center(
+                child: Text(
+                  lesson.titleAr,
+                  textDirection: TextDirection.rtl,
+                  style: AppTheme.arabic(
+                    size: 28,
+                    color: AppColors.emerald,
+                    w: FontWeight.w700,
                   ),
                 ),
+              ),
+              Center(
+                child: Text(
+                  lesson.title,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.w700,
+                    color: Colors.black54,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 18),
+              // Qoida - kitobda ramka ichida beriladi, bu yerda ham ajratib turadi.
+              if (lesson.rule.ar.isNotEmpty) _RuleBox(rule: lesson.rule),
+              const SizedBox(height: 18),
+              for (final b in lesson.blocks) ...[
+                if (b.type == 'list' && (b.intro?.ar.isNotEmpty ?? false))
+                  _Bilingual(pair: b.intro!),
+                if (b.type != 'list') _Bilingual(pair: b.main!),
+                if (b.type == 'list')
+                  for (var i = 0; i < b.items.length; i++)
+                    Padding(
+                      padding: const EdgeInsets.only(left: 6, bottom: 2),
+                      child: _Bilingual(pair: b.items[i], bullet: '${i + 1}.'),
+                    ),
+                const SizedBox(height: 12),
               ],
-            ),
-            const SizedBox(height: 8),
-            for (var i = 0; i < lesson.exercise.length; i++)
-              _Bilingual(pair: lesson.exercise[i], bullet: '${i + 1}.'),
-          ],
-          const SizedBox(height: 20),
-          // Duolingo uslubidagi test: darsdagi juftliklardan avtomatik
-          // tuziladi, xato savollar to'g'ri yechilguncha qaytaveradi.
-          // Dars «o'zlashtirildi» belgisini faqat xatosiz o'tishda oladi.
-          MasteryCallToAction(
-            lessonId: 'nahv-${lesson.book}-${lesson.num}',
-            what: 'qoida va misollar',
-            onStart: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) => NahvQuiz(lesson: lesson)),
-            ),
+              for (final t in lesson.tables) ...[
+                const SizedBox(height: 8),
+                GrammarTable(table: t),
+                const SizedBox(height: 8),
+              ],
+              if (lesson.exercise.isNotEmpty) ...[
+                const SizedBox(height: 8),
+                Row(
+                  children: [
+                    const Icon(
+                      Icons.edit_note_rounded,
+                      size: 18,
+                      color: AppColors.emerald,
+                    ),
+                    const SizedBox(width: 6),
+                    Text(
+                      'Mashq — تَمْرِينٌ',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.w800,
+                        color: AppColors.gold,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 8),
+                for (var i = 0; i < lesson.exercise.length; i++)
+                  _Bilingual(pair: lesson.exercise[i], bullet: '${i + 1}.'),
+              ],
+              const SizedBox(height: 20),
+              // Duolingo uslubidagi test: darsdagi juftliklardan avtomatik
+              // tuziladi, xato savollar to'g'ri yechilguncha qaytaveradi.
+              // Dars «o'zlashtirildi» belgisini faqat xatosiz o'tishda oladi.
+              MasteryCallToAction(
+                lessonId: 'nahv-${lesson.book}-${lesson.num}',
+                what: 'qoida va misollar',
+                onStart: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => NahvQuiz(lesson: lesson)),
+                ),
+              ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }

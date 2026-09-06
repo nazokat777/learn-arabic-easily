@@ -1,6 +1,8 @@
 import 'dart:math' as math;
 
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show HapticFeedback;
 
 /// Ilovaning harakat (motion) tizimi — GSAP uslubidagi effektlar, Flutter'da.
 ///
@@ -19,6 +21,9 @@ import 'package:flutter/material.dart';
 ///   x shake                     -> [Shake]
 ///   width tween                 -> [AnimatedBar]
 ///   press scale                 -> [Tactile]
+///   rotationY flip              -> [FlipCard]
+///   fromTo(x, opacity)          -> [SlideSwitch]
+///   +N floating label           -> [XpChip]
 
 /// Ilovaning asosiy egri chizig'i — GSAP'dagi «expo.out».
 /// Tez boshlanib, oxirida nafis sekinlashadi: premium his shundan keladi.
@@ -126,11 +131,7 @@ class Stagger extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         for (var i = 0; i < children.length; i++)
-          Reveal(
-            delay: start + step * i,
-            offsetY: offsetY,
-            child: children[i],
-          ),
+          Reveal(delay: start + step * i, offsetY: offsetY, child: children[i]),
       ],
     );
   }
@@ -172,10 +173,7 @@ class _FloatState extends State<Float> with SingleTickerProviderStateMixin {
       animation: _c,
       child: widget.child,
       builder: (context, child) => Transform.translate(
-        offset: Offset(
-          0,
-          math.sin(_c.value * 2 * math.pi) * widget.amplitude,
-        ),
+        offset: Offset(0, math.sin(_c.value * 2 * math.pi) * widget.amplitude),
         child: child,
       ),
     );
@@ -361,7 +359,9 @@ class _PulseState extends State<Pulse> with SingleTickerProviderStateMixin {
   late final Animation<double> _s = TweenSequence<double>([
     TweenSequenceItem(tween: Tween(begin: 1, end: widget.peak), weight: 35),
     TweenSequenceItem(tween: Tween(begin: widget.peak, end: 1), weight: 65),
-  ]).animate(CurvedAnimation(parent: _c, curve: Curves.easeOutBack));
+    // easeOutBack 1.0 dan oshib ketadi — TweenSequence [0,1] dan tashqarida
+    // exception beradi (release'da kulrang quti). Chegaralangan egri chiziq.
+  ]).animate(CurvedAnimation(parent: _c, curve: Curves.easeOutCubic));
 
   @override
   void didUpdateWidget(covariant Pulse old) {
@@ -514,7 +514,8 @@ class _AuroraPainter extends CustomPainter {
     for (var i = 0; i < colors.length; i++) {
       final phase = t * 2 * math.pi + i * 2.1;
       final cx = size.width * (0.2 + 0.6 * (0.5 + 0.5 * math.sin(phase)));
-      final cy = size.height * (0.1 + 0.5 * (0.5 + 0.5 * math.cos(phase * 0.8)));
+      final cy =
+          size.height * (0.1 + 0.5 * (0.5 + 0.5 * math.cos(phase * 0.8)));
       final r = size.shortestSide * (0.45 + 0.1 * i);
       final paint = Paint()
         ..shader = RadialGradient(
@@ -529,4 +530,244 @@ class _AuroraPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(_AuroraPainter old) => old.t != t;
+}
+
+/// 3D ag'dariladigan karta — lug'at «eslab ko'r» kartasi uchun.
+///
+/// Oddiy «ko'rsat/yashir» o'rniga karta haqiqiy perspektiva bilan Y o'qi
+/// atrofida aylanadi: old tomonida arabcha so'z, orqasida ma'nosi. Qo'lda
+/// kartochka ag'dargandek his — bu «flashcard» tajribasining yuragi.
+/// [flipped] o'zgarganda o'zi ag'dariladi (ikki tomonga ham).
+class FlipCard extends StatefulWidget {
+  final Widget front;
+  final Widget back;
+  final bool flipped;
+  final Duration duration;
+
+  const FlipCard({
+    super.key,
+    required this.front,
+    required this.back,
+    required this.flipped,
+    this.duration = const Duration(milliseconds: 620),
+  });
+
+  @override
+  State<FlipCard> createState() => _FlipCardState();
+}
+
+class _FlipCardState extends State<FlipCard>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _c = AnimationController(
+    vsync: this,
+    duration: widget.duration,
+    value: widget.flipped ? 1 : 0,
+  );
+  late final Animation<double> _t = CurvedAnimation(
+    parent: _c,
+    curve: Curves.easeInOutCubic,
+  );
+
+  @override
+  void didUpdateWidget(FlipCard old) {
+    super.didUpdateWidget(old);
+    if (old.flipped != widget.flipped) {
+      widget.flipped ? _c.forward() : _c.reverse();
+    }
+  }
+
+  @override
+  void dispose() {
+    _c.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: _t,
+      builder: (context, _) {
+        final angle = _t.value * math.pi;
+        final showBack = angle > math.pi / 2;
+        // Orqa tomon o'zi ham 180° burilgan — yozuv oyna-aks bo'lmasin.
+        final m = Matrix4.identity()
+          ..setEntry(3, 2, 0.0012) // perspektiva
+          ..rotateY(angle);
+        if (showBack) m.rotateY(math.pi);
+        return Transform(
+          alignment: Alignment.center,
+          transform: m,
+          child: showBack ? widget.back : widget.front,
+        );
+      },
+    );
+  }
+}
+
+/// Bola almashganda yangi bola o'ngdan suzib kiradi, eskisi so'nadi.
+/// Karta/savol navbatlari uchun — [ValueKey] bilan farqlanadi.
+/// GSAP'dagi `fromTo(x: 60 -> 0, opacity)` ning o'zi.
+class SlideSwitch extends StatelessWidget {
+  final Widget child;
+  final Duration duration;
+  final double offsetX;
+
+  /// Ota bergan joyni to'liq egallasin (Expanded ichida karta uchun).
+  final bool expand;
+
+  const SlideSwitch({
+    super.key,
+    required this.child,
+    this.expand = false,
+    this.duration = const Duration(milliseconds: 480),
+    this.offsetX = 0.18,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedSwitcher(
+      duration: duration,
+      switchInCurve: kExpoOut,
+      switchOutCurve: Curves.easeIn,
+      transitionBuilder: (child, anim) {
+        // Kiruvchi: o'ngdan; chiquvchi: chapga (teskari yo'nalishda).
+        final slide = Tween<Offset>(
+          begin: Offset(offsetX, 0),
+          end: Offset.zero,
+        ).animate(anim);
+        return FadeTransition(
+          opacity: anim,
+          child: SlideTransition(position: slide, child: child),
+        );
+      },
+      layoutBuilder: (current, previous) => Stack(
+        alignment: Alignment.topCenter,
+        fit: expand ? StackFit.expand : StackFit.loose,
+        children: [...previous, if (current != null) current],
+      ),
+      child: child,
+    );
+  }
+}
+
+/// Titrash (haptic) — telefonda javob qo'lga «tegadi».
+///
+/// Web'da yo'q, xatosiz o'tib ketadi. Ovozsiz rejimda ham ishlaydi —
+/// shuning uchun to'g'ri/xato farqi faqat rangda emas, barmoqda ham bor.
+class Haptic {
+  Haptic._();
+
+  static void tap() => _run(HapticFeedback.selectionClick);
+  static void ok() => _run(HapticFeedback.lightImpact);
+  static void wrong() => _run(HapticFeedback.heavyImpact);
+
+  static void _run(Future<void> Function() f) {
+    if (kIsWeb) return;
+    try {
+      f();
+    } catch (_) {
+      // Qurilma titrashni qo'llamasa — jim.
+    }
+  }
+}
+
+/// XP chipi — qiymat oshganda puls beradi va «+N» oltin yozuv yuqoriga
+/// uchib so'nadi. Foydalanuvchi har to'g'ri javobda mukofotni KO'RADI,
+/// faqat raqam o'zgarganini emas.
+class XpChip extends StatefulWidget {
+  final int value;
+  const XpChip({super.key, required this.value});
+
+  @override
+  State<XpChip> createState() => _XpChipState();
+}
+
+class _XpChipState extends State<XpChip> with SingleTickerProviderStateMixin {
+  late final AnimationController _c = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 900),
+  );
+  int _delta = 0;
+
+  @override
+  void didUpdateWidget(XpChip old) {
+    super.didUpdateWidget(old);
+    if (widget.value > old.value) {
+      _delta = widget.value - old.value;
+      _c.forward(from: 0);
+    }
+  }
+
+  @override
+  void dispose() {
+    _c.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    const gold = Color(0xFFC9A227);
+    // «+N» chipning CHAP tomonida — chip AppBar'ning eng tepasida turadi,
+    // yuqoriga uchsa ekrandan chiqib ketadi. Joy doim band (30 px), shunda
+    // chip sakramaydi.
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        SizedBox(
+          width: 34,
+          child: AnimatedBuilder(
+            animation: _c,
+            builder: (context, _) {
+              if (!_c.isAnimating) return const SizedBox.shrink();
+              final t = kExpoOut.transform(_c.value);
+              final fade = _c.value < 0.55 ? 1.0 : 1 - (_c.value - 0.55) / 0.45;
+              return Transform.translate(
+                offset: Offset(10 - 16 * t, 0),
+                child: Opacity(
+                  opacity: fade.clamp(0, 1),
+                  child: Text(
+                    '+$_delta',
+                    textAlign: TextAlign.right,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w900,
+                      fontSize: 15,
+                      color: gold,
+                    ),
+                  ),
+                ),
+              );
+            },
+          ),
+        ),
+        Pulse(
+          trigger: widget.value,
+          peak: 1.12,
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+            decoration: BoxDecoration(
+              color: gold.withValues(alpha: 0.16),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Icon(Icons.bolt_rounded, size: 16, color: gold),
+                const SizedBox(width: 2),
+                CountUp(
+                  value: widget.value,
+                  suffix: ' XP',
+                  duration: const Duration(milliseconds: 500),
+                  style: const TextStyle(
+                    fontWeight: FontWeight.w800,
+                    color: gold,
+                    fontSize: 13,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
+  }
 }

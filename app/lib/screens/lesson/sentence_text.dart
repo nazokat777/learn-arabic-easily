@@ -53,7 +53,10 @@ class SentenceText extends StatelessWidget {
         TextSpan(
           children: tokens.map((t) {
             if (!t.isWord) {
-              return TextSpan(text: t.text, style: AppTheme.arabic(size: size, color: color));
+              return TextSpan(
+                text: t.text,
+                style: AppTheme.arabic(size: size, color: color),
+              );
             }
             final v = _lookup(t.text);
             return TextSpan(

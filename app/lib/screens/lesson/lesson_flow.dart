@@ -87,21 +87,9 @@ class _LessonFlowState extends State<LessonFlow> {
             ),
           ),
           Center(
-            child: Container(
-              margin: const EdgeInsets.only(right: 12),
-              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-              decoration: BoxDecoration(
-                color: AppColors.gold.withValues(alpha: 0.16),
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Text(
-                '⭐ $_sessionXp XP',
-                style: const TextStyle(
-                  fontWeight: FontWeight.w800,
-                  color: AppColors.gold,
-                  fontSize: 13,
-                ),
-              ),
+            child: Padding(
+              padding: const EdgeInsets.only(right: 12),
+              child: XpChip(value: _sessionXp),
             ),
           ),
         ],

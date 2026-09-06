@@ -79,6 +79,30 @@ jobs:
           cp assets/content/*.json build/web/content/
           echo "kontent versiyasi: $(cat assets/content/version.json)"
 
+      - name: APK imzosini tayyorlash
+        # Barqaror kalit — har build bir xil imzo bilan chiqsin, shunda
+        # telefondagi ilova YANGILANADI (o'chirib qayta o'rnatish shart
+        # emas). Kalit repoda emas: GitHub secret'da base64 holida.
+        # Secret bo'lmasa build to'xtamaydi — debug imzo bilan davom etadi.
+        env:
+          KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          STORE_PASSWORD: ${{ secrets.ANDROID_STORE_PASSWORD }}
+          KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+        run: |
+          if [ -z "$KEYSTORE_B64" ]; then
+            echo "Imzo kaliti yo'q — debug imzo bilan yig'iladi"
+            exit 0
+          fi
+          echo "$KEYSTORE_B64" | base64 -d > app/android/app/release.jks
+          cat > app/android/key.properties <<EOF
+          storeFile=release.jks
+          storePassword=$STORE_PASSWORD
+          keyAlias=$KEY_ALIAS
+          keyPassword=$KEY_PASSWORD
+          EOF
+          echo "Imzo kaliti tayyor"
+
       - name: APK yig'ish
         # Ko'p foydalanuvchi ilovani telefonga o'rnatib ishlatadi. APK ichida
         # darslar bor (ovoz va yangilanishlar internetdan keladi), shuning

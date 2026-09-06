@@ -1,3 +1,20 @@
+import java.util.Properties
+
+// Chiqarish (release) imzosi. `key.properties` bo'lsa — o'sha kalit bilan,
+// bo'lmasa debug kalit bilan imzolanadi (mahalliy `flutter run --release`
+// ishlashi uchun).
+//
+// NEGA KERAK: ilgari release APK ham DEBUG kalit bilan imzolanardi. Debug
+// kalit har mashinada boshqacha — GitHub Actions esa har yugurishda yangi
+// mashina, ya'ni har APK boshqa imzo bilan chiqardi. Android boshqa imzoli
+// yangilanishni o'rnatmaydi: telefonda «Приложение не установлено» chiqadi
+// va foydalanuvchi eskisini o'chirishga majbur bo'ladi (taraqqiyoti bilan
+// birga). Barqaror kalit shu muammoni butunlay yopadi.
+val kalitFayli = rootProject.file("key.properties")
+val kalit = Properties().apply {
+    if (kalitFayli.exists()) kalitFayli.inputStream().use { load(it) }
+}
+
 plugins {
     id("com.android.application")
     id("kotlin-android")
@@ -30,11 +47,24 @@ android {
         versionName = flutter.versionName
     }
 
+    signingConfigs {
+        if (kalitFayli.exists()) {
+            create("release") {
+                storeFile = file(kalit.getProperty("storeFile"))
+                storePassword = kalit.getProperty("storePassword")
+                keyAlias = kalit.getProperty("keyAlias")
+                keyPassword = kalit.getProperty("keyPassword")
+            }
+        }
+    }
+
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = if (kalitFayli.exists()) {
+                signingConfigs.getByName("release")
+            } else {
+                signingConfigs.getByName("debug")
+            }
         }
     }
 }

@@ -7,6 +7,7 @@ import '../theme.dart';
 import '../widgets/entrance.dart';
 import '../widgets/grammar_table.dart';
 import '../widgets/mastery_badge.dart';
+import '../widgets/premium_tile.dart';
 import '../widgets/speak_button.dart';
 import 'qiroat_drill.dart';
 import 'qiroat_match.dart';
@@ -41,7 +42,10 @@ class QiroatBooksHome extends StatelessWidget {
               ),
               child: Row(
                 children: [
-                  Text('اِقْرَأْ', style: AppTheme.arabic(size: 32, color: AppColors.emerald)),
+                  Text(
+                    'اِقْرَأْ',
+                    style: AppTheme.arabic(size: 32, color: AppColors.emerald),
+                  ),
                   const SizedBox(width: 14),
                   const Expanded(
                     child: Text(
@@ -53,10 +57,12 @@ class QiroatBooksHome extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
-            ...bookNums.asMap().entries.map((e) => EntranceFade(
-                  delay: Duration(milliseconds: 60 + e.key * 80),
-                  child: _bookTile(context, e.value, books[e.value]!),
-                )),
+            ...bookNums.asMap().entries.map(
+              (e) => EntranceFade(
+                delay: Duration(milliseconds: 60 + e.key * 80),
+                child: _bookTile(context, e.value, books[e.value]!),
+              ),
+            ),
           ],
         ),
       ),
@@ -70,52 +76,14 @@ class QiroatBooksHome extends StatelessWidget {
     final done = repo.qiroatLessons
         .where((l) => l.book == book && progress.isMastered(l.completionId))
         .length;
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 12),
-      child: Material(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(18),
-        child: InkWell(
-          borderRadius: BorderRadius.circular(18),
-          onTap: () => Navigator.push(context,
-              MaterialPageRoute(builder: (_) => QiroatLessonsList(book: book))),
-          child: Padding(
-            padding: const EdgeInsets.all(16),
-            child: Row(
-              children: [
-                Container(
-                  width: 56,
-                  height: 56,
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                        colors: [AppColors.emerald, AppColors.emeraldDark]),
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: Center(
-                    child: Text('$book',
-                        style: const TextStyle(
-                            color: Colors.white, fontWeight: FontWeight.w800, fontSize: 26)),
-                  ),
-                ),
-                const SizedBox(width: 14),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('$book-kitob',
-                          style: const TextStyle(
-                              fontWeight: FontWeight.w800, fontSize: 17, color: AppColors.ink)),
-                      const SizedBox(height: 4),
-                      Text('$count dars · $done tugatildi',
-                          style: const TextStyle(color: Colors.black54, fontSize: 13)),
-                    ],
-                  ),
-                ),
-                const Icon(Icons.chevron_right, color: AppColors.emerald),
-              ],
-            ),
-          ),
-        ),
+    return PremiumTile(
+      title: '$book-kitob',
+      subtitle: "$count dars · $done o'zlashtirildi",
+      label: '$book',
+      accent: AppColors.teal,
+      onTap: () => Navigator.push(
+        context,
+        MaterialPageRoute(builder: (_) => QiroatLessonsList(book: book)),
       ),
     );
   }
@@ -138,11 +106,15 @@ class QiroatLessonsList extends StatelessWidget {
           children: [
             _intro(),
             const SizedBox(height: 16),
-            ...lessons.asMap().entries.map((e) => EntranceFade(
-                  // ilk ~12 karta ketma-ket, keyingilari birga (uzun quyruq bo'lmasin)
-                  delay: Duration(milliseconds: 40 + (e.key < 12 ? e.key : 12) * 45),
-                  child: _lessonTile(context, e.value),
-                )),
+            ...lessons.asMap().entries.map(
+              (e) => EntranceFade(
+                // ilk ~12 karta ketma-ket, keyingilari birga (uzun quyruq bo'lmasin)
+                delay: Duration(
+                  milliseconds: 40 + (e.key < 12 ? e.key : 12) * 45,
+                ),
+                child: _lessonTile(context, e.value),
+              ),
+            ),
           ],
         ),
       ),
@@ -150,24 +122,27 @@ class QiroatLessonsList extends StatelessWidget {
   }
 
   Widget _intro() => Container(
-        padding: const EdgeInsets.all(16),
-        decoration: BoxDecoration(
-          color: AppColors.softGreen,
-          borderRadius: BorderRadius.circular(16),
+    padding: const EdgeInsets.all(16),
+    decoration: BoxDecoration(
+      color: AppColors.softGreen,
+      borderRadius: BorderRadius.circular(16),
+    ),
+    child: Row(
+      children: [
+        Text(
+          'اِقْرَأْ',
+          style: AppTheme.arabic(size: 32, color: AppColors.emerald),
         ),
-        child: Row(
-          children: [
-            Text('اِقْرَأْ', style: AppTheme.arabic(size: 32, color: AppColors.emerald)),
-            const SizedBox(width: 14),
-            Expanded(
-              child: Text(
-                '«Mabdaul qiroa» $book-kitob. Har bir darsda o\'qish matni va lug\'at bor.',
-                style: const TextStyle(color: AppColors.ink, height: 1.35),
-              ),
-            ),
-          ],
+        const SizedBox(width: 14),
+        Expanded(
+          child: Text(
+            '«Mabdaul qiroa» $book-kitob. Har bir darsda o\'qish matni va lug\'at bor.',
+            style: const TextStyle(color: AppColors.ink, height: 1.35),
+          ),
         ),
-      );
+      ],
+    ),
+  );
 
   Widget _lessonTile(BuildContext context, QiroatLesson l) {
     return Padding(
@@ -177,8 +152,10 @@ class QiroatLessonsList extends StatelessWidget {
         borderRadius: BorderRadius.circular(18),
         child: InkWell(
           borderRadius: BorderRadius.circular(18),
-          onTap: () => Navigator.push(context,
-              MaterialPageRoute(builder: (_) => LessonFlow(lesson: l))),
+          onTap: () => Navigator.push(
+            context,
+            MaterialPageRoute(builder: (_) => LessonFlow(lesson: l)),
+          ),
           child: Padding(
             padding: const EdgeInsets.all(14),
             child: Row(
@@ -188,13 +165,19 @@ class QiroatLessonsList extends StatelessWidget {
                   height: 52,
                   decoration: BoxDecoration(
                     gradient: const LinearGradient(
-                        colors: [AppColors.emerald, AppColors.emeraldDark]),
+                      colors: [AppColors.emerald, AppColors.emeraldDark],
+                    ),
                     borderRadius: BorderRadius.circular(14),
                   ),
                   child: Center(
-                    child: Text('${l.num}',
-                        style: const TextStyle(
-                            color: Colors.white, fontWeight: FontWeight.w800, fontSize: 22)),
+                    child: Text(
+                      '${l.num}',
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w800,
+                        fontSize: 22,
+                      ),
+                    ),
                   ),
                 ),
                 const SizedBox(width: 14),
@@ -202,13 +185,23 @@ class QiroatLessonsList extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('${l.num}-dars',
-                          style: const TextStyle(
-                              fontWeight: FontWeight.w800, fontSize: 16, color: AppColors.ink)),
+                      Text(
+                        '${l.num}-dars',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.w800,
+                          fontSize: 16,
+                          color: AppColors.ink,
+                        ),
+                      ),
                       const SizedBox(height: 4),
-                      Text(l.titleAr,
-                          textDirection: TextDirection.rtl,
-                          style: AppTheme.arabic(size: 18, color: AppColors.emerald)),
+                      Text(
+                        l.titleAr,
+                        textDirection: TextDirection.rtl,
+                        style: AppTheme.arabic(
+                          size: 18,
+                          color: AppColors.emerald,
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -239,9 +232,15 @@ class QiroatLessonDetail extends StatelessWidget {
           children: [
             // Sarlavha (arabcha)
             Center(
-              child: Text(lesson.titleAr,
-                  textDirection: TextDirection.rtl,
-                  style: AppTheme.arabic(size: 30, color: AppColors.emerald, w: FontWeight.w700)),
+              child: Text(
+                lesson.titleAr,
+                textDirection: TextDirection.rtl,
+                style: AppTheme.arabic(
+                  size: 30,
+                  color: AppColors.emerald,
+                  w: FontWeight.w700,
+                ),
+              ),
             ),
             const SizedBox(height: 16),
             _sectionLabel('📖', 'O\'qish matni'),
@@ -250,27 +249,32 @@ class QiroatLessonDetail extends StatelessWidget {
             if (lesson.translation.isNotEmpty) ...[
               const SizedBox(height: 12),
               _FoldBlock(
-                  icon: '🇺🇿', title: 'Tarjimasi', text: lesson.translation),
+                icon: '🇺🇿',
+                title: 'Tarjimasi',
+                text: lesson.translation,
+              ),
             ],
             if (lesson.exercise.isNotEmpty) ...[
               const SizedBox(height: 8),
-              _FoldBlock(
-                  icon: '✍️', title: 'Mashq', text: lesson.exercise),
+              _FoldBlock(icon: '✍️', title: 'Mashq', text: lesson.exercise),
             ],
             if (lesson.exerciseAnswer.isNotEmpty) ...[
               const SizedBox(height: 8),
               _FoldBlock(
-                  icon: '✅',
-                  title: 'Mashqning javobi',
-                  text: lesson.exerciseAnswer,
-                  arabic: true,
-                  vocab: lesson.vocab,
-                  reading: lesson.reading),
+                icon: '✅',
+                title: 'Mashqning javobi',
+                text: lesson.exerciseAnswer,
+                arabic: true,
+                vocab: lesson.vocab,
+                reading: lesson.reading,
+              ),
             ],
             const SizedBox(height: 24),
             _sectionLabel('📚', 'Lug\'at (${lesson.vocab.length} so\'z)'),
             const SizedBox(height: 8),
-            ...lesson.vocab.map((v) => _VocabRow(v: v, reading: lesson.reading)),
+            ...lesson.vocab.map(
+              (v) => _VocabRow(v: v, reading: lesson.reading),
+            ),
             for (final t in lesson.tables) ...[
               const SizedBox(height: 24),
               _sectionLabel('🧾', t.title),
@@ -278,8 +282,14 @@ class QiroatLessonDetail extends StatelessWidget {
               GrammarTable(table: t),
             ],
             const SizedBox(height: 24),
-            const Text('🎮 Mashqlar',
-                style: TextStyle(fontWeight: FontWeight.w800, fontSize: 15, color: AppColors.ink)),
+            const Text(
+              '🎮 Mashqlar',
+              style: TextStyle(
+                fontWeight: FontWeight.w800,
+                fontSize: 15,
+                color: AppColors.ink,
+              ),
+            ),
             const SizedBox(height: 10),
             // «So'zlarni chuqur yodlash» — 6 usulli master drill (har so'z 6 xil usulda)
             _exerciseButton(
@@ -315,49 +325,59 @@ class QiroatLessonDetail extends StatelessWidget {
     );
   }
 
-  Widget _exerciseButton(BuildContext context,
-      {required Color color,
-      required IconData icon,
-      required String label,
-      required Widget page}) {
+  Widget _exerciseButton(
+    BuildContext context, {
+    required Color color,
+    required IconData icon,
+    required String label,
+    required Widget page,
+  }) {
     return PressableScale(
       child: Material(
-      color: color,
-      borderRadius: BorderRadius.circular(14),
-      child: InkWell(
+        color: color,
         borderRadius: BorderRadius.circular(14),
-        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => page)),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 16),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(icon, color: Colors.white),
-              const SizedBox(width: 10),
-              Text(label,
+        child: InkWell(
+          borderRadius: BorderRadius.circular(14),
+          onTap: () =>
+              Navigator.push(context, MaterialPageRoute(builder: (_) => page)),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(icon, color: Colors.white),
+                const SizedBox(width: 10),
+                Text(
+                  label,
                   style: const TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.w800, fontSize: 16)),
-            ],
+                    color: Colors.white,
+                    fontWeight: FontWeight.w800,
+                    fontSize: 16,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
-      ),
       ),
     );
   }
 
   Widget _sectionLabel(String emoji, String text) => Row(
-        children: [
-          Text(emoji, style: const TextStyle(fontSize: 18)),
-          const SizedBox(width: 8),
-          Text(text,
-              style: const TextStyle(
-                  fontWeight: FontWeight.w800, fontSize: 16, color: AppColors.ink)),
-        ],
-      );
-
+    children: [
+      Text(emoji, style: const TextStyle(fontSize: 18)),
+      const SizedBox(width: 8),
+      Text(
+        text,
+        style: const TextStyle(
+          fontWeight: FontWeight.w800,
+          fontSize: 16,
+          color: AppColors.ink,
+        ),
+      ),
+    ],
+  );
 }
-
-
 
 /// O'qish matni: butun matnni ketma-ket tinglash tugmasi, har bir jumlada
 /// alohida ovoz tugmasi, va har bir so'z bosiladigan (ma'nosi + talaffuzi).
@@ -401,7 +421,9 @@ class _ReadingBlockState extends State<_ReadingBlock> {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(18),
-        boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.04), blurRadius: 8)],
+        boxShadow: [
+          BoxShadow(color: Colors.black.withValues(alpha: 0.04), blurRadius: 8),
+        ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -411,11 +433,13 @@ class _ReadingBlockState extends State<_ReadingBlock> {
             child: TextButton.icon(
               onPressed: _playAll,
               icon: Icon(
-                  _playingAll ? Icons.stop_circle : Icons.play_circle_fill,
-                  color: _playingAll ? AppColors.gold : AppColors.emerald),
+                _playingAll ? Icons.stop_circle : Icons.play_circle_fill,
+                color: _playingAll ? AppColors.gold : AppColors.emerald,
+              ),
               label: Text(
-                  _playingAll ? 'To\'xtatish' : 'Butun matnni tinglash',
-                  style: const TextStyle(fontWeight: FontWeight.w700)),
+                _playingAll ? 'To\'xtatish' : 'Butun matnni tinglash',
+                style: const TextStyle(fontWeight: FontWeight.w700),
+              ),
             ),
           ),
           for (var i = 0; i < _sentences.length; i++)
@@ -475,24 +499,37 @@ class _VocabRow extends StatelessWidget {
               tooltip: "Jumlada tinglash — so'z to'liq o'qiladi",
             ),
           Expanded(
-            child: Text(v.uz,
-                style: const TextStyle(
-                    color: AppColors.ink, fontWeight: FontWeight.w600, fontSize: 14.5)),
+            child: Text(
+              v.uz,
+              style: const TextStyle(
+                color: AppColors.ink,
+                fontWeight: FontWeight.w600,
+                fontSize: 14.5,
+              ),
+            ),
           ),
           const SizedBox(width: 10),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Text(v.ar,
+                Text(
+                  v.ar,
+                  textDirection: TextDirection.rtl,
+                  textAlign: TextAlign.right,
+                  style: AppTheme.arabic(size: 22, color: AppColors.emerald),
+                ),
+                if (v.pl.isNotEmpty)
+                  Text(
+                    'ko\'pligi: ${v.pl}',
                     textDirection: TextDirection.rtl,
                     textAlign: TextAlign.right,
-                    style: AppTheme.arabic(size: 22, color: AppColors.emerald)),
-                if (v.pl.isNotEmpty)
-                  Text('ko\'pligi: ${v.pl}',
-                      textDirection: TextDirection.rtl,
-                      textAlign: TextAlign.right,
-                      style: AppTheme.arabic(size: 15, color: AppColors.gold, w: FontWeight.w500)),
+                    style: AppTheme.arabic(
+                      size: 15,
+                      color: AppColors.gold,
+                      w: FontWeight.w500,
+                    ),
+                  ),
               ],
             ),
           ),
@@ -516,8 +553,10 @@ class _CompleteButton extends StatelessWidget {
     return MasteryCallToAction(
       lessonId: lesson.completionId,
       what: 'lug\'at va matn',
-      onStart: () => Navigator.push(context,
-          MaterialPageRoute(builder: (_) => LessonFlow(lesson: lesson))),
+      onStart: () => Navigator.push(
+        context,
+        MaterialPageRoute(builder: (_) => LessonFlow(lesson: lesson)),
+      ),
     );
   }
 }
@@ -532,12 +571,19 @@ class _FoldBlock extends StatefulWidget {
   final String title;
   final String text;
   final bool arabic;
+
   /// Arabcha bo'limda so'z bosilganda izoh ko'rsatish uchun darsning
   /// lug'ati va matni kerak bo'ladi.
   final List<QiroatVocab> vocab;
   final String reading;
-  const _FoldBlock({required this.icon, required this.title, required this.text,
-      this.arabic = false, this.vocab = const [], this.reading = ''});
+  const _FoldBlock({
+    required this.icon,
+    required this.title,
+    required this.text,
+    this.arabic = false,
+    this.vocab = const [],
+    this.reading = '',
+  });
   @override
   State<_FoldBlock> createState() => _FoldBlockState();
 }
@@ -565,12 +611,18 @@ class _FoldBlockState extends State<_FoldBlock> {
                 children: [
                   Text('${widget.icon} ', style: const TextStyle(fontSize: 15)),
                   Expanded(
-                    child: Text(widget.title,
-                        style: const TextStyle(
-                            fontWeight: FontWeight.w800, color: AppColors.ink)),
+                    child: Text(
+                      widget.title,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.w800,
+                        color: AppColors.ink,
+                      ),
+                    ),
                   ),
-                  Icon(_open ? Icons.expand_less : Icons.expand_more,
-                      color: AppColors.emerald),
+                  Icon(
+                    _open ? Icons.expand_less : Icons.expand_more,
+                    color: AppColors.emerald,
+                  ),
                 ],
               ),
             ),
@@ -604,8 +656,13 @@ class _FoldBlockState extends State<_FoldBlock> {
                           ),
                       ],
                     )
-                  : Text(widget.text,
-                      style: const TextStyle(color: AppColors.ink, height: 1.45)),
+                  : Text(
+                      widget.text,
+                      style: const TextStyle(
+                        color: AppColors.ink,
+                        height: 1.45,
+                      ),
+                    ),
             ),
         ],
       ),

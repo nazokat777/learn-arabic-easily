@@ -16,9 +16,11 @@ class PremiumTile extends StatelessWidget {
   final String title;
   final String subtitle;
 
-  /// Ikonka tilesida ko'rsatiladigan narsa — ikkalasidan bittasi.
+  /// Ikonka tilesida ko'rsatiladigan narsa — uchalasidan bittasi.
+  /// [label] — oddiy matn (masalan kitob raqami), Nunito shriftida.
   final IconData? icon;
   final String? arabic;
+  final String? label;
 
   final Color accent;
   final VoidCallback? onTap;
@@ -34,11 +36,15 @@ class PremiumTile extends StatelessWidget {
     required this.subtitle,
     this.icon,
     this.arabic,
+    this.label,
     this.accent = AppColors.emerald,
     this.onTap,
     this.trailing,
     this.enabled = true,
-  }) : assert(icon != null || arabic != null, 'icon yoki arabic kerak');
+  }) : assert(
+         icon != null || arabic != null || label != null,
+         'icon, arabic yoki label kerak',
+       );
 
   @override
   Widget build(BuildContext context) {
@@ -96,6 +102,15 @@ class PremiumTile extends StatelessWidget {
                                     size: 22,
                                     color: Colors.white,
                                     w: FontWeight.w700,
+                                  ),
+                                )
+                              : label != null
+                              ? Text(
+                                  label!,
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w900,
+                                    fontSize: 24,
                                   ),
                                 )
                               : Icon(icon, color: Colors.white, size: 26),

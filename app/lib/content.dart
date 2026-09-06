@@ -357,6 +357,66 @@ class UlashStage {
   );
 }
 
+/// «Mukammal sarf darsligi» kitobining bitta darsi.
+///
+/// Nahv kitoblaridan farqi: u yerda har blok arabcha jumla + tarjimasi
+/// edi, bu kitobda esa asosiy matn O'ZBEKCHA, arabcha misollar gap ichida
+/// keladi. Shuning uchun blok turlari boshqacha:
+///   matn  — o'zbekcha xatboshi (arabcha misol ichida bo'lishi mumkin)
+///   misol — alohida turgan arabcha satr (tinglash tugmasi bilan)
+///   list  — raqamli ro'yxat, har band o'zbekcha matn
+class SarfBlock {
+  final String type;
+  final String uz;
+  final String ar;
+  final String intro;
+  final List<String> items;
+
+  const SarfBlock({
+    required this.type,
+    this.uz = '',
+    this.ar = '',
+    this.intro = '',
+    this.items = const [],
+  });
+
+  factory SarfBlock.fromJson(Map<String, dynamic> j) => SarfBlock(
+    type: j['type'] ?? 'matn',
+    uz: j['uz'] ?? '',
+    ar: j['ar'] ?? '',
+    intro: j['intro'] ?? '',
+    items: ((j['items'] as List?) ?? const []).map((e) => '$e').toList(),
+  );
+}
+
+class SarfLesson {
+  final int num;
+  final int page; // manba kitobdagi sahifa - tekshirish uchun
+  final String titleAr;
+  final String title;
+  final List<SarfBlock> blocks;
+
+  const SarfLesson({
+    required this.num,
+    required this.page,
+    required this.titleAr,
+    required this.title,
+    required this.blocks,
+  });
+
+  factory SarfLesson.fromJson(Map<String, dynamic> j) => SarfLesson(
+    num: j['num'],
+    page: j['page'] ?? 0,
+    titleAr: j['titleAr'] ?? '',
+    title: j['title'] ?? '',
+    blocks: ((j['blocks'] as List?) ?? const [])
+        .map((e) => SarfBlock.fromJson(e as Map<String, dynamic>))
+        .toList(),
+  );
+
+  String get completionId => 'sarf-$num';
+}
+
 class ContentRepository {
   List<Letter> letters = [];
   List<Haraka> harakat = [];
@@ -368,6 +428,9 @@ class ContentRepository {
   /// Grammatika va bog'lovchi so'zlar — dars lug'atlarida yo'q, lekin
   /// matnda ko'p uchraydigan so'zlar (so'zga bosilganda kerak bo'ladi).
   List<QiroatVocab> grammatika = [];
+
+  /// «Mukammal sarf darsligi» darslari.
+  List<SarfLesson> sarfLessons = [];
 
   bool _loaded = false;
 
@@ -420,6 +483,18 @@ class ContentRepository {
           .toList();
     } catch (_) {
       grammatika = [];
+    }
+
+    // Sarf keyinroq qo'shilgan — eski APK'da fayl bo'lmasligi mumkin.
+    try {
+      final sf = json.decode(
+        await ContentUpdater.instance.read('sarf_lessons.json'),
+      );
+      sarfLessons = (sf['lessons'] as List)
+          .map((e) => SarfLesson.fromJson(e as Map<String, dynamic>))
+          .toList();
+    } catch (_) {
+      sarfLessons = [];
     }
 
     _loaded = true;

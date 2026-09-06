@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "title": "Mukammal sarf darsligi",
+    "titleAr": "دروس الصرف الكامل",
+    "author": "Do'stmuhammad Nasriddin Bodariy",
+    "nashr": "Toshkent, «Movarounnahr», 2009",
+    "izoh": "Kitobning o'zbekchasi kirill yozuvida. Ilovada kontent lotinda saqlanadi — kirill ko'rinishini ilovaning o'zi hosil qiladi (lib/uz_yozuv.dart). Arabcha matn manbadagidek, qanday harakatlangan bo'lsa shundayligicha ko'chiriladi.",
+    "blokTurlari": "matn — o'zbekcha xatboshi (arabcha misollar ichida kelishi mumkin); misol — alohida turgan arabcha satr; list — raqamli ro'yxat"
+  },
+  "lessons": [
+    {
+      "num": 1,
+      "page": 8,
+      "titleAr": "أَقْسَامُ الكَلِمَةِ",
+      "title": "Kalimaning qismlari",
+      "blocks": [
+        {
+          "type": "misol",
+          "ar": "بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ",
+          "uz": "Mehribon va rahmli Alloh nomi bilan."
+        },
+        {
+          "type": "matn",
+          "uz": "Ey o'quvchi! O'qigan darsingning ma'nosini fahmlab, tushunib o'qigil. Alloh taolo seni ikki jahonda baxtli qilsin."
+        },
+        {
+          "type": "list",
+          "intro": "Bilki arab kalimalari uch qismdir:",
+          "items": [
+            "Ism — اسم",
+            "Fe'l — فعل",
+            "Harf — حرف"
+          ]
+        },
+        { "type": "matn", "uz": "Ismga misol: رَجُل" },
+        { "type": "matn", "uz": "Fe'lga misol: ضَرَبَ" },
+        { "type": "matn", "uz": "Harfga misol: عَنْ، مِنْ" },
+        {
+          "type": "list",
+          "intro": "1. Ism uch qismdir:",
+          "items": [
+            "Sulosiy — ثُلاثي",
+            "Ruboiy — رُباعِي",
+            "Xumosiy — خُماسِي"
+          ]
+        },
+        {
+          "type": "matn",
+          "uz": "Ismi sulosiy deb uch harflik ismga aytiladi. Masalan: زَيْد"
+        },
+        {
+          "type": "matn",
+          "uz": "Ismi rubo'iy deb to'rt harflik ismga aytiladi. Masalan: جَعْفَر"
+        },
+        {
+          "type": "matn",
+          "uz": "Ismi xumosiy deb besh harflik ismga aytiladi. Masalan: سَفَرْجَل"
+        },
+        {
+          "type": "list",
+          "intro": "2. Fe'l ikki qismdir:",
+          "items": [
+            "Sulosiy — ثلاثي",
+            "Rubo'iy — رُباعي"
+          ]
+        },
+        {
+          "type": "matn",
+          "uz": "Fe'li sulosiy deb uch harflik fe'lga aytiladi. Masalan: ضَرَبَ"
+        },
+        {
+          "type": "matn",
+          "uz": "Fe'li ruboiy deb to'rt harflik fe'lga aytiladi. Masalan: دَحْرَجَ"
+        }
+      ]
+    },
+    {
+      "num": 2,
+      "page": 9,
+      "titleAr": "الْحَرْفُ الْأَصْلِيُّ وَالزَّائِدُ",
+      "title": "Asliy va zoid harf",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "Zoid bo'lgan (ya'ni orttirilgan) harflardan asliy bo'lgan harflarni tanimoqdagi arab so'zining tarozusi: فاء، عين، لام (fo, ayn, lom) dir."
+        },
+        {
+          "type": "list",
+          "intro": "3. Harf ikki qismdir:",
+          "items": [
+            "Asliy harf.",
+            "Zoid harf."
+          ]
+        },
+        {
+          "type": "matn",
+          "uz": "Asliy harf shunday harfki, فاءُ، عَينُ، لام ning bittasi qarshisida (barobarida) bo'ladi."
+        },
+        { "type": "matn", "uz": "Masalan: فَعَلَ – ضَرَبَ vaznida." },
+        {
+          "type": "matn",
+          "uz": "Harfi zoid shunday harfki, فاءُ، عَينُ، لام larning birortasi qarshisida (barobarida) bo'lmaydi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: أَفْعَلَ – أَكْرَمَ vaznida. Bunda أَكْرَمَ ni فَعَلَ ga solishtirganda ا (alif) harfi zoid bo'ladi. أَكْرَمَ ning asli كَرُمَ dir."
+        },
+        {
+          "type": "matn",
+          "uz": "Asliy harf uch harflik bo'lgan kalimada u uchtadir: فا، عين va bir لام dir."
+        },
+        {
+          "type": "matn",
+          "uz": "Asliy harf to'rt harflik bo'lgan kalimada to'rttadir: فا، عين ikki لام dir."
+        },
+        {
+          "type": "matn",
+          "uz": "Asliy harf besh harflik bo'lgan kalimada beshtadir: فا، عين uch لام dir."
+        },
+        {
+          "type": "list",
+          "intro": "Uch harflik kalima ikki qismdir:",
+          "items": [
+            "ثلاثي مُجَرَّد (sulosiy mujarrad), ya'ni, harfi zoid yo'q (yakka) kalimalar.",
+            "ثلاثي مَزِيد (sulosiy mazid), ya'ni, harfi zoidi bor kalimalar."
+          ]
+        },
+        {
+          "type": "matn",
+          "uz": "Sulosiy mujarrad shunday kalimadirki, uning uch asliy harfining ustiga biror harf orttirilmagan bo'ladi."
+        }
+      ]
+    }
+  ]
+}

@@ -33,6 +33,7 @@ flutter:
     - assets/content/nahv_lessons.json
     - assets/content/ulash.json
     - assets/content/grammatika.json
+    - assets/content/sarf_lessons.json
     - assets/content/version.json
     # Ovoz RO'YXATLARI ilova ichida (jami ~1 MB), ovoz FAYLLARI esa saytdan
     # olinadi (257 MB - APK ichiga sig'maydi). Fayllarni GitHub Actions

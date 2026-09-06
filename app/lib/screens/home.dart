@@ -5,6 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../main.dart';
 import '../theme.dart';
+import 'sarf_home.dart';
 import '../uz_yozuv.dart';
 import '../widgets/motion.dart';
 import '../widgets/ornament.dart';
@@ -132,12 +133,15 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 14),
-                      const _ModuleCard(
+                      _ModuleCard(
                         title: 'Sarf',
                         subtitle: "So'z tuzilishi — vazn, tasrif, fe'l boblari",
                         arabic: 'صَرْف',
                         accent: AppColors.indigo,
-                        enabled: false,
+                        onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => const SarfHome()),
+                        ),
                       ),
                     ],
                   ),
@@ -504,7 +508,6 @@ class _XpPanel extends StatelessWidget {
 class _ModuleCard extends StatelessWidget {
   final String title, subtitle, arabic;
   final Color accent;
-  final bool enabled;
   final VoidCallback? onTap;
 
   const _ModuleCard({
@@ -512,7 +515,6 @@ class _ModuleCard extends StatelessWidget {
     required this.subtitle,
     required this.arabic,
     required this.accent,
-    this.enabled = true,
     this.onTap,
   });
 
@@ -525,112 +527,95 @@ class _ModuleCard extends StatelessWidget {
       style: AppTheme.arabic(size: 26, color: Colors.white, w: FontWeight.w700),
     );
 
-    return Opacity(
-      opacity: enabled ? 1 : 0.5,
-      child: Tactile(
-        child: Container(
-          decoration: BoxDecoration(
+    return Tactile(
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: radius,
+          boxShadow: [
+            BoxShadow(
+              color: accent.withValues(alpha: 0.16),
+              blurRadius: 26,
+              offset: const Offset(0, 12),
+            ),
+          ],
+        ),
+        child: Material(
+          color: Colors.white,
+          borderRadius: radius,
+          child: InkWell(
             borderRadius: radius,
-            boxShadow: [
-              BoxShadow(
-                color: accent.withValues(alpha: enabled ? 0.16 : 0.05),
-                blurRadius: 26,
-                offset: const Offset(0, 12),
-              ),
-            ],
-          ),
-          child: Material(
-            color: Colors.white,
-            borderRadius: radius,
-            child: InkWell(
-              borderRadius: radius,
-              onTap: enabled ? onTap : null,
-              child: Padding(
-                padding: const EdgeInsets.all(16),
-                child: Row(
-                  children: [
-                    Container(
-                      width: 68,
-                      height: 68,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(19),
-                        gradient: LinearGradient(
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                          colors: [accent, dark],
+            onTap: onTap,
+            child: Padding(
+              padding: const EdgeInsets.all(16),
+              child: Row(
+                children: [
+                  Container(
+                    width: 68,
+                    height: 68,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(19),
+                      gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [accent, dark],
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: accent.withValues(alpha: 0.4),
+                          blurRadius: 14,
+                          offset: const Offset(0, 6),
                         ),
-                        boxShadow: [
-                          BoxShadow(
-                            color: accent.withValues(alpha: 0.4),
-                            blurRadius: 14,
-                            offset: const Offset(0, 6),
-                          ),
-                        ],
-                      ),
-                      child: Center(
-                        child: enabled
-                            ? Float(amplitude: 3, child: glyph)
-                            : glyph,
-                      ),
+                      ],
                     ),
-                    const SizedBox(width: 16),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            children: [
-                              Flexible(
-                                child: Text(
-                                  title,
-                                  style: const TextStyle(
-                                    fontWeight: FontWeight.w900,
-                                    fontSize: 17,
-                                    color: AppColors.ink,
-                                    letterSpacing: -0.2,
-                                  ),
+                    child: Center(child: Float(amplitude: 3, child: glyph)),
+                  ),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Flexible(
+                              child: Text(
+                                title,
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.w900,
+                                  fontSize: 17,
+                                  color: AppColors.ink,
+                                  letterSpacing: -0.2,
                                 ),
                               ),
-                              if (!enabled) ...[
-                                const SizedBox(width: 8),
-                                Icon(
-                                  Icons.lock_rounded,
-                                  size: 15,
-                                  color: accent,
-                                ),
-                              ],
-                            ],
-                          ),
-                          const SizedBox(height: 4),
-                          Text(
-                            subtitle,
-                            style: const TextStyle(
-                              color: Colors.black54,
-                              fontSize: 13,
-                              height: 1.3,
                             ),
+                          ],
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          subtitle,
+                          style: const TextStyle(
+                            color: Colors.black54,
+                            fontSize: 13,
+                            height: 1.3,
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-                    const SizedBox(width: 6),
-                    Container(
-                      width: 34,
-                      height: 34,
-                      decoration: BoxDecoration(
-                        color: accent.withValues(alpha: 0.1),
-                        shape: BoxShape.circle,
-                      ),
-                      child: Icon(
-                        enabled
-                            ? Icons.arrow_forward_rounded
-                            : Icons.hourglass_empty_rounded,
-                        size: 18,
-                        color: accent,
-                      ),
+                  ),
+                  const SizedBox(width: 6),
+                  Container(
+                    width: 34,
+                    height: 34,
+                    decoration: BoxDecoration(
+                      color: accent.withValues(alpha: 0.1),
+                      shape: BoxShape.circle,
                     ),
-                  ],
-                ),
+                    child: Icon(
+                      Icons.arrow_forward_rounded,
+                      size: 18,
+                      color: accent,
+                    ),
+                  ),
+                ],
               ),
             ),
           ),

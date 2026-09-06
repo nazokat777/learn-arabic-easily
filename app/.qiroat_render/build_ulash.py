@@ -90,6 +90,29 @@ for num, title, titleAr, explain, keys in TANLOV:
     stages.append({"num": num, "title": title, "titleAr": titleAr,
                    "explain": explain, "words": words})
 
+# --- Tekshiruvlar: test buzilmasligi uchun ---
+#
+# Testda chalg'ituvchi variantlar SHU bosqichning so'zlaridan olinadi.
+# Shuning uchun ikki shart majburiy:
+#   * bir bosqichda ikki so'zning ma'nosi (yoki arabchasi) bir xil
+#     bo'lmasin — aks holda variantlar ichida bir xil javob ikki marta
+#     chiqadi va biri "xato" deb belgilanadi;
+#   * har bosqichda kamida 4 ta so'z bo'lsin — 4 ta variant kerak.
+xato = []
+for st in stages:
+    uzlar = [w["uz"] for w in st["words"]]
+    arlar = [w["ar"] for w in st["words"]]
+    for nom, ro in (("ma'no", uzlar), ("arabcha", arlar)):
+        takror = {x for x in ro if ro.count(x) > 1}
+        if takror:
+            xato.append("%d-bosqichda takror %s: %s" % (st["num"], nom, takror))
+    if len(st["words"]) < 4:
+        xato.append("%d-bosqichda 4 tadan kam so'z" % st["num"])
+if xato:
+    for x in xato:
+        print("KONTENT XATO:", x)
+    raise SystemExit(1)
+
 out = {
   "meta": {
     "title": "Harflarni ulash",

@@ -365,6 +365,10 @@ class ContentRepository {
   List<NahvLesson> nahvLessons = [];
   List<UlashStage> ulashStages = [];
 
+  /// Grammatika va bog'lovchi so'zlar — dars lug'atlarida yo'q, lekin
+  /// matnda ko'p uchraydigan so'zlar (so'zga bosilganda kerak bo'ladi).
+  List<QiroatVocab> grammatika = [];
+
   bool _loaded = false;
 
   Future<void> load() async {
@@ -403,6 +407,19 @@ class ContentRepository {
           .toList();
     } catch (_) {
       ulashStages = [];
+    }
+
+    // Grammatika lug'ati keyinroq qo'shilgan — eski APK'da fayl
+    // bo'lmasligi mumkin, yo'qligi ilovani to'xtatmasin.
+    try {
+      final g = json.decode(
+        await ContentUpdater.instance.read('grammatika.json'),
+      );
+      grammatika = (g['words'] as List)
+          .map((e) => QiroatVocab.fromJson(e as Map<String, dynamic>))
+          .toList();
+    } catch (_) {
+      grammatika = [];
     }
 
     _loaded = true;

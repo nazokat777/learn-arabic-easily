@@ -8,6 +8,7 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:learn_arabic/arabic.dart';
+import 'package:learn_arabic/lugat.dart';
 import 'package:learn_arabic/progress.dart';
 import 'package:learn_arabic/uz_yozuv.dart';
 import 'package:learn_arabic/services/content_updater.dart';
@@ -382,6 +383,47 @@ void main() {
       UzYozuv.instance.value = Yozuv.kirill;
       expect(uz("so'z"), 'сўз');
       UzYozuv.instance.value = Yozuv.lotin; // keyingi testlarga toza qoldiramiz
+    });
+  });
+
+  group("So'z izlagich (lug'at)", () {
+    test("kalit — harakat, tatweel va hamza farqlarini yo'qotadi", () {
+      expect(Lugat.kalit('كِتَابٌ'), Lugat.kalit('كتاب'));
+      expect(Lugat.kalit('أَحَدٌ'), Lugat.kalit('احد'));
+      expect(Lugat.kalit('كَلِمَةٌ'), Lugat.kalit('كلمه'));
+      expect(Lugat.kalit('عَلَىٰ'), Lugat.kalit('علي'));
+      expect(Lugat.kalit('بـــاب'), Lugat.kalit('باب'));
+    });
+
+    test("grammatika lug'ati to'g'ri va takrorsiz", () {
+      final j = json.decode(
+        File('assets/content/grammatika.json').readAsStringSync(),
+      );
+      final words = (j['words'] as List).cast<Map<String, dynamic>>();
+      expect(words.length, greaterThan(100));
+      final kalitlar = <String>{};
+      for (final w in words) {
+        final ar = (w['ar'] as String).trim();
+        final uz = (w['uz'] as String).trim();
+        expect(ar, isNotEmpty);
+        expect(uz, isNotEmpty, reason: ar);
+        // Bir xil so'z ikki marta bo'lsa, qaysi ma'no chiqishi tasodifga
+        // qolardi.
+        expect(kalitlar.add(Lugat.kalit(ar)), isTrue, reason: "takror: $ar");
+      }
+    });
+
+    test("grammatika so'zlarida lotin harfi yo'q", () {
+      final j = json.decode(
+        File('assets/content/grammatika.json').readAsStringSync(),
+      );
+      for (final w in (j['words'] as List).cast<Map<String, dynamic>>()) {
+        expect(
+          RegExp(r'[A-Za-z]').hasMatch(w['ar'] as String),
+          isFalse,
+          reason: w['ar'] as String,
+        );
+      }
     });
   });
 

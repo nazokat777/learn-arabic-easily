@@ -2,25 +2,36 @@ import 'package:flutter/material.dart' hide Text;
 import '../../widgets/uz_text.dart';
 import '../../arabic.dart';
 import '../../content.dart';
+import '../../lugat.dart';
 import '../../services/tts.dart';
 import '../../theme.dart';
 
 /// Arabcha so'zga bosilganda ochiladigan interaktiv karta:
 /// ma'no, taxminiy talaffuz, audio, harflar, grammatik shakllar (kitobdan),
 /// va misol jumla (dars matnidan olinadi — kontent o'zgarmaydi).
-void showWordSheet(BuildContext context, QiroatVocab v, {String? reading}) {
+/// [bosilgan] — matnda bosilgan so'zning ASL shakli, agar u lug'atdagi
+/// shakldan farq qilsa (masalan «الكلمات» bosilib, lug'atdan «كلمة»
+/// topilgan bo'lsa). Shunda o'quvchi qaysi so'z qaysisiga bog'langanini
+/// ko'radi — aks holda kartada butunlay boshqa so'z chiqqandek tuyulardi.
+void showWordSheet(
+  BuildContext context,
+  QiroatVocab v, {
+  String? reading,
+  String? bosilgan,
+}) {
   showModalBottomSheet(
     context: context,
     backgroundColor: Colors.transparent,
     isScrollControlled: true,
-    builder: (_) => _WordSheet(v: v, reading: reading),
+    builder: (_) => _WordSheet(v: v, reading: reading, bosilgan: bosilgan),
   );
 }
 
 class _WordSheet extends StatelessWidget {
   final QiroatVocab v;
   final String? reading;
-  const _WordSheet({required this.v, this.reading});
+  final String? bosilgan;
+  const _WordSheet({required this.v, this.reading, this.bosilgan});
 
   @override
   Widget build(BuildContext context) {
@@ -89,6 +100,43 @@ class _WordSheet extends StatelessWidget {
                 ),
               ),
             ),
+            if (bosilgan != null &&
+                Lugat.kalit(bosilgan!) != Lugat.kalit(head)) ...[
+              const SizedBox(height: 10),
+              Center(
+                child: Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 6,
+                  ),
+                  decoration: BoxDecoration(
+                    color: AppColors.gold.withValues(alpha: 0.14),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      const Text(
+                        'Matndagi shakli:',
+                        style: TextStyle(fontSize: 12.5, color: Colors.black54),
+                      ),
+                      const SizedBox(width: 6),
+                      Directionality(
+                        textDirection: TextDirection.rtl,
+                        child: Text(
+                          bosilgan!,
+                          style: AppTheme.arabic(
+                            size: 20,
+                            color: AppColors.gold,
+                            w: FontWeight.w700,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
             const SizedBox(height: 18),
             // Ma'no
             _card(

@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import '../../arabic.dart';
 import '../../content.dart';
+import '../../lugat.dart';
 import '../../services/tts.dart';
 import '../../theme.dart';
 import 'word_sheet.dart';
@@ -23,6 +24,14 @@ class SentenceText extends StatelessWidget {
     this.size = 26,
     this.color = AppColors.ink,
   });
+
+  /// So'zni avval SHU DARS lug'atidan, topilmasa butun ilova lug'atidan
+  /// qidiradi. Dars lug'ati birinchi: undagi ma'no shu matn uchun aniqroq.
+  LugatTopilma? _qidir(String word) {
+    final darsdan = _lookup(word);
+    if (darsdan != null) return LugatTopilma(darsdan, true);
+    return Lugat.instance.qidir(word);
+  }
 
   QiroatVocab? _lookup(String word) {
     final w = stripDiacritics(word);
@@ -58,18 +67,23 @@ class SentenceText extends StatelessWidget {
                 style: AppTheme.arabic(size: size, color: color),
               );
             }
-            final v = _lookup(t.text);
+            final topilma = _qidir(t.text);
             return TextSpan(
               text: t.text,
               style: AppTheme.arabic(
                 size: size,
-                color: v != null ? AppColors.emeraldDark : color,
+                color: topilma != null ? AppColors.emeraldDark : color,
                 w: FontWeight.w500,
               ),
               recognizer: TapGestureRecognizer()
                 ..onTap = () {
-                  if (v != null) {
-                    showWordSheet(context, v, reading: reading);
+                  if (topilma != null) {
+                    showWordSheet(
+                      context,
+                      topilma.soz,
+                      reading: reading,
+                      bosilgan: topilma.aynan ? null : t.text,
+                    );
                   } else {
                     Tts.instance.speak(t.text, id: t.text);
                   }

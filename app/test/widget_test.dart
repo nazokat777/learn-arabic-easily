@@ -159,11 +159,30 @@ void main() {
       expect(h, [HarfHolati.boshda, HarfHolati.ortada, HarfHolati.oxirida]);
     });
 
-    test('shakl ZWJ bilan to\'g\'ri yasaladi va harakatsiz bo\'ladi', () {
-      expect(holatShakli('بَ', HarfHolati.boshda), 'ب\u200D');
-      expect(holatShakli('بَ', HarfHolati.ortada), '\u200Dب\u200D');
-      expect(holatShakli('بٌ', HarfHolati.oxirida), '\u200Dب');
+    test('shakl tatweel bilan yasaladi va harakatsiz bo\'ladi', () {
+      // Tatweel (U+0640) — ko'rinadigan ulanish chizig'i.
+      //
+      // Ilgari ko'rinmas ZWJ (U+200D) ishlatilardi va ilovada harf
+      // BOSHLANG'ICH shakl o'rniga ALOHIDA shaklda chizilardi: «جـ»
+      // o'rniga «ج». Ko'rinmas belgi shaper va matn yo'nalishiga bog'liq
+      // bo'lib qolgan edi.
+      expect(holatShakli('بَ', HarfHolati.boshda), 'بـ');
+      expect(holatShakli('بَ', HarfHolati.ortada), 'ـبـ');
+      expect(holatShakli('بٌ', HarfHolati.oxirida), 'ـب');
       expect(holatShakli('بٌ', HarfHolati.alohida), 'ب');
+    });
+
+    test('ulanadigan harfda to\'rt shakl bir-biridan farq qiladi', () {
+      // Aynan shu buzilgandi: «So'z BOSHIDA» ostida ALOHIDA shakl
+      // chiqardi. Shakllar bir xil bo'lib qolsa, bo'lim hech narsa
+      // o'rgatmaydi — shuning uchun farqni majburiy qilamiz.
+      const b = 'ب';
+      final shakllar = {for (final h in HarfHolati.values) holatShakli(b, h)};
+      expect(
+        shakllar.length,
+        HarfHolati.values.length,
+        reason: 'to\'rt shakl ham bir-biridan farq qilishi kerak: $shakllar',
+      );
     });
   });
 
@@ -179,18 +198,27 @@ void main() {
       expect(u.scheme, 'https');
       expect(u.host, 'nazokat777.github.io');
       expect(u.path, endsWith('/content/nahv_lessons.json'));
-      expect(u.toString(), isNot(contains(r'$')),
-          reason: 'manzilda so\'zma-so\'z dollar qolmasligi kerak');
+      expect(
+        u.toString(),
+        isNot(contains(r'$')),
+        reason: 'manzilda so\'zma-so\'z dollar qolmasligi kerak',
+      );
     });
 
     test('har chaqiruvda kesh chetlab o\'tiladi', () async {
       final a = ContentUpdater.instance.uriFor('version.json');
       await Future<void>.delayed(const Duration(milliseconds: 5));
       final b = ContentUpdater.instance.uriFor('version.json');
-      expect(a.queryParameters['t'], isNotNull,
-          reason: 'kesh chetlab o\'tish parametri yo\'q');
-      expect(a.toString(), isNot(b.toString()),
-          reason: 'manzil har safar boshqacha bo\'lishi kerak');
+      expect(
+        a.queryParameters['t'],
+        isNotNull,
+        reason: 'kesh chetlab o\'tish parametri yo\'q',
+      );
+      expect(
+        a.toString(),
+        isNot(b.toString()),
+        reason: 'manzil har safar boshqacha bo\'lishi kerak',
+      );
     });
 
     test('yangilanadigan fayllar ro\'yxati to\'liq', () {
@@ -221,8 +249,9 @@ void main() {
     const unliBermaydi = {'-', 'bb'};
 
     List<Map<String, dynamic>> harakatlar() =>
-        (json.decode(File('assets/content/harakat.json').readAsStringSync())
-                    ['harakat']
+        (json.decode(
+                  File('assets/content/harakat.json').readAsStringSync(),
+                )['harakat']
                 as List)
             .cast<Map<String, dynamic>>();
 
@@ -279,7 +308,6 @@ void main() {
       expect(buzuq, isEmpty, reason: 'harakati ajralgan yozuvlar: $buzuq');
     });
   });
-
 }
 
 /// Harakatlar o'z harfiga ulanganini tekshiradi.
@@ -291,8 +319,18 @@ void main() {
 /// tiklab bo'lmaydi, shuning uchun testda ushlaymiz.
 bool _harakatAjralganmi(String s) {
   const harakat = {
-    0x064B, 0x064C, 0x064D, 0x064E, 0x064F, 0x0650, 0x0651, 0x0652,
-    0x0653, 0x0654, 0x0655, 0x0670,
+    0x064B,
+    0x064C,
+    0x064D,
+    0x064E,
+    0x064F,
+    0x0650,
+    0x0651,
+    0x0652,
+    0x0653,
+    0x0654,
+    0x0655,
+    0x0670,
   };
   // harakat.json da harakatning O'ZI alohida saqlanadi («َ») — u xato emas.
   if (s.runes.every((r) => harakat.contains(r))) return false;

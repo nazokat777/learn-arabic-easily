@@ -22,22 +22,36 @@ class Letter {
   });
 
   factory Letter.fromJson(Map<String, dynamic> j) => Letter(
-        id: j['id'],
-        ar: j['ar'],
-        nameUz: j['name_uz'],
-        nameAr: j['name_ar'],
-        translit: j['translit'],
-        makhrajUz: j['makhraj_uz'],
-        connectsLeft: j['connectsLeft'] ?? true,
-      );
+    id: j['id'],
+    ar: j['ar'],
+    nameUz: j['name_uz'],
+    nameAr: j['name_ar'],
+    translit: j['translit'],
+    makhrajUz: j['makhraj_uz'],
+    connectsLeft: j['connectsLeft'] ?? true,
+  );
 
-  static const zwj = '‍'; // zero-width joiner
+  /// Tatweel (kashida) — ulanish chizig'i, U+0640.
+  ///
+  /// Nega ZWJ emas: avval ko'rinmas ZWJ (U+200D) ishlatilardi va ilovada
+  /// harf BOSHLANG'ICH shakl o'rniga ALOHIDA shaklda chizilardi — «جـ»
+  /// o'rniga «ج». Ko'rinmas belgi shaper va matn yo'nalishiga bog'liq
+  /// bo'lib qoldi.
+  ///
+  /// Tatweel — haqiqiy, ko'rinadigan ulovchi belgi. Arab darsliklarida
+  /// harf shakllari aynan shu bilan bosiladi va u o'quvchiga qaysi tomon
+  /// ulanishini KO'RSATIB ham turadi.
+  static const tatweel = 'ـ';
 
-  /// Harf holatlari — ZWJ orqali shrift avtomatik to'g'ri shakl beradi.
+  /// Harf holatlari — shakl tatweel bilan majburlanadi.
+  ///
+  /// Chapga ulanmaydigan harflarda (ا د ذ ر ز و) o'ngdagi tatweel
+  /// qo'yilmaydi: ular o'zidan keyingisiga bog'lanmaydi, aks holda
+  /// mavjud bo'lmagan shakl ko'rsatilardi.
   String get isolated => ar;
-  String get initial => connectsLeft ? '$ar$zwj' : ar;
-  String get medial => connectsLeft ? '$zwj$ar$zwj' : '$zwj$ar';
-  String get finalForm => '$zwj$ar';
+  String get initial => connectsLeft ? '$ar$tatweel' : ar;
+  String get medial => connectsLeft ? '$tatweel$ar$tatweel' : '$tatweel$ar';
+  String get finalForm => '$tatweel$ar';
 }
 
 /// Harakat yoki belgi.
@@ -61,14 +75,14 @@ class Haraka {
   });
 
   factory Haraka.fromJson(Map<String, dynamic> j) => Haraka(
-        id: j['id'],
-        nameUz: j['name_uz'],
-        nameAr: j['name_ar'],
-        sign: j['sign'],
-        exampleAr: j['example_ar'],
-        soundUz: j['sound_uz'],
-        descUz: j['desc_uz'],
-      );
+    id: j['id'],
+    nameUz: j['name_uz'],
+    nameAr: j['name_ar'],
+    sign: j['sign'],
+    exampleAr: j['example_ar'],
+    soundUz: j['sound_uz'],
+    descUz: j['desc_uz'],
+  );
 }
 
 /// Lug'at so'zi.
@@ -85,12 +99,8 @@ class VocabWord {
     required this.lesson,
   });
 
-  factory VocabWord.fromJson(Map<String, dynamic> j) => VocabWord(
-        id: j['id'],
-        ar: j['ar'],
-        uz: j['uz'],
-        lesson: j['lesson'],
-      );
+  factory VocabWord.fromJson(Map<String, dynamic> j) =>
+      VocabWord(id: j['id'], ar: j['ar'], uz: j['uz'], lesson: j['lesson']);
 }
 
 /// Mabdaul qiroat darsidagi bitta lug'at so'zi (arabcha + ko'plik + o'zbekcha).
@@ -101,11 +111,8 @@ class QiroatVocab {
 
   const QiroatVocab({required this.ar, required this.pl, required this.uz});
 
-  factory QiroatVocab.fromJson(Map<String, dynamic> j) => QiroatVocab(
-        ar: j['ar'],
-        pl: j['pl'] ?? '',
-        uz: j['uz'],
-      );
+  factory QiroatVocab.fromJson(Map<String, dynamic> j) =>
+      QiroatVocab(ar: j['ar'], pl: j['pl'] ?? '', uz: j['uz']);
 }
 
 /// «Mabdaul qiroat» kitobining bitta darsi: o'qish matni + lug'at.
@@ -133,14 +140,14 @@ class QiroatTable {
   });
 
   factory QiroatTable.fromJson(Map<String, dynamic> j) => QiroatTable(
-        title: j['title'] ?? '',
-        titleAr: j['titleAr'] ?? '',
-        columns: (j['columns'] as List).cast<String>(),
-        rows: (j['rows'] as List)
-            .map((e) => QiroatTableRow.fromJson(e as Map<String, dynamic>))
-            .toList(),
-        layout: j['layout'] ?? 'pairs',
-      );
+    title: j['title'] ?? '',
+    titleAr: j['titleAr'] ?? '',
+    columns: (j['columns'] as List).cast<String>(),
+    rows: (j['rows'] as List)
+        .map((e) => QiroatTableRow.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    layout: j['layout'] ?? 'pairs',
+  );
 }
 
 /// Jadvalning bitta qatori. [group] - qatorlar bo'linadigan bo'lim
@@ -159,10 +166,10 @@ class QiroatTableRow {
   });
 
   factory QiroatTableRow.fromJson(Map<String, dynamic> j) => QiroatTableRow(
-        group: j['group'] ?? '',
-        cells: (j['cells'] as List).cast<String>(),
-        label: j['label'] ?? '',
-      );
+    group: j['group'] ?? '',
+    cells: (j['cells'] as List).cast<String>(),
+    label: j['label'] ?? '',
+  );
 }
 
 /// Nahv darsining ikki tilli bo'lagi: arabchasi kitobdan, o'zbekchasi tarjima.
@@ -178,11 +185,16 @@ class NahvPair {
 /// Darsning bir bloki: izoh xatboshisi («para») yoki raqamli ro'yxat («list»).
 class NahvBlock {
   final String type;
-  final NahvPair? main;   // para uchun
-  final NahvPair? intro;  // list uchun kirish jumlasi
+  final NahvPair? main; // para uchun
+  final NahvPair? intro; // list uchun kirish jumlasi
   final List<NahvPair> items;
 
-  const NahvBlock({required this.type, this.main, this.intro, this.items = const []});
+  const NahvBlock({
+    required this.type,
+    this.main,
+    this.intro,
+    this.items = const [],
+  });
 
   factory NahvBlock.fromJson(Map<String, dynamic> j) {
     final type = j['type'] ?? 'para';
@@ -203,7 +215,7 @@ class NahvBlock {
 class NahvLesson {
   final int book;
   final int num;
-  final int page;      // manba kitobdagi sahifa - tekshirish uchun
+  final int page; // manba kitobdagi sahifa - tekshirish uchun
   final String titleAr;
   final String title;
   final NahvPair rule;
@@ -229,24 +241,24 @@ class NahvLesson {
   });
 
   factory NahvLesson.fromJson(Map<String, dynamic> j) => NahvLesson(
-        book: j['book'] ?? 1,
-        num: j['num'],
-        page: j['page'] ?? 0,
-        titleAr: j['titleAr'] ?? '',
-        title: j['title'] ?? '',
-        rule: j['rule'] == null
-            ? const NahvPair(ar: '', uz: '')
-            : NahvPair.fromJson(j['rule'] as Map<String, dynamic>),
-        blocks: ((j['blocks'] as List?) ?? const [])
-            .map((e) => NahvBlock.fromJson(e as Map<String, dynamic>))
-            .toList(),
-        exercise: ((j['exercise'] as List?) ?? const [])
-            .map((e) => NahvPair.fromJson(e as Map<String, dynamic>))
-            .toList(),
-        tables: ((j['tables'] as List?) ?? const [])
-            .map((e) => QiroatTable.fromJson(e as Map<String, dynamic>))
-            .toList(),
-      );
+    book: j['book'] ?? 1,
+    num: j['num'],
+    page: j['page'] ?? 0,
+    titleAr: j['titleAr'] ?? '',
+    title: j['title'] ?? '',
+    rule: j['rule'] == null
+        ? const NahvPair(ar: '', uz: '')
+        : NahvPair.fromJson(j['rule'] as Map<String, dynamic>),
+    blocks: ((j['blocks'] as List?) ?? const [])
+        .map((e) => NahvBlock.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    exercise: ((j['exercise'] as List?) ?? const [])
+        .map((e) => NahvPair.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    tables: ((j['tables'] as List?) ?? const [])
+        .map((e) => QiroatTable.fromJson(e as Map<String, dynamic>))
+        .toList(),
+  );
 }
 
 class QiroatLesson {
@@ -285,18 +297,18 @@ class QiroatLesson {
   String get completionId => book == 1 ? 'qiroat_$num' : 'qiroat_b${book}_$num';
 
   factory QiroatLesson.fromJson(Map<String, dynamic> j) => QiroatLesson(
-        book: j['book'] ?? 1,
-        num: j['num'],
-        titleAr: j['titleAr'],
-        reading: j['reading'],
-        vocab: (j['vocab'] as List).map((e) => QiroatVocab.fromJson(e)).toList(),
-        tables: ((j['tables'] as List?) ?? const [])
-            .map((e) => QiroatTable.fromJson(e as Map<String, dynamic>))
-            .toList(),
-        translation: j['translation'] ?? '',
-        exercise: j['exercise'] ?? '',
-        exerciseAnswer: j['exerciseAnswer'] ?? '',
-      );
+    book: j['book'] ?? 1,
+    num: j['num'],
+    titleAr: j['titleAr'],
+    reading: j['reading'],
+    vocab: (j['vocab'] as List).map((e) => QiroatVocab.fromJson(e)).toList(),
+    tables: ((j['tables'] as List?) ?? const [])
+        .map((e) => QiroatTable.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    translation: j['translation'] ?? '',
+    exercise: j['exercise'] ?? '',
+    exerciseAnswer: j['exerciseAnswer'] ?? '',
+  );
 }
 
 /// Barcha kontentni yuklaydigan repozitoriy.
@@ -335,14 +347,14 @@ class UlashStage {
   });
 
   factory UlashStage.fromJson(Map<String, dynamic> j) => UlashStage(
-        num: j['num'] ?? 0,
-        title: j['title'] ?? '',
-        titleAr: j['titleAr'] ?? '',
-        explain: j['explain'] ?? '',
-        words: ((j['words'] as List?) ?? const [])
-            .map((e) => UlashWord.fromJson(e))
-            .toList(),
-      );
+    num: j['num'] ?? 0,
+    title: j['title'] ?? '',
+    titleAr: j['titleAr'] ?? '',
+    explain: j['explain'] ?? '',
+    words: ((j['words'] as List?) ?? const [])
+        .map((e) => UlashWord.fromJson(e))
+        .toList(),
+  );
 }
 
 class ContentRepository {
@@ -363,21 +375,32 @@ class ContentRepository {
     final h = json.decode(await ContentUpdater.instance.read('harakat.json'));
     harakat = (h['harakat'] as List).map((e) => Haraka.fromJson(e)).toList();
 
-    final v = json.decode(await ContentUpdater.instance.read('vocabulary.json'));
+    final v = json.decode(
+      await ContentUpdater.instance.read('vocabulary.json'),
+    );
     words = (v['words'] as List).map((e) => VocabWord.fromJson(e)).toList();
 
-    final q = json.decode(await ContentUpdater.instance.read('qiroat_lessons.json'));
-    qiroatLessons = (q['lessons'] as List).map((e) => QiroatLesson.fromJson(e)).toList();
+    final q = json.decode(
+      await ContentUpdater.instance.read('qiroat_lessons.json'),
+    );
+    qiroatLessons = (q['lessons'] as List)
+        .map((e) => QiroatLesson.fromJson(e))
+        .toList();
 
-    final n = json.decode(await ContentUpdater.instance.read('nahv_lessons.json'));
-    nahvLessons = (n['lessons'] as List).map((e) => NahvLesson.fromJson(e)).toList();
+    final n = json.decode(
+      await ContentUpdater.instance.read('nahv_lessons.json'),
+    );
+    nahvLessons = (n['lessons'] as List)
+        .map((e) => NahvLesson.fromJson(e))
+        .toList();
 
     // Ulash darsi keyinroq qo'shilgan — eski APK'da fayl bo'lmasligi mumkin,
     // shuning uchun yo'qligi ilovani to'xtatmasin.
     try {
       final u = json.decode(await ContentUpdater.instance.read('ulash.json'));
-      ulashStages =
-          (u['stages'] as List).map((e) => UlashStage.fromJson(e)).toList();
+      ulashStages = (u['stages'] as List)
+          .map((e) => UlashStage.fromJson(e))
+          .toList();
     } catch (_) {
       ulashStages = [];
     }

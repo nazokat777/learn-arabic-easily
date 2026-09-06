@@ -287,15 +287,21 @@ List<HarfHolati> harfHolatlari(List<String> letters) {
 /// Harakat ataylab olib tashlanadi: bu yerda maqsad shaklni ko'rsatish,
 /// harakat esa ZWJ bilan yonma-yon kelganda shakl buzilishi mumkin.
 String holatShakli(String letter, HarfHolati holat) {
-  const z = '\u200D';
+  // Tatweel (kashida) \u2014 ko'rinadigan ulanish chizig'i.
+  //
+  // Nega ZWJ emas: ko'rinmas ZWJ (U+200D) bilan ilova harfni BOSHLANG'ICH
+  // shakl o'rniga ALOHIDA shaklda chizardi (\u00AB\u062C\u0640\u00BB o'rniga \u00AB\u062C\u00BB). Tatweel \u2014
+  // haqiqiy ulovchi belgi, darsliklarda shakl aynan shu bilan bosiladi va
+  // u qaysi tomon ulanishini ko'rsatib ham turadi.
+  const t = '\u0640';
   final b = stripDiacritics(letter);
   switch (holat) {
     case HarfHolati.boshda:
-      return '$b$z';
+      return '$b$t';
     case HarfHolati.ortada:
-      return '$z$b$z';
+      return '$t$b$t';
     case HarfHolati.oxirida:
-      return '$z$b';
+      return '$t$b';
     case HarfHolati.alohida:
       return b;
   }

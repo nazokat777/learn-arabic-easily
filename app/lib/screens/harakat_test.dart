@@ -30,10 +30,12 @@ class HarakatTest extends StatelessWidget {
     final questions = <Question>[];
 
     Widget belgi(Haraka h) => Directionality(
-          textDirection: TextDirection.rtl,
-          child: Text(h.exampleAr,
-              style: AppTheme.arabic(size: 84, color: AppColors.emerald)),
-        );
+      textDirection: TextDirection.rtl,
+      child: Text(
+        h.exampleAr,
+        style: AppTheme.arabic(size: 84, color: AppColors.emerald),
+      ),
+    );
 
     List<String> variantlar(String togri, List<String> hammasi) {
       final chalgituvchi = hammasi.where((x) => x != togri).toList()
@@ -45,32 +47,48 @@ class HarakatTest extends StatelessWidget {
     final nomlar = all.map((h) => h.nameUz).toList();
     for (final h in all) {
       final opts = variantlar(h.nameUz, nomlar);
-      questions.add(Question(
-        promptLabel: 'Bu qaysi harakat?',
-        prompt: belgi(h),
-        options: opts,
-        correct: opts.indexOf(h.nameUz),
-        // Talaffuz javobni oshkor qilmaydi: ovoz «ba» deydi, javob esa
-        // «Fatha» — shuning uchun uni oldindan eshittirsa ham bo'ladi.
-        speak: h.exampleAr,
-      ));
+      questions.add(
+        Question(
+          promptLabel: 'Bu qaysi harakat?',
+          prompt: belgi(h),
+          options: opts,
+          correct: opts.indexOf(h.nameUz),
+          // Talaffuz javobni oshkor qilmaydi: ovoz «ba» deydi, javob esa
+          // «Fatha» — shuning uchun uni oldindan eshittirsa ham bo'ladi.
+          speak: h.exampleAr,
+        ),
+      );
     }
 
-    // 2-tur: belgi → tovushi. Sukunni tashlab ketamiz: uning «tovushi»
-    // varianti «tovush yo'q (sukun)» bo'lib, javobni o'zi aytib qo'yadi.
-    final tovushli = all.where((h) => h.soundUz.trim() != '-').toList();
+    // 2-tur: belgi qanday UNLI beradi.
+    //
+    // Savol ataylab «unli» deb aniq qo'yilgan. Ilgari «bu belgi qanday
+    // o'qiladi?» deb so'ralardi va ekranda «بَ» turardi — u esa «ba» deb
+    // o'qiladi, «a» deb emas. O'quvchi «ba» ni izlab topa olmasdi va
+    // savolda to'g'ri javob yo'qdek tuyulardi.
+    //
+    // Sukun va shadda bu turdan chiqariladi: sukun UNLI BERMAYDI, shadda
+    // esa unli emas — undoshni ikkilantiradi. Ularni unli variantlari
+    // orasiga qo'shish savolni mantiqsiz qilardi (masalan «a, un, bb, i»
+    // degan ro'yxat). Ikkalasi 1-turda — nomini topishda — baribir keladi.
+    const unliBermaydi = {'-', 'bb'};
+    final tovushli = all
+        .where((h) => !unliBermaydi.contains(h.soundUz.trim()))
+        .toList();
     final tovushlar = tovushli.map((h) => h.soundUz).toList();
     for (final h in tovushli) {
       final opts = variantlar(h.soundUz, tovushlar);
-      questions.add(Question(
-        promptLabel: 'Bu belgi qanday o\'qiladi?',
-        prompt: belgi(h),
-        options: opts,
-        correct: opts.indexOf(h.soundUz),
-        // Bu yerda ovoz javobning O'ZI — faqat javobdan keyin.
-        speak: h.exampleAr,
-        speakRevealsAnswer: true,
-      ));
+      questions.add(
+        Question(
+          promptLabel: 'Bu harakat qanday unli tovush beradi?',
+          prompt: belgi(h),
+          options: opts,
+          correct: opts.indexOf(h.soundUz),
+          // Bu yerda ovoz javobning O'ZI — faqat javobdan keyin.
+          speak: h.exampleAr,
+          speakRevealsAnswer: true,
+        ),
+      );
     }
 
     questions.shuffle(rnd);

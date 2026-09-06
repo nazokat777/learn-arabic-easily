@@ -308,3 +308,48 @@ String holatNomi(HarfHolati h) => switch (h) {
   HarfHolati.oxirida => 'oxirida',
   HarfHolati.alohida => 'alohida',
 };
+
+/// Harfning so'zdagi O'RNI — shaklidan farq qiladi.
+///
+/// Nega ikkisi alohida: «د» so'z boshida ham keladi (دَارٌ), lekin
+/// SHAKLI o'zgarmaydi, chunki u keyingi harfga ulanmaydi. Agar o'rinni
+/// shakl bo'yicha aniqlasak, «د so'z boshida kelmaydi» degan noto'g'ri
+/// xulosa chiqadi. Foydalanuvchi esa aynan o'rinni so'radi.
+enum SozOrni { boshi, ortasi, oxiri }
+
+/// Harf so'zda uchragan joy: so'z, ma'nosi va harf nechanchi bo'lakda.
+typedef HarfMisoli = ({String ar, String uz, int index});
+
+/// Berilgan harf uchun HAR O'RINDA misol so'z topadi.
+///
+/// Nega kerak: «bu harf so'z boshida bunday chiziladi» deb shaklni
+/// ko'rsatishning o'zi yetmaydi — o'quvchi uni HAQIQIY so'z ichida
+/// ko'rmaguncha tanimaydi. Shuning uchun har o'ringa ilovaning o'z
+/// lug'atidan misol qo'yiladi (so'zlar o'ylab topilmaydi).
+///
+/// [lugat] — {ar, uz} juftliklari; qisqaroq so'z misol uchun
+/// tushunarliroq, shuning uchun chaqiruvchi ro'yxatni uzunligi bo'yicha
+/// saralab bergani ma'qul. Bir harfli so'zlar tashlab ketiladi — ularda
+/// «bosh» va «oxir» degani ma'nosiz.
+Map<SozOrni, HarfMisoli> harfMisollari(
+  String harf,
+  List<({String ar, String uz})> lugat,
+) {
+  final nishon = stripDiacritics(harf);
+  final natija = <SozOrni, HarfMisoli>{};
+  if (nishon.isEmpty) return natija;
+
+  for (final soz in lugat) {
+    if (natija.length == SozOrni.values.length) break;
+    final bolaklar = splitLetters(soz.ar);
+    if (bolaklar.length < 2) continue;
+    for (var i = 0; i < bolaklar.length; i++) {
+      if (stripDiacritics(bolaklar[i]) != nishon) continue;
+      final orin = i == 0
+          ? SozOrni.boshi
+          : (i == bolaklar.length - 1 ? SozOrni.oxiri : SozOrni.ortasi);
+      natija.putIfAbsent(orin, () => (ar: soz.ar, uz: soz.uz, index: i));
+    }
+  }
+  return natija;
+}

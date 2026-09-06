@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import '../main.dart';
+import '../arabic.dart';
 import '../content.dart';
 import '../theme.dart';
+import '../widgets/harf_holati.dart';
 import '../widgets/mastery_badge.dart';
 import '../widgets/speak_button.dart';
 import 'letter_test.dart';
@@ -20,41 +22,62 @@ class LettersLesson extends StatelessWidget {
         children: [
           Expanded(
             child: GridView.builder(
-          padding: const EdgeInsets.all(16),
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 4,
-            crossAxisSpacing: 12,
-            mainAxisSpacing: 12,
-            childAspectRatio: 0.82,
-          ),
-          itemCount: letters.length,
-          itemBuilder: (context, i) {
-            final L = letters[i];
-            return Material(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(16),
-              child: InkWell(
-                borderRadius: BorderRadius.circular(16),
-                onTap: () => _showDetail(context, L),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 6),
-                  child: FittedBox(
-                    fit: BoxFit.scaleDown,
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Text(L.ar, style: AppTheme.arabic(size: 40, color: AppColors.emerald)),
-                        const SizedBox(height: 4),
-                        Text(L.nameUz,
-                            style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 12.5, color: AppColors.ink)),
-                        Text(L.translit, style: const TextStyle(color: Colors.black45, fontSize: 11)),
-                      ],
+              padding: const EdgeInsets.all(16),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 4,
+                crossAxisSpacing: 12,
+                mainAxisSpacing: 12,
+                childAspectRatio: 0.82,
+              ),
+              itemCount: letters.length,
+              itemBuilder: (context, i) {
+                final L = letters[i];
+                return Material(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(16),
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(16),
+                    onTap: () => _showDetail(context, L),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 4,
+                        vertical: 6,
+                      ),
+                      child: FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              L.ar,
+                              style: AppTheme.arabic(
+                                size: 40,
+                                color: AppColors.emerald,
+                              ),
+                            ),
+                            const SizedBox(height: 4),
+                            Text(
+                              L.nameUz,
+                              style: const TextStyle(
+                                fontWeight: FontWeight.w700,
+                                fontSize: 12.5,
+                                color: AppColors.ink,
+                              ),
+                            ),
+                            Text(
+                              L.translit,
+                              style: const TextStyle(
+                                color: Colors.black45,
+                                fontSize: 11,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
                   ),
-                ),
-              ),
-            );
-          },
+                );
+              },
             ),
           ),
           Padding(
@@ -62,8 +85,10 @@ class LettersLesson extends StatelessWidget {
             child: MasteryCallToAction(
               lessonId: 'letter_test',
               what: '28 harf',
-              onStart: () => Navigator.push(context,
-                  MaterialPageRoute(builder: (_) => const LetterTest())),
+              onStart: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const LetterTest()),
+              ),
             ),
           ),
         ],
@@ -71,82 +96,148 @@ class LettersLesson extends StatelessWidget {
     );
   }
 
+  /// Misol so'zlar lug'ati — bir marta yasaladi.
+  ///
+  /// Nega static: harf bosilganda minglab so'zni qaytadan saralash sekin.
+  /// Qisqa so'zlar oldinda turadi — misol qisqa bo'lgani tushunarli.
+  static List<({String ar, String uz})>? _lugatKesh;
+
+  static List<({String ar, String uz})> get _lugat {
+    if (_lugatKesh != null) return _lugatKesh!;
+    final map = <String, String>{};
+    for (final w in repo.words) {
+      final ar = w.ar.trim();
+      if (ar.isNotEmpty && w.uz.trim().isNotEmpty) {
+        map.putIfAbsent(ar, () => w.uz.trim());
+      }
+    }
+    for (final l in repo.qiroatLessons) {
+      for (final v in l.vocab) {
+        final ar = v.ar.split('،').first.trim();
+        if (ar.isEmpty || v.uz.trim().isEmpty) continue;
+        map.putIfAbsent(ar, () => v.uz.trim());
+      }
+    }
+    final list = map.entries.map((e) => (ar: e.key, uz: e.value)).toList();
+    list.sort(
+      (a, b) =>
+          stripDiacritics(a.ar).length.compareTo(stripDiacritics(b.ar).length),
+    );
+    return _lugatKesh = list;
+  }
+
   void _showDetail(BuildContext context, Letter L) {
     showModalBottomSheet(
       context: context,
       backgroundColor: Colors.white,
+      // Bo'lim uzun — oyna balandligi cheklanadi va ichi aylanadi.
+      isScrollControlled: true,
       shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(top: Radius.circular(28))),
-      builder: (_) => Padding(
-        padding: const EdgeInsets.fromLTRB(24, 20, 24, 32),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Container(width: 40, height: 4, decoration: BoxDecoration(
-                color: Colors.black12, borderRadius: BorderRadius.circular(2))),
-            const SizedBox(height: 16),
-            Text(L.ar, style: AppTheme.arabic(size: 90, color: AppColors.emerald)),
-            const SizedBox(height: 4),
-            Row(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(28)),
+      ),
+      builder: (ctx) => ConstrainedBox(
+        constraints: BoxConstraints(
+          maxHeight: MediaQuery.of(ctx).size.height * 0.9,
+        ),
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(24, 20, 24, 32),
+            child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text('${L.nameUz}  ·  ${L.nameAr}',
-                    style: const TextStyle(
-                        fontWeight: FontWeight.w800, fontSize: 20, color: AppColors.ink)),
-                const SizedBox(width: 6),
-                // Yolg'iz harfning o'zi emas, NOMI o'qiladi — ustoz ham
-                // shunday aytadi, va yolg'iz harfdan ovoz chiqmaydi.
-                SpeakButton(text: L.nameAr, id: 'harf-${L.ar}', size: 22),
+                Center(
+                  child: Container(
+                    width: 40,
+                    height: 4,
+                    decoration: BoxDecoration(
+                      color: Colors.black12,
+                      borderRadius: BorderRadius.circular(2),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 16),
+                Text(
+                  L.ar,
+                  style: AppTheme.arabic(size: 90, color: AppColors.emerald),
+                ),
+                const SizedBox(height: 4),
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      '${L.nameUz}  ·  ${L.nameAr}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.w800,
+                        fontSize: 20,
+                        color: AppColors.ink,
+                      ),
+                    ),
+                    const SizedBox(width: 6),
+                    // Yolg'iz harfning o'zi emas, NOMI o'qiladi — ustoz ham
+                    // shunday aytadi, va yolg'iz harfdan ovoz chiqmaydi.
+                    SpeakButton(text: L.nameAr, id: 'harf-${L.ar}', size: 22),
+                  ],
+                ),
+                Text(
+                  'Talaffuz: ${L.translit}',
+                  style: const TextStyle(
+                    color: AppColors.gold,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                const SizedBox(height: 16),
+                Container(
+                  padding: const EdgeInsets.all(14),
+                  decoration: BoxDecoration(
+                    color: AppColors.softGreen,
+                    borderRadius: BorderRadius.circular(14),
+                  ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Icon(
+                        Icons.record_voice_over_rounded,
+                        size: 18,
+                        color: AppColors.emerald,
+                      ),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: Text(
+                          'Махраж: ${L.makhrajUz}',
+                          style: const TextStyle(
+                            color: AppColors.ink,
+                            height: 1.3,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 20),
+                const Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Harakatlar bilan tinglang:',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w800,
+                      color: AppColors.ink,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    _syllable(L.ar, 'َ', 'a'), // fatha
+                    _syllable(L.ar, 'ِ', 'i'), // kasra
+                    _syllable(L.ar, 'ُ', 'u'), // zamma
+                  ],
+                ),
+                const SizedBox(height: 22),
+                HarfHolatiBolimi(letter: L, lugat: _lugat),
               ],
             ),
-            Text('Talaffuz: ${L.translit}',
-                style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.w700)),
-            const SizedBox(height: 16),
-            Container(
-              padding: const EdgeInsets.all(14),
-              decoration: BoxDecoration(
-                  color: AppColors.softGreen, borderRadius: BorderRadius.circular(14)),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text('🗣️ ', style: TextStyle(fontSize: 18)),
-                  Expanded(child: Text('Махраж: ${L.makhrajUz}',
-                      style: const TextStyle(color: AppColors.ink, height: 1.3))),
-                ],
-              ),
-            ),
-            const SizedBox(height: 20),
-            const Align(
-              alignment: Alignment.centerLeft,
-              child: Text('Harakatlar bilan tinglang:',
-                  style: TextStyle(fontWeight: FontWeight.w800, color: AppColors.ink)),
-            ),
-            const SizedBox(height: 10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                _syllable(L.ar, 'َ', 'a'), // fatha
-                _syllable(L.ar, 'ِ', 'i'), // kasra
-                _syllable(L.ar, 'ُ', 'u'), // zamma
-              ],
-            ),
-            const SizedBox(height: 20),
-            const Align(
-              alignment: Alignment.centerLeft,
-              child: Text('Harfning 4 holati:',
-                  style: TextStyle(fontWeight: FontWeight.w800, color: AppColors.ink)),
-            ),
-            const SizedBox(height: 10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                _form('Alohida', L.isolated),
-                _form('Boshda', L.initial),
-                _form('O\'rtada', L.medial),
-                _form('Oxirida', L.finalForm),
-              ],
-            ),
-          ],
+          ),
         ),
       ),
     );
@@ -167,31 +258,19 @@ class LettersLesson extends StatelessWidget {
           child: Center(
             child: Directionality(
               textDirection: TextDirection.rtl,
-              child: Text(text,
-                  style: AppTheme.arabic(size: 34, color: AppColors.emerald)),
+              child: Text(
+                text,
+                style: AppTheme.arabic(size: 34, color: AppColors.emerald),
+              ),
             ),
           ),
         ),
         SpeakButton(text: text, id: 'bogin-$text', size: 18),
-        Text(sound, style: const TextStyle(fontSize: 11.5, color: Colors.black54)),
+        Text(
+          sound,
+          style: const TextStyle(fontSize: 11.5, color: Colors.black54),
+        ),
       ],
     );
   }
-
-  Widget _form(String label, String glyph) => Column(
-        children: [
-          Container(
-            width: 62,
-            height: 62,
-            decoration: BoxDecoration(
-              color: AppColors.cream,
-              borderRadius: BorderRadius.circular(14),
-              border: Border.all(color: AppColors.emerald.withValues(alpha: 0.2)),
-            ),
-            child: Center(child: Text(glyph, style: AppTheme.arabic(size: 34, color: AppColors.ink))),
-          ),
-          const SizedBox(height: 6),
-          Text(label, style: const TextStyle(fontSize: 11.5, color: Colors.black54)),
-        ],
-      );
 }

@@ -210,6 +210,56 @@ void main() {
     });
   });
 
+  // Harakatlar testining «qanday unli tovush beradi?» turi.
+  //
+  // Bu yerda haqiqiy xato bo'lgan: ekranda «بَ» ko'rsatilib, variantlar
+  // «a, un, bb, i» bo'lardi. «بَ» esa «ba» deb o'qiladi, ya'ni savolga
+  // to'g'ri javob yo'qdek tuyulardi; ustiga «bb» (shadda) umuman unli
+  // emas edi. Shart shu: bu turda faqat UNLI beradigan harakatlar
+  // qatnashsin va ular 4 ta variantga yetsin.
+  group('Harakat savoli', () {
+    const unliBermaydi = {'-', 'bb'};
+
+    List<Map<String, dynamic>> harakatlar() =>
+        (json.decode(File('assets/content/harakat.json').readAsStringSync())
+                    ['harakat']
+                as List)
+            .cast<Map<String, dynamic>>();
+
+    test('unli beradigan harakatlar 4 ta variantga yetadi', () {
+      final unlilar = harakatlar()
+          .map((h) => (h['sound_uz'] as String).trim())
+          .where((s) => !unliBermaydi.contains(s))
+          .toSet();
+      expect(
+        unlilar.length,
+        greaterThanOrEqualTo(4),
+        reason: 'to\'rt variant yasash uchun kamida 4 xil unli kerak',
+      );
+    });
+
+    test('unli tovushlar takrorlanmaydi', () {
+      // Ikki harakatning tovushi bir xil bo'lsa, variantlar ichida bir xil
+      // javob ikki marta chiqadi va biri «xato» deb belgilanadi.
+      final ro = harakatlar()
+          .map((h) => (h['sound_uz'] as String).trim())
+          .where((s) => !unliBermaydi.contains(s))
+          .toList();
+      expect(ro.toSet().length, ro.length, reason: 'takror tovush: $ro');
+    });
+
+    test('sukun va shadda unli sifatida so\'ralmaydi', () {
+      final nomlar = <String, String>{
+        for (final h in harakatlar())
+          (h['sound_uz'] as String).trim(): h['name_uz'] as String,
+      };
+      // Sukun unli bermaydi, shadda esa undoshni ikkilantiradi — ikkalasi
+      // ham «qanday unli beradi?» savoliga javob bo'la olmaydi.
+      expect(nomlar['-'], 'Sukun');
+      expect(nomlar['bb'], 'Shadda');
+    });
+  });
+
   group('Kontent yaxlitligi', () {
     test("harakatlar o'z harfiga ulangan (ajralib qolmagan)", () {
       final buzuq = <String>[];

@@ -6,6 +6,7 @@ import '../content.dart';
 import '../main.dart';
 import '../services/tts.dart';
 import '../theme.dart';
+import '../widgets/motion.dart';
 
 /// Nahv darsidan keyingi interaktiv test — Duolingo uslubida.
 ///
@@ -74,9 +75,9 @@ class _NahvQuizState extends State<NahvQuiz> {
   static const int _maxQuestions = 12;
 
   void _build() {
-    final pairs = _collect(widget.lesson)
-        .where((p) => p.ar.trim().isNotEmpty && p.uz.trim().isNotEmpty)
-        .toList();
+    final pairs = _collect(
+      widget.lesson,
+    ).where((p) => p.ar.trim().isNotEmpty && p.uz.trim().isNotEmpty).toList();
     var usable = pairs.where((p) => p.ar.length <= _maxPromptLen).toList();
     if (usable.length < 6) usable = pairs;
 
@@ -100,7 +101,9 @@ class _NahvQuizState extends State<NahvQuiz> {
     // darslaridan olinadi - mavzuga yaqin bo'lsin.
     final poolUz = <String>{for (final p in pairs) p.uz.trim()};
     final poolAr = <String>{for (final p in pairs) p.ar.trim()};
-    for (final l in repo.nahvLessons.where((l) => l.book == widget.lesson.book)) {
+    for (final l in repo.nahvLessons.where(
+      (l) => l.book == widget.lesson.book,
+    )) {
       if (poolUz.length > 40) break;
       for (final p in _collect(l)) {
         if (p.uz.trim().isNotEmpty) poolUz.add(p.uz.trim());
@@ -128,8 +131,13 @@ class _NahvQuizState extends State<NahvQuiz> {
     return out;
   }
 
-  _NQ _make(NahvPair p, int type, Set<String> poolUz, Set<String> poolAr,
-      {bool retried = false}) {
+  _NQ _make(
+    NahvPair p,
+    int type,
+    Set<String> poolUz,
+    Set<String> poolAr, {
+    bool retried = false,
+  }) {
     final bool wantAr = type == 1;
     final answer = wantAr ? p.ar.trim() : p.uz.trim();
     final pool = (wantAr ? poolAr : poolUz).where((x) => x != answer).toList()
@@ -160,8 +168,9 @@ class _NahvQuizState extends State<NahvQuiz> {
       // O'ZINI yodlasin.
       final answer = _q.options[_q.correct];
       final options = List.of(_q.options)..shuffle(_rnd);
-      _queue.add(_NQ(_q.pair, _q.type, options, options.indexOf(answer),
-          retried: true));
+      _queue.add(
+        _NQ(_q.pair, _q.type, options, options.indexOf(answer), retried: true),
+      );
     }
     Future.delayed(Duration(milliseconds: ok ? 900 : 1900), () {
       if (!mounted) return;
@@ -190,9 +199,11 @@ class _NahvQuizState extends State<NahvQuiz> {
           children: [
             Text(mastered ? '⭐⭐⭐' : '💪', style: const TextStyle(fontSize: 34)),
             const SizedBox(height: 6),
-            Text(mastered ? 'Dars o\'zlashtirildi!' : 'Yaqin qoldi',
-                textAlign: TextAlign.center,
-                style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 18)),
+            Text(
+              mastered ? 'Dars o\'zlashtirildi!' : 'Yaqin qoldi',
+              textAlign: TextAlign.center,
+              style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 18),
+            ),
           ],
         ),
         content: Column(
@@ -220,11 +231,14 @@ class _NahvQuizState extends State<NahvQuiz> {
                       style: TextStyle(fontSize: 13.5, height: 1.4),
                     ),
                     const SizedBox(height: 6),
-                    Text('Eng yaxshi natijangiz: $best%',
-                        style: const TextStyle(
-                            fontWeight: FontWeight.w800,
-                            color: AppColors.gold,
-                            fontSize: 13)),
+                    Text(
+                      'Eng yaxshi natijangiz: $best%',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.w800,
+                        color: AppColors.gold,
+                        fontSize: 13,
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -317,10 +331,7 @@ class _NahvQuizState extends State<NahvQuiz> {
                 ],
               ),
             ),
-            SizedBox(
-              height: 40,
-              child: Center(child: _feedback()),
-            ),
+            SizedBox(height: 40, child: Center(child: _feedback())),
           ],
         ),
       ),
@@ -330,10 +341,16 @@ class _NahvQuizState extends State<NahvQuiz> {
   Widget _prompt(_NQ q) {
     final Widget inner;
     if (q.type == 1) {
-      inner = Text(q.pair.uz,
-          textAlign: TextAlign.center,
-          style: const TextStyle(
-              fontSize: 17, fontWeight: FontWeight.w700, color: AppColors.ink, height: 1.4));
+      inner = Text(
+        q.pair.uz,
+        textAlign: TextAlign.center,
+        style: const TextStyle(
+          fontSize: 17,
+          fontWeight: FontWeight.w700,
+          color: AppColors.ink,
+          height: 1.4,
+        ),
+      );
     } else if (q.type == 2) {
       inner = IconButton(
         iconSize: 56,
@@ -344,9 +361,11 @@ class _NahvQuizState extends State<NahvQuiz> {
     } else {
       inner = Directionality(
         textDirection: TextDirection.rtl,
-        child: Text(q.pair.ar,
-            textAlign: TextAlign.center,
-            style: AppTheme.arabic(size: 24, color: AppColors.emerald)),
+        child: Text(
+          q.pair.ar,
+          textAlign: TextAlign.center,
+          style: AppTheme.arabic(size: 24, color: AppColors.emerald),
+        ),
       );
     }
     return Container(
@@ -361,7 +380,10 @@ class _NahvQuizState extends State<NahvQuiz> {
           if (q.type == 0)
             IconButton(
               onPressed: _speak,
-              icon: const Icon(Icons.volume_up_rounded, color: AppColors.emerald),
+              icon: const Icon(
+                Icons.volume_up_rounded,
+                color: AppColors.emerald,
+              ),
             ),
         ],
       ),
@@ -383,28 +405,50 @@ class _NahvQuizState extends State<NahvQuiz> {
     final arabic = q.type == 1;
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
-      child: Material(
-        color: bg,
-        borderRadius: BorderRadius.circular(14),
-        child: InkWell(
-          borderRadius: BorderRadius.circular(14),
-          onTap: () => _choose(i),
-          child: Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-            decoration: BoxDecoration(
+      child: Pulse(
+        trigger: (_answered && i == q.correct) ? _queue.first : null,
+        child: Shake(
+          trigger: (_answered && i == _picked && i != q.correct)
+              ? _queue.first
+              : null,
+          child: Material(
+            color: bg,
+            borderRadius: BorderRadius.circular(14),
+            child: InkWell(
               borderRadius: BorderRadius.circular(14),
-              border: Border.all(color: border, width: 1.6),
+              onTap: () => _choose(i),
+              child: Container(
+                width: double.infinity,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 12,
+                ),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(14),
+                  border: Border.all(color: border, width: 1.6),
+                ),
+                child: arabic
+                    ? Directionality(
+                        textDirection: TextDirection.rtl,
+                        child: Text(
+                          q.options[i],
+                          style: AppTheme.arabic(
+                            size: 19,
+                            color: AppColors.ink,
+                          ),
+                        ),
+                      )
+                    : Text(
+                        q.options[i],
+                        style: const TextStyle(
+                          fontSize: 14.5,
+                          fontWeight: FontWeight.w600,
+                          color: AppColors.ink,
+                          height: 1.35,
+                        ),
+                      ),
+              ),
             ),
-            child: arabic
-                ? Directionality(
-                    textDirection: TextDirection.rtl,
-                    child: Text(q.options[i],
-                        style: AppTheme.arabic(size: 19, color: AppColors.ink)))
-                : Text(q.options[i],
-                    style: const TextStyle(
-                        fontSize: 14.5, fontWeight: FontWeight.w600,
-                        color: AppColors.ink, height: 1.35)),
           ),
         ),
       ),
@@ -417,9 +461,10 @@ class _NahvQuizState extends State<NahvQuiz> {
     return Text(
       ok ? "✅ To'g'ri!" : '🔁 Bu savol yana qaytadi — yodlab oling',
       style: TextStyle(
-          fontWeight: FontWeight.w800,
-          fontSize: 15,
-          color: ok ? AppColors.success : AppColors.gold),
+        fontWeight: FontWeight.w800,
+        fontSize: 15,
+        color: ok ? AppColors.success : AppColors.gold,
+      ),
     );
   }
 }

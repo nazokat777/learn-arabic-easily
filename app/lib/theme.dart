@@ -11,6 +11,18 @@ class AppColors {
   static const softGreen = Color(0xFFE3F0EB);
   static const coral = Color(0xFFE0603A);
   static const success = Color(0xFF2E9E5B);
+
+  // Har modulning o'z urg'u rangi — hammasi bir xil yashil bo'lsa ekran
+  // «bir tekis» va zerikarli tuyuladi; farqli ranglar ko'zga yo'l ko'rsatadi.
+  static const teal = Color(0xFF1B8A9E);
+  static const indigo = Color(0xFF5B5BD6);
+  static const amber = Color(0xFFE39B1E);
+
+  /// Hero va chuqur fonlar uchun eng to'q yashil.
+  static const deep = Color(0xFF07332B);
+
+  /// Oltinning yorug' tusi — yaltiroq chiziqlar va urg'ular uchun.
+  static const goldLight = Color(0xFFF2D27A);
 }
 
 class AppTheme {

@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import '../main.dart';
 import '../theme.dart';
+import '../widgets/motion.dart';
 import '../services/tts.dart';
 
 /// Bitta test savoli.
@@ -172,8 +173,11 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
     final earned = _firstTry * widget.xpPerCorrect;
     await progress.addXp(earned);
     // Dars faqat test BITTA HAM xatosiz o'tilganda o'zlashtirilgan bo'ladi.
-    final mastered =
-        await progress.recordAttempt(widget.lessonId, _firstTry, _total);
+    final mastered = await progress.recordAttempt(
+      widget.lessonId,
+      _firstTry,
+      _total,
+    );
     if (!mounted) return;
     showDialog(
       context: context,
@@ -216,10 +220,18 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
-            Text('$_done / $_total',
-                style: const TextStyle(color: Colors.black45, fontWeight: FontWeight.w700)),
+            Text(
+              '$_done / $_total',
+              style: const TextStyle(
+                color: Colors.black45,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
             const SizedBox(height: 20),
-            Text(_q.promptLabel, style: const TextStyle(color: Colors.black54, fontSize: 14)),
+            Text(
+              _q.promptLabel,
+              style: const TextStyle(color: Colors.black54, fontSize: 14),
+            ),
             const SizedBox(height: 16),
             Container(
               width: double.infinity,
@@ -249,27 +261,40 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
   }
 
   Widget _dontKnowButton() => OutlinedButton.icon(
-        onPressed: _dontKnow,
-        icon: const Text('🤔', style: TextStyle(fontSize: 18)),
-        label: const Text('Bilmadim — javobni ko\'rsat',
-            style: TextStyle(fontWeight: FontWeight.w700)),
-        style: OutlinedButton.styleFrom(
-          foregroundColor: AppColors.gold,
-          side: const BorderSide(color: AppColors.gold),
-          padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-        ),
-      );
+    onPressed: _dontKnow,
+    icon: const Text('🤔', style: TextStyle(fontSize: 18)),
+    label: const Text(
+      'Bilmadim — javobni ko\'rsat',
+      style: TextStyle(fontWeight: FontWeight.w700),
+    ),
+    style: OutlinedButton.styleFrom(
+      foregroundColor: AppColors.gold,
+      side: const BorderSide(color: AppColors.gold),
+      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+    ),
+  );
 
   Widget _feedback() {
     if (_selected == null) {
-      return const Text('📖 Mana to\'g\'ri javob — yodlab oling',
-          style: TextStyle(fontWeight: FontWeight.w800, fontSize: 15, color: AppColors.gold));
+      return const Text(
+        '📖 Mana to\'g\'ri javob — yodlab oling',
+        style: TextStyle(
+          fontWeight: FontWeight.w800,
+          fontSize: 15,
+          color: AppColors.gold,
+        ),
+      );
     }
     final ok = _selected == _q.correct;
-    return Text(ok ? '✅ To\'g\'ri!' : '❌ To\'g\'ri javob belgilandi',
-        style: TextStyle(
-            fontWeight: FontWeight.w800, fontSize: 16, color: ok ? AppColors.success : AppColors.coral));
+    return Text(
+      ok ? '✅ To\'g\'ri!' : '❌ To\'g\'ri javob belgilandi',
+      style: TextStyle(
+        fontWeight: FontWeight.w800,
+        fontSize: 16,
+        color: ok ? AppColors.success : AppColors.coral,
+      ),
+    );
   }
 
   Widget _option(int i) {
@@ -289,36 +314,54 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
     }
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
-      child: Material(
-        color: bg,
-        borderRadius: BorderRadius.circular(14),
-        child: InkWell(
-          borderRadius: BorderRadius.circular(14),
-          onTap: () => _choose(i),
-          child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 16),
-            decoration: BoxDecoration(
+      child: Pulse(
+        trigger: (_answered && i == _q.correct) ? _queue.first : null,
+        child: Shake(
+          trigger: (_answered && i == _selected && i != _q.correct)
+              ? _queue.first
+              : null,
+          child: Material(
+            color: bg,
+            borderRadius: BorderRadius.circular(14),
+            child: InkWell(
               borderRadius: BorderRadius.circular(14),
-              border: Border.all(color: border, width: 1.5),
-            ),
-            child: Row(
-              children: [
-                Expanded(
-                  child: _q.arabicOptions
-                      ? Directionality(
-                          textDirection: TextDirection.rtl,
-                          child: Text(_q.options[i],
-                              style: AppTheme.arabic(
-                                  size: 24, color: AppColors.ink)),
-                        )
-                      : Text(_q.options[i],
-                          style: const TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600,
-                              color: AppColors.ink)),
+              onTap: () => _choose(i),
+              child: Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 18,
+                  vertical: 16,
                 ),
-                if (trailing != null) trailing,
-              ],
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(14),
+                  border: Border.all(color: border, width: 1.5),
+                ),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: _q.arabicOptions
+                          ? Directionality(
+                              textDirection: TextDirection.rtl,
+                              child: Text(
+                                _q.options[i],
+                                style: AppTheme.arabic(
+                                  size: 24,
+                                  color: AppColors.ink,
+                                ),
+                              ),
+                            )
+                          : Text(
+                              _q.options[i],
+                              style: const TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                                color: AppColors.ink,
+                              ),
+                            ),
+                    ),
+                    if (trailing != null) trailing,
+                  ],
+                ),
+              ),
             ),
           ),
         ),
@@ -339,8 +382,17 @@ class _ListenButton extends StatelessWidget {
         final on = s == text || s == 'q';
         return TextButton.icon(
           onPressed: () => Tts.instance.speak(text, id: text),
-          icon: Icon(on ? Icons.volume_up_rounded : Icons.volume_up_outlined, color: AppColors.emerald),
-          label: const Text('Eshitish', style: TextStyle(color: AppColors.emerald, fontWeight: FontWeight.w700)),
+          icon: Icon(
+            on ? Icons.volume_up_rounded : Icons.volume_up_outlined,
+            color: AppColors.emerald,
+          ),
+          label: const Text(
+            'Eshitish',
+            style: TextStyle(
+              color: AppColors.emerald,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
         );
       },
     );
@@ -372,22 +424,35 @@ class _ResultDialog extends StatelessWidget {
           children: [
             Text(mastered ? '🏆' : '💪', style: const TextStyle(fontSize: 56)),
             const SizedBox(height: 8),
-            Text(mastered ? "Mukammal — o'zlashtirildi!" : 'Yaqin qoldi',
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                    fontSize: 18, fontWeight: FontWeight.w800, color: AppColors.ink)),
+            Text(
+              mastered ? "Mukammal — o'zlashtirildi!" : 'Yaqin qoldi',
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w800,
+                color: AppColors.ink,
+              ),
+            ),
             const SizedBox(height: 12),
-            Text("Birinchi urinishda: $firstTry / $total",
-                style: const TextStyle(fontSize: 16, color: Colors.black54)),
+            Text(
+              "Birinchi urinishda: $firstTry / $total",
+              style: const TextStyle(fontSize: 16, color: Colors.black54),
+            ),
             const SizedBox(height: 6),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               decoration: BoxDecoration(
-                  color: AppColors.gold.withValues(alpha: 0.15),
-                  borderRadius: BorderRadius.circular(12)),
-              child: Text('+$earned XP',
-                  style: const TextStyle(
-                      fontWeight: FontWeight.w800, color: AppColors.gold, fontSize: 16)),
+                color: AppColors.gold.withValues(alpha: 0.15),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Text(
+                '+$earned XP',
+                style: const TextStyle(
+                  fontWeight: FontWeight.w800,
+                  color: AppColors.gold,
+                  fontSize: 16,
+                ),
+              ),
             ),
             if (!mastered) ...[
               const SizedBox(height: 14),
@@ -406,11 +471,14 @@ class _ResultDialog extends StatelessWidget {
                       style: TextStyle(fontSize: 13, height: 1.35),
                     ),
                     const SizedBox(height: 6),
-                    Text('Eng yaxshi natijangiz: $best%',
-                        style: const TextStyle(
-                            fontWeight: FontWeight.w800,
-                            color: AppColors.gold,
-                            fontSize: 13)),
+                    Text(
+                      'Eng yaxshi natijangiz: $best%',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.w800,
+                        color: AppColors.gold,
+                        fontSize: 13,
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -425,11 +493,16 @@ class _ResultDialog extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(vertical: 14),
                       side: const BorderSide(color: AppColors.emerald),
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12)),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
                     ),
-                    child: Text(mastered ? 'Chiqish' : 'Keyinroq',
-                        style: const TextStyle(
-                            color: AppColors.emerald, fontWeight: FontWeight.w700)),
+                    child: Text(
+                      mastered ? 'Chiqish' : 'Keyinroq',
+                      style: const TextStyle(
+                        color: AppColors.emerald,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
                   ),
                 ),
                 const SizedBox(width: 12),
@@ -440,10 +513,13 @@ class _ResultDialog extends StatelessWidget {
                       backgroundColor: AppColors.emerald,
                       padding: const EdgeInsets.symmetric(vertical: 14),
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12)),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
                     ),
-                    child: Text(mastered ? 'Tayyor' : 'Qaytadan',
-                        style: const TextStyle(fontWeight: FontWeight.w700)),
+                    child: Text(
+                      mastered ? 'Tayyor' : 'Qaytadan',
+                      style: const TextStyle(fontWeight: FontWeight.w700),
+                    ),
                   ),
                 ),
               ],

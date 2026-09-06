@@ -445,8 +445,8 @@ class _DoneView extends StatelessWidget {
         const Positioned.fill(
           child: GirihPattern(
             color: AppColors.emerald,
-            opacity: 0.06,
-            cell: 64,
+            opacity: 0.035,
+            cell: 76,
           ),
         ),
         SingleChildScrollView(

@@ -5,6 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../main.dart';
 import '../theme.dart';
 import '../widgets/motion.dart';
+import '../widgets/ornament.dart';
 import 'alifbo_home.dart';
 import 'mashqlar_home.dart';
 import 'nahv_home.dart';
@@ -187,6 +188,11 @@ class _Hero extends StatelessWidget {
           ),
           child: Stack(
             children: [
+              // Girih (8 uchli yulduz) naqshi — islomiy ilovaning imzosi.
+              // Juda xira: fon, mazmun emas.
+              const Positioned.fill(
+                child: GirihPattern(opacity: 0.07, cell: 52),
+              ),
               // Orqa fondagi xira xattotlik — chuqurlik beradi.
               Positioned(
                 right: -6,

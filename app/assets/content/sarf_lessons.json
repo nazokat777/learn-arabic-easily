@@ -4356,6 +4356,94 @@
           "uz": "Imomi Sibavayh «مَبْيُوْعٌ»da «vov»ni hazf qiladi: مَبْيْعٌ bo'ladi. «Yo»ning salomat qolishi uchun «yo»dan oldingi harfga kasra beradi: مَبِيْعٌ bo'ladi. Imomi Axfashning dalili vov alomati ismi maf'ul bo'lgani uchun"
         }
       ]
+    },
+    {
+      "num": 52,
+      "page": 78,
+      "titleAr": "",
+      "title": "Ajvafning jahdi, nafiysi va amri",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "اَلْعَلامَة لا تحذفُ ولا تُتَبَدَّلُ عَنْ أَحْوالِها degan qoidaga ko'ra hazf qilinmaydi."
+        },
+        {
+          "type": "matn",
+          "uz": "Imomi Sibavayhning dalili vov harfi zoiddir, harfi zoidni hazf qilmoq kerak."
+        },
+        {
+          "type": "bolim",
+          "uz": "Ma'lumi fe'li jahd"
+        },
+        {
+          "type": "matn",
+          "uz": "لم يَبِعْ، لم يَبِيعَا، لَمْ يَبِيْعُوا، لم تَبِعْ، لم تَبِيعَا، لم يَبِعْنَ، لم تَبِعْ، لم تَبِيعَا، لم تَبِيعُوا، لم تَبِيعِي، لم تَبِيعَا، لم تَبِعْنَ، لم أَبِعْ، لم نَبِعْ"
+        },
+        {
+          "type": "matn",
+          "uz": "Ushbu quyidagi 7 siyg'ada ayni fe'l mahzufdir. Ular: g'oib, g'oibah, g'oibot, muxotab, muxotabot va ikki mutakallim."
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ يَبِعْ aslida لَمْ يَبْيِعْ edi. Kasra \"yo\"ga og'ir bo'lgani uchun \"yo\"ni kasrasini oldindagi harfga berdik. لَمْ يَبِيْعْ bo'lib, ikki sokin jam' bo'ldi. \"Yo\" bilan 'ayn orasida \"yo\"ni hazf qildik. لَمْ يَبِعْ bo'ldi. Nakli harakat va hazfi harfi illat qoidasi bor. لَمْ يَبِيْعا aslida لَمْ يَبْيِعا yoga kasra og'ir bo'lgani uchun moqabliga berdik. لَمْ يَبِيْعا bo'ldi. Va faqat nakli harakat qoidasi bor."
+        },
+        {
+          "type": "bolim",
+          "uz": "Majhuli fe'li jahd"
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ يُبَعْ، لَمْ يُبَاعَا، لَمْ يُبَاعُوا، لَمْ تُبَعْ، لَمْ تُبَاعَا، لَمْ يُبَعْنَ، لَمْ تُبَعْ، لَمْ تُبَاعَا، لَمْ تُبَاعُوا، لَمْ تُبَاعِي، لَمْ تُبَاعَا، لَمْ تُبَعْنَ، لَمْ أُبَعْ، لَمْ نُبَعْ"
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ يُبَعْ aslida لَمْ يُبْيَعْ edi, \"yo\"ni harakatini moqabliga berdik. Harakattalab bo'lgani uchun ي aslida mutaharrik edi."
+        },
+        {
+          "type": "matn",
+          "uz": "Hozir moqobli maftuh bo'lgan. ي ni alifga qalb qildik. لَمْ يُبَاعْ bo'lib, ijtimo' sokinayn bo'ldi. Alif bilan ayn orasida alifni hazf qildik. لَمْ يُبَعْ bo'ldi. G'oib, g'oiba, g'oibot, muxotab muxotabot va ham ikki mutakallim siyg'alarida: nakli harakat, qalbi harfi illat yuzaga keldi. Va hazfi harfi illat qoidasi bor."
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ يُبَاعَا aslida لَمْ يُبْيَعا edi. Bu qolgan siyg'alarida yuqorida bayon qilingan qoidaga ko'ra, hazfi harfi illat yo'q. Zero, ijtimoi sokinayn yo'q. Alif o'z o'rnida."
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li nafiyning ma'lumi"
+        },
+        {
+          "type": "matn",
+          "uz": "لا يَبِيْعُ، لا يَبِيْعَانِ، لا يَبِيْعُونَ، لاَ تَبِيْعُ، لا تَبِيْعَانِ، لا يَبِعْنَ، لا تَبِيْعُ، لا تَبِيْعَانِ، لا تَبِيْعُونَ، لا تَبِيعِينَ، لا تَبِيْعَانِ، لا تَبِعْنَ، لا أَبِيعُ، لاَ نَبِيعُ"
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li nafiyning majhuli"
+        },
+        {
+          "type": "matn",
+          "uz": "لا يُبَاعُ، لا يُبَاعَانِ، لا يُبَاعُونَ، لا تُبَاعُ، لا تُبَاعَانِ، لا يُبَعْنَ، لاَ تُبَاعُ، لا تُبَاعَانِ، لا تُبَاعُونَ، لا تُبَاعِينَ، لا تُبَاعَانِ، لا يُبَعْنَ، لا أُبَاعُ، لا نُبَاعُ"
+        },
+        {
+          "type": "matn",
+          "uz": "Fe'li nafiyning e'loli fe'li muzore'ning e'lolidek ma'lum va majhulda shunday keladi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Amri hozir"
+        },
+        {
+          "type": "matn",
+          "uz": "بِعْ، بِيْعَا، بِيْعُوا، بِيْعِي، بِيْعَا، بِعْنَ"
+        },
+        {
+          "type": "bolim",
+          "uz": "Amr olish qoidasi"
+        },
+        {
+          "type": "matn",
+          "uz": "Amr fe'lini, muzore' fe'lining olti ma'lum muxotab siyg'asidan ikki amal bilan olinadi."
+        }
+      ]
     }
   ]
 }

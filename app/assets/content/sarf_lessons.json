@@ -3992,6 +3992,106 @@
           "uz": "Bundan o'n ikki narsa ishtiqoq qilinadi. Quyidagicha: وَثَبَ – moziy, يَثِبُ – muzore', واثِبُ – ismi foil,"
         }
       ]
+    },
+    {
+      "num": 48,
+      "page": 70,
+      "titleAr": "",
+      "title": "Misol fe'lining (وَثَبَ) sarfi",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "مَوْثُوبُ – ismi maf'ul, لَمْ يَثِبْ – fe'li jahd, لا يَثِبُ – fe'li nafiy, ثِبْ – amri hozir, لِيَثِبْ – amri g'oib, لا تَثِبْ – nahiy hozir, مَوْثِبُ – ismi zamon va makon, مِيْثابُ – ismi olat, أَوْثَبُ – ismi tafzil"
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li moziyning ma'lumi"
+        },
+        {
+          "type": "matn",
+          "uz": "وَثَبَ، وَثَبَا، وَثَبُوا، وَثَبَتْ، وَثَبَتَا، وَثَبْنَ، وَثَبْتَ، وَثَبْتُمَا، وَثَبْتُمْ، وَثَبْتِ، وَثَبْتُمَا، وَثَبْتُنَّ، وَثَبْتُ، وَثَبْنا."
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li moziyning majhuli"
+        },
+        {
+          "type": "matn",
+          "uz": "وُثِبَ، وُثِبَا، وُثِبُوا، وُثِبَتْ، وُثِبَتَا، وُثِبْنَ، وُثِبْتَ، وُثِبْتُمَا، وُثِبْتُمْ، وُثِبْتِ، وُثِبْتُمَا، وُثِبْتُنَّ، وُثِبْتُ، وُثِبْنا."
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li muzore'ning ma'lumi"
+        },
+        {
+          "type": "matn",
+          "uz": "يَثِبُ، يَثِبَانِ، يَثِبُونَ، تَثِبُ، تَثِبَانِ، يَثِبْنَ، تَثِبُ، تَثِبَانِ، تَثِبُونَ، تَثِبِينَ، تَثِبَانِ، تَثِبْنَ، أَثِبُ، نَثِبُ."
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li muzore'ning majhuli"
+        },
+        {
+          "type": "matn",
+          "uz": "يُوثَبُ، يُوثَبَانِ، يُوثَبُونَ، تُوثَبُ، تُوثَبَانِ، يُوثَبْنَ، تُوثَبُ، تُوثَبَانِ، تُوثَبُونَ، تُوثَبِينَ، تُوثَبَانِ، تُوثَبْنَ، أُوثَبُ، نُوثَبُ."
+        },
+        {
+          "type": "bolim",
+          "uz": "Qoida"
+        },
+        {
+          "type": "matn",
+          "uz": "«يَثِبُ» aslida «يَوْثِبُ» edi. Har qachon harfi muzoraat bilan kasrai tahqiqiy orasida «vov» kelsa, unday «vov»ni hazf qilinadi."
+        },
+        {
+          "type": "bolim",
+          "uz": "«يَثِبُ» ni majhul qilish qoidasi"
+        },
+        {
+          "type": "matn",
+          "uz": "«يَثِبُ» ni majhul qilish uchun asliga qaytaramiz. «يَوْثِبُ» bo'ladi. Oxiridan oldingi harfini fathali qilamiz: يَوْثَبُ bo'ladi, harfi muzoraatni zammalik qilamiz: يُوثَبُ bo'ladi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Ismi foil bayoni"
+        },
+        {
+          "type": "matn",
+          "uz": "وَاثِبٌ، وَاثِبَانِ، وَاثِبُونَ، وَاثِبَةٌ، وَاثِبَتَانِ، وَاثِبَاتٌ"
+        },
+        {
+          "type": "bolim",
+          "uz": "Ismi maf'ul bayoni"
+        },
+        {
+          "type": "matn",
+          "uz": "مَوْثُوبٌ، مَوْثُوبَانِ، مَوْثُوبُونَ، مَوْثُوبَةٌ، مَوْثُوبَتَانِ، مَوْثُوبَاتٌ"
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li jahdning ma'lumi"
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ يَثِبْ، لَمْ يَثِبَا، لَمْ يَثِبُوا، لَمْ تَثِبْ، لَمْ تَثِبَا، لَمْ يَثِبْنَ، لَمْ تَثِبْ، لَمْ تَثِبَا، لَمْ تَثِبُوا، لَمْ تَثِبِي، لَمْ تَثِبَا، لَمْ تَثِبْنَ، لَمْ أَثِبْ، لَمْ نَثِبْ"
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li jahdning majhuli"
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ يُوثَبْ، لَمْ يُوثَبَا، لَمْ يُوثَبُوا، لَمْ تُوثَبْ، لَمْ تُوثَبَا، لَمْ يُوثَبْنَ، لَمْ تُوثَبْ، لَمْ تُوثَبَا، لَمْ تُوثَبُوا، لَمْ تُوثَبِي، لَمْ تُوثَبَا، لَمْ تُوثَبْنَ، لَمْ أُوثَبْ، لَمْ نُوثَبْ"
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li nafiyning ma'lumi"
+        },
+        {
+          "type": "matn",
+          "uz": "لا يَثِبُ، لا يَثِبَانِ، لاَ يَثِبُونَ، لاَ تَثِبُ، لاَ تَثِبَانِ، لا يَثِبْنَ، لا تَثِبُ، لا تَثِبَانِ، لا تَثِبُونَ، لا تَثِبِينَ، لا تَثِبَانِ، لا تَثِبْنَ، لا أَثِبُ، لا نَثِبُ"
+        }
+      ]
     }
   ]
 }

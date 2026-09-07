@@ -6198,6 +6198,86 @@
           "uz": "دَعَا moziy, يَدْعُوْ muzore', دَاعٍ ismi foil, مَدْعُوٌّ ismi maf'ul, لَمْ يَدْعُ fe'li jahd, لا يَدْعُو fe'li nafiy, اُدْعُ amri hozir, لِيَدْعُ amri g'oib, لا تَدْعُ fe'li nahiy, مَدْعَى ismi zamon va makon, مِدْعَى va مِدْعَاةٌ va مِدْعَاءٌ ismi olat, أَدْعَى ismi tafzil."
         }
       ]
+    },
+    {
+      "num": 82,
+      "page": 118,
+      "titleAr": "",
+      "title": "دعا fe'lining moziysi",
+      "blocks": [
+        {
+          "type": "bolim",
+          "uz": "Fe'li moziyning ma'lumi"
+        },
+        {
+          "type": "matn",
+          "uz": "دَعا، دَعَوَا، دَعَوْا، دَعَتْ، دَعَتَا، دَعَوْنَ، دَعَوْتَ، دَعَوْتُمَا، دَعَوْتُمْ، دَعَوْتِ، دَعَوْتُمَا، دَعَوْتُنَّ، دَعَوْتُ، دَعَوْنَا"
+        },
+        {
+          "type": "matn",
+          "uz": "دَعا aslida دَعَوَ edi. Vov mutaharrik moqabli maftuh bo'lgani uchun vovni alifga qalb qildik دَعا bo'ldi."
+        },
+        {
+          "type": "matn",
+          "uz": "دَعَوْا aslida دَعَوُوا edi. Vov mutaharrik moqabli maftuh bo'lgani uchun vovni alifga qalb qildik. دَعَاوْا bo'lib, ijtimoi sokinayn hosil bo'ldi. Alif bilan vov orasida alifni hazf qildik دَعَوْا bo'ldi. فَعَوْا vaznidagi دَعَتْ aslida دَعَوَتْ edi. Vovni yuqorida o'tgan qoidaga binoan alifga qalb qildik دَعَاتْ bo'lib, ijtimoi sokinayn hosil bo'ldi. Alif bilan \"to\" orasida alifni hazf qildik دَعَتْ bo'ldi. فَعَتْ vaznidagi دَعاتا dagi alif iltiqoi sokinayn bilan tushib دَعَتا bo'ldi. Zero, toi tanisning harakati asliy emas. Zero, \"to\" vohidah siyg'asida sokindir."
+        },
+        {
+          "type": "matn",
+          "uz": "Zamiri tasniya bo'lgan alifni muhofaza qilish uchun oriz tufayli fathali bo'lib turibdi. Holati asliysini nazarda tutamiz."
+        },
+        {
+          "type": "matn",
+          "uz": "Zero العارِضُ كَالْمَعْدُومِ degan qoidaga suyanamiz. Aslida bunday bo'lmay, keyin bir sabab bilan paydo bo'lgan narsa yo'qdek hisoblanadi. دَعَوْنَ oxirigacha o'z aslidagi فَعَلْنَ vaznidadir."
+        },
+        {
+          "type": "matn",
+          "uz": "Qoida: vovdan qalb topgan alifni alif suratida yoziladi."
+        },
+        {
+          "type": "matn",
+          "uz": "دَعَا – يَدْعُو kabi. يdan qalb topgan alifni ي suratida yoziladi. رَمَى، يَرْمِي kabi."
+        }
+      ]
+    },
+    {
+      "num": 83,
+      "page": 119,
+      "titleAr": "",
+      "title": "دعا majhuli va muzore'i",
+      "blocks": [
+        {
+          "type": "bolim",
+          "uz": "Fe'li moziyning majhuli"
+        },
+        {
+          "type": "matn",
+          "uz": "دُعِيَ، دُعِيَا، دُعُوا، دُعِيَتْ، دُعِيَتَا، دُعِيْنَ، دُعِيْتَ، دُعِيْتُمَا، دُعِيْتُمْ، دُعِيْتِ، دُعِيْتُمَا، دُعِيْتُنَّ، دُعِيْتُ، دُعِيْنَا"
+        },
+        {
+          "type": "matn",
+          "uz": "دُعِيَ aslida دُعِوَ edi. Kalimaning lomi barobarida kasradan keyin kelgan vovni يga qalb qildik دُعِىَ bo'ldi. G'oibin siyg'asidan boshqa 13 siyg'ada اَلْقَلْبُ فَقَطْ qoidasi bor. دُعُوا aslida دُعِوُوا bo'lib, ushbu bir siyg'ada vov keldi. Tarafi kalimada moqobli kasra vovni يga qalb qildik. دُعِيُوا bo'ldi. Zamma يga og'ir deb, يni zammasini moqabliga berdik. Harkatini tushirgandan keyin دُعُيْوا bo'lib, ijtimoi sokinayn hosil bo'ldi. ي bilan vov orasida يni hazf qildik دُعُوا bo'ldi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Muzore' ma'lum fe'li"
+        },
+        {
+          "type": "matn",
+          "uz": "يَدْعُو، يَدْعُوَانِ، يدْعُونَ، تَدْعُو، تَدْعُوَانِ، يَدْعُونَ، تَدْعُو، تَدْعُوَانِ، تَدْعُونَ، تَدْعِيْنَ، تَدْعُوَانِ، تَدْعُونَ، أَدْعُو، نَدْعُو"
+        },
+        {
+          "type": "matn",
+          "uz": "يَدْعُو aslida يَدْعُوُ edi, zamma vovga og'ir bo'lgani uchun vovni zammasini tashladik يَدْعُو bo'ldi."
+        },
+        {
+          "type": "matn",
+          "uz": "Bu yerda اَلتَّسكِيْنُ فَقَطْ qoidasi bor."
+        },
+        {
+          "type": "matn",
+          "uz": "3-siyg'ada lomi fe'l mahzuf g'oibin va muxotabin, va muxotabadagi يَدْعُونَ aslida يَدْعُوُوْنَ edi. Zamma vovga og'ir"
+        }
+      ]
     }
   ]
 }

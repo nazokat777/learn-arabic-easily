@@ -5,13 +5,14 @@
     "author": "Do'stmuhammad Nasriddin Bodariy",
     "nashr": "Toshkent, «Movarounnahr», 2009",
     "izoh": "Kitobning o'zbekchasi kirill yozuvida. Ilovada kontent lotinda saqlanadi — kirill ko'rinishini ilovaning o'zi hosil qiladi (lib/uz_yozuv.dart). Arabcha matn manbadagidek, qanday harakatlangan bo'lsa shundayligicha ko'chiriladi.",
-    "blokTurlari": "matn — o'zbekcha xatboshi (arabcha misollar ichida kelishi mumkin); misol — alohida turgan arabcha satr; list — raqamli ro'yxat"
+    "blokTurlari": "matn — o'zbekcha xatboshi (arabcha misollar ichida kelishi mumkin); misol — alohida turgan arabcha satr; list — raqamli ro'yxat; jadval — kitobdagi boblar jadvali (ustunlar va qatorlar)",
+    "arabchaTartib": "Arabcha ro'yxatlar mantiqiy (o'qish) tartibida saqlanadi. Kitobda «fo, ayn, lom» kabi sanoqlar terishda teskari chiqib qolgan — ilovada to'g'ri tartibda ko'rsatiladi, chunki o'zbekcha izohi ham shu tartibda."
   },
   "lessons": [
     {
       "num": 1,
       "page": 8,
-      "titleAr": "أَقْسَامُ الكَلِمَةِ",
+      "titleAr": "",
       "title": "Kalimaning qismlari",
       "blocks": [
         {
@@ -32,9 +33,18 @@
             "Harf — حرف"
           ]
         },
-        { "type": "matn", "uz": "Ismga misol: رَجُل" },
-        { "type": "matn", "uz": "Fe'lga misol: ضَرَبَ" },
-        { "type": "matn", "uz": "Harfga misol: عَنْ، مِنْ" },
+        {
+          "type": "matn",
+          "uz": "Ismga misol: رَجُل"
+        },
+        {
+          "type": "matn",
+          "uz": "Fe'lga misol: ضَرَبَ"
+        },
+        {
+          "type": "matn",
+          "uz": "Harfga misol: عَنْ، مِنْ"
+        },
         {
           "type": "list",
           "intro": "1. Ism uch qismdir:",
@@ -77,7 +87,7 @@
     {
       "num": 2,
       "page": 9,
-      "titleAr": "الْحَرْفُ الْأَصْلِيُّ وَالزَّائِدُ",
+      "titleAr": "",
       "title": "Asliy va zoid harf",
       "blocks": [
         {
@@ -96,7 +106,10 @@
           "type": "matn",
           "uz": "Asliy harf shunday harfki, فاءُ، عَينُ، لام ning bittasi qarshisida (barobarida) bo'ladi."
         },
-        { "type": "matn", "uz": "Masalan: فَعَلَ – ضَرَبَ vaznida." },
+        {
+          "type": "matn",
+          "uz": "Masalan: فَعَلَ – ضَرَبَ vaznida."
+        },
         {
           "type": "matn",
           "uz": "Harfi zoid shunday harfki, فاءُ، عَينُ، لام larning birortasi qarshisida (barobarida) bo'lmaydi."
@@ -128,6 +141,538 @@
         {
           "type": "matn",
           "uz": "Sulosiy mujarrad shunday kalimadirki, uning uch asliy harfining ustiga biror harf orttirilmagan bo'ladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: فَعَلَ – ضَرَبَ vaznida."
+        },
+        {
+          "type": "matn",
+          "uz": "Sulosiy mazid shunday kalimadirki, uning uch asliy harfining ustiga biror harf orttirilgan bo'ladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: أَفْعَلَ – أَكْرَمَ vaznida."
+        },
+        {
+          "type": "list",
+          "intro": "To'rt harflik kalima ham sulosiyga o'xshash ikki qismdir:",
+          "items": [
+            "رباعي مُجَرَّد (Ruboiy mujarrad)",
+            "رباعي مَزِيد (Ruboiy mazid)."
+          ]
+        },
+        {
+          "type": "matn",
+          "uz": "Ruboiy mujarrad shunday kalimadirki, uning asliy to'rt harfining ustiga biror harf orttirilmagan bo'ladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: فَعْلَلَ – دَحْرَجَ vaznida."
+        },
+        {
+          "type": "matn",
+          "uz": "Ruboiy mazid shunday kalimadirki, uning asliy to'rt harfining ustiga biror harf orttirilgan bo'ladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: تَفَعْلَلَ – تَدَخْرَجَ vaznida."
+        },
+        {
+          "type": "list",
+          "intro": "Besh harflik kalima ham ikki qismdir:",
+          "items": [
+            "خُماسِي مُجَرَّد (xumosiy mujarrad).",
+            "خُماسِي مَزِيدْ (xumosiy mazid)."
+          ]
+        },
+        {
+          "type": "matn",
+          "uz": "Xumosiy mujarrad shunday kalimadirki, uning asliy besh harfining ustiga biror harf orttirilmaydi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: جَحْمَرِشٌ (qari kampir) – فَعْلَلِلٌ vaznida."
+        },
+        {
+          "type": "matn",
+          "uz": "Xumosiy mazid shunday kalimadirki, uning besh asliy harfining ustiga biror harf orttiriladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: حَنْدَلِيْسٌ (qaysar tuya) – فَعْلَلِيل vaznida."
+        },
+        {
+          "type": "matn",
+          "uz": "Xumosiy: حَنْدَرِسٌ kelgan)."
+        }
+      ]
+    },
+    {
+      "num": 3,
+      "page": 10,
+      "titleAr": "",
+      "title": "Ism va fe'lning qismlari bayonida",
+      "blocks": [
+        {
+          "type": "list",
+          "intro": "Ism va fe'l yetti qismdir:",
+          "items": [
+            "صَحِيحْ (sahih).",
+            "مُضاعفْ (muzoaf).",
+            "مِثال (misol).",
+            "أَجْوَف (ajvaf).",
+            "ناقِص (noqis).",
+            "لَفِيفُ (lafif).",
+            "مُلْتَوِي (multaviy)."
+          ]
+        },
+        {
+          "type": "jadval",
+          "sarlavha": "BOB",
+          "ustunlar": [
+            {
+              "ar": "السَّالِمُ",
+              "ar2": "(الصَّحِيحُ)"
+            },
+            {
+              "ar": "الْمُضَعَّفُ",
+              "ar2": "(الْمُضَاعَفُ)"
+            },
+            {
+              "ar": "الْمُعْتَلُّ الفَاء",
+              "ar2": "(الْمِثَالُ)"
+            },
+            {
+              "ar": "الْمُعْتَلُّ العَيْنُ",
+              "ar2": "(الأَجْوَفُ)"
+            },
+            {
+              "ar": "الْمُعْتَلّ اللاَّم",
+              "ar2": "(النَّاقِصُ)"
+            },
+            {
+              "ar": "اللَّفِيفُ الْمَقْرُونُ",
+              "ar2": "(اللَّفِيفُ)"
+            },
+            {
+              "ar": "الْمَفْرُوق اللَّفِيفُ",
+              "ar2": "(الْمُلْتَوِي)"
+            }
+          ],
+          "qatorlar": [
+            {
+              "bolim": "ثُلاثي مُجَرَّد"
+            },
+            {
+              "bob": "(I)",
+              "raqam": "1",
+              "kataklar": [
+                "ضَرَبَ – يَضْرِبُ",
+                "فَرَّ",
+                "وَثَبَ",
+                "بَاعَ",
+                "رَمَى",
+                "رَوَى",
+                "وَحَى"
+              ]
+            },
+            {
+              "bob": "",
+              "raqam": "2",
+              "kataklar": [
+                "نَصَرَ – يَنْصُرُ",
+                "رَدَّ",
+                "وَدَّ",
+                "دَامَ",
+                "دَعَى",
+                "———",
+                "———"
+              ]
+            },
+            {
+              "bob": "",
+              "raqam": "3",
+              "kataklar": [
+                "مَنَعَ – يَمْنَعُ",
+                "———",
+                "وَضَعَ",
+                "———",
+                "رَعَى",
+                "———",
+                "———"
+              ]
+            },
+            {
+              "bob": "",
+              "raqam": "4",
+              "kataklar": [
+                "حَمِدَ – يَحْمَدُ",
+                "عَضَّ",
+                "وَضِرَ",
+                "خَافَ",
+                "خَشِيَ",
+                "قَوِيَ",
+                "وَجِيَ"
+              ]
+            },
+            {
+              "bob": "",
+              "raqam": "5",
+              "kataklar": [
+                "نَعِمَ – يَنْعِمُ",
+                "———",
+                "وَرِثَ",
+                "———",
+                "———",
+                "———",
+                "وَلِيَ"
+              ]
+            },
+            {
+              "bob": "",
+              "raqam": "6",
+              "kataklar": [
+                "شَرُفَ – يَشْرُفُ",
+                "حَبَّ",
+                "وَقُحَ",
+                "طَالَ",
+                "رَخُوَ",
+                "———",
+                "———"
+              ]
+            },
+            {
+              "bolim": "ثلاثي مَزِيد"
+            },
+            {
+              "bob": "(IV)",
+              "raqam": "1",
+              "kataklar": [
+                "أَكْرَمَ – يُكْرِمُ",
+                "أَحَبَّ",
+                "أَوْجَبَ",
+                "أَقَامَ",
+                "أَهْدَى",
+                "أَرْوَى",
+                "أَوْصَى"
+              ]
+            },
+            {
+              "bob": "(II)",
+              "raqam": "2",
+              "kataklar": [
+                "صَرَّحَ – يُصَرِّحُ",
+                "جَدَّدَ",
+                "وَحَّدَ",
+                "صَوَّبَ",
+                "رَبَّى",
+                "سَوَّى",
+                "وَفَّى"
+              ]
+            },
+            {
+              "bob": "(III)",
+              "raqam": "3",
+              "kataklar": [
+                "سَافَرَ – يُسَافِرُ",
+                "حَابَّ",
+                "وَاظَبَ",
+                "جَاوَبَ",
+                "حَابَى",
+                "دَاوَى",
+                "وَالَى"
+              ]
+            },
+            {
+              "bob": "(VIII)",
+              "raqam": "4",
+              "kataklar": [
+                "اِحْتَسَبَ – يَحْتَسِبُ",
+                "اِحْتَجَّ",
+                "اِتَّضَحَ",
+                "اِقْتَاتَ",
+                "اِخْتَفَى",
+                "اِحْتَوَى",
+                "اِتَّقَى"
+              ]
+            },
+            {
+              "bob": "(VII)",
+              "raqam": "5",
+              "kataklar": [
+                "اِنْسَحَبَ – يَنْسَحِبُ",
+                "اِنْقَضَّ",
+                "———",
+                "اِنْقَادَ",
+                "اِنْجَلَى",
+                "اِنْزَوَى",
+                "———"
+              ]
+            },
+            {
+              "bob": "(IX)",
+              "raqam": "6",
+              "kataklar": [
+                "اِحْمَرَّ – يَحْمَرُّ",
+                "———",
+                "",
+                "اِسْوَدَّ",
+                "اِرْعَوَى",
+                "———",
+                "———"
+              ]
+            },
+            {
+              "bob": "",
+              "raqam": "7",
+              "kataklar": [
+                "اِحْمَارَّ – يَحْمَارُّ",
+                "———",
+                "———",
+                "اِسْوَادَّ",
+                "———",
+                "———",
+                "———"
+              ]
+            },
+            {
+              "bob": "(V)",
+              "raqam": "8",
+              "kataklar": [
+                "تَفَصَّحَ – يَتَفَصَّحُ",
+                "تَجَدَّدَ",
+                "تَوَرَّدَ",
+                "تَصَوَّرَ",
+                "تَقَضَّى",
+                "تَرَوَّى",
+                "تَوَفَّى"
+              ]
+            },
+            {
+              "bob": "(VI)",
+              "raqam": "9",
+              "kataklar": [
+                "تَدَارَكَ – يَتَدَارَكُ",
+                "تَصَامَّ",
+                "تَوَارَثَ",
+                "تَزَايَدَ",
+                "تَصَابَى",
+                "تَدَاوَى",
+                "تَوَارَى"
+              ]
+            },
+            {
+              "bob": "(X)",
+              "raqam": "10",
+              "kataklar": [
+                "اِسْتَنْسَخَ – يَسْتَنْسِخُ",
+                "اِسْتَحَبَّ",
+                "اِسْتَوْجَبَ",
+                "اِسْتَبَاعَ",
+                "اِسْتَهْدَى",
+                "اِسْتَهْوَى",
+                "اِسْتَوْفَى"
+              ]
+            },
+            {
+              "bob": "",
+              "raqam": "11",
+              "kataklar": [
+                "اِحْدَوْدَبَ – يَحْدَوْدِبُ",
+                "———",
+                "———",
+                "———",
+                "اِعْرَورى",
+                "———",
+                "———"
+              ]
+            },
+            {
+              "bob": "",
+              "raqam": "12",
+              "kataklar": [
+                "اِجْلَوَّزَ – يَجْلَوِّزُ",
+                "———",
+                "———",
+                "———",
+                "———",
+                "———",
+                "———"
+              ]
+            },
+            {
+              "bolim": "رُبَاعِي مُجَرَّد"
+            },
+            {
+              "bob": "(I)",
+              "raqam": "1",
+              "kataklar": [
+                "دَخْرَجَ – يُدَخْرِجُ",
+                "صَرْصَرَ",
+                "وَسْوَسَ",
+                "جَوْرَبَ",
+                "قَلْسَى",
+                "ضَوْضَى",
+                "———"
+              ]
+            },
+            {
+              "bolim": "رُبَاعِي مَزِيد"
+            },
+            {
+              "bob": "(I)",
+              "raqam": "1",
+              "kataklar": [
+                "تَدَخْرَجَ – يَتَدَخْرَجُ",
+                "تَصَلْصَلَ",
+                "———",
+                "تَجَوْرَبَ",
+                "تَقَلْسَى",
+                "———",
+                "———"
+              ]
+            },
+            {
+              "bob": "(II)",
+              "raqam": "2",
+              "kataklar": [
+                "اِبْرَنْشَقَ – يَبْرَنْشِقُ",
+                "———",
+                "———",
+                "———",
+                "———",
+                "———",
+                "———"
+              ]
+            },
+            {
+              "bob": "(III)",
+              "raqam": "3",
+              "kataklar": [
+                "اِقْشَعَرَّ – يَقْشَعِرُّ",
+                "———",
+                "———",
+                "———",
+                "———",
+                "———",
+                "———"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "num": 4,
+      "page": 13,
+      "titleAr": "",
+      "title": "I-Sahih",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "Sahih shunday kalimadirki, فاءُ، عينُ، لام ning barobarida (qarshisida) xoh ism bo'lsin, xoh fe'l, harfi illat va ikki harf bir jinsdan bo'lmaydi. Masalan: ضَرْبٌ (urmoq) va ضَرَبَ; (urdi)."
+        },
+        {
+          "type": "matn",
+          "uz": "Harfi illat uchtadir: و (vov), ا (alif), ي (yo) dir."
+        },
+        {
+          "type": "matn",
+          "uz": "Bayt:\nHarfi illat uch turur,\nGar jam' qilsa, voy (واي) bo'lur.\nHar kishi takror qilsa,\nSarf ichida boy bo'lur."
+        },
+        {
+          "type": "matn",
+          "uz": "Agar bir kalimaning فا (fo)sining barobarida ء (hamza) kelsa, مَهْمُوز الْفَا (mahmuzul-fo) deyiladi. Ya'ni hamzalik kalima degani."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: فَعَلَ – أَبَرَ vaznida."
+        },
+        {
+          "type": "list",
+          "intro": "أَبَرَ (abara)ning ma'nosi:",
+          "items": [
+            "nonga igna suqib berdi;",
+            "chayon chaqdi (nishi bilan);",
+            "oshqovoqning gulini bir-biriga (erkagu urg'ochisini) uladi, demakdir."
+          ]
+        },
+        {
+          "type": "matn",
+          "uz": "Agar ayinning barobarida hamza kelsa, مَهْمُوز العَيْن (mahmuzul-ayn) deyiladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: فَعَلَ – بَأَر vaznida. بَأَر (ba'aro) ma'nosi: choh qazidi, demakdir."
+        },
+        {
+          "type": "matn",
+          "uz": "Agar lomining barobarida hamza (ء) kelsa, مَهْمُوزُ الْلام (mahmuzul-lom) deyiladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: فَعَلَ – بَرَأَ vaznida. Ma'nosi: yaratdi, demakdir."
+        }
+      ]
+    },
+    {
+      "num": 5,
+      "page": 14,
+      "titleAr": "",
+      "title": "II-Muzo'af",
+      "blocks": [
+        {
+          "type": "list",
+          "intro": "Muzo'af ikki qismdir:",
+          "items": [
+            "مُضاعَف ثلاثي (muzoafi sulosiy).",
+            "مُضاعفِ رُباعي (muzoafi ruboiy)."
+          ]
+        },
+        {
+          "type": "matn",
+          "uz": "Muzo'afi sulosiy shunday kalimadirki, عَيْن va لامِ ning barobarida xoh ism bo'lsin, xoh fe'l, ikki harf bir jinsdan bo'ladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: فَرَّ Aslida فَرَرَ edi, فَعَلَ vaznida."
+        },
+        {
+          "type": "matn",
+          "uz": "Muzoafi ruboiy shunday kalimadirki, فا va وَلامِ، اولى (fo va lomi ulo) va عَيْن (ayn) hamda لامِ ثاني (lomi soniy)ning barobarida ikki harf bir jinsdan bo'ladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: فَعْلَلَ – صَرْصَرَ vaznida."
+        }
+      ]
+    },
+    {
+      "num": 6,
+      "page": 14,
+      "titleAr": "",
+      "title": "III-Misol",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "مِثال ya'ni, fe'li sahihga o'xshaydi moziysining e'loli yo'qligida. Misol shunday kalimadirki, xoh ism bo'lsin, xoh fe'l, فا sining barobarida harfi illat bo'ladi. Masalan: وَعْدٌ va فَعْلٌ – وَعَدَ va فَعَلَ vaznida."
+        }
+      ]
+    },
+    {
+      "num": 7,
+      "page": 14,
+      "titleAr": "",
+      "title": "IV-Ajvaf",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "أَجْوَفْ ya'ni, o'rtasi harfi sahihdan holi kalimadir. Ajvaf shunday kalimadirki, xoh ism bo'lsin, xoh fe'l, عَيْن ning barobarida harfi illat bo'ladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: قَوْلٌ va فَعْلٌ – قَوَلَ va فَعَلَ vaznida."
         }
       ]
     }

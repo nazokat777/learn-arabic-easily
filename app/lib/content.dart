@@ -365,6 +365,43 @@ class UlashStage {
 ///   matn  — o'zbekcha xatboshi (arabcha misol ichida bo'lishi mumkin)
 ///   misol — alohida turgan arabcha satr (tinglash tugmasi bilan)
 ///   list  — raqamli ro'yxat, har band o'zbekcha matn
+/// Sarf jadvalining bitta ustuni: nomi va kitobda qavs ichida berilgan
+/// ikkinchi nomi (masalan «السَّالِمُ» va
+/// «(الصَّحِيحُ)»).
+class SarfUstun {
+  final String ar;
+  final String ar2;
+  const SarfUstun({required this.ar, this.ar2 = ''});
+
+  factory SarfUstun.fromJson(Map<String, dynamic> j) =>
+      SarfUstun(ar: j['ar'] ?? '', ar2: j['ar2'] ?? '');
+}
+
+/// Jadvalning bitta qatori. [bolim] bo'sh bo'lmasa — bu qator emas,
+/// bo'limni ajratib turuvchi sarlavha («ثلاثي مجرد» kabi).
+class SarfQator {
+  final String bolim;
+  final String bob;
+  final String raqam;
+  final List<String> kataklar;
+
+  const SarfQator({
+    this.bolim = '',
+    this.bob = '',
+    this.raqam = '',
+    this.kataklar = const [],
+  });
+
+  bool get bolimmi => bolim.isNotEmpty;
+
+  factory SarfQator.fromJson(Map<String, dynamic> j) => SarfQator(
+    bolim: j['bolim'] ?? '',
+    bob: j['bob'] ?? '',
+    raqam: j['raqam'] ?? '',
+    kataklar: ((j['kataklar'] as List?) ?? const []).map((e) => '$e').toList(),
+  );
+}
+
 class SarfBlock {
   final String type;
   final String uz;
@@ -372,12 +409,20 @@ class SarfBlock {
   final String intro;
   final List<String> items;
 
+  /// «jadval» turi uchun: ustunlar sarlavhasi va qatorlar.
+  final String sarlavha;
+  final List<SarfUstun> ustunlar;
+  final List<SarfQator> qatorlar;
+
   const SarfBlock({
     required this.type,
     this.uz = '',
     this.ar = '',
     this.intro = '',
     this.items = const [],
+    this.sarlavha = '',
+    this.ustunlar = const [],
+    this.qatorlar = const [],
   });
 
   factory SarfBlock.fromJson(Map<String, dynamic> j) => SarfBlock(
@@ -386,6 +431,13 @@ class SarfBlock {
     ar: j['ar'] ?? '',
     intro: j['intro'] ?? '',
     items: ((j['items'] as List?) ?? const []).map((e) => '$e').toList(),
+    sarlavha: j['sarlavha'] ?? '',
+    ustunlar: ((j['ustunlar'] as List?) ?? const [])
+        .map((e) => SarfUstun.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    qatorlar: ((j['qatorlar'] as List?) ?? const [])
+        .map((e) => SarfQator.fromJson(e as Map<String, dynamic>))
+        .toList(),
   );
 }
 

@@ -105,6 +105,12 @@ class MashqBank {
   ///   * «misol» bloklari — arabcha satr va uning izohi;
   ///   * ro'yxat bandlari «Ism — اسم» ko'rinishida bo'lsa, tire bo'yicha
   ///     ikkiga bo'linadi. Aynan shu bandlar kitobning atama lug'ati.
+  /// «صَحِيحْ (sahih).» — arabcha
+  /// atama va qavs ichidagi o'zbekcha o'qilishi.
+  static final RegExp _qavsliAtama = RegExp(
+    r'^([\u0600-\u06FF\u0750-\u077F\s]+)\(([^)]+)\)\.?$',
+  );
+
   static List<MashqElement> sarfDars(SarfLesson l) {
     final korilgan = <String>{};
     final natija = <MashqElement>[];
@@ -129,6 +135,13 @@ class MashqBank {
         continue;
       }
       for (final band in b.items) {
+        // «صَحِيحْ (sahih).» — kitob
+        // atamalarni shu ko'rinishda ham beradi.
+        final qavs = _qavsliAtama.firstMatch(band);
+        if (qavs != null) {
+          qosh(qavs.group(1)!.trim(), qavs.group(2)!.trim());
+          continue;
+        }
         final bolak = band.split(RegExp(r'\s[—–-]\s'));
         if (bolak.length != 2) continue;
         final chap = bolak[0].trim();

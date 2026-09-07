@@ -51,7 +51,8 @@ class SarfHome extends StatelessWidget {
   Widget _tile(BuildContext context, SarfLesson l) => PremiumTile(
     label: '${l.num}',
     title: l.title,
-    arabicSubtitle: l.titleAr,
+    // Kitobda sarlavhasi bo'lmagan darsda arabcha satr chizilmaydi.
+    arabicSubtitle: l.titleAr.isEmpty ? null : l.titleAr,
     accent: AppColors.indigo,
     trailing: MasteryBadge(lessonId: l.completionId),
     onTap: () => Navigator.push(
@@ -133,20 +134,21 @@ class SarfLessonScreen extends StatelessWidget {
           child: ListView(
             padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
             children: [
-              Center(
-                child: Directionality(
-                  textDirection: TextDirection.rtl,
-                  child: Text(
-                    lesson.titleAr,
-                    textAlign: TextAlign.center,
-                    style: AppTheme.arabic(
-                      size: 26,
-                      color: AppColors.indigo,
-                      w: FontWeight.w700,
+              if (lesson.titleAr.isNotEmpty)
+                Center(
+                  child: Directionality(
+                    textDirection: TextDirection.rtl,
+                    child: Text(
+                      lesson.titleAr,
+                      textAlign: TextAlign.center,
+                      style: AppTheme.arabic(
+                        size: 26,
+                        color: AppColors.indigo,
+                        w: FontWeight.w700,
+                      ),
                     ),
                   ),
                 ),
-              ),
               Center(
                 child: Text(
                   lesson.title,
@@ -190,6 +192,8 @@ class SarfLessonScreen extends StatelessWidget {
         return _Misol(block: b);
       case 'list':
         return _Royxat(block: b);
+      case 'jadval':
+        return _Jadval(block: b);
       default:
         return AralashMatn(b.uz);
     }
@@ -236,6 +240,154 @@ class _Misol extends StatelessWidget {
       ),
     );
   }
+}
+
+/// Kitobdagi «boblar jadvali».
+///
+/// Telefon ekraniga sakkizta ustun sig'maydi, shuning uchun jadval
+/// gorizontal suriladi: kitobdagi tuzilma (qaysi bob qaysi turdagi
+/// o'zakda qanday ko'rinishda keladi) aynan shu tartibda saqlanadi —
+/// uni qatorlarga bo'lib yuborsa, taqqoslash imkoni yo'qoladi.
+class _Jadval extends StatelessWidget {
+  final SarfBlock block;
+  const _Jadval({required this.block});
+
+  static const double _bobEni = 62;
+  static const double _katakEni = 132;
+
+  @override
+  Widget build(BuildContext context) {
+    final ustunlar = block.ustunlar;
+    final jamiEni = _bobEni + _katakEni * ustunlar.length;
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: 6),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: AppColors.indigo.withValues(alpha: 0.25)),
+      ),
+      clipBehavior: Clip.antiAlias,
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: SizedBox(
+          width: jamiEni,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              _sarlavhaQatori(ustunlar),
+              for (final q in block.qatorlar)
+                q.bolimmi ? _bolimQatori(q) : _qator(q, ustunlar.length),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _sarlavhaQatori(List<SarfUstun> ustunlar) => Container(
+    color: AppColors.indigo.withValues(alpha: 0.12),
+    child: Row(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        _katak(
+          _bobEni,
+          child: Text(
+            block.sarlavha,
+            textAlign: TextAlign.center,
+            style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 12),
+          ),
+        ),
+        for (final u in ustunlar)
+          _katak(
+            _katakEni,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                _arabcha(u.ar, 14, FontWeight.w700),
+                if (u.ar2.isNotEmpty) _arabcha(u.ar2, 12.5, FontWeight.w400),
+              ],
+            ),
+          ),
+      ],
+    ),
+  );
+
+  Widget _bolimQatori(SarfQator q) => Container(
+    color: AppColors.gold.withValues(alpha: 0.18),
+    padding: const EdgeInsets.symmetric(vertical: 6),
+    child: Center(child: _arabcha(q.bolim, 16, FontWeight.w800)),
+  );
+
+  Widget _qator(SarfQator q, int ustunSoni) => DecoratedBox(
+    decoration: const BoxDecoration(
+      border: Border(top: BorderSide(color: Color(0x22000000))),
+    ),
+    child: Row(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        _katak(
+          _bobEni,
+          child: Text(
+            q.bob,
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              fontWeight: FontWeight.w900,
+              fontSize: 12,
+              color: AppColors.indigo,
+            ),
+          ),
+        ),
+        for (var i = 0; i < ustunSoni; i++)
+          _katak(
+            _katakEni,
+            child: i < q.kataklar.length
+                ? _katakIchi(q, i)
+                : const SizedBox.shrink(),
+          ),
+      ],
+    ),
+  );
+
+  /// Birinchi ustunda kitobdagidek qator raqami ham turadi.
+  Widget _katakIchi(SarfQator q, int i) {
+    final matn = q.kataklar[i];
+    if (matn.isEmpty) return const SizedBox.shrink();
+    final arabcha = _arabcha(matn, 16, FontWeight.w400);
+    if (i != 0 || q.raqam.isEmpty) return arabcha;
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Text(
+          '${q.raqam})',
+          style: const TextStyle(
+            fontWeight: FontWeight.w800,
+            fontSize: 11.5,
+            color: Colors.black45,
+          ),
+        ),
+        const SizedBox(width: 4),
+        Flexible(child: arabcha),
+      ],
+    );
+  }
+
+  Widget _katak(double eni, {required Widget child}) => Container(
+    width: eni,
+    padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 8),
+    decoration: const BoxDecoration(
+      border: Border(right: BorderSide(color: Color(0x22000000))),
+    ),
+    child: Center(child: child),
+  );
+
+  Widget _arabcha(String matn, double olcham, FontWeight w) => Directionality(
+    textDirection: TextDirection.rtl,
+    child: Text(
+      matn,
+      textAlign: TextAlign.center,
+      style: AppTheme.arabic(size: olcham, color: AppColors.ink, w: w),
+    ),
+  );
 }
 
 class _Royxat extends StatelessWidget {

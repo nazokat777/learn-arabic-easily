@@ -1611,6 +1611,210 @@
           "uz": "لا نَضْرِبُ – urmaymiz, bizlar ko'p er kishilar, yoki ko'p ayol kishilar, kelasi zamonda, siyg'asi mutakallimi ma'al g'ayr, ma'lumi fe'li nafiy."
         }
       ]
+    },
+    {
+      "num": 25,
+      "page": 34,
+      "titleAr": "",
+      "title": "Ma'lumi fe'li nafiyni majhul qilish yo'li",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "Ma'lumi fe'li nafiyni majhul qilishni istasang, oxirgisidan oldingi harfini fathali qil va harfi muzoraatni zammalik qil."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: لا يَضْرِبُ – لا يُضْرَبُ bo'lmog'i kerak."
+        },
+        {
+          "type": "matn",
+          "uz": "Fe'li nafiyning majhulining ham 14 siyg'asi bor. 6 tasi g'oib bo'lib, 6 tasi muxotab va 2 tasi mutakalimmga oiddir."
+        },
+        {
+          "type": "bolim",
+          "uz": "G'oib siyg'alari"
+        },
+        {
+          "type": "matn",
+          "uz": "لا يُضْرَبُ – urilmaydi u bir er kishi: kelasi zamon siyg'asi vohid, muzakkar, g'oib, majhuli fe'li nafiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا يُضْرَبانِ – urilmaydilar, ikki er kishi, kelasi zamonda, siyg'asi tasniyai muzakkar, g'oibayn, majhuli fe'li nafiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا يُضْرَبُونَ – urilmaydilar, ko'p er kishilar, kelasi zamon, siyg'asi jam'i muzakkari g'oibin, majhuli fe'li nafiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا تُضْرَبُ – urilmaydi, u bir ayol, kelasi zamonda, siyg'asi vohidai muannas, g'oibah, majhuli fe'li nafiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا تُضْرَبانِ – urilmaydilar, ikki ayol kishi: kelasi zamonda, siyg'asi tasniyai muannas, g'oibatayn, majhuli fe'li nafiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا يُضْرَبْنَ – urilmaydilar, ko'p ayollar, kelasi zamonda, siyg'asi jam'i muannas g'oibot, majhuli fe'li nafiy."
+        },
+        {
+          "type": "bolim",
+          "uz": "Muxotab siyg'alari"
+        },
+        {
+          "type": "matn",
+          "uz": "لا تُضْرَبُ – urilmaysan, sen bir er kishi, kelasi zamonda, siyg'asi vohidi muzakkar, muxotab, majhuli fe'li nafiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا تُضْرَبانِ – urilmaysizlar, sizlar ikki er kishi, kelasi zamonda, siyg'asi tasniyai muzakkar, muxotabayn, majhuli fe'li nafiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا تُضْرَبُونَ – urilmaysizlar, sizlar ko'p erlar, kelasi zamonda, siyg'asi jam'i muzakkari muxotabiyn, majhuli fe'li nafiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا تُضْرَبِينَ – urilmaysan, sen bir ayol, kelasi zamonda, siyg'asi vohidah, muannasi muxotabah, majhuli fe'li nafiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا تُضْرَبانَ – urilmaysizlar, sizlar ikki ayol, kelasi zamonda, siyg'asi tasniyai muannasi muxotabatayn, majhuli fe'li nafiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا تُضْرَبْنَ – urilmaysizlar, sizlar ko'p ayollar, kelasi zamonda, siyg'asi jam'i muannasi muxotabot, majhuli fe'li nafiy."
+        },
+        {
+          "type": "bolim",
+          "uz": "Mutakallim siyg'alari"
+        },
+        {
+          "type": "matn",
+          "uz": "لا أُضْرَبُ – urilmayman men bir er kishi yoki bir ayol kishi, kelasi zamonda, siyg'asi mutakallim vohid, majhuli fe'li nafiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا نُضْرَبُ – urilmaymiz, bizlar ko'p erlar yoki ko'p ayollar, kelasi zamonda, siyg'asi mutakallimi ma'al g'ayr, majhuli fe'li nafiy."
+        }
+      ]
+    },
+    {
+      "num": 26,
+      "page": 35,
+      "titleAr": "",
+      "title": "Fe'li amr (buyruq fe'li)ning bayoni",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "Amr (buyruq) ikki qismdir:"
+        },
+        {
+          "type": "matn",
+          "uz": "1) «lom»siz amr va 2) «lom»lik amr."
+        },
+        {
+          "type": "matn",
+          "uz": "«Lom»siz amrni fe'li muzore'i muxotabi ma'lumning olti siyg'asidan ikki yo'l bilan olinadi."
+        },
+        {
+          "type": "matn",
+          "uz": "Birinchi yo'l shuki, kalimaning oxiriga nazar tashlanadi, agar kalimaning oxirgi harfi sahih bo'lsa, sokin (sukunli) qilinadi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: اِضْرِبْ va اِعلَمْ kabi."
+        },
+        {
+          "type": "matn",
+          "uz": "Va agar oxirgidan oldingi harf harfi illat bo'lsa, uni tashlanadi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: قُلْ va بعْ ga o'xshash. Va agar kalimaning oxiri idg'omlik bo'lsa o'z holiga qo'yiladi. Zammadan fathaga o'tiladi. Harakatlar ichida fatha yengilroq bo'lgani uchun zammani tashlab, fathaga o'tiladi. رُدَّ va فِرَّ ga o'xshash."
+        },
+        {
+          "type": "matn",
+          "uz": "Va agar siyg'asi يَفْعُلُ kabi «ayn»i zammalik bobidan bo'lsa uning oxirini to'rt xil o'qish mumkin."
+        },
+        {
+          "type": "matn",
+          "uz": "1) zamma; 2) fatha; 3) kasra; 4) sukun, idg'omni yechgandan keyin, sukun o'qiladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: 1) شُدُّ 2) شُدَّ 3) شُدِّ va idg'omni yechgandan keyin 4) اُشْدُدْ o'qiladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Va agar siyg'a يَفْعُلُ «ayn»i zammalik bobidan boshqa bo'lsa, uning oxirini uch xil o'qish durustdir."
+        },
+        {
+          "type": "matn",
+          "uz": "1) fatha; 2) kasra va idg'omni yechgandan keyin; 3) sukun."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: اِفْرِرْ، فِرَّ، فِرِّ"
+        },
+        {
+          "type": "matn",
+          "uz": "Va agar kalimaning oxiri sukunlik harfi illat bo'lsa, uni olib tashlanadi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan اِرْمِ va اُدْعُ va اِخْشَ kabi."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkinchi yo'l shuki, harfi muzoraat bo'lgan to (ت) harfini olib tashlanadi. Undan keyingi harfi muzoraatning yonida bo'lgan harfga qaraladi. Agar harfi muzoraatning yonidagi harf harakatli bo'lsa, amr (buyruq) tugaydi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: قُلْ va بعْ kabi. Agar harfi muzoraatga yaqin turgan harf sokin (sukunli bo'lsa) «ayn» bobiga qaraladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Agar siyg'a يَفْعُلُ «ayn» zammalik bobidan bo'lsa, uning avvaliga zammalik hamzai vasliyani keltiriladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: اُنْصُرْ va اُقْتُلْ kabi. Va agar «ayn»i zammalik bobidan bo'lmasa, ya'ni fathalik va kasralik bo'lsa uning avvaliga hamzai vasliyai maksurani keltiriladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan اِضْرِبْ va اِعْلَمْ kabi. Agar siyg'a يُفْعِلُ أَفْعَلَ bobidan bo'lsa, uning avvaliga hamzai maftuhai soqitani keltiradi. Harfi muzoraatning yonidagi harf xoh harakali bo'lsin, xoh sokin bo'lsin, amr (buyruq) tamom bo'ladi. Masalan, أَكْرِمْ va أَقِمْ kabi."
+        },
+        {
+          "type": "matn",
+          "uz": "Lomsiz amr olti siyg'ada keladi: 3 tasi muzakkar va 3 tasi muannas."
+        },
+        {
+          "type": "matn",
+          "uz": "اِضْرِبْ – urgin, sen bir kishi, siyg'asi vohid muzakkar, amri be «lom» (ya'ni «lom»siz buyruq fe'li)."
+        },
+        {
+          "type": "matn",
+          "uz": "اِضْرِبا – uringlar, sizlar ikki er kishi siyg'asi tasniyai muzakkar, amri be «lom»."
+        },
+        {
+          "type": "matn",
+          "uz": "اِضْرِبُوا – uringlar sizlar ko'p er kishilar, siyg'asi jam'i muzakkar, amri be «lom»."
+        },
+        {
+          "type": "matn",
+          "uz": "اِضْرِبِي – urgin sen bir ayol, siyg'asi vohidah muannas, amri be «lom»."
+        },
+        {
+          "type": "matn",
+          "uz": "اِضْرِبا – uringlar, sizlar ikki ayol kishi, siyg'asi tasniyai muannas, amri be «lom»."
+        },
+        {
+          "type": "matn",
+          "uz": "اِضْرِبْنَ – uringlar, sizlar ko'p ayollar, siyg'asi jam'i muannas, amri be «lom»."
+        }
+      ]
     }
   ]
 }

@@ -6275,7 +6275,75 @@
         },
         {
           "type": "matn",
-          "uz": "3-siyg'ada lomi fe'l mahzuf g'oibin va muxotabin, va muxotabadagi يَدْعُونَ aslida يَدْعُوُوْنَ edi. Zamma vovga og'ir"
+          "uz": "3-siyg'ada lomi fe'l mahzuf g'oibin va muxotabin, va muxotabadagi يَدْعُونَ aslida يَدْعُوُوْنَ edi. Zamma vovga og'ir bo'lib, vovni zammasini tashladik يَدْعُوْوْنَ bo'lib, ijtimoi sokinayn hosil bo'ldi. Ikki vov orasida avvalgi vovni hazf qildik, يَدْعُونَ bo'ldi. تَدْعُونَ ham shunday."
+        }
+      ]
+    },
+    {
+      "num": 84,
+      "page": 120,
+      "titleAr": "",
+      "title": "دعا muzore' majhuli",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "تَدْعِيْنَ aslida تَدْعُوِيْنَ edi. Kasra vovga og'ir bo'lgani uchun vovni kasrasini oldindagi harfga berdik. Uni harakatini tushirgandan keyin تَدْعِوْيْنَ bo'ldi. Vov sokin oldi kasrali bo'lgani uchun vovni يga qalb qildik تَدْعِيْيْنَ bo'lib, ijtimoi sokinayn hosil bo'ldi. Ikki ي orasida avvlagi يni hazf qildik تَدْعِيْنَ bo'ldi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li muzore'ning majhuli bayoni"
+        },
+        {
+          "type": "matn",
+          "uz": "يُدْعَى، يُدْعَيَانِ، يُدْعَوْنَ، تُدْعَى، تُدْعَيَانِ، يُدْعَيْنَ، تُدْعَى، تُدْعَيَانِ، تُدْعَوْنَ، تُدْعَيْنَ، تُدْعَيَانِ، تُدْعَيْنَ، أُدْعَى، نُدْعَى"
+        },
+        {
+          "type": "matn",
+          "uz": "يَدْعُو ni majhul qilish uchun asliga qaytardik يَدْعُوُ bo'ldi. Oxiridan oldingi harfni fathali qildik يَدْعَوُ bo'ldi. Harfi muzoraatni zammalik qildik يُدْعَوُ bo'ldi. Vov voqe' bo'ldi. Kalimani 4-harfini barobarida moqabli zamma emas vovni يga qalb qildik يُدْعَيُ bo'ldi. ي mutaharrik moqabli maftuh bo'lgani uchun يni alifga qalb qildik يُدْعى bo'ldi. يُدْعَوْنَ va تُدْعَوْنَ aslida يُدْعَوُوْنَ va تُدْعَوُوْنَ edi. Ushbu 2 siyg'ada vov voqe' bo'ldi. Kalimaning 4-harfini muqobilidagi vovni يga qalb qildik تَدْعيُوْنَ يُدْعيُوْنَ bo'ldi. ي mutaharrik moqabli maftuh يni alifga qalb qildik تُدْعَاوْنَ يُدْعَاوْنَ bo'lib, ijtimoi sokinayn hosil bo'ldi. Alif bilan vov orasida alifni hazf qildik. تُدْعَوْنَ يُدْعَوْنَ bo'ldi."
+        }
+      ]
+    },
+    {
+      "num": 85,
+      "page": 121,
+      "titleAr": "",
+      "title": "دعا ismi foili, ismi maf'uli va jahdi",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "تُدْعَيْنَ aslida تَدْعَوِيْنَ edi. Ushbu bir siyg'ada vov voqe' bo'ldi. Kalimaning 4-harfini barobarida moqabli zamma emas, vovni يga qalb qildik تُدْعَيِيْنَ bo'ldi. ي mutaharrik moqabli maftuh يni alifga qalb qildik. تُدْعَايْنَ bo'lib, ijtimoi sokinayn hosil bo'ldi. Alif bilan ي orasida alifni hazf qildik تُدْعَيْنَ bo'ldi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Ismi foil"
+        },
+        {
+          "type": "matn",
+          "uz": "دَاعٍ، دَاعِيَانِ، دَاعُونَ، دَاعِيَةٌ، دَاعِيَتَانِ، دَاعِيَاتٌ"
+        },
+        {
+          "type": "matn",
+          "uz": "دَاعٍ aslida دَاعِوٌ edi. Vov kasradan keyin kalimani oxirida keldi. Vovni يga qalb qildik دَاعِيٌ bo'ldi. Zamma يga og'ir bo'lgani uchun يni zammasini tashladik دَاعِيْنْ bo'lib, ijtimoi sokinayn hosil bo'ldi. ي bilan tanvin orasida يni hazf qildik داعٍ bo'ldi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Ismi maf'ul"
+        },
+        {
+          "type": "matn",
+          "uz": "مَدْعُوٌّ، مُدْعُوَّانِ، مَدْعُوُوْنَ، مَدْعُوَّةٌ، مُدْعُوَّتَانِ، مُدْعُوَّاتٌ"
+        },
+        {
+          "type": "matn",
+          "uz": "مَدْعُوٌّ aslida مَدْعُووٌ edi. Birinchi vovni ikkinchi vovga idg'om qildik مَدْعُوٌّ bo'ldi. Oxirigacha ushbu 6-siyg'ada idg'omning sharti mavjud."
+        },
+        {
+          "type": "bolim",
+          "uz": "Ma'lumi fe'li jahd"
+        },
+        {
+          "type": "matn",
+          "uz": "لم يَدْعُ، لم يَدْعُوا، لم يَدْعُوا، لم تَدْعُ، لم تَدْعُوَا، لم يَدْعُونَ، لم تَدْعُ، لم تَدْعُوَا، لم تَدْعُوا، لم تَدْعِي، لم"
         }
       ]
     }

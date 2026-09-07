@@ -6423,7 +6423,107 @@
         },
         {
           "type": "matn",
-          "uz": "Ikkinchi amal shuki, harfi muzoratni tashladik دْعُ"
+          "uz": "Ikkinchi amal shuki, harfi muzoratni tashladik دْعُ bo'ldi. Sokin bilan ibtido qilish mumkin emas. 'Ayn bobiga qaradik, mazmumul 'ayn ekan. Avvaliga zammalik hamza keltirdik, اُدْعُ bo'ldi."
+        }
+      ]
+    },
+    {
+      "num": 88,
+      "page": 124,
+      "titleAr": "",
+      "title": "دعا amri g'oibi va nahiysi",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "Nuni ta'kidi xofifah bilan اُدْعُوَنْ اُدْعُنْ اُدْعِنْ bo'ladi. Saqila bilan اُدْعُوْنَانِّ، اُدْعوَانِّ، اُدْعِنَّ، اُدْعُنَّ، اُدْعوَانِّ، اُدْعُوَنَّ bo'ladi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Amri g'oibning ma'lumi"
+        },
+        {
+          "type": "matn",
+          "uz": "لِيَدْعُ، لِيَدْعُوَا، لِيَدْعُوا، لِتَدْعُ، لِتَدْعُوَا، لِيَدْعُونَ، لأَدْعُ، لِنَدْعُ"
+        },
+        {
+          "type": "bolim",
+          "uz": "Amri g'oibning majhuli"
+        },
+        {
+          "type": "matn",
+          "uz": "لِتُدْعَ، لِتُدْعَيَا، لِتُدْعَوْا، لِتُدْعَي، لِتُدْعَيَا، لِتُدْعَيْنَ، لِيُدْعَ، لِيُدْعَيَا، لِيُدْعَوْا، لِتُدْعَ، لِتُدْعَيَا، لِيُدْعَيْنَ، لأُدْعَ، لِنُدْعَ"
+        },
+        {
+          "type": "matn",
+          "uz": "Amri g'oibni ma'lum va majhuli fe'li jahdning ma'lum va majhuli kabidir."
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li nahiyning ma'lumi"
+        },
+        {
+          "type": "matn",
+          "uz": "لا تَدْعُ، لا تَدْعُوَا، لا تَدْعُوا، لا تَدْعِي، لا تَدْعُوَا، لا تَدْعُونَ، لا يَدْعُ، لاَ يَدْعُوَا، لا يَدْعُوا، لا تَدْعُ، لا تَدْعُوَا، لا يَدْعُونَ، لا أَدْعُ، لا نَدْعُ"
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li nahiyning majhuli"
+        },
+        {
+          "type": "matn",
+          "uz": "لا تُدْعَ، لا تُدْعَيَا، لا تُدْعَوا، لا تُدْعَي، لا تُدْعَيَا، لا تُدْعَيْنَ، لا يُدْعَ، لا يُدْعَيَا، لا يُدْعَوا، لا تُدْعَ، لا تُدْعَيَا، لا يُدْعَيْنَ، لا أُدْعَ، لا نُدْعَ"
+        },
+        {
+          "type": "matn",
+          "uz": "Nahiyning ma'lum va majhulini e'loli fe'li jahdning ma'lum va majhuliga o'xshashdir."
+        }
+      ]
+    },
+    {
+      "num": 89,
+      "page": 125,
+      "titleAr": "",
+      "title": "دعا ismi zamoni, olati va tafzili",
+      "blocks": [
+        {
+          "type": "bolim",
+          "uz": "Ismi zamon va makon"
+        },
+        {
+          "type": "matn",
+          "uz": "مَدْعًى، مَدْعَيَانِ، مَدَاعٍ"
+        },
+        {
+          "type": "matn",
+          "uz": "مَدْعًى aslida مَدْعَوٌ edi. Vov mutaharrik moqabli maftuh vovni alifga qalb qildik مَدْعَانْ bo'lib, ijtimoi sokinayn hosil bo'ldi. Alif bilan tanvin orasida alifni hazf qildik مَدْعًى bo'ldi."
+        },
+        {
+          "type": "matn",
+          "uz": "مَدَاعٍ aslida مَدَاعِوُ bo'lib, unda vov voqe' bo'ldi. Kalimaning beshinchi harfini barobarida moqabli zamma emas, vovni يga qalb qildik. مَدَاعِيُ bo'ldi. Zamma يga og'ir bo'lgani uchun يni zammasini tashladik مَدَاعِيْنْ bo'lib, ijtimoi sokinayn hosil bo'ldi, ي bilan tanvin orasida يni hazf qildik مَدَاعٍ bo'ldi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Ismi olat"
+        },
+        {
+          "type": "matn",
+          "uz": "مِدْعًى، مِدْعَيَانِ، مَدَاعٍ"
+        },
+        {
+          "type": "matn",
+          "uz": "Ismi olatni e'lolda ismi zamon va makonga qiyos qil."
+        },
+        {
+          "type": "bolim",
+          "uz": "Ismi tafzil"
+        },
+        {
+          "type": "matn",
+          "uz": "أَدْعَى، أَدْعَيَانِ، أَدْعَوْنَ، دُعْيَى، دُعْيَيَانِ، دُعْيَيَاتٌ"
+        },
+        {
+          "type": "matn",
+          "uz": "أَدْعَى aslida أَدْعَوُ edi. Bu yerda vov voqe' bo'ldi. Kalimaning 4-harfini barobarida moqabli g'oyri zam"
         }
       ]
     }

@@ -4092,6 +4092,118 @@
           "uz": "لا يَثِبُ، لا يَثِبَانِ، لاَ يَثِبُونَ، لاَ تَثِبُ، لاَ تَثِبَانِ، لا يَثِبْنَ، لا تَثِبُ، لا تَثِبَانِ، لا تَثِبُونَ، لا تَثِبِينَ، لا تَثِبَانِ، لا تَثِبْنَ، لا أَثِبُ، لا نَثِبُ"
         }
       ]
+    },
+    {
+      "num": 49,
+      "page": 72,
+      "titleAr": "",
+      "title": "Misolning amri, nahiysi va yangi misollar",
+      "blocks": [
+        {
+          "type": "bolim",
+          "uz": "Fe'li nafiyning majhuli"
+        },
+        {
+          "type": "matn",
+          "uz": "لا يُوثَبُ، لا يُوثَبَانِ، لا يُوثَبُونَ، لا تُوثَبُ، لا تُوثَبَانِ، لا يُوثَبْنَ، لا تُوثَبُ، لا تُوثَبَانِ، لا تُوثَبُونَ، لا تُوثَبِيْنَ، لا تُوثَبَانِ، لا تُوثَبْنَ، لا أُوثَبُ، لا نُوثَبُ"
+        },
+        {
+          "type": "bolim",
+          "uz": "Amri hozir"
+        },
+        {
+          "type": "matn",
+          "uz": "ثِبْ، ثِبَا، ثِبُوا، ثِبِي، ثِبَا، ثِبْنَ"
+        },
+        {
+          "type": "bolim",
+          "uz": "Amri g'oibning ma'lumi"
+        },
+        {
+          "type": "matn",
+          "uz": "لِيَثِبْ، لِيَثِبَا، لِيَثِبُوا، لِتَثِبْ، لِتَثِبَا، لِيَثِبْنَ، لأَثِبْ، لِنَثِبْ"
+        },
+        {
+          "type": "bolim",
+          "uz": "Amri g'oibning majhuli"
+        },
+        {
+          "type": "matn",
+          "uz": "لِتُوثَبْ، لِتُوثَبَا، لِتُوثَبُوا، لِتُوثَبِي، لِتُوثَبَا، لِتُوثَبْنَ، لِيُوثَبْ، لِيُوثَبَا، لِيُوثَبُوا، لِتُوثَبْ، لِتُوثَبَا، لِيُوثَبْنَ، لأُوثَبْ، لِنُوثَبْ"
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li nahiyning ma'lumi"
+        },
+        {
+          "type": "matn",
+          "uz": "لا تَثِبْ، لا تَثِبَا، لا تَثِبُوا، لا تَثِبِي، لا تَثِبَا، لا تَثِبْنَ، لا تَثِبَا، لا يَثِبْ، لا يَثِبَا، لا يَثِبُوا، لا تَثِبْ، لا تَثِبَا، لا يَثِبْنَ، لا أَثِبْ، لا نَثِبْ"
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li nahiyning majhuli"
+        },
+        {
+          "type": "matn",
+          "uz": "لا تُوثَبْ، لا تُوثَبَا، لا تُوثَبُوا، لا تُوثَبِي، لا تُوثَبَا، لا تُوثَبْنَ، لا يُوثَبْ، لا يُوثَبَا، لا يُوثَبُوا، لا تُوثَبْ، لا تُوثَبَا، لا يُوثَبْنَ، لا أُوثَبْ، لا نُوثَبْ"
+        },
+        {
+          "type": "bolim",
+          "uz": "Ismi zamon va makon"
+        },
+        {
+          "type": "matn",
+          "uz": "مَوْثِبٌ، مَوْثِبَانِ، مَوَاثِبُ"
+        },
+        {
+          "type": "bolim",
+          "uz": "Ismi olat"
+        },
+        {
+          "type": "matn",
+          "uz": "مِيْثابٌ، مِيْثَابَانِ، مَوَاثِيْبُ"
+        },
+        {
+          "type": "matn",
+          "uz": "Qoida: «مِيْثابٌ» aslida مِوْثابٌ edi. «Vov» sokin bo'lib, moqablisi – oxiridan oldingi harfi kasrali bo'lsa, «vov»ni «yo»ga qalb qilinadi (almashtiriladi)."
+        },
+        {
+          "type": "bolim",
+          "uz": "Ismi tafzil"
+        },
+        {
+          "type": "matn",
+          "uz": "أَوْثَبُ، أَوْثَبَانِ، أَوْثَبُونَ، وُثْبَى، وُثْبَيَانِ، وُثْبَيَاتٌ"
+        },
+        {
+          "type": "matn",
+          "uz": "Bu bobning مِثال يائِي siga misol: يَسَرَ – يَيْسِرُ – يَسْراً va مَيْسَرَةً masdaridir."
+        },
+        {
+          "type": "matn",
+          "uz": "Ma'nosi: qimor o'ynamoq."
+        },
+        {
+          "type": "matn",
+          "uz": "يَسَرَ moziy, يَيْسِرُ muzore', ياسِرُ ismi fo'il, مَيْسُور ismi maf'ul, لَمْ يَيْسِرْ fe'li jahd, لا يَيْسِرُ fe'li nafiy, اِيْسِرْ amri hozir, لِيَيْسِرْ amri g'oib, لا تَيْسِرْ fe'li nahiy, مَيْسِرُ ismi zamon va makon, مِيْسارُ ismi olat, أَيْسَرُ ismi tafzil, «يَيْسِرُ»ning majhuli «يُوسَرُ» keladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Qoida: «yo» sokin bo'lib, oldi zammalik bo'lsa, unda «yo»ni «vov»ga qalb qilinadi: يُوسَرُ bo'ladi. Aslida يُيْسَرُ edi."
+        },
+        {
+          "type": "matn",
+          "uz": "Bu bobning أَجْوَفْ iga misol: باعَ، يَبِيْعُ، بَيْعاً، وَمَبِيْعاً"
+        },
+        {
+          "type": "matn",
+          "uz": "Ma'nosi: sotmoq va sotib olmoq."
+        },
+        {
+          "type": "matn",
+          "uz": "باع moziy, يَبِيْعُ muzore', بائِعُ ismi fo'il, مَبِيْعُ ismi"
+        }
+      ]
     }
   ]
 }

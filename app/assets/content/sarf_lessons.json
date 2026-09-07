@@ -6123,7 +6123,79 @@
         },
         {
           "type": "matn",
-          "uz": "لَمْ يُدَمْ aslida لَمْ يُدْوَمْ edi. Vov mutaharrik moqabli harfi"
+          "uz": "لَمْ يُدَمْ aslida لَمْ يُدْوَمْ edi. Vov mutaharrik moqabli harfi sahihi sokin bo'lgani uchun vovni harakatini moqabliga berdik. Vov aslida mutaharrik edi. Hozir oldi fathali bo'ldi, deb vovni alifga qalb qildik لَمْ يُدَامْ bo'lib, ijtimoi sokinayn hosil bo'ldi. Alif bilan mim orasida alifni hazf qildik لَمْ يُدَمْ bo'ldi. Nafiy fe'l muzore' kabidir. Barcha sarfda ham e'lolda fe'li nahiy va amri g'oib fe'li jahdga o'xshashdir. Barcha e'lolda va ma'lum va majhulda ham shundaydir."
+        }
+      ]
+    },
+    {
+      "num": 80,
+      "page": 116,
+      "titleAr": "",
+      "title": "دام amri hozir",
+      "blocks": [
+        {
+          "type": "bolim",
+          "uz": "Amri hozir bayoni"
+        },
+        {
+          "type": "matn",
+          "uz": "دُمْ، دُومَا، دُومُوا، دُومِي، دُومَا، دُمْنَ"
+        },
+        {
+          "type": "matn",
+          "uz": "دُمْ amr fe'lini تَدُومُ fe'li muzore'ning muxotabi ma'lum siyg'asidan olinadi. Oxiriga qaradik, oxirgi harfi sahih ekan, sokin qildik تَدُوْمْ bo'lib, ijtimoi sokinayn hosil bo'ldi. Vov bilan mim orasida vovni hazf qildik تَدُمْ bo'ldi. Harfi muzoraatni tashlagandik uning so'nggidagi harf harakatli ekan. Amr tamom bo'lib, دُمْ bo'ldi. دُمْ aslida اُدْوُمْ edi. Zamma vovga og'ir bo'lgani uchun vovning zammasini oldidagi harfga berdik. Harakat talab bo'lgani uchun اُدُوْمْ bo'lib, ikki sokin jam' bo'ldi vov bilan mim orasida vovni hazf qildik اُدُمْ bo'ldi. \"Moba'di\" mutaharrik bo'lgandan keyin hamza bizga kerak bo'lmay qoldi. Shuning uchun hamzani hazf qildik دُمْ bo'ldi. Nuni ta'kidi xofifah bilan: دُومِنْ، دُومُنْ، دُومَنْ va saqila bilan دُمْنَانِّ، دُومَانِّ، دُومُنَّ، دُومِنَّ، دُومَانِّ، دُومَنَّ bo'ldi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Ismi zamon va makon"
+        }
+      ]
+    },
+    {
+      "num": 81,
+      "page": 117,
+      "titleAr": "",
+      "title": "دام ismlari va bu bobning noqisi",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "مَدَامٌ، مَدَامَانِ، مَدَائِمُ"
+        },
+        {
+          "type": "matn",
+          "uz": "مَدَامٌ aslida مَدْوَمٌ edi. Vov mutaharrik moqabli harfi sahihi bo'lgani uchun sokin vovni harakatini oldindagi harfga berdik مَدَوْمٌ bo'ldi. Vov aslida mutaharrik edi. Hozir oldi fathali bo'ldi, deb vovni alifga qalb qildik مَدَامُ bo'ldi. مَدَائِمُ aslida مَدَاوِمُ edi. E'loli دائم ning e'loli kabidir."
+        },
+        {
+          "type": "bolim",
+          "uz": "Ismi olat"
+        },
+        {
+          "type": "matn",
+          "uz": "مِدَامٌ، مِدَامَانِ، مَدَائِمُ"
+        },
+        {
+          "type": "matn",
+          "uz": "E'loli ismi zamon va makonning e'loli kabidir."
+        },
+        {
+          "type": "bolim",
+          "uz": "Ismi tafzil"
+        },
+        {
+          "type": "matn",
+          "uz": "أَدْوَمُ، أَدْوَمَانِ، أَدْوَمُونَ، دُوْمَى، دُومَيَانِ، دُومَيَاتٌ"
+        },
+        {
+          "type": "matn",
+          "uz": "Bu bobning ناقص ga misol:"
+        },
+        {
+          "type": "matn",
+          "uz": "دَعَا – يدْعُوْ – دَعْوَةً ma'nosi: oshga chaqirmoq, دِعْوَةً nasabga chaqirmoq, دَعْوَةً ishga chaqirmoq,"
+        },
+        {
+          "type": "matn",
+          "uz": "دَعَا moziy, يَدْعُوْ muzore', دَاعٍ ismi foil, مَدْعُوٌّ ismi maf'ul, لَمْ يَدْعُ fe'li jahd, لا يَدْعُو fe'li nafiy, اُدْعُ amri hozir, لِيَدْعُ amri g'oib, لا تَدْعُ fe'li nahiy, مَدْعَى ismi zamon va makon, مِدْعَى va مِدْعَاةٌ va مِدْعَاءٌ ismi olat, أَدْعَى ismi tafzil."
         }
       ]
     }

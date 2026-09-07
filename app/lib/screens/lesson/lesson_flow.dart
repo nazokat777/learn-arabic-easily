@@ -8,7 +8,7 @@ import '../../services/tts.dart';
 import '../../theme.dart';
 import '../../widgets/motion.dart';
 import '../../widgets/ornament.dart';
-import '../qiroat_lessons.dart' show QiroatLessonDetail;
+import '../qiroat_lessons.dart' show QiroatLessonDetail, QiroatMashqTugmasi;
 import 'master_drill.dart';
 import 'quiz_flow.dart';
 import 'read_flow.dart';
@@ -609,6 +609,8 @@ class _DoneView extends StatelessWidget {
                       ),
                       const SizedBox(height: 10),
                     ],
+                    Tactile(child: QiroatMashqTugmasi(lesson: lesson)),
+                    const SizedBox(height: 10),
                     Tactile(
                       child: OutlinedButton.icon(
                         onPressed: () => Navigator.push(

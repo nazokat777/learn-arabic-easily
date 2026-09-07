@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart' hide Text;
 import '../widgets/uz_text.dart';
 import '../main.dart';
+import '../mashq/bank.dart';
+import '../mashq/element.dart';
+import '../mashq/mashq_ekran.dart';
 import '../theme.dart';
 import 'letters_lesson.dart';
 import 'letter_test.dart';
@@ -35,7 +38,7 @@ class AlifboHome extends StatelessWidget {
               arabic: 'أ',
               accent: AppColors.emerald,
               title: 'Harflar darsi',
-              sub: '28 harf — nomi, махраж va holatlari',
+              sub: '28 harf — nomi, maxraj va holatlari',
               page: const LettersLesson(),
             ),
             _tile(
@@ -46,6 +49,16 @@ class AlifboHome extends StatelessWidget {
               title: 'Harflar testi',
               sub: "28 harfning hammasi — xatosiz o'tilishi kerak",
               page: const LetterTest(),
+            ),
+            _mashqTile(
+              context,
+              accent: AppColors.emerald,
+              title: 'Harflar mashqi',
+              sub: "Har bir harf 100% bo'lguncha qaytariladi",
+              sarlavha: 'Harflar mashqi',
+              darsniki: MashqBank.harflar,
+              oldingilar: MashqBank.harflar,
+              darsId: 'letter_test',
             ),
             _tile(
               context,
@@ -64,6 +77,16 @@ class AlifboHome extends StatelessWidget {
               title: 'Harakatlar testi',
               sub: "Belgini tanish va qanday o'qilishini bilish",
               page: const HarakatTest(),
+            ),
+            _mashqTile(
+              context,
+              accent: AppColors.teal,
+              title: 'Harakatlar mashqi',
+              sub: "Harakatlar, so'ngra harflar bilan aralash takror",
+              sarlavha: 'Harakatlar mashqi',
+              darsniki: MashqBank.harakatlar,
+              oldingilar: MashqBank.alifboGacha,
+              darsId: 'harakat_test',
             ),
             const SizedBox(height: 4),
             const Divider(height: 24),
@@ -97,13 +120,47 @@ class AlifboHome extends StatelessWidget {
         const SizedBox(width: 14),
         const Expanded(
           child: Text(
-            'Arab harflarini va ularning tovushlarini (махраж) noldan o\'rganasiz.',
+            'Arab harflarini va ularning tovushlarini (maxraj) noldan o\'rganasiz.',
             style: TextStyle(color: AppColors.ink, height: 1.35),
           ),
         ),
       ],
     ),
   );
+
+  /// Mashq kartochkasi.
+  ///
+  /// Elementlar `onTap` ichida yasaladi (funksiya ko'rinishida beriladi):
+  /// ro'yxat har qayta chizilganda 28 ta harfdan element yig'ish bekorga
+  /// ish bo'lardi.
+  Widget _mashqTile(
+    BuildContext context, {
+    required Color accent,
+    required String title,
+    required String sub,
+    required String sarlavha,
+    required List<MashqElement> Function() darsniki,
+    required List<MashqElement> Function() oldingilar,
+    required String darsId,
+  }) {
+    return PremiumTile(
+      title: title,
+      subtitle: sub,
+      icon: Icons.psychology_alt_rounded,
+      accent: accent,
+      onTap: () => Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (_) => MashqEkran(
+            sarlavha: sarlavha,
+            darsniki: darsniki(),
+            oldingilar: oldingilar(),
+            darsId: darsId,
+          ),
+        ),
+      ),
+    );
+  }
 
   Widget _tile(
     BuildContext context, {

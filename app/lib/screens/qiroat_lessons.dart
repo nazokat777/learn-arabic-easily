@@ -2,6 +2,8 @@ import '../uz_yozuv.dart';
 import 'package:flutter/material.dart' hide Text;
 import '../widgets/uz_text.dart';
 import '../main.dart';
+import '../mashq/bank.dart';
+import '../mashq/mashq_ekran.dart';
 import '../arabic.dart';
 import '../content.dart';
 import '../services/tts.dart';
@@ -500,12 +502,55 @@ class _CompleteButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MasteryCallToAction(
-      lessonId: lesson.completionId,
-      what: 'lug\'at va matn',
-      onStart: () => Navigator.push(
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        MasteryCallToAction(
+          lessonId: lesson.completionId,
+          what: "lug'at va matn",
+          onStart: () => Navigator.push(
+            context,
+            MaterialPageRoute(builder: (_) => LessonFlow(lesson: lesson)),
+          ),
+        ),
+        const SizedBox(height: 10),
+        QiroatMashqTugmasi(lesson: lesson),
+      ],
+    );
+  }
+}
+
+/// «Mustahkamlash» tugmasi: shu darsning lug'ati 100% bo'lguncha, so'ng
+/// shu darsgacha bo'lgan hamma lug'at aralash, oxirida esa so'zlar
+/// o'zbekchadan arabchaga harflab yoziladi.
+class QiroatMashqTugmasi extends StatelessWidget {
+  final QiroatLesson lesson;
+  const QiroatMashqTugmasi({super.key, required this.lesson});
+
+  @override
+  Widget build(BuildContext context) {
+    return OutlinedButton.icon(
+      onPressed: () => Navigator.push(
         context,
-        MaterialPageRoute(builder: (_) => LessonFlow(lesson: lesson)),
+        MaterialPageRoute(
+          builder: (_) => MashqEkran(
+            sarlavha: '${lesson.num}-dars mashqi',
+            darsniki: MashqBank.qiroatDars(lesson),
+            oldingilar: MashqBank.qiroatGacha(lesson),
+            darsId: lesson.completionId,
+          ),
+        ),
+      ),
+      icon: const Icon(Icons.psychology_alt_rounded, size: 20),
+      label: const Text(
+        'Mustahkamlash: aralash takror',
+        style: TextStyle(fontWeight: FontWeight.w700),
+      ),
+      style: OutlinedButton.styleFrom(
+        foregroundColor: AppColors.gold,
+        side: const BorderSide(color: AppColors.gold),
+        padding: const EdgeInsets.symmetric(vertical: 14),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       ),
     );
   }

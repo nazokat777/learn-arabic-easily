@@ -1155,6 +1155,86 @@
           "uz": "Ikkinchisi: نَضْرِبُ – uramiz bizlar, ko'p er kishilar yoki ayol kishilar, kelasi zamonda, siyg'asi mutakallim, ma'al g'ayr, ma'lum fe'li muzore'."
         }
       ]
+    },
+    {
+      "num": 19,
+      "page": 24,
+      "titleAr": "",
+      "title": "Muzore'i fe'li majhulining bayoni",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "Muzore'i fe'li ma'lumini majhul qilishni istasang, ey tolibi ilm, oxiridan oldingi harfni fathali qilgin va muzoraat (ya'ni alif nun, to, yo) harflarini, zammali qilgin."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: يَضْرِبُ bo'lsa, so'ng يُضْرَبُ bo'ladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Muzore' fe'li majhulining ham 14 siyg'asi bor. 6 tasi g'oibga tegishli, yana 6 tasi muxotabga tegishli, ikkitasi mutakallimga tegishlidir."
+        },
+        {
+          "type": "matn",
+          "uz": "G'oib siyg'alarning ham 6 tasi muzakkarga tegishli va yana 6 tasi muannasga tegishlidir."
+        },
+        {
+          "type": "matn",
+          "uz": "Muzakkarga tegishli bo'lgan 3 g'oib siyg'aning birinchisi: يُضْرَبُ – uriladi, u bir er kishi, kelasi zamonda, siyg'asi vohid, muzakkar, g'oib, muzore' majhul fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkinchisi يُضْرَبانِ – uriladilar, ikki er kishi, kelasi zamonda, siyg'asi tasniyai muzakkar, g'oibayn, muzore' majhul fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "Uchinsisi يُضْرَبُونَ – uriladilar, ular ko'p er kishilar, kelasi zamonda, siyg'asi jam'i muzakkar, g'oibiyn, muzore' majhul fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "Muannasi g'oyibning 3 siyg'asining birinchisi تُضْرَبُ – uriladi, u bir ayol, kelasi zamonda, siyg'asi vohidah, muannasi g'oibah, muzore' majhul fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkinchisi: تُضْرَبانِ – uriladilar ular ikki ayol kelasi zamonda, siyg'asi tasniyai muannas, g'oibatayn, muzore' majhul fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "Uchinsisi: يُضْرَبْنَ – uriladilar, ko'p ayollar kelasi zamonda, siyg'asi jam'i muannasi g'oibot, muzore' majhul fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "6 muxotab siyg'alaridan muzakkarga oid 3 ta siyg'asining birinchisi: تُضْرَبُ – urilasan, sen bir er kishi, kelasi zamonda siyg'asi vohid, muzakkar, muxotab, muzore' majhul fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkinchisi: تُضْرَبانِ – urilasizlar, sizlar ikki er kishi, kelasi zamonda, siyg'asi tasniyai muzakkar, muxotabayn, muzore' majhul fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "Uchinchisi: تُضْرَبُونَ – urilasizlar, sizlar ko'p er kishilar, kelasi zamon siyg'asi jam'i muzakkar, muxotabiyn, muzore' majhul fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "Muannasga oid 3 muxotab siyg'aning birinchisi: تَضْرِبِينَ – urilasan, sen bir ayol, kelasi zamonda, siyg'asi vohidah, muannasi muxotabah muzore' majhul fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkinchisi: تُضْرَبانِ – urilasizlar, sizlar ikki ayol, kelasi zamonda siyg'asi tasniyai muannas, muxotabatayn, muzore' majhul fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "Uchinchisi: تُضْرَبْنَ – urilasizlar, sizlar ko'p ayollar, kelasi zamon, siyg'asi jam'i muannas muxotobot, muzore' majhul fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "Mutakallimga oid 2 siyg'aning birinchisi: أُضْرَبُ – urilaman, men bir er yoki bir ayol kishi kelasi zamonda, siyg'asi mutakallim, vohid, muzore' majhul fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkinchisi: نُضْرَبُ – urilamiz, bizlar ko'p erlar yoki ayollar, kelasi zamonda, siyg'asi mutakallimi ma'al g'ayr, muzore' majhul fe'li."
+        }
+      ]
     }
   ]
 }

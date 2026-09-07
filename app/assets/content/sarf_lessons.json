@@ -3031,6 +3031,285 @@
           ]
         }
       ]
+    },
+    {
+      "num": 37,
+      "page": 49,
+      "titleAr": "",
+      "title": "Ta'kid «nun»lari bayonida",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "Ta'kid «nun»lari mustaqbal (kelasi zamon) fe'lining ma'nosini ta'kidlash, ya'ni jumlaning mazmuni haq ekanligini muxotabning, ya'ni II shaxsning zehnida qaror topdirish uchun qo'llanadi."
+        },
+        {
+          "type": "matn",
+          "uz": "Ta'kid «nun»i ikki turli bo'ladi:"
+        },
+        {
+          "type": "list",
+          "intro": "",
+          "items": [
+            "«Nun»i ta'kidi xafifa.",
+            "«Nun»i ta'kidi saqila."
+          ]
+        },
+        {
+          "type": "matn",
+          "uz": "«Nun»i ta'kidi xafifa sokinlik «nun»dir."
+        },
+        {
+          "type": "matn",
+          "uz": "«Nun»i ta'kidi saqila esa tashdidlik «nun»dir."
+        },
+        {
+          "type": "matn",
+          "uz": "«Nun»i ta'kidi xafifa vohid (birlik) siyg'alarning hamda jam'i muzakkar (ko'plik) siyg'alarining oxiriga tutashadi. Vohid (birlik) siyg'alarda oxirgi harfi sahih bo'lgan fe'llar ta'kid «nun»i tutashganda fathali o'qiladi. Oxiridan harfi illat hazf qilingan (olib tashlangan) fe'llarda harfi illatni qaytarib keltirib, fathali qilib o'qiladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: لا تَرْمِ – لا تَرْمِيَنَّ kabi."
+        },
+        {
+          "type": "bolim",
+          "uz": "«Nun» ta'kidi xafifa sarfi"
+        },
+        {
+          "type": "matn",
+          "uz": "اِضْرِبَنْ – اِضْرِبُنْ – اِضْرِبِنْ"
+        },
+        {
+          "type": "matn",
+          "uz": "«Nun»i ta'kidi saqila barcha siyg'alarning oxiriga tutashadi. Quyidagidek:"
+        },
+        {
+          "type": "matn",
+          "uz": "اِضْرِبَنَّ – اِضْرِبانِّ – اِضْرِبُنَّ – اِضْرِبِنَّ – اِضْرِبانِّ – اِضْرِبْنانِّ"
+        },
+        {
+          "type": "matn",
+          "uz": "Amri g'oib (III shaxs buyruq fe'li) va nahiylarni (inkor fe'llarini) shularga qiyos qil:"
+        },
+        {
+          "type": "matn",
+          "uz": "لِيَضْرِبَنْ – لِيَضْرِبَنَّ . لا تَضْرِبَنْ – لا تَضْرِبَنَّ kabi."
+        }
+      ]
+    },
+    {
+      "num": 38,
+      "page": 50,
+      "titleAr": "",
+      "title": "Fe'llar bayoni",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "Arab tilida ishlatiladigan fe'llar to'rt qismdir:"
+        },
+        {
+          "type": "list",
+          "intro": "",
+          "items": [
+            "ثلاثي مُجَرَّد (qo'shimchasiz uchlik)",
+            "ثلاثي مَزِيد (qo'shimchali uchlik)",
+            "رُباعي مُجَرَّد (qo'shimchasiz to'rtlik)",
+            "رُباعي مَزِيدْ (qo'shimchali to'rtlik)"
+          ]
+        },
+        {
+          "type": "matn",
+          "uz": "Ushbu to'rt qism 22 bobda keladi."
+        }
+      ]
+    },
+    {
+      "num": 39,
+      "page": 51,
+      "titleAr": "",
+      "title": "Sulosiy mujarrad — birinchi bobi",
+      "blocks": [
+        {
+          "type": "bolim",
+          "uz": "SULOSIY MUJARRAD"
+        },
+        {
+          "type": "bolim",
+          "uz": "BIRINCHI BOBI"
+        },
+        {
+          "type": "matn",
+          "uz": "ثلاثي مُجَرَّد bo'lgan birinchi qism olti bobdir."
+        },
+        {
+          "type": "matn",
+          "uz": "Birinchi bob moziyda (o'tgan zamonda) «ayn»i fathali, muzore'da (kelasi zamonda) «ayn»i kasrali bobidir."
+        },
+        {
+          "type": "matn",
+          "uz": "Bu bobning masdari 11 vaznda keladi."
+        },
+        {
+          "type": "jadval",
+          "sarlavha": "N",
+          "ustunlar": [
+            {
+              "ar": "Vaznlar",
+              "ar2": ""
+            },
+            {
+              "ar": "Misolar",
+              "ar2": ""
+            },
+            {
+              "ar": "Ma'nolari",
+              "ar2": ""
+            }
+          ],
+          "qatorlar": [
+            {
+              "bob": "1",
+              "raqam": "",
+              "kataklar": [
+                "فَعْلُ",
+                "ضَرْبُ",
+                "urmoq"
+              ]
+            },
+            {
+              "bob": "2",
+              "raqam": "",
+              "kataklar": [
+                "فُعُولُ",
+                "جُلُوسُ",
+                "o'tirmoq"
+              ]
+            },
+            {
+              "bob": "3",
+              "raqam": "",
+              "kataklar": [
+                "فِعْلُ",
+                "كِذْبُ",
+                "yolg'on aytmoq"
+              ]
+            },
+            {
+              "bob": "4",
+              "raqam": "",
+              "kataklar": [
+                "فَعَلَةُ",
+                "غَلَبَةُ",
+                "yengmoq (g'alaba qilmoq)"
+              ]
+            },
+            {
+              "bob": "5",
+              "raqam": "",
+              "kataklar": [
+                "فِعالَةُ",
+                "حِمايَةُ",
+                "saqlamoq (himoya qilmoq)"
+              ]
+            },
+            {
+              "bob": "6",
+              "raqam": "",
+              "kataklar": [
+                "فُعْلانُ",
+                "غُفْرانُ",
+                "kechirmoq"
+              ]
+            },
+            {
+              "bob": "7",
+              "raqam": "",
+              "kataklar": [
+                "فَعِلُ",
+                "نَبِحُ",
+                "it hurmog'i"
+              ]
+            },
+            {
+              "bob": "8",
+              "raqam": "",
+              "kataklar": [
+                "فَعْلانُ",
+                "لَيَّانُ",
+                "qarzini bermasdan cho'zmoq"
+              ]
+            },
+            {
+              "bob": "9",
+              "raqam": "",
+              "kataklar": [
+                "فِعالُ",
+                "صِرافُ",
+                "urg'ochi itning kuyunishi"
+              ]
+            },
+            {
+              "bob": "10",
+              "raqam": "",
+              "kataklar": [
+                "فَعالُ",
+                "قَضاءُ",
+                "Hukm qilmoq"
+              ]
+            },
+            {
+              "bob": "11",
+              "raqam": "",
+              "kataklar": [
+                "فُعَلُ",
+                "هُدَيُ",
+                "haq yo'lga solmoq, hidoyat qilmoq"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "matn",
+          "uz": "Bu bobning sahihiga misol: ضَرَبَ – يَضْرِبُ, masdari ضَرْباً – urmoq ma'nosida."
+        },
+        {
+          "type": "matn",
+          "uz": "Barcha mushtaqlarining (masdardan yorib olingan siyg'alari) sarfi yuqorida o'tdi."
+        },
+        {
+          "type": "matn",
+          "uz": "مُضاعَفْ ga misol فَرَّ – يَفِرُّ masdari فِراراً bo'lib, qochmoq ma'nosidadir. Bundan 12 narsa shu tartibda ishtiqoq qilinadi."
+        },
+        {
+          "type": "list",
+          "intro": "",
+          "items": [
+            "فَرَّ – fe'li moziy",
+            "يَفِرُّ – fe'li muzore'",
+            "فارّ – ismi fo'il",
+            "مَفْرُورُ – ismi maf'ul",
+            "لِمْ يَفِرَّ – fe'li jahd",
+            "لا يَفِرُّ – fe'li nafiy",
+            "فِرَّ – fe'li amr",
+            "لِيَفِرَّ – amri g'oyib",
+            "لا تَفِرَّ – nahiy hozir",
+            "مَفِرَّ – ismi zamon va ismi makon",
+            "مِفْرَارٌ – ismi olat",
+            "أَفَرَّ – ismi tafzil"
+          ]
+        },
+        {
+          "type": "matn",
+          "uz": "فَرَّ aslida فَرَرَ edi. Birinchi ر (ro)ning harakatini qo'lga oldik. Moqabliga (birinchi «ro»ning o'zidan oldingi harfga) qaradik. Harakattalab emas ekan, ya'ni o'zi harakatli ekan. Harakatini olib tashladik: فَرْرَ bo'lib sharti idg'om paydo bo'ldi. Avvalgi «ro»ni ikkinchi «ro»ga idg'om qildik (kiritdik): فَرَّ bo'ldi."
+        },
+        {
+          "type": "matn",
+          "uz": "Sharti idg'om shuki, bir kalimada ikki harf bir jinsda bo'lib, avvalgisi sokin (sukunli) bo'lsa, ikkinchisi harakatli bo'lsa avvalgisini ikkinchisiga kirgiziladi."
+        },
+        {
+          "type": "matn",
+          "uz": "اِدْغامْ – bir harfni ikkinchi harfga kirgizishdir."
+        }
+      ]
     }
   ]
 }

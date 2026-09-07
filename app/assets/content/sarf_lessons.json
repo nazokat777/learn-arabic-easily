@@ -3566,6 +3566,86 @@
           "uz": "لَمْ يُفَرَّ، لَمْ يُفَرَّا، لَمْ يُفَرُّوا، لَمْ تُفَرَّ، لَمْ تُفَرَّا، لَمْ يُفْرَرْنَ، لَمْ تُفَرَّ، لَمْ تُفَرَّا، لَمْ تُفَرُّوا، لَمْ تُفَرِّي، لَمْ تُفَرَّا، لَمْ تُفْرَرْنَ، لَمْ أُفَرَّ، لَمْ نُفَرَّ."
         }
       ]
+    },
+    {
+      "num": 43,
+      "page": 60,
+      "titleAr": "",
+      "title": "Muzoaf fe'lning nafiysi va amri hozir",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "Tuslanishi quyidagicha:"
+        },
+        {
+          "type": "matn",
+          "uz": "لا يَفِرُّ، لا يَفِرَّانِ، لا يَفِرُّونَ، لا تَفِرُّ، لا تَفِرَّانِ، لا يَفْرِرْنَ، لاَ تَفِرُّ، لا تَفِرَّانِ، لا تَفِرُّونَ، لا تَفِرِّينَ، لا تَفِرَّانِ، لا تَفْرِرْنَ، لاَ أَفِرُّ، لا نَفِرُّ."
+        },
+        {
+          "type": "bolim",
+          "uz": "Nafiy fe'lining majhuli"
+        },
+        {
+          "type": "matn",
+          "uz": "لا يُفَرُّ، لا يُفَرَّانِ، لا يُفَرُّونَ، لا تُفَرُّ، لا تُفَرَّانِ، لا يُفْرَرْنَ، لاَ تُفَرُّ، لاَ تُفَرَّانِ، لاَ تُفَرُّونَ، لاَ تُفَرِّيْنَ، لا تُفَرَّانِ، لا تُفْرَرْنَ، لا أُفَرُّ، لا نُفَرُّ."
+        },
+        {
+          "type": "matn",
+          "uz": "Fe'li nafiyning ma'lumi va ham majhuli barcha qoidalarda muzore'ning ma'lumi va majhuli kabidir."
+        },
+        {
+          "type": "bolim",
+          "uz": "Amri hozir bayoni"
+        },
+        {
+          "type": "matn",
+          "uz": "Amri hozir 6 siyg'ada keladi. Tuslanishi quyidagicha:"
+        },
+        {
+          "type": "matn",
+          "uz": "فِرَّ، فِرَّا، فِرُّوا، فِرِّي، فِرَّا، اِفْرِرْنَ."
+        },
+        {
+          "type": "matn",
+          "uz": "«فِرَّ» ni fe'li muzore'i ma'lumi muxotab siyg'asi bo'lmish تَفِرُّ dan ikki yo'l bilan olinadi. Birinchi yo'l shuki, bu muxotab siyg'asining oxiriga qaradik. Ko'rdikki, oxiri mudg'am (idg'omli) ekan, uni o'z holiga qo'ydik. Zammadan fathaga o'tdik. Chunki fatha axaffi harakot, ya'ni harakatlarning yengilrog'idir, تَفِرَّ bo'ldi."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkinchi yo'l shuki, harfi muzoraatni tashlaymiz, siyg'aga qarasak, اِفْعالْ bobidan emas ekan. Harfi muzoraatning yonidagi harfga qaradik. U harf harakatli ekan. Amr tamom bo'ldi: فِرَّ bo'lib qoldi."
+        },
+        {
+          "type": "matn",
+          "uz": "«Nun»i e'robiyasi bor muxotab siyg'alardan ham, ya'ni, تَفِرَّانِ تَفِرُّونَ تَفِرِّيْنَ تَفِرَّانِ kabi fe'llardan ham ikki amal bilan amr olinadi."
+        },
+        {
+          "type": "matn",
+          "uz": "Birinchi amal shuki, bu to'rt siyg'aning oxiriga qaradik, e'robiya «nun»larini olib tashladik: تَفِرَّا، تَفِرُّوا، تَفِرِّي تَفِرَّا bo'ldi."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkinchi amalda harfi muzoraat bo'lgan «ت» (te)ni olib tashladik. Ushbu siyg'alarga qarasak, if'ol اِفْعالْ bobidan emas ekan. Harfi muzoraatga yaqin turgan harfga qarasak, mutaharrik, ya'ni harakatli ekan, amr tamom bo'ldi:"
+        },
+        {
+          "type": "matn",
+          "uz": "فِرَّا، فِرُّوا، فِرِّي، فِرَّا bo'ldi."
+        },
+        {
+          "type": "matn",
+          "uz": "«اِفْرِرْنَ» ni fe'li muzore'i muxotabi ma'lumdan ikki amal bilan olinadi. Birinchi amal shuki, ushbu siyg'aning oxiriga qaradik, oxirida «nun»i jam'i muannas bo'lmish «nun»i zamir bor ekan, bu xuddi «vovi» jam'i muzakkardek. Uni o'z holiga qo'ydik."
+        },
+        {
+          "type": "matn",
+          "uz": "Chunki bu: اَلضَّمَائِرُ لا تَتَغَيَّرُ وَلاَ تَتَبَدَّلُ عَنْ أَحْوَالِهَا degan qoidaga muvofiq تَفْرِرْنَ ekan dedik."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkinchi amal shuki, harfi muzoro'at bo'lgan «ت» (te)ni olib tashladik. Harfi muzoro'atning moyalisiga, ya'ni harfi muzoro'atdan keyingi harfga qaradik, sokin (sukunli) ekan. Sokin bilan (sukunli harf bilan) so'z boshlashlik mumkin bo'lmagani uchun «ayn» bobiga qaradik, «ayn» bobi zamalik emas ekan. Avvaliga hamzai maqsurai vasliyyani keltirdik, اِفْرِرْنَ bo'ldi."
+        },
+        {
+          "type": "matn",
+          "uz": "«فِرَّ» aslida اِفْرِرْ edi. Birinchi «ر» (ro)ning harakatini moqabliga (undan oldingi harfga, ya'ni «ف» (fe)ga berdik. Chunki u harakattalab edi. Endi اِفِرْرْ bo'lib, ikki «ر» (ro) orasida ijtimoi sokinayn hosil bo'ldi."
+        }
+      ]
     }
   ]
 }

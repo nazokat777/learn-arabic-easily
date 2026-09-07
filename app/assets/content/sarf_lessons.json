@@ -861,6 +861,228 @@
           "uz": "12. Ismi tafzil: أَضْرَبُ – uruvchiroq, ya'ni sheriklaridan ko'ra fe'lni ortiq bajaruvchiroq."
         }
       ]
+    },
+    {
+      "num": 16,
+      "page": 18,
+      "titleAr": "",
+      "title": "Fe'l bayoni",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "فِعْل (fe'l) ish-harakat deganidir. Uning bajaruvchisi (egasi) bo'lishi kerak. Fe'lning ijro qiluvchisi uning fo'ilidir. Fe'lning fo'ili yolg'iz kishi, ikki kishi yoki undan ham ko'proq bo'lishi mumkin. Bulardan har biri:"
+        },
+        {
+          "type": "list",
+          "intro": "",
+          "items": [
+            "Mutakallim – birinchi shaxs.",
+            "Muxotab – ikkinchi shaxs.",
+            "G'oib – uchinchi shaxs."
+          ]
+        },
+        {
+          "type": "matn",
+          "uz": "Bu zikr qilingan uch shaxsdan har biri:"
+        },
+        {
+          "type": "list",
+          "intro": "",
+          "items": [
+            "Muzakkar (erkak jinsi).",
+            "Muannas (ayol jinsi) bo'ladi."
+          ]
+        },
+        {
+          "type": "matn",
+          "uz": "واحِد (vohid, ya'ni birlik) deb bir kishiga aytiladi."
+        },
+        {
+          "type": "matn",
+          "uz": "تَثْنِية (Tasniya, ya'ni ikkilik) deb ikki kishiga aytiladi."
+        },
+        {
+          "type": "matn",
+          "uz": "جَمْع (jam', ya'ni ko'plik) deb ikkidan ortiq kishiga aytiladi."
+        },
+        {
+          "type": "list",
+          "intro": "",
+          "items": [
+            "مُتَكَلِّمْ (mutakallim) deb so'zlaguvchi kishini, ya'ni I-shaxsga nisbatan aytiladi.",
+            "مُخاطَبْ (muxotab) deb so'zni tinglaguvchi kishiga, ya'ni II-shaxsga nisbatan aytiladi.",
+            "غائِبْ (g'oib) deb tashqaridagi kishiga, ya'ni III-shaxsga nisbatan aytiladi."
+          ]
+        },
+        {
+          "type": "matn",
+          "uz": "Fe'li moziy (o'tgan zamon) ma'lumining 14 siyg'asi – shakli – kalimasi bor. Bu 14 siyg'aning oltitasi g'oibga (III shaxsga) tegishli, yana oltitasi muxotobga (II-shaxsga) tegishli, qolgan ikkitasi mutakallimga (I-shaxsga) tegishlidir."
+        },
+        {
+          "type": "matn",
+          "uz": "G'oibga tegishli bo'lgan siyg'aning uchtasi muzakkarga (erkak jinsi) va uchtasi muannasga (ayol jinsiga) tegishlidir."
+        },
+        {
+          "type": "matn",
+          "uz": "Muzakkarga tegishli bo'lgan 6 siyg'aning bittasi ضَرَبَ bo'lib, urdi, (kim?) er kishi, (qachon?) o'tgan zamonda, siyg'asi vohid (birlik), muzakkari g'oib (erkak jinsiga oid III-shaxs), fe'li moziyning ma'lumi (aniq o'tgan zamon fe'li)."
+        },
+        {
+          "type": "matn",
+          "uz": "ضَرَبا – urdilar, ikki kishi, o'tgan zamonda, siyg'asi tasniya (ikkilik), muzakkar, g'oibayn ikki nafar III-shaxs) o'tgan zamon aniq fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "ضَرَبُوا – urdilar, ko'p kishilar, o'tgan zamonda, siyg'asi jam'i muzakkari g'oibin (ko'plik, erkak jinsiga oid III-shaxslar), o'tgan zamon aniq fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "Muannasga qarashli bo'lgan uch siyg'asining bittasi ضَرَبَتْ urdi, bir ayol, o'tgan zamonda, siyg'asi, vohidah, muannasi g'oibah (ayol jinsiga oid III-shaxs), o'tgan zamon aniq fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "ضَرَبَتا – urdilar, ikki ayol kishi, o'tgan zamonda, siyg'asi tasniyai muannasi g'oibatayn (ayol jinsiga oid III-shaxs ikkiligi), o'tgan zamon aniq fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "ضَرَبْنَ – urdilar, ko'p ayollar, o'tgan zamonda, siyg'asi jam'i muannasi g'oibot (ayol jinsiga oid III-shaxs), aniq o'tgan zamon fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "Muxotabga qarashli bo'lgan 6 siyg'aning uchtasi muzakkarga va yana uchtasi muannasga oiddir."
+        },
+        {
+          "type": "matn",
+          "uz": "Muzakkarga qarashli bo'lgan uch siyg'aning bittasi ضَرَبْتَ – urding, sen bir er kishi, o'tgan zamonda, siyg'asi vohidi muzakkari muxotab (erkak jinsiga oid II-shaxs birligi), o'tgan zamon aniq fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "ضَرَبْتُما – urdingizlar, siz ikki kishi, o'tgan zamonda, siyg'asi muzakkari tasniya (erkak jinsiga oid ikkilik) muxotabayn (II-shaxsga oid ikki kishi, o'tgan zamon aniq fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "ضَرَبْتُمْ – urdingizlar, ko'p er kishilar, o'tgan zamonda, siyg'asi jam' muzakkari muxotabiyn (erkak jinsiga oid ko'plik), o'tgan zamon aniq fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "Muannasi muxotabga qarashli bo'lgan uch siyg'aning biri ضَرَبْتِ – urding sen bir ayol kishi, o'tgan zamonda, siyg'asi vohidah, muannasi, muxotabah (ayol jinsiga oid II-shaxs, birlik), o'tgan zamon aniq fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "ضَرَبْتُما – urdingizlar, sizlar ikki ayol kishi, o'tgan zamonda, siyg'asi tasniyai muannas, muxotabatayn (ayol jinsiga oid II shaxs ikkiligi), o'tgan zamon aniq fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "ضَرَبْتُنَّ – urdingizlar, sizlar ko'p ayollar, o'tgan zamon, siyg'asi jam'i muannas, muxotabot (ayol jinsiga oid II-shaxs ko'pligi), o'tgan zamon aniq fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "Mutakallimga qarashli bo'lgan ikki siyg'aning biri ضَرَبْتُ – urdim men bir er kishi yoki bir ayol, o'tgan zamon, siyg'asi mutakallimi vohid, mushtarak (I shaxs, birlik, erkak yoki ayol jinsi), o'tgan zamon aniq fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "ضَرَبْنا – urdik bizlar, ko'p erkak kishilar yoki ko'p ayollar, o'tgan zamonda, siyg'asi mutakallim, ma'alg'ayr (I-shaxs, ko'plik, mushtarak, ya'ni erkak yoki ayol jinsiga oid), o'tgan zamon aniq fe'li."
+        }
+      ]
+    },
+    {
+      "num": 17,
+      "page": 21,
+      "titleAr": "",
+      "title": "Ma'lum fe'lini majhul qilish yo'li",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "Fe'li moziyning ma'lumini majhul noma'lum qilishni istasang oxirining oldindagi harfni kasrali qil, mo qabli oxiri, ya'ni oxiridan oldindagi har bir harakatli harfni zammalik qil."
+        },
+        {
+          "type": "matn",
+          "uz": "Shunda ضُرِبَ – ضَرَبَ bo'ladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: ضَرَبَ – urdi. ضُرِبَ – urildi."
+        },
+        {
+          "type": "matn",
+          "uz": "Fe'li moziyning majhulining xuddi ma'lumi kabi 14 siyg'asi bor: 6 tasi g'oib (III-shaxs), 6 tasi muxotab (II-shaxs), 2 tasi mutakallim (I-shaxs)."
+        },
+        {
+          "type": "matn",
+          "uz": "G'oibga tegishli siyg'alarning 3 tasi muzakkarga (erkak jinsiga) oid, yana 3 tasi muannasga (ayol jinsiga) oid."
+        },
+        {
+          "type": "matn",
+          "uz": "Muzakkarga oid siyg'alarning birinchisi:"
+        },
+        {
+          "type": "matn",
+          "uz": "ضُرِبَ – urildi, ul bir kishi, o'tgan zamon, siyg'asi vohid, muzakkar, g'oib, majhuli fe'li moziy."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkinchisi, ضُرِبا – urildilar, ikki kishi, o'tgan zamon, siyg'asi tasniyyai muzakkari g'oibayn, majhuli fe'li moziy."
+        },
+        {
+          "type": "matn",
+          "uz": "Uchinchisi: ضُرِبُوا – urildilar, ko'p er kishilar o'tgan zamonda, siyg'asi jam'i muzakkari g'oibiyn, majhuli fe'li moziy."
+        },
+        {
+          "type": "matn",
+          "uz": "Muannasga oid 3 siyg'aning birinchisi ضُرِبَتْ – urildi, bir ayol, o'tgan zamonda, siyg'asi vohidah, muannasi g'oibah, majhuli fe'li moziy."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkkinchi: ضُرِبَتا – urildilar, ikki ayol kishi, o'tgan zamonda siyg'asi tasniyai muannas, g'oibatayn, majhuli fe'li moziy."
+        },
+        {
+          "type": "matn",
+          "uz": "Uchinchisi: ضُرِبْنَ – urildilar, ko'p ayollar, o'tgan zamonda, siyg'asi jam'i muannas g'oibot, majhuli fe'li moziy."
+        },
+        {
+          "type": "matn",
+          "uz": "Muxotabga tegishli bo'lgan 6 siyg'aning 3 tasi muzakkarga, 3 tasi muannasga oiddir."
+        },
+        {
+          "type": "matn",
+          "uz": "Muzakkari muxotabga oid bo'lgan 3 siyg'aning birinchisi:"
+        },
+        {
+          "type": "matn",
+          "uz": "ضُرِبْتَ – urilding sen, bir er kishi, o'tgan zamonda, siyg'asi vohid, muzakkar, muxotab, majhuli fe'li moziy."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkinchisi: ضُرِبْتُما – urildinglar, ikki er kishi, o'tgan zamonda, siyg'asi tasniyai muzakkar, muxotabayn, majhuli fe'li moziy."
+        },
+        {
+          "type": "matn",
+          "uz": "Uchinchisi: ضُرِبْتُمْ – urildinglar sizlar, ko'p er kishilar, o'tgan zamonda, siyg'asi jam'i muzakkar, muxotabiyn, majhuli fe'li moziy."
+        },
+        {
+          "type": "matn",
+          "uz": "Muannasga oid bo'lgan 3 ta muxotab siyg'aning birinchisi: ضُرِبْتِ – urilding sen bir ayol, o'tgan zamonda siyg'asi vohidah, muannasi muxotabah, majhuli fe'li moziy."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkinchisi: ضُرِبْتُما – urildinglar, sizlar ikki ayol, o'tgan zamon, siyg'asi tasniyai muannas muxotobatayn, majhuli fe'li moziy."
+        },
+        {
+          "type": "matn",
+          "uz": "Uchinchisi: ضُرِبْتُنَّ – urildinglar, sizlar ko'p xotinlar, o'tgan zamonda, siyg'asi jam'i muannas, muxotabot, majhuli fe'li moziy."
+        },
+        {
+          "type": "matn",
+          "uz": "Mutakallimga oid bo'lgan ikki siyg'aning birinchisi:"
+        },
+        {
+          "type": "matn",
+          "uz": "ضُرِبْتُ – urildim men, bir er kishi yoki bir ayol kishi, o'tgan zamonda siyg'asi mutakallimi vohid, majhuli fe'li moziy."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkinchisi: ضُرِبْنا – urildik, bizlar ko'p er kishilar va yo ko'p ayol kishilar, o'tgan zamonda, siyg'asi mutakallim, ma'al g'ayr, majhuli fe'li moziy."
+        }
+      ]
     }
   ]
 }

@@ -1351,6 +1351,266 @@
           "uz": "Uchinchisi: مَضْرُوباتٌ – urilgan, ko'p ayollar, siyg'asi jam'i muannas, ismi maf'ul."
         }
       ]
+    },
+    {
+      "num": 22,
+      "page": 28,
+      "titleAr": "",
+      "title": "Fe'li jahd bayoni",
+      "blocks": [
+        {
+          "type": "bolim",
+          "uz": "(Moziy, ya'ni o'tgan zamon inkori)"
+        },
+        {
+          "type": "matn",
+          "uz": "Fe'li jahd ma'lumining ham 14 siyg'asi bor. Bulardan 6 tasi g'oib, yana 6 tasi muxotab va 2 tasi mutakallimga oiddir."
+        },
+        {
+          "type": "bolim",
+          "uz": "G'oib siyg'alari"
+        },
+        {
+          "type": "matn",
+          "uz": "Olti g'oib siyg'adan 3 tasi muzakkar bo'lib:"
+        },
+        {
+          "type": "matn",
+          "uz": "Birinchisi: لَمْ يَضْرِبْ – urmadi, bir er kishi, o'tgan zamonda, siyg'asi vohid, muzakkar, g'oib, ma'lum jahd fe'li, (o'tgan zamon aniq inkor fe'li)."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkinchisi: لَمْ يَضْرِبا – urmadilar, ikki er kishi o'tgan zamonda, siyg'asi tasniyai muzakkar, g'oibayn, ma'lum jahd fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "Uchinchisi: لَمْ يَضْرِبُوا – urmadilar, ko'p erlar, o'tgan zamonda, siyg'asi jam'i muzakkar g'oibiyn, ma'lum jahd fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "Uch muannas g'oib siyg'adan birinchisi: لَمْ تَضْرِبْ – urmadi, ul ayol kishi, o'tgan zamonda, siyg'asi vohidah, muannasi g'oibah, ma'lum jahd fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkinchisi: لَمْ تَضْرِبا – urmadilar, ikki ayol kishi, o'tgan zamonda, siyg'asi tasniyai muannas, g'oibatayn, ma'lum jahd fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "Uchinchisi: لَمْ يَضْرِبْنَ – urmadilar, ko'p ayollar, o'tgan zamonda, siyg'asi jam'i muannasi g'oibot, ma'lum jahd fe'li."
+        },
+        {
+          "type": "bolim",
+          "uz": "Muxotab siyg'alari"
+        },
+        {
+          "type": "matn",
+          "uz": "Olti muxotab siyg'asidan 3 tasi muzakkar va 3 tasi muannas siyg'asidir."
+        },
+        {
+          "type": "matn",
+          "uz": "Uch muxotabi muzakkar siyg'asidan birinchisi: لَمْ تَضْرِبْ – urmading, sen bir er kishi, o'tgan zamonda, siyg'asi vohid, muzakkari muxotab, ma'lum jahd fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkinchisi: لَمْ تَضْرِبا – urmadinglar, sizlar ikki er kishi, o'tgan zamonda, siyg'asi tasniyai muzakkari muxotabayn, ma'lum jahd fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "Uchinchisi: لَمْ تَضْرِبُوا – urmadingizlar, sizlar ko'p er kishilar, o'tgan zamonda, siyg'asi jam'i muzakkari muxotabiyn, ma'lum jahd fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "Uch muxotabi muannas siyg'alaridan birinchisi: لَمْ تَضْرِبِي – urmading, sen bir ayol kishi, o'tgan zamonda, siyg'asi vohidah muannasi muxotabah, ma'lum jahd fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkinchisi: لَمْ تَضْرِبا – urmadinglar, sizlar ikki ayol kishi, o'tgan zamonda, siyg'asi tasniyai muannasi muxotabatayn, ma'lumi fe'li jahd."
+        },
+        {
+          "type": "matn",
+          "uz": "Uchinsisi: لَمْ تَضْرِبْنَ – urmadinglar, sizlar ko'p ayollar, o'tgan zamonda, siyg'asi jam'i muannasi muxotabot, ma'lumi fe'li jahd."
+        },
+        {
+          "type": "bolim",
+          "uz": "Mutakallim siyg'alari"
+        },
+        {
+          "type": "matn",
+          "uz": "Ikki mutakallim siyg'alaridan birinchisi: لَمْ أَضْرِبْ – urmadim, men bir er kishi yoki bir ayol kishi, o'tgan zamonda, siyg'asi mutakallimi vohid, ma'lumi fe'li jahd."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkinchisi: لَمْ نَضْرِبْ – urmadik bizlar, ko'p er kishilar yoki ko'p ayol kishilar, o'tgan zamonda, siyg'asi mutakallim ma'al g'ayr, ma'lumi fe'li jahd."
+        }
+      ]
+    },
+    {
+      "num": 23,
+      "page": 30,
+      "titleAr": "",
+      "title": "Jahd fe'lini majhul qilish yo'li",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "Jahd ma'lum fe'lini majhul qilishni istasang, oxiridan oldingi harfini fathali qil va muzoraat harfini zammalik qil."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan, لَمْ يَضْرِبْ bo'lsa, لَمْ يُضْرَبْ bo'ladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Fe'li jahdning majhulini ham 14 siyg'asi bor: 6 tasi g'oib, 6 tasi muxotab va 2 tasi mutakallimdir."
+        },
+        {
+          "type": "bolim",
+          "uz": "G'oib siyg'alar"
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ يُضْرَبْ – urilmadi, u bir kishi, o'tgan zamonda, siyg'asi vohid, muzakkar, g'oib majhuli fe'li jahd."
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ يُضْرَبا – urilmadilar, u ikki kishi, o'tgan zamonda, siyg'asi tasniyai muzakkar, g'oibayn, majhuli fe'li jahd."
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ يُضْرَبُوا – urilmadilar, ular ko'p erlar, o'tgan zamonda, siyg'asi jam'i muzakkar, g'oibiyn, majhuli fe'li jahd."
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ تُضْرَبْ – urilmadi, u bir ayol, o'tgan zamonda, siyg'asi vohidah, muannasi g'oibah, majhuli fe'li jahd."
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ تُضْرَبا – urilmadilar, u ikki ayol, o'tgan zamonda, siyg'asi tasniyai muannas, g'oibatayn, majhuli fe'li jahd."
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ يُضْرَبْنَ – urilmadilar, ko'p ayollar, o'tgan zamonda, siyg'asi jam'i muannasi g'oibot, majhuli fe'li jahd."
+        },
+        {
+          "type": "bolim",
+          "uz": "Muxotab siyg'alari"
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ تُضْرَبْ – urilmading, sen bir er kishi, o'tgan zamonda, siyg'asi vohid, muzakkar, muxotab, majhuli fe'li jahd."
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ تُضْرَبا – urilmadinglar, sizlar ikki er kishi, o'tgan zamonda, siyg'asi tasniyai muzakkar, muhotabayn, majhuli fe'li jahd."
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ تُضْرَبُوا – urilmadinglar, sizlar ko'p er kishilar, o'tgan zamonda, siyg'asi jam'i muzakkari muxotobiyn, majhuli fe'li jahd."
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ تُضْرَبِي – urilmading, sen bir ayol kishi, o'tgan zamonda, siyg'asi vohidah muannas, muxotabah, majhuli fe'li jahd."
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ تُضْرَبا – urilmadinglar, sizlar ikki ayol kishi, o'tgan zamonda, siyg'asi, tasniyai muannas, muxotabatayn, majhuli fe'li jahd."
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ تُضْرَبْنَ – urilmadinglar sizlar ko'p ayollar, o'tgan zamonda, siyg'asi jam'i muannasi muxotabot, majhuli fe'li jahd."
+        },
+        {
+          "type": "bolim",
+          "uz": "Mutakallim siyg'alari"
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ أُضْرَبْ – urilmadim, men bir er kishi yoki bir ayol kishi, o'tgan zamonda, siyg'asi mutakallimi vohid, majhuli fe'li jahd."
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ نُضْرَبْ – urilmadik, bizlar ko'p erlar va yo ko'p ayollar, o'tgan zamonda, siyg'asi mutakallim ma'al g'ayr, majhuli fe'li jahd."
+        }
+      ]
+    },
+    {
+      "num": 24,
+      "page": 32,
+      "titleAr": "",
+      "title": "Fe'li nafiyning bayoni",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "Fe'li nafiyning ham 14 siyg'asi bordir. 6 tasi g'oib, 6 tasi muxotab, 2 tasi mutakallimdir."
+        },
+        {
+          "type": "bolim",
+          "uz": "G'oib siyg'alari"
+        },
+        {
+          "type": "matn",
+          "uz": "لا يَضْرِبُ – urmaydi, u bir er kishi, kelasi zamonda, siyg'asi vohid, muzakkar, g'oib, ma'lumi fe'li nafiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا يَضْرِبانِ – urmaydilar, ular ikki er kishi, kelasi zamonda, siyg'asi tasniyai muzakkari g'oibayn, ma'lumi fe'li nafiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا يَضْرِبُونَ – urmaydilar, ular ko'p er kishilar, kelasi zamonda, siyg'asi, jam'i muzakkari g'oibin, ma'lumi fe'li nafiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا تَضْرِبُ – urmaydi, ul bir ayol, kelasi zamonda, siyg'asi vohidah muannasi, g'oibah, ma'lumi fe'li nafiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا تَضْرِبانِ – urmaydilar, ular ikki ayol, kelasi zamonda, siyg'asi tasniyai muannasi g'oibatayn, ma'lumi fe'li nafiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا يَضْرِبْنَ – urmaydilar, ular ko'p ayollar, kelasi zamonda, siyg'asi jam'i muannasi g'oibot, ma'lumi fe'li nafiy."
+        },
+        {
+          "type": "bolim",
+          "uz": "Muxotab siyg'alari"
+        },
+        {
+          "type": "matn",
+          "uz": "لا تَضْرِبُ – urmaysan, sen bir er kishi, kelasi zamonda, siyg'asi vohid, muzakkar, muxotab, ma'lumi fe'li nafiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا تَضْرِبانِ – urmaysizlar, sizlar ikki er kishi, kelasi zamonda siyg'asi tasniyai muxotabayn, ma'lumi fe'li nafiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا تَضْرِبُونَ – urmaysizlar, sizlar ko'p er kishilar, kelasi zamonda, siyg'asi jam'i muzakkari muxotobiyn, ma'lumi fe'li nafiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا تَضْرِبِينَ – urmaysan sen bir ayol, kelasi zamonda, siyg'asi muannasi vohidah muxotabah, ma'lumi fe'li nafiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا تَضْرِبانِ – urmaysizlar, sizlar ikki ayol, kelasi zamonda, siyg'asi tasniyai muannasi muxotabatayn, ma'lumi fe'li nafiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا تَضْرِبْنَ – urmaysizlar, sizlar ko'p ayollar, kelasi zamonda, siyg'asi jam'i muannasi muxotabot, ma'lumi fe'li nafiy."
+        },
+        {
+          "type": "bolim",
+          "uz": "Mutakallim siyg'alari"
+        },
+        {
+          "type": "matn",
+          "uz": "لا أَضْرِبُ – urmayman men bir er kishi yoki bir ayol kishi, kelasi zamonda, siyg'asi mutakallim vohid, ma'lumi fe'li nafiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا نَضْرِبُ – urmaymiz, bizlar ko'p er kishilar, yoki ko'p ayol kishilar, kelasi zamonda, siyg'asi mutakallimi ma'al g'ayr, ma'lumi fe'li nafiy."
+        }
+      ]
     }
   ]
 }

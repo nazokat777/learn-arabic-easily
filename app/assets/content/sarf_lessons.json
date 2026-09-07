@@ -5759,7 +5759,75 @@
         },
         {
           "type": "matn",
-          "uz": "نَصَرَ – يَنْصُرُ dan amri hozir اُنْصُرْ keladi. Shu yo'l bilanki, تَنْصُرُ fe'li muzore' ma'lumi muxotab siyg'asini oxiriga qaradik. Oxiridagi ro harfi sahih ekan, sokin qildik, تَنْصُرْ bo'ldi. Harfi muzoraat bo'lgan \"to\"ni tashladik, uning so'ngidagi harfi sokin ekan. Ayni fe'liga qaradik. Zammalik ekan. Avvaliga zammalik hamza keltirdik اُنْصُرْ"
+          "uz": "نَصَرَ – يَنْصُرُ dan amri hozir اُنْصُرْ keladi. Shu yo'l bilanki, تَنْصُرُ fe'li muzore' ma'lumi muxotab siyg'asini oxiriga qaradik. Oxiridagi ro harfi sahih ekan, sokin qildik, تَنْصُرْ bo'ldi. Harfi muzoraat bo'lgan \"to\"ni tashladik, uning so'ngidagi harfi sokin ekan. Ayni fe'liga qaradik. Zammalik ekan. Avvaliga zammalik hamza keltirdik اُنْصُرْ bo'ldi."
+        }
+      ]
+    },
+    {
+      "num": 70,
+      "page": 106,
+      "titleAr": "",
+      "title": "Amr sarfi va muzo'af misoli",
+      "blocks": [
+        {
+          "type": "bolim",
+          "uz": "Sarfi"
+        },
+        {
+          "type": "matn",
+          "uz": "اُنْصُرْ، اُنْصُرَا، اُنْصُرُوا، اُنْصُرِي، اُنْصُرَا، اُنْصُرْنَ"
+        },
+        {
+          "type": "bolim",
+          "uz": "Muzo'afiga misol"
+        },
+        {
+          "type": "matn",
+          "uz": "رَدَّ – يَرُدُّ masdari رَدًّا va مَرَدَّةً kelur. Ma'nosi: qaytarmoq."
+        },
+        {
+          "type": "matn",
+          "uz": "رَدَّ moziy, يَرُدُّ muzore', رَادٌّ ismi foil, مَرْدُودٌ ismi maf'ul, لَمْ يَرُدَّ fe'li jahd, لا يَرُدُّ fe'li nafiy, رُدَّ amr hozir, لِيَرُدَّ amri g'oib, لا تَرُدَّ nahiy hozir, مَرَدٌّ ismi zamon va makon, مِرْدَادٌ ismi olat, أَرَدُّ ismi tafzil."
+        },
+        {
+          "type": "matn",
+          "uz": "رَدَّ – يَرُدُّ ning e'loli فَرَّ – يَفِرُّ ning ma'lum va majhuldagi e'loli kabidir."
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ يَرُدَّ aslida لَمْ يَرْدُدْ edi. Birinchi dolni harakatini moqabliga berdik. Harakat talab bo'lgani uchun لَمْ يَرُدْدْ bo'lib ijtimoi sokinayn hosil bo'ldi. Ikki dol orasida ijtimoi sokinayndan qutilishni ikki yo'li bor. Biri hazf qilish, ikkinchisi harakat berish. Bu joyda mutajonisaynning birini hazf qilish durust emas. Zero, اِجحاف كلمه lozim keladi. Harakat berish ham durust emas. Zero تَرْجِيح بلا مُرَجِّح lozim keladi. Ijtimoi sokinayn bilan so'zlash mumkin emas. Ilojsiz اَلضَّرُورَاتُ تُبِيْحُ الْمَحْظُورَاتِ muqtazosiga ko'ra, ikkinchi dolga zamma harakatini berdik. Ayn bobiga muvofiq qilmoq uchun لَمْ يَرْدُدْ bo'lib, sharti idg'om mavjud bo'ldi. Birinchi dolni ikkinchi dolga idg'om qildik. لَمْ يَرُدُّ bo'ldi. Istasak, ikkinchi dolga kasra beramiz."
+        }
+      ]
+    },
+    {
+      "num": 71,
+      "page": 107,
+      "titleAr": "",
+      "title": "Muzo'afning amri hozir",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "الساكن إذا حُرِّكَ حُرِّكَ بِالكَسْرِ qoidasiga ko'ra لم يَرُدِّ bo'ladi. Yoki o'z asliga qaytarib لَمْ يَرْدُدْ desak ham bo'ladi. Ixtiyor kishining qo'lidadir. Uning majhuli ma'lumidekdir. Aslida ham idg'omdada ham shundaydir. Lekin shunchalik farqi borki, majhulida uch xil o'qish durustdir. Fatha va kasra va taskin zamma o'qilmaydi. Zero, majhulda ayni fe'l fatha bo'ladi. Fe'li nafiy fe'li muzore'dekdir."
+        },
+        {
+          "type": "bolim",
+          "uz": "Amri hozir"
+        },
+        {
+          "type": "matn",
+          "uz": "رُدَّ، رُدَّا، رُدُّوْا، رُدِّي، رُدَّا، اُرْدُدْنَ"
+        },
+        {
+          "type": "matn",
+          "uz": "رُدَّ ni تَرُدُّ fe'li muzore' muxotabi ma'lumdan ikki amal bilan olinadi."
+        },
+        {
+          "type": "matn",
+          "uz": "Birinchi amal shuki, ushbu muxotab siyg'asini oxiriga qaradik. Oxiri mudg'am ekan. O'z holiga qo'ydik. Zammadan fathaga o'tdik. Fatha ahaffi harakot bo'lgani uchun تَرُدُّ edi, تَرُدَّ bo'ldi."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkinchi amal shuki, harfi muzoreatni olib tashladik. Siyg'asiga qarasak, افعال bobidan emas ekan. Harfi muzora'atni \"moyali\"si, ya'ni yonidagi harfga qaradik. Mutaharrik ekan رُدَّ bo'lib, amr tamom bo'ldi. رُدَّ aslida اُرْدُدْ edi. Birinchi dolni harakatini moqabliga berdik. Harakattalab bo'lgani uchun اُرُدْدْ bo'lib, ijtimoi sokinayn bo'ldi. Ikki dol orasida ijtimoi sokinayndan xalos bo'lishning yo'li hazf qilish bilan yoki harakat berish bilan bo'ladi. Bu o'rinda mutojonisaynning birini hazfi durust emas. Zero, اجحاف كلمه lozim keladi. Harakat berish ham durust emas, zero تَرْجِيح بِلا مُرَجِّح lozim keladi. Ijtimoi sokinayn holda اُرْدْدْ deb talaffuz qilish moxoldir. Shuning uchun majburan ikkinchi dolga zamma harakat berdik. Ayni bobiga tobe' qilish uchun اُرُدْدُ bo'lib,"
         }
       ]
     }

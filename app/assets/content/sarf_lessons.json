@@ -3310,6 +3310,106 @@
           "uz": "اِدْغامْ – bir harfni ikkinchi harfga kirgizishdir."
         }
       ]
+    },
+    {
+      "num": 40,
+      "page": 54,
+      "titleAr": "",
+      "title": "Idg'om qoidasi va muzoaf fe'lning sarfi",
+      "blocks": [
+        {
+          "type": "bolim",
+          "uz": "Qoida"
+        },
+        {
+          "type": "matn",
+          "uz": "Bir jinsdan ikki harf bir yerda bo'lib, avvalgisi sokin (sukunli), ikkinchisi harakatli bo'lsa avvalgi harfni ikkinchisiga idg'om qilinadi."
+        },
+        {
+          "type": "matn",
+          "uz": "فَرَّ ni sarf qilish (turlash) tariqasi:"
+        },
+        {
+          "type": "matn",
+          "uz": "فَرَّ، فَرَّا، فَرُّوا، فَرَّتْ، فَرَّتَا، فَرَرْنَ، فَرَرْتَ، فَرَرْتُمَا، فَرَرْتُمْ، فَرَرْتِ، فَرَرْتُمَا، فَرَرْتُنَّ، فَرَرْتُ، فَرَرْنَا."
+        },
+        {
+          "type": "matn",
+          "uz": "Fe'li moziyda besh siyg'ada idg'om lozimdir: g'oib, g'oibayn, g'oibiyn, g'oiba, g'oibataynlarda."
+        },
+        {
+          "type": "matn",
+          "uz": "Fe'li moziyning qolgan to'qqiz siyg'asi o'z aslida qoladi. Chunki bu siyg'alarga ulanib kelgan olmosh kalimalari (shaxs-son qo'shimchalari) o'zlari harakatli bo'lgani uchun o'zidan oldingi harfning sokin (sukunli) bo'lishini istaydi."
+        },
+        {
+          "type": "matn",
+          "uz": "Bu siyg'alarning oxiriga qo'shilib, kelgan kalimalar – ن dan tartib نا gacha – zamirlar deb ataladi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Qoida"
+        },
+        {
+          "type": "matn",
+          "uz": "اَلضَّمائِرُ لاَ تَتَغَيَّرُ وَلاَ تَتَبَدَّلُ عَنْ أَحْوَالِهَا"
+        },
+        {
+          "type": "matn",
+          "uz": "Ma'nosi: Ismning (eganing) o'rnini bosadigan bu zamirlar, ya'ni olmoshlar hech qachon o'zgarmaydi va e'roblari (ya'ni harakatlari) boshqacha bo'lmaydi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li moziyning majhul qilish qoidasi"
+        },
+        {
+          "type": "matn",
+          "uz": "فَرَّ ni majhul qilish uchun idg'omni yechib, uni asliga qaytaramiz: فَرَرَ bo'ladi. Moqabli oxirini (oxiridan oldingi harfini) kasrali qilamiz: فَرِرَ bo'ladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Moqabli oxiridan oldindagi harfni (ya'ni oxiridan uchinchi harfini) zammali qilamiz: فُرِرَ bo'ladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Birinchi «ر» (ro)ning harakatini olib tashladik: فُرْرَ bo'lib, sharti idg'om vujudga keldi, birinchi «ر» (ro)ni ikkinchi «ر» (ro)ga idg'om qildik, فُرَّ bo'ldi."
+        },
+        {
+          "type": "matn",
+          "uz": "Fe'li moziy majhulining sarfi quyidagicha"
+        },
+        {
+          "type": "matn",
+          "uz": "فُرَّ، فُرَّا، فُرُّوا، فُرَّتْ، فُرَّتَا، فُرِرْنَ، فُرِرْتَ، فُرِرْتُمَا، فُرِرْتُمْ، فُرِرْتِ، فُرِرْتُمَا، فُرِرْتُنَّ، فُرِرْتُ، فُرِرْنَا."
+        },
+        {
+          "type": "matn",
+          "uz": "«فُرَّ» ning asli فُرِرَ dir. Majhulida xuddi ma'lumi kabi besh siyg'ada idg'om bor. Qolgan to'qqiz siyg'ada idg'om yo'q."
+        },
+        {
+          "type": "matn",
+          "uz": "Nima uchun besh siyg'ada idg'om bor-u, qolgan to'qqiz siyg'ada idg'om yo'q. Sabablari fe'li moziyning ma'lumida bayon qilindi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li muzore' (kelasi va hozirgi zamon fe'li) bayoni"
+        },
+        {
+          "type": "matn",
+          "uz": "يَفِرَّ – fe'li muzore'i ma'lumdir. Bu ham 14 siyg'asida keladi. Sarf qilish (turlash) ushbu tariqadadir:"
+        },
+        {
+          "type": "matn",
+          "uz": "يَفِرُّ، يَفِرَّانِ، يَفِرُّونَ، تَفِرُّ، تَفِرَّانِ، يَفْرِرْنَ، تَفِرُّ، تَفِرَّانِ، تَفِرُّونَ، تَفِرِّيْنَ، تَفِرَّانِ، تَفْرِرْنَ، أَفِرُّ، نَفِرُّ."
+        },
+        {
+          "type": "matn",
+          "uz": "«يَفُرُّ» ni majhul qilish yo'li «يَفِرُّ» ni majhul qilish uchun asliga qaytardik:"
+        },
+        {
+          "type": "matn",
+          "uz": "يَفْرِرُ bo'ldi. Oxiridan oldingi harfini fathali qildik: يَفْرَرُ bo'ldi. Harfi muzore'ni zammalik qildik. يُفْرَرُ bo'ldi."
+        }
+      ]
     }
   ]
 }

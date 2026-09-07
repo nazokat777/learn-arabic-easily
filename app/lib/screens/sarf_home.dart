@@ -413,14 +413,27 @@ class _Jadval extends StatelessWidget {
     child: Center(child: child),
   );
 
-  Widget _arabcha(String matn, double olcham, FontWeight w) => Directionality(
-    textDirection: TextDirection.rtl,
-    child: Text(
-      matn,
-      textAlign: TextAlign.center,
-      style: AppTheme.arabic(size: olcham, color: AppColors.ink, w: w),
-    ),
-  );
+  static final RegExp _arabHarf = RegExp('[؀-ۿ]');
+
+  /// Katak matni. Arabcha bo'lsa Amiri bilan va o'ngdan chapga, o'zbekcha
+  /// bo'lsa (ustun sarlavhalari kabi) oddiy shrift bilan chiziladi.
+  Widget _arabcha(String matn, double olcham, FontWeight w) {
+    if (!_arabHarf.hasMatch(matn)) {
+      return Text(
+        matn,
+        textAlign: TextAlign.center,
+        style: TextStyle(fontSize: olcham - 2, fontWeight: w, height: 1.25),
+      );
+    }
+    return Directionality(
+      textDirection: TextDirection.rtl,
+      child: Text(
+        matn,
+        textAlign: TextAlign.center,
+        style: AppTheme.arabic(size: olcham, color: AppColors.ink, w: w),
+      ),
+    );
+  }
 }
 
 class _Royxat extends StatelessWidget {

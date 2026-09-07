@@ -2135,6 +2135,902 @@
           "uz": "لا نُضْرَبْ – urilmaylik, bizlar ko'p erlar yoki ayollar, siyg'asi mutakallim ma'al g'ayr, majhuli fe'li nahiy."
         }
       ]
+    },
+    {
+      "num": 31,
+      "page": 43,
+      "titleAr": "",
+      "title": "Ismi zamon va makon (o'rin-payt kelishigi) bayoni",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "اسم زمان واسم مكان sulosiy mujarraddan (ya'ni, uch harflik fe'ldan) va يَفْعِلُ «ayn»i kasralik bo'lgan fe'llardan hamda misol fe'li xoh «vov»lik bo'lsin, xoh «yo»lik bo'lsin مَفْعِل «ayn»i kasralik vaznida keladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: مَضْرِبُ va مَوْعِدَ va مَيْسِرُ kabi."
+        },
+        {
+          "type": "matn",
+          "uz": "يَفْعِلُ bobidan boshqa boblarda hamda noqis fe'lidan xoh «vov»lik bo'lsin xoh «yo»lik bo'lsin مَفْعَل («ayn»i fathalik) vaznida keladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: مَفْتَلُ va مَرْمَىً va مَدْعَىً kabi."
+        },
+        {
+          "type": "matn",
+          "uz": "Sulosiy mujarraddan boshqa boblarda ismi maf'ulning vaznida keladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: مُكْرَمُ va مُدَحْرَجُ kabi. اِسْمِ زمان va اسم مكان uch siyg'ada keladi:"
+        },
+        {
+          "type": "matn",
+          "uz": "مَضْرِبُ – uradigan bir o'rin va uradigan bir payt; siyg'asi vohid, ismi zamon va makon (o'rin-payt kelishigi)."
+        },
+        {
+          "type": "matn",
+          "uz": "مَضْرِبانِ – uradigan ikki o'rin hamda uradigan ikki payt (uradigan ikki o'rin-payt), siyg'asi tasniya ismi zamon va ismi makon."
+        },
+        {
+          "type": "matn",
+          "uz": "مَضَارِبُ – uradigan ko'p o'rinlar yoki ko'p vaqtlar, siyg'asi jam', ismi zamon va ismi makon."
+        }
+      ]
+    },
+    {
+      "num": 32,
+      "page": 44,
+      "titleAr": "",
+      "title": "«Mim»lik masdar bayoni",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "«Mim»lik masdar sulosiy mujarraddan مَفْعَل vaznida keladi, «ayn»i fathali bo'ladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan, مَنْصَرٌ va مَعْلَمٌ va مَضْرَبٌ kabi."
+        },
+        {
+          "type": "matn",
+          "uz": "Sulosiy mujarraddan boshqa boblarda ismi maf'ulning vaznida mushtarak keladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: مُكْرَمُ va مُدَحْرَجُ va مُتَدَحْرَجُ kabi."
+        }
+      ]
+    },
+    {
+      "num": 33,
+      "page": 44,
+      "titleAr": "",
+      "title": "Ismi olat bayoni",
+      "blocks": [
+        {
+          "type": "bolim",
+          "uz": "(ya'ni, ish-harakatni bajarish asbobi)"
+        },
+        {
+          "type": "matn",
+          "uz": "Ismi olat sulosiy mujarraddan مِفْعَلٌ va مِفْعالُ va مِفْعَلَةٌ vaznida keladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: مِسْطَرٌ va مِفْتاحٌ va مِكْنَسَةٌ kabi."
+        },
+        {
+          "type": "matn",
+          "uz": "Ismi olat uch siyg'ada keladi: مِضْرابٌ – uradigan bir asbob, siyg'asi vohid, ismi olat."
+        },
+        {
+          "type": "matn",
+          "uz": "مِضْرابان – uradigan ikki asbob, siyg'asi tasniya, ismi olat."
+        },
+        {
+          "type": "matn",
+          "uz": "مَضَاريبُ – uradigan ko'p asboblar, siyg'asi jam', ismi olat."
+        }
+      ]
+    },
+    {
+      "num": 34,
+      "page": 45,
+      "titleAr": "",
+      "title": "Ismi tafzil bayoni",
+      "blocks": [
+        {
+          "type": "bolim",
+          "uz": "(ya'ni, o'zgalardan fe'lini ortiq bajaruvchi kishining ismi)"
+        },
+        {
+          "type": "matn",
+          "uz": "Ismi tafzil olti siyg'ada keladi. Uchtasi muzakkar va uchtasi muannas."
+        },
+        {
+          "type": "matn",
+          "uz": "أَضْرَبُ – uruvchiroq bir er kishi siyg'asi vohid, muzakkar, ismi tafzil."
+        },
+        {
+          "type": "matn",
+          "uz": "أَضْرَبانَ – uruvchiroq ikki er kishi, siyg'asi tasniyai muzakkar, ismi tafzil."
+        },
+        {
+          "type": "matn",
+          "uz": "أَضْرَبُونَ – uruvchiroq ko'p er kishilar, siyg'asi jam'i muzakkar, ismi tafzil."
+        },
+        {
+          "type": "matn",
+          "uz": "ضُرْبِى – uruvchiroq bir ayol, siyg'asi vohidah, muannas, ismi tafzil."
+        },
+        {
+          "type": "matn",
+          "uz": "ضُرْبَيانِ – uruvchiroq ikki ayol, siyg'asi tasniyai muannas, ismi tafzil."
+        },
+        {
+          "type": "matn",
+          "uz": "ضُرْبَياتُ – uruvchiroq ko'p ayollar, siyg'asi jam'i muannas, ismi tafzil."
+        },
+        {
+          "type": "matn",
+          "uz": "Ilova: sulosiy mujarraddan boshqa fe'llardan ismi tafzil kelgan emas."
+        },
+        {
+          "type": "matn",
+          "uz": "(Shukr Tangrimakim, bu sovrun unvona yetdi, o'limdan ilgari poyona yetdi)."
+        }
+      ]
+    },
+    {
+      "num": 35,
+      "page": 45,
+      "titleAr": "",
+      "title": "Ilmi sarf ta'rifi",
+      "blocks": [
+        {
+          "type": "bolim",
+          "uz": "Ilmi sarf qanday ilm?"
+        },
+        {
+          "type": "matn",
+          "uz": "Sarf ilmi turli ma'nolarni anglatadigan kalimalarning turlarini o'rgatadigan ilmdir. Chunki arab kalimalari xilma-xil ma'nolarni anglatish uchun turli-turli bo'lib, turlanib keladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Bu fanni birinchi ijod qilgan Mu'oz ibn Musliminil-Harrodir. Bu ilmning mavzusi arab tilining kalimalaridir. Bu fanda kalimalarning zotiga (o'zagiga) tushadigan e'lol (harfi illatni bir-biriga almashtirish), taz'yif (ikkilantirish) va imola (alifni «yo»ga moyil qilib o'qish) va nisbat (qaratish, tegishli qilish) va boshqa holatlardan bahs qilinadi. Bu ilmni o'qishdan asosiy maqsad mubtadilarning, ya'ni o'qishni yangi boshlaganlarning zehniga lafzda bo'ladigan xatolardan saqlashdir. Shuning uchun bu ilmni o'qish mubtadilarga, lozim va zarur."
+        }
+      ]
+    },
+    {
+      "num": 36,
+      "page": 46,
+      "titleAr": "",
+      "title": "Sulosiy mujarrad olti bobdir — birinchi bob",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "Birinchi bob: فَعَلَ – يَفْعِلُ (ضَرَبَ – يَضْرِبُ) tarzida bo'ladi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Siyg'alari"
+        },
+        {
+          "type": "jadval",
+          "sarlavha": "N",
+          "ustunlar": [
+            {
+              "ar": "Fe'li moziy ma'lum",
+              "ar2": ""
+            },
+            {
+              "ar": "Fe'li moziy majhuli",
+              "ar2": ""
+            },
+            {
+              "ar": "Fe'li muzore'i ma'lum",
+              "ar2": ""
+            },
+            {
+              "ar": "Fe'li muzore'i majhul",
+              "ar2": ""
+            }
+          ],
+          "qatorlar": [
+            {
+              "bob": "1",
+              "raqam": "",
+              "kataklar": [
+                "ضَرَبَ",
+                "ضُرِبَ",
+                "يَضْرِبُ",
+                "يُضْرَبُ"
+              ]
+            },
+            {
+              "bob": "2",
+              "raqam": "",
+              "kataklar": [
+                "ضَرَبَا",
+                "ضُرِبَا",
+                "يَضْرِبَانِ",
+                "يُضْرَبَانِ"
+              ]
+            },
+            {
+              "bob": "3",
+              "raqam": "",
+              "kataklar": [
+                "ضَرَبُوا",
+                "ضُرِبُوا",
+                "يَضْرِبُونَ",
+                "يُضْرَبُونَ"
+              ]
+            },
+            {
+              "bob": "4",
+              "raqam": "",
+              "kataklar": [
+                "ضَرَبَتْ",
+                "ضُرِبَتْ",
+                "تَضْرِبُ",
+                "تُضْرَبُ"
+              ]
+            },
+            {
+              "bob": "5",
+              "raqam": "",
+              "kataklar": [
+                "ضَرَبَتَا",
+                "ضُرِبَتَا",
+                "تَضْرِبَانِ",
+                "تُضْرَبَانِ"
+              ]
+            },
+            {
+              "bob": "6",
+              "raqam": "",
+              "kataklar": [
+                "ضَرَبْنَ",
+                "ضُرِبْنَ",
+                "يَضْرِبْنَ",
+                "يُضْرَبْنَ"
+              ]
+            },
+            {
+              "bob": "7",
+              "raqam": "",
+              "kataklar": [
+                "ضَرَبْتَ",
+                "ضُرِبْتَ",
+                "تَضْرِبُ",
+                "تُضْرَبُ"
+              ]
+            },
+            {
+              "bob": "8",
+              "raqam": "",
+              "kataklar": [
+                "ضَرَبْتُمَا",
+                "ضُرِبْتُمَا",
+                "تَضْرِبَانِ",
+                "تُضْرَبَانِ"
+              ]
+            },
+            {
+              "bob": "9",
+              "raqam": "",
+              "kataklar": [
+                "ضَرَبْتُمْ",
+                "ضُرِبْتُمْ",
+                "تَضْرِبُونَ",
+                "تُضْرَبُونَ"
+              ]
+            },
+            {
+              "bob": "10",
+              "raqam": "",
+              "kataklar": [
+                "ضَرَبْتِ",
+                "ضُرِبْتِ",
+                "تَضْرِبِينَ",
+                "تُضْرَبِينَ"
+              ]
+            },
+            {
+              "bob": "11",
+              "raqam": "",
+              "kataklar": [
+                "ضَرَبْتُمَا",
+                "ضُرِبْتُمَا",
+                "تَضْرِبَانِ",
+                "تُضْرَبَانِ"
+              ]
+            },
+            {
+              "bob": "12",
+              "raqam": "",
+              "kataklar": [
+                "ضَرَبْتُنَّ",
+                "ضُرِبْتُنَّ",
+                "تَضْرِبْنَ",
+                "تُضْرَبْنَ"
+              ]
+            },
+            {
+              "bob": "13",
+              "raqam": "",
+              "kataklar": [
+                "ضَرَبْتُ",
+                "ضُرِبْتُ",
+                "أَضْرِبُ",
+                "أُضْرَبُ"
+              ]
+            },
+            {
+              "bob": "14",
+              "raqam": "",
+              "kataklar": [
+                "ضَرَبْنَا",
+                "ضُرِبْنَا",
+                "نَضْرِبُ",
+                "نُضْرَبُ"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "jadval",
+          "sarlavha": "N",
+          "ustunlar": [
+            {
+              "ar": "Ismi foil",
+              "ar2": ""
+            },
+            {
+              "ar": "Ismi maf'ul",
+              "ar2": ""
+            },
+            {
+              "ar": "Fe'li jahdning ma'lumi",
+              "ar2": ""
+            },
+            {
+              "ar": "Fe'li jahdning majhuli",
+              "ar2": ""
+            }
+          ],
+          "qatorlar": [
+            {
+              "bob": "1",
+              "raqam": "",
+              "kataklar": [
+                "ضَارِبٌ",
+                "مَضْرُوبٌ",
+                "لَمْ يَضْرِبْ",
+                "لَمْ يُضْرَبْ"
+              ]
+            },
+            {
+              "bob": "2",
+              "raqam": "",
+              "kataklar": [
+                "ضَارِبَانِ",
+                "مَضْرُوبَانِ",
+                "لَمْ يَضرِبا",
+                "لَمْ يُضْرَبَا"
+              ]
+            },
+            {
+              "bob": "3",
+              "raqam": "",
+              "kataklar": [
+                "ضَارِبُونَ",
+                "مَضْرُوبُونَ",
+                "لَمْ يَضْرِبُوا",
+                "لَمْ يُضْرَبُوا"
+              ]
+            },
+            {
+              "bob": "4",
+              "raqam": "",
+              "kataklar": [
+                "ضَارِبَةٌ",
+                "مَضْرُوبَةٌ",
+                "لَمْ تَضْرِبْ",
+                "لَمْ تُضْرَبْ"
+              ]
+            },
+            {
+              "bob": "5",
+              "raqam": "",
+              "kataklar": [
+                "ضَارِبَتَانِ",
+                "مَضْرُوبَتَانِ",
+                "لَمْ تَضْرِبَا",
+                "لَمْ تُضْرَبَا"
+              ]
+            },
+            {
+              "bob": "6",
+              "raqam": "",
+              "kataklar": [
+                "ضَارِبَاتٌ",
+                "مَضْرُوبَاتٌ",
+                "لَمْ يَضْرِبْنَ",
+                "لَمْ يُضْرَبْنَ"
+              ]
+            },
+            {
+              "bob": "7",
+              "raqam": "",
+              "kataklar": [
+                "",
+                "",
+                "لَمْ تَضْرِبْ",
+                "لَمْ تُضْرَبْ"
+              ]
+            },
+            {
+              "bob": "8",
+              "raqam": "",
+              "kataklar": [
+                "",
+                "",
+                "لَمْ تَضْرِبَا",
+                "لَمْ تُضْرَبَا"
+              ]
+            },
+            {
+              "bob": "9",
+              "raqam": "",
+              "kataklar": [
+                "",
+                "",
+                "لَمْ تَضْرِبُوا",
+                "لَمْ تُضْرَبُوا"
+              ]
+            },
+            {
+              "bob": "10",
+              "raqam": "",
+              "kataklar": [
+                "",
+                "",
+                "لَمْ تَضْرِبِي",
+                "لَمْ تُضْرَبِي"
+              ]
+            },
+            {
+              "bob": "11",
+              "raqam": "",
+              "kataklar": [
+                "",
+                "",
+                "لَمْ تَضْرِبَا",
+                "لَمْ تُضْرَبَا"
+              ]
+            },
+            {
+              "bob": "12",
+              "raqam": "",
+              "kataklar": [
+                "",
+                "",
+                "لَمْ تَضْرِبْنَ",
+                "لَمْ تُضْرَبْنَ"
+              ]
+            },
+            {
+              "bob": "13",
+              "raqam": "",
+              "kataklar": [
+                "",
+                "",
+                "لَمْ أَضْرِبْ",
+                "لَمْ أُضْرَبْ"
+              ]
+            },
+            {
+              "bob": "14",
+              "raqam": "",
+              "kataklar": [
+                "",
+                "",
+                "لَمْ نَضْرِبْ",
+                "لَمْ نُضْرَبْ"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "jadval",
+          "sarlavha": "N",
+          "ustunlar": [
+            {
+              "ar": "Ma'lumi fe'li nafiyi",
+              "ar2": ""
+            },
+            {
+              "ar": "Majhuli fe'li nafiy",
+              "ar2": ""
+            },
+            {
+              "ar": "Amri hozir",
+              "ar2": ""
+            },
+            {
+              "ar": "Amri g'oib",
+              "ar2": ""
+            }
+          ],
+          "qatorlar": [
+            {
+              "bob": "1",
+              "raqam": "",
+              "kataklar": [
+                "لا يَضْرِبُ",
+                "لا يُضْرَبُ",
+                "اِضْرِبْ",
+                "لِيَضْرِبْ"
+              ]
+            },
+            {
+              "bob": "2",
+              "raqam": "",
+              "kataklar": [
+                "لا يَضْرِبَانِ",
+                "لا يُضْرَبَانِ",
+                "اِضْرِبَا",
+                "لِيَضْرِبا"
+              ]
+            },
+            {
+              "bob": "3",
+              "raqam": "",
+              "kataklar": [
+                "لا يَضْرِبُونَ",
+                "لا يُضْرَبُونَ",
+                "اِضْرِبُوا",
+                "لِيَضْرِبُوا"
+              ]
+            },
+            {
+              "bob": "4",
+              "raqam": "",
+              "kataklar": [
+                "لا تَضْرَبُ",
+                "لا تُضْرَبُ",
+                "اِضْرِبِي",
+                "لِتَضْرِبْ"
+              ]
+            },
+            {
+              "bob": "5",
+              "raqam": "",
+              "kataklar": [
+                "لا تَضْرِبانِ",
+                "لا تُضْرَبَانِ",
+                "اِضْرِبَا",
+                "لِتَضْرِبَا"
+              ]
+            },
+            {
+              "bob": "6",
+              "raqam": "",
+              "kataklar": [
+                "لا يَضْرِبْنَ",
+                "لا يُضْرَبْنَ",
+                "اِضْرِبْنَ",
+                "لِيَضْرِبْنَ"
+              ]
+            },
+            {
+              "bob": "7",
+              "raqam": "",
+              "kataklar": [
+                "لا تَضْرِبُ",
+                "لا تُضْرَبُ",
+                "",
+                "لأَضْرِبْ"
+              ]
+            },
+            {
+              "bob": "8",
+              "raqam": "",
+              "kataklar": [
+                "لا تَضْرِبَانِ",
+                "لا تُضْرَبَانِ",
+                "",
+                "لِنَضْرِبْ"
+              ]
+            },
+            {
+              "bob": "9",
+              "raqam": "",
+              "kataklar": [
+                "لا تَضْرِبُونَ",
+                "لا تُضْرَبُونَ",
+                "",
+                ""
+              ]
+            },
+            {
+              "bob": "10",
+              "raqam": "",
+              "kataklar": [
+                "لا تَضْرِبِيْنَ",
+                "لا تُضْرَبِيْنَ",
+                "",
+                ""
+              ]
+            },
+            {
+              "bob": "11",
+              "raqam": "",
+              "kataklar": [
+                "لا تَضْرِبانِ",
+                "لا تُضْرَبَانِ",
+                "",
+                ""
+              ]
+            },
+            {
+              "bob": "12",
+              "raqam": "",
+              "kataklar": [
+                "لا تَضْرِبْنَ",
+                "لا تُضْرَبْنَ",
+                "",
+                ""
+              ]
+            },
+            {
+              "bob": "13",
+              "raqam": "",
+              "kataklar": [
+                "لا أَضْرِبُ",
+                "لا أُضْرَبُ",
+                "",
+                ""
+              ]
+            },
+            {
+              "bob": "14",
+              "raqam": "",
+              "kataklar": [
+                "لا نَضْرِبُ",
+                "لا نُضْرَبُ",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "jadval",
+          "sarlavha": "N",
+          "ustunlar": [
+            {
+              "ar": "Amri bo «lom»ning majhuli",
+              "ar2": ""
+            },
+            {
+              "ar": "Ma'lumi fe'li nahiy",
+              "ar2": ""
+            },
+            {
+              "ar": "Majhuli fe'li nahiy",
+              "ar2": ""
+            }
+          ],
+          "qatorlar": [
+            {
+              "bob": "1",
+              "raqam": "",
+              "kataklar": [
+                "لِتُضْرَبْ",
+                "لا تَضْرِبْ",
+                "لا تُضْرَبْ"
+              ]
+            },
+            {
+              "bob": "2",
+              "raqam": "",
+              "kataklar": [
+                "لِتُضْرَبَا",
+                "لا تَضْرَبَا",
+                "لا تُضْرَبَا"
+              ]
+            },
+            {
+              "bob": "3",
+              "raqam": "",
+              "kataklar": [
+                "لِتُضْرَبُوا",
+                "لا تَضْرِبُوا",
+                "لا تُضْرَبُوا"
+              ]
+            },
+            {
+              "bob": "4",
+              "raqam": "",
+              "kataklar": [
+                "لِتُضْرَبِي",
+                "لا تَضْرِبِي",
+                "لا تُضْرَبِي"
+              ]
+            },
+            {
+              "bob": "5",
+              "raqam": "",
+              "kataklar": [
+                "لِتُضْرَبَا",
+                "لا تَضْرَبَا",
+                "لا تُضْرَبَا"
+              ]
+            },
+            {
+              "bob": "6",
+              "raqam": "",
+              "kataklar": [
+                "لِتُضْرَبْنَ",
+                "لا تَضْرِبْنَ",
+                "لا تُضْرَبْنَ"
+              ]
+            },
+            {
+              "bob": "7",
+              "raqam": "",
+              "kataklar": [
+                "لِيُضْرَبْ",
+                "لا يَضْرِبْ",
+                "لا يُضْرَبْ"
+              ]
+            },
+            {
+              "bob": "8",
+              "raqam": "",
+              "kataklar": [
+                "لِيُضْرَبَا",
+                "لا يَضْرَبَا",
+                "لا يُضْرَبَا"
+              ]
+            },
+            {
+              "bob": "9",
+              "raqam": "",
+              "kataklar": [
+                "لِيُضْرَبُوا",
+                "لا يَضْرِبُوا",
+                "لا يُضْرَبُوا"
+              ]
+            },
+            {
+              "bob": "10",
+              "raqam": "",
+              "kataklar": [
+                "لِتُضْرَبْ",
+                "لا تَضْرِبْ",
+                "لا تُضْرَبْ"
+              ]
+            },
+            {
+              "bob": "11",
+              "raqam": "",
+              "kataklar": [
+                "لِتُضْرَبَا",
+                "لا تَضْرَبَا",
+                "لا تُضْرَبَا"
+              ]
+            },
+            {
+              "bob": "12",
+              "raqam": "",
+              "kataklar": [
+                "لِيُضْرَبْنَ",
+                "لا يَضْرِبْنَ",
+                "لا يُضْرَبْنَ"
+              ]
+            },
+            {
+              "bob": "13",
+              "raqam": "",
+              "kataklar": [
+                "لأُضْرَبْ",
+                "لا أَضْرِبْ",
+                "لا أُضْرَبْ"
+              ]
+            },
+            {
+              "bob": "14",
+              "raqam": "",
+              "kataklar": [
+                "لِنُضْرَبْ",
+                "لا نَضْرِبْ",
+                "لا نُضْرَبْ"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "jadval",
+          "sarlavha": "N",
+          "ustunlar": [
+            {
+              "ar": "Ismi zamon va ismi makon",
+              "ar2": ""
+            },
+            {
+              "ar": "Ismi olat",
+              "ar2": ""
+            },
+            {
+              "ar": "Ismi tafzil",
+              "ar2": ""
+            }
+          ],
+          "qatorlar": [
+            {
+              "bob": "1",
+              "raqam": "",
+              "kataklar": [
+                "مَضْرِبٌ",
+                "مِضْرَابٌ",
+                "أَضْرَبُ"
+              ]
+            },
+            {
+              "bob": "2",
+              "raqam": "",
+              "kataklar": [
+                "مَضْرِبَانِ",
+                "مِضْرَابَانِ",
+                "أَضْرَبَانِ"
+              ]
+            },
+            {
+              "bob": "3",
+              "raqam": "",
+              "kataklar": [
+                "مَضَارِبُ",
+                "مَضَارِيبُ",
+                "أَضْرَبُونَ"
+              ]
+            },
+            {
+              "bob": "4",
+              "raqam": "",
+              "kataklar": [
+                "",
+                "",
+                "ضُرْبَى"
+              ]
+            },
+            {
+              "bob": "5",
+              "raqam": "",
+              "kataklar": [
+                "",
+                "",
+                "ضُرْبَيَانِ"
+              ]
+            },
+            {
+              "bob": "6",
+              "raqam": "",
+              "kataklar": [
+                "",
+                "",
+                "ضُرْبَيَاتٌ"
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

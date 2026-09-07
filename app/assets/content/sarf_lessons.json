@@ -1815,6 +1815,326 @@
           "uz": "اِضْرِبْنَ – uringlar, sizlar ko'p ayollar, siyg'asi jam'i muannas, amri be «lom»."
         }
       ]
+    },
+    {
+      "num": 27,
+      "page": 37,
+      "titleAr": "",
+      "title": "Amri g'oib yoki amri bo «lom»",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "Amri g'oib yoki amri bo «lom», ya'ni III shaxsga oid «lom»lik buyruq fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "«Lom»lik amr («lom»lik buyruq fe'li) fe'li muzore'i ma'lumning olti g'oib siyg'alaridan hamda ikki mutakallim siyg'asidan birinchi yo'l bilan olinadi. Fe'li muzore'ning avvaliga kasrali «lom»ni keltirgandan keyin amri bo «lom» (lomlik amr) hosil bo'ladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan لِيَضْرِبْ va لِيَعْلَمْ kabi. Amri bo «lom» 8 siyg'ada keladi: oltitasi g'oib, ikkitasi mutakallim."
+        },
+        {
+          "type": "bolim",
+          "uz": "G'oib siyg'alari"
+        },
+        {
+          "type": "matn",
+          "uz": "لِيَضْرِبْ – ursin, u bir er kishi, siyg'asi vohid, muzakkar, g'oib, ma'lumi amri bo «lom»."
+        },
+        {
+          "type": "matn",
+          "uz": "لِيَضْرِبا – ursinlar, ular ikki er kishi, siyg'asi tasniyai muzakkar, g'oibayn, ma'lumi amri bo «lom»."
+        },
+        {
+          "type": "matn",
+          "uz": "لِيَضْرِبُوا – ursinlar ular ko'p er kishilar, siyg'asi jam'i muzakkar, g'oibiyn, ma'lumi amri bo «lom»."
+        },
+        {
+          "type": "matn",
+          "uz": "لِتَضْرِبْ – ursin, ul bir ayol, siyg'asi vohidah, muannasi g'oibah, ma'lumi amri bo «lom»."
+        },
+        {
+          "type": "matn",
+          "uz": "لِتَضْرِبا – ursinlar, ular ikki ayol, siyg'asi tasniyai muannasi g'oibatayn, ma'lumi amri bo «lom»"
+        },
+        {
+          "type": "matn",
+          "uz": "لِيَضْرِبْنَ – ursinlar, ular ko'p ayollar, siyg'asi jam'i muannasi g'oibot, ma'lumi amri bo «lom»."
+        },
+        {
+          "type": "bolim",
+          "uz": "Mutakallim siyg'alari"
+        },
+        {
+          "type": "matn",
+          "uz": "لِاَضْرِبْ – urayin, men bir er kishi yoki bir ayol kishi siyg'asi mutakallimi vohid, ma'lumi amri bo «lom»."
+        },
+        {
+          "type": "matn",
+          "uz": "لِنَضْرِبْ – uraylik bizlar ko'p er kishiilar yoki ko'p ayol kishilar, siyg'asi mutakallimi ma'al g'oyr, ma'lumi amri bo «lom»."
+        }
+      ]
+    },
+    {
+      "num": 28,
+      "page": 38,
+      "titleAr": "",
+      "title": "Amri g'oibni yoki amri bo «lom»ni majhul qilish yo'li",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "Ma'lumi amri g'oibni (yoki amri bo «lom»ni) majhul qilishni istasang, oxirgidan oldingi harfni fathali qil va harfi muzoraatni zammalik qil."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan, لِيَضْرِبْ – لِيُضْرَبْ bo'ladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Amri g'oib (yoki amri bo «lom»)ning majhulini 14 siyg'asi bor: 6 tasi g'oib, 6 tasi muxotab va 2 tasi mutakallimdir."
+        },
+        {
+          "type": "matn",
+          "uz": "Muxotabning 6 siyg'asini g'oibning 6 siyg'asidan oldin amri g'oibning majhulida aytiladi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Muxotab siyg'alari"
+        },
+        {
+          "type": "matn",
+          "uz": "لِتُضْرَبْ – urilgin, sen bir er kishi, siyg'asi vohid, muzakkar, muxotab, amr g'oib majhuli."
+        },
+        {
+          "type": "matn",
+          "uz": "لِتُضْرَبا – urilinglar, sizlar ikki er kishi, siyg'asi tasniyai muzakkar, muxotabayn, amr g'oib majhuli."
+        },
+        {
+          "type": "matn",
+          "uz": "لِتُضْرَبُوا – urilinglar, sizlar ko'p er kishilar, siyg'asi jam'i muzakkari muxotabiyn, amr g'oib majhuli."
+        },
+        {
+          "type": "matn",
+          "uz": "لِتُضْرَبِي – urilgin, sen bir ayol kishi, siyg'asi vohidai muannas, muxotabah, amr g'oib majhuli."
+        },
+        {
+          "type": "matn",
+          "uz": "لِتُضْرَبا – urilinglar, sizlar ikki ayol kishi, siyg'asi tasniyai muannas, muxotabatayn, amr g'oib majhuli."
+        },
+        {
+          "type": "matn",
+          "uz": "لِتُضْرَبْنَ – urilinglar, sizlar ko'p ayollar siyg'asi jam'i muannasi muxotabot, amr g'oib majhuli."
+        },
+        {
+          "type": "bolim",
+          "uz": "G'oib siyg'alari"
+        },
+        {
+          "type": "matn",
+          "uz": "لِيُضْرَبْ – urilsin, u bir er kishi, siyg'asi vohid muzakkar, g'oib, amr g'oib majhuli."
+        },
+        {
+          "type": "matn",
+          "uz": "لِيُضْرَبا – urilsinlar, ular ikki er kishi siyg'asi tasniyai muzakkar, g'oibayn amr g'oib majhuli."
+        },
+        {
+          "type": "matn",
+          "uz": "لِيُضْرَبُوا – urilsinlar, ular ko'p erlar, siyg'asi jam'i muzakkari g'oibiyn, amr g'oib majhuli."
+        },
+        {
+          "type": "matn",
+          "uz": "لِتُضْرَبْ – urilsin, ul bir ayol kishi, siyg'asi muannasi vohidai g'oiba, amr g'oib majhuli."
+        },
+        {
+          "type": "matn",
+          "uz": "لِتُضْرَبا – urilsinlar, ular ikki ayol, siyg'asi tasniyai muannas, g'oibatayn, amr g'oib majhuli."
+        },
+        {
+          "type": "matn",
+          "uz": "لِيُضْرَبْنَ – urilsinlar, ular ko'p ayollar, siyg'asi jam'i muannasi g'oibot, amr g'oib majhuli."
+        },
+        {
+          "type": "bolim",
+          "uz": "Mutakallim siyg'alari"
+        },
+        {
+          "type": "matn",
+          "uz": "لأُضْرَبْ – urilayin men bir erkak yo bir ayol siyg'asi mutakallim vohid amr g'oib majhul."
+        },
+        {
+          "type": "matn",
+          "uz": "لِنُضْرَبْ – urilaylik, bizlar ko'p erlar yoki ko'p ayollar, siyg'asi mutakallimi ma'al g'ayr, majhuli amri g'oib."
+        }
+      ]
+    },
+    {
+      "num": 29,
+      "page": 40,
+      "titleAr": "",
+      "title": "Fe'li nahiy hozir bayoni",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "Fe'li nahiy hozirning ham 14 siyg'asi bordir: 6 tasi muxotab, 6 tasi g'oib, 2 tasi mutakallim."
+        },
+        {
+          "type": "bolim",
+          "uz": "Muxotab siyg'alari"
+        },
+        {
+          "type": "matn",
+          "uz": "لا تَضْرِبْ – urmagin, sen bir er kishi, siyg'asi vohidi muzakkari muxotab, ma'lumi fe'li nahiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا تَضْرِبا – urmanglar, sizlar ikki er kishi, siyg'asi tasniyai muzakkar muxotabayn, ma'lumi fe'li nahiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا تَضْرِبُوا – urmangizlar, sizlar ko'p er kishilar, siyg'asi jam'i muzakkar, muxotabiyn, ma'lumi fe'li nahiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا تَضْرِبي – urmagin, sen bir ayol, siyg'asi vohidai muannasi muxotaba, ma'lumi fe'li nahiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا تَضْرَبا – urmangiz, sizlar ikki ayol kishi, siyg'asi tasniyai muannas muxotabatayn, ma'lumi fe'li nahiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا تَضْرِبْنَ – urmangizlar, sizlar ko'p ayollar, siyg'asi jam'i muannasi muxotabot. Ma'lumi fe'li nahiy."
+        },
+        {
+          "type": "bolim",
+          "uz": "G'oib siyg'lari"
+        },
+        {
+          "type": "matn",
+          "uz": "لا يَضْرِبْ – urmasin u bir er kishi, siyg'asi vohid, muzakkari g'oib, ma'lumi fe'li nahiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا يَضْرِبا – urmasinlar, ular ikki er, siyg'asi tasniyai muzakkar, g'oibayn, ma'lumi fe'li nahiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا يَضْرِبُوا – urmasinlar, ular ko'p er kishilar, siyg'asi jam'i muzakkari g'oibiyn, ma'lumi fe'li nahiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا تَضْرِبْ – urmasin, u bir ayol, siyg'asi vohidah muannas g'oibah, ma'lumi fe'li nahiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا تَضْرِبا – urmasinlar, ular ikki ayol kishi, siyg'asi tasniyai muannas, g'oibatayn, ma'lumi fe'li nahiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا يَضْرِبْنَ – urmasinlar, ular ko'p ayollar, siyg'asi jam'i muannasi g'oibot, ma'lumi fe'li nahiy."
+        },
+        {
+          "type": "bolim",
+          "uz": "Mutakallim siyg'alari"
+        },
+        {
+          "type": "matn",
+          "uz": "لا اَضْرِبْ – urmayin men bir er yoki bir ayol kishi, siyg'asi mutakallimi vohid, ma'lumi fe'li nahiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا نَضْرِبْ – urmaylik, bizlar ko'p er kishilar yoki ko'p ayollar, siyg'asi mutakallimi ma'al g'oyr, ma'lumi fe'li nahiy."
+        }
+      ]
+    },
+    {
+      "num": 30,
+      "page": 41,
+      "titleAr": "",
+      "title": "Fe'li nahiy ma'lumini majhul qilish yo'li",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "Fe'li nahiy ma'lumini majhul qilishni istasang, oxiridan oldingi harfini fathali qil va harfi muzoraatni zammalik qil."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: لا تَضْرِبْ – ma'lumi لا تُضْرَبْ shaklida majhul bo'ladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Fe'li nahiy majhulining ham 14 siyg'asi bor: 6 tasi muxotab, 6 tasi g'oib, 2 tasi mutakallim."
+        },
+        {
+          "type": "bolim",
+          "uz": "Muxotab siyg'alari"
+        },
+        {
+          "type": "matn",
+          "uz": "لا تُضْرَبْ – urilmagin sen bir kishi, siyg'asi vohid muzakkar, muxotab, majhuli fe'li nahiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا تُضْرَبا – urilmangiz, sizlar ikki er kishi, siyg'asi tasniyai muzakkari muxotabayn, majhuli fe'li nahiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا تُضْرَبُوا – urilmanglar, sizlar ko'p erlar, siyg'asi jam'i muzakkari muxotabiyn, majhuli fe'li nahiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا تُضْرَبِي – urilmagin, sen bir ayol, siyg'asi vohidah, muannasi muxotabah, majhuli fe'li nahiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا تُضْرَبا – urilmanglar, sizlar ikki ayol kishi, siyg'asi tasniyai muannasi muxotabatayn, majhuli fe'li nahiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا تُضْرَبْنَ – urilmangizlar, sizlar ko'p ayollar, siyg'asi jam'i muannasi muxotabot, majhuli fe'li nahiy."
+        },
+        {
+          "type": "bolim",
+          "uz": "G'oib siyg'alari"
+        },
+        {
+          "type": "matn",
+          "uz": "لا يُضْرَبْ – urilmasin, u bir er kishi, siyg'asi vohid, muzakkar, g'oib, majhuli fe'li nahiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا يُضْرَبا – urilmasinlar, ular ikki er kishi, siyg'asi tasniyai muzakkar, g'oibayn, majhuli fe'li nahiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا يُضْرَبُوا – urilmasinlar, ular ko'p er kishilar, siyg'asi jam'i muzakkari g'oibiyn, majhuli fe'li nahiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا تُضْرَبْ – urilmasin, u bir ayol, siyg'asi vohidai muannasi g'oibah, majhuli fe'li nahiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا تُضْرَبا – urilmasinlar, ular ikki ayol, siyg'asi tasniyai muannasi g'oibatayn, majhuli fe'li nahiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا يُضْرَبْنَ – urilmasinlar, ular ko'p ayollar, siyg'asi jam'i muannasi g'oibot, majhuli fe'li nahiy."
+        },
+        {
+          "type": "bolim",
+          "uz": "Mutakallim siyg'alari"
+        },
+        {
+          "type": "matn",
+          "uz": "لا أُضْرَبْ – urilmayin, men bir er yoki bir ayol kishi, siyg'asi mutakallim vohid, majhuli fe'li nahiy."
+        },
+        {
+          "type": "matn",
+          "uz": "لا نُضْرَبْ – urilmaylik, bizlar ko'p erlar yoki ayollar, siyg'asi mutakallim ma'al g'ayr, majhuli fe'li nahiy."
+        }
+      ]
     }
   ]
 }

@@ -6343,7 +6343,87 @@
         },
         {
           "type": "matn",
-          "uz": "لم يَدْعُ، لم يَدْعُوا، لم يَدْعُوا، لم تَدْعُ، لم تَدْعُوَا، لم يَدْعُونَ، لم تَدْعُ، لم تَدْعُوَا، لم تَدْعُوا، لم تَدْعِي، لم"
+          "uz": "لم يَدْعُ، لم يَدْعُوا، لم يَدْعُوا، لم تَدْعُ، لم تَدْعُوَا، لم يَدْعُونَ، لم تَدْعُ، لم تَدْعُوَا، لم تَدْعُوا، لم تَدْعِي، لم تَدْعُوَا، لم تَدْعُونَ، لم أَدْعُ، لم نَدْعُ"
+        }
+      ]
+    },
+    {
+      "num": 86,
+      "page": 122,
+      "titleAr": "",
+      "title": "دعا jahdi va majhul jahdi",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "يَدْعُو siyg'asiga lami jozima kirdi. Oxirini jazm qildi. Jazm qilganini belgisi, harfi illatni tushurmoqligidir."
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ يَدْعُ bo'ldi. لَمْ يَدْعُوا aslida لَمْ يَدْعُوُوْا edi. Zamma vovga og'ir bo'lgani uchun vovni zammasini tashladik لَمْ يَدْعُوْوْا bo'lib, ijtimoi sokinayn hosil bo'ldi. Ikki vov orasida birinchi vovni hazf qildik لَمْ يَدْعُوا bo'ldi. لَمْ تَدْعُوا ham shunday."
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ تَدْعِي aslida لَمْ تَدْعُوِي edi. Kasra vovga og'ir bo'lgani uchun vovni kasrasini moqabliga berdik. Uni harakatini tashlagandan keyin لَمْ تَدْعِوْي bo'ldi. Moqabli maqsur bo'lgan vovni يga qalb qildik لَمْ تَدْعِيْي bo'lib, ijtimoi sokinayn hosil bo'ldi. Ikki ي orasida birinchi يni hazf qildik لَمْ تَدْعِي bo'ldi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Majhuli fe'li jahd"
+        },
+        {
+          "type": "matn",
+          "uz": "لم يُدْعَ، لم يُدْعَيَا، لم يُدْعَوْا، لم تُدْعَ، لم تُدْعَيَا، لم يُدْعَيْنَ، لم تُدْعَ، لم تُدْعَيَا، لم تُدْعَوْا، لم تُدْعَي، لم تُدْعَيَا، لم تُدْعَيْنَ، لم أُدْعَ، لم نُدْعَ"
+        },
+        {
+          "type": "matn",
+          "uz": "يُدْعَى siyg'asiga lami jozima kirgandan so'ng, mufrad siyg'alarida mu'talli sokinni tushirdi. 5-siyg'ada لَمْ يُدْعَوْا aslida لَمْ يُدْعَوُوْا bo'lib, vov voqe' bo'ldi. Kalimaning 4-harfini barobarida moqabli zamma emas, vovni يga qalb qildik. لَمْ يَدْعَيُوْا bo'ldi. ي mutaharrik moqabli maftuh يni alifga qalb qildik. لَمْ يُدْعَاوْا bo'lib ijtimoi sokinayn hosil bo'ldi. Alif bilan vov orasida alifni hazf qildik. لَمْ يُدْعَوْا bo'ldi. لَمْ تُدْعَوْا ham shunday. لَمْ تُدْعَي aslida لَمْ تُدْعَيِى edi. ي mutaharrik moqabli maftuh يni alifga qalb qildik. لَمْ تُدْعَاي bo'lib, ijtimoi sokinayn hosil bo'ldi. Alif bilan ي orasida alifni hazf qildik لَمْ تُدْعَى bo'ldi."
+        }
+      ]
+    },
+    {
+      "num": 87,
+      "page": 123,
+      "titleAr": "",
+      "title": "دعا nafiysi va amri hozir",
+      "blocks": [
+        {
+          "type": "bolim",
+          "uz": "Fe'li nafiyning ma'lumi"
+        },
+        {
+          "type": "matn",
+          "uz": "لا يَدْعُو، لا يَدْعُوَانِ، لا يَدْعُونَ، لا تَدْعُو، لا تَدْعُوَانِ، لا يَدْعُونَ، لا تَدْعُو، لا تَدْعُوَانِ، لا تَدْعُونَ، لا تَدْعِيْنَ، لا تَدْعُوَانِ، لا تَدْعُونَ، لا أَدْعُو، لا نَدْعُو"
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li nafiyning majhuli"
+        },
+        {
+          "type": "matn",
+          "uz": "لا يُدْعَى، لا يُدْعَيَانِ، لا يُدْعَوْنَ، لا تُدْعَى، لا تُدْعَيَانِ، لا يُدْعَيْنَ، لا تُدْعَى، لا تُدْعَيَانِ، لا تُدْعَوْنَ، لا تُدْعَيْنَ، لا تُدْعَيَانِ، لا تُدْعَيْنَ، لا أُدْعَى، لا نُدْعَى"
+        },
+        {
+          "type": "matn",
+          "uz": "Barcha e'lol qoidalarida fe'li nafiyni fe'li muzore'ga qiyos qil."
+        },
+        {
+          "type": "bolim",
+          "uz": "Amri hozir"
+        },
+        {
+          "type": "matn",
+          "uz": "اُدْعُ، اُدْعُوَا، اُدْعُوْا، اُدْعِي، اُدْعُوَا، اُدْعُونَ"
+        },
+        {
+          "type": "matn",
+          "uz": "اُدْعُ ni تَدْعُوْ muxotabi ma'lum siyg'asidan ikki amal bilan olinadi."
+        },
+        {
+          "type": "matn",
+          "uz": "Birinchi amal shuki, ushbu muxotab siyg'asini oxiriga qaradik, mu'talli sokin ekan. Uni tashladik تَدْعُ bo'ldi."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkinchi amal shuki, harfi muzoratni tashladik دْعُ"
         }
       ]
     }

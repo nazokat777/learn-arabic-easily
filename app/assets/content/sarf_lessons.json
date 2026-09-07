@@ -4276,6 +4276,86 @@
           "uz": "Fe'li muzore'ni majhul qilish uchun uni asliga"
         }
       ]
+    },
+    {
+      "num": 51,
+      "page": 76,
+      "titleAr": "",
+      "title": "Ajvafning majhuli, ismi fo'il va ismi maf'uli",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "qaytaramiz, يَبْيِعُ bo'ladi. Oxiridan oldingi harfini fathali qilamiz: يَبْيَعُ bo'ladi. Va harfi muzoraatni zammalik qilamiz: يُبْيَعُ bo'ladi; «yo»ning harakatini moqabliga beramiz, يُبَيْعُ bo'ladi. Sokin bo'lgan «yo» aslida harakatli edi, endi oldingi harfi fathalik bo'ldi, «yo»ni naql qilingan harakatiga munosib alifga qalb qilamiz: يُبَاعُ bo'ladi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Sarfi"
+        },
+        {
+          "type": "matn",
+          "uz": "يُبَاعُ، يُبَاعَانِ، يُبَاعُونَ، تُبَاعُ، تُبَاعَانِ، يُبَعْنَ، تُبَاعُ، تُبَاعَانِ، تُبَاعُونَ، تُبَاعِيْنَ، تُبَاعَانِ، تُبَعْنَ، أُبَاعُ، نُبَاعُ"
+        },
+        {
+          "type": "matn",
+          "uz": "Fe'li muzore'ning majhulida ham ikki siyg'ada «ayn»i fe'l mahzuf (hazf qilinadi): g'oibot va muxotabda. يُبَعْنَ aslida – يُبْيَعْنَ edi, «yo» mutaharrik, moqabli harfi sokin, «yo»ning harakatini moqabliga beramiz, «yo»ni harakati manqulaga, ya'ni fathaga munosib alifga qalb qilamiz: يُبَاْعْنَ bo'lib, alif bilan ayn orasda ijtimo'i sokinayn vujudga keldi, alifni hazf qilamiz: يُبَعْنَ bo'ladi تُبَعْنَ ham shunday."
+        },
+        {
+          "type": "bolim",
+          "uz": "Ismi foil"
+        },
+        {
+          "type": "matn",
+          "uz": "Sarfi quyidagicha:"
+        },
+        {
+          "type": "matn",
+          "uz": "بَائِعٌ، بَائِعَانِ، بَائِعُونَ، بَائِعَةٌ، بَائِعَتَانِ، بَائِعَاتٌ"
+        },
+        {
+          "type": "matn",
+          "uz": "بائِعٌ aslida بايِعٌ edi, alifi zoidadan keyin «yo» keldi, «yo»ni hamzaga qalb qilamiz بائِعٌ bo'ladi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Qoida"
+        },
+        {
+          "type": "matn",
+          "uz": "«Vov» va «yo» alifi zoidadan keyin kelsa, «vov» va «yo»ni hamzaga qalb qilinadi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan, قَاوِلٌ – قائِلٌ bo'ladi, بايِعٌ – بائِعٌ bo'ladi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Ismi maf'ul"
+        },
+        {
+          "type": "matn",
+          "uz": "Sarfi quyidagicha:"
+        },
+        {
+          "type": "matn",
+          "uz": "مَبِيْعٌ، مَبِيْعَانِ، مَبِيْعُونَ، مَبِيْعَةٌ، مَبِيْعَتَانِ، مَبِيْعَاتٌ"
+        },
+        {
+          "type": "matn",
+          "uz": "Uni jam'i taksiri مَبَائِعُ bo'ladi."
+        },
+        {
+          "type": "matn",
+          "uz": "مَبِيْعٌ aslida مَبْيُوْعٌ edi. Zamma \"yo\"ga og'ir, yoning zammasini undan oldingi harfga beramiz. مَبُيْوْعٌ bo'lib, shu turishiga so'zlamoq mumkin emas, chunki «yo» bilan «vov» orasida ikki sokin jam' bo'ladi, «yo»ni hazf qilamiz: مَبُوْعٌ bo'lib, ajvafi «vov»ining ismi maf'uli bilan ishtiboh vujudga keladi. Ya'ni ikkovining shakli bir bo'lib qoldi. Iltibosdan (ishtibohdan) qutulish uchun «vov»dan oldingi harfga kasra beramiz. مَبِوْعٌ bo'lib, «vov» sokin oldingi harfi kasrali bo'ladi, «vov»ni «yo»ga qalb qilamiz مَبِيْع bo'ladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Bu Imom Abul Hasan Axfash nazdida shunday."
+        },
+        {
+          "type": "matn",
+          "uz": "Imomi Sibavayh «مَبْيُوْعٌ»da «vov»ni hazf qiladi: مَبْيْعٌ bo'ladi. «Yo»ning salomat qolishi uchun «yo»dan oldingi harfga kasra beradi: مَبِيْعٌ bo'ladi. Imomi Axfashning dalili vov alomati ismi maf'ul bo'lgani uchun"
+        }
+      ]
     }
   ]
 }

@@ -6042,6 +6042,90 @@
           "uz": "يَدُومُ aslida يَدْوُمُ edi. Zamma vovga og'ir bo'lgani uchun vovning zammasini oldindagi harfga berdik يَدُومُ bo'ldi. نَقْلُ الْحَرَكَةِ فَقَطْ degan qoida bor. يَدُمْنَ aslida يَدْوُمْنَ bo'lgan. Zamma vovga og'ir bo'lgani uchun vovni zammasini oldindagi harfga berdik يَدُوْمْنَ bo'lib, ijtimoi sokinayn hosil bo'ldi. Vov bilan mim orasida vovni hazf qildik. يَدُمْنَ bo'ldi. تَدُمْنَ ham xuddi shunday. النَّقْلُ مَعَ الْحَذَفِ degan qoida bor."
         }
       ]
+    },
+    {
+      "num": 78,
+      "page": 114,
+      "titleAr": "",
+      "title": "دام muzore' majhuli va ismi foili",
+      "blocks": [
+        {
+          "type": "bolim",
+          "uz": "Fe'li muzore' majhulining bayoni"
+        },
+        {
+          "type": "matn",
+          "uz": "يُدَامُ، يُدَامَانِ، يُدَامُونَ، تُدَامُ، تُدَامَانِ، يُدَمْنَ، تُدَامُ، تُدَامَانِ، تُدَامُونَ، تُدَامِينَ، تُدَامَانِ، تُدَمْنَ، أُدَامُ، نُدَامُ"
+        },
+        {
+          "type": "matn",
+          "uz": "يَدُومُ ning majhul qilish uchun asliga qaytardik يَدْوُمُ bo'ldi. Oxirining oldindagi harfini fathali qildik يَدْوَمُ bo'ldi. Harfi muzoraatni zammalik qildik يُدْوَمُ bo'ldi. Vov mutaharrik moqabli harfi sahihi sokin vovni harakatini moqabliga naql qilib berdik. Vov aslida mutaharrik edi. Hozir oldi fathali bo'ldi deb, vovni alifga qalb qildik يُدَامُ bo'ldi. النقلُ مَعَ القَلْبِ degan qoida bor. يُدَمْنَ aslida يُدْوَمْنَ edi. Vovni harakatini moqabliga berdik. Harakat talab bo'lgani uchun يُدَوْمْنَ bo'lib, mutaharrikul asl moqabli maftuh bo'lgan vovni alifga qalb qildik يُدَامْنَ bo'lib, ijtimoi sokinayn hosil bo'ldi. Alif bilan mim orasida alifni hazf qildik يُدَمْنَ bo'ldi. تُدَمْنَ ham shunday."
+        },
+        {
+          "type": "matn",
+          "uz": "النقلُ مع القَلْبِ وَالْحَذَفِ degan qoida bor."
+        },
+        {
+          "type": "bolim",
+          "uz": "Ismi foil"
+        },
+        {
+          "type": "matn",
+          "uz": "دَائِمٌ، دَائِمَانِ، دَائِمُونَ، دَائِمَةٌ، دَائِمَتَانِ، دَائِمَاتٌ"
+        },
+        {
+          "type": "matn",
+          "uz": "دَائِمٌ aslida دَاوِمٌ edi. Vov kelgani uchun alifi zoidadan keyin vovni hamzaga qalb qildik دَائِمٌ bo'ldi. Qalb qoidalaridan vovni hamzaga qalb qilish qoidasi bor."
+        },
+        {
+          "type": "bolim",
+          "uz": "Ismi maf'ul"
+        }
+      ]
+    },
+    {
+      "num": 79,
+      "page": 115,
+      "titleAr": "",
+      "title": "دام ismi maf'uli va jahdi",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "مَدُومٌ، مَدُومَانِ، مَدُومُونَ، مَدُومَةٌ، مَدُومَتَانِ، مَدُومَاتٌ"
+        },
+        {
+          "type": "matn",
+          "uz": "مَدُومُ aslida مَدْوُوْمُ edi. Zamma vovga og'ir bo'lgani uchun vovni zammasini moqabliga berdik مَدُوْوْمُ bo'lib, ijtimoi sokinayn hosil bo'ldi. Ikki vov orasida bir vovni hazf qildik مَدُوْمُ bo'ldi. Imomi Axfash yo'nalishlarida avvalgi vovni, imom Sibavayh nazdida ikkkinchi vovni hazf qilindi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li jahdning ma'lumi"
+        },
+        {
+          "type": "matn",
+          "uz": "لم يَدُمْ، لم يَدُومَا، لم يَدُومُوا، لم تَدُمْ، لم تَدُومَا، لم يَدُمْنَ، لم تَدُمْ، لم تَدُومَا، لم تَدُومُوا، لم تَدُومِي، لم تَدُومَا، لم تَدُمْنَ، لم أَدُمْ، لم نَدُمْ"
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ يَدُمْ aslida لَمْ يَدْوُمْ bo'lib, zamma vovga og'irdir. Shuning uchun vovni zammasini moqabliga berdik. Harakattalab bo'lgani uchun لَمْ يَدُوْمْ bo'lib, ijtimoi sokinayn hosil bo'ldi. Vov bilan mim orasida vovni hazf qildik لَمْ يَدُمْ bo'ldi."
+        },
+        {
+          "type": "matn",
+          "uz": "7-siyg'ada ayni fe'l mahzufdir. Ular: ma'lum va majhulda, g'oib, g'oibah, g'oibot, muxotab, muxotabot va ikki mutakalimda."
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li jahdning majhuli"
+        },
+        {
+          "type": "matn",
+          "uz": "لم يُدَمْ، لم يُدَامَا، لم يُدَامُوا، لم تُدَمْ، لم تُدَامَا، لم يُدَمْنَ، لم تُدَمْ، لم تُدَامَا، لم تُدَامُوا، لم تُدَامِي، لم تُدَامَا، لم تُدَمْنَ، لم أُدَمْ، لم نُدَمْ"
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ يُدَمْ aslida لَمْ يُدْوَمْ edi. Vov mutaharrik moqabli harfi"
+        }
+      ]
     }
   ]
 }

@@ -4444,6 +4444,90 @@
           "uz": "Amr fe'lini, muzore' fe'lining olti ma'lum muxotab siyg'asidan ikki amal bilan olinadi."
         }
       ]
+    },
+    {
+      "num": 53,
+      "page": 80,
+      "titleAr": "",
+      "title": "Ajvafning amri g'oibi va nahiysi",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "Birinchi amal shuki, تَبِيْعُ muzore' muxotabi ma'lumni oxiriga qaradik. Oxiri harfi sahih ekan, sokin qildik va تَبِيْعْ bo'ldi."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkinchi amal harfi muzoraatni tashladik بِيْعْ bo'lib, ijtimoi sokinayn yuzaga keldi. \"Yo\" bilan 'ayn orasida \"yo\"ni hazf qildik بِعْ bo'ldi."
+        },
+        {
+          "type": "matn",
+          "uz": "بِعْنَ aslida اِبْيِعْنَ edi. \"Yo\"ga kasra og'ir bo'lgani uchun \"yo\"ni kasrasini oldindagi harfga berdik. اِبِيْعْنَ bo'lib, ijtimoi sokinayn yuzaga keldi. \"Yo\" bilan 'ayn orasida \"yo\"ni hazf qildik, اِبِعْنَ bo'ldi. Hamza bizga kerak bo'lmagani uchun uni hazf qildik. بِعْنَ bo'ldi. Nuni ta'kidi xofifah yoki saqila yopishgan vaqtida hazf qilingan 'ayni fe'lga qaytib keladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan:"
+        },
+        {
+          "type": "matn",
+          "uz": "بِيْعَنْ، بِيْعُنْ، بِيْعِنْ، بِيْعُنَّ، بِيْعَنَّ، بِيْعَانِّ، بِيْعُنَّ، بِيعِنَّ، بِعْنَانِّ"
+        },
+        {
+          "type": "matn",
+          "uz": "Fe'li jahdda bo'lsa:"
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ يَبِيْعَنْ، لَمْ يَبِيْعُنْ، لَمْ يَبِيْعِنْ، لَمْ يَبِيْعَنَّ، لَمْ يَبِيْعُنَّ، لم يَبِيْعانِّ، لم يَبِيْعُنَّ...الخ"
+        },
+        {
+          "type": "bolim",
+          "uz": "Amri g'oibning ma'lumi"
+        },
+        {
+          "type": "matn",
+          "uz": "لِيَبِعْ، لِيَبِيْعَا، لِيَبِيْعُوا، لِتَبِعْ، لِتَبِيْعَا، لِيَبِعْنَ، لأَبِعْ، لِنَبِعْ"
+        },
+        {
+          "type": "matn",
+          "uz": "لِيَبِعْ aslida لِيَبْيِعْ edi. \"yo\"ga kasra og'ir bo'lgani uchun \"yo\"ni kasrasini moqabliga berdik. لِيَبِيْعْ bo'lib, ijtimoi sokinayn yuzaga keldi. \"Yo\" bilan 'ayn orasida \"yo\" ni hazf qildik. لِيَبِعْ bo'ldi. لِيَبِيْعا aslida لِيَبْيِعا edi. \"Yo\"ga kasra og'ir moqabliga berdik, لِيَبِيْعَا bo'ldi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Majhuli amri g'oib"
+        },
+        {
+          "type": "matn",
+          "uz": "لِتُبَعْ، لِتُبَاعَا، لِتُبَاعُوا، لِتُبَاعِي، لِتُبَاعَا، لِتُبَعْنَ، لِيُبَعْ، لِيُبَاعَا، لِيُبَاعُوا، لِتُبَعْ، لِتُبَاعَا، لِيُبَعْنَ، لأُبَعْ، لِنُبَعْ"
+        },
+        {
+          "type": "matn",
+          "uz": "لِتُبَاعَا da ijtimoi sokinayn yo'q. Alif o'z o'rnida."
+        },
+        {
+          "type": "bolim",
+          "uz": "Ma'lumi fe'li nahiy hozir"
+        },
+        {
+          "type": "matn",
+          "uz": "لا تَبِعْ، لا تَبِيْعَا، لا تَبِيْعُوا، لا تَبِيْعِي، لا تَبِيْعَا، لا تَبِعْنَ، لا يَبِعْ، لا يَبِيْعَا، لا يَبِيْعُوا، لا تَبِعْ، لا تَبِيْعَا، لا يَبِعْنَ، لا أَبِعْ، لا نَبِعْ"
+        },
+        {
+          "type": "matn",
+          "uz": "لا تَبِعْ aslida لا تَبْيِعْ edi, يga kasra og'ir bo'lgani uchun يni kasrasini moqabliga berdik. لا تَبِيْعْ bo'lib, ijtimoi sokinayn yuzaga keldi. ي bilan 'ayn orasida يni hazf qildik. لا تَبِعْ bo'ldi. لا تَبِيْعَا aslida لا تَبْيِعا edi. يga kasra og'ir bo'lgani uchun moqabliga berdik. لا تَبِيْعا bo'ldi. Sarf qoidasidan nakli harakati faqat qoidasi bor. Hazfi harfi illat yo'q."
+        },
+        {
+          "type": "bolim",
+          "uz": "Majhuli nahiy hozir"
+        },
+        {
+          "type": "matn",
+          "uz": "لا تُبَعْ، لا تُبَاعَا، لا تُبَاعُوا، لا تُبَاعِي، لا تُبَاعَا، لا تُبَعْنَ، لا يُبَعْ، لاَ يُبَاعَا، لا يُبَاعُوا، لا تُبَعْ، لا تُبَاعَا، لا يُبَعْنَ، لا أُبَعْ، لا نُبَعْ"
+        },
+        {
+          "type": "matn",
+          "uz": "لا تُبَعْ aslida لا تُبْيَعْ edi. ي maftuh, moqabli harfi sahihi sokin. ي ni harakatini moqabliga berib, asli ي fathali edi. Hozir oldi maftuh bo'ldi. يni alifga qalb"
+        }
+      ]
     }
   ]
 }

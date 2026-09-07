@@ -108,7 +108,7 @@
         },
         {
           "type": "matn",
-          "uz": "Masalan: فَعَلَ – ضَرَبَ vaznida."
+          "uz": "Masalan: ضَرَبَ – فَعَلَ vaznida."
         },
         {
           "type": "matn",
@@ -116,7 +116,7 @@
         },
         {
           "type": "matn",
-          "uz": "Masalan: أَفْعَلَ – أَكْرَمَ vaznida. Bunda أَكْرَمَ ni فَعَلَ ga solishtirganda ا (alif) harfi zoid bo'ladi. أَكْرَمَ ning asli كَرُمَ dir."
+          "uz": "Masalan: أَكْرَمَ – أَفْعَلَ vaznida. Bunda أَكْرَمَ ni فَعَلَ ga solishtirganda ا (alif) harfi zoid bo'ladi. أَكْرَمَ ning asli كَرُمَ dir."
         },
         {
           "type": "matn",
@@ -144,7 +144,7 @@
         },
         {
           "type": "matn",
-          "uz": "Masalan: فَعَلَ – ضَرَبَ vaznida."
+          "uz": "Masalan: ضَرَبَ – فَعَلَ vaznida."
         },
         {
           "type": "matn",
@@ -152,7 +152,7 @@
         },
         {
           "type": "matn",
-          "uz": "Masalan: أَفْعَلَ – أَكْرَمَ vaznida."
+          "uz": "Masalan: أَكْرَمَ – أَفْعَلَ vaznida."
         },
         {
           "type": "list",
@@ -168,7 +168,7 @@
         },
         {
           "type": "matn",
-          "uz": "Masalan: فَعْلَلَ – دَحْرَجَ vaznida."
+          "uz": "Masalan: دَحْرَجَ – فَعْلَلَ vaznida."
         },
         {
           "type": "matn",
@@ -176,7 +176,7 @@
         },
         {
           "type": "matn",
-          "uz": "Masalan: تَفَعْلَلَ – تَدَخْرَجَ vaznida."
+          "uz": "Masalan: تَدَخْرَجَ – تَفَعْلَلَ vaznida."
         },
         {
           "type": "list",
@@ -587,7 +587,7 @@
         },
         {
           "type": "matn",
-          "uz": "Masalan: فَعَلَ – أَبَرَ vaznida."
+          "uz": "Masalan: أَبَرَ – فَعَلَ vaznida."
         },
         {
           "type": "list",
@@ -604,7 +604,7 @@
         },
         {
           "type": "matn",
-          "uz": "Masalan: فَعَلَ – بَأَر vaznida. بَأَر (ba'aro) ma'nosi: choh qazidi, demakdir."
+          "uz": "Masalan: بَأَر – فَعَلَ vaznida. بَأَر (ba'aro) ma'nosi: choh qazidi, demakdir."
         },
         {
           "type": "matn",
@@ -612,7 +612,7 @@
         },
         {
           "type": "matn",
-          "uz": "Masalan: فَعَلَ – بَرَأَ vaznida. Ma'nosi: yaratdi, demakdir."
+          "uz": "Masalan: بَرَأَ – فَعَلَ vaznida. Ma'nosi: yaratdi, demakdir."
         }
       ]
     },
@@ -644,7 +644,7 @@
         },
         {
           "type": "matn",
-          "uz": "Masalan: فَعْلَلَ – صَرْصَرَ vaznida."
+          "uz": "Masalan: صَرْصَرَ – فَعْلَلَ vaznida."
         }
       ]
     },
@@ -656,7 +656,7 @@
       "blocks": [
         {
           "type": "matn",
-          "uz": "مِثال ya'ni, fe'li sahihga o'xshaydi moziysining e'loli yo'qligida. Misol shunday kalimadirki, xoh ism bo'lsin, xoh fe'l, فا sining barobarida harfi illat bo'ladi. Masalan: وَعْدٌ va فَعْلٌ – وَعَدَ va فَعَلَ vaznida."
+          "uz": "مِثال ya'ni, fe'li sahihga o'xshaydi moziysining e'loli yo'qligida. Misol shunday kalimadirki, xoh ism bo'lsin, xoh fe'l, فا sining barobarida harfi illat bo'ladi. Masalan: وَعْدٌ va وَعَدَ – فَعْلٌ va فَعَلَ vaznida."
         }
       ]
     },
@@ -672,7 +672,7 @@
         },
         {
           "type": "matn",
-          "uz": "Masalan: قَوْلٌ va فَعْلٌ – قَوَلَ va فَعَلَ vaznida."
+          "uz": "Masalan: قَوْلٌ va قَوَلَ – فَعْلٌ va فَعَلَ vaznida."
         }
       ]
     },
@@ -688,7 +688,7 @@
         },
         {
           "type": "matn",
-          "uz": "Masalan: رَمْيٌ va فَعْلُ – رَمَيَ va فَعَلَ vaznida."
+          "uz": "Masalan: رَمْيٌ va رَمَيَ – فَعْلُ va فَعَلَ vaznida."
         }
       ]
     },
@@ -704,7 +704,7 @@
         },
         {
           "type": "matn",
-          "uz": "Masalan: قَوْيٌ va فَعْلُ – قَوِيَ va فَعِلَ vaznida."
+          "uz": "Masalan: قَوْيٌ va قَوِيَ – فَعْلُ va فَعِلَ vaznida."
         }
       ]
     },
@@ -720,7 +720,7 @@
         },
         {
           "type": "matn",
-          "uz": "Masalan: وَشْيٌ va فَعْلُ – وَشَيَ va فَعَلَ vaznida."
+          "uz": "Masalan: وَشْيٌ va وَشَيَ – فَعْلُ va فَعَلَ vaznida."
         }
       ]
     },
@@ -752,7 +752,7 @@
         },
         {
           "type": "matn",
-          "uz": "Masalan: رَجُل va فَعُلٌ – فَرَس va فَعَل vaznida."
+          "uz": "Masalan: رَجُل va فَرَس – فَعُلٌ va فَعَل vaznida."
         }
       ]
     },
@@ -996,7 +996,7 @@
         },
         {
           "type": "matn",
-          "uz": "Shunda ضُرِبَ – ضَرَبَ bo'ladi."
+          "uz": "Shunda ضَرَبَ – ضُرِبَ bo'ladi."
         },
         {
           "type": "matn",

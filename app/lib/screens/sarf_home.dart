@@ -194,10 +194,36 @@ class SarfLessonScreen extends StatelessWidget {
         return _Royxat(block: b);
       case 'jadval':
         return _Jadval(block: b);
+      case 'bolim':
+        return _Bolim(matn: b.uz);
       default:
         return AralashMatn(b.uz);
     }
   }
+}
+
+/// Kitobdagi kichik, o'rtaga tekislangan bo'lim sarlavhasi
+/// («Muzakkar siyg'alari» kabi). Dars sarlavhasi emas — dars ichidagi
+/// ajratuvchi, shuning uchun kichikroq va sokinroq ko'rinadi.
+class _Bolim extends StatelessWidget {
+  final String matn;
+  const _Bolim({required this.matn});
+
+  @override
+  Widget build(BuildContext context) => Padding(
+    padding: const EdgeInsets.only(top: 10, bottom: 2),
+    child: Center(
+      child: Text(
+        matn,
+        textAlign: TextAlign.center,
+        style: const TextStyle(
+          fontWeight: FontWeight.w800,
+          fontSize: 15.5,
+          color: AppColors.indigo,
+        ),
+      ),
+    ),
+  );
 }
 
 /// Alohida turgan arabcha satr — o'qib berish tugmasi bilan.

@@ -5,7 +5,7 @@
     "author": "Do'stmuhammad Nasriddin Bodariy",
     "nashr": "Toshkent, «Movarounnahr», 2009",
     "izoh": "Kitobning o'zbekchasi kirill yozuvida. Ilovada kontent lotinda saqlanadi — kirill ko'rinishini ilovaning o'zi hosil qiladi (lib/uz_yozuv.dart). Arabcha matn manbadagidek, qanday harakatlangan bo'lsa shundayligicha ko'chiriladi.",
-    "blokTurlari": "matn — o'zbekcha xatboshi (arabcha misollar ichida kelishi mumkin); misol — alohida turgan arabcha satr; list — raqamli ro'yxat; jadval — kitobdagi boblar jadvali (ustunlar va qatorlar)",
+    "blokTurlari": "matn — o'zbekcha xatboshi (arabcha misollar ichida kelishi mumkin); misol — alohida turgan arabcha satr; list — raqamli ro'yxat; jadval — kitobdagi boblar jadvali (ustunlar va qatorlar); bolim — dars ichidagi kichik sarlavha",
     "arabchaTartib": "Arabcha ro'yxatlar mantiqiy (o'qish) tartibida saqlanadi. Kitobda «fo, ayn, lom» kabi sanoqlar terishda teskari chiqib qolgan — ilovada to'g'ri tartibda ko'rsatiladi, chunki o'zbekcha izohi ham shu tartibda."
   },
   "lessons": [
@@ -1281,6 +1281,74 @@
         {
           "type": "matn",
           "uz": "Uchinchisi: ضارِباتُ – uruvchi ko'p ayollar, siyg'asi jam'i muannas, ismi fo'il."
+        }
+      ]
+    },
+    {
+      "num": 21,
+      "page": 27,
+      "titleAr": "",
+      "title": "Ismi maf'ul bayoni",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "Ismi maf'ul sulosiy mujarraddan مَفْعُول vaznida keladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan مَضْرُوبٌ va مَقْتُولٌ. Bunda و (vov) ismi maf'ul belgisidir."
+        },
+        {
+          "type": "matn",
+          "uz": "Ismi maf'ul sulosiy mujarraddan boshqa boblardan muzore' fe'li majhulining vaznida keladi. Harfi muzoraatning o'rniga zammalik mim keltirmoqlik bilan va oxiridan oldingi harfini fathali qilish bilan yasaladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: مُكْرَمٌ va مُدَحْرَجٌ kabi."
+        },
+        {
+          "type": "matn",
+          "uz": "Ismi maf'ul 6 siyg'ada keladi: 3 tasi muzakkar va 3tasi muannas."
+        },
+        {
+          "type": "bolim",
+          "uz": "Muzakkar siyg'alari"
+        },
+        {
+          "type": "matn",
+          "uz": "Muzakkarining 3 siyg'asidan birinchisi:"
+        },
+        {
+          "type": "matn",
+          "uz": "مَضْرُوبٌ – urilgan, bir er kishi, siyg'asi vohid, muzakkar, ismi maf'ul."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkinchisi: مَضْرُوبانِ – urilgan, ikki er kishi, siyg'asi tasniyai muzakkar, ismi maf'ul."
+        },
+        {
+          "type": "matn",
+          "uz": "Uchinchisi: مَضْرُوبُونَ – urilgan: ko'p er kishilar: siyg'asi jam'i muzakkar: ismi maf'ul."
+        },
+        {
+          "type": "bolim",
+          "uz": "Muannas siyg'alari"
+        },
+        {
+          "type": "matn",
+          "uz": "Ismi maf'ulning 3 muannas siyg'asidan:"
+        },
+        {
+          "type": "matn",
+          "uz": "Birinchisi: مَضْرُوبَةٌ – urilgan, bir ayol kishi, siyg'asi vohidah, muannas, ismi maf'ul."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkinchisi: مَضْرُوبَتانِ – urilgan: ikki ayol, siyg'asi tasniyai muannas, ismi maf'ul."
+        },
+        {
+          "type": "matn",
+          "uz": "Uchinchisi: مَضْرُوباتٌ – urilgan, ko'p ayollar, siyg'asi jam'i muannas, ismi maf'ul."
         }
       ]
     }

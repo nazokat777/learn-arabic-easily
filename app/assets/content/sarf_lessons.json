@@ -675,6 +675,192 @@
           "uz": "Masalan: قَوْلٌ va فَعْلٌ – قَوَلَ va فَعَلَ vaznida."
         }
       ]
+    },
+    {
+      "num": 8,
+      "page": 15,
+      "titleAr": "",
+      "title": "V-Noqis",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "ناقِصْ nuqsonli kalimadir. Oxirgi harfini ba'zi siyg'alarida hazf qilishlik (ya'ni olib tashlashlik) bilan nuqsonli bo'ladi. Noqis shunday kalimadirki, xoh ism bo'lsin, xoh fe'l «lomi»ning barobarida harfi illat bo'ladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: رَمْيٌ va فَعْلُ – رَمَيَ va فَعَلَ vaznida."
+        }
+      ]
+    },
+    {
+      "num": 9,
+      "page": 15,
+      "titleAr": "",
+      "title": "VI-Lafif",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "لَفيف – bir tomondan ikki harfi illat bilan o'ralgan kalimadir. Lafif shunday kalimadirki, xoh ism bo'lsin, xoh fe'l, عَيْن va لامِ ning barobarida harfi illat bo'ladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: قَوْيٌ va فَعْلُ – قَوِيَ va فَعِلَ vaznida."
+        }
+      ]
+    },
+    {
+      "num": 10,
+      "page": 15,
+      "titleAr": "",
+      "title": "VII-Multaviy",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "مُلْتَوي ikki tomondan harfi illat bilan o'ralgan kalimadir. Multaviy shunday kalimadirki, xoh ism bo'lsin, xoh fe'l, فا va لامِ ning barobarida harfi illat bo'ladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: وَشْيٌ va فَعْلُ – وَشَيَ va فَعَلَ vaznida."
+        }
+      ]
+    },
+    {
+      "num": 11,
+      "page": 15,
+      "titleAr": "",
+      "title": "Ism bayoni",
+      "blocks": [
+        {
+          "type": "list",
+          "intro": "Ism ikki qismdir:",
+          "items": [
+            "اسمِ جامِدْ (Ismi jomid).",
+            "اِسْمِ مَصْدَرْ (Ismi masdar)."
+          ]
+        }
+      ]
+    },
+    {
+      "num": 12,
+      "page": 16,
+      "titleAr": "",
+      "title": "I-Ismi jomid",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "Ismi jomid اِسْمِ جامِدْ bir holda (o'zgarmay) turadigan ism. Ismi jomid shunday ismdirki, undan biror narsani ishtiqoq qilib, ya'ni ichidan yorib biror narsani olib bo'lmaydi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: رَجُل va فَعُلٌ – فَرَس va فَعَل vaznida."
+        }
+      ]
+    },
+    {
+      "num": 13,
+      "page": 16,
+      "titleAr": "",
+      "title": "II-Ismi masdar",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "Ismi masdar اِسْمِ مَصْدَرْ shunday ismdurkim, undan biror narsani ishtiqoq qilinadi, ya'ni ichidan yorib olinadi. Va uni o'zbekchaga tarjima qilganda ma'nosining oxirida مَقْ (-moq) yoki مَكْ (-mak) qo'shimchasi bo'ladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: اَلضَّرْبُ – urmoq, الْمَحَبَّةُ – sevmak."
+        }
+      ]
+    },
+    {
+      "num": 14,
+      "page": 16,
+      "titleAr": "",
+      "title": "Ishtiqoq bayoni",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "Arab tilida har bir مَصْدَرْ (masdar)dan 12 narsani ishtiqoq qilinadi."
+        },
+        {
+          "type": "list",
+          "intro": "",
+          "items": [
+            "ماضي (moziy) – o'tgan zamon fe'li.",
+            "مُضارع ( muzore') – kelasi zamon fe'li.",
+            "اِسْمِ فاعِل (ismi fo'il) – ot, ya'ni ish-harakatini bajaruvchi kishining nomi.",
+            "اِسْمِ مَفْعُول (ismi maf'ul) – bajarilgan ish-harakatining nomi.",
+            "فَعْلِ جَحْدْ (fe'li jahd) – o'tgan zamonda bo'lmagan fe'l.",
+            "فَعْلِ نَفي (fe'li nafiy) – kelasi zamonda bo'lmaydigan fe'l.",
+            "أَمْرِ حاضِرْ (amri hozir) – buyruq fe'li.",
+            "أَمْرِ غائبْ (amri g'oib) – uchinchi shaxsga qaratilgan buyruq fe'li.",
+            "نَهي حاضِرْ (nahiy hozir) – tiyilmoq va man' qilmoq fe'li.",
+            "اِسْمِ زمان واِسْمِ مكان (ismi zamon va ismi makon) – ismi zamon biror ish-harakatning bajarilish vaqti (zamonni) nomi, ismi makon ish-harakatni bajarilishi o'rnining nomi.",
+            "اسْمِ آلَتْ (ismi olat) – fe'lni, ish-harakatni bajarish asbobi (olati) nomi.",
+            "اِسْمِ تَفْضِيلْ (ismi tafzil) – o'zgalardan ortiqroq fe'lni ish-harakatni bajaruvchining nomi."
+          ]
+        }
+      ]
+    },
+    {
+      "num": 15,
+      "page": 17,
+      "titleAr": "",
+      "title": "Yuqorida bayon qilingan kalimalarning shakllari va ma'nolari",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "1. Fe'li moziy: ضَرَبَ – urdi, bir erkak kishi o'tgan zamonda."
+        },
+        {
+          "type": "matn",
+          "uz": "2. Fe'li muzore': يَضْرِبُ – uradi, bir erkak kishi kelasi zamonda."
+        },
+        {
+          "type": "matn",
+          "uz": "Bu o'rinda ضَرْبًا (urmoq) masdardir, ya'ni shu mushtoqlarning manba'idir."
+        },
+        {
+          "type": "matn",
+          "uz": "3. Ismi fo'il: فَهُوَ ضَارِبُ – uruvchi, bir er kishi."
+        },
+        {
+          "type": "matn",
+          "uz": "4. Ismi maf'ul: وَذَاكَ مَضْرُوبُ – urilgan, zarba yegan bir er kishi."
+        },
+        {
+          "type": "matn",
+          "uz": "5. Fe'li jahd: لَمْ يَضْرِبْ – urmadi bir er kishi o'tgan zamonda."
+        },
+        {
+          "type": "matn",
+          "uz": "6. Fe'li nafiy: لا يَضْرِبُ – urmaydi, bir kishi kelasi zamonda."
+        },
+        {
+          "type": "matn",
+          "uz": "7. Amri hozir: اِضْرِبْ – urgin sen bir er kishi, II shaxs buyruq fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "8. Amri g'oyib: لِيَضْرِبْ – ursin u bir er kishi, III shaxs, buyruq fe'li."
+        },
+        {
+          "type": "matn",
+          "uz": "9. Nahiy hozir: لا تَضْرِبْ – urmagin sen bir er kishi (qaytarish fe'li)."
+        },
+        {
+          "type": "matn",
+          "uz": "10. Ismi zamon va makon: مَضْرِبٌ – urmoq vaqti va o'rni (o'rin-payt kelishigi)."
+        },
+        {
+          "type": "matn",
+          "uz": "11. Ismi olat: مِضْرابٌ – urish asbobi (masalan: kaltak)."
+        },
+        {
+          "type": "matn",
+          "uz": "12. Ismi tafzil: أَضْرَبُ – uruvchiroq, ya'ni sheriklaridan ko'ra fe'lni ortiq bajaruvchiroq."
+        }
+      ]
     }
   ]
 }

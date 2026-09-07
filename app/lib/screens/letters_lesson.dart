@@ -204,7 +204,7 @@ class LettersLesson extends StatelessWidget {
                       const SizedBox(width: 8),
                       Expanded(
                         child: Text(
-                          'Махраж: ${L.makhrajUz}',
+                          'Maxraj: ${L.makhrajUz}',
                           style: const TextStyle(
                             color: AppColors.ink,
                             height: 1.3,

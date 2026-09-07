@@ -285,29 +285,34 @@ class _Jadval extends StatelessWidget {
 
   Widget _sarlavhaQatori(List<SarfUstun> ustunlar) => Container(
     color: AppColors.indigo.withValues(alpha: 0.12),
-    child: Row(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        _katak(
-          _bobEni,
-          child: Text(
-            block.sarlavha,
-            textAlign: TextAlign.center,
-            style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 12),
-          ),
-        ),
-        for (final u in ustunlar)
+    // IntrinsicHeight: kataklar eng balandiga tenglashadi va ajratuvchi
+    // chiziqlar butun qator bo'ylab uzluksiz tushadi. Usiz «stretch»
+    // cheksiz balandlik so'rab, chizish yiqiladi.
+    child: IntrinsicHeight(
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
           _katak(
-            _katakEni,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                _arabcha(u.ar, 14, FontWeight.w700),
-                if (u.ar2.isNotEmpty) _arabcha(u.ar2, 12.5, FontWeight.w400),
-              ],
+            _bobEni,
+            child: Text(
+              block.sarlavha,
+              textAlign: TextAlign.center,
+              style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 12),
             ),
           ),
-      ],
+          for (final u in ustunlar)
+            _katak(
+              _katakEni,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  _arabcha(u.ar, 14, FontWeight.w700),
+                  if (u.ar2.isNotEmpty) _arabcha(u.ar2, 12.5, FontWeight.w400),
+                ],
+              ),
+            ),
+        ],
+      ),
     ),
   );
 
@@ -321,29 +326,31 @@ class _Jadval extends StatelessWidget {
     decoration: const BoxDecoration(
       border: Border(top: BorderSide(color: Color(0x22000000))),
     ),
-    child: Row(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        _katak(
-          _bobEni,
-          child: Text(
-            q.bob,
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-              fontWeight: FontWeight.w900,
-              fontSize: 12,
-              color: AppColors.indigo,
+    child: IntrinsicHeight(
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          _katak(
+            _bobEni,
+            child: Text(
+              q.bob,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontWeight: FontWeight.w900,
+                fontSize: 12,
+                color: AppColors.indigo,
+              ),
             ),
           ),
-        ),
-        for (var i = 0; i < ustunSoni; i++)
-          _katak(
-            _katakEni,
-            child: i < q.kataklar.length
-                ? _katakIchi(q, i)
-                : const SizedBox.shrink(),
-          ),
-      ],
+          for (var i = 0; i < ustunSoni; i++)
+            _katak(
+              _katakEni,
+              child: i < q.kataklar.length
+                  ? _katakIchi(q, i)
+                  : const SizedBox.shrink(),
+            ),
+        ],
+      ),
     ),
   );
 

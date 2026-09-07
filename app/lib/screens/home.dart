@@ -86,7 +86,7 @@ class HomeScreen extends StatelessWidget {
                       _ModuleCard(
                         title: 'Alifbo (Harflar)',
                         subtitle:
-                            'Harf va talaffuz: 28 harf, махраж, harakatlar',
+                            'Harf va talaffuz: 28 harf, maxraj, harakatlar',
                         arabic: 'أ ب ت',
                         accent: AppColors.emerald,
                         onTap: () => Navigator.push(

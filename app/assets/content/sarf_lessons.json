@@ -3410,6 +3410,162 @@
           "uz": "يَفْرِرُ bo'ldi. Oxiridan oldingi harfini fathali qildik: يَفْرَرُ bo'ldi. Harfi muzore'ni zammalik qildik. يُفْرَرُ bo'ldi."
         }
       ]
+    },
+    {
+      "num": 41,
+      "page": 56,
+      "titleAr": "",
+      "title": "Muzoaf fe'lning ismi fo'il, ismi maf'ul va jahdi",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "Qo'lga oldik, moqabliga (undan oldingi harfga) qaradik, harakattalab ekan, ya'ni sukunli ekan. Harakatini moqabliga (undan oldingi harfga) berdik: يُفَرْرُ bo'lib, sharti idg'om vujudga keldi: birinichi «ر» (ro)ni ikkinchi «ر» (ro)ga idg'om qildik: يُفَرُّ bo'ldi."
+        },
+        {
+          "type": "matn",
+          "uz": "Fe'li muzore'ning majhuli ham 14 siyg'ada keladi. Ushbu tariqada:"
+        },
+        {
+          "type": "matn",
+          "uz": "يُفَرُّ، يُفَرَّانِ، يُفَرُّونَ، تُفَرُّ، تُفَرَّانِ، يُفْرَرْنَ، تُفَرُّ، تُفَرَّانِ، تُفَرُّونَ، تُفَرِّيْنَ، تُفَرَّانِ، تُفْرَرْنَ، أُفَرُّ، نُفَرُّ."
+        },
+        {
+          "type": "matn",
+          "uz": "O'n ikki siyg'ada idg'om bor: غائِباتْ (g'oibot) va مُخاطَباتْ (muxotabot)da idg'om yo'q. Sabablari yuqorida o'tdi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Ismi foil, ya'ni fe'lni bajaruvchi kishining nomi (ega)"
+        },
+        {
+          "type": "matn",
+          "uz": "Ismi fo'il olti siyg'ada keladi. Sarf qilinishi (tuslanishi) quyidagicha:"
+        },
+        {
+          "type": "matn",
+          "uz": "فَارٌّ، فَارَّانِ، فَارُّونَ، فَارَّةٌ، فَارَّتَانِ، فَارَّاتٌ (وَفَوَارِرُ)"
+        },
+        {
+          "type": "matn",
+          "uz": "Ana shu olti siyg'ada birinchi «ر» (ro)ning harakatni qo'lga oldik. Moqabli (undan oldingi harfga) qaradik. Harfi mad «ا» (alif) bor ekan, ya'ni harakattalab emas ekan, shunda birinchi «ر» (ro)ning harakatini tashladik: فَارْرٌ bo'lib, sharti idg'om vujudga keldi, bas, birinchi «ر» (ro)ni ikkinchi «ر» (ro)ga idg'om qildik: K فَارٌّ bo'ldi."
+        },
+        {
+          "type": "matn",
+          "uz": "فَوَارِرُ ismi fo'ilning jam'i taksiri (birligining shakli o'zgargan va ko'plikka aylangan ega o'z aslida turadi, unda idg'om bo'lmaydi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Ismi maf'ul (bajarilgan ish-harakatning ismi)"
+        },
+        {
+          "type": "matn",
+          "uz": "Ismi maf'ul ham olti siyg'ada keladi, tuslanishi quyidagicha:"
+        },
+        {
+          "type": "matn",
+          "uz": "مَفْرُورٌ، مَفْرُورَانِ، مَفْرُورُونَ، مَفْرُورَةٌ، مَفْرُورَتَانِ، مَفْرُورَاتٌ"
+        },
+        {
+          "type": "matn",
+          "uz": "Bu siyg'alar o'z aslidadir, chunki bir jinsdagi harflarning orasiga yot harf tushib qoldi. مَفَارِرُ ismi maf'ulning jam'i taksiridir. (Birlik shakli o'zgartirilib, ko'plikka aylangan)."
+        },
+        {
+          "type": "bolim",
+          "uz": "Jahd ma'lum fe'li"
+        },
+        {
+          "type": "matn",
+          "uz": "Fe'li jahdning (o'tgan zamon inkor fe'lining) ma'lumi 14 siyg'ada keladi. Tuslanishi quyidagicha:"
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ يَفِرَّ، لَمْ يَفِرَّا، لَمْ يَفِرُّوا، لَمْ تَفِرَّ، لَمْ تَفِرَّا، لَمْ يَفْرِرْنَ، لَمْ تَفِرَّ، لَمْ تَفِرَّا، لَمْ تَفِرُّوا، لَمْ تَفِرِّي، لَمْ تَفِرَّا، لَمْ تَفْرِرْنَ، لَمْ أَفِرَّ، لَمْ نَفِرَّ."
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ يَفِرَّ – aslida لَمْ يَفْرِرْ"
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ تَفِرَّ – لَمْ تَفْرِرْ"
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ تَفِرَّ – لَمْ تَفْرِرْ"
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ نَفِرَّ – لَمْ نَفْرِرْ"
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ أَفِرَّ – لَمْ أَفْرِرْ bo'lgan."
+        }
+      ]
+    },
+    {
+      "num": 42,
+      "page": 58,
+      "titleAr": "",
+      "title": "Ijtimo'i sokinayn qoidasi va jahdning majhuli",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "Mazkur besh siyg'ada, ya'ni g'oib, g'oiba, muxotab va ikki mutakallim siyg'alarida birinchi «ر» (ro)ning harakatini qo'lga oldik, moqabliga (undan oldingi harfga) qaradik, sukunli bo'lib, harakattalab ekan, moqabliga harakatni berdik: لَمْ يَفْرِرْ bo'lib, ikki «ر» (ro) orasida ijtimo'i sokinayn bo'ldi. (Ya'ni, ikkita sokin bir joyda jam' bo'ldi). Bir kalimada, bir o'rinda ikkita sokin jam' bo'lib, bu kalima bilan so'zlash mumkin emas."
+        },
+        {
+          "type": "matn",
+          "uz": "Ijtimo'i sokinayndan, (ya'ni ikki sokin jamligidan) qutulish uchun bir jinsdan bo'lgan ikki harfning bittasini hazf qilish (olib tashlash) kerak yoki bittasiga harakat berish kerak. Bu o'rinda esa hazf qilib bo'lmaydi. Chunki اِجْحافِ كَلِمه (ijhofi kalima), ya'ni o'zi turushi kerak bo'lgan kalimaning biror harfini hazf qilib, yuborish lozim keladi. Mutajonisayning (ikki jinsdosh harfning) bittasiga harakat ham berib bo'lmaydi. Chunki, تَرْجِيحٍ بِلا مُرَجِّحْ ya'ni sababsiz bir narsani ikkinchisidan ortiq ko'rish lozim keladi. Shuningdek, ijtimo'i sokinayn (ikki jamlangan sokin) bilan so'zlashish mumkin emas."
+        },
+        {
+          "type": "matn",
+          "uz": "Ilojsiz اَلضَّرُورَاتُ تُبِيحُ الْمَحْظُورَاتِ (zaruriyat man' qilingan narsalarni muboh qiladi) qoidasi taqozosiga ko'ra, ikkinchi «ر» (ro)ga fatha beramiz. Chunki fatha harakatlarning orasida yengilrog'idir. Endi لَمْ يَفْرَرْ bo'lib, sharti idg'om vujudga keldi. Birinchi «ر» (ro)ni ikkinchi «ر» (ro)ga idg'om qilamiz, لَمْ يَفِرَّ bo'ladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Istasak, ikkinchi «ر» (ro)ga kasra beramiz."
+        },
+        {
+          "type": "matn",
+          "uz": "السّاكِنُ اِذا حُرِّكَ حُرِّكَ بِالْكَسْرِ qoidasiga binoan, لَمْ يَفِرِّ bo'ldi. Va agar istasak, idg'omni yechgandan keyin o'z asliga qaytarib لَمْ يَفْرِرْ deymiz."
+        },
+        {
+          "type": "matn",
+          "uz": "Qolgan 7 siyg'ada, ya'ni 4 tasniyya va ikki jam'i muzakkar va muxotabada birinchi «ر» (ro)ning harakatini moqabliga berdik, chunki harakattalab edi sharti idg'om vujudga keldi. Birinchi «ر» (ro)ni ikkinchi «ر» (ro)ga idg'om qildik."
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ يفِرَّا، لَمْ يَفِرُّوا، لَمْ تَفِرُّا، لَمْ تَفِرَّا، لَمْ تَفِرُّوا، لَمْ تَفِرِّي، لَمْ تَفِرَّا bo'ldilar."
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ يَفْرِرْنَ لَمْ تَفْرِرْنَ o'tgan qoidaga binoan o'z aslidadir."
+        },
+        {
+          "type": "bolim",
+          "uz": "Majhul jahd fe'li"
+        },
+        {
+          "type": "matn",
+          "uz": "Fe'li jahdni majhul qilish uchun asliga qaytardik: لَمْ يَفْرِرْ bo'ldi. Moqabli oxirini fathali qildik vaharfni muzoro'atni zammali qildik: لَمْ يُفْرَرْ bo'ldi. Birinchi «ر» (ro)ning harakatini moqabliga berdik: لَمْ يُفْرَرْ bo'lib, ijtimo'i sokinayn bo'ldi. Ma'lumida bayon qilingan qoidalarga asosan amal qilsak, quyidagicha uch xil o'qiladi."
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ يُفَرَّ، لَمْ يُفَرِّ، لَمْ يُفْرَرْ. لَمْ يُفْرَرْنَ، لَمْ تُفْرَرْنَ o'z aslida o'qiladi, bayoni ma'lumda o'tdi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li jahdning majhuli ham 14 siyg'ada keladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Tuslanishi quyidagicha:"
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ يُفَرَّ، لَمْ يُفَرَّا، لَمْ يُفَرُّوا، لَمْ تُفَرَّ، لَمْ تُفَرَّا، لَمْ يُفْرَرْنَ، لَمْ تُفَرَّ، لَمْ تُفَرَّا، لَمْ تُفَرُّوا، لَمْ تُفَرِّي، لَمْ تُفَرَّا، لَمْ تُفْرَرْنَ، لَمْ أُفَرَّ، لَمْ نُفَرَّ."
+        }
+      ]
     }
   ]
 }

@@ -38,6 +38,28 @@ void main() {
     expect(find.text(darslar.first.title), findsOneWidget);
   });
 
+  testWidgets("boblar jadvali chizilib, kataklari ko’rinadi", (tester) async {
+    tester.view.physicalSize = const Size(1400, 3000);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.reset);
+
+    final jadvalli = darslar.firstWhere(
+      (l) => l.blocks.any((b) => b.type == 'jadval'),
+    );
+    await tester.pumpWidget(
+      MaterialApp(home: SarfLessonScreen(lesson: jadvalli)),
+    );
+    await tester.pump(const Duration(milliseconds: 500));
+    expect(tester.takeException(), isNull);
+
+    final jadval = jadvalli.blocks.firstWhere((b) => b.type == 'jadval');
+    // Ustun sarlavhasi va birinchi katak chindan chizilgan bo'lsin.
+    expect(find.text(jadval.ustunlar.first.ar), findsOneWidget);
+    expect(find.text(jadval.sarlavha), findsOneWidget);
+    final birinchiQator = jadval.qatorlar.firstWhere((q) => !q.bolimmi);
+    expect(find.text(birinchiQator.kataklar.first), findsOneWidget);
+  });
+
   testWidgets('har bir dars sahifasi chiziladi', (tester) async {
     // Uzun sahifa qirqilib ketmasin — baland ekran beramiz.
     tester.view.physicalSize = const Size(1200, 3000);
@@ -45,9 +67,7 @@ void main() {
     addTearDown(tester.view.reset);
 
     for (final l in darslar) {
-      await tester.pumpWidget(
-        MaterialApp(home: SarfLessonScreen(lesson: l)),
-      );
+      await tester.pumpWidget(MaterialApp(home: SarfLessonScreen(lesson: l)));
       await tester.pump(const Duration(milliseconds: 500));
       expect(
         tester.takeException(),

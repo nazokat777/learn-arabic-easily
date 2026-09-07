@@ -1083,6 +1083,78 @@
           "uz": "Ikkinchisi: ضُرِبْنا – urildik, bizlar ko'p er kishilar va yo ko'p ayol kishilar, o'tgan zamonda, siyg'asi mutakallim, ma'al g'ayr, majhuli fe'li moziy."
         }
       ]
+    },
+    {
+      "num": 18,
+      "page": 23,
+      "titleAr": "",
+      "title": "Fe'li muzore' – (kelasi zamon fe'li) bayoni",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "Fe'li muzore'ning ham 14 siyg'asi bor. 6 tasi g'oib, 6 tasi muxotab va ikkitasi mutakallimga oiddir."
+        },
+        {
+          "type": "matn",
+          "uz": "Muzakkari g'oibga oid bo'lgan 6 siyg'aning birinchisi:"
+        },
+        {
+          "type": "matn",
+          "uz": "يَضْرِبُ – uradi, bir er kishi, kelasi zamonda, siyg'asi vohid muzakkar, g'oib, ma'lum fe'li muzore'."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkichisi: يَضْرِبانِ – uradilar, ikki kishi kelasi zamonda, siyg'asi tasniyai muzakkar, g'oibayn, ma'lum fe'li muzore'."
+        },
+        {
+          "type": "matn",
+          "uz": "Uchinchisi: يَضْرِبُونَ – uradilar, ko'p er kishilar, kelasi zamonda, siyg'asi jam'i muzakkar, g'oibiyn, ma'lum fe'li muzore'."
+        },
+        {
+          "type": "matn",
+          "uz": "Muannasga oid bo'lgan 3 g'oib siyg'aning birinchisi: تَضْرِبُ – uradi, u bir ayol, kelasi zamonda siyg'asi vohidah, muannasi, g'oibah, ma'lumi fe'li muzore'."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkichisi: تَضْرِبانِ – uradilar, ul ikki ayol, kelasi zamonda, siyg'asi tasniyai muannasi g'oibatayn, ma'lum fe'li muzore'."
+        },
+        {
+          "type": "matn",
+          "uz": "Uchinchisi: يَضْرِبْنَ – uradilar, u ko'p ayollar, kelasi zamonda, siyg'asi jam'i muannas, g'oibot, ma'lum fe'li, muzore'."
+        },
+        {
+          "type": "matn",
+          "uz": "Muxotabga oid bo'lgan 6 siyg'aning 3 tasining birinchisi: تَضْرِبُ – urasan, sen bir kishi, kelasi zamonda, siyg'asi vohid, muzakkar, muxotab, ma'lum fe'li muzore'."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkichisi: تَضْرِبانِ – urasizlar, sizlar ikki kishi, kelasi zamonda, siyg'asi tasniyai muzakkar, muxotobayn, ma'lum fe'li muzore'."
+        },
+        {
+          "type": "matn",
+          "uz": "Uchinchisi: تَضْرِبُونَ – urasizlar, sizlar ko'p er kishilar, kelasi zamonda, siyg'asi jam'i muzakkari muxotabiyn ma'lum fe'li muzore'."
+        },
+        {
+          "type": "matn",
+          "uz": "Muxotabi muannasga oid bo'lgan 3 siyg'aning birinchisi: تَضْرِبِينَ – urasan, sen bir ayol, kelasi zamonda, siyg'asi vohidah, muannasi muxotabah, ma'lum fe'li muzore'."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkinchisi: تَضْرِبانِ – urasizlar, sizlar ikki ayol, kelasi zamonda, siyg'asi tasniyai muannas muhotabatayn, ma'lumi fe'li muzore'."
+        },
+        {
+          "type": "matn",
+          "uz": "Uchinchisi: تَضْرِبْنَ – urasizlar, sizlar ko'p ayollar, kelasi zamonda, siyg'asi jam'i muannas, muxotobot, ma'lum fe'li muzore'."
+        },
+        {
+          "type": "matn",
+          "uz": "Mutakallimga oid bo'lgan ikki siyg'aning birinchisi: أَضْرِبُ – uraman men, bir er kishi yoki bir ayol kishi, kelasi zamonda, siyg'asi mutakallim vohid, ma'lum fe'li muzore'."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkinchisi: نَضْرِبُ – uramiz bizlar, ko'p er kishilar yoki ayol kishilar, kelasi zamonda, siyg'asi mutakallim, ma'al g'ayr, ma'lum fe'li muzore'."
+        }
+      ]
     }
   ]
 }

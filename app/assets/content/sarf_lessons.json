@@ -6523,7 +6523,162 @@
         },
         {
           "type": "matn",
-          "uz": "أَدْعَى aslida أَدْعَوُ edi. Bu yerda vov voqe' bo'ldi. Kalimaning 4-harfini barobarida moqabli g'oyri zam"
+          "uz": "أَدْعَى aslida أَدْعَوُ edi. Bu yerda vov voqe' bo'ldi. Kalimaning 4-harfini barobarida moqabli g'oyri zam vovni يga qalb qildik. أَدْعَيُ bo'ldi. ي mutaharrik moqabli maftuh يni alifga qalb qildik. أَدْعَى bo'ldi. أَدْعَوْنَ aslida أَدْعَوُوْنَ edi. Vov kalimani to'rtinchi harfini barobarida keldi. Vovni يga qalb qildik أَدْعَيُوْنَ bo'ldi. ي harakatli moqabli maftuh يni alifga qalb qildik أَدْعاوْنَ bo'lib, ijtimoi sokinayn hosil bo'ldi. Alif bilan vov orasida alifni hazf qildik. أَدْعَوْنَ bo'ldi."
+        }
+      ]
+    },
+    {
+      "num": 90,
+      "page": 126,
+      "titleAr": "",
+      "title": "Uchinchi bob va masdar vaznlari",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "دُعْيَى aslida دُعْوَى، دُعْيَيَانِ، دُعْوَيَانِ، دُعْيَيَاتُ، دُعْوَيَاتُ:"
+        },
+        {
+          "type": "matn",
+          "uz": "Ushbu 3-siyg'ada vovni يga qalb qildik. Muzakkariga ergashmoqligi uchun دُعْيَى – دُعْيَيَانِ – دُعْيَيَاتٌ bo'ladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Bu ikkinchi bobda أجْوَفِ يايي va ناقصَ يايي va لفيف va ملتوي kelmagandir."
+        },
+        {
+          "type": "bolim",
+          "uz": "UCHINCHI BOB"
+        },
+        {
+          "type": "bolim",
+          "uz": "Uchinchi bob bayoni"
+        },
+        {
+          "type": "matn",
+          "uz": "Sulosiy mujarradning uchinchi bobi moziyda va ham muzore'da ayni fathali bo'lib فَعَلَ – يَفْعَلُ ko'rinishida keladi. Bu bobning masdari o'n vaznda kelgandir."
+        },
+        {
+          "type": "jadval",
+          "sarlavha": "",
+          "ustunlar": [
+            {
+              "ar": "Vaznlar"
+            },
+            {
+              "ar": "Misollar"
+            },
+            {
+              "ar": "Ma'nolar"
+            }
+          ],
+          "qatorlar": [
+            {
+              "kataklar": [
+                "فَعْلٌ",
+                "مَنْعٌ",
+                "man' qilmoq, qaytarmoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فَعُولٌ",
+                "سُنُوْحٌ",
+                "zohir bo'lmoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فَعالَةٌ",
+                "مَهَارَةٌ",
+                "mohir bo'lmoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فِعالَةٌ",
+                "دُعابَةٌ",
+                "hazil yoki mazax qilmoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فِعَالَةٌ",
+                "رِعَايَةٌ",
+                "saqlamoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فِعَالٌ",
+                "ذَهَابٌ",
+                "ketmoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فُعَالٌ",
+                "سُؤَالٌ",
+                "so'ramoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فُعْلاَنٌ",
+                "طُغْيَانٌ",
+                "haddan oshmoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فُعْلَةٌ",
+                "رُؤْيَةٌ",
+                "ko'rmoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فِعْلٌ",
+                "سِحْرٌ",
+                "sehr qilmoq"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "num": 91,
+      "page": 127,
+      "titleAr": "",
+      "title": "Uchinchi bobning sahihi va misoli",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "Bu bobning muzore'sining aynidagi fatha kasradan naql qilingan. Bu bobda kelgan fe'llar har vaqtda ayni yoki lomi fe'li barobarida حُرُوفُ الْحَلْقِ dan bir harf bo'lgani uchun muzore'da kasradan harfi halqga chiqmoq og'ir. Shuning uchun muzore'da kasrani fathaga naql qilingandir: hurufi halq oltidir, همزَءُ، ها، عَيْنُ، حَا، غَيْنُ، خا dir."
+        },
+        {
+          "type": "matn",
+          "uz": "Bu bobninng sahihiga misol: مَنَعَ – يَمْنَعُ – مَنْعًا."
+        },
+        {
+          "type": "matn",
+          "uz": "Bir narsaning berishdan man qilmoq."
+        },
+        {
+          "type": "matn",
+          "uz": "مَنَعَ moziy, يَمْنَعُ muzore', مَانِعٌ ismi foil, مَمْنُوْعٌ ismi maf'ul, لَمْ يَمْنَعْ fe'li jahd, لا يَمْنَعُ fe'li nafiy, اِمنَعْ amri hozir, لِيَمْنَعْ amri g'oib, لا تَمْنَعْ fe'li nahiy, مَمْنَعٌ ismi zamon va makon, مِمْنَاعٌ ismi olat, أَمْنَعُ ismi tafzil."
+        },
+        {
+          "type": "matn",
+          "uz": "Bu مَنَعَ fe'li ضَرَبَ fe'liga o'xshashdir. Tasrif va amr olmoqda."
+        },
+        {
+          "type": "matn",
+          "uz": "Bu bobning fe'li مثال ga misol وَضَعَ – يَضَعُ – وَضْعًا qo'ymoq."
+        },
+        {
+          "type": "matn",
+          "uz": "وَضَعَ moziy, يَضَعُ muzore', وَاضِعٌ ismi foil, مَوْضُوعٌ ismi maf'ul, لَمْ يَضَعْ fe'li jahd, لا يَضَعْ fe'li nafiy, ضَعْ amri hozir, لِيَضَعْ amri g'oib, لا تَضَعْ fe'li nahiy, مَوْضِعٌ ismi zamon va makon, مِيْضاعُ ismi olat, أَوْضَعُ ismi tafzil."
         }
       ]
     }

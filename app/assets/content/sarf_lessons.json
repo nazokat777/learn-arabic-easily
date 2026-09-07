@@ -4952,6 +4952,266 @@
           "uz": "رَوى، رَوَيَا، رَوَوْا، رَوَتْ، رَوَتَا، رَوَيْنَ، رَوَيْتَ، رَوَيْتُمَا، رَوَيْتُمْ، رَوَيْتِ، رَوَيْتُمَا، رَوَيْتُنَّ، رَوَيْتُ، رَوَيْنَا"
         }
       ]
+    },
+    {
+      "num": 59,
+      "page": 92,
+      "titleAr": "",
+      "title": "Lafifning moziysi va muzore'i",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "رَوَى aslida رَوَيَ edi. ي mutaharrik moqabli maftuh bo'lgani uchun يni alifga qalb qildik, رَوى bo'ldi. رَوَوْا – رَوَتْ – رَوَتَا aslida رَوَيُوا – رَوَيَتْ – رَوَيَتَا edi. ي mutaharrik moqabli maftuh bo'lgani uchun يni alifga qalb qildik."
+        },
+        {
+          "type": "matn",
+          "uz": "رَوَاوْا – رَوَاتْ – رَوَاتَا bo'lib, ijtimoi sokinayn hosil bo'ldi. Alif bilan vov va to orasida alifni hazf qildik. رَوَوْا – رَوَتْ – رَوَتَا bo'ldi."
+        },
+        {
+          "type": "matn",
+          "uz": "رَوَى da vov harakatli oldi fathali bo'lgani uchun vovni alifga qalb qilmadilar. Zero, bir kalimada ikki e'lol bo'lmas."
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li moziyning majhuli"
+        },
+        {
+          "type": "matn",
+          "uz": "رُوِيَ، رُوِيَا، رُوُوْا، رُوِيَتْ، رُوِيَتَا، رُوِيْنَ، رُوِيْتَ، رُوِيْتُمَا، رُوِيْتُمْ، رُوِيْتِ، رُوِيْتُمَا، رُوِيْتُنَّ، رُوِيْتُ، رُوِيْنَا"
+        },
+        {
+          "type": "matn",
+          "uz": "رُوُوْا aslida رُوِيُوا edi. يga zamma og'ir bo'lgani uchun يni zammasini moqabliga berdik. Harkatini tashlagandan keyin رُوُيْوْا bo'lib, ijtimoi sokinayn hosil bo'ldi. ي bilan vov orasida يni hazf qildik. رُوُوْا bo'ldi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li muzore'ning ma'lumi"
+        },
+        {
+          "type": "matn",
+          "uz": "يَرْوِي، يَرْوِيَانِ، يَرْوُونَ، تَرْوِي، تَرْوِيَانِ، يَرْوِيْنَ، تَرْوِي، تَرْوِيَانِ، تَرْوُونَ، تَرْوِيْنَ، تَرْوِيَانِ، تَرْوِيْنَ، أَرْوِي، نَرْوِي"
+        },
+        {
+          "type": "matn",
+          "uz": "يَرْوِي aslida يَرْوِيُ edi. يga zamma og'ir bo'lgani uchun يni zammasini tashladik. يَرْوِي bo'ldi. Taskini faqat qoidasi bor: يَرْوُونَ aslida يَرْوِيُوْنَ edi. يga zamma og'ir bo'lgani uchun يni zammasini moqabliga berdik. Harakatini tashlagandan keyin يَرْوُيْوْنَ bo'lib, ijtimoi sokinayn hosil bo'ldi. ي bilan vov orasida يni hazf qildik, يَرْوُوْنَ bo'ldi. تَرْوُوْنَ da ham shu qoida bor."
+        },
+        {
+          "type": "matn",
+          "uz": "تَرْوِيْنَ aslida تَرْوِيِيْنَ edi. يga kasra og'ir bo'lgani uchun يni kasrasini tashladik. Moqabli harakattalab bo'lmagani uchun تَرْوِيْيْنَ bo'lib, ijtimoi sokinayn hosil bo'ldi. Ikki ي orasida avvalgi يni hazf qildik, تَرْوِيْنَ bo'ldi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li muzore'ning majhuli"
+        },
+        {
+          "type": "matn",
+          "uz": "يُرْوَى، يُرْوَيَانِ، يُرْوَوْنَ، تُرْوَى، تُرْوَيَانِ، يُرْوَيْنَ، تُرْوَى، تُرْوَيَانِ، تُرْوَوْنَ، تُرْوَيْنَ، تُرْوَيَانِ، تُرْوَيْنَ، أُرْوَى، نُرْوَى"
+        },
+        {
+          "type": "matn",
+          "uz": "يُرْوَى aslida يُرْوَيُ edi. ي mutaharrik moqabli maftuh bo'lgani uchun يni alifga qalb qildik, يُرْوَى bo'ldi. يُرْوَوْنَ aslida يُرْوَيُوْنَ edi. ي harakatli moqabli fathali bo'lgani uchun يni alifga qalb qildik, يُرْواوْنَ bo'lib, ijtimoi sokinayn hosil bo'ldi. Alif bilan vov orasida alifni hazf qildik, يُرْوَوْنَ bo'ldi. تُرْوَوْنَ ham shunday."
+        },
+        {
+          "type": "matn",
+          "uz": "تُرْوَيْنَ aslida تُرْوَيِيْنَ edi. ي mutaharrik moqabli maftuh bo'lgani uchun يni alifga qalb qildik. تُرْوَايْنَ bo'lib, ijtimoi sokinayn hosil bo'ldi. Alif bilan ي orasida alifni hazf qildik, تُرْوَيْنَ bo'ldi."
+        }
+      ]
+    },
+    {
+      "num": 60,
+      "page": 94,
+      "titleAr": "",
+      "title": "Lafifning ismi foili, ismi maf'uli va jahdi",
+      "blocks": [
+        {
+          "type": "bolim",
+          "uz": "Ismi foil"
+        },
+        {
+          "type": "matn",
+          "uz": "رَاوٍ، رَاوِيَانِ، رَاوُوْنَ، رَاوِيَةٌ، رَاوِيَتَانِ، رَاوِيَاتٌ"
+        },
+        {
+          "type": "matn",
+          "uz": "رَاوٍ aslida رَاوِىٌ edi. يga zamma og'ir bo'lgani uchun يni zammasini tashladik. رَاوِيْنْ bo'lib, ijtimoi sokinayn hosil bo'ldi. ي bilan tanvin orasida يni hazf qildik, رَاوٍ bo'ldi. رَاوْوْنَ aslida رَاوِيُوْنَ bo'lib, e'lol qoidasidagi رَامُونَ ga o'xshaydi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Ismi maf'ul"
+        },
+        {
+          "type": "matn",
+          "uz": "مَرْوِيٌّ، مَرْوِيَّانِ، مَرْوِيُّونَ، مَرْوِيَّةٌ، مَرْوِيَّتَانِ، مَرْوِيَّاتٌ"
+        },
+        {
+          "type": "bolim",
+          "uz": "Qoida"
+        },
+        {
+          "type": "matn",
+          "uz": "Vov bilan ي bir kalimada kelsa, avvalgisi sokin keyingisi harakali bo'lsa, vov ni يga qalb qilinadi. Masalan, مَرْوِىُّ aslida مَرْوُوْىٌ edi. Vovni يga qalb qildik, مَرْوُيْىٌ bo'lib, sharti idg'om mavjud bo'ldi. Avvalgi يni ikkinchi يga idg'om qildik. مَرْوُىُّ bo'ldi. ي moqablini kasra bo'lishini istaydi. Shuning uchun vovga kasra berdik, مَرْوِىُّ bo'ldi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Jahd ma'lum fe'li"
+        },
+        {
+          "type": "matn",
+          "uz": "لم يَرْوِ، لم يَرْوِيَا، لم يَرْوُوْا، لم تَرْوِ، لم تَرْوِيَا، لم يَرْوِيْنَ، لم تَرْوِ، لم تَرْوِيَا، لم تَرْوُوْا، لم تَرْوِي، لم تَرْوِيَا، لم تَرْوِيْنَ، لم أَرْوِ، لم نَرْوِ"
+        },
+        {
+          "type": "matn",
+          "uz": "لَمْ يَرْمِ ham لَمْ يَرْوِ dek barcha qoidalarda bir xil keladi."
+        }
+      ]
+    },
+    {
+      "num": 61,
+      "page": 95,
+      "titleAr": "",
+      "title": "Lafifning nafiysi, amri va nahiysi",
+      "blocks": [
+        {
+          "type": "bolim",
+          "uz": "Jahd majhul fe'li"
+        },
+        {
+          "type": "matn",
+          "uz": "لم يُرْوَ، لم يُرْوَيَا، لم يُرْوَوْا، لم تُرْوَ، لم تُرْوَيَا، لم يُرْوَيْنَ، لم تُرْوَ، لم تُرْوَيَا، لم تُرْوَوْا، لم تُرْوَي، لم تُرْوَيَا، لم تُرْوَيْنَ، لم أُرْوَ، لم نُرْوَ"
+        },
+        {
+          "type": "bolim",
+          "uz": "Nafiy ma'lum fe'li"
+        },
+        {
+          "type": "matn",
+          "uz": "لا يَرْوِي، لا يَرْوِيَانِ، لا يَرْوُوْنَ، لا تَرْوِي، لا تَرْوِيَانِ، لا يَرْوِيْنَ، لا تَرْوِي، لا تَرْوِيَانِ، لا تَرْوُوْنَ، لا تَرْوِيْنَ، لا تَرْوِيَانِ، لا تَرْوِيْنَ، لا أَرْوِي، لا نَرْوِي"
+        },
+        {
+          "type": "bolim",
+          "uz": "Nafiy majhul fe'li"
+        },
+        {
+          "type": "matn",
+          "uz": "لا يُرْوَى، لا يُرْوَيَانِ، لا يُرْوَوْنَ، لا تُرْوَى، لا تُرْوَيَانِ، لا يُرْوَيْنَ، لا تُرْوَى، لا تُرْوَيَانِ، لا تُرْوَوْنَ، لا تُرْوَيْنَ، لا تُرْوَيَانِ، لا تُرْوَيْنَ، لا أُرْوَى، لا نُرْوَى"
+        },
+        {
+          "type": "matn",
+          "uz": "Fe'li nafiyning ma'lumi va majhuli barcha qoidalarda fe'li muzore'ning ma'lumi va majhuli kabidir."
+        },
+        {
+          "type": "bolim",
+          "uz": "Amri hozir"
+        },
+        {
+          "type": "matn",
+          "uz": "اِرْوِ، اِرْوِيَا، اِرْوُوا، اِرْوِي، اِرْوِيَا، اِرْوِيْنَ"
+        },
+        {
+          "type": "bolim",
+          "uz": "Amri g'oibning ma'lumi"
+        },
+        {
+          "type": "matn",
+          "uz": "لِيَرْوِ، لِيَرْوِيَا، لِيَرْوُوْا، لِتَرْوِ، لِتَرْوِيَا، لِيَرْوِيْنَ، لأَرْوِ، لِنَرْوِ"
+        },
+        {
+          "type": "matn",
+          "uz": "Amri hozir va amri g'oibni ma'lumi va majhuli: اِرْمِ va لِيَرْمِ va لِتُرْمَ siyg'alari kabi e'lolda shunday tuslanadi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Amri g'oibning majhuli"
+        },
+        {
+          "type": "matn",
+          "uz": "لِتُرْوَ، لِتُرْوَيَا، لِتُرْوَوا، لِتُرْوَي، لِتُرْوَيَا، لِتُرْوَيْنَ، لِيُرْوَ، لِيُرْوَيَا، لِيُرْوَوْا، لِتُرْوَ، لِتُرْوَيَا، لِيُرْوَيْنَ، لأُرْوَ، لِنُرْوَ"
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li nahiyning ma'lumi"
+        },
+        {
+          "type": "matn",
+          "uz": "لا تَرْوِ، لا تَرْوِيَا، لا تَرْوُوْا، لا تَرْوِي، لا تَرْوِيَا، لا تَرْوِيْنَ، لا يَرْوِ، لا يَرْوِيَا، لا يَرْوُوْا، لا تَرْوِ، لا تَرْوِيَا، لا يَرْوِيْنَ، لا أَرْوِ، لا نَرْوِ"
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li nahiyning majhuli"
+        },
+        {
+          "type": "matn",
+          "uz": "لا تُرْوَ، لا تُرْوَيَا، لا تُرْوَوْا، لا تُرْوَي، لا تُرْوَيَا، لا تُرْوَيْنَ، لا يُرْوَ، لا يُرْوَيَا، لا يُرْوَوْا، لا تُرْوَ، لا تُرْوَيَا، لا يُرْوَيْنَ، لا أُرْوَ، لا نُرْوَ"
+        },
+        {
+          "type": "matn",
+          "uz": "Fe'li nahiyning ma'lumi va majhuli fe'li jahdning ma'lum va majhuliga o'xshashdir."
+        },
+        {
+          "type": "bolim",
+          "uz": "Ismi zamon va makon"
+        },
+        {
+          "type": "matn",
+          "uz": "مَرْوًى، مَرْوَيَانِ، مَرَاوٍ"
+        },
+        {
+          "type": "matn",
+          "uz": "مَرْوًى aslida مَرْوَيُنْ edi. ي mutaharrik moqabli maftuh bo'lgani uchun يni alifga qalb qildik. مَرْوانْ bo'lib, ijtimoi sokinayn hosil bo'ldi. Alif bilan tanvin orasida alifni hazf qildik. مَرْوَنْ مَرْوًى bo'ldi."
+        }
+      ]
+    },
+    {
+      "num": 62,
+      "page": 97,
+      "titleAr": "",
+      "title": "Lafifning ismlari va multaviy misoli",
+      "blocks": [
+        {
+          "type": "bolim",
+          "uz": "Ismi olat"
+        },
+        {
+          "type": "matn",
+          "uz": "مِرْوًى، مِرْوَيَانِ، مَرَاوِيُّ"
+        },
+        {
+          "type": "bolim",
+          "uz": "Ismi tafzil"
+        },
+        {
+          "type": "matn",
+          "uz": "أَرْوَى، أَرْوَيَانِ، أَرْوَوْنَ، رِيّي، رِيَّيَانِ، رِيَّيَاتٌ"
+        },
+        {
+          "type": "matn",
+          "uz": "رِيّي aslida رُوْيى bo'lib, vov bilan ي bir kalimada jam' bo'ldi. Avvalgisi sokin, ikkinchisi bo'lmish harakatli vovni يga qalb qildik. رُيّيَ bo'lib, sharti idg'om mavjud bo'ldi. يni يga idg'om qildik. رُيّي bo'ldi. ي moqablini kasra bo'lishini xohlaydi, deb moqabliga kasra berdik. رِيّي bo'ldi."
+        },
+        {
+          "type": "matn",
+          "uz": "رَوى – يَرْوِىْ ning farqi رَمَى – يَرْمِي dan ismi tafzilning uch muannas siyg'asida xolos."
+        },
+        {
+          "type": "bolim",
+          "uz": "Bu bobning multaviysiga misol"
+        },
+        {
+          "type": "matn",
+          "uz": "وَحَى – يَحِي – وَحْيًا – yashirin so'zlamoq, vahiy keltirmoq."
+        },
+        {
+          "type": "matn",
+          "uz": "وَحَى moziy, يَحِي muzore', وَاحٍ ismi foil, مَوْحِيٌ ismi maf'ul, لَمْ يَحِ fe'li jahd, لا يَحِي fe'li nafiy, حِ amri hozir, لِيَحِ amri g'oib, لا تَحِ fe'li nahiy, مَوْحًى ismi zamon va makon, مِيْحَاءُ ismi olat, أَوْحَى ismi tafzil."
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li moziyning ma'lumi"
+        },
+        {
+          "type": "matn",
+          "uz": "وَحَى، وَحَيَا، وَحَوْا، وَحَتْ، وَحَتَا، وَحَيْنَ، وَحَيْتَ، وَحَيْتُمَا، وَحَيْتُمْ، وَحَيْتِ، وَحَيْتُمَا، وَحَيْتُنَّ، وَحَيْتُ، وَحَيْنَا"
+        }
+      ]
     }
   ]
 }

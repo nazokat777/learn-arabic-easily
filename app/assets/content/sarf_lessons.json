@@ -1235,6 +1235,54 @@
           "uz": "Ikkinchisi: نُضْرَبُ – urilamiz, bizlar ko'p erlar yoki ayollar, kelasi zamonda, siyg'asi mutakallimi ma'al g'ayr, muzore' majhul fe'li."
         }
       ]
+    },
+    {
+      "num": 20,
+      "page": 26,
+      "titleAr": "",
+      "title": "Ismi fo'il bayoni",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "Ismi fo'il sulosiy mujarraddan (harfi zoid qo'shilmagan uch harflik fe'ldan) فاعِل vaznida keladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: ضارِبُ va قاتِلٌ kabi."
+        },
+        {
+          "type": "matn",
+          "uz": "Ismi fo'il sulosiy mujarraddan boshqa boblardan fe'li muzore'i ma'lumining vaznida keladi. Harfi muzoraatning (ya'ni, alif, nun, to, yo harflarining) o'rniga zammalik mim keltirmoq hamda oxiridan oldingi harfini kasrali qilmoqlik bilan yasaladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: مُكْرِمٌ va مُدَحْرِجٌ"
+        },
+        {
+          "type": "matn",
+          "uz": "Ismi fo'il 6 siyg'ada keladi: 3 tasi muzakkarga va 3 tasi muannasga oiddir. Muzakkarga oid 3 siyg'adan birinchisi: ضارِبُ – uruvchi bir er kishi, siyg'asi vohid, muzakkar, ismi fo'il."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkinchisi: ضارِبانِ – uruvchi ikki er kishi, siyg'asi tasniyai muzakkar, ismi fo'il."
+        },
+        {
+          "type": "matn",
+          "uz": "Uchinchisi: ضارِبُونَ – uruvchi ko'p erlar, siyg'asi jam'i muzakkar, ismi fo'il."
+        },
+        {
+          "type": "matn",
+          "uz": "Ismi fo'ilning muannasiga oid 3 siyg'asidan biri: ضارِبَةٌ – uruvchi bir ayol, siyg'asi vohidah muannas, ismi fo'il."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkinchisi: ضارِبتانِ – uruvchi ikki ayol, siyg'asi tasniyai muannas, ismi fo'il."
+        },
+        {
+          "type": "matn",
+          "uz": "Uchinchisi: ضارِباتُ – uruvchi ko'p ayollar, siyg'asi jam'i muannas, ismi fo'il."
+        }
+      ]
     }
   ]
 }

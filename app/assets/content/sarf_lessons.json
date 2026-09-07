@@ -6681,6 +6681,169 @@
           "uz": "وَضَعَ moziy, يَضَعُ muzore', وَاضِعٌ ismi foil, مَوْضُوعٌ ismi maf'ul, لَمْ يَضَعْ fe'li jahd, لا يَضَعْ fe'li nafiy, ضَعْ amri hozir, لِيَضَعْ amri g'oib, لا تَضَعْ fe'li nahiy, مَوْضِعٌ ismi zamon va makon, مِيْضاعُ ismi olat, أَوْضَعُ ismi tafzil."
         }
       ]
+    },
+    {
+      "num": 92,
+      "page": 128,
+      "titleAr": "",
+      "title": "Uchinchi bobning qoidasi va noqisi",
+      "blocks": [
+        {
+          "type": "bolim",
+          "uz": "Qoida"
+        },
+        {
+          "type": "matn",
+          "uz": "يَضَعُ aslida يَوْضَعُ edi. Vov harfi muzoraat bilan kasrai taqdirining-farazining orasida kelsa, shunday vovni hazf qilinadi. مِيْضَاعٌ aslida مِوْضَاعُ vov sokin bo'lib, moqabli kasra bo'lsa, unday vovni يga qalb qilinadi."
+        },
+        {
+          "type": "matn",
+          "uz": "Bu bobni ناقص ga misol: رَعَى – يَرْعَى – رِعَايَةً Birovning hurmatini saqlamoq."
+        },
+        {
+          "type": "matn",
+          "uz": "رَعَى moziy, يَرْعَى muzore', رَاعٍ ismi foil, مَرْعِيٌّ ismi maf'ul, لَمْ يَرْعَ fe'li jahd, لا يَرْعَى fe'li nafiy, أرْعَ amri hozir, لِيَرْعَ amri g'oib, لا تَرْعَ fe'li nahiy, مَرْعًى ismi zamon va makon, مِرْعًى ismi olat, أَرْعَى ismi tafzil. رَعَى – يَرْعَى aslida رَعَيَ – يَرْعَيُ edi. ي mutaharrik moqabli maftuh يni alifga qalb qildik رَعَى – يَرْعَى bo'ldi."
+        },
+        {
+          "type": "matn",
+          "uz": "رَعَى sarfi: رَمَى kabi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li muzore' bayoni"
+        },
+        {
+          "type": "matn",
+          "uz": "يَرْعَى، يَرْعَيَانِ، يَرْعَوْنَ، تَرْعَى، تَرْعَيَانِ، يَرْعَيْنَ، تَرْعَى، تَرْعَيَانِ، تَرْعَوْنَ، تَرْعَيْنَ، تَرْعَيَانِ، تَرْعَيْنَ، أَرْعَى، نَرْعَى"
+        },
+        {
+          "type": "matn",
+          "uz": "G'oibin, muxotabin, muxotabah, siyg'alarida lomi fe'l mahzuf. Barcha mushtaqqotini misoli aytildi."
+        },
+        {
+          "type": "matn",
+          "uz": "Uchinchi bobda ملتوي، لفيف، أجوف، مضاعف fe'llari kelmagan."
+        }
+      ]
+    },
+    {
+      "num": 93,
+      "page": 129,
+      "titleAr": "",
+      "title": "To'rtinchi bob",
+      "blocks": [
+        {
+          "type": "bolim",
+          "uz": "TO'RTINCHI BOB"
+        },
+        {
+          "type": "matn",
+          "uz": "Bu bob moziyda ayni kasrali, muzore'da fathali يَفْعَلُ – فَعِلَ ko'rinishida keladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Bu bobning masdari o'n vaznda kelgan."
+        },
+        {
+          "type": "jadval",
+          "sarlavha": "",
+          "ustunlar": [
+            {
+              "ar": "Vaznlar"
+            },
+            {
+              "ar": "Misollar"
+            },
+            {
+              "ar": "Ma'nolar"
+            }
+          ],
+          "qatorlar": [
+            {
+              "kataklar": [
+                "فَعَلٌ",
+                "تَعَبٌ",
+                "Charchamoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فُعْلٌ",
+                "نُضْجٌ",
+                "Pishmoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فِعْلاَنٌ",
+                "نِسْيَانٌ",
+                "Unutmoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فِعَلٌ",
+                "سِمَنٌ",
+                "semiz bo'lmoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فَعَالٌ",
+                "حَيَاءٌ: حَيِىَ، يَحْيِى، حَيَاة",
+                "uyalmoq: tirik bo'lmoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فَعْلٌ",
+                "لَعْبٌ",
+                "o'ynamoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فَعالَةٌ",
+                "كَرَاهَةٌ",
+                "yomon ko'rmoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فُعُولٌ",
+                "صُعُودٌ",
+                "yuqoriga chiqmoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فُعْلَةٌ",
+                "قُوَّةٌ",
+                "kuchli bo'lmoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فَعْلَةٌ",
+                "رَحْمَةٌ",
+                "mehribonchilik qilmoq"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "matn",
+          "uz": "Bu bobning sahihiga misol: حَمِدَ – يَحْمَدُ – حَمْدًا maqtamoq. حَمِدَ moziy يَحْمَدُ muzore', حَامِدٌ ismi foil, مَحْمُودٌ ismi maf'ul, لَمْ يَحْمَدْ fe'li jahd, لا يَحْمَدُ fe'li nafiy, اِحْمَدْ amri hozir, لِيَحْمَدْ amri g'oib, لا تَحْمَدْ fe'li nahiy, مَحْمَدٌ ismi zamon va makon, مِحْمَادُ ismi olat, أَحْمَدُ ismi tafzil."
+        },
+        {
+          "type": "matn",
+          "uz": "Barcha tasrifda ضَرَبَ – يَضْرِبُ ga o'xshashdir."
+        },
+        {
+          "type": "matn",
+          "uz": "Bu bobning مضاعف ga misol: عَضَّ – يَعَضُّ – عَضًّا tishlamoq."
+        }
+      ]
     }
   ]
 }

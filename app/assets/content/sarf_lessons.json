@@ -5372,6 +5372,396 @@
           "uz": "لا تُوحَ، لا تُوحَيَا، لا تُوحَوْا، لا تُوحَي، لا تُوحَيَا، لا تُوحَيْنَ، لا يُوحَ، لا يُوحَيَا، لا يُوحَوْا، لا تُوحَ، لا تُوحَيَا، لا يُوحَيْنَ، لا أُوحَ، لا نُوحَ"
         }
       ]
+    },
+    {
+      "num": 66,
+      "page": 101,
+      "titleAr": "",
+      "title": "Multaviyning ismlari va e'lol qoidalari",
+      "blocks": [
+        {
+          "type": "bolim",
+          "uz": "Ismi zamon va makon"
+        },
+        {
+          "type": "matn",
+          "uz": "مَوْحًى، مَوْحَيَانِ، مَوَاحٍ"
+        },
+        {
+          "type": "matn",
+          "uz": "مَوْحًى aslida مَوْحِيٌ edi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Ismi olat"
+        },
+        {
+          "type": "matn",
+          "uz": "مِيْحَاءٌ، مِيْحَاانِ، مَوَاحِيُّ"
+        },
+        {
+          "type": "matn",
+          "uz": "مِيْحاءٌ aslida مِوْحَايُ edi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Ismi tafzil"
+        },
+        {
+          "type": "matn",
+          "uz": "أَوْحَى، أَوْحَيَانِ، أَوْحَوْنَ، وُحْيَى، وُحْيَيَانِ، وُحْيَيَاتٌ"
+        },
+        {
+          "type": "bolim",
+          "uz": "Mashhurroq e'lol qoidalari 25 tadir"
+        },
+        {
+          "type": "matn",
+          "uz": "Birinchisi: qalb 14 ta bo'lib, vovga 9 ta, يga 4 ta, alifga 1 tadir."
+        },
+        {
+          "type": "matn",
+          "uz": "Ikkinchisi naql: 1 ta."
+        },
+        {
+          "type": "matn",
+          "uz": "Uchinchisi taskin: 4 ta"
+        },
+        {
+          "type": "matn",
+          "uz": "To'rtinchisi hazf: 5 ta."
+        },
+        {
+          "type": "matn",
+          "uz": "Beshinchisi idg'om: 1 ta."
+        },
+        {
+          "type": "matn",
+          "uz": "Birinchi: vovni alifga qalb qilish qoidasi 3 tadir."
+        },
+        {
+          "type": "matn",
+          "uz": "1). Vov mutaharrik moqabli maftuh vovni alifga qalb qilinadi. قال aslida قَوَلَ."
+        },
+        {
+          "type": "matn",
+          "uz": "2) Vov mutaharrik moqabli harfi sahihi sokin. Vovni harakatini moqobliga berib, vov aslida harakatli edi. Hozir oldi fathali bo'ldi. Vovni alifga qalb qilinadi. يُقالُ aslida يُقْوَلُ edi."
+        }
+      ]
+    },
+    {
+      "num": 67,
+      "page": 102,
+      "titleAr": "",
+      "title": "Qalb qoidalari",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "3) Vov mutaharrik moqabli maftuh. Vovni alifga qalb qilinadi. طالَ aslida طَوُلَ edi."
+        },
+        {
+          "type": "matn",
+          "uz": "Vovni يga qalb qilish qoidasi to'rttadir:"
+        },
+        {
+          "type": "matn",
+          "uz": "1. Vov sokin moqabli maksur. Vovni يga qalb qilinadi. مِيْثابٌ aslida مِوْثابٌ edi."
+        },
+        {
+          "type": "matn",
+          "uz": "2. Vov kelsa, fe'lni lom barobarida moqabli kasra bo'lsa, vovni يga qalb qilinadi. قَوِىَ aslida قَوِوَ bo'lib فَعِلَ vaznidadir."
+        },
+        {
+          "type": "matn",
+          "uz": "3. Vov bilan ي bir kalimada kelsa, avvalgisi sokin, ikkinchisi harakatli bo'lsa, vovni يga qalb qilinadi. مَرْمِيٌّ aslida مَرْمُوْيٌ."
+        },
+        {
+          "type": "matn",
+          "uz": "4. Vov kelsa, kalimaning to'rtinchi harfi barobarida moqabli g'ayri zam bo'lsa, vovni يga qalb qilinadi. يُدْعَيَانِ aslida يُدْعَوَانِ."
+        },
+        {
+          "type": "matn",
+          "uz": "Vovni hamzaga va to harfiga qalb qilish qoidasi ikkitadir:"
+        },
+        {
+          "type": "matn",
+          "uz": "1. Vov kelsa, alifi zoidadan keyin vovni hamzaga qalb qilinadi. قائِلٌ aslida قَاوِلٌ edi."
+        },
+        {
+          "type": "matn",
+          "uz": "2. Vov kelsa, foi iftaala to'g'risida vovni to harfiga qalb qilib, to harfini toi iftaalaga idg'om qilinadi. اِتَّضَحَ aslida اِوْتَضَحَ edi."
+        },
+        {
+          "type": "matn",
+          "uz": "ي harfini alifga qalb qilish qoidasi uchtadir:"
+        },
+        {
+          "type": "matn",
+          "uz": "1. ي mutaharrik moqabli maftuh bo'lgani uchun يni alifga qalb qilinadi. بَاعَ aslida بَيَعَ edi."
+        },
+        {
+          "type": "matn",
+          "uz": "2. ي mutaharrik moqabli harfi sahihi sokin bo'lgani uchun يni harakatini moqabligi berib, ي aslida harakatli edi, hozir moqabli maftuh bo'ldi deb يni alifga qalb qilinadi. يُبَاعُ aslida يُبْيَعُ edi."
+        }
+      ]
+    },
+    {
+      "num": 68,
+      "page": 103,
+      "titleAr": "",
+      "title": "Qalb qoidalarining oxiri va taskin qoidasi",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "3. ي mutaharrik moqabli maftuh bo'lgani uchun يni alifga qalb qildik. نَالَ aslida نَيِلَ edi."
+        },
+        {
+          "type": "matn",
+          "uz": "يni vovga qalb qilish qoidasi bittadir:"
+        },
+        {
+          "type": "matn",
+          "uz": "1. ي sokin bo'lib kelsa, moqabli mazmum bo'lsa, يni vovga qalb qilinadi. يُوسَرُ aslida يُيْسَرُ edi."
+        },
+        {
+          "type": "matn",
+          "uz": "يni hamzaga va to harfiga qalb qilish qoidasi ikkitadir:"
+        },
+        {
+          "type": "matn",
+          "uz": "1. ي alifi zoidadan keyin kelsa, يni hamzaga qalb qilinadi. بائِعٌ aslida بايِعٌ edi."
+        },
+        {
+          "type": "matn",
+          "uz": "2. ي kelsa, foi iftaala to'g'risidagi يni \"to\" ga qalb qilib, \"to\"ni \"toi iftaala\"ga idg'om qilinadi. اِتَّسَرَ aslida ايْتَسَرَ edi."
+        },
+        {
+          "type": "matn",
+          "uz": "Alifni vovga aqalb qilish qoidasi bittadir:"
+        },
+        {
+          "type": "matn",
+          "uz": "1. Alif kelsa, moqabli mazmum bo'lgani uchun alifni vovga qalb qilinadi. ضُوْرِبَ aslida ضَارَبَ ni majhuli ضُاْرِبَ edi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Taskin qoidasi"
+        },
+        {
+          "type": "matn",
+          "uz": "Taskin qoidasi 4 tadir."
+        },
+        {
+          "type": "matn",
+          "uz": "1.Taskini faqat. يَرْمِي aslida يَرْمِيُ edi."
+        },
+        {
+          "type": "matn",
+          "uz": "2. Taskini ma'annaql. يَبِيْعُ aslida يَبْيِعُ edi"
+        },
+        {
+          "type": "matn",
+          "uz": "3. Taskin ma'annaqli valhazfi. يَبِعْنَ aslida يَبْيِعْنَ edi."
+        },
+        {
+          "type": "matn",
+          "uz": "4. Taskin ma'annaqli val qalbi. أَقَامَ aslida أَقْوَمَ edi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Hazfning qoidasi"
+        },
+        {
+          "type": "matn",
+          "uz": "Hazfning qoidasi beshtadir:"
+        }
+      ]
+    },
+    {
+      "num": 69,
+      "page": 104,
+      "titleAr": "",
+      "title": "Hazf qoidalari va ikkinchi bob",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "1. Vov kelsa, kasrai tahqiqi bilan hamza va nun orasida أَثِبُ va نَثِبُ aslida أَوْثِبُ va نُوْثِبُ vovni hazf qilinadi."
+        },
+        {
+          "type": "matn",
+          "uz": "2. Vov kelsa, kasrai taqdiri, ya'ni farazi bilan hamza va nun orasida vovni hazf qilinadi. أَضَعُ va نَضَعُ aslida أَوْضَعُ va نَوْضَعُ edi."
+        },
+        {
+          "type": "matn",
+          "uz": "3. Vov kelsa, harfi muzoraat bilan kasrai tahqiqiy orasida vovni hazf qilinadi."
+        },
+        {
+          "type": "matn",
+          "uz": "يَثِبُ va تَثِبُ aslida يَوْثِبُ va تَوْثِبُ edi."
+        },
+        {
+          "type": "matn",
+          "uz": "4. Vov kelsa, harfi muzoraat bilan kasrai taqdiriy orasida vovni hazf qilinadi."
+        },
+        {
+          "type": "matn",
+          "uz": "يَضَعُ va تَضَعُ aslida يَوْضَعُ va تَوْضَعُ edi."
+        },
+        {
+          "type": "matn",
+          "uz": "5. مُلاقاةُ المعتل الساكن ساكنًا qoidasi, ya'ni harfi illat o'zi sokin bo'lib, o'zga sokinlik harfga yo'liqib qolsa, shunday harfi illatni hazf qilinadi."
+        },
+        {
+          "type": "matn",
+          "uz": "Misol بِعْ aslida بِيْعْ va قُلْ aslida قُوْلْ edi."
+        },
+        {
+          "type": "bolim",
+          "uz": "IKKINCHI BOB"
+        },
+        {
+          "type": "bolim",
+          "uz": "Sulosiy mujarradning ikkinchi bobi"
+        },
+        {
+          "type": "matn",
+          "uz": "Mozijda ayni fathali va muzore'da ayni zammali فَعَلَ – يَفْعُلُ bobidir. Bu bobning masdari 15-vaznda keladi."
+        },
+        {
+          "type": "jadval",
+          "sarlavha": "",
+          "ustunlar": [
+            {
+              "ar": "Vaznlar"
+            },
+            {
+              "ar": "Misollar"
+            },
+            {
+              "ar": "Ma'nolar"
+            }
+          ],
+          "qatorlar": [
+            {
+              "kataklar": [
+                "فَعْلٌ",
+                "نَصْرٌ",
+                "Yordam qilmoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فَعَلٌ",
+                "طَلَبٌ",
+                "Istamoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فَعَالٌ",
+                "نَبَاتٌ",
+                "O'smoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فِعَالَةٌ",
+                "حِرَاسَةٌ",
+                "Saqlamoq, posbonlik qilmoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فُعْلٌ",
+                "شُكْرٌ",
+                "Ne'mat va yaxshilikni qadrini bilmoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فِعْلاَنٌ",
+                "كِتْمَانٌ",
+                "Yashirmoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فُعْلَى",
+                "بُشْرَى",
+                "Sevinch xabarini bermoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فُعُولٌ",
+                "خُرُوجٌ",
+                "Chiqmoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فَعِلٌ",
+                "خَنِقٌ",
+                "Tamoqni bo'g'moq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فِعَالٌ",
+                "كَتَابٌ",
+                "Yozmoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فُعَالٌ",
+                "صُرَاخٌ",
+                "Qichqirmoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فِعْلٌ",
+                "فِسْقٌ",
+                "Haq taoloni farmonini tark qilish va yomon ish qilish"
+              ]
+            },
+            {
+              "kataklar": [
+                "فِعْلَى",
+                "ذِكْرَى",
+                "Eslash va yod qilish"
+              ]
+            },
+            {
+              "kataklar": [
+                "فِعْلَةٌ",
+                "نِشْدَةٌ",
+                "Izlamoq va qidirmoq"
+              ]
+            },
+            {
+              "kataklar": [
+                "فَعْلَةٌ",
+                "دَعْوَةٌ",
+                "Chaqirmoq"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "matn",
+          "uz": "Bu bobning sahihiga misol نَصَرَ – يَنْصُرُ – نَصْرًا va نُصْرَةً yordam bermoq."
+        },
+        {
+          "type": "matn",
+          "uz": "نَصَرَ moziy, يَنْصُرُ muzore', نَاصِرٌ ismi foil, مَنْصُورٌ ismi maf'ul, لَمْ يَنْصُرْ fe'li jahd, لا يَنْصُرُ fe'li nafiy, اُنْصُرْ amri hozir, لِيَنْصُرْ amri g'oib, لا تَنْصُرْ fe'li nahiy, مَنْصُرٌ ismi zamon va makon, مِنْصَارٌ ismi olat, أَنْصَرُ ismi tafzil."
+        },
+        {
+          "type": "matn",
+          "uz": "نَصَرَ – يَنْصُرُ dan amri hozir اُنْصُرْ keladi. Shu yo'l bilanki, تَنْصُرُ fe'li muzore' ma'lumi muxotab siyg'asini oxiriga qaradik. Oxiridagi ro harfi sahih ekan, sokin qildik, تَنْصُرْ bo'ldi. Harfi muzoraat bo'lgan \"to\"ni tashladik, uning so'ngidagi harfi sokin ekan. Ayni fe'liga qaradik. Zammalik ekan. Avvaliga zammalik hamza keltirdik اُنْصُرْ"
+        }
+      ]
     }
   ]
 }

@@ -281,10 +281,18 @@ class _Jadval extends StatelessWidget {
   static const double _bobEni = 62;
   static const double _katakEni = 132;
 
+  /// Boblar jadvalida chapdagi tor ustun bob raqamini ko'rsatadi.
+  /// Masdar vaznlari kabi oddiy jadvallarda bunday ustun yo'q —
+  /// bo'sh chizib qo'ysa, ortiqcha ustunga o'xshab qoladi.
+  bool get _bobUstuni =>
+      block.sarlavha.isNotEmpty ||
+      block.qatorlar.any((q) => q.bob.isNotEmpty || q.raqam.isNotEmpty);
+
   @override
   Widget build(BuildContext context) {
     final ustunlar = block.ustunlar;
-    final jamiEni = _bobEni + _katakEni * ustunlar.length;
+    final jamiEni =
+        (_bobUstuni ? _bobEni : 0) + _katakEni * ustunlar.length;
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 6),
       decoration: BoxDecoration(
@@ -318,14 +326,18 @@ class _Jadval extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          _katak(
-            _bobEni,
-            child: Text(
-              block.sarlavha,
-              textAlign: TextAlign.center,
-              style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 12),
+          if (_bobUstuni)
+            _katak(
+              _bobEni,
+              child: Text(
+                block.sarlavha,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontWeight: FontWeight.w900,
+                  fontSize: 12,
+                ),
+              ),
             ),
-          ),
           for (final u in ustunlar)
             _katak(
               _katakEni,
@@ -356,18 +368,19 @@ class _Jadval extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          _katak(
-            _bobEni,
-            child: Text(
-              q.bob,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                fontWeight: FontWeight.w900,
-                fontSize: 12,
-                color: AppColors.indigo,
+          if (_bobUstuni)
+            _katak(
+              _bobEni,
+              child: Text(
+                q.bob,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontWeight: FontWeight.w900,
+                  fontSize: 12,
+                  color: AppColors.indigo,
+                ),
               ),
             ),
-          ),
           for (var i = 0; i < ustunSoni; i++)
             _katak(
               _katakEni,

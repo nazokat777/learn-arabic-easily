@@ -3880,6 +3880,118 @@
           "uz": "«Nun» ta'kidi saqila oxiriga qo'shilganda, quyidagicha bayon qilinadi:"
         }
       ]
+    },
+    {
+      "num": 47,
+      "page": 68,
+      "titleAr": "",
+      "title": "Muzoafning nahiysi, ismi olati va tafzili",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "لِتُفَرَّنَّ، لِتُفَرَّانِّ، لِتُفَرُّنَّ، لِتُفَرِّنَّ، لِتُفَرَّانِّ، لِتُفْرَرْنَانِّ، لِيُفَرَّنَّ، لِيُفَرَّانِّ، لِيُفَرُّنَّ، لِتُفَرَّنَّ، لِتُفَرَّانِّ، لِيُفْرَرْنَانِّ، لآفَرَّنَّ، لِنُفَرَّنَّ"
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li nahiy hozir bayoni"
+        },
+        {
+          "type": "matn",
+          "uz": "Ma'lumi fe'li nahiy hozirning ham o'n to'rt siyg'asi bor. Sarfi (tuslanishi) quyidagicha:"
+        },
+        {
+          "type": "matn",
+          "uz": "لا تَفِرَّ، لا تَفِرَّا، لا تَفِرُّوا، لا تَفِرِّي، لا تَفِرَّا، لا تَفْرِرْنَ، لا تَفِرَّا، لا تَفِرَّ، لا يَفِرَّ، لا يَفِرُّوا، لا يَفِرَّا، لا تَفِرَّ، لا يَفْرِرْنَ، لا أَفِرَّ، لا نَفِرِّ"
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li nahiy hozirning majhuli"
+        },
+        {
+          "type": "matn",
+          "uz": "Fe'li nahiy hozirning majhuli ham o'n to'rt siyg'ada keladi. Sarfi quyidagicha:"
+        },
+        {
+          "type": "matn",
+          "uz": "لا تُفَرَّ، لا تُفَرَّا، لا تُفَرُّوا، لا تُفَرِّي، لا تُفَرَّا، لا تُفْرَرْنَ، لا تُفَرَّا، لا تُفَرَّ، لا يُفَرَّ، لا يُفَرُّوا، لا يُفَرَّا، لا تُفَرَّ، لا يُفْرَرْنَ، لا أفَرَّ، لا نُفَرَّ"
+        },
+        {
+          "type": "matn",
+          "uz": "Fe'li nahiyning ma'lumi va majhuli ham fe'li jahdnikidekdir. Buning qoidalari yuqorida fe'li jahdga oid o'tgan qoidalar kabidir."
+        },
+        {
+          "type": "bolim",
+          "uz": "Ismi zamon va ismi makon (fe'lning zamoni va makonining bayoni)"
+        },
+        {
+          "type": "matn",
+          "uz": "Ismi zamon va ismi makon uch siyg'ada keladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Sarfi (tuslanishi) quyidagicha: مَفِرُّ، مَفِرَّانِ، مَفارُّ"
+        },
+        {
+          "type": "matn",
+          "uz": "«مَفِرُّ» aslida – مَفْرِرُ. «مَفِرَّانِ» aslida – مَفْرِرانِ – qoidasi yuqorida o'tdi. «مَفارُّ» aslida – مَفارِرُ"
+        },
+        {
+          "type": "matn",
+          "uz": "Birinchi «ro»ning harakatini tashlaymiz, مَفارْرُ bo'lib, sharti idg'om vujudga keladi. Birinchi «ro»ni ikkinchi «ro»ga idg'om qilamiz, مَفارُّ bo'ladi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Ismi olat bayoni"
+        },
+        {
+          "type": "matn",
+          "uz": "Ismi olat ham uch siyg'ada keladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Sarfi quyidagicha: مِفْرَارٌ، مِفْرَارَانِ، مَفَارِيرُ"
+        },
+        {
+          "type": "matn",
+          "uz": "Bu uch siyg'a, bir jinsdan bo'lgan ikki harf orasiga yot harf kirgani uchun o'z aslida keladi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Ismi tafzil bayoni"
+        },
+        {
+          "type": "matn",
+          "uz": "Ismi tafzil olti siyg'ada keladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Sarfi quyidagicha: أَفَرُّ، أَفَرَّانِ، أَفَرُّونَ، فُرَّى، فُرَّيَانِ، فُرَّيَاتٌ"
+        },
+        {
+          "type": "matn",
+          "uz": "«أَفَرُّ» ni idg'om qilish qoidasi yuqorida o'tdi. «فُرَّى» aslida – فُرْرَى, bunda o'zi sharti idg'om mavjud ekan, idg'om qildik: فُرَّى bo'ldi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Bu bobning misoli"
+        },
+        {
+          "type": "matn",
+          "uz": "Bu bobning «مثال واوي» siga misol: وَثَبَ، يَثِبُ uning masdari – وَثَبًا va ثِبَةً bo'ladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Ma'nosi: sakramoq va o'tirmoqdir. Bu bobning «misoli vovi»sining masdarlaridan «vov»ni hazf qilib, uning evaziga oxiriga to keltirib aytmoq durustdir."
+        },
+        {
+          "type": "matn",
+          "uz": "Masalan: ثِبَةً kabi."
+        },
+        {
+          "type": "matn",
+          "uz": "Bundan o'n ikki narsa ishtiqoq qilinadi. Quyidagicha: وَثَبَ – moziy, يَثِبُ – muzore', واثِبُ – ismi foil,"
+        }
+      ]
     }
   ]
 }

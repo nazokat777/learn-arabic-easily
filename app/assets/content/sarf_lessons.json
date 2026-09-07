@@ -5970,6 +5970,78 @@
           "uz": "Ma'lumi fe'li moziy"
         }
       ]
+    },
+    {
+      "num": 76,
+      "page": 112,
+      "titleAr": "",
+      "title": "دام fe'lining moziysi va majhuli",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "دَامَ، دَامَا، دَامُوا، دَامَتْ، دَامَتَا، دُمْنَ، دُمْتَ دُمْتما دُمْتُمْ دُمْتِ دُمْتُما دُمْتُنَّ دَمْتُ دُمْنا"
+        },
+        {
+          "type": "matn",
+          "uz": "دَامَ aslida دَوَمَ"
+        },
+        {
+          "type": "matn",
+          "uz": "Vov mutaharrik moqabli maftuh. Vovni alifga qalb qildik. دَامَ bo'ldi. G'oibayn va g'oibin, va g'oibah va g'oibataynda ham shunday. 9-siyg'ada ayn fe'l mahzufdir. G'oibot, 6-muxotab, 2-mutakallimda."
+        },
+        {
+          "type": "matn",
+          "uz": "دُمْنَ aslida دَوَمْنَ edi. Vov mutaharrik moqabli maftuh bo'lgani uchun vovni alifga qalb qildik. دَامْنَ bo'lib, ijtimoi sokinayn hosil bo'ldi. Alif bilan mim orasida alifni hazf qildik دَمْنَ bo'ldi. So'ngra dolni fathasini zammaga badal qildik. Vovi mahzufaga dalolat qilmoqligi uchun دُمْنَ bo'ldi. Ba'zilar birinchi galda vovga zamma beradilar va ul zammani dolga naql qiladilar, so'ngra ijtimoi sokinayn sababli vovni hazf qiladilar. Bu fikr raqiq va zaifdir."
+        },
+        {
+          "type": "bolim",
+          "uz": "Majhuli fe'li moziy bayoni"
+        },
+        {
+          "type": "matn",
+          "uz": "دَامَ ni majhul qilish uchun asliga qaytardik. دَوَمَ bo'ldi. Moqabli oxirini kasrali qildik. دَوِمَ bo'ldi. Moqabli oxirining oldindagi barcha harakatli harfini zammalik qildik. دُوِمَ bo'ldi. Kasra vovga og'ir vovni kasrasini moqabliga berdik. Harakatini tushurgandan keyin دِوْمَ bo'lib, vov sokin moqabli maqsur vovni يga qalb qildik دِيْمَ bo'ldi."
+        },
+        {
+          "type": "bolim",
+          "uz": "Sarfi"
+        }
+      ]
+    },
+    {
+      "num": 77,
+      "page": 113,
+      "titleAr": "",
+      "title": "دام majhuli va muzore'i",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "دِيْمَ، دِيْمَا، دِيْمُوا، دِيْمَتْ، دِيْمَتَا، دُمْنَ، دُمْتَ، دُمْتُمَا، دُمْتُمْ، دُمْتِ، دُمْتُمَا، دُمْتُنَّ، دُمْتُ، دُمْنَا"
+        },
+        {
+          "type": "matn",
+          "uz": "دِيْمَ aslida دُوِمَ edi. Kasra vovga og'ir bo'lgani uchun vovni kasrasini moqabliga berdik. Harakatini tashlagandan keyin دِوْمَ bo'ldi. Vov sokin moqabli kasra vovni يga qalb qildik دِيْمَ bo'ldi, undan keyingi 4-siyg'ada ham shunday."
+        },
+        {
+          "type": "matn",
+          "uz": "دُمْنَ aslida دُوِمْنَ edi. Kasra vovga og'ir bo'lgani uchun vovni kasrasini tashladik دُوْمْنَ bo'lib, ijtimoi sokinayn hosil bo'ldi. Vov bilan mim orasida vovni hazf qildik دُمْنَ bo'ldi. To oxirigacha shunday bo'ladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Ushbu 9-siyg'ada ma'lum va majhul mushtarakdir. Ma'lumda دُمْنَ ning asli دَوَمْنَ bo'ladi. Majhulda دُمْنَ ning asli دُوِمْنَ dir."
+        },
+        {
+          "type": "bolim",
+          "uz": "Fe'li muzorening ma'lumi"
+        },
+        {
+          "type": "matn",
+          "uz": "يَدُومُ، يَدُومَانِ، يَدُومُونَ، تَدُومُ، تَدُومَانِ، يَدُمْنَ، تَدُومُ، تَدُومَانِ، تَدُومُونَ، تَدُومِيْنَ، تَدُومَانِ، تَدُمْنَ، أَدُومُ، نَدُومُ"
+        },
+        {
+          "type": "matn",
+          "uz": "يَدُومُ aslida يَدْوُمُ edi. Zamma vovga og'ir bo'lgani uchun vovning zammasini oldindagi harfga berdik يَدُومُ bo'ldi. نَقْلُ الْحَرَكَةِ فَقَطْ degan qoida bor. يَدُمْنَ aslida يَدْوُمْنَ bo'lgan. Zamma vovga og'ir bo'lgani uchun vovni zammasini oldindagi harfga berdik يَدُوْمْنَ bo'lib, ijtimoi sokinayn hosil bo'ldi. Vov bilan mim orasida vovni hazf qildik. يَدُمْنَ bo'ldi. تَدُمْنَ ham xuddi shunday. النَّقْلُ مَعَ الْحَذَفِ degan qoida bor."
+        }
+      ]
     }
   ]
 }

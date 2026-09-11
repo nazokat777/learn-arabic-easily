@@ -152,8 +152,19 @@ class MashqBank {
   static bool _tarjimaEmas(String uz) {
     final k = _apostrof(uz).toLowerCase();
     const yorliqlar = [
-      'moziy', 'muzore', 'ismi ', 'sifati ', "fe'li ", 'amri ', 'amr ',
-      'nahiy', 'masdar', 'qoida', 'yuqorida', 'vazni', 'aslida',
+      'moziy',
+      'muzore',
+      'ismi ',
+      'sifati ',
+      "fe'li ",
+      'amri ',
+      'amr ',
+      'nahiy',
+      'masdar',
+      'qoida',
+      'yuqorida',
+      'vazni',
+      'aslida',
     ];
     return yorliqlar.any(k.startsWith) || k.contains('qoida');
   }
@@ -219,6 +230,32 @@ class MashqBank {
         k.contains('amr');
   }
 
+  /// Matn bloki paradigmami (14, 6 yoki 3 siyg'alik arabcha ro'yxat):
+  /// bo'lsa — (shakl, siyg'a nomi) juftliklari, aks holda `null`.
+  /// Mashq ham, dars ekrani ham shu bitta qoidadan foydalanadi —
+  /// ikkisi bir-biridan ajralib ketmasin.
+  static List<(String, String)>? paradigma(String matn, String yorliq) {
+    final bolaklar = _apostrof(matn)
+        .replaceAll(RegExp(r'\.\s*$'), '')
+        .split(RegExp('[،,]'))
+        .map((s) => s.trim())
+        .where((s) => s.isNotEmpty)
+        .toList();
+    if (bolaklar.isEmpty ||
+        !bolaklar.every((s) => _arabcha.hasMatch(s) && !_lotin.hasMatch(s))) {
+      return null;
+    }
+    final nomlar = _siygaNomlari(bolaklar.length, yorliq);
+    if (nomlar == null) return null;
+    return [for (var i = 0; i < bolaklar.length; i++) (bolaklar[i], nomlar[i])];
+  }
+
+  /// Darsdagi mashq elementlari soni — ro'yxat uchun keshlangan
+  /// (kontent faqat qayta ochilganda o'zgaradi).
+  static final Map<int, int> _sarfSoni = {};
+  static int sarfSoni(SarfLesson l) =>
+      _sarfSoni.putIfAbsent(l.num, () => sarfDars(l).length);
+
   static List<MashqElement> sarfDars(SarfLesson l) {
     final korilgan = <String>{};
     final natija = <MashqElement>[];
@@ -261,7 +298,9 @@ class MashqBank {
           final uz = q.kataklar
               .where((c) => c.trim().isNotEmpty && !_arabcha.hasMatch(c))
               .toList();
-          if (ar.isNotEmpty && uz.isNotEmpty) qosh(ar.last.trim(), uz.last.trim());
+          if (ar.isNotEmpty && uz.isNotEmpty) {
+            qosh(ar.last.trim(), uz.last.trim());
+          }
         }
         continue;
       }
@@ -270,21 +309,14 @@ class MashqBank {
         // Paradigma bloki (14, 6 yoki 3 siyg'a) — bo'lim yoki dars
         // sarlavhasi bilan.
         final yorliq = oxirgiBolim ?? l.title;
-        final bolaklar = matn
-            .replaceAll(RegExp(r'\.\s*$'), '')
-            .split(RegExp('[،,]'))
-            .map((s) => s.trim())
-            .where((s) => s.isNotEmpty)
-            .toList();
-        if (bolaklar.every((s) => _arabcha.hasMatch(s) && !_lotin.hasMatch(s))) {
-          final nomlar = _siygaNomlari(bolaklar.length, yorliq);
-          if (nomlar != null) {
-            for (var i = 0; i < bolaklar.length; i++) {
-              qosh(bolaklar[i], '$yorliq · ${nomlar[i]}');
-            }
+        final p = paradigma(matn, yorliq);
+        if (p != null) {
+          for (final (shakl, nom) in p) {
+            qosh(shakl, '$yorliq · $nom');
           }
           continue;
         }
+        if (!_lotin.hasMatch(matn)) continue; // faqat arabcha, paradigma emas
         // «X aslida Y edi» — e'lol juftliklari.
         for (final m in _asl.allMatches(matn)) {
           qosh(m.group(1)!.trim(), 'aslida ${m.group(2)!.trim()} edi');

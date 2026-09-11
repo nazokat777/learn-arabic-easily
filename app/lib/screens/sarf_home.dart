@@ -49,7 +49,7 @@ class SarfHome extends StatelessWidget {
   }
 
   Widget _tile(BuildContext context, SarfLesson l) {
-    final mashq = MashqBank.sarfDars(l).length;
+    final mashq = MashqBank.sarfSoni(l);
     return PremiumTile(
       label: '${l.num}',
       title: l.title,
@@ -178,14 +178,14 @@ class SarfLessonScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16),
-              for (final b in lesson.blocks) ...[
-                _blok(b),
+              for (final (i, b) in lesson.blocks.indexed) ...[
+                _blok(b, _yorliq(i)),
                 const SizedBox(height: 10),
               ],
               const SizedBox(height: 14),
               MasteryCallToAction(
                 lessonId: lesson.completionId,
-                what: mashqBorMi(MashqBank.sarfDars(lesson).length)
+                what: mashqBorMi(MashqBank.sarfSoni(lesson))
                     ? 'shakllar va misollar'
                     : 'takror (oldingi darslar)',
                 onStart: () => Navigator.push(
@@ -207,7 +207,22 @@ class SarfLessonScreen extends StatelessWidget {
     );
   }
 
-  Widget _blok(SarfBlock b) {
+  /// Blok uchun paradigma yorlig'i: undan oldingi eng yaqin bo'lim
+  /// sarlavhasi, bo'lmasa dars sarlavhasi (mashq banki bilan bir xil).
+  String _yorliq(int i) {
+    for (var k = i - 1; k >= 0; k--) {
+      if (lesson.blocks[k].type == 'bolim') return lesson.blocks[k].uz;
+    }
+    return lesson.title;
+  }
+
+  Widget _blok(SarfBlock b, String yorliq) {
+    if (b.type == 'matn') {
+      // 14/6/3 siyg'alik ro'yxat — vergul bilan cho'zilgan satr emas,
+      // har shakl o'z siyg'asi ostida turadigan jadval.
+      final p = MashqBank.paradigma(b.uz, yorliq);
+      if (p != null) return _Paradigma(shakllar: p);
+    }
     switch (b.type) {
       case 'misol':
         return _Misol(block: b);
@@ -220,6 +235,59 @@ class SarfLessonScreen extends StatelessWidget {
       default:
         return AralashMatn(b.uz);
     }
+  }
+}
+
+/// Sarf paradigmasi — har katakda shakl va ostida siyg'a nomi.
+///
+/// Kitobda 14 shakl bitta uzun satrda vergul bilan keladi; o'quvchi
+/// «qaysi biri muxotabot?» deb sanab o'tiradi. Jadvalda esa har shakl
+/// o'z nomi bilan turadi — mashqdagi savolga tayyor.
+class _Paradigma extends StatelessWidget {
+  final List<(String, String)> shakllar;
+  const _Paradigma({required this.shakllar});
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      spacing: 8,
+      runSpacing: 8,
+      children: [
+        for (final (shakl, nom) in shakllar)
+          Container(
+            constraints: const BoxConstraints(minWidth: 96),
+            padding: const EdgeInsets.fromLTRB(12, 8, 12, 6),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(
+                color: AppColors.indigo.withValues(alpha: 0.25),
+              ),
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Directionality(
+                  textDirection: TextDirection.rtl,
+                  child: Text(
+                    shakl,
+                    style: AppTheme.arabic(size: 22, color: AppColors.ink),
+                  ),
+                ),
+                const SizedBox(height: 2),
+                Text(
+                  nom,
+                  style: const TextStyle(
+                    fontSize: 10.5,
+                    color: Colors.black54,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ],
+            ),
+          ),
+      ],
+    );
   }
 }
 
@@ -312,8 +380,7 @@ class _Jadval extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ustunlar = block.ustunlar;
-    final jamiEni =
-        (_bobUstuni ? _bobEni : 0) + _katakEni * ustunlar.length;
+    final jamiEni = (_bobUstuni ? _bobEni : 0) + _katakEni * ustunlar.length;
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 6),
       decoration: BoxDecoration(

@@ -95,7 +95,13 @@ Future<void> _javobBer(WidgetTester tester, {bool togri = true}) async {
         : _arlar.firstWhere((a) => a != javob && _bor(a));
     await tester.tap(find.text(bosiladi).last);
   } else {
-    final javob = _arBoyicha(_korinayotgan(_arlar)!).uz;
+    final ar = _korinayotgan(_arlar);
+    if (ar == null) {
+      // O'tish animatsiyasi yoki daraja banneri — bir oz kutib qaytamiz.
+      await _kut(tester);
+      return;
+    }
+    final javob = _arBoyicha(ar).uz;
     final bosiladi = togri
         ? javob
         : _uzlar.firstWhere((u) => u != javob && _bor(u));

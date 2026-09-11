@@ -5,6 +5,8 @@ import '../../widgets/uz_text.dart';
 import '../../arabic.dart';
 import '../../content.dart';
 import '../../main.dart';
+import '../../mashq/mukofot.dart';
+import '../../mashq/sessiya.dart' show MashqSessiya;
 import '../../services/tts.dart';
 import '../../theme.dart';
 import '../../widgets/motion.dart';
@@ -41,6 +43,16 @@ class _MasterDrillState extends State<MasterDrill> {
   late List<QiroatVocab> _queue;
   final Map<String, List<int>> _reqCache = {}; // kerakli usullar (keshlangan)
   int _xpEarned = 0;
+
+  // Raund bekati: 15 so'z × 6 usul = 90 savol — marrasiz bu azob.
+  // Har 8 javobdan keyin to'xtab, yulduz berib, «davom / yetadi» so'raladi.
+  bool _bekat = false;
+  int _raundRaqami = 1;
+  int _raunddaSoralgan = 0;
+  int _raunddaTogri = 0;
+  int _raundBoshidagiBall = 0;
+  int _ketmaKet = 0;
+  int _engUzunKombo = 0;
 
   QiroatVocab? _word;
   int _mode = 0;
@@ -270,6 +282,14 @@ class _MasterDrillState extends State<MasterDrill> {
       await progress.addXp(5);
       _xpEarned += 5;
     }
+    _raunddaSoralgan++;
+    if (ok) {
+      _raunddaTogri++;
+      _ketmaKet++;
+      _engUzunKombo = max(_engUzunKombo, _ketmaKet);
+    } else {
+      _ketmaKet = 0;
+    }
     if (mounted) setState(() {});
     Future.delayed(Duration(milliseconds: ok ? 750 : 1400), () async {
       if (!mounted) return;
@@ -281,7 +301,28 @@ class _MasterDrillState extends State<MasterDrill> {
         _queue.removeAt(0);
         _queue.add(v);
       }
+      if (_queue.isNotEmpty &&
+          _raunddaSoralgan >= MashqSessiya.raundHajmi) {
+        setState(() => _bekat = true);
+        return;
+      }
       setState(_next);
+    });
+  }
+
+  int get _raundYulduzi {
+    final xato = _raunddaSoralgan - _raunddaTogri;
+    return xato == 0 ? 3 : (xato == 1 ? 2 : 1);
+  }
+
+  void _davom() {
+    setState(() {
+      _bekat = false;
+      _raundRaqami++;
+      _raunddaSoralgan = 0;
+      _raunddaTogri = 0;
+      _raundBoshidagiBall = _xpEarned;
+      _next();
     });
   }
 
@@ -299,7 +340,23 @@ class _MasterDrillState extends State<MasterDrill> {
           ),
         ],
       ),
-      body: SafeArea(child: _word == null ? _doneView() : _questionView()),
+      body: SafeArea(
+        child: _bekat
+            ? RaundBekati(
+                raund: _raundRaqami,
+                yulduz: _raundYulduzi,
+                togri: _raunddaTogri,
+                jami: _raunddaSoralgan,
+                ball: _xpEarned - _raundBoshidagiBall,
+                engUzunKombo: _engUzunKombo,
+                keyingiNomi: "${_pool.length - _doneCount} so'z qoldi",
+                onDavom: _davom,
+                onYetadi: () => Navigator.pop(context),
+              )
+            : _word == null
+            ? _doneView()
+            : _questionView(),
+      ),
     );
   }
 

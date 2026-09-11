@@ -150,6 +150,7 @@ class QiroatLessonsList extends StatelessWidget {
 
   Widget _lessonTile(BuildContext context, QiroatLesson l) => PremiumTile(
     title: '${l.num}-dars',
+    subtitle: "${MashqBank.qiroatDars(l).length} ta so'z",
     arabicSubtitle: l.titleAr,
     label: '${l.num}',
     accent: AppColors.teal,

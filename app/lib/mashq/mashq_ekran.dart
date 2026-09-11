@@ -902,6 +902,7 @@ class _Yakun extends StatelessWidget {
           (a, b) =>
               progress.xatoSoni(b.kalit).compareTo(progress.xatoSoni(a.kalit)),
         );
+    final qiyinlar = zaiflar.where((e) => progress.qiyinMi(e.kalit)).toList();
     final sarlavha = mukammal
         ? 'Mukammal!'
         : toliq
@@ -994,6 +995,45 @@ class _Yakun extends StatelessWidget {
                   delay: const Duration(milliseconds: 340),
                   child: _ZaifRoyxat(zaiflar: zaiflar.take(6).toList()),
                 ),
+              // Shu sessiyada «qiyin» bo'lib qolganlar bo'lsa — ularni
+              // darrov alohida mashq qilish imkoni. Aynan qiynalgan paytda
+              // taklif qilinsa, o'quvchi uni kechiktirmaydi.
+              if (qiyinlar.isNotEmpty) ...[
+                const SizedBox(height: 12),
+                Reveal(
+                  delay: const Duration(milliseconds: 380),
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: Tactile(
+                      child: OutlinedButton.icon(
+                        onPressed: () => Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => MashqEkran(
+                              sarlavha: "Qiyin so'zlar",
+                              darsniki: qiyinlar,
+                              oldingilar: hammasi,
+                            ),
+                          ),
+                        ),
+                        icon: const Icon(Icons.psychology_rounded, size: 20),
+                        label: Text(
+                          "Qiyin so'zlar ustida ishlash (${qiyinlar.length})",
+                          style: const TextStyle(fontWeight: FontWeight.w800),
+                        ),
+                        style: OutlinedButton.styleFrom(
+                          foregroundColor: AppColors.coral,
+                          side: const BorderSide(color: AppColors.coral),
+                          padding: const EdgeInsets.symmetric(vertical: 14),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
               const SizedBox(height: 22),
               if (testgaOt != null) ...[
                 Reveal(

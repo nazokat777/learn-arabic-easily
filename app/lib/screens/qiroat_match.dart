@@ -2,6 +2,8 @@ import 'dart:math';
 import 'package:flutter/material.dart' hide Text;
 import '../widgets/uz_text.dart';
 import '../main.dart';
+import '../mashq/mukofot.dart';
+import '../widgets/motion.dart';
 import '../content.dart';
 import '../theme.dart';
 
@@ -31,6 +33,9 @@ class _QiroatMatchGameState extends State<QiroatMatchGame> {
   int? _selLeft;
   int? _selRight;
   bool _wrong = false; // xato juft (qizil chaqnash)
+  int _ketmaKet = 0;
+  String _fikr = '';
+  final _maqtovRnd = Random();
 
   @override
   void initState() {
@@ -74,10 +79,13 @@ class _QiroatMatchGameState extends State<QiroatMatchGame> {
       final word = _left[_selLeft!];
       // Juftlash ham so'z yodlash darajasiga hissa qo'shadi (+1).
       progress.bumpWord('${widget.lesson.completionId}::${word.ar}', true);
+      Haptic.ok();
       setState(() {
         _matched.add(word);
         _matchedTotal++;
         _xp += 3;
+        _ketmaKet++;
+        _fikr = Maqtov.togri(_maqtovRnd, ketmaKet: _ketmaKet);
         _selLeft = null;
         _selRight = null;
       });
@@ -95,9 +103,12 @@ class _QiroatMatchGameState extends State<QiroatMatchGame> {
         });
       }
     } else {
+      Haptic.wrong();
       setState(() {
         _mistakes++;
         _wrong = true;
+        _ketmaKet = 0;
+        _fikr = Maqtov.xato(_maqtovRnd);
       });
       Future.delayed(const Duration(milliseconds: 600), () {
         if (!mounted) return;
@@ -223,9 +234,16 @@ class _QiroatMatchGameState extends State<QiroatMatchGame> {
         padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
         child: Column(
           children: [
-            const Text(
-              'Arabcha so\'zni ma\'nosi bilan juftlang',
-              style: TextStyle(color: Colors.black54, fontSize: 14),
+            // Maqtov satri — juft topilgach shu yerda; bo'sh bo'lsa ko'rsatma.
+            Text(
+              _fikr.isEmpty ? 'Arabcha so\'zni ma\'nosi bilan juftlang' : _fikr,
+              style: TextStyle(
+                color: _fikr.isEmpty
+                    ? Colors.black54
+                    : (_wrong ? AppColors.coral : AppColors.success),
+                fontSize: 14,
+                fontWeight: _fikr.isEmpty ? FontWeight.w400 : FontWeight.w800,
+              ),
             ),
             const SizedBox(height: 16),
             Expanded(

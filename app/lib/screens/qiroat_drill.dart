@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart' hide Text;
 import '../widgets/uz_text.dart';
 import '../main.dart';
+import '../mashq/mukofot.dart';
 import '../content.dart';
 import '../progress.dart';
 import '../services/tts.dart';
@@ -37,6 +38,9 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
   _Question? _q;
   int? _picked;
   bool _answered = false;
+  int _portlash = 0;
+  String _fikr = '';
+  final _maqtovRnd = Random();
   bool _dk = false; // «Bilmadim» bosildimi
 
   String _key(QiroatVocab v) => '${widget.lesson.completionId}::${v.ar}';
@@ -93,6 +97,10 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
       _picked = i;
       _answered = true;
       _correctStreak = correct ? _correctStreak + 1 : 0;
+      if (correct) _portlash++;
+      _fikr = correct
+          ? Maqtov.togri(_maqtovRnd, ketmaKet: _correctStreak)
+          : Maqtov.xato(_maqtovRnd);
     });
     if (correct) {
       await progress.addXp(2);
@@ -379,35 +387,40 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
     }
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
-      child: Material(
-        color: bg,
-        borderRadius: BorderRadius.circular(14),
-        child: InkWell(
+      child: Portlash(
+        trigger: (_answered && i == q.correct && _picked == q.correct)
+            ? _portlash
+            : null,
+        child: Material(
+          color: bg,
           borderRadius: BorderRadius.circular(14),
-          onTap: _answered ? null : () => _answer(i),
-          child: Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 15),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(14),
-              border: Border.all(color: border, width: 1.8),
-            ),
-            child: isArabic
-                ? Directionality(
-                    textDirection: TextDirection.rtl,
-                    child: Text(
+          child: InkWell(
+            borderRadius: BorderRadius.circular(14),
+            onTap: _answered ? null : () => _answer(i),
+            child: Container(
+              width: double.infinity,
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 15),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(14),
+                border: Border.all(color: border, width: 1.8),
+              ),
+              child: isArabic
+                  ? Directionality(
+                      textDirection: TextDirection.rtl,
+                      child: Text(
+                        q.options[i],
+                        style: AppTheme.arabic(size: 24, color: AppColors.ink),
+                      ),
+                    )
+                  : Text(
                       q.options[i],
-                      style: AppTheme.arabic(size: 24, color: AppColors.ink),
+                      style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        color: AppColors.ink,
+                      ),
                     ),
-                  )
-                : Text(
-                    q.options[i],
-                    style: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: AppColors.ink,
-                    ),
-                  ),
+            ),
           ),
         ),
       ),
@@ -440,8 +453,8 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
     final msg = _dk
         ? 'To\'g\'ri javob: ${q.options[q.correct]} — yodlang'
         : ok
-        ? 'To\'g\'ri! +2 ball'
-        : 'To\'g\'ri javob: ${q.options[q.correct]}';
+        ? '$_fikr  +2 ball'
+        : '$_fikr · To\'g\'ri javob: ${q.options[q.correct]}';
     return Container(
       width: double.infinity,
       height: 56,

@@ -8,6 +8,7 @@ import '../../main.dart';
 import '../../services/tts.dart';
 import '../../theme.dart';
 import '../../widgets/motion.dart';
+import '../../mashq/mukofot.dart';
 import '../../widgets/ornament.dart';
 import '../../widgets/rasm_belgi.dart';
 import 'word_sheet.dart';
@@ -50,6 +51,9 @@ class _VocabStageState extends State<VocabStage> {
   int _correct = 0;
   int? _picked;
   bool _answered = false;
+  int _ketmaKet = 0; // ketma-ket to'g'ri — maqtov darajasi uchun
+  int _portlash = 0;
+  String _fikr = '';
 
   String _key(QiroatVocab v) => '${widget.lesson.completionId}::${v.ar}';
 
@@ -117,6 +121,14 @@ class _VocabStageState extends State<VocabStage> {
     setState(() {
       _picked = i;
       _answered = true;
+      if (ok) {
+        _ketmaKet++;
+        _portlash++;
+        _fikr = Maqtov.togri(_rnd, ketmaKet: _ketmaKet);
+      } else {
+        _ketmaKet = 0;
+        _fikr = Maqtov.xato(_rnd);
+      }
     });
     if (ok) widget.award(1);
     await progress.bumpWord(_key(word), ok);
@@ -445,6 +457,26 @@ class _VocabStageState extends State<VocabStage> {
               ),
             ),
           ),
+          const SizedBox(height: 10),
+          SizedBox(
+            height: 22,
+            child: _answered
+                ? Reveal(
+                    offsetY: 6,
+                    duration: const Duration(milliseconds: 350),
+                    child: Text(
+                      _fikr,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w800,
+                        color: _picked == _correct
+                            ? AppColors.success
+                            : AppColors.coral,
+                      ),
+                    ),
+                  )
+                : null,
+          ),
           const Spacer(),
           ...List.generate(_opts.length, (i) => _optTile(i)),
           const SizedBox(height: 8),
@@ -467,33 +499,38 @@ class _VocabStageState extends State<VocabStage> {
     }
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
-      child: Pulse(
-        trigger: (_answered && i == _correct) ? _pi : null,
-        child: Shake(
-          trigger: (_answered && i == _picked && i != _correct) ? _pi : null,
-          child: Tactile(
-            child: Material(
-              color: bg,
-              borderRadius: BorderRadius.circular(14),
-              child: InkWell(
+      child: Portlash(
+        trigger: (_answered && i == _correct && _picked == _correct)
+            ? _portlash
+            : null,
+        child: Pulse(
+          trigger: (_answered && i == _correct) ? _pi : null,
+          child: Shake(
+            trigger: (_answered && i == _picked && i != _correct) ? _pi : null,
+            child: Tactile(
+              child: Material(
+                color: bg,
                 borderRadius: BorderRadius.circular(14),
-                onTap: _answered ? null : () => _answer(i),
-                child: Container(
-                  width: double.infinity,
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 16,
-                    vertical: 15,
-                  ),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(14),
-                    border: Border.all(color: border, width: 1.8),
-                  ),
-                  child: Text(
-                    _opts[i],
-                    style: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: AppColors.ink,
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(14),
+                  onTap: _answered ? null : () => _answer(i),
+                  child: Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 15,
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(14),
+                      border: Border.all(color: border, width: 1.8),
+                    ),
+                    child: Text(
+                      _opts[i],
+                      style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        color: AppColors.ink,
+                      ),
                     ),
                   ),
                 ),

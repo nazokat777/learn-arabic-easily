@@ -53,6 +53,9 @@ class _MasterDrillState extends State<MasterDrill> {
   int _raundBoshidagiBall = 0;
   int _ketmaKet = 0;
   int _engUzunKombo = 0;
+  int _portlash = 0;
+  String _fikr = '';
+  final _maqtovRnd = Random();
 
   QiroatVocab? _word;
   int _mode = 0;
@@ -287,8 +290,11 @@ class _MasterDrillState extends State<MasterDrill> {
       _raunddaTogri++;
       _ketmaKet++;
       _engUzunKombo = max(_engUzunKombo, _ketmaKet);
+      _portlash++;
+      _fikr = Maqtov.togri(_maqtovRnd, ketmaKet: _ketmaKet);
     } else {
       _ketmaKet = 0;
+      _fikr = Maqtov.xato(_maqtovRnd);
     }
     if (mounted) setState(() {});
     Future.delayed(Duration(milliseconds: ok ? 750 : 1400), () async {
@@ -301,8 +307,7 @@ class _MasterDrillState extends State<MasterDrill> {
         _queue.removeAt(0);
         _queue.add(v);
       }
-      if (_queue.isNotEmpty &&
-          _raunddaSoralgan >= MashqSessiya.raundHajmi) {
+      if (_queue.isNotEmpty && _raunddaSoralgan >= MashqSessiya.raundHajmi) {
         setState(() => _bekat = true);
         return;
       }
@@ -725,21 +730,26 @@ class _MasterDrillState extends State<MasterDrill> {
               color: AppColors.ink,
             ),
           );
-    final tile = Material(
-      color: bg,
-      borderRadius: BorderRadius.circular(14),
-      child: InkWell(
+    final tile = Portlash(
+      trigger: (_answered && i == _correct && _picked == _correct)
+          ? _portlash
+          : null,
+      child: Material(
+        color: bg,
         borderRadius: BorderRadius.circular(14),
-        onTap: _answered ? null : () => _answerMcq(i),
-        child: Container(
-          width: double.infinity,
-          alignment: grid ? Alignment.center : Alignment.centerLeft,
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(14),
-            border: Border.all(color: border, width: 1.8),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(14),
+          onTap: _answered ? null : () => _answerMcq(i),
+          child: Container(
+            width: double.infinity,
+            alignment: grid ? Alignment.center : Alignment.centerLeft,
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(14),
+              border: Border.all(color: border, width: 1.8),
+            ),
+            child: child,
           ),
-          child: child,
         ),
       ),
     );
@@ -963,8 +973,8 @@ class _MasterDrillState extends State<MasterDrill> {
     final msg = _dk
         ? 'To\'g\'ri javob: $answer — yodlang'
         : ok
-        ? (_mastered(v) ? '«${_head(v)}» to\'liq yodlandi!' : 'To\'g\'ri!')
-        : 'To\'g\'ri javob: $answer';
+        ? (_mastered(v) ? '«${_head(v)}» to\'liq yodlandi!' : _fikr)
+        : '$_fikr · To\'g\'ri javob: $answer';
     return Container(
       width: double.infinity,
       constraints: const BoxConstraints(minHeight: 58),

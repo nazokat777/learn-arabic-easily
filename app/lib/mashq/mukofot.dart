@@ -587,6 +587,31 @@ class DarajaBanner extends StatelessWidget {
   const DarajaBanner({super.key, required this.nom, required this.daraja});
 
   @override
+  Widget build(BuildContext context) => MukofotBanner(
+    ikon: Icons.workspace_premium_rounded,
+    matn: "Yangi daraja: $nom ($daraja-pog'ona)!",
+  );
+}
+
+/// Kunlik maqsad bajarilganda chiqadigan banner.
+class MaqsadBanner extends StatelessWidget {
+  final int ball;
+  const MaqsadBanner({super.key, required this.ball});
+
+  @override
+  Widget build(BuildContext context) => MukofotBanner(
+    ikon: Icons.emoji_events_rounded,
+    matn: 'Kunlik maqsad bajarildi! +$ball ball',
+  );
+}
+
+/// Oltin banner — bir martalik katta mukofotlar uchun.
+class MukofotBanner extends StatelessWidget {
+  final IconData ikon;
+  final String matn;
+  const MukofotBanner({super.key, required this.ikon, required this.matn});
+
+  @override
   Widget build(BuildContext context) {
     return Reveal(
       fromScale: 0.7,
@@ -608,11 +633,11 @@ class DarajaBanner extends StatelessWidget {
         ),
         child: Row(
           children: [
-            const Icon(Icons.workspace_premium_rounded, color: Colors.white),
+            Icon(ikon, color: Colors.white),
             const SizedBox(width: 10),
             Expanded(
               child: Text(
-                'Yangi daraja: $nom ($daraja-pog\'ona)!',
+                matn,
                 style: const TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w900,

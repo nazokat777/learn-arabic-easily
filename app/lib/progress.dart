@@ -59,6 +59,18 @@ class Progress extends ChangeNotifier {
   /// Shuncha ketma-ket to'g'ri javobdan keyin «qiyin» belgisi olinadi.
   static const int qiyinChiqish = 3;
 
+  /// Kunlik maqsad — bir kunda shuncha savolga javob berish.
+  ///
+  /// Nega 20: bitta mashq sessiyasining 2-3 raundi. Katta maqsad
+  /// cho'chitadi, kichigi mukofot bo'lmaydi. Maqsad kunda bir marta
+  /// bajariladi va bir marta mukofotlanadi — «yana bitta» hissi
+  /// ertaga ham qaytib kelsin.
+  static const int kunlikMaqsad = 20;
+  static const int kunlikMukofotBalli = 10;
+  int _kunSoni = 0;
+  String? _kunSana;
+  bool _kunMukofotOlindi = false;
+
   SharedPreferences? _prefs;
 
   int get level => (xp ~/ 100) + 1;
@@ -111,6 +123,9 @@ class Progress extends ChangeNotifier {
         (k, v) => _urinish[k as String] = (v as num).toInt(),
       );
     }
+    _kunSana = _prefs!.getString('kunSana');
+    _kunSoni = _prefs!.getInt('kunSoni') ?? 0;
+    _kunMukofotOlindi = _prefs!.getBool('kunMukofot') ?? false;
     final ks = _prefs!.getString('ketma');
     if (ks != null) {
       (json.decode(ks) as Map).forEach(
@@ -129,6 +144,7 @@ class Progress extends ChangeNotifier {
 
   /// To'g'ri javobda +1, xatoda -1 (0..masteryGoal orasida). Yangi darajani qaytaradi.
   Future<int> bumpWord(String key, bool correct) async {
+    _kunlikQosh();
     final cur = _mastery[key] ?? 0;
     final next = (correct ? cur + 1 : cur - 1).clamp(0, masteryGoal);
     _mastery[key] = next;
@@ -208,10 +224,41 @@ class Progress extends ChangeNotifier {
 
   /// Usul natijasini belgilash: to'g'ri bo'lsa bitni yoqadi; xato bo'lsa o'sha bitni o'chiradi.
   Future<void> markMode(String key, int mode, bool correct) async {
+    _kunlikQosh();
     final cur = _modeMask[key] ?? 0;
     _modeMask[key] = correct ? (cur | (1 << mode)) : (cur & ~(1 << mode));
     await _save();
     notifyListeners();
+  }
+
+  // --- Kunlik maqsad ---
+
+  /// Bugun javob berilgan savollar soni (kun almashsa nolga tushadi).
+  int get bugungiSavollar => _kunSana == _today() ? _kunSoni : 0;
+
+  bool get kunlikMaqsadBajarildi => bugungiSavollar >= kunlikMaqsad;
+
+  /// Bugungi mukofot allaqachon olinganmi.
+  bool get kunlikMukofotOlindi =>
+      _kunSana == _today() && _kunMukofotOlindi;
+
+  void _kunlikQosh() {
+    final bugun = _today();
+    if (_kunSana != bugun) {
+      _kunSana = bugun;
+      _kunSoni = 0;
+      _kunMukofotOlindi = false;
+    }
+    _kunSoni++;
+  }
+
+  /// Kunlik mukofotni beradi — kunda faqat bir marta. Berilgan bo'lsa
+  /// `true`; maqsad bajarilmagan yoki allaqachon olingan bo'lsa `false`.
+  Future<bool> kunlikMukofotniOl() async {
+    if (!kunlikMaqsadBajarildi || kunlikMukofotOlindi) return false;
+    _kunMukofotOlindi = true;
+    await addXp(kunlikMukofotBalli);
+    return true;
   }
 
   String _today() {
@@ -298,5 +345,8 @@ class Progress extends ChangeNotifier {
     await p.setString('xato', json.encode(_xato));
     await p.setString('urinish', json.encode(_urinish));
     await p.setString('ketma', json.encode(_ketma));
+    if (_kunSana != null) await p.setString('kunSana', _kunSana!);
+    await p.setInt('kunSoni', _kunSoni);
+    await p.setBool('kunMukofot', _kunMukofotOlindi);
   }
 }

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart' hide Text;
 import '../widgets/uz_text.dart';
 
 import '../main.dart';
+import '../progress.dart';
 import '../services/tts.dart';
 import '../theme.dart';
 import '../widgets/motion.dart';
@@ -75,6 +76,8 @@ class _MashqEkranState extends State<MashqEkran> {
   int _daraja = progress.level;
   bool _darajaOshdi = false;
   Timer? _darajaTaymeri;
+  bool _maqsadBajarildi = false;
+  Timer? _maqsadTaymeri;
 
   // Qiyin bosqichida allaqachon o'rgatilgan elementlar.
   final Set<String> _orgatilgan = {};
@@ -97,6 +100,7 @@ class _MashqEkranState extends State<MashqEkran> {
   @override
   void dispose() {
     _darajaTaymeri?.cancel();
+    _maqsadTaymeri?.cancel();
     Tts.instance.stop();
     super.dispose();
   }
@@ -211,6 +215,17 @@ class _MashqEkranState extends State<MashqEkran> {
 
     final e = _savol!.element;
     await progress.bumpWord(e.kalit, togri);
+    // Kunlik maqsadga aynan shu javob bilan yetildimi — bir martalik
+    // mukofot. Xato javob ham hisobga kiradi: maqsad «ishlash», «to'g'ri
+    // topish» emas — aks holda qiynalgan kun jazoga aylanadi.
+    if (await progress.kunlikMukofotniOl()) {
+      _ball += Progress.kunlikMukofotBalli;
+      if (mounted) setState(() => _maqsadBajarildi = true);
+      _maqsadTaymeri?.cancel();
+      _maqsadTaymeri = Timer(const Duration(milliseconds: 3200), () {
+        if (mounted) setState(() => _maqsadBajarildi = false);
+      });
+    }
     if (togri) {
       await progress.addXp(qoshildi);
       if (progress.level > _daraja) {
@@ -280,6 +295,8 @@ class _MashqEkranState extends State<MashqEkran> {
       body: SafeArea(
         child: Column(
           children: [
+            if (_maqsadBajarildi)
+              const MaqsadBanner(ball: Progress.kunlikMukofotBalli),
             if (_darajaOshdi)
               DarajaBanner(nom: progress.levelName, daraja: progress.level),
             Expanded(

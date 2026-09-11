@@ -4,6 +4,7 @@ import '../widgets/uz_text.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../main.dart';
+import '../progress.dart';
 import '../theme.dart';
 import 'sarf_home.dart';
 import '../uz_yozuv.dart';
@@ -505,13 +506,65 @@ class _XpPanel extends StatelessWidget {
             'Keyingi darajagacha: ${100 - progress.xpInLevel} ball',
             style: const TextStyle(color: Colors.black45, fontSize: 12.5),
           ),
+          const SizedBox(height: 14),
+          const _KunlikMaqsad(),
         ],
       ),
     );
   }
 }
 
-/// Modul kartochkasi — rangli soya, gradient ikonka, suzuvchi harf.
+/// Kunlik maqsad qatori — «Bugun: 12 / 20 savol».
+///
+/// Har kuni qaytib keltiruvchi eng kuchli mexanizm: marra yaqin,
+/// aniq va bugungi. Bajarilganda yashil belgi, ertaga yana noldan.
+class _KunlikMaqsad extends StatelessWidget {
+  const _KunlikMaqsad();
+
+  @override
+  Widget build(BuildContext context) {
+    final soni = progress.bugungiSavollar;
+    final bajarildi = progress.kunlikMaqsadBajarildi;
+    final rang = bajarildi ? AppColors.success : AppColors.coral;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            Icon(
+              bajarildi
+                  ? Icons.check_circle_rounded
+                  : Icons.track_changes_rounded,
+              size: 18,
+              color: rang,
+            ),
+            const SizedBox(width: 6),
+            Expanded(
+              child: Text(
+                bajarildi
+                    ? 'Bugungi maqsad bajarildi!'
+                    : 'Bugungi maqsad: $soni / ${Progress.kunlikMaqsad} savol',
+                style: TextStyle(
+                  fontWeight: FontWeight.w800,
+                  fontSize: 13,
+                  color: rang,
+                ),
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 6),
+        AnimatedBar(
+          value: (soni / Progress.kunlikMaqsad).clamp(0, 1).toDouble(),
+          height: 8,
+          color: rang,
+          background: rang.withValues(alpha: 0.12),
+        ),
+      ],
+    );
+  }
+}
+
 /// «Qiyin so'zlarim» — bosh ekranda, faqat ro'yxat bo'sh bo'lmaganda.
 ///
 /// O'quvchi qoqilayotgan so'zlarini qidirib yurmasin: ilova ochilishi
@@ -583,6 +636,7 @@ class _QiyinBanner extends StatelessWidget {
   }
 }
 
+/// Modul kartochkasi — rangli soya, gradient ikonka, suzuvchi harf.
 class _ModuleCard extends StatelessWidget {
   final String title, subtitle, arabic;
   final Color accent;

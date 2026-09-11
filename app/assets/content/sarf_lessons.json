@@ -7189,6 +7189,354 @@
           ]
         }
       ]
+    },
+    {
+      "num": 102,
+      "page": 138,
+      "titleAr": "فَعِلَ – يَفْعِلُ",
+      "title": "Beshinchi bob: sahih, misol va multaviy",
+      "blocks": [
+        {
+          "type": "matn",
+          "uz": "Beshinchi bob — mujarrad boblarning eng kami. Moziyda ham, muzore'da ham aynul fe'l KASRALI: فَعِلَ – يَفْعِلُ. Bu bobning fe'llari deyarli hammasi fo'sida و bo'lgan «misol vovi» fe'llardir; sahih fe'l unda juda kam uchraydi."
+        },
+        {
+          "type": "bolim",
+          "uz": "SAHIH FE'L"
+        },
+        {
+          "type": "misol",
+          "ar": "نَعِمَ – يَنْعِمُ – نِعْمَةً",
+          "uz": "ne'matda, farovonlikda bo'lmoq"
+        },
+        {
+          "type": "matn",
+          "uz": "Sahih fe'lda hech qanday e'lol yo'q — hamma shakl qoidaning o'zi. Bir narsaga e'tibor bering: muzore' يَفْعِلُ vaznida bo'lgani uchun ismi zamon va makon مَفْعِلٌ vaznida keladi (مَنْعِمٌ), xuddi يَجْلِسُ – مَجْلِسٌ kabi."
+        },
+        {
+          "type": "jadval",
+          "sarlavha": "",
+          "ustunlar": [
+            {
+              "ar": "Shakl"
+            },
+            {
+              "ar": "Arabcha"
+            }
+          ],
+          "qatorlar": [
+            {
+              "kataklar": [
+                "Moziy",
+                "نَعِمَ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Muzore'",
+                "يَنْعِمُ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Masdar",
+                "نِعْمَةٌ، نُعُومَةٌ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Ismi foil",
+                "نَاعِمٌ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Fe'li jahd",
+                "لَمْ يَنْعِمْ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Fe'li nafiy",
+                "لا يَنْعِمُ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Amri hozir",
+                "اِنْعِمْ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Amri g'oib",
+                "لِيَنْعِمْ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Fe'li nahiy",
+                "لا تَنْعِمْ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Ismi zamon va makon",
+                "مَنْعِمٌ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Ismi tafzil",
+                "أَنْعَمُ"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "bolim",
+          "uz": "MISOL VOVI"
+        },
+        {
+          "type": "misol",
+          "ar": "وَرِثَ – يَرِثُ – وِرَاثَةً",
+          "uz": "meros olmoq, vorislik qilmoq"
+        },
+        {
+          "type": "matn",
+          "uz": "Beshinchi bobning asosiy «xo'jayini» shu turdagi fe'llar. Ularning qoidasi bitta: fe'lning boshidagi و muzore'da TUSHIB QOLADI. Sababi — و fathali يَ bilan kasra o'rtasida qoladi (يَوْرِثُ), arab tili bunday holatda vovni og'ir ko'radi va hazf qiladi: يَرِثُ."
+        },
+        {
+          "type": "matn",
+          "uz": "Vov tushgach, undan keyingi shakllar ham yengillashadi: amri hozir hamzasiz — رِثْ (aslida اِوْرِثْ edi, و tushgach hamzai vaslga ehtiyoj qolmadi). Ismi olatda esa و kasradan keyin kelib ي ga aylanadi: مِوْرَاثٌ → مِيرَاثٌ."
+        },
+        {
+          "type": "jadval",
+          "sarlavha": "",
+          "ustunlar": [
+            {
+              "ar": "Shakl"
+            },
+            {
+              "ar": "Arabcha"
+            }
+          ],
+          "qatorlar": [
+            {
+              "kataklar": [
+                "Moziy",
+                "وَرِثَ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Muzore'",
+                "يَرِثُ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Masdar",
+                "وِرَاثَةٌ، إِرْثٌ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Ismi foil",
+                "وَارِثٌ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Ismi maf'ul",
+                "مَوْرُوثٌ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Fe'li jahd",
+                "لَمْ يَرِثْ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Fe'li nafiy",
+                "لا يَرِثُ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Amri hozir",
+                "رِثْ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Amri g'oib",
+                "لِيَرِثْ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Fe'li nahiy",
+                "لا تَرِثْ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Ismi zamon va makon",
+                "مَوْرِثٌ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Ismi olat",
+                "مِيرَاثٌ"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "matn",
+          "uz": "Moziyda o'zgarish yo'q: وَرِثَ, وَرِثَا, وَرِثُوا... — vov o'z joyida turadi, chunki moziyda uning oldida يَ yo'q."
+        },
+        {
+          "type": "bolim",
+          "uz": "MULTAVIY (LAFIFI MAFRUQ)"
+        },
+        {
+          "type": "misol",
+          "ar": "وَلِيَ – يَلِي – وَلْيًا",
+          "uz": "yaqin bo'lmoq; ega bo'lmoq, boshqarmoq"
+        },
+        {
+          "type": "matn",
+          "uz": "Multaviy — fo'si و, lomi ي bo'lgan fe'l: ikki illat harfi bir kalimada, lekin o'rtada sahih harf ajratib turadi. Shuning uchun unda IKKI qoida birga ishlaydi: boshidagi و misol kabi tushadi, oxiridagi ي esa noqis kabi e'lol bo'ladi."
+        },
+        {
+          "type": "matn",
+          "uz": "Natijada arab tilidagi eng qisqa buyruq shakllaridan biri chiqadi: amri hozir — لِ («yaqin bo'l!»). Aslida اِوْلِيْ edi: و tushdi, oxiridagi ي jazm tufayli tushdi, faqat لِ qoldi. Xuddi shunday: وَقَى dan قِ, وَعَى dan عِ."
+        },
+        {
+          "type": "matn",
+          "uz": "Masdarida ma'no farqi bor: وِلاَيَةٌ (kasra bilan) — hokimlik, boshqaruv; وَلاَيَةٌ (fatha bilan) — do'stlik, yordam, yaqinlik. Bitta harakat ma'noni o'zgartiradi."
+        },
+        {
+          "type": "jadval",
+          "sarlavha": "",
+          "ustunlar": [
+            {
+              "ar": "Shakl"
+            },
+            {
+              "ar": "Arabcha"
+            }
+          ],
+          "qatorlar": [
+            {
+              "kataklar": [
+                "Moziy",
+                "وَلِيَ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Muzore'",
+                "يَلِي"
+              ]
+            },
+            {
+              "kataklar": [
+                "Masdar",
+                "وَلْيٌ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Ismi foil",
+                "وَالٍ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Sifati mushabbaha",
+                "وَلِيٌّ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Ismi maf'ul",
+                "مَوْلِيٌّ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Fe'li jahd",
+                "لَمْ يَلِ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Fe'li nafiy",
+                "لا يَلِي"
+              ]
+            },
+            {
+              "kataklar": [
+                "Amri hozir",
+                "لِ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Amri g'oib",
+                "لِيَلِ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Fe'li nahiy",
+                "لا تَلِ"
+              ]
+            },
+            {
+              "kataklar": [
+                "Ismi zamon va makon",
+                "مَوْلًى"
+              ]
+            },
+            {
+              "kataklar": [
+                "Ismi tafzil",
+                "أَوْلَى"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "misol",
+          "ar": "وَلِيَ الأَمِيرُ البَلَدَ",
+          "uz": "Amir shaharni boshqardi."
+        },
+        {
+          "type": "bolim",
+          "uz": "BOBNING BOSHQA FE'LLARI"
+        },
+        {
+          "type": "list",
+          "intro": "Beshinchi bobda ko'p uchraydigan fe'llar — hammasi misol vovi:",
+          "items": [
+            "وَثِقَ – يَثِقُ – ثِقَةً — ishonmoq, suyanmoq",
+            "وَمِقَ – يَمِقُ – مِقَةً — sevmoq, do'st tutmoq",
+            "وَرِعَ – يَرِعُ – وَرَعًا — haromdan saqlanmoq, taqvoli bo'lmoq",
+            "وَرِمَ – يَرِمُ – وَرَمًا — shishmoq"
+          ]
+        },
+        {
+          "type": "matn",
+          "uz": "Eslab qolish yo'li: «beshinchi bob — vovli bob». Fe'l و bilan boshlanib, muzore'da kasrali bo'lsa, u deyarli har doim shu bobdan: و tushadi, kasra qoladi."
+        }
+      ]
     }
   ]
 }

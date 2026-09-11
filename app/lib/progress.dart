@@ -165,6 +165,11 @@ class Progress extends ChangeNotifier {
   bool qiyinMi(String key) =>
       xatoSoni(key) >= qiyinChegara && ketmaKetTogri(key) < qiyinChiqish;
 
+  /// Hozir «qiyin» ro'yxatida turgan kalitlar. Faqat xato qilinganlar
+  /// ko'rib chiqiladi — bosh ekranda har qayta chizishda butun kontentni
+  /// aylanib chiqmaslik uchun.
+  Iterable<String> get qiyinKalitlar => _xato.keys.where(qiyinMi);
+
   /// Elementning «zaiflik» og'irligi — takrorlashda qaysi element ko'proq
   /// chiqishini shu belgilaydi. Katta son = ko'proq mashq kerak.
   ///

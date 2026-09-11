@@ -58,10 +58,10 @@ class MashqlarHome extends StatelessWidget {
   /// yurmasin, ilova o'zi ko'rsatib tursin. Ro'yxat bo'sh bo'lsa ham
   /// plitka ko'rinadi — «hozircha qiyin so'z yo'q» ham mukofot.
   Widget _qiyinPlitka(BuildContext context) {
-    final qiyin = MashqBank.qiyinlar();
-    final bosh = qiyin.isEmpty;
+    final soni = progress.qiyinKalitlar.length;
+    final bosh = soni == 0;
     return PremiumTile(
-      title: bosh ? "Qiyin so'zlarim" : "Qiyin so'zlarim (${qiyin.length})",
+      title: bosh ? "Qiyin so'zlarim" : "Qiyin so'zlarim ($soni)",
       subtitle: bosh
           ? "Hozircha yo'q — zo'r ketyapsiz!"
           : "3+ marta adashilgan so'zlar — avval o'rgatiladi, keyin so'raladi",
@@ -83,16 +83,7 @@ class MashqlarHome extends StatelessWidget {
                 content: Text("Qiyin so'z yo'q. Mashq qilib turing!"),
               ),
             )
-          : () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (_) => MashqEkran(
-                  sarlavha: "Qiyin so'zlarim",
-                  darsniki: qiyin,
-                  oldingilar: MashqBank.qiyinHavzasi(qiyin),
-                ),
-              ),
-            ),
+          : () => qiyinMashqiniOch(context),
     );
   }
 
@@ -151,4 +142,26 @@ class MashqlarHome extends StatelessWidget {
           Navigator.push(context, MaterialPageRoute(builder: (_) => page)),
     );
   }
+}
+
+/// «Qiyin so'zlarim» mashqini ochadi — elementlar aynan shu paytda
+/// yig'iladi (butun kontentni bir marta aylanib chiqish).
+void qiyinMashqiniOch(BuildContext context) {
+  final qiyin = MashqBank.qiyinlar();
+  if (qiyin.isEmpty) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text("Qiyin so'z yo'q. Mashq qilib turing!")),
+    );
+    return;
+  }
+  Navigator.push(
+    context,
+    MaterialPageRoute(
+      builder: (_) => MashqEkran(
+        sarlavha: "Qiyin so'zlarim",
+        darsniki: qiyin,
+        oldingilar: MashqBank.qiyinHavzasi(qiyin),
+      ),
+    ),
+  );
 }

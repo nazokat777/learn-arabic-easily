@@ -109,6 +109,7 @@ class NahvHome extends StatelessWidget {
 
   Widget _tile(BuildContext context, NahvLesson l) => PremiumTile(
     title: l.title,
+    subtitle: '${MashqBank.nahvDars(l).length} ta mashq',
     arabicSubtitle: l.titleAr,
     label: '${l.num}',
     accent: AppColors.coral,

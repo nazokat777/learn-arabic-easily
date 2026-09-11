@@ -52,6 +52,13 @@ class HomeScreen extends StatelessWidget {
                     delay: Duration(milliseconds: 90),
                     child: _XpPanel(),
                   ),
+                  if (progress.qiyinKalitlar.isNotEmpty) ...[
+                    const SizedBox(height: 12),
+                    Reveal(
+                      delay: const Duration(milliseconds: 120),
+                      child: _QiyinBanner(soni: progress.qiyinKalitlar.length),
+                    ),
+                  ],
                   const SizedBox(height: 26),
                   Reveal(
                     delay: const Duration(milliseconds: 160),
@@ -505,6 +512,77 @@ class _XpPanel extends StatelessWidget {
 }
 
 /// Modul kartochkasi — rangli soya, gradient ikonka, suzuvchi harf.
+/// «Qiyin so'zlarim» — bosh ekranda, faqat ro'yxat bo'sh bo'lmaganda.
+///
+/// O'quvchi qoqilayotgan so'zlarini qidirib yurmasin: ilova ochilishi
+/// bilan «mana shu N ta so'z sizni kutyapti» deb ko'rsatadi. Ro'yxat
+/// bo'shaganda banner o'zi yo'qoladi — bu ham mukofot.
+class _QiyinBanner extends StatelessWidget {
+  final int soni;
+  const _QiyinBanner({required this.soni});
+
+  @override
+  Widget build(BuildContext context) {
+    return Tactile(
+      child: Material(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(18),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(18),
+          onTap: () => qiyinMashqiniOch(context),
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(18),
+              border: Border.all(
+                color: AppColors.coral.withValues(alpha: 0.45),
+                width: 1.4,
+              ),
+            ),
+            child: Row(
+              children: [
+                Container(
+                  width: 42,
+                  height: 42,
+                  decoration: BoxDecoration(
+                    color: AppColors.coral.withValues(alpha: 0.12),
+                    shape: BoxShape.circle,
+                  ),
+                  child: const Icon(
+                    Icons.psychology_rounded,
+                    color: AppColors.coral,
+                  ),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Qiyin so'zlarim: $soni ta",
+                        style: const TextStyle(
+                          fontWeight: FontWeight.w800,
+                          fontSize: 15,
+                          color: AppColors.ink,
+                        ),
+                      ),
+                      const Text(
+                        "3+ marta adashilgan — avval o'rgatiladi, keyin so'raladi",
+                        style: TextStyle(fontSize: 12.5, color: Colors.black54),
+                      ),
+                    ],
+                  ),
+                ),
+                const Icon(Icons.arrow_forward_rounded, color: AppColors.coral),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 class _ModuleCard extends StatelessWidget {
   final String title, subtitle, arabic;
   final Color accent;

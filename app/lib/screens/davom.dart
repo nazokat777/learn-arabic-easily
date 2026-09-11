@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../main.dart';
+import 'alifbo_home.dart';
 import 'lesson/lesson_flow.dart';
 import 'nahv_home.dart';
 import 'sarf_home.dart';
@@ -14,6 +15,8 @@ Widget? oxirgiDarsEkrani() {
   final id = progress.oxirgiDarsId;
   if (modul == null || id == null || id.isEmpty) return null;
   switch (modul) {
+    case 'alifbo':
+      return alifboDarsEkrani(id);
     case 'qiroat':
       for (final l in repo.qiroatLessons) {
         if (l.completionId == id) return LessonFlow(lesson: l);

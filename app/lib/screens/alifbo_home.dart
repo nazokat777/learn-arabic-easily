@@ -179,8 +179,30 @@ class AlifboHome extends StatelessWidget {
       arabic: arabic,
       accent: accent,
       trailing: MasteryBadge(lessonId: masteryId, size: 22),
-      onTap: () =>
-          Navigator.push(context, MaterialPageRoute(builder: (_) => page)),
+      onTap: () {
+        // Dars sahifalari (test emas) «Davom etish» uchun eslab qolinadi.
+        final kalit = alifboDarsKaliti(page);
+        if (kalit != null) {
+          progress.oxirgiDarsniYoz('alifbo', kalit, 'Alifbo · $title');
+        }
+        Navigator.push(context, MaterialPageRoute(builder: (_) => page));
+      },
     );
   }
 }
+
+/// Alifbo dars ekranining «Davom etish» kaliti; test/mashq — `null`.
+String? alifboDarsKaliti(Widget page) => switch (page) {
+  LettersLesson() => 'harflar',
+  HarakatLesson() => 'harakatlar',
+  UlashLesson() => 'ulash',
+  _ => null,
+};
+
+/// Kalitdan dars ekrani — bosh ekrandagi «Davom etish» uchun.
+Widget? alifboDarsEkrani(String kalit) => switch (kalit) {
+  'harflar' => const LettersLesson(),
+  'harakatlar' => const HarakatLesson(),
+  'ulash' => const UlashLesson(),
+  _ => null,
+};

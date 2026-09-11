@@ -5,11 +5,13 @@ import 'content.dart';
 import 'progress.dart';
 
 import 'services/content_updater.dart';
+import 'services/kirish.dart';
 import 'services/tts.dart';
 import 'services/vocab_audio.dart';
 import 'theme.dart';
 import 'uz_yozuv.dart';
 import 'screens/home.dart';
+import 'screens/kirish_ekrani.dart';
 
 late final ContentRepository repo;
 late final Progress progress;
@@ -28,11 +30,21 @@ Future<void> main() async {
   // Yangi darslar saytga qo'shilgan bo'lsa, orqa fonda yuklab qo'yamiz.
   // Ilovani kutdirmaydi; yangisi keyingi ochilishda ko'rinadi.
   unawaited(ContentUpdater.instance.checkForUpdate());
-  runApp(const ArabApp());
+  // Sayt faqat o'quv guruhi uchun: kod qo'yilgan bo'lsa, darvoza.
+  final kirishKodi = await Kirish.kodniOqi();
+  final darvozaKerak = await Kirish.kerakmi(kirishKodi);
+  runApp(ArabApp(kirishKodi: kirishKodi, darvozaKerak: darvozaKerak));
 }
 
 class ArabApp extends StatelessWidget {
-  const ArabApp({super.key});
+  final String kirishKodi;
+  final bool darvozaKerak;
+
+  const ArabApp({
+    super.key,
+    this.kirishKodi = '',
+    this.darvozaKerak = false,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +54,11 @@ class ArabApp extends StatelessWidget {
       title: "Arab tilini oson o'rganamiz",
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
-      home: const HomeScreen(),
+      home: KirishDarvozasi(
+        kod: kirishKodi,
+        kerak: darvozaKerak,
+        child: const HomeScreen(),
+      ),
     );
   }
 }

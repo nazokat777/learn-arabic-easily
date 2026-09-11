@@ -35,6 +35,7 @@ flutter:
     - assets/content/grammatika.json
     - assets/content/sarf_lessons.json
     - assets/content/version.json
+    - assets/content/kirish.json
     # Ovoz RO'YXATLARI ilova ichida (jami ~1 MB), ovoz FAYLLARI esa saytdan
     # olinadi (257 MB - APK ichiga sig'maydi). Fayllarni GitHub Actions
     # build/web/audio ga nusxalaydi, ilova esa VocabAudio.baseUrl orqali

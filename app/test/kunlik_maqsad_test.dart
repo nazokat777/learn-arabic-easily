@@ -41,5 +41,12 @@ void main() {
     // O'sha kuni yana ball olsa ham seriya ikkiga chiqmaydi.
     await p.addXp(50);
     expect(p.streak, 1);
+    // Haftalik ko'rinish: bugun belgilangan, kecha — yo'q.
+    final bugun = DateTime.now();
+    expect(p.maqsadBajarilganKun(bugun), isTrue);
+    expect(
+      p.maqsadBajarilganKun(bugun.subtract(const Duration(days: 1))),
+      isFalse,
+    );
   });
 }

@@ -71,6 +71,10 @@ class Progress extends ChangeNotifier {
   String? _kunSana;
   bool _kunMukofotOlindi = false;
 
+  /// Maqsad bajarilgan kunlar ('YYYY-MM-DD'). Haftalik ko'rinish
+  /// uchun; eskilari kesilmaydi — bir yilda 365 ta qisqa satr, xolos.
+  final Set<String> _maqsadKunlari = {};
+
   SharedPreferences? _prefs;
 
   int get level => (xp ~/ 100) + 1;
@@ -126,6 +130,7 @@ class Progress extends ChangeNotifier {
     _kunSana = _prefs!.getString('kunSana');
     _kunSoni = _prefs!.getInt('kunSoni') ?? 0;
     _kunMukofotOlindi = _prefs!.getBool('kunMukofot') ?? false;
+    _maqsadKunlari.addAll(_prefs!.getStringList('maqsadKunlari') ?? []);
     final ks = _prefs!.getString('ketma');
     if (ks != null) {
       (json.decode(ks) as Map).forEach(
@@ -257,6 +262,7 @@ class Progress extends ChangeNotifier {
   Future<bool> kunlikMukofotniOl() async {
     if (!kunlikMaqsadBajarildi || kunlikMukofotOlindi) return false;
     _kunMukofotOlindi = true;
+    _maqsadKunlari.add(_today());
     _seriyaniOshir();
     await addXp(kunlikMukofotBalli);
     return true;
@@ -300,6 +306,14 @@ class Progress extends ChangeNotifier {
 
   /// Bugun seriya uchun hisoblangan kunmi (maqsad bajarilgan).
   bool get bugunSeriyada => _lastActiveDay == _today();
+
+  /// Shu kunda maqsad bajarilganmi.
+  bool maqsadBajarilganKun(DateTime kun) =>
+      _maqsadKunlari.contains(_sana(kun));
+
+  String _sana(DateTime n) =>
+      '${n.year}-${n.month.toString().padLeft(2, '0')}-'
+      '${n.day.toString().padLeft(2, '0')}';
 
   bool isCompleted(String lessonId) => _completed.contains(lessonId);
 
@@ -360,5 +374,6 @@ class Progress extends ChangeNotifier {
     if (_kunSana != null) await p.setString('kunSana', _kunSana!);
     await p.setInt('kunSoni', _kunSoni);
     await p.setBool('kunMukofot', _kunMukofotOlindi);
+    await p.setStringList('maqsadKunlari', _maqsadKunlari.toList());
   }
 }

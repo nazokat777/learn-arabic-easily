@@ -566,6 +566,82 @@ class _KunlikMaqsad extends StatelessWidget {
           color: rang,
           background: rang.withValues(alpha: 0.12),
         ),
+        const SizedBox(height: 12),
+        const _Hafta(),
+      ],
+    );
+  }
+}
+
+/// Oxirgi yetti kun — maqsad bajarilgan kunlar to'lgan doira.
+///
+/// Seriya raqami mavhum, yetti doira esa ko'z oldida: «shanba bo'sh
+/// qolibdi» degan his keyingi haftani tekis qiladi. Bugungi kun
+/// hoshiya bilan ajratiladi.
+class _Hafta extends StatelessWidget {
+  const _Hafta();
+
+  static const _nomlar = ['Du', 'Se', 'Ch', 'Pa', 'Ju', 'Sh', 'Ya'];
+
+  @override
+  Widget build(BuildContext context) {
+    final bugun = DateTime.now();
+    // Haftaning dushanbasidan boshlab — kalendar kabi o'qiladi.
+    final dushanba = DateTime(
+      bugun.year,
+      bugun.month,
+      bugun.day - (bugun.weekday - 1),
+    );
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        for (var i = 0; i < 7; i++)
+          _kun(
+            _nomlar[i],
+            dushanba.add(Duration(days: i)),
+            bugun,
+          ),
+      ],
+    );
+  }
+
+  Widget _kun(String nom, DateTime kun, DateTime bugun) {
+    final bajarildi = progress.maqsadBajarilganKun(kun);
+    final bugunmi =
+        kun.year == bugun.year &&
+        kun.month == bugun.month &&
+        kun.day == bugun.day;
+    final kelajak = kun.isAfter(bugun) && !bugunmi;
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        AnimatedContainer(
+          duration: const Duration(milliseconds: 400),
+          curve: kExpoOut,
+          width: 30,
+          height: 30,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: bajarildi
+                ? AppColors.success
+                : AppColors.success.withValues(alpha: kelajak ? 0.05 : 0.12),
+            border: bugunmi
+                ? Border.all(color: AppColors.coral, width: 2)
+                : null,
+          ),
+          child: bajarildi
+              ? const Icon(Icons.check_rounded, size: 18, color: Colors.white)
+              : null,
+        ),
+        const SizedBox(height: 4),
+        Text(
+          nom,
+          style: TextStyle(
+            fontSize: 11,
+            fontWeight: bugunmi ? FontWeight.w900 : FontWeight.w600,
+            color: bugunmi ? AppColors.coral : Colors.black45,
+          ),
+        ),
       ],
     );
   }

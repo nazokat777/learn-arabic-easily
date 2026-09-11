@@ -126,7 +126,7 @@ class HomeScreen extends StatelessWidget {
                       const SizedBox(height: 14),
                       _ModuleCard(
                         title: 'Mashqlar',
-                        subtitle: "Lug'at testi va so'z yasash o'yini",
+                        subtitle: "Qiyin so'zlarim, lug'at testi, so'z yasash",
                         arabic: 'تَمَارِين',
                         accent: AppColors.amber,
                         onTap: () => Navigator.push(

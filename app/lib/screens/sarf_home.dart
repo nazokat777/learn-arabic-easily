@@ -3,6 +3,7 @@ import '../widgets/uz_text.dart';
 
 import '../content.dart';
 import '../main.dart';
+import '../services/tts.dart';
 import '../mashq/bank.dart';
 import '../mashq/mashq_ekran.dart';
 import '../theme.dart';
@@ -254,36 +255,42 @@ class _Paradigma extends StatelessWidget {
       runSpacing: 8,
       children: [
         for (final (shakl, nom) in shakllar)
-          Container(
-            constraints: const BoxConstraints(minWidth: 96),
-            padding: const EdgeInsets.fromLTRB(12, 8, 12, 6),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(
-                color: AppColors.indigo.withValues(alpha: 0.25),
+          // Katakka bosilsa shakl o'qib beriladi — sarf quloq bilan
+          // ham yodlanadi, ayniqsa harakatlar farqi (فَعِلَ / فَعُلَ).
+          InkWell(
+            borderRadius: BorderRadius.circular(12),
+            onTap: () => Tts.instance.speak(shakl, id: 'p$shakl'),
+            child: Container(
+              constraints: const BoxConstraints(minWidth: 96),
+              padding: const EdgeInsets.fromLTRB(12, 8, 12, 6),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(
+                  color: AppColors.indigo.withValues(alpha: 0.25),
+                ),
               ),
-            ),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Directionality(
-                  textDirection: TextDirection.rtl,
-                  child: Text(
-                    shakl,
-                    style: AppTheme.arabic(size: 22, color: AppColors.ink),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Directionality(
+                    textDirection: TextDirection.rtl,
+                    child: Text(
+                      shakl,
+                      style: AppTheme.arabic(size: 22, color: AppColors.ink),
+                    ),
                   ),
-                ),
-                const SizedBox(height: 2),
-                Text(
-                  nom,
-                  style: const TextStyle(
-                    fontSize: 10.5,
-                    color: Colors.black54,
-                    fontWeight: FontWeight.w700,
+                  const SizedBox(height: 2),
+                  Text(
+                    nom,
+                    style: const TextStyle(
+                      fontSize: 10.5,
+                      color: Colors.black54,
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
       ],

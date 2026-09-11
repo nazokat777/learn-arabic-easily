@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart' hide Text;
@@ -73,6 +74,7 @@ class _MashqEkranState extends State<MashqEkran> {
   String _fikrMatni = '';
   int _daraja = progress.level;
   bool _darajaOshdi = false;
+  Timer? _darajaTaymeri;
 
   // Qiyin bosqichida allaqachon o'rgatilgan elementlar.
   final Set<String> _orgatilgan = {};
@@ -94,6 +96,7 @@ class _MashqEkranState extends State<MashqEkran> {
 
   @override
   void dispose() {
+    _darajaTaymeri?.cancel();
     Tts.instance.stop();
     super.dispose();
   }
@@ -213,7 +216,8 @@ class _MashqEkranState extends State<MashqEkran> {
       if (progress.level > _daraja) {
         _daraja = progress.level;
         if (mounted) setState(() => _darajaOshdi = true);
-        Future.delayed(const Duration(milliseconds: 2600), () {
+        _darajaTaymeri?.cancel();
+        _darajaTaymeri = Timer(const Duration(milliseconds: 2600), () {
           if (mounted) setState(() => _darajaOshdi = false);
         });
       }

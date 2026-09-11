@@ -96,6 +96,26 @@ void main() {
     );
   });
 
+  test("«ARABCHA – tarjimasi, izohi» namunalari — izoh bilan, takrorsiz", () {
+    final e = MashqBank.sarfDars(
+      dars([
+        {
+          'type': 'matn',
+          'uz':
+              "ضَرَبا – urdilar, ikki kishi, o'tgan zamonda, siyg'asi tasniya. "
+              "ضَرَبُوا – urdilar, ko'p er kishilar, o'tgan zamonda. "
+              "ضَرَبَتا – urdilar, ikki kishi, siyg'asi tasniya, muannas. "
+              "مَفْرِرانِ – qoidasi yuqorida o'tdi. "
+              "مَوْثُوبُ – ismi maf'ul.",
+        },
+      ]),
+    );
+    expect(e.map((x) => '${x.ar}=${x.uz}'), [
+      'ضَرَبا=urdilar, ikki kishi',
+      "ضَرَبُوا=urdilar, ko'p er kishilar",
+    ]);
+  });
+
   test('jadval: oxirgi arabcha katak ↔ oxirgi o\'zbekcha katak', () {
     final e = MashqBank.sarfDars(
       dars([

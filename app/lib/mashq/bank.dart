@@ -140,6 +140,24 @@ class MashqBank {
     "mutakallim ma'al g'ayr",
   ];
 
+  /// «ARABCHA – tarjimasi, izohi, siyg'asi …» — nazariy boblardagi
+  /// namuna jumlalar («ضَرَبا – urdilar, ikki kishi, o'tgan zamonda…»).
+  /// Tarjima va birinchi izoh olinadi: faqat tarjima («urdilar») bir
+  /// necha shaklga to'g'ri kelib, savolni ikki javobli qilardi.
+  static final RegExp _tarjima = RegExp(
+    r"([؀-ۿ][؀-ۿ\s]*?)\s[–—-]\s([^,،.;:()]+)(?:[,،]\s*([^,،.;:()]+))?",
+  );
+
+  /// Tarjima o'rnida yorliq yoki qoida bo'lsa — bu tarjima emas.
+  static bool _tarjimaEmas(String uz) {
+    final k = _apostrof(uz).toLowerCase();
+    const yorliqlar = [
+      'moziy', 'muzore', 'ismi ', 'sifati ', "fe'li ", 'amri ', 'amr ',
+      'nahiy', 'masdar', 'qoida', 'yuqorida', 'vazni', 'aslida',
+    ];
+    return yorliqlar.any(k.startsWith) || k.contains('qoida');
+  }
+
   static final RegExp _lotin = RegExp('[A-Za-z]');
   static final RegExp _arabcha = RegExp('[؀-ۿ]');
   static final RegExp _sarlavhaQavs = RegExp(r'\(([؀-ۿ\s]+)\)');
@@ -183,6 +201,9 @@ class MashqBank {
     // Sarlavhadagi fe'l — «Misol fe'lining (وَثَبَ) sarfi».
     final sarlavhaAsos = _sarlavhaQavs.firstMatch(l.title)?.group(1)?.trim();
     String? oxirgiBolim;
+    // Bir xil tarjimali ikkinchi shakl olinmaydi — «urdilar» ikkita
+    // arabchaga to'g'ri kelsa, «arabchasini top» savoli buziladi.
+    final tarjimalar = <String>{};
 
     for (final b in l.blocks) {
       if (b.type == 'misol') {
@@ -232,12 +253,32 @@ class MashqBank {
         for (final m in topilgan) {
           if (m.group(2) == 'moziy') asos = m.group(1)!.trim();
         }
-        if (asos == null) continue;
-        for (final m in topilgan) {
+        if (asos != null) {
+          for (final m in topilgan) {
+            final ar = m.group(1)!.trim();
+            final yorliq = m.group(2)!;
+            if (yorliq == 'moziy' || ar == asos) continue;
+            qosh(ar, '$yorliq ($asos)');
+          }
+        }
+        // «ARABCHA – tarjimasi, izohi» namunalari.
+        for (final m in _tarjima.allMatches(matn)) {
           final ar = m.group(1)!.trim();
-          final yorliq = m.group(2)!;
-          if (yorliq == 'moziy' || ar == asos) continue;
-          qosh(ar, '$yorliq ($asos)');
+          var uz = m.group(2)!.trim();
+          final izoh = m.group(3)?.trim() ?? '';
+          if (uz.length < 3 ||
+              uz.length > 60 ||
+              _arabcha.hasMatch(uz) ||
+              _tarjimaEmas(uz)) {
+            continue;
+          }
+          if (izoh.isNotEmpty &&
+              izoh.length <= 30 &&
+              !_arabcha.hasMatch(izoh) &&
+              !_apostrof(izoh).toLowerCase().startsWith("siyg'a")) {
+            uz = '$uz, $izoh';
+          }
+          if (tarjimalar.add(uz)) qosh(ar, uz);
         }
         continue;
       }

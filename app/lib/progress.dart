@@ -257,6 +257,7 @@ class Progress extends ChangeNotifier {
   Future<bool> kunlikMukofotniOl() async {
     if (!kunlikMaqsadBajarildi || kunlikMukofotOlindi) return false;
     _kunMukofotOlindi = true;
+    _seriyaniOshir();
     await addXp(kunlikMukofotBalli);
     return true;
   }
@@ -280,14 +281,25 @@ class Progress extends ChangeNotifier {
 
   Future<void> addXp(int amount) async {
     xp += amount;
-    final today = _today();
-    if (_lastActiveDay != today) {
-      streak += 1;
-      _lastActiveDay = today;
-    }
     await _save();
     notifyListeners();
   }
+
+  /// Seriya (olov) — KUNLIK MAQSAD bajarilgan kunlar ketma-ketligi.
+  ///
+  /// Oldin har qanday ball seriyani oshirardi: bitta savolga javob
+  /// berib chiqib ketgan kun ham «o'qilgan kun» hisoblanardi va olov
+  /// belgisi ma'nosini yo'qotgan edi. Endi olov halol: kun maqsadga
+  /// yetilgandagina yonadi, bir kun o'tkazib yuborilsa o'chadi.
+  void _seriyaniOshir() {
+    final today = _today();
+    if (_lastActiveDay == today) return;
+    _lastActiveDay = today;
+    streak += 1;
+  }
+
+  /// Bugun seriya uchun hisoblangan kunmi (maqsad bajarilgan).
+  bool get bugunSeriyada => _lastActiveDay == _today();
 
   bool isCompleted(String lessonId) => _completed.contains(lessonId);
 

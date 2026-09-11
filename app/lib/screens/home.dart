@@ -321,8 +321,14 @@ class _Hero extends StatelessWidget {
                             ),
                             _Chip(
                               icon: Icons.local_fire_department_rounded,
-                              text: '${progress.streak} kun',
-                              color: AppColors.coral,
+                              text: progress.streak == 0
+                                  ? 'Seriya boshlang'
+                                  : '${progress.streak} kun ketma-ket',
+                              // Bugun hali maqsad bajarilmagan bo'lsa
+                              // olov xira — «bugun ham yoqing» ishorasi.
+                              color: progress.bugunSeriyada
+                                  ? AppColors.coral
+                                  : AppColors.coral.withValues(alpha: 0.55),
                             ),
                             const _YozuvTugmasi(),
                           ],

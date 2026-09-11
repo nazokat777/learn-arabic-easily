@@ -25,4 +25,21 @@ void main() {
     expect(await p.kunlikMukofotniOl(), isFalse);
     expect(p.xp, oldingiBall + Progress.kunlikMukofotBalli);
   });
+
+  test("seriya faqat maqsad bajarilgan kunda oshadi", () async {
+    final p = Progress();
+    // Oddiy ball seriyani yoqmaydi.
+    await p.addXp(5);
+    expect(p.streak, 0);
+    expect(p.bugunSeriyada, isFalse);
+    for (var i = 0; i < Progress.kunlikMaqsad; i++) {
+      await p.bumpWord('seriya::$i', true);
+    }
+    expect(await p.kunlikMukofotniOl(), isTrue);
+    expect(p.streak, 1);
+    expect(p.bugunSeriyada, isTrue);
+    // O'sha kuni yana ball olsa ham seriya ikkiga chiqmaydi.
+    await p.addXp(50);
+    expect(p.streak, 1);
+  });
 }

@@ -48,19 +48,31 @@ class SarfHome extends StatelessWidget {
     );
   }
 
-  Widget _tile(BuildContext context, SarfLesson l) => PremiumTile(
-    label: '${l.num}',
-    title: l.title,
-    // Kitobda sarlavhasi bo'lmagan darsda arabcha satr chizilmaydi.
-    arabicSubtitle: l.titleAr.isEmpty ? null : l.titleAr,
-    accent: AppColors.indigo,
-    trailing: MasteryBadge(lessonId: l.completionId),
-    onTap: () => Navigator.push(
-      context,
-      MaterialPageRoute(builder: (_) => SarfLessonScreen(lesson: l)),
-    ),
-  );
+  Widget _tile(BuildContext context, SarfLesson l) {
+    final mashq = MashqBank.sarfDars(l).length;
+    return PremiumTile(
+      label: '${l.num}',
+      title: l.title,
+      // O'quvchi darsni ochmasdan turib unda mashq bor-yo'qligini
+      // ko'rsin: nazariy darsda faqat takror bo'ladi.
+      subtitle: mashqBorMi(mashq)
+          ? '$mashq ta mashq'
+          : 'Nazariy dars — takror bilan',
+      // Kitobda sarlavhasi bo'lmagan darsda arabcha satr chizilmaydi.
+      arabicSubtitle: l.titleAr.isEmpty ? null : l.titleAr,
+      accent: AppColors.indigo,
+      trailing: MasteryBadge(lessonId: l.completionId),
+      onTap: () => Navigator.push(
+        context,
+        MaterialPageRoute(builder: (_) => SarfLessonScreen(lesson: l)),
+      ),
+    );
+  }
 }
+
+/// Darsning o'z mashqi bormi: to'rttadan kam elementda variantlar
+/// yetmaydi, sessiya to'g'ridan-to'g'ri takrorga o'tadi.
+bool mashqBorMi(int elementSoni) => elementSoni >= 4;
 
 class _Sarlavha extends StatelessWidget {
   const _Sarlavha();
@@ -166,7 +178,9 @@ class SarfLessonScreen extends StatelessWidget {
               const SizedBox(height: 14),
               MasteryCallToAction(
                 lessonId: lesson.completionId,
-                what: 'atamalar va misollar',
+                what: mashqBorMi(MashqBank.sarfDars(lesson).length)
+                    ? 'shakllar va misollar'
+                    : 'takror (oldingi darslar)',
                 onStart: () => Navigator.push(
                   context,
                   MaterialPageRoute(

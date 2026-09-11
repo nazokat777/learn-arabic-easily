@@ -12,6 +12,7 @@ import '../widgets/entrance.dart';
 import '../widgets/grammar_table.dart';
 import '../widgets/mastery_badge.dart';
 import '../widgets/premium_tile.dart';
+import '../widgets/rasm_belgi.dart';
 import '../widgets/speak_button.dart';
 import 'qiroat_drill.dart';
 import 'qiroat_match.dart';
@@ -438,6 +439,8 @@ class _VocabRow extends StatelessWidget {
       child: Row(
         children: [
           SpeakButton(text: head, id: 'v${v.ar}', size: 19),
+          RasmBelgi(uz: v.uz, olcham: 30),
+          const SizedBox(width: 6),
           if (misol != null)
             SpeakButton(
               text: misol,

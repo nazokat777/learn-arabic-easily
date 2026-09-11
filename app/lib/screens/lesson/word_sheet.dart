@@ -5,6 +5,7 @@ import '../../content.dart';
 import '../../lugat.dart';
 import '../../services/tts.dart';
 import '../../theme.dart';
+import '../../widgets/rasm_belgi.dart';
 
 /// Arabcha so'zga bosilganda ochiladigan interaktiv karta:
 /// ma'no, taxminiy talaffuz, audio, harflar, grammatik shakllar (kitobdan),
@@ -67,10 +68,12 @@ class _WordSheet extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 18),
-            // Bosh so'z + audio
+            // Bosh so'z + audio (konkret ot bo'lsa — rasm bilan)
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                RasmBelgi(uz: v.uz, olcham: 56),
+                const SizedBox(width: 10),
                 Flexible(
                   child: Directionality(
                     textDirection: TextDirection.rtl,

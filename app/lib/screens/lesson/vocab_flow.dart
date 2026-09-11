@@ -2,12 +2,14 @@ import 'dart:math';
 import 'package:flutter/material.dart' hide Text;
 import '../../widgets/uz_text.dart';
 import '../../arabic.dart';
+import '../../rasm.dart';
 import '../../content.dart';
 import '../../main.dart';
 import '../../services/tts.dart';
 import '../../theme.dart';
 import '../../widgets/motion.dart';
 import '../../widgets/ornament.dart';
+import '../../widgets/rasm_belgi.dart';
 import 'word_sheet.dart';
 
 typedef AwardXp = void Function(int xp);
@@ -330,6 +332,13 @@ class _VocabStageState extends State<VocabStage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  // Konkret ot bo'lsa — rasm. Old tomonda ham: rasm
+                  // ma'noni emas, NARSANI ko'rsatadi, o'quvchi undan
+                  // arabchasini eslashga harakat qiladi.
+                  if (Rasm.topish(v.uz) != null) ...[
+                    RasmBelgi(uz: v.uz, olcham: 72),
+                    const SizedBox(height: 12),
+                  ],
                   Directionality(
                     textDirection: TextDirection.rtl,
                     child: Text(

@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart' hide Text;
 import '../widgets/uz_text.dart';
 import '../main.dart';
+import '../mashq/mukofot.dart';
 import '../content.dart';
 import '../theme.dart';
 import '../widgets/speak_button.dart';
@@ -26,6 +27,8 @@ class _WordGameState extends State<WordGame> {
   late List<_Tile> _tiles; // aralashtirilgan harf tugmalari
   final List<int> _picked = []; // tanlangan tile indekslari (tartib bilan)
   bool? _result; // null=davom, true=to'g'ri, false=xato
+  int _ketmaKet = 0;
+  String _fikr = '';
   int _solved = 0;
 
   @override
@@ -69,7 +72,16 @@ class _WordGameState extends State<WordGame> {
   Future<void> _check() async {
     final built = _picked.map((i) => _tiles[i].letter).toList();
     final ok = built.join() == _target.join();
-    setState(() => _result = ok);
+    setState(() {
+      _result = ok;
+      if (ok) {
+        _ketmaKet++;
+        _fikr = Maqtov.togri(_rnd, ketmaKet: _ketmaKet);
+      } else {
+        _ketmaKet = 0;
+        _fikr = Maqtov.xato(_rnd);
+      }
+    });
     if (ok) {
       _solved++;
       await progress.addXp(8);
@@ -156,8 +168,8 @@ class _WordGameState extends State<WordGame> {
                         : const SizedBox())
                   : Text(
                       _result!
-                          ? 'To\'g\'ri! +8 ball'
-                          : 'Noto\'g\'ri, qayta urinib ko\'ring',
+                          ? '$_fikr  +8 ball'
+                          : '$_fikr — qayta urinib ko\'ring',
                       style: TextStyle(
                         fontWeight: FontWeight.w800,
                         color: _result! ? AppColors.success : AppColors.coral,

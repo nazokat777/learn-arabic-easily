@@ -116,6 +116,65 @@ void main() {
     ]);
   });
 
+  test("6 va 3 siyg'alik paradigmalar: amr — muxotab, ism — jins/son", () {
+    final e = MashqBank.sarfDars(
+      dars(
+        [
+          {'type': 'bolim', 'uz': 'Amri hozir'},
+          {'type': 'matn', 'uz': 'رُدَّ، رُدَّا، رُدُّوْا، رُدِّي، رُدَّا، اُرْدُدْنَ'},
+          {'type': 'bolim', 'uz': 'Ismi foil'},
+          {
+            'type': 'matn',
+            'uz': 'فَارٌّ، فَارَّانِ، فَارُّونَ، فَارَّةٌ، فَارَّتَانِ، فَارَّاتٌ',
+          },
+          {'type': 'bolim', 'uz': 'Ismi zamon va makon'},
+          {'type': 'matn', 'uz': 'مَوْحًى، مَوْحَيَانِ، مَوَاحٍ'},
+          {'type': 'bolim', 'uz': "Amri g'oib"},
+          {'type': 'matn', 'uz': 'أ، ب، ت، ث، ج، ح'},
+        ],
+      ),
+    );
+    final uz = {for (final x in e) x.ar: x.uz};
+    expect(uz['رُدَّ'], 'Amri hozir · muxotab');
+    expect(uz['اُرْدُدْنَ'], 'Amri hozir · muxotabot');
+    expect(uz['فَارُّونَ'], "Ismi foil · muzakkar jam'");
+    expect(uz['فَارَّةٌ'], 'Ismi foil · muannas vohid');
+    expect(uz['مَوَاحٍ'], "Ismi zamon va makon · jam'");
+    expect(uz.containsKey('أ'), isFalse, reason: "amri g'oib 6 talik emas");
+  });
+
+  test("bo'limsiz paradigma dars sarlavhasini oladi", () {
+    final e = MashqBank.sarfDars(
+      dars(
+        [
+          {'type': 'matn', 'uz': 'دُمْ، دُومَا، دُومُوا، دُومِي، دُومَا، دُمْنَ'},
+        ],
+        title: 'دام amri hozir',
+      ),
+    );
+    expect(e.first.uz, 'دام amri hozir · muxotab');
+    expect(e.length, 5, reason: 'takror دُومَا bir marta');
+  });
+
+  test("«X aslida Y edi» — e'lol juftligi", () {
+    final e = MashqBank.sarfDars(
+      dars([
+        {
+          'type': 'matn',
+          'uz':
+              "يَقْوَى aslida يَقْوَوُ edi. Bu yerda vov voqe' bo'ldi. "
+              "مِيْثابٌ aslida مِوْثابٌ bo'lib, vov sokin. "
+              "«لِيَفِرَّ» aslida «لِيَفْرِرْ», deb.",
+        },
+      ]),
+    );
+    expect(e.map((x) => '${x.ar}=${x.uz}'), [
+      'يَقْوَى=aslida يَقْوَوُ edi',
+      'مِيْثابٌ=aslida مِوْثابٌ edi',
+      'لِيَفِرَّ=aslida لِيَفْرِرْ edi',
+    ]);
+  });
+
   test('jadval: oxirgi arabcha katak ↔ oxirgi o\'zbekcha katak', () {
     final e = MashqBank.sarfDars(
       dars([

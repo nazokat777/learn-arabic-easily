@@ -158,6 +158,45 @@ class MashqBank {
     return yorliqlar.any(k.startsWith) || k.contains('qoida');
   }
 
+  /// Ismlarning olti siyg'asi (ismi foil, maf'ul, tafzil) — kitob tartibi.
+  static const List<String> _ismSiygalari = [
+    'muzakkar vohid',
+    'muzakkar tasniya',
+    "muzakkar jam'",
+    'muannas vohid',
+    'muannas tasniya',
+    "muannas jam'",
+  ];
+
+  /// Ismi zamon/makon va ismi olatning uch siyg'asi.
+  static const List<String> _uchSiyga = ['vohid', 'tasniya', "jam'"];
+
+  /// «X aslida Y edi» — e'lol juftligi: hozirgi shakl ↔ asl shakli.
+  /// Sarfning asl mashqi shu: qoidani qo'llab, asldan hozirgi shaklga
+  /// (va teskarisiga) o'ta olish.
+  static final RegExp _asl = RegExp(
+    r"([؀-ۿ][؀-ۿ\s]*?)»?\s+aslida\s+(?:–\s+)?«?([؀-ۿ][؀-ۿ\s]*?)»?\s*"
+    r"(?:edi|bo'lib|bo'lgan|deb|,|\.)",
+  );
+
+  /// Paradigma blokining yorlig'iga qarab siyg'a nomlarini tanlaydi.
+  /// Mos kelmasa `null` — ro'yxat paradigma emas yoki turi noaniq.
+  static List<String>? _siygaNomlari(int soni, String yorliq) {
+    final k = _apostrof(yorliq).toLowerCase();
+    switch (soni) {
+      case 14:
+        return _paradigmaSarlavhasi(yorliq) ? _siygalar : null;
+      case 6:
+        if (k.contains('amr') && !k.contains("g'oib")) {
+          return _siygalar.sublist(6, 12); // muxotab … muxotabot
+        }
+        return k.contains('ism') ? _ismSiygalari : null;
+      case 3:
+        return k.contains('ism') ? _uchSiyga : null;
+    }
+    return null;
+  }
+
   static final RegExp _lotin = RegExp('[A-Za-z]');
   static final RegExp _arabcha = RegExp('[؀-ۿ]');
   static final RegExp _sarlavhaQavs = RegExp(r'\(([؀-ۿ\s]+)\)');
@@ -228,22 +267,27 @@ class MashqBank {
       }
       if (b.type == 'matn') {
         final matn = _apostrof(b.uz);
-        // 14 siyg'alik paradigma — sarlavhasi bilan.
-        final bolim = oxirgiBolim;
+        // Paradigma bloki (14, 6 yoki 3 siyg'a) — bo'lim yoki dars
+        // sarlavhasi bilan.
+        final yorliq = oxirgiBolim ?? l.title;
         final bolaklar = matn
             .replaceAll(RegExp(r'\.\s*$'), '')
             .split(RegExp('[،,]'))
             .map((s) => s.trim())
             .where((s) => s.isNotEmpty)
             .toList();
-        if (bolaklar.length == _siygalar.length &&
-            bolim != null &&
-            _paradigmaSarlavhasi(bolim) &&
-            bolaklar.every((s) => _arabcha.hasMatch(s) && !_lotin.hasMatch(s))) {
-          for (var i = 0; i < bolaklar.length; i++) {
-            qosh(bolaklar[i], '$bolim · ${_siygalar[i]}');
+        if (bolaklar.every((s) => _arabcha.hasMatch(s) && !_lotin.hasMatch(s))) {
+          final nomlar = _siygaNomlari(bolaklar.length, yorliq);
+          if (nomlar != null) {
+            for (var i = 0; i < bolaklar.length; i++) {
+              qosh(bolaklar[i], '$yorliq · ${nomlar[i]}');
+            }
           }
           continue;
+        }
+        // «X aslida Y edi» — e'lol juftliklari.
+        for (final m in _asl.allMatches(matn)) {
+          qosh(m.group(1)!.trim(), 'aslida ${m.group(2)!.trim()} edi');
         }
         // «ARABCHA – yorliq» juftliklari; asos — shu blokdagi moziy yoki
         // sarlavhadagi fe'l. Asossiz «muzore'» yorlig'i ko'p fe'lga

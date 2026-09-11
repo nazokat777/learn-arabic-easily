@@ -116,10 +116,17 @@ class NahvHome extends StatelessWidget {
     // O'zlashtirish holati: belgi faqat test XATOSIZ o'tilganda chiqadi.
     // Shunchaki darsni ochib chiqish belgi bermaydi.
     trailing: MasteryBadge(lessonId: 'nahv-${l.book}-${l.num}', size: 22),
-    onTap: () => Navigator.push(
-      context,
-      MaterialPageRoute(builder: (_) => NahvLessonScreen(lesson: l)),
-    ),
+    onTap: () {
+      progress.oxirgiDarsniYoz(
+        'nahv',
+        'nahv-${l.book}-${l.num}',
+        'Nahv · ${l.book}-kitob, ${l.num}-dars',
+      );
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (_) => NahvLessonScreen(lesson: l)),
+      );
+    },
   );
 }
 

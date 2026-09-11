@@ -71,6 +71,12 @@ class Progress extends ChangeNotifier {
   String? _kunSana;
   bool _kunMukofotOlindi = false;
 
+  /// Oxirgi ochilgan dars — bosh ekrandagi «Davom etish» uchun.
+  /// Modul ('qiroat' | 'nahv' | 'sarf'), dars kaliti va ko'rsatiladigan nomi.
+  String? oxirgiModul;
+  String? oxirgiDarsId;
+  String? oxirgiDarsNomi;
+
   /// Maqsad bajarilgan kunlar ('YYYY-MM-DD'). Haftalik ko'rinish
   /// uchun; eskilari kesilmaydi — bir yilda 365 ta qisqa satr, xolos.
   final Set<String> _maqsadKunlari = {};
@@ -131,6 +137,9 @@ class Progress extends ChangeNotifier {
     _kunSoni = _prefs!.getInt('kunSoni') ?? 0;
     _kunMukofotOlindi = _prefs!.getBool('kunMukofot') ?? false;
     _maqsadKunlari.addAll(_prefs!.getStringList('maqsadKunlari') ?? []);
+    oxirgiModul = _prefs!.getString('oxirgiModul');
+    oxirgiDarsId = _prefs!.getString('oxirgiDarsId');
+    oxirgiDarsNomi = _prefs!.getString('oxirgiDarsNomi');
     final ks = _prefs!.getString('ketma');
     if (ks != null) {
       (json.decode(ks) as Map).forEach(
@@ -232,6 +241,17 @@ class Progress extends ChangeNotifier {
     _kunlikQosh();
     final cur = _modeMask[key] ?? 0;
     _modeMask[key] = correct ? (cur | (1 << mode)) : (cur & ~(1 << mode));
+    await _save();
+    notifyListeners();
+  }
+
+  /// Dars ochilganini eslab qoladi — keyingi safar bir bosishda qaytish
+  /// uchun. Duolingo'dagi «Continue»: o'quvchi qayerda qolganini
+  /// qidirmaydi, ilova o'zi eslatadi.
+  Future<void> oxirgiDarsniYoz(String modul, String id, String nom) async {
+    oxirgiModul = modul;
+    oxirgiDarsId = id;
+    oxirgiDarsNomi = nom;
     await _save();
     notifyListeners();
   }
@@ -375,5 +395,10 @@ class Progress extends ChangeNotifier {
     await p.setInt('kunSoni', _kunSoni);
     await p.setBool('kunMukofot', _kunMukofotOlindi);
     await p.setStringList('maqsadKunlari', _maqsadKunlari.toList());
+    if (oxirgiModul != null) {
+      await p.setString('oxirgiModul', oxirgiModul!);
+      await p.setString('oxirgiDarsId', oxirgiDarsId ?? '');
+      await p.setString('oxirgiDarsNomi', oxirgiDarsNomi ?? '');
+    }
   }
 }

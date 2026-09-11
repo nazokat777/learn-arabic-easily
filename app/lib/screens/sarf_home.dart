@@ -62,10 +62,17 @@ class SarfHome extends StatelessWidget {
       arabicSubtitle: l.titleAr.isEmpty ? null : l.titleAr,
       accent: AppColors.indigo,
       trailing: MasteryBadge(lessonId: l.completionId),
-      onTap: () => Navigator.push(
-        context,
-        MaterialPageRoute(builder: (_) => SarfLessonScreen(lesson: l)),
-      ),
+      onTap: () {
+        progress.oxirgiDarsniYoz(
+          'sarf',
+          l.completionId,
+          'Sarf · ${l.num}-dars: ${l.title}',
+        );
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (_) => SarfLessonScreen(lesson: l)),
+        );
+      },
     );
   }
 }

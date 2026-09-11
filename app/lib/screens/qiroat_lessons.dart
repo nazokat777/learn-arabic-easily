@@ -156,10 +156,17 @@ class QiroatLessonsList extends StatelessWidget {
     label: '${l.num}',
     accent: AppColors.teal,
     trailing: MasteryBadge(lessonId: l.completionId, size: 22),
-    onTap: () => Navigator.push(
-      context,
-      MaterialPageRoute(builder: (_) => LessonFlow(lesson: l)),
-    ),
+    onTap: () {
+      progress.oxirgiDarsniYoz(
+        'qiroat',
+        l.completionId,
+        'Mabdaul qiroat · $book-kitob, ${l.num}-dars',
+      );
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (_) => LessonFlow(lesson: l)),
+      );
+    },
   );
 }
 

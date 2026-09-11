@@ -11,6 +11,7 @@ import '../uz_yozuv.dart';
 import '../widgets/motion.dart';
 import '../widgets/ornament.dart';
 import 'alifbo_home.dart';
+import 'davom.dart';
 import 'mashqlar_home.dart';
 import 'nahv_home.dart';
 import 'qiroat_lessons.dart';
@@ -53,6 +54,13 @@ class HomeScreen extends StatelessWidget {
                     delay: Duration(milliseconds: 90),
                     child: _XpPanel(),
                   ),
+                  if (oxirgiDarsEkrani() != null) ...[
+                    const SizedBox(height: 12),
+                    Reveal(
+                      delay: const Duration(milliseconds: 110),
+                      child: _DavomKarta(nom: progress.oxirgiDarsNomi ?? ''),
+                    ),
+                  ],
                   if (progress.qiyinKalitlar.isNotEmpty) ...[
                     const SizedBox(height: 12),
                     Reveal(
@@ -596,11 +604,7 @@ class _Hafta extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         for (var i = 0; i < 7; i++)
-          _kun(
-            _nomlar[i],
-            dushanba.add(Duration(days: i)),
-            bugun,
-          ),
+          _kun(_nomlar[i], dushanba.add(Duration(days: i)), bugun),
       ],
     );
   }
@@ -643,6 +647,71 @@ class _Hafta extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+/// «Davom etish» — oxirgi ochilgan darsga bir bosishda qaytish.
+///
+/// Eng katta ishqalanish «qayerda qolgan edim?» degan qidiruv; bu karta
+/// uni yo'q qiladi. Faqat oxirgi dars ma'lum bo'lganda chiqadi.
+class _DavomKarta extends StatelessWidget {
+  final String nom;
+  const _DavomKarta({required this.nom});
+
+  @override
+  Widget build(BuildContext context) {
+    return Tactile(
+      child: Material(
+        color: AppColors.emerald,
+        borderRadius: BorderRadius.circular(18),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(18),
+          onTap: () {
+            final ekran = oxirgiDarsEkrani();
+            if (ekran == null) return;
+            Navigator.push(context, MaterialPageRoute(builder: (_) => ekran));
+          },
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+            child: Row(
+              children: [
+                const Icon(
+                  Icons.play_circle_fill_rounded,
+                  color: Colors.white,
+                  size: 34,
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'Davom etish',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w900,
+                          fontSize: 15,
+                        ),
+                      ),
+                      Text(
+                        nom,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                          color: Colors.white70,
+                          fontSize: 12.5,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const Icon(Icons.arrow_forward_rounded, color: Colors.white),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart' hide Text;
 import '../widgets/uz_text.dart';
 import '../main.dart';
 import '../theme.dart';
+import '../mashq/mukofot.dart';
 import '../widgets/motion.dart';
 import '../services/tts.dart';
 
@@ -84,6 +85,10 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
   int _firstTry = 0; // birinchi urinishdayoq to'g'ri yechilganlari
   int? _selected;
   bool _answered = false;
+  int _ketmaKet = 0;
+  int _portlash = 0;
+  String _fikr = '';
+  final _maqtovRnd = Random();
 
   @override
   void initState() {
@@ -131,6 +136,14 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
     setState(() {
       _selected = i;
       _answered = true;
+      if (correct) {
+        _ketmaKet++;
+        _portlash++;
+        _fikr = Maqtov.togri(_maqtovRnd, ketmaKet: _ketmaKet);
+      } else {
+        _ketmaKet = 0;
+        _fikr = Maqtov.xato(_maqtovRnd);
+      }
     });
     if (correct) {
       _done++;
@@ -289,7 +302,7 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
     }
     final ok = _selected == _q.correct;
     return Text(
-      ok ? 'To\'g\'ri!' : 'To\'g\'ri javob belgilandi',
+      ok ? _fikr : '$_fikr — to\'g\'ri javob belgilandi',
       style: TextStyle(
         fontWeight: FontWeight.w800,
         fontSize: 16,
@@ -315,52 +328,57 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
     }
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
-      child: Pulse(
-        trigger: (_answered && i == _q.correct) ? _queue.first : null,
-        child: Shake(
-          trigger: (_answered && i == _selected && i != _q.correct)
-              ? _queue.first
-              : null,
-          child: Material(
-            color: bg,
-            borderRadius: BorderRadius.circular(14),
-            child: InkWell(
+      child: Portlash(
+        trigger: (_answered && i == _q.correct && _selected == _q.correct)
+            ? _portlash
+            : null,
+        child: Pulse(
+          trigger: (_answered && i == _q.correct) ? _queue.first : null,
+          child: Shake(
+            trigger: (_answered && i == _selected && i != _q.correct)
+                ? _queue.first
+                : null,
+            child: Material(
+              color: bg,
               borderRadius: BorderRadius.circular(14),
-              onTap: () => _choose(i),
-              child: Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 18,
-                  vertical: 16,
-                ),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(14),
-                  border: Border.all(color: border, width: 1.5),
-                ),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: _q.arabicOptions
-                          ? Directionality(
-                              textDirection: TextDirection.rtl,
-                              child: Text(
+              child: InkWell(
+                borderRadius: BorderRadius.circular(14),
+                onTap: () => _choose(i),
+                child: Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 18,
+                    vertical: 16,
+                  ),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(14),
+                    border: Border.all(color: border, width: 1.5),
+                  ),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: _q.arabicOptions
+                            ? Directionality(
+                                textDirection: TextDirection.rtl,
+                                child: Text(
+                                  _q.options[i],
+                                  style: AppTheme.arabic(
+                                    size: 24,
+                                    color: AppColors.ink,
+                                  ),
+                                ),
+                              )
+                            : Text(
                                 _q.options[i],
-                                style: AppTheme.arabic(
-                                  size: 24,
+                                style: const TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600,
                                   color: AppColors.ink,
                                 ),
                               ),
-                            )
-                          : Text(
-                              _q.options[i],
-                              style: const TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                                color: AppColors.ink,
-                              ),
-                            ),
-                    ),
-                    if (trailing != null) trailing,
-                  ],
+                      ),
+                      if (trailing != null) trailing,
+                    ],
+                  ),
                 ),
               ),
             ),

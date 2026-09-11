@@ -9,17 +9,21 @@ import '../theme.dart';
 import '../widgets/motion.dart';
 import '../widgets/ornament.dart';
 import 'element.dart';
+import 'mukofot.dart';
 import 'sessiya.dart';
 
 /// Butun ilova uchun yagona mashq ekrani.
 ///
-/// Ish tartibi (foydalanuvchi so'ragan tartib):
+/// Ish tartibi:
 ///   1) shu darsning materiali — hammasi to'g'ri javob berilmaguncha;
-///   2) shu darsgacha bo'lgan hamma narsa aralash — yana toza o'tguncha.
+///   2) «qiyin» so'zlar (3+ marta adashilganlar) — avval o'rgatib, keyin;
+///   3) shu darsgacha bo'lgan hamma narsa aralash — yana toza o'tguncha;
+///   4) harflab yozish.
 ///
-/// Xato javob bergan element navbatdan chiqmaydi, 2-4 savoldan keyin
-/// qaytadi. Tur oxirida xato bo'lgan bo'lsa, o'sha elementlar bilan yana
-/// bir tur bo'ladi — ya'ni «bilmasdan o'tib ketish» imkoni yo'q.
+/// Sessiya 8 savollik RAUNDLARGA bo'lingan: har raund oxirida bekat —
+/// yulduzlar, ball, «davom / bugunga yetadi». Mantiq (navbat, xatoni
+/// qaytarish, «bilmasdan o'tib ketish yo'q») o'zgarmagan; o'zgargani —
+/// o'quvchi endi marrani ko'rib turadi.
 class MashqEkran extends StatefulWidget {
   final String sarlavha;
   final List<MashqElement> darsniki;
@@ -28,22 +32,29 @@ class MashqEkran extends StatefulWidget {
   /// Dars «o'zlashtirildi» belgisini oladigan kalit (ixtiyoriy).
   final String? darsId;
 
+  /// Yakunda «Testga o'tish» tugmasi shuni chaqiradi (ixtiyoriy).
+  final VoidCallback? testgaOt;
+
   const MashqEkran({
     super.key,
     required this.sarlavha,
     required this.darsniki,
     required this.oldingilar,
     this.darsId,
+    this.testgaOt,
   });
 
   @override
   State<MashqEkran> createState() => _MashqEkranState();
 }
 
+enum _Korinish { savol, qiyinKarta, bekat, yakun }
+
 class _MashqEkranState extends State<MashqEkran> {
   final _rnd = Random();
   late MashqSessiya _s;
   MashqSavol? _savol;
+  _Korinish _korinish = _Korinish.savol;
 
   int? _tanlangan; // tanlangan variant indeksi
   bool? _tugriMiJavob; // «to'g'rimi» savolidagi javob
@@ -51,7 +62,20 @@ class _MashqEkranState extends State<MashqEkran> {
   bool _shuSavolgaXato = false; // shu savolda xato qilindimi
 
   int _ketmaKet = 0; // to'g'ri javoblar ketma-ketligi (kombo)
+  int _engUzunKombo = 0;
   int _ball = 0;
+  int _raundBoshidagiBall = 0;
+  bool _toliqTugadi = false; // «Bugunga yetadi» bilan emas, oxirigacha
+
+  // Mukofot effektlari.
+  int _portlash = 0;
+  String _uchuvchiMatn = '';
+  String _fikrMatni = '';
+  int _daraja = progress.level;
+  bool _darajaOshdi = false;
+
+  // Qiyin bosqichida allaqachon o'rgatilgan elementlar.
+  final Set<String> _orgatilgan = {};
 
   // Harflab yozish uchun: aralashtirilgan harf tugmalari va terilgani.
   List<String> _harfTugmalari = const [];
@@ -68,9 +92,19 @@ class _MashqEkranState extends State<MashqEkran> {
     _keyingi();
   }
 
+  @override
+  void dispose() {
+    Tts.instance.stop();
+    super.dispose();
+  }
+
   void _keyingi() {
     if (_s.bosqich == Bosqich.tugadi) {
-      setState(() => _savol = null);
+      _toliqTugadi = true;
+      setState(() {
+        _savol = null;
+        _korinish = _Korinish.yakun;
+      });
       return;
     }
     final s = _s.joriySavol();
@@ -78,14 +112,22 @@ class _MashqEkranState extends State<MashqEkran> {
       // Savol yasab bo'lmadi — bosqichni yopamiz.
       _s.javobBer(true, birinchiUrinish: false);
       if (_s.bosqich == Bosqich.tugadi) {
-        setState(() => _savol = null);
+        _toliqTugadi = true;
+        setState(() {
+          _savol = null;
+          _korinish = _Korinish.yakun;
+        });
         return;
       }
       _keyingi();
       return;
     }
+    // Qiyin so'z birinchi marta chiqyaptimi — avval o'rgatamiz.
+    final orgat =
+        _s.bosqich == Bosqich.qiyin && _orgatilgan.add(s.element.kalit);
     setState(() {
       _savol = s;
+      _korinish = orgat ? _Korinish.qiyinKarta : _Korinish.savol;
       _tanlangan = null;
       _tugriMiJavob = null;
       _javobBerildi = false;
@@ -95,6 +137,9 @@ class _MashqEkranState extends State<MashqEkran> {
           ? _harflarniAralashtir(s.element.ar)
           : const [];
     });
+    if (orgat && s.element.ovoz.isNotEmpty) {
+      Tts.instance.speak(s.element.ovoz, id: s.element.kalit);
+    }
   }
 
   /// Harflarni aralashtiradi. Tasodifan to'g'ri tartibda chiqib qolsa
@@ -121,43 +166,97 @@ class _MashqEkranState extends State<MashqEkran> {
     _javob(yigilgan == asl.join());
   }
 
+  /// Mukofot hisobi: asosiy ball + kombo + tasodifiy bonus.
+  ///
+  /// Nega tasodifiy: doim bir xil mukofot tez «kutilgan» bo'lib qoladi
+  /// va ta'siri so'nadi. Har beshinchi javobga o'xshash noaniq bonus esa
+  /// miyani «yana bitta so'raymi?» deb ushlab turadi.
+  (int, bool) _mukofot() {
+    var ball = 2 + (_ketmaKet ~/ 5);
+    var bonus = false;
+    if (_ketmaKet == 3) ball += 1;
+    if (_ketmaKet == 5) ball += 2;
+    if (_ketmaKet == 10) ball += 5;
+    if (_rnd.nextInt(5) == 0) {
+      ball += 3;
+      bonus = true;
+    }
+    return (ball, bonus);
+  }
+
   Future<void> _javob(bool togri) async {
     if (_javobBerildi) return;
+    var qoshildi = 0;
+    var bonus = false;
     setState(() {
       _javobBerildi = true;
       if (togri) {
         _ketmaKet++;
-        // Kombo bonusi: ketma-ket to'g'ri javob ko'proq ball beradi —
-        // diqqatni ushlab turadigan eng sodda va halol usul.
-        _ball += 2 + (_ketmaKet ~/ 5);
+        _engUzunKombo = max(_engUzunKombo, _ketmaKet);
+        (qoshildi, bonus) = _mukofot();
+        _ball += qoshildi;
+        _portlash++;
+        _uchuvchiMatn = bonus ? '+$qoshildi bonus!' : '+$qoshildi';
+        _fikrMatni = Maqtov.togri(_rnd, ketmaKet: _ketmaKet, bonus: bonus);
       } else {
         _ketmaKet = 0;
         _shuSavolgaXato = true;
+        _fikrMatni = Maqtov.xato(_rnd);
       }
     });
     togri ? Haptic.ok() : Haptic.wrong();
 
     final e = _savol!.element;
     await progress.bumpWord(e.kalit, togri);
-    if (togri) await progress.addXp(2);
+    if (togri) {
+      await progress.addXp(qoshildi);
+      if (progress.level > _daraja) {
+        _daraja = progress.level;
+        if (mounted) setState(() => _darajaOshdi = true);
+        Future.delayed(const Duration(milliseconds: 2600), () {
+          if (mounted) setState(() => _darajaOshdi = false);
+        });
+      }
+    }
 
-    await Future.delayed(Duration(milliseconds: togri ? 620 : 1500));
+    await Future.delayed(Duration(milliseconds: togri ? 700 : 1500));
     if (!mounted) return;
 
+    final oldingiBosqich = _s.bosqich;
     _s.javobBer(togri, birinchiUrinish: !_shuSavolgaXato);
     if (_s.bosqich == Bosqich.tugadi) {
+      _toliqTugadi = true;
       await _yakunla();
+      return;
+    }
+    // Raund to'ldi yoki bosqich almashdi — bekat.
+    if (_s.raundTugadi ||
+        (_s.bosqich != oldingiBosqich && _s.raunddaSoralgan >= 3)) {
+      setState(() => _korinish = _Korinish.bekat);
       return;
     }
     _keyingi();
   }
 
+  void _davom() {
+    _raundBoshidagiBall = _ball;
+    _s.yangiRaund();
+    _keyingi();
+  }
+
   Future<void> _yakunla() async {
     final id = widget.darsId;
-    if (id != null && _s.jamiSoralgan > 0) {
+    // O'zlashtirish belgisi faqat sessiya OXIRIGACHA o'tilganda: «bugunga
+    // yetadi» deb chiqib ketgan sessiya ham natija emas, dam olish.
+    if (id != null && _toliqTugadi && _s.jamiSoralgan > 0) {
       await progress.recordAttempt(id, _s.birinchidanTogri, _s.jamiSoralgan);
     }
-    if (mounted) setState(() => _savol = null);
+    if (mounted) {
+      setState(() {
+        _savol = null;
+        _korinish = _Korinish.yakun;
+      });
+    }
   }
 
   @override
@@ -175,11 +274,52 @@ class _MashqEkranState extends State<MashqEkran> {
         ],
       ),
       body: SafeArea(
-        child: Center(
-          child: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 640),
-            child: _savol == null ? _Yakun(s: _s) : _savolKorinishi(),
-          ),
+        child: Column(
+          children: [
+            if (_darajaOshdi)
+              DarajaBanner(nom: progress.levelName, daraja: progress.level),
+            Expanded(
+              child: Center(
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 640),
+                  child: switch (_korinish) {
+                    _Korinish.yakun => _Yakun(
+                      s: _s,
+                      toliq: _toliqTugadi,
+                      engUzunKombo: _engUzunKombo,
+                      testgaOt: widget.testgaOt,
+                    ),
+                    _Korinish.bekat => RaundBekati(
+                      raund: _s.raundRaqami,
+                      yulduz: _s.raundYulduzi,
+                      togri: _s.raunddaTogri,
+                      jami: _s.raunddaSoralgan,
+                      ball: _ball - _raundBoshidagiBall,
+                      engUzunKombo: _engUzunKombo,
+                      keyingiNomi: _bosqichQisqaNomi,
+                      onDavom: _davom,
+                      onYetadi: () {
+                        _toliqTugadi = false;
+                        _yakunla();
+                      },
+                    ),
+                    _Korinish.qiyinKarta => QiyinKarta(
+                      ar: _savol!.element.ar,
+                      uz: _savol!.element.uz,
+                      xatoSoni: progress.xatoSoni(_savol!.element.kalit),
+                      onOvoz: () => Tts.instance.speak(
+                        _savol!.element.ovoz,
+                        id: _savol!.element.kalit,
+                      ),
+                      onTayyor: () =>
+                          setState(() => _korinish = _Korinish.savol),
+                    ),
+                    _Korinish.savol => _savolKorinishi(),
+                  },
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -187,7 +327,6 @@ class _MashqEkranState extends State<MashqEkran> {
 
   Widget _savolKorinishi() {
     final s = _savol!;
-    final bosqichDars = _s.bosqich == Bosqich.dars;
     return Column(
       children: [
         Padding(
@@ -196,54 +335,43 @@ class _MashqEkranState extends State<MashqEkran> {
             children: [
               Row(
                 children: [
-                  Icon(
-                    _bosqichIkonkasi,
-                    size: 17,
-                    color: bosqichDars ? AppColors.emerald : AppColors.indigo,
+                  Icon(_bosqichIkonkasi, size: 17, color: _bosqichRangi),
+                  const SizedBox(width: 6),
+                  Expanded(
+                    child: Text(
+                      _bosqichNomi,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.w800,
+                        fontSize: 13,
+                      ),
+                    ),
                   ),
                   const SizedBox(width: 6),
-                  Text(
-                    _bosqichNomi,
-                    style: const TextStyle(
-                      fontWeight: FontWeight.w800,
-                      fontSize: 13,
-                    ),
-                  ),
-                  const Spacer(),
-                  if (_ketmaKet >= 3)
-                    Row(
-                      children: [
-                        const Icon(
-                          Icons.local_fire_department_rounded,
-                          size: 16,
-                          color: AppColors.coral,
-                        ),
-                        Text(
-                          '$_ketmaKet',
-                          style: const TextStyle(
-                            fontWeight: FontWeight.w900,
-                            color: AppColors.coral,
-                          ),
-                        ),
-                      ],
-                    ),
+                  KomboOlov(ketmaKet: _ketmaKet),
                 ],
               ),
-              const SizedBox(height: 6),
-              AnimatedBar(
-                value: _s.navbat.jami == 0
-                    ? 0
-                    : 1 - _s.navbat.qolgan / _s.navbat.jami,
-                height: 8,
-                color: bosqichDars ? AppColors.emerald : AppColors.indigo,
-                background: AppColors.softGreen,
+              const SizedBox(height: 8),
+              SegmentliBar(
+                jami: MashqSessiya.raundHajmi,
+                tolgan: _s.raunddaSoralgan,
+                rang: _bosqichRangi,
+              ),
+              const SizedBox(height: 4),
+              Align(
+                alignment: Alignment.centerRight,
+                child: Text(
+                  '${_s.raundRaqami}-raund · '
+                  '${MashqSessiya.raundHajmi - _s.raunddaSoralgan} ta qoldi',
+                  style: const TextStyle(fontSize: 11.5, color: Colors.black45),
+                ),
               ),
             ],
           ),
         ),
         Expanded(
           child: SingleChildScrollView(
-            padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+            padding: const EdgeInsets.fromLTRB(20, 6, 20, 10),
             child: SlideSwitch(
               child: KeyedSubtree(
                 key: ValueKey(
@@ -259,8 +387,17 @@ class _MashqEkranState extends State<MashqEkran> {
     );
   }
 
+  Color get _bosqichRangi => switch (_s.bosqich) {
+    Bosqich.dars => AppColors.emerald,
+    Bosqich.qiyin => AppColors.coral,
+    Bosqich.takror => AppColors.indigo,
+    Bosqich.yozish => AppColors.gold,
+    Bosqich.tugadi => AppColors.emerald,
+  };
+
   IconData get _bosqichIkonkasi => switch (_s.bosqich) {
     Bosqich.dars => Icons.school_rounded,
+    Bosqich.qiyin => Icons.psychology_rounded,
     Bosqich.takror => Icons.auto_awesome_motion_rounded,
     Bosqich.yozish => Icons.edit_rounded,
     Bosqich.tugadi => Icons.check_rounded,
@@ -268,9 +405,18 @@ class _MashqEkranState extends State<MashqEkran> {
 
   String get _bosqichNomi => switch (_s.bosqich) {
     Bosqich.dars => 'Shu darsning materiali',
+    Bosqich.qiyin => "Qiyin so'zlar ustida",
     Bosqich.takror => 'Aralash takror — oldingi darslar ham',
     Bosqich.yozish => "Harflab yozish — o'zbekchadan arabchaga",
     Bosqich.tugadi => 'Tayyor',
+  };
+
+  String get _bosqichQisqaNomi => switch (_s.bosqich) {
+    Bosqich.dars => 'dars',
+    Bosqich.qiyin => "qiyin so'zlar",
+    Bosqich.takror => 'takror',
+    Bosqich.yozish => 'yozish',
+    Bosqich.tugadi => 'yakun',
   };
 
   Widget _savolKartasi(MashqSavol s) {
@@ -366,21 +512,38 @@ class _MashqEkranState extends State<MashqEkran> {
           style: const TextStyle(color: Colors.black54, fontSize: 13.5),
         ),
         const SizedBox(height: 12),
-        Container(
-          width: double.infinity,
-          padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 22),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(20),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withValues(alpha: 0.05),
-                blurRadius: 14,
-                offset: const Offset(0, 6),
+        Stack(
+          clipBehavior: Clip.none,
+          alignment: Alignment.topCenter,
+          children: [
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 22),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withValues(alpha: 0.05),
+                    blurRadius: 14,
+                    offset: const Offset(0, 6),
+                  ),
+                ],
               ),
-            ],
-          ),
-          child: Center(child: ichi),
+              child: Center(child: ichi),
+            ),
+            // Uchuvchi «+N» — karta tepasidan ko'tariladi.
+            Positioned(
+              top: -6,
+              child: UchuvchiBall(
+                trigger: _portlash == 0 ? null : _portlash,
+                matn: _uchuvchiMatn,
+                rang: _uchuvchiMatn.contains('bonus')
+                    ? AppColors.indigo
+                    : AppColors.gold,
+              ),
+            ),
+          ],
         ),
         const SizedBox(height: 16),
       ],
@@ -481,20 +644,23 @@ class _MashqEkranState extends State<MashqEkran> {
 
   Widget _javoblar(MashqSavol s) {
     if (s.turi == MashqTuri.harflabYoz) {
-      return Column(
-        children: [
-          _harfTugmalariQatori(),
-          if (_javobBerildi && _shuSavolgaXato) ...[
-            const SizedBox(height: 14),
-            Directionality(
-              textDirection: TextDirection.rtl,
-              child: Text(
-                s.element.ar,
-                style: AppTheme.arabic(size: 30, color: AppColors.success),
+      return Portlash(
+        trigger: (_javobBerildi && !_shuSavolgaXato) ? _portlash : null,
+        child: Column(
+          children: [
+            _harfTugmalariQatori(),
+            if (_javobBerildi && _shuSavolgaXato) ...[
+              const SizedBox(height: 14),
+              Directionality(
+                textDirection: TextDirection.rtl,
+                child: Text(
+                  s.element.ar,
+                  style: AppTheme.arabic(size: 30, color: AppColors.success),
+                ),
               ),
-            ),
+            ],
           ],
-        ],
+        ),
       );
     }
     if (s.turi == MashqTuri.tugriMi) {
@@ -541,28 +707,32 @@ class _MashqEkranState extends State<MashqEkran> {
     required VoidCallback onTap,
   }) {
     final korsat = _javobBerildi && tanlandi;
-    return Tactile(
-      child: Material(
-        color: korsat ? rang.withValues(alpha: 0.15) : Colors.white,
-        borderRadius: BorderRadius.circular(16),
-        child: InkWell(
+    final togriBosildi = korsat && !_shuSavolgaXato;
+    return Portlash(
+      trigger: togriBosildi ? _portlash : null,
+      child: Tactile(
+        child: Material(
+          color: korsat ? rang.withValues(alpha: 0.15) : Colors.white,
           borderRadius: BorderRadius.circular(16),
-          onTap: _javobBerildi ? null : onTap,
-          child: Container(
-            padding: const EdgeInsets.symmetric(vertical: 18),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(16),
-              border: Border.all(color: rang, width: 1.8),
-            ),
-            child: Column(
-              children: [
-                Icon(ikon, color: rang),
-                const SizedBox(height: 4),
-                Text(
-                  matn,
-                  style: TextStyle(fontWeight: FontWeight.w800, color: rang),
-                ),
-              ],
+          child: InkWell(
+            borderRadius: BorderRadius.circular(16),
+            onTap: _javobBerildi ? null : onTap,
+            child: Container(
+              padding: const EdgeInsets.symmetric(vertical: 18),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(color: rang, width: 1.8),
+              ),
+              child: Column(
+                children: [
+                  Icon(ikon, color: rang),
+                  const SizedBox(height: 4),
+                  Text(
+                    matn,
+                    style: TextStyle(fontWeight: FontWeight.w800, color: rang),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
@@ -582,55 +752,60 @@ class _MashqEkranState extends State<MashqEkran> {
         fon = AppColors.coral.withValues(alpha: 0.10);
       }
     }
+    final togriBosildi = _javobBerildi && i == s.togri && !_shuSavolgaXato;
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
-      child: Pulse(
-        trigger: (_javobBerildi && i == s.togri) ? _s.jamiSoralgan : null,
-        child: Shake(
-          trigger: (_javobBerildi && i == _tanlangan && i != s.togri)
-              ? _s.jamiSoralgan
-              : null,
-          child: Tactile(
-            child: Material(
-              color: fon,
-              borderRadius: BorderRadius.circular(14),
-              child: InkWell(
+      child: Portlash(
+        trigger: togriBosildi ? _portlash : null,
+        child: Pulse(
+          trigger: (_javobBerildi && i == s.togri) ? _s.jamiSoralgan : null,
+          peak: togriBosildi ? 1.08 : 1.04,
+          child: Shake(
+            trigger: (_javobBerildi && i == _tanlangan && i != s.togri)
+                ? _s.jamiSoralgan
+                : null,
+            child: Tactile(
+              child: Material(
+                color: fon,
                 borderRadius: BorderRadius.circular(14),
-                onTap: _javobBerildi
-                    ? null
-                    : () {
-                        setState(() => _tanlangan = i);
-                        _javob(i == s.togri);
-                      },
-                child: Container(
-                  width: double.infinity,
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 16,
-                    vertical: 15,
-                  ),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(14),
-                    border: Border.all(color: chegara, width: 1.8),
-                  ),
-                  child: s.arabchaVariantlar
-                      ? Directionality(
-                          textDirection: TextDirection.rtl,
-                          child: Text(
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(14),
+                  onTap: _javobBerildi
+                      ? null
+                      : () {
+                          setState(() => _tanlangan = i);
+                          _javob(i == s.togri);
+                        },
+                  child: Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 15,
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(14),
+                      border: Border.all(color: chegara, width: 1.8),
+                    ),
+                    child: s.arabchaVariantlar
+                        ? Directionality(
+                            textDirection: TextDirection.rtl,
+                            child: Text(
+                              s.variantlar[i],
+                              style: AppTheme.arabic(
+                                size: 24,
+                                color: AppColors.ink,
+                              ),
+                            ),
+                          )
+                        : Text(
                             s.variantlar[i],
-                            style: AppTheme.arabic(
-                              size: 24,
+                            style: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
                               color: AppColors.ink,
                             ),
                           ),
-                        )
-                      : Text(
-                          s.variantlar[i],
-                          style: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                            color: AppColors.ink,
-                          ),
-                        ),
+                  ),
                 ),
               ),
             ),
@@ -644,16 +819,15 @@ class _MashqEkranState extends State<MashqEkran> {
     if (!_javobBerildi) return const SizedBox(height: 56);
     final ok = !_shuSavolgaXato;
     final rang = ok ? AppColors.success : AppColors.coral;
-    final matn = ok
-        ? _ketmaKet >= 5
-              ? "Zo'r! $_ketmaKet ta ketma-ket"
-              : "To'g'ri!"
+    final izoh = ok
+        ? null
         : s.turi == MashqTuri.tugriMi
-        ? "Yo'q — ${s.element.ar} = ${s.element.uz}"
+        ? "${s.element.ar} = ${s.element.uz}"
         : s.turi == MashqTuri.harflabYoz
         ? "To'g'ri yozilishi yuqorida"
         : "To'g'ri javob: ${s.variantlar[s.togri]}";
-    return Container(
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 250),
       width: double.infinity,
       constraints: const BoxConstraints(minHeight: 56),
       alignment: Alignment.centerLeft,
@@ -661,15 +835,35 @@ class _MashqEkranState extends State<MashqEkran> {
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: Row(
         children: [
-          Icon(
-            ok ? Icons.check_circle_rounded : Icons.cancel_rounded,
-            color: rang,
+          Reveal(
+            fromScale: 0.4,
+            offsetY: 0,
+            duration: const Duration(milliseconds: 420),
+            child: Icon(
+              ok ? Icons.check_circle_rounded : Icons.cancel_rounded,
+              color: rang,
+              size: 26,
+            ),
           ),
           const SizedBox(width: 8),
           Expanded(
-            child: Text(
-              matn,
-              style: TextStyle(fontWeight: FontWeight.w800, color: rang),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  _fikrMatni,
+                  style: TextStyle(fontWeight: FontWeight.w800, color: rang),
+                ),
+                if (izoh != null)
+                  Text(
+                    izoh,
+                    style: TextStyle(
+                      color: rang.withValues(alpha: 0.85),
+                      fontSize: 13,
+                    ),
+                  ),
+              ],
             ),
           ),
         ],
@@ -681,12 +875,20 @@ class _MashqEkranState extends State<MashqEkran> {
 /// Sessiya yakuni: natija va «qaysi joyi qiyin kelyapti» tahlili.
 class _Yakun extends StatelessWidget {
   final MashqSessiya s;
-  const _Yakun({required this.s});
+  final bool toliq;
+  final int engUzunKombo;
+  final VoidCallback? testgaOt;
+  const _Yakun({
+    required this.s,
+    required this.toliq,
+    required this.engUzunKombo,
+    this.testgaOt,
+  });
 
   @override
   Widget build(BuildContext context) {
     final foiz = s.foiz;
-    final mukammal = foiz >= 100;
+    final mukammal = toliq && foiz >= 100;
     // Sessiyada qatnashgan elementlardan eng qiyinlari.
     final hammasi = {
       for (final e in [...s.darsniki, ...s.oldingilar]) e.kalit: e,
@@ -696,6 +898,16 @@ class _Yakun extends StatelessWidget {
           (a, b) =>
               progress.xatoSoni(b.kalit).compareTo(progress.xatoSoni(a.kalit)),
         );
+    final sarlavha = mukammal
+        ? 'Mukammal!'
+        : toliq
+        ? 'Mashq tugadi'
+        : 'Yaxshi dam oling';
+    final izoh = toliq
+        ? 'Birinchi urinishda: ${s.birinchidanTogri} / ${s.jamiSoralgan}'
+              '  ·  $foiz%'
+        : "${s.jamiSoralgan} ta savol yechildi. O'zlashtirish belgisi "
+              "uchun mashqni oxirigacha o'ting.";
 
     return Stack(
       children: [
@@ -713,7 +925,9 @@ class _Yakun extends StatelessWidget {
                     child: Icon(
                       mukammal
                           ? Icons.emoji_events_rounded
-                          : Icons.trending_up_rounded,
+                          : toliq
+                          ? Icons.trending_up_rounded
+                          : Icons.self_improvement_rounded,
                       size: 62,
                       color: mukammal ? AppColors.gold : AppColors.emerald,
                     ),
@@ -724,7 +938,7 @@ class _Yakun extends StatelessWidget {
               Reveal(
                 delay: const Duration(milliseconds: 150),
                 child: Text(
-                  mukammal ? 'Mukammal!' : 'Mashq tugadi',
+                  sarlavha,
                   style: TextStyle(
                     fontSize: 26,
                     fontWeight: FontWeight.w900,
@@ -736,11 +950,35 @@ class _Yakun extends StatelessWidget {
               Reveal(
                 delay: const Duration(milliseconds: 220),
                 child: Text(
-                  'Birinchi urinishda: ${s.birinchidanTogri} / ${s.jamiSoralgan}'
-                  '  ·  $foiz%',
+                  izoh,
+                  textAlign: TextAlign.center,
                   style: const TextStyle(color: Colors.black54, fontSize: 14),
                 ),
               ),
+              if (engUzunKombo >= 3) ...[
+                const SizedBox(height: 8),
+                Reveal(
+                  delay: const Duration(milliseconds: 260),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      const Icon(
+                        Icons.local_fire_department_rounded,
+                        color: AppColors.coral,
+                        size: 18,
+                      ),
+                      Text(
+                        ' Eng uzun seriya: $engUzunKombo',
+                        style: const TextStyle(
+                          color: AppColors.coral,
+                          fontWeight: FontWeight.w800,
+                          fontSize: 13.5,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
               const SizedBox(height: 18),
               const Reveal(
                 delay: Duration(milliseconds: 280),
@@ -753,6 +991,38 @@ class _Yakun extends StatelessWidget {
                   child: _ZaifRoyxat(zaiflar: zaiflar.take(6).toList()),
                 ),
               const SizedBox(height: 22),
+              if (testgaOt != null) ...[
+                Reveal(
+                  delay: const Duration(milliseconds: 400),
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: Tactile(
+                      child: FilledButton.icon(
+                        onPressed: () {
+                          Navigator.pop(context);
+                          testgaOt!();
+                        },
+                        icon: const Icon(Icons.quiz_rounded),
+                        label: const Text(
+                          "Testga o'tish",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w800,
+                            fontSize: 16,
+                          ),
+                        ),
+                        style: FilledButton.styleFrom(
+                          backgroundColor: AppColors.gold,
+                          padding: const EdgeInsets.symmetric(vertical: 16),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 10),
+              ],
               Reveal(
                 delay: const Duration(milliseconds: 420),
                 child: SizedBox(
@@ -761,7 +1031,9 @@ class _Yakun extends StatelessWidget {
                     child: FilledButton(
                       onPressed: () => Navigator.pop(context),
                       style: FilledButton.styleFrom(
-                        backgroundColor: AppColors.emerald,
+                        backgroundColor: testgaOt != null
+                            ? AppColors.emeraldDark
+                            : AppColors.emerald,
                         padding: const EdgeInsets.symmetric(vertical: 16),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(16),
@@ -855,7 +1127,9 @@ class _ZaifRoyxat extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    '${progress.xatoSoni(e.kalit)} xato',
+                    progress.qiyinMi(e.kalit)
+                        ? 'qiyin'
+                        : '${progress.xatoSoni(e.kalit)} xato',
                     style: const TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w700,

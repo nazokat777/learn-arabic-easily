@@ -1,11 +1,16 @@
 import 'dart:math';
 
+import '../main.dart';
 import 'element.dart';
 
 /// Mashq sessiyasining bosqichi.
 enum Bosqich {
   /// Faqat shu darsning materiali.
   dars,
+
+  /// Ko'p marta xato qilingan («qiyin») elementlar — avval o'rgatiladi,
+  /// keyin so'raladi.
+  qiyin,
 
   /// Shu darsgacha bo'lgan hamma narsa aralash — zaif joylarga urg'u bilan.
   takror,
@@ -77,6 +82,17 @@ class MashqSessiya {
   /// joy kamdan-kam qaytadi.
   static const int takrorSoni = 14;
 
+  /// «Qiyin» bosqichida bir sessiyada nechta element olinadi.
+  ///
+  /// Ko'p bo'lsa bosqich og'irlashib, o'quvchi aynan qiynalgan joyida
+  /// charchaydi; oltita — bir nafasda o'tiladigan, lekin sezilarli hajm.
+  static const int qiyinSoni = 6;
+
+  /// Bitta raundda nechta savol. Raund — o'quvchi ko'rib turadigan
+  /// MARRA: har raund oxirida to'xtab, yulduz olib, nafas rostlanadi.
+  /// Marrasiz uzun navbat qanchalik foydali bo'lmasin, tashlab ketiladi.
+  static const int raundHajmi = 8;
+
   final Random _rnd;
   final SavolYasagich _yasagich;
 
@@ -86,6 +102,32 @@ class MashqSessiya {
   /// Shu sessiyada birinchi urinishda to'g'ri javob berilganlar soni.
   int birinchidanTogri = 0;
   int jamiSoralgan = 0;
+
+  /// Joriy raund hisobi.
+  int raundRaqami = 1;
+  int raunddaSoralgan = 0;
+  int raunddaTogri = 0;
+
+  /// Raund to'ldimi (bekatga chiqish vaqti).
+  bool get raundTugadi => raunddaSoralgan >= raundHajmi;
+
+  /// Raund natijasi yulduzlarda (1..3): xatosiz — 3, bitta xato — 2,
+  /// qolgani — 1. Nol yulduz yo'q: raundni oxirigacha o'tganning o'zi
+  /// mukofotga loyiq, aks holda bekat jazoga aylanadi.
+  int get raundYulduzi {
+    if (raunddaSoralgan == 0) return 1;
+    final xato = raunddaSoralgan - raunddaTogri;
+    if (xato == 0) return 3;
+    if (xato == 1) return 2;
+    return 1;
+  }
+
+  /// Yangi raundni boshlaydi (bekatdan keyin).
+  void yangiRaund() {
+    raundRaqami++;
+    raunddaSoralgan = 0;
+    raunddaTogri = 0;
+  }
 
   MashqSessiya({required this.darsniki, required this.oldingilar, Random? rnd})
     : _rnd = rnd ?? Random(),
@@ -133,7 +175,9 @@ class MashqSessiya {
     }
     final havza = bosqich == Bosqich.dars && darsniki.length >= 4
         ? darsniki
-        : oldingilar;
+        : oldingilar.length >= 4
+        ? oldingilar
+        : darsniki;
     var urinish = 0;
     while (urinish < 4) {
       final e = navbat.joriy;
@@ -150,14 +194,18 @@ class MashqSessiya {
   /// Javobni qayd qiladi va kerak bo'lsa keyingi bosqichga o'tadi.
   void javobBer(bool togri, {required bool birinchiUrinish}) {
     jamiSoralgan++;
-    if (togri && birinchiUrinish) birinchidanTogri++;
+    raunddaSoralgan++;
+    if (togri && birinchiUrinish) {
+      birinchidanTogri++;
+      raunddaTogri++;
+    }
     navbat.javob(togri, _rnd);
     if (!navbat.bosh) return;
 
     // Tur tugadi. Xato bo'lgan bo'lsa — o'sha elementlar bilan yana bir tur.
     if (!navbat.tozaOtdi) {
       final xatolar = navbat.xatolar.toSet();
-      final qayta = (bosqich == Bosqich.dars ? darsniki : oldingilar)
+      final qayta = _bosqichHavzasi
           .where((e) => xatolar.contains(e.kalit))
           .toList();
       navbat = BosqichNavbati(_aralash(qayta));
@@ -167,13 +215,11 @@ class MashqSessiya {
     // Toza o'tdi — keyingi bosqich.
     switch (bosqich) {
       case Bosqich.dars:
-        final havza = oldingilar.isEmpty ? darsniki : oldingilar;
-        final tanlanma = zaiflarniTanla(havza, takrorSoni);
-        if (tanlanma.isNotEmpty) {
-          bosqich = Bosqich.takror;
-          navbat = BosqichNavbati(tanlanma);
-          return;
-        }
+        if (_qiyingaOt()) return;
+        if (_takrorgaOt()) return;
+        _yozishgaOt();
+      case Bosqich.qiyin:
+        if (_takrorgaOt()) return;
         _yozishgaOt();
       case Bosqich.takror:
         _yozishgaOt();
@@ -181,6 +227,44 @@ class MashqSessiya {
       case Bosqich.tugadi:
         bosqich = Bosqich.tugadi;
     }
+  }
+
+  /// Joriy bosqich elementlari qaysi to'plamdan olingan.
+  List<MashqElement> get _bosqichHavzasi => switch (bosqich) {
+    Bosqich.dars => darsniki,
+    Bosqich.qiyin => _qiyinlar,
+    _ => oldingilar.isEmpty ? darsniki : oldingilar,
+  };
+
+  List<MashqElement> _qiyinlar = const [];
+
+  /// «Qiyin» bosqichining elementlari (bosqich boshlangach o'zgarmaydi).
+  List<MashqElement> get qiyinlar => _qiyinlar;
+
+  /// Qiyin elementlar bo'lsa — o'sha bosqichga o'tadi. Eng ko'p xato
+  /// qilinganlari birinchi olinadi.
+  bool _qiyingaOt() {
+    final havza = {
+      for (final e in [...darsniki, ...oldingilar]) e.kalit: e,
+    }.values.where((e) => progress.qiyinMi(e.kalit)).toList();
+    if (havza.isEmpty) return false;
+    havza.sort(
+      (a, b) =>
+          progress.xatoSoni(b.kalit).compareTo(progress.xatoSoni(a.kalit)),
+    );
+    _qiyinlar = havza.take(qiyinSoni).toList();
+    bosqich = Bosqich.qiyin;
+    navbat = BosqichNavbati(_aralash(_qiyinlar));
+    return true;
+  }
+
+  bool _takrorgaOt() {
+    final havza = oldingilar.isEmpty ? darsniki : oldingilar;
+    final tanlanma = zaiflarniTanla(havza, takrorSoni);
+    if (tanlanma.isEmpty) return false;
+    bosqich = Bosqich.takror;
+    navbat = BosqichNavbati(tanlanma);
+    return true;
   }
 
   /// Yozish bosqichiga o'tish. Yig'ib bo'ladigan so'z bo'lmasa — sessiya

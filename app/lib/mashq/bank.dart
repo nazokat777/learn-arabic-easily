@@ -196,4 +196,41 @@ class MashqBank {
 
   /// Alifbo bo'limi uchun «shu paytgacha hammasi» — harflar va harakatlar.
   static List<MashqElement> alifboGacha() => [...harflar(), ...harakatlar()];
+
+  // ---------------- Qiyin so'zlar (modullar aro) ----------------
+
+  /// Ilovadagi BARCHA mashq elementlari.
+  static List<MashqElement> hammasi() => [
+    ...alifboGacha(),
+    for (final l in repo.qiroatLessons) ...qiroatDars(l),
+    for (final l in repo.nahvLessons) ...nahvDars(l),
+    for (final l in repo.sarfLessons) ...sarfDars(l),
+  ];
+
+  /// O'quvchi ko'p adashgan («qiyin») elementlar — hamma moduldan.
+  ///
+  /// Eng ko'p xato qilingani birinchi: mashq aynan shundan boshlansin.
+  static List<MashqElement> qiyinlar() {
+    final r = hammasi().where((e) => progress.qiyinMi(e.kalit)).toList();
+    r.sort(
+      (a, b) =>
+          progress.xatoSoni(b.kalit).compareTo(progress.xatoSoni(a.kalit)),
+    );
+    return r;
+  }
+
+  /// Qiyin so'zlar mashqi uchun chalg'ituvchilar havzasi.
+  ///
+  /// Qiyin so'z uch-to'rttagina bo'lsa, variant yetmaydi va savol
+  /// yasalmaydi — shuning uchun havzaga o'sha modullardan bir nechta
+  /// oddiy element qo'shiladi.
+  static List<MashqElement> qiyinHavzasi(List<MashqElement> qiyin) {
+    if (qiyin.length >= 6) return qiyin;
+    final modullar = qiyin.map((e) => e.modul).toSet();
+    final qoshimcha = hammasi()
+        .where((e) => modullar.contains(e.modul) && !progress.qiyinMi(e.kalit))
+        .take(12)
+        .toList();
+    return [...qiyin, ...qoshimcha];
+  }
 }

@@ -63,6 +63,17 @@ Future<void> _kut(WidgetTester tester, [int ms = 2200]) async {
 /// Joriy savolga javob beradi. Savol turini ko'rsatma matnidan aniqlaydi —
 /// foydalanuvchi ham ekrandan aynan shuni o'qiydi.
 Future<void> _javobBer(WidgetTester tester, {bool togri = true}) async {
+  // Raund bekati — «davom» bosiladi; qiyin so'z kartasi — «eslab oldim».
+  if (_bor('Bugunga yetadi')) {
+    await tester.tap(find.textContaining('Davom etish'));
+    await _kut(tester);
+    return;
+  }
+  if (_bor('Eslab oldim')) {
+    await tester.tap(find.text('Eslab oldim'));
+    await _kut(tester);
+    return;
+  }
   if (_bor('Arabchasini harflab yozing')) {
     final harflar = harflarga(_uzBoyicha(_korinayotgan(_uzlar)!).ar);
     // Xato yig'ish uchun teskari tartib: sinov so'zlarida takrorlanuvchi
@@ -161,5 +172,71 @@ void main() {
     expect(progress.isMastered('sinov-2'), isFalse);
     // Qiynalgan element yakuniy hisobotda ko'rsatiladi.
     expect(find.textContaining('qiyin'), findsWidgets);
+  });
+
+  testWidgets("har 8 savoldan keyin bekat chiqadi, yulduzlar ko'rinadi", (
+    tester,
+  ) async {
+    await _ochish(tester, 'sinov-3');
+    var bekatKorildi = false;
+    var qadam = 0;
+    while (!_tugadi() && qadam < 150) {
+      if (_bor('Bugunga yetadi')) {
+        bekatKorildi = true;
+        expect(find.textContaining('-raund'), findsWidgets);
+        expect(find.byIcon(Icons.star_rounded), findsWidgets);
+      }
+      await _javobBer(tester);
+      qadam++;
+    }
+    expect(bekatKorildi, isTrue, reason: 'raund bekati chiqishi shart');
+  });
+
+  testWidgets("«bugunga yetadi» o'zlashtirish belgisini bermaydi", (
+    tester,
+  ) async {
+    await _ochish(tester, 'sinov-4');
+    var qadam = 0;
+    while (!_bor('Bugunga yetadi') && qadam < 40) {
+      await _javobBer(tester);
+      qadam++;
+    }
+    expect(find.text('Bugunga yetadi'), findsOneWidget);
+    // Bekat tugmalari kechikib (Reveal) chiqadi — animatsiya tugasin.
+    await _kut(tester);
+    await tester.tap(find.text('Bugunga yetadi'));
+    await _kut(tester);
+    expect(find.text('Yaxshi dam oling'), findsOneWidget);
+    expect(progress.isMastered('sinov-4'), isFalse);
+  });
+
+  testWidgets("3 marta adashilgan so'z avval o'rgatiladi, keyin so'raladi", (
+    tester,
+  ) async {
+    // «ketdi» so'zini oldindan uch marta xato qilingan deb belgilaymiz.
+    final kalit = _el('ذَهَبَ', 'ketdi').kalit;
+    for (var i = 0; i < 3; i++) {
+      await progress.bumpWord(kalit, false);
+    }
+    expect(progress.qiyinMi(kalit), isTrue);
+
+    await _ochish(tester, 'sinov-5');
+    var kartaKorildi = false;
+    var bosqichKorildi = false;
+    var qadam = 0;
+    while (!_tugadi() && qadam < 200) {
+      if (_bor('Eslab oldim')) {
+        kartaKorildi = true;
+        expect(find.text('ketdi'), findsWidgets);
+      }
+      if (_bor("Qiyin so'zlar ustida")) bosqichKorildi = true;
+      await _javobBer(tester);
+      qadam++;
+    }
+    expect(kartaKorildi, isTrue, reason: "o'rgatish kartasi chiqishi shart");
+    expect(bosqichKorildi, isTrue, reason: 'qiyin bosqichi chiqishi shart');
+    // Ketma-ket uch marta to'g'ri bo'lgach, «qiyin» belgisi olinadi.
+    expect(progress.ketmaKetTogri(kalit), greaterThanOrEqualTo(3));
+    expect(progress.qiyinMi(kalit), isFalse);
   });
 }

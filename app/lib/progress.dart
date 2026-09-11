@@ -46,6 +46,19 @@ class Progress extends ChangeNotifier {
   final Map<String, int> _xato = {};
   final Map<String, int> _urinish = {};
 
+  /// Element bo'yicha KETMA-KET to'g'ri javoblar soni (xatoda nolga tushadi).
+  ///
+  /// Nega kerak: «qiyin» so'z ro'yxatdan chiqishi uchun bir marta to'g'ri
+  /// javob yetmaydi — tasodif bo'lishi mumkin. Uch marta ketma-ket to'g'ri
+  /// bo'lsagina so'z chindan o'rnashgan deb hisoblanadi.
+  final Map<String, int> _ketma = {};
+
+  /// Shuncha xatodan keyin element «qiyin» hisoblanadi.
+  static const int qiyinChegara = 3;
+
+  /// Shuncha ketma-ket to'g'ri javobdan keyin «qiyin» belgisi olinadi.
+  static const int qiyinChiqish = 3;
+
   SharedPreferences? _prefs;
 
   int get level => (xp ~/ 100) + 1;
@@ -98,6 +111,12 @@ class Progress extends ChangeNotifier {
         (k, v) => _urinish[k as String] = (v as num).toInt(),
       );
     }
+    final ks = _prefs!.getString('ketma');
+    if (ks != null) {
+      (json.decode(ks) as Map).forEach(
+        (k, v) => _ketma[k as String] = (v as num).toInt(),
+      );
+    }
     _refreshStreak();
     notifyListeners();
   }
@@ -114,7 +133,12 @@ class Progress extends ChangeNotifier {
     final next = (correct ? cur + 1 : cur - 1).clamp(0, masteryGoal);
     _mastery[key] = next;
     _urinish[key] = (_urinish[key] ?? 0) + 1;
-    if (!correct) _xato[key] = (_xato[key] ?? 0) + 1;
+    if (correct) {
+      _ketma[key] = (_ketma[key] ?? 0) + 1;
+    } else {
+      _xato[key] = (_xato[key] ?? 0) + 1;
+      _ketma[key] = 0;
+    }
     await _save();
     notifyListeners();
     return next;
@@ -128,6 +152,18 @@ class Progress extends ChangeNotifier {
 
   /// Element hech qachon so'ralmaganmi.
   bool yangiElement(String key) => !_urinish.containsKey(key);
+
+  /// Element bo'yicha hozirgi ketma-ket to'g'ri javoblar soni.
+  int ketmaKetTogri(String key) => _ketma[key] ?? 0;
+
+  /// Element «qiyin» ro'yxatidami: kamida [qiyinChegara] marta xato
+  /// qilingan va hali [qiyinChiqish] marta ketma-ket to'g'ri berilmagan.
+  ///
+  /// Bu ro'yxat oddiy «zaiflik» og'irligidan farq qiladi: zaiflik
+  /// takrorda so'zni sal ko'proq chiqaradi, «qiyin» esa so'zni ALOHIDA
+  /// o'rgatish bosqichiga olib boradi — avval ko'rsatib, keyin so'raydi.
+  bool qiyinMi(String key) =>
+      xatoSoni(key) >= qiyinChegara && ketmaKetTogri(key) < qiyinChiqish;
 
   /// Elementning «zaiflik» og'irligi — takrorlashda qaysi element ko'proq
   /// chiqishini shu belgilaydi. Katta son = ko'proq mashq kerak.
@@ -256,5 +292,6 @@ class Progress extends ChangeNotifier {
     await p.setString('best', json.encode(_best));
     await p.setString('xato', json.encode(_xato));
     await p.setString('urinish', json.encode(_urinish));
+    await p.setString('ketma', json.encode(_ketma));
   }
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart' hide Text;
 import '../widgets/uz_text.dart';
 import '../main.dart';
+import '../mashq/bank.dart';
+import '../mashq/mashq_ekran.dart';
 import '../theme.dart';
 import '../widgets/mastery_badge.dart';
 import '../widgets/premium_tile.dart';
@@ -22,6 +24,7 @@ class MashqlarHome extends StatelessWidget {
           children: [
             _intro(),
             const SizedBox(height: 16),
+            _qiyinPlitka(context),
             // Lug'at testi — haqiqiy test, shuning uchun belgisi ham
             // o'zlashtirish belgisi: xatosiz o'tilmaguncha berilmaydi.
             _tile(
@@ -46,6 +49,50 @@ class MashqlarHome extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+  /// «Qiyin so'zlarim» — hamma moduldan 3+ marta adashilgan so'zlar.
+  ///
+  /// Eng tepada turadi: o'quvchi nimada qoqilayotganini qidirib
+  /// yurmasin, ilova o'zi ko'rsatib tursin. Ro'yxat bo'sh bo'lsa ham
+  /// plitka ko'rinadi — «hozircha qiyin so'z yo'q» ham mukofot.
+  Widget _qiyinPlitka(BuildContext context) {
+    final qiyin = MashqBank.qiyinlar();
+    final bosh = qiyin.isEmpty;
+    return PremiumTile(
+      title: bosh ? "Qiyin so'zlarim" : "Qiyin so'zlarim (${qiyin.length})",
+      subtitle: bosh
+          ? "Hozircha yo'q — zo'r ketyapsiz!"
+          : "3+ marta adashilgan so'zlar — avval o'rgatiladi, keyin so'raladi",
+      icon: Icons.psychology_rounded,
+      accent: AppColors.coral,
+      trailing: bosh
+          ? const Padding(
+              padding: EdgeInsets.only(right: 4),
+              child: Icon(
+                Icons.check_circle,
+                color: AppColors.success,
+                size: 22,
+              ),
+            )
+          : null,
+      onTap: bosh
+          ? () => ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Text("Qiyin so'z yo'q. Mashq qilib turing!"),
+              ),
+            )
+          : () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (_) => MashqEkran(
+                  sarlavha: "Qiyin so'zlarim",
+                  darsniki: qiyin,
+                  oldingilar: MashqBank.qiyinHavzasi(qiyin),
+                ),
+              ),
+            ),
     );
   }
 

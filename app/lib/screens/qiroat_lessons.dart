@@ -234,43 +234,38 @@ class QiroatLessonDetail extends StatelessWidget {
               GrammarTable(table: t),
             ],
             const SizedBox(height: 24),
-            const Text(
-              'Mashqlar',
-              style: TextStyle(
-                fontWeight: FontWeight.w800,
-                fontSize: 15,
-                color: AppColors.ink,
-              ),
-            ),
-            const SizedBox(height: 10),
-            // «So'zlarni chuqur yodlash» — 6 usulli master drill (har so'z 6 xil usulda)
-            _exerciseButton(
-              context,
-              color: AppColors.gold,
-              icon: Icons.psychology_alt,
-              label: 'So\'zlarni chuqur yodlash (6 usul)',
-              page: MasterDrill(lesson: lesson),
-            ),
-            const SizedBox(height: 10),
-            // Oddiy tez mashq (ko'p variantli)
-            _exerciseButton(
-              context,
-              color: AppColors.coral,
-              icon: Icons.bolt,
-              label: 'Tezkor mashq',
-              page: QiroatVocabDrill(lesson: lesson),
-            ),
-            const SizedBox(height: 10),
-            // «Juftlash o'yini» — arabcha↔o'zbekcha moslashtirish
-            _exerciseButton(
-              context,
-              color: AppColors.emerald,
-              icon: Icons.extension,
-              label: 'Juftlash o\'yini',
-              page: QiroatMatchGame(lesson: lesson),
-            ),
-            const SizedBox(height: 16),
+            // Avval TEST (o'zlashtirish belgisi shundan), keyin mashq.
+            // Qolgan o'yinlar yig'ilgan holda — asosiy yo'l ikkita tugma
+            // bo'lsin, o'quvchi «qaysi birini bosay» deb turmasin.
             _CompleteButton(lesson: lesson),
+            const SizedBox(height: 14),
+            _BoshqaOyinlar(
+              children: [
+                _exerciseButton(
+                  context,
+                  color: AppColors.gold,
+                  icon: Icons.psychology_alt,
+                  label: "So'zlarni chuqur yodlash (6 usul)",
+                  page: MasterDrill(lesson: lesson),
+                ),
+                const SizedBox(height: 10),
+                _exerciseButton(
+                  context,
+                  color: AppColors.coral,
+                  icon: Icons.bolt,
+                  label: 'Tezkor mashq',
+                  page: QiroatVocabDrill(lesson: lesson),
+                ),
+                const SizedBox(height: 10),
+                _exerciseButton(
+                  context,
+                  color: AppColors.emerald,
+                  icon: Icons.extension,
+                  label: "Juftlash o'yini",
+                  page: QiroatMatchGame(lesson: lesson),
+                ),
+              ],
+            ),
           ],
         ),
       ),
@@ -538,12 +533,16 @@ class QiroatMashqTugmasi extends StatelessWidget {
             darsniki: MashqBank.qiroatDars(lesson),
             oldingilar: MashqBank.qiroatGacha(lesson),
             darsId: lesson.completionId,
+            testgaOt: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => LessonFlow(lesson: lesson)),
+            ),
           ),
         ),
       ),
-      icon: const Icon(Icons.psychology_alt_rounded, size: 20),
+      icon: const Icon(Icons.fitness_center_rounded, size: 20),
       label: const Text(
-        'Mustahkamlash: aralash takror',
+        'Mashq qilish',
         style: TextStyle(fontWeight: FontWeight.w700),
       ),
       style: OutlinedButton.styleFrom(
@@ -552,6 +551,56 @@ class QiroatMashqTugmasi extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 14),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       ),
+    );
+  }
+}
+
+/// «Boshqa o'yinlar» — yig'ilgan qo'shimcha mashqlar.
+///
+/// Ular o'chirilmadi (foydali), lekin asosiy yo'ldan chetga olindi:
+/// ekranda beshta rangli tugma turganda test qaysi biri ekani
+/// bilinmay qolgan edi.
+class _BoshqaOyinlar extends StatefulWidget {
+  final List<Widget> children;
+  const _BoshqaOyinlar({required this.children});
+
+  @override
+  State<_BoshqaOyinlar> createState() => _BoshqaOyinlarState();
+}
+
+class _BoshqaOyinlarState extends State<_BoshqaOyinlar> {
+  bool _ochiq = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        TextButton.icon(
+          onPressed: () => setState(() => _ochiq = !_ochiq),
+          icon: AnimatedRotation(
+            turns: _ochiq ? 0.5 : 0,
+            duration: const Duration(milliseconds: 250),
+            child: const Icon(Icons.expand_more_rounded),
+          ),
+          label: const Text(
+            "Boshqa o'yinlar",
+            style: TextStyle(fontWeight: FontWeight.w700),
+          ),
+          style: TextButton.styleFrom(foregroundColor: Colors.black54),
+        ),
+        AnimatedCrossFade(
+          duration: const Duration(milliseconds: 280),
+          crossFadeState: _ochiq
+              ? CrossFadeState.showSecond
+              : CrossFadeState.showFirst,
+          firstChild: const SizedBox(width: double.infinity),
+          secondChild: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: widget.children,
+          ),
+        ),
+      ],
     );
   }
 }

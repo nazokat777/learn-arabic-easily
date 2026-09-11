@@ -111,6 +111,57 @@ class MashqBank {
     r'^([\u0600-\u06FF\u0750-\u077F\s]+)\(([^)]+)\)\.?$',
   );
 
+  /// Dars matnidagi «ARABCHA – yorliq» juftliklari: «مَوْثُوبُ – ismi
+  /// maf'ul», «يَوْجَى muzore'». Sarf darsining asosiy mazmuni aynan shu
+  /// hosila shakllar — ular mashqqa tushmasa, dars mashqsiz qoladi.
+  static final RegExp _hosila = RegExp(
+    r"([؀-ۿ][؀-ۿ\s]*?)\s*(?:–|-|—)?\s*"
+    r"(moziy|muzore'|ismi fo'il|ismi foil|ismi maf'ul|sifati mushabbaha|"
+    r"fe'li jahd|fe'li nafiy|amri hozir|amr hozir|amri g'oib|amri g'oyib|"
+    r"fe'li nahiy|nahiy hozir|ismi zamon va makon|ismi olati|ismi olat|"
+    r"ismi tafzil|masdar)(?=[\s,.;:!)]|$)",
+  );
+
+  /// Kitobning 14 siyg'a tartibi — paradigma bloklari shu tartibda.
+  static const List<String> _siygalar = [
+    "g'oib",
+    "g'oibayn",
+    "g'oibin",
+    "g'oibah",
+    "g'oibatayn",
+    "g'oibot",
+    'muxotab',
+    'muxotabayn',
+    'muxotabin',
+    'muxotabah',
+    'muxotabatayn',
+    'muxotabot',
+    'mutakallimi vohid',
+    "mutakallim ma'al g'ayr",
+  ];
+
+  static final RegExp _lotin = RegExp('[A-Za-z]');
+  static final RegExp _arabcha = RegExp('[؀-ۿ]');
+  static final RegExp _sarlavhaQavs = RegExp(r'\(([؀-ۿ\s]+)\)');
+
+  /// Apostrof variantlarini birlashtiradi — matnda ' ʼ ‘ ’ aralash.
+  static String _apostrof(String s) =>
+      s.replaceAll('ʼ', "'").replaceAll('‘', "'").replaceAll('’', "'");
+
+  /// Paradigma bloki sarlavhasi fe'l shaklini bildiradimi («Fe'li
+  /// moziyning ma'lumi»). «Qoida», «Sarfi» kabi sarlavha ostidagi
+  /// ro'yxat qaysi shakl ekani noaniq — o'tkazib yuboriladi.
+  static bool _paradigmaSarlavhasi(String s) {
+    final k = _apostrof(s).toLowerCase();
+    return k.contains("fe'l") ||
+        k.contains('moziy') ||
+        k.contains('muzore') ||
+        k.contains('jahd') ||
+        k.contains('nafiy') ||
+        k.contains('nahiy') ||
+        k.contains('amr');
+  }
+
   static List<MashqElement> sarfDars(SarfLesson l) {
     final korilgan = <String>{};
     final natija = <MashqElement>[];
@@ -129,9 +180,65 @@ class MashqBank {
       );
     }
 
+    // Sarlavhadagi fe'l — «Misol fe'lining (وَثَبَ) sarfi».
+    final sarlavhaAsos = _sarlavhaQavs.firstMatch(l.title)?.group(1)?.trim();
+    String? oxirgiBolim;
+
     for (final b in l.blocks) {
       if (b.type == 'misol') {
         qosh(b.ar, b.uz);
+        continue;
+      }
+      if (b.type == 'bolim') {
+        oxirgiBolim = b.uz.trim();
+        continue;
+      }
+      if (b.type == 'jadval') {
+        // Oxirgi arabcha katak ↔ oxirgi o'zbekcha katak: vazn jadvalida
+        // «misol ↔ ma'no», shakl jadvalida «arabcha ↔ shakl nomi».
+        for (final q in b.qatorlar) {
+          final ar = q.kataklar.where(_arabcha.hasMatch).toList();
+          final uz = q.kataklar
+              .where((c) => c.trim().isNotEmpty && !_arabcha.hasMatch(c))
+              .toList();
+          if (ar.isNotEmpty && uz.isNotEmpty) qosh(ar.last.trim(), uz.last.trim());
+        }
+        continue;
+      }
+      if (b.type == 'matn') {
+        final matn = _apostrof(b.uz);
+        // 14 siyg'alik paradigma — sarlavhasi bilan.
+        final bolim = oxirgiBolim;
+        final bolaklar = matn
+            .replaceAll(RegExp(r'\.\s*$'), '')
+            .split(RegExp('[،,]'))
+            .map((s) => s.trim())
+            .where((s) => s.isNotEmpty)
+            .toList();
+        if (bolaklar.length == _siygalar.length &&
+            bolim != null &&
+            _paradigmaSarlavhasi(bolim) &&
+            bolaklar.every((s) => _arabcha.hasMatch(s) && !_lotin.hasMatch(s))) {
+          for (var i = 0; i < bolaklar.length; i++) {
+            qosh(bolaklar[i], '$bolim · ${_siygalar[i]}');
+          }
+          continue;
+        }
+        // «ARABCHA – yorliq» juftliklari; asos — shu blokdagi moziy yoki
+        // sarlavhadagi fe'l. Asossiz «muzore'» yorlig'i ko'p fe'lga
+        // to'g'ri keladi va savolni ikki javobli qilib qo'yadi.
+        final topilgan = _hosila.allMatches(matn).toList();
+        String? asos = sarlavhaAsos;
+        for (final m in topilgan) {
+          if (m.group(2) == 'moziy') asos = m.group(1)!.trim();
+        }
+        if (asos == null) continue;
+        for (final m in topilgan) {
+          final ar = m.group(1)!.trim();
+          final yorliq = m.group(2)!;
+          if (yorliq == 'moziy' || ar == asos) continue;
+          qosh(ar, '$yorliq ($asos)');
+        }
         continue;
       }
       for (final band in b.items) {

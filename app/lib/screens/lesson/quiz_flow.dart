@@ -4,6 +4,7 @@ import '../../widgets/uz_text.dart';
 import '../../arabic.dart';
 import '../../content.dart';
 import '../../main.dart';
+import '../../mashq/mukofot.dart';
 import '../../services/tts.dart';
 import '../../theme.dart';
 import '../../widgets/motion.dart';
@@ -48,6 +49,10 @@ class _QuizStageState extends State<QuizStage> {
   int _qi = 0;
   int? _picked;
   bool _answered = false;
+  int _ketmaKet = 0;
+  int _portlash = 0;
+  String _fikr = '';
+  final _maqtovRnd = Random();
 
   String _key(QiroatVocab v) => '${widget.lesson.completionId}::${v.ar}';
 
@@ -94,6 +99,14 @@ class _QuizStageState extends State<QuizStage> {
     setState(() {
       _picked = i;
       _answered = true;
+      if (ok) {
+        _ketmaKet++;
+        _portlash++;
+        _fikr = Maqtov.togri(_maqtovRnd, ketmaKet: _ketmaKet);
+      } else {
+        _ketmaKet = 0;
+        _fikr = Maqtov.xato(_maqtovRnd);
+      }
     });
     if (ok) {
       widget.award(2);
@@ -261,46 +274,51 @@ class _QuizStageState extends State<QuizStage> {
     }
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
-      child: Pulse(
-        trigger: (_answered && i == q.correct) ? _qi : null,
-        child: Shake(
-          trigger: (_answered && i == _picked && i != q.correct) ? _qi : null,
-          child: Tactile(
-            child: Material(
-              color: bg,
-              borderRadius: BorderRadius.circular(14),
-              child: InkWell(
+      child: Portlash(
+        trigger: (_answered && i == q.correct && _picked == q.correct)
+            ? _portlash
+            : null,
+        child: Pulse(
+          trigger: (_answered && i == q.correct) ? _qi : null,
+          child: Shake(
+            trigger: (_answered && i == _picked && i != q.correct) ? _qi : null,
+            child: Tactile(
+              child: Material(
+                color: bg,
                 borderRadius: BorderRadius.circular(14),
-                onTap: _answered ? null : () => _answer(i),
-                child: Container(
-                  width: double.infinity,
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 16,
-                    vertical: 15,
-                  ),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(14),
-                    border: Border.all(color: border, width: 1.8),
-                  ),
-                  child: isArabic
-                      ? Directionality(
-                          textDirection: TextDirection.rtl,
-                          child: Text(
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(14),
+                  onTap: _answered ? null : () => _answer(i),
+                  child: Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 15,
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(14),
+                      border: Border.all(color: border, width: 1.8),
+                    ),
+                    child: isArabic
+                        ? Directionality(
+                            textDirection: TextDirection.rtl,
+                            child: Text(
+                              q.options[i],
+                              style: AppTheme.arabic(
+                                size: 24,
+                                color: AppColors.ink,
+                              ),
+                            ),
+                          )
+                        : Text(
                             q.options[i],
-                            style: AppTheme.arabic(
-                              size: 24,
+                            style: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
                               color: AppColors.ink,
                             ),
                           ),
-                        )
-                      : Text(
-                          q.options[i],
-                          style: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                            color: AppColors.ink,
-                          ),
-                        ),
+                  ),
                 ),
               ),
             ),
@@ -330,8 +348,8 @@ class _QuizStageState extends State<QuizStage> {
           Expanded(
             child: Text(
               ok
-                  ? "To'g'ri! +2 ball"
-                  : "To'g'ri javob: ${q.options[q.correct]}",
+                  ? '$_fikr  +2 ball'
+                  : "$_fikr · To'g'ri javob: ${q.options[q.correct]}",
               style: TextStyle(
                 fontWeight: FontWeight.w800,
                 color: ok ? AppColors.success : AppColors.coral,

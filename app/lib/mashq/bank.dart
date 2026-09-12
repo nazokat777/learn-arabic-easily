@@ -403,6 +403,9 @@ class MashqBank {
         darsId: 'letter_test',
         tartib: h.id,
         modul: 'Alifbo',
+        // Yolg'iz harfning ovoz klipi yo'q (TTS uni jim o'qiydi) — harf
+        // NOMI bilan gapiriladi: «qāf» eshitilib, ق tanlanadi.
+        ovoz: h.nameAr,
       ),
   ];
 

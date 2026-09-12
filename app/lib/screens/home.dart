@@ -20,6 +20,7 @@ import '../mashq/element.dart';
 import '../mashq/mashq_ekran.dart';
 import '../rasm.dart';
 import '../services/tts.dart';
+import '../services/xabar.dart';
 import '../widgets/ornament.dart';
 import 'alifbo_home.dart';
 import 'davom.dart';
@@ -1493,8 +1494,32 @@ class _KechaTaqqos extends StatelessWidget {
 /// Kunlik reja — 4 ta mikro-vazifa, har biri belgilanadi. Ro'yxat
 /// «to'lmagan» bo'lsa ong uni tugatishga intiladi (Zeigarnik); hammasi
 /// bajarilganda «Kun to'liq» — tinch yakun, ertaga toza boshlash.
-class _KunlikReja extends StatelessWidget {
+class _KunlikReja extends StatefulWidget {
   const _KunlikReja();
+
+  @override
+  State<_KunlikReja> createState() => _KunlikRejaState();
+}
+
+class _KunlikRejaState extends State<_KunlikReja> {
+  bool _tekshirildi = false;
+
+  /// Hammasi bajarilgan — bir martalik bonus va xabar (kunning yopilishi
+  /// ham mukofot bo'lsin, shunchaki yashil belgi emas).
+  void _bonusniTekshir(bool toliq) {
+    if (!toliq || _tekshirildi || progress.rejaBonusOlindiBugun) return;
+    _tekshirildi = true;
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      final berildi = await progress.rejaBonusiniOl();
+      if (berildi) {
+        Tovush.daraja();
+        xabarBer(
+          "Bugungi reja to'liq bajarildi — +${Progress.rejaBonusBalli} ball!",
+          ikon: Icons.verified_rounded,
+        );
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -1522,6 +1547,7 @@ class _KunlikReja extends StatelessWidget {
     ];
     final bajarildi = vazifalar.where((v) => v.$2).length;
     final toliq = bajarildi == vazifalar.length;
+    _bonusniTekshir(toliq);
     final rang = toliq ? AppColors.success : AppColors.emerald;
     return Container(
       padding: const EdgeInsets.fromLTRB(16, 14, 16, 12),

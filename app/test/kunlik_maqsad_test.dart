@@ -55,6 +55,12 @@ void main() {
     expect(p.bugungiSozBildimmi, isFalse);
     await p.bugungiSozniBildim();
     expect(p.bugungiSozBildimmi, isTrue);
+    // Reja bonusi kunda bir marta.
+    final oldin = p.xp;
+    expect(await p.rejaBonusiniOl(), isTrue);
+    expect(p.xp, oldin + Progress.rejaBonusBalli);
+    expect(await p.rejaBonusiniOl(), isFalse);
+    expect(p.xp, oldin + Progress.rejaBonusBalli);
     expect(p.kunNatijasi(DateTime.now().subtract(const Duration(days: 1))), (
       0,
       0,

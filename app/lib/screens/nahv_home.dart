@@ -6,6 +6,7 @@ import '../content.dart';
 import '../mashq/bank.dart';
 import '../mashq/mashq_ekran.dart';
 import '../theme.dart';
+import '../widgets/aralash_matn.dart';
 import '../widgets/entrance.dart';
 import '../widgets/mastery_badge.dart';
 import '../widgets/motion.dart';
@@ -421,9 +422,13 @@ class _BilingualState extends State<_Bilingual> {
 
   Widget _tarjima() {
     if (_ochiq) {
-      return Text(
+      // Tarjima ichida arabcha parchalar bo'ladi («بِسْمِ الله» kabi) —
+      // ular Amiri bilan, bosilsa o'qib beriladigan qilib chiziladi; oddiy
+      // Text'da ular zaxira shriftga tushib, ba'zan kvadrat bo'lib qoladi.
+      return AralashMatn(
         widget.pair.uz,
-        style: TextStyle(color: AppColors.matn2, height: 1.35),
+        uslub: TextStyle(fontSize: 14, color: AppColors.matn2, height: 1.35),
+        arabchaOlchami: 18,
       );
     }
     return InkWell(

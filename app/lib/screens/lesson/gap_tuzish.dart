@@ -194,6 +194,9 @@ class _GapTuzishState extends State<GapTuzish> {
           child: Shake(
             trigger: _silkin == 0 ? null : _silkin,
             child: Container(
+              // Portlash/Shake cheklovlarni bo'shashtiradi — maydon
+              // chip o'lchamiga qisqarib qolmasin, to'liq kenglik.
+              width: double.infinity,
               constraints: const BoxConstraints(minHeight: 64),
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(

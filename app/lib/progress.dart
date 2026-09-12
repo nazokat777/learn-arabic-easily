@@ -103,6 +103,12 @@ class Progress extends ChangeNotifier {
   int _kunTogri = 0;
   int _kunBall = 0;
 
+  /// Kunlik tarix: sana → [savol, to'g'ri, ball]. Haftalik ko'rinishda
+  /// qisman o'tgan kunlar ham ko'rinsin (maqsadga yetmagan kun bo'sh
+  /// doira emas, «8 ta savol» halqasi). Oxirgi 60 kun saqlanadi.
+  final Map<String, List<int>> _kunTarix = {};
+  static const int _tarixKunlari = 60;
+
   /// Eng uzun ketma-ket to'g'ri javoblar rekordi (butun tarix).
   int rekordKombo = 0;
 
@@ -182,6 +188,14 @@ class Progress extends ChangeNotifier {
     _kunSoni = _prefs!.getInt('kunSoni') ?? 0;
     _kunTogri = _prefs!.getInt('kunTogri') ?? 0;
     _kunBall = _prefs!.getInt('kunBall') ?? 0;
+    final kt = _prefs!.getString('kunTarix');
+    if (kt != null) {
+      (json.decode(kt) as Map).forEach(
+        (k, v) => _kunTarix[k as String] = [
+          for (final x in v as List) (x as num).toInt(),
+        ],
+      );
+    }
     _kunMukofotOlindi = _prefs!.getBool('kunMukofot') ?? false;
     _maqsadKunlari.addAll(_prefs!.getStringList('maqsadKunlari') ?? []);
     rekordKombo = _prefs!.getInt('rekordKombo') ?? 0;
@@ -341,6 +355,25 @@ class Progress extends ChangeNotifier {
   /// Bugun olingan ball (mukofotlar bilan).
   int get bugungiBall => _kunSana == _today() ? _kunBall : 0;
 
+  /// Shu kunning natijasi: (savol, to'g'ri, ball). Yozuv bo'lmasa nollar.
+  (int, int, int) kunNatijasi(DateTime kun) {
+    final r = _kunTarix[_sana(kun)];
+    if (r == null || r.length < 3) return (0, 0, 0);
+    return (r[0], r[1], r[2]);
+  }
+
+  void _tarixniYoz() {
+    final s = _kunSana;
+    if (s == null) return;
+    _kunTarix[s] = [_kunSoni, _kunTogri, _kunBall];
+    if (_kunTarix.length > _tarixKunlari) {
+      final kalitlar = _kunTarix.keys.toList()..sort();
+      for (final k in kalitlar.take(_kunTarix.length - _tarixKunlari)) {
+        _kunTarix.remove(k);
+      }
+    }
+  }
+
   /// Bugungi aniqlik foizi (savol bo'lmasa 0).
   int get bugungiAniqlik =>
       bugungiSavollar == 0 ? 0 : (bugungiTogri * 100 / bugungiSavollar).round();
@@ -364,6 +397,7 @@ class Progress extends ChangeNotifier {
     _kunniYangila();
     _kunSoni++;
     if (togri) _kunTogri++;
+    _tarixniYoz();
   }
 
   /// Kunlik mukofotni beradi — kunda faqat bir marta. Berilgan bo'lsa
@@ -397,6 +431,7 @@ class Progress extends ChangeNotifier {
   Future<void> addXp(int amount) async {
     _kunniYangila();
     _kunBall += amount;
+    _tarixniYoz();
     xp += amount;
     await _save();
     notifyListeners();
@@ -486,6 +521,7 @@ class Progress extends ChangeNotifier {
     await p.setInt('kunSoni', _kunSoni);
     await p.setInt('kunTogri', _kunTogri);
     await p.setInt('kunBall', _kunBall);
+    await p.setString('kunTarix', json.encode(_kunTarix));
     await p.setBool('kunMukofot', _kunMukofotOlindi);
     await p.setStringList('maqsadKunlari', _maqsadKunlari.toList());
     await p.setInt('rekordKombo', rekordKombo);

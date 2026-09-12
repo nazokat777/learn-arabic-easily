@@ -693,10 +693,7 @@ class _KunlikMaqsad extends StatelessWidget {
           color: rang,
           background: rang.withValues(alpha: 0.12),
         ),
-        if (soni > 0) ...[
-          const SizedBox(height: 10),
-          const _BugungiNatija(),
-        ],
+        if (soni > 0) ...[const SizedBox(height: 10), const _BugungiNatija()],
         const SizedBox(height: 12),
         const _Hafta(),
       ],
@@ -819,27 +816,47 @@ class _Hafta extends StatelessWidget {
         kun.month == bugun.month &&
         kun.day == bugun.day;
     final kelajak = kun.isAfter(bugun) && !bugunmi;
+    // Maqsadga yetmagan, lekin mashq qilingan kun — bo'sh doira emas:
+    // qancha o'tilgani halqa va raqam bilan ko'rinadi. «Kecha 8 ta
+    // qildim» hissi bo'sh doiradan ko'ra qaytishga undaydi.
+    final (savol, _, _) = progress.kunNatijasi(kun);
+    final qisman = !bajarildi && savol > 0;
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        AnimatedContainer(
-          duration: const Duration(milliseconds: 400),
-          curve: kExpoOut,
-          width: 30,
-          height: 30,
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            color: bajarildi
-                ? AppColors.success
-                : AppColors.success.withValues(alpha: kelajak ? 0.05 : 0.12),
-            border: bugunmi
-                ? Border.all(color: AppColors.coral, width: 2)
+        if (qisman)
+          TaraqqiyotHalqasi(
+            foiz: savol / Progress.kunlikMaqsad,
+            rang: bugunmi ? AppColors.coral : AppColors.success,
+            size: 30,
+            child: Text(
+              '$savol',
+              style: TextStyle(
+                fontSize: 10.5,
+                fontWeight: FontWeight.w900,
+                color: bugunmi ? AppColors.coral : AppColors.success,
+              ),
+            ),
+          )
+        else
+          AnimatedContainer(
+            duration: const Duration(milliseconds: 400),
+            curve: kExpoOut,
+            width: 30,
+            height: 30,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: bajarildi
+                  ? AppColors.success
+                  : AppColors.success.withValues(alpha: kelajak ? 0.05 : 0.12),
+              border: bugunmi
+                  ? Border.all(color: AppColors.coral, width: 2)
+                  : null,
+            ),
+            child: bajarildi
+                ? const Icon(Icons.check_rounded, size: 18, color: Colors.white)
                 : null,
           ),
-          child: bajarildi
-              ? const Icon(Icons.check_rounded, size: 18, color: Colors.white)
-              : null,
-        ),
         const SizedBox(height: 4),
         Text(
           nom,

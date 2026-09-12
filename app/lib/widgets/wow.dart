@@ -106,11 +106,15 @@ class TaraqqiyotHalqasi extends StatelessWidget {
   final double foiz; // 0..1
   final Color rang;
   final double size;
+
+  /// Berilsa foiz matni o'rniga chiziladi (masalan, kun ichidagi raqam).
+  final Widget? child;
   const TaraqqiyotHalqasi({
     super.key,
     required this.foiz,
     required this.rang,
     this.size = 40,
+    this.child,
   });
 
   @override
@@ -125,14 +129,16 @@ class TaraqqiyotHalqasi extends StatelessWidget {
         child: CustomPaint(
           painter: _HalqaPainter(v, rang),
           child: Center(
-            child: Text(
-              '${(v * 100).round()}%',
-              style: TextStyle(
-                fontSize: size * 0.26,
-                fontWeight: FontWeight.w900,
-                color: rang,
-              ),
-            ),
+            child:
+                child ??
+                Text(
+                  '${(v * 100).round()}%',
+                  style: TextStyle(
+                    fontSize: size * 0.26,
+                    fontWeight: FontWeight.w900,
+                    color: rang,
+                  ),
+                ),
           ),
         ),
       ),

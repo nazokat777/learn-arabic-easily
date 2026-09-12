@@ -2,7 +2,9 @@ import 'package:flutter/material.dart' hide Text;
 import 'uz_text.dart';
 
 import '../content.dart';
+import '../services/tts.dart';
 import '../theme.dart';
+import 'motion.dart';
 import 'speak_button.dart';
 
 /// Katakda arab harfi bormi.
@@ -13,9 +15,100 @@ bool _arabchami(String s) => _arabHarf.hasMatch(s);
 ///
 /// Qiroat darslarida ham, nahv darslarida ham bir xil ko'rinadi, shuning
 /// uchun ekranlardan chiqarib, umumiy vidjet qilindi.
-class GrammarTable extends StatelessWidget {
+class GrammarTable extends StatefulWidget {
   final QiroatTable table;
   const GrammarTable({super.key, required this.table});
+
+  @override
+  State<GrammarTable> createState() => _GrammarTableState();
+}
+
+/// Ikki rejim: ko'rish (kitobdagidek) va SINASH — arabcha shakllar
+/// yopiladi, ma'no/ustun nomi qoladi; o'quvchi avval eslab, keyin
+/// katakni ochadi (ochilganda o'qib beriladi). Eslab chiqarish qayta
+/// o'qishdan kuchli yodlash usuli; jadval mazmuni o'zgarmaydi.
+class _GrammarTableState extends State<GrammarTable> {
+  QiroatTable get table => widget.table;
+  bool _sinash = false;
+  final Set<String> _ochilgan = {};
+
+  int get _arabchaSoni => [
+    for (final r in table.rows)
+      for (final c in r.cells)
+        if (_arabchami(c)) c,
+  ].toSet().length;
+
+  /// Arabcha katak: sinashda yopiq «?» plitka, ochilgach — matn.
+  Widget _yashirin(String ar, Widget ochiq, {required String id}) {
+    if (!_sinash || _ochilgan.contains(ar)) return ochiq;
+    return InkWell(
+      borderRadius: BorderRadius.circular(10),
+      onTap: () {
+        Haptic.tap();
+        setState(() => _ochilgan.add(ar));
+        Tts.instance.speak(ar, id: id);
+      },
+      child: Container(
+        height: 34,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          color: AppColors.indigo.withValues(alpha: 0.10),
+          borderRadius: BorderRadius.circular(10),
+          border: Border.all(color: AppColors.indigo.withValues(alpha: 0.3)),
+        ),
+        child: Icon(
+          Icons.help_outline_rounded,
+          size: 18,
+          color: AppColors.indigo.withValues(alpha: 0.8),
+        ),
+      ),
+    );
+  }
+
+  Widget _sinashTugmasi() {
+    final jami = _arabchaSoni;
+    if (jami < 2) return const SizedBox.shrink();
+    return Row(
+      children: [
+        if (_sinash)
+          Expanded(
+            child: Text(
+              _ochilgan.length >= jami
+                  ? "Hammasi ochildi — yana sinab ko'ring"
+                  : '${_ochilgan.length} / $jami ochildi · avval eslang',
+              style: TextStyle(
+                fontSize: 11.5,
+                fontWeight: FontWeight.w700,
+                color: _ochilgan.length >= jami
+                    ? AppColors.success
+                    : AppColors.matn2,
+              ),
+            ),
+          )
+        else
+          const Spacer(),
+        TextButton.icon(
+          onPressed: () => setState(() {
+            _sinash = !_sinash;
+            _ochilgan.clear();
+          }),
+          icon: Icon(
+            _sinash ? Icons.visibility_rounded : Icons.psychology_rounded,
+            size: 16,
+          ),
+          label: Text(
+            _sinash ? "Ko'rsatish" : "O'zimni sinayman",
+            style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 12),
+          ),
+          style: TextButton.styleFrom(
+            foregroundColor: AppColors.indigo,
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+            visualDensity: VisualDensity.compact,
+          ),
+        ),
+      ],
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +126,8 @@ class GrammarTable extends StatelessWidget {
             style: AppTheme.arabic(size: 20, color: AppColors.emerald),
           ),
         ),
-        const SizedBox(height: 10),
+        _sinashTugmasi(),
+        const SizedBox(height: 6),
         for (final g in groups.entries) ...[
           Padding(
             padding: const EdgeInsets.only(top: 10, bottom: 6),
@@ -116,13 +210,17 @@ class GrammarTable extends StatelessWidget {
                   const SizedBox(width: 6),
                   Expanded(
                     child: _arabchami(r.cells[i])
-                        ? Text(
+                        ? _yashirin(
                             r.cells[i],
-                            textDirection: TextDirection.rtl,
-                            textAlign: TextAlign.right,
-                            style: AppTheme.arabic(
-                              size: 19,
-                              color: AppColors.ink,
+                            id: 'bob-${r.cells[i]}',
+                            Text(
+                              r.cells[i],
+                              textDirection: TextDirection.rtl,
+                              textAlign: TextAlign.right,
+                              style: AppTheme.arabic(
+                                size: 19,
+                                color: AppColors.ink,
+                              ),
                             ),
                           )
                         : Text(
@@ -158,10 +256,14 @@ class GrammarTable extends StatelessWidget {
       children: [
         SpeakButton(text: ar, id: 'jadval-$ar', size: 18),
         const SizedBox(width: 6),
-        Text(
+        _yashirin(
           ar,
-          textDirection: TextDirection.rtl,
-          style: AppTheme.arabic(size: 20, color: AppColors.ink),
+          id: 'jadval-$ar',
+          Text(
+            ar,
+            textDirection: TextDirection.rtl,
+            style: AppTheme.arabic(size: 20, color: AppColors.ink),
+          ),
         ),
         const SizedBox(width: 10),
         Expanded(

@@ -63,6 +63,15 @@ class HomeScreen extends StatelessWidget {
                       delay: Duration(milliseconds: 90),
                       child: _XpPanel(),
                     ),
+                    if (progress.streak > 0 &&
+                        !progress.bugunSeriyada &&
+                        !progress.kunlikMaqsadBajarildi) ...[
+                      const SizedBox(height: 12),
+                      const Reveal(
+                        delay: Duration(milliseconds: 105),
+                        child: _OlovEslatmasi(),
+                      ),
+                    ],
                     if (oxirgiDarsEkrani() != null) ...[
                       const SizedBox(height: 12),
                       Reveal(
@@ -1088,6 +1097,70 @@ class _BugungiSozState extends State<_BugungiSoz> {
                   ),
                 ),
         ],
+      ),
+    );
+  }
+}
+
+/// Olov eslatmasi — seriya bor, bugun hali yoqilmagan: «yo'qotish»
+/// hissi yutuqdan kuchli, shuning uchun eslatma olovni saqlash haqida,
+/// jazo haqida emas. Bosilsa oxirgi dars (yoki mashqlar) ochiladi.
+class _OlovEslatmasi extends StatelessWidget {
+  const _OlovEslatmasi();
+
+  @override
+  Widget build(BuildContext context) {
+    final qoldi = Progress.kunlikMaqsad - progress.bugungiSavollar;
+    return Tactile(
+      child: Material(
+        color: AppColors.karta,
+        borderRadius: BorderRadius.circular(18),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(18),
+          onTap: () {
+            final ekran = oxirgiDarsEkrani() ?? const MashqlarHome();
+            Navigator.push(context, MaterialPageRoute(builder: (_) => ekran));
+          },
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(18),
+              border: Border.all(
+                color: AppColors.coral.withValues(alpha: 0.5),
+                width: 1.4,
+              ),
+            ),
+            child: Row(
+              children: [
+                const Olov(size: 30),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        '${progress.streak} kunlik olovni saqlang',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w900,
+                          fontSize: 15,
+                          color: AppColors.ink,
+                        ),
+                      ),
+                      Text(
+                        "Bugun yana $qoldi ta savol — bir raund yetadi",
+                        style: TextStyle(
+                          fontSize: 12.5,
+                          color: AppColors.matn2,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const Icon(Icons.arrow_forward_rounded, color: AppColors.coral),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }

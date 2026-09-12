@@ -10,6 +10,7 @@ import 'sarf_home.dart';
 import '../uz_yozuv.dart';
 import '../widgets/motion.dart';
 import '../widgets/olov.dart';
+import '../widgets/wow.dart';
 import '../mashq/bank.dart';
 import '../mashq/element.dart';
 import '../mashq/mashq_ekran.dart';
@@ -37,171 +38,201 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        children: [
-          // Orqa fon: sekin suzuvchi yumshoq dog'lar. Ekran «tirik» tuyuladi,
-          // lekin diqqatni tortmaydi — shaffofligi juda past.
-          const Positioned.fill(
-            child: Aurora(
-              colors: [AppColors.emerald, AppColors.gold, AppColors.teal],
+    return OchilishSahnasi(
+      child: Scaffold(
+        body: Stack(
+          children: [
+            // Orqa fon: sekin suzuvchi yumshoq dog'lar. Ekran «tirik» tuyuladi,
+            // lekin diqqatni tortmaydi — shaffofligi juda past.
+            const Positioned.fill(
+              child: Aurora(
+                colors: [AppColors.emerald, AppColors.gold, AppColors.teal],
+              ),
             ),
-          ),
-          SafeArea(
-            child: AnimatedBuilder(
-              animation: progress,
-              builder: (context, _) => ListView(
-                // Tepada biroz nafas — hero ekran chetiga yopishib qolmasin.
-                padding: const EdgeInsets.fromLTRB(20, 22, 20, 36),
-                children: [
-                  const Reveal(child: _Hero()),
-                  const SizedBox(height: 16),
-                  const Reveal(
-                    delay: Duration(milliseconds: 90),
-                    child: _XpPanel(),
-                  ),
-                  if (oxirgiDarsEkrani() != null) ...[
-                    const SizedBox(height: 12),
-                    Reveal(
-                      delay: const Duration(milliseconds: 110),
-                      child: _DavomKarta(nom: progress.oxirgiDarsNomi ?? ''),
+            SafeArea(
+              child: AnimatedBuilder(
+                animation: progress,
+                builder: (context, _) => ListView(
+                  // Tepada biroz nafas — hero ekran chetiga yopishib qolmasin.
+                  padding: const EdgeInsets.fromLTRB(20, 22, 20, 36),
+                  children: [
+                    const Reveal(child: _Hero()),
+                    const SizedBox(height: 16),
+                    const Reveal(
+                      delay: Duration(milliseconds: 90),
+                      child: _XpPanel(),
                     ),
-                  ],
-                  const SizedBox(height: 12),
-                  const Reveal(
-                    delay: Duration(milliseconds: 115),
-                    child: _Statistika(),
-                  ),
-                  if (progress.eslashKerakKalitlar.isNotEmpty) ...[
+                    if (oxirgiDarsEkrani() != null) ...[
+                      const SizedBox(height: 12),
+                      Reveal(
+                        delay: const Duration(milliseconds: 110),
+                        child: _DavomKarta(nom: progress.oxirgiDarsNomi ?? ''),
+                      ),
+                    ],
                     const SizedBox(height: 12),
+                    const Reveal(
+                      delay: Duration(milliseconds: 115),
+                      child: _Statistika(),
+                    ),
+                    if (progress.eslashKerakKalitlar.isNotEmpty) ...[
+                      const SizedBox(height: 12),
+                      Reveal(
+                        delay: const Duration(milliseconds: 118),
+                        child: _EslashKartasi(
+                          soni: progress.eslashKerakKalitlar.length,
+                        ),
+                      ),
+                    ],
+                    const SizedBox(height: 12),
+                    const Reveal(
+                      delay: Duration(milliseconds: 122),
+                      child: _BugungiSoz(),
+                    ),
+                    if (progress.qiyinKalitlar.isNotEmpty) ...[
+                      const SizedBox(height: 12),
+                      Reveal(
+                        delay: const Duration(milliseconds: 120),
+                        child: _QiyinBanner(
+                          soni: progress.qiyinKalitlar.length,
+                        ),
+                      ),
+                    ],
+                    const SizedBox(height: 26),
                     Reveal(
-                      delay: const Duration(milliseconds: 118),
-                      child: _EslashKartasi(
-                        soni: progress.eslashKerakKalitlar.length,
+                      delay: const Duration(milliseconds: 160),
+                      child: Row(
+                        children: [
+                          Text(
+                            "Bo'limlar",
+                            style: Theme.of(context).textTheme.titleLarge
+                                ?.copyWith(
+                                  fontWeight: FontWeight.w900,
+                                  color: AppColors.ink,
+                                  letterSpacing: -0.3,
+                                ),
+                          ),
+                          const SizedBox(width: 10),
+                          Container(
+                            width: 6,
+                            height: 6,
+                            decoration: const BoxDecoration(
+                              color: AppColors.gold,
+                              shape: BoxShape.circle,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                  ],
-                  const SizedBox(height: 12),
-                  const Reveal(
-                    delay: Duration(milliseconds: 122),
-                    child: _BugungiSoz(),
-                  ),
-                  if (progress.qiyinKalitlar.isNotEmpty) ...[
-                    const SizedBox(height: 12),
-                    Reveal(
-                      delay: const Duration(milliseconds: 120),
-                      child: _QiyinBanner(soni: progress.qiyinKalitlar.length),
-                    ),
-                  ],
-                  const SizedBox(height: 26),
-                  Reveal(
-                    delay: const Duration(milliseconds: 160),
-                    child: Row(
+                    const SizedBox(height: 14),
+                    Stagger(
+                      start: const Duration(milliseconds: 220),
+                      step: const Duration(milliseconds: 85),
                       children: [
-                        Text(
-                          "Bo'limlar",
-                          style: Theme.of(context).textTheme.titleLarge
-                              ?.copyWith(
-                                fontWeight: FontWeight.w900,
-                                color: AppColors.ink,
-                                letterSpacing: -0.3,
-                              ),
+                        _ModuleCard(
+                          foiz: _foiz([
+                            'letter_test',
+                            'harakat_test',
+                            'ulash_1',
+                          ]),
+                          title: 'Alifbo (Harflar)',
+                          subtitle:
+                              'Harf va talaffuz: 28 harf, maxraj, harakatlar',
+                          arabic: 'أ ب ت',
+                          accent: AppColors.emerald,
+                          onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => const AlifboHome(),
+                            ),
+                          ),
                         ),
-                        const SizedBox(width: 10),
-                        Container(
-                          width: 6,
-                          height: 6,
-                          decoration: const BoxDecoration(
-                            color: AppColors.gold,
-                            shape: BoxShape.circle,
+                        const SizedBox(height: 14),
+                        _ModuleCard(
+                          foiz: _foiz([
+                            for (final l in repo.qiroatLessons) l.completionId,
+                          ]),
+                          title: 'Mabdaul qiroat',
+                          subtitle: "O'qish asosi — 1, 2 va 3-kitob (169 dars)",
+                          arabic: 'اِقْرَأْ',
+                          accent: AppColors.teal,
+                          onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => const QiroatBooksHome(),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 14),
+                        _ModuleCard(
+                          title: 'Mashqlar',
+                          subtitle:
+                              "Qiyin so'zlarim, lug'at testi, so'z yasash",
+                          arabic: 'تَمَارِين',
+                          accent: AppColors.amber,
+                          onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => const MashqlarHome(),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 14),
+                        _ModuleCard(
+                          foiz: _foiz([
+                            for (final l in repo.nahvLessons)
+                              'nahv-${l.book}-${l.num}',
+                          ]),
+                          title: 'Nahv',
+                          subtitle:
+                              "Jumla tuzilishi — «الدروس النحوية» kitobidan",
+                          arabic: 'نَحْو',
+                          accent: AppColors.coral,
+                          onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (_) => const NahvHome()),
+                          ),
+                        ),
+                        const SizedBox(height: 14),
+                        _ModuleCard(
+                          foiz: _foiz([
+                            for (final l in repo.sarfLessons) l.completionId,
+                          ]),
+                          title: 'Sarf',
+                          subtitle:
+                              "So'z tuzilishi — vazn, tasrif, fe'l boblari",
+                          arabic: 'صَرْف',
+                          accent: AppColors.indigo,
+                          onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (_) => const SarfHome()),
                           ),
                         ),
                       ],
                     ),
-                  ),
-                  const SizedBox(height: 14),
-                  Stagger(
-                    start: const Duration(milliseconds: 220),
-                    step: const Duration(milliseconds: 85),
-                    children: [
-                      _ModuleCard(
-                        title: 'Alifbo (Harflar)',
-                        subtitle:
-                            'Harf va talaffuz: 28 harf, maxraj, harakatlar',
-                        arabic: 'أ ب ت',
-                        accent: AppColors.emerald,
-                        onTap: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (_) => const AlifboHome()),
-                        ),
-                      ),
-                      const SizedBox(height: 14),
-                      _ModuleCard(
-                        title: 'Mabdaul qiroat',
-                        subtitle: "O'qish asosi — 1, 2 va 3-kitob (169 dars)",
-                        arabic: 'اِقْرَأْ',
-                        accent: AppColors.teal,
-                        onTap: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (_) => const QiroatBooksHome(),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 14),
-                      _ModuleCard(
-                        title: 'Mashqlar',
-                        subtitle: "Qiyin so'zlarim, lug'at testi, so'z yasash",
-                        arabic: 'تَمَارِين',
-                        accent: AppColors.amber,
-                        onTap: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (_) => const MashqlarHome(),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 14),
-                      _ModuleCard(
-                        title: 'Nahv',
-                        subtitle:
-                            "Jumla tuzilishi — «الدروس النحوية» kitobidan",
-                        arabic: 'نَحْو',
-                        accent: AppColors.coral,
-                        onTap: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (_) => const NahvHome()),
-                        ),
-                      ),
-                      const SizedBox(height: 14),
-                      _ModuleCard(
-                        title: 'Sarf',
-                        subtitle: "So'z tuzilishi — vazn, tasrif, fe'l boblari",
-                        arabic: 'صَرْف',
-                        accent: AppColors.indigo,
-                        onTap: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (_) => const SarfHome()),
-                        ),
+                    // Saytda ochganlar uchun: ko'pchilik ilovani telefonga
+                    // o'rnatmoqchi, lekin APK'ni qayerdan olishni bilmaydi.
+                    if (kIsWeb) ...[
+                      const SizedBox(height: 22),
+                      const Reveal(
+                        delay: Duration(milliseconds: 700),
+                        child: _ApkBanner(),
                       ),
                     ],
-                  ),
-                  // Saytda ochganlar uchun: ko'pchilik ilovani telefonga
-                  // o'rnatmoqchi, lekin APK'ni qayerdan olishni bilmaydi.
-                  if (kIsWeb) ...[
-                    const SizedBox(height: 22),
-                    const Reveal(
-                      delay: Duration(milliseconds: 700),
-                      child: _ApkBanner(),
-                    ),
                   ],
-                ],
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
+  }
+
+  /// Ro'yxatdagi darslardan qanchasi o'zlashtirilgan (0..1).
+  double? _foiz(List<String> idlar) {
+    if (idlar.isEmpty) return null;
+    final n = idlar.where(progress.isMastered).length;
+    return n / idlar.length;
   }
 }
 
@@ -246,6 +277,7 @@ class _Hero extends StatelessWidget {
               const Positioned.fill(
                 child: GirihPattern(opacity: 0.07, cell: 52),
               ),
+              const Positioned.fill(child: SuzuvchiHarflar()),
               // Orqa fondagi xira xattotlik — chuqurlik beradi.
               Positioned(
                 right: -6,
@@ -1155,12 +1187,16 @@ class _ModuleCard extends StatelessWidget {
   final Color accent;
   final VoidCallback? onTap;
 
+  /// Modulda o'zlashtirilgan darslar ulushi (0..1); `null` — halqasiz.
+  final double? foiz;
+
   const _ModuleCard({
     required this.title,
     required this.subtitle,
     required this.arabic,
     required this.accent,
     this.onTap,
+    this.foiz,
   });
 
   @override
@@ -1247,6 +1283,10 @@ class _ModuleCard extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 6),
+                  if (foiz != null && foiz! > 0) ...[
+                    TaraqqiyotHalqasi(foiz: foiz!, rang: accent, size: 42),
+                    const SizedBox(width: 8),
+                  ],
                   Container(
                     width: 34,
                     height: 34,

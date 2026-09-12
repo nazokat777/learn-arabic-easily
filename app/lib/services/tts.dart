@@ -1,9 +1,11 @@
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart' show Icons;
 import 'package:flutter_tts/flutter_tts.dart';
 
 import 'vocab_audio.dart';
+import 'xabar.dart';
 
 /// Arabcha talaffuz uchun audio xizmati (matndan-nutqqa).
 /// Brauzer (web) va mobil qurilma TTS'idan foydalanadi — audio fayllar shart emas.
@@ -69,10 +71,22 @@ class Tts {
         return;
       }
       speakingId.value = null; // ijro bo'lmadi — TTS'ga qaytamiz
+      // Klip bor edi, lekin ijro bo'lmadi (tarmoq, plagin). Jim o'tmaydi:
+      // foydalanuvchi sababni va nima qilishni biladi.
+      xabarBer(
+        "Ovoz yuklanmadi — internetni tekshirib, yana bosing.",
+        ikon: Icons.volume_off_rounded,
+      );
     }
 
     if (!_ready) await _ensure(); // odatda init() tufayli bu yerga tushmaydi
-    if (!_available) return;
+    if (!_available) {
+      xabarBer(
+        "Bu qurilmada arabcha ovoz yo'q. Tayyor ovozli so'zlar baribir eshitiladi.",
+        ikon: Icons.volume_off_rounded,
+      );
+      return;
+    }
     speakingId.value = id ?? clean;
     try {
       // stop() ni KUTMAYMIZ: bosish oynasidan chiqib ketmaslik uchun.
@@ -81,6 +95,10 @@ class Tts {
       await _tts.speak(clean);
     } catch (_) {
       speakingId.value = null;
+      xabarBer(
+        "Ovoz ijro etilmadi — yana bir bor bosib ko'ring.",
+        ikon: Icons.volume_off_rounded,
+      );
     }
   }
 

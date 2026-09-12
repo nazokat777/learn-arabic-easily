@@ -17,5 +17,19 @@ if (window.caches && caches.keys) {
     .catch(function () {});
 }
 
+function holat(m) { if (window.pardaHolat) window.pardaHolat(m); }
+
 // serviceWorker sozlamasisiz chaqirilsa, Flutter SW ro'yxatdan o'tkazmaydi.
-_flutter.loader.load();
+// CanvasKit saytning o'zidan olinadi (gstatic CDN'ga bog'liq emas — ba'zi
+// tarmoqlarda u sekin yoki yopiq). Har bosqichda parda matni yangilanadi.
+holat('Ilova yuklanmoqda…');
+_flutter.loader.load({
+  onEntrypointLoaded: async function (engineInitializer) {
+    holat('Chizish dvigateli tayyorlanmoqda…');
+    var appRunner = await engineInitializer.initializeEngine({
+      canvasKitBaseUrl: 'canvaskit/'
+    });
+    holat('Darslar yuklanmoqda…');
+    await appRunner.runApp();
+  }
+});

@@ -68,16 +68,43 @@
   <div id="parda">
     <div class="halqa"><div class="harf">ع</div></div>
     <div class="nom">Arab tilini oson o'rganamiz</div>
-    <div class="izoh">Yuklanmoqda…</div>
+    <div class="izoh" id="parda-izoh">Yuklanmoqda…</div>
+    <div class="izoh" id="parda-sekin" style="display:none;max-width:280px;line-height:1.4">Internet sekin — birinchi ochilish uzoqroq, keyingi safar tez ochiladi.</div>
+    <button id="parda-qayta" style="display:none;margin-top:14px;padding:10px 18px;border:0;border-radius:12px;background:#D4A537;color:#0B1A17;font-weight:800;font-size:14px;cursor:pointer">Qayta yuklash</button>
   </div>
   <script>
     // Flutter birinchi kadrni chizgach parda eriydi; ehtiyot uchun 20 s dan
     // keyin ham olib tashlanadi (hodisa kelmasa ilova qulflanib qolmasin).
     (function () {
       var p = document.getElementById('parda');
-      function ket() { if (!p) return; p.classList.add('ketdi'); setTimeout(function(){ p && p.remove(); p = null; }, 600); }
+      var tayyor = false;
+      // Bosqich matni: flutter_bootstrap.js shu funksiyani chaqiradi —
+      // foydalanuvchi «nima bo'layotganini» ko'radi (yuklanish → dvigatel → darslar).
+      window.pardaHolat = function (matn) {
+        var e = document.getElementById('parda-izoh');
+        if (e) e.textContent = matn;
+      };
+      function ket() {
+        tayyor = true;
+        if (!p) return;
+        p.classList.add('ketdi');
+        setTimeout(function(){ p && p.remove(); p = null; }, 600);
+      }
       window.addEventListener('flutter-first-frame', ket);
-      setTimeout(ket, 20000);
+      // 8 s dan keyin sekin internet ishorasi — chiqib ketmasin.
+      setTimeout(function () {
+        if (tayyor) return;
+        var s = document.getElementById('parda-sekin');
+        if (s) s.style.display = 'block';
+      }, 8000);
+      // 40 s dan keyin ham kadr yo'q — bo'sh oq ekran o'rniga aniq xabar
+      // va qayta yuklash tugmasi.
+      setTimeout(function () {
+        if (tayyor) return;
+        window.pardaHolat('Yuklanmadi. Internetni tekshirib, qayta urinib ko\'ring.');
+        var b = document.getElementById('parda-qayta');
+        if (b) { b.style.display = 'inline-block'; b.onclick = function () { location.reload(); }; }
+      }, 40000);
     })();
   </script>
   <script src="flutter_bootstrap.js" async></script>

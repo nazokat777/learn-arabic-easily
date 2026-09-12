@@ -18,6 +18,18 @@ class Kirish {
 
   static const _kalit = 'kirishKodi';
 
+  /// Kirish ekranidagi aloqa havolasi (kirish.json → «aloqa»); bo'sh bo'lishi mumkin.
+  static Future<String> aloqaniOqi() async {
+    try {
+      final d = json.decode(
+        await rootBundle.loadString('assets/content/kirish.json'),
+      );
+      return ((d as Map)['aloqa'] as String? ?? '').trim();
+    } catch (_) {
+      return '';
+    }
+  }
+
   /// Kontentdagi kod; bo'sh bo'lsa darvoza yo'q.
   static Future<String> kodniOqi() async {
     try {

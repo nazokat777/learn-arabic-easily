@@ -28,12 +28,19 @@ void main() {
     }
   }
 
-  for (final nom in const ['Alifbo (Harflar)', 'Mabdaul qiroat', 'Nahv', 'Sarf']) {
+  for (final nom in const [
+    'Alifbo (Harflar)',
+    'Mabdaul qiroat',
+    'Nahv',
+    'Sarf',
+  ]) {
     testWidgets('«$nom» kartochkasi bosiladi', (tester) async {
       await ochish(tester);
 
-      final karta = find.text(nom);
-      expect(karta, findsOneWidget, reason: 'kartochka ko\'rinmadi');
+      final karta = find
+          .text(nom)
+          .last; // tez yo'l chipi ham bor, karta keyin keladi
+      expect(find.text(nom), findsWidgets, reason: 'kartochka ko\'rinmadi');
 
       await tester.ensureVisible(karta);
       await tester.pump(const Duration(milliseconds: 300));

@@ -31,7 +31,7 @@ class AppColors {
   static Color matn2 = Colors.black54;
 
   /// Uchinchi darajali matn — izoh, yorliq (yorug'da black45).
-  static Color matn3 = Colors.black45;
+  static Color matn3 = const Color(0x99000000);
 
   /// Hoshiya, ajratgich (yorug'da black26).
   static Color chiziq = Colors.black26;
@@ -62,7 +62,7 @@ class AppColors {
       karta = const Color(0xFF14231F);
       ink = const Color(0xFFEEE8D9);
       matn2 = const Color(0xB3EEE8D9);
-      matn3 = const Color(0x8CEEE8D9);
+      matn3 = const Color(0xA6EEE8D9);
       chiziq = const Color(0x38FFFFFF);
       chiziq2 = const Color(0x1FFFFFFF);
       softGreen = const Color(0xFF1C332C);
@@ -72,7 +72,7 @@ class AppColors {
       karta = Colors.white;
       ink = _yorugInk;
       matn2 = Colors.black54;
-      matn3 = Colors.black45;
+      matn3 = const Color(0x99000000);
       chiziq = Colors.black26;
       chiziq2 = Colors.black12;
       softGreen = _yorugSoftGreen;

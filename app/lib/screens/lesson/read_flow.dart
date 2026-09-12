@@ -409,6 +409,7 @@ class _ReadStageState extends State<ReadStage> {
                     Row(
                       children: [
                         IconButton(
+                          tooltip: 'Tinglash',
                           onPressed: () =>
                               Tts.instance.speak(_sentences[i], id: 'read$i'),
                           icon: const Icon(
@@ -428,7 +429,7 @@ class _ReadStageState extends State<ReadStage> {
                             size: 20,
                           ),
                           label: Text(
-                            done ? 'Tushundim' : 'Tushundim',
+                            done ? 'Tushunildi' : 'Tushundim',
                             style: TextStyle(
                               color: done ? AppColors.success : AppColors.matn2,
                               fontWeight: FontWeight.w700,

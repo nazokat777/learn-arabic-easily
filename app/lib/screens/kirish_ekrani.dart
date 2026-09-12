@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart' hide Text;
 
 import '../services/kirish.dart';
+import 'package:url_launcher/url_launcher.dart';
+
 import '../theme.dart';
 import '../widgets/motion.dart';
 import '../widgets/ornament.dart';
@@ -11,6 +13,32 @@ import '../widgets/uz_text.dart';
 /// Sokin va qisqa: bitta maydon, bitta tugma. Xato kodda maydon
 /// silkinadi va izoh chiqadi; to'g'risida darrov ilova ochiladi va
 /// keyingi safar so'ralmaydi.
+/// «Bog'lanish» havolasi — kirish.json'dagi «aloqa» bo'sh bo'lmasa chiqadi.
+class _AloqaHavolasi extends StatelessWidget {
+  const _AloqaHavolasi();
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<String>(
+      future: Kirish.aloqaniOqi(),
+      builder: (context, s) {
+        final url = s.data ?? '';
+        if (url.isEmpty) return const SizedBox.shrink();
+        return TextButton.icon(
+          onPressed: () =>
+              launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication),
+          icon: const Icon(Icons.send_rounded, size: 16),
+          label: const Text(
+            "Bog'lanish",
+            style: TextStyle(fontWeight: FontWeight.w800),
+          ),
+          style: TextButton.styleFrom(foregroundColor: AppColors.emerald),
+        );
+      },
+    );
+  }
+}
+
 class KirishEkrani extends StatefulWidget {
   final String kod;
   final VoidCallback onKirdi;
@@ -111,6 +139,19 @@ class _KirishEkraniState extends State<KirishEkrani> {
                               height: 1.4,
                             ),
                           ),
+                          const SizedBox(height: 6),
+                          // Kod qayerdan olinishi shu yerda aytiladi — yangi
+                          // kursdosh yopiq eshik oldida qolib ketmasin.
+                          Text(
+                            "Kodni ustozingizdan yoki kurs guruhidan so'rang.",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: AppColors.matn3,
+                              fontSize: 12.5,
+                              height: 1.4,
+                            ),
+                          ),
+                          const _AloqaHavolasi(),
                           const SizedBox(height: 18),
                           const OrnamentDivider(),
                           const SizedBox(height: 18),
@@ -132,7 +173,7 @@ class _KirishEkraniState extends State<KirishEkrani> {
                               decoration: InputDecoration(
                                 hintText: 'Kirish kodi',
                                 errorText: _xato
-                                    ? "Kod noto'g'ri. Kursdoshingizdan so'rang."
+                                    ? "Kod noto'g'ri. Kodni ustozingiz yoki kurs guruhidan oling."
                                     : null,
                                 filled: true,
                                 fillColor: AppColors.cream,

@@ -102,8 +102,8 @@ class _GrammarTableState extends State<GrammarTable> {
           ),
           style: TextButton.styleFrom(
             foregroundColor: AppColors.indigo,
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-            visualDensity: VisualDensity.compact,
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+            minimumSize: const Size(44, 40),
           ),
         ),
       ],

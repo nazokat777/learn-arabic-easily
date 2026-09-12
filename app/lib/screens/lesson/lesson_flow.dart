@@ -205,7 +205,7 @@ class _LessonFlowState extends State<LessonFlow> {
         Text(
           label,
           style: TextStyle(
-            fontSize: 10.5,
+            fontSize: 11.5,
             fontWeight: current ? FontWeight.w800 : FontWeight.w600,
             color: active ? AppColors.zumradMatn : AppColors.matn3,
           ),

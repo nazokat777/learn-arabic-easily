@@ -1,4 +1,5 @@
-import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:flutter/foundation.dart'
+    show kIsWeb, defaultTargetPlatform, TargetPlatform;
 import 'package:flutter/material.dart' hide Text;
 import '../widgets/uz_text.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -58,7 +59,14 @@ class HomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.fromLTRB(20, 22, 20, 36),
                   children: [
                     const Reveal(child: _Hero()),
-                    const SizedBox(height: 16),
+                    const SizedBox(height: 12),
+                    // Bo'limlarga tez yo'l — asosiy navigatsiya birinchi
+                    // ekranda; to'liq kartalar pastda qoladi.
+                    const Reveal(
+                      delay: Duration(milliseconds: 60),
+                      child: _TezYol(),
+                    ),
+                    const SizedBox(height: 12),
                     const Reveal(
                       delay: Duration(milliseconds: 90),
                       child: _XpPanel(),
@@ -221,7 +229,10 @@ class HomeScreen extends StatelessWidget {
                     ),
                     // Saytda ochganlar uchun: ko'pchilik ilovani telefonga
                     // o'rnatmoqchi, lekin APK'ni qayerdan olishni bilmaydi.
-                    if (kIsWeb) ...[
+                    // Faqat Android brauzerida: iPhone yoki kompyuterda
+                    // APK taklifi chalg'itadi.
+                    if (kIsWeb &&
+                        defaultTargetPlatform == TargetPlatform.android) ...[
                       const SizedBox(height: 22),
                       const Reveal(
                         delay: Duration(milliseconds: 700),
@@ -393,6 +404,8 @@ class _Hero extends StatelessWidget {
                                   '${progress.levelName} · '
                                   '${progress.level}-daraja',
                               color: AppColors.gold,
+                              izoh: 'Daraja haqida',
+                              onTap: () => _darajaIzohi(context),
                             ),
                             _Chip(
                               belgi: Olov(
@@ -534,14 +547,118 @@ String _salom() {
   return 'Xayrli kech';
 }
 
+/// Daraja zinapoyasi izohi — «Kumush + · 4-daraja» nima ekanini bir
+/// bosishda tushuntiradi (atama izohsiz qolmasin).
+Future<void> _darajaIzohi(BuildContext context) {
+  final p = progress;
+  return showModalBottomSheet<void>(
+    context: context,
+    backgroundColor: AppColors.karta,
+    shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(top: Radius.circular(26)),
+    ),
+    builder: (context) => Padding(
+      padding: const EdgeInsets.fromLTRB(22, 18, 22, 28),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              const Icon(
+                Icons.workspace_premium_rounded,
+                color: AppColors.gold,
+              ),
+              const SizedBox(width: 8),
+              Text(
+                'Darajalar qanday ishlaydi',
+                style: TextStyle(
+                  fontWeight: FontWeight.w900,
+                  fontSize: 17,
+                  color: AppColors.ink,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Text(
+            "Har to'g'ri javob ball beradi. Har 100 ball — keyingi daraja. "
+            "Hozir: ${p.levelName} (${p.level}-daraja), keyingisigacha "
+            "${100 - p.xpInLevel} ball.",
+            style: TextStyle(color: AppColors.matn2, height: 1.45),
+          ),
+          const SizedBox(height: 14),
+          Wrap(
+            spacing: 6,
+            runSpacing: 6,
+            children: [
+              for (final (i, nom) in Progress.levelNames.indexed)
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 5,
+                  ),
+                  decoration: BoxDecoration(
+                    color: i + 1 == p.level
+                        ? AppColors.gold
+                        : (i + 1 < p.level
+                              ? AppColors.gold.withValues(alpha: 0.25)
+                              : AppColors.softGreen),
+                    borderRadius: BorderRadius.circular(999),
+                  ),
+                  child: Text(
+                    '${i + 1}. $nom',
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w800,
+                      color: i + 1 == p.level ? Colors.white : AppColors.ink,
+                    ),
+                  ),
+                ),
+            ],
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
 class _Chip extends StatelessWidget {
   final String text;
   final Color color;
   final Widget? belgi;
-  const _Chip({required this.text, required this.color, this.belgi});
+
+  /// Bosilganda nima bo'lishi (ixtiyoriy) va ekran o'quvchi uchun izoh.
+  final VoidCallback? onTap;
+  final String? izoh;
+  const _Chip({
+    required this.text,
+    required this.color,
+    this.belgi,
+    this.onTap,
+    this.izoh,
+  });
 
   @override
   Widget build(BuildContext context) {
+    final chip = _korinish();
+    if (onTap == null) return chip;
+    return Semantics(
+      button: true,
+      label: izoh ?? text,
+      child: Material(
+        color: Colors.transparent,
+        borderRadius: BorderRadius.circular(999),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(999),
+          onTap: onTap,
+          child: chip,
+        ),
+      ),
+    );
+  }
+
+  Widget _korinish() {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 6),
       decoration: BoxDecoration(
@@ -571,6 +688,82 @@ class _Chip extends StatelessWidget {
 }
 
 /// XP paneli — raqam yugurib o'sadi, chiziq silliq to'ladi.
+/// Bo'limlarga tez yo'l — gorizontal chip qatori. Bo'limlar sahifaning
+/// eng pastida edi (3-4 ekran pastda); yangi foydalanuvchi «qayerdan
+/// boshlayman» deb qidirardi. Endi bir qarashda va bir bosishda.
+class _TezYol extends StatelessWidget {
+  const _TezYol();
+
+  @override
+  Widget build(BuildContext context) {
+    final bolimlar = <(String, String, Color, Widget Function())>[
+      ('Alifbo', 'أ', AppColors.emerald, () => const AlifboHome()),
+      ('Qiroat', 'اِقْرَأْ', AppColors.teal, () => const QiroatBooksHome()),
+      ('Mashqlar', 'تَمَارِين', AppColors.amber, () => const MashqlarHome()),
+      ('Nahv', 'نَحْو', AppColors.coral, () => const NahvHome()),
+      ('Sarf', 'صَرْف', AppColors.indigo, () => const SarfHome()),
+    ];
+    return SizedBox(
+      height: 44,
+      child: ListView.separated(
+        scrollDirection: Axis.horizontal,
+        padding: const EdgeInsets.symmetric(horizontal: 2),
+        itemCount: bolimlar.length,
+        separatorBuilder: (_, _) => const SizedBox(width: 8),
+        itemBuilder: (context, i) {
+          final (nom, arab, rang, ekran) = bolimlar[i];
+          return Semantics(
+            button: true,
+            label: '$nom bo\'limi',
+            child: Tactile(
+              child: Material(
+                color: AppColors.karta,
+                borderRadius: BorderRadius.circular(999),
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(999),
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => ekran()),
+                  ),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 14),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(999),
+                      border: Border.all(color: rang.withValues(alpha: 0.45)),
+                    ),
+                    child: Row(
+                      children: [
+                        Text(
+                          arab,
+                          textDirection: TextDirection.rtl,
+                          style: AppTheme.arabic(
+                            size: 16,
+                            color: rang,
+                            w: FontWeight.w700,
+                          ),
+                        ),
+                        const SizedBox(width: 7),
+                        Text(
+                          nom,
+                          style: TextStyle(
+                            fontWeight: FontWeight.w800,
+                            fontSize: 13,
+                            color: AppColors.ink,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
+
 class _XpPanel extends StatelessWidget {
   const _XpPanel();
 
@@ -762,7 +955,7 @@ class _BugungiNatija extends StatelessWidget {
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
-                            fontSize: 10,
+                            fontSize: 11.5,
                             fontWeight: FontWeight.w600,
                             color: AppColors.matn2,
                             height: 1.1,
@@ -850,7 +1043,7 @@ class _Hafta extends StatelessWidget {
             child: Text(
               '$savol',
               style: TextStyle(
-                fontSize: 10.5,
+                fontSize: 11.5,
                 fontWeight: FontWeight.w900,
                 color: bugunmi ? AppColors.coral : AppColors.success,
               ),
@@ -999,7 +1192,7 @@ class _Statistika extends StatelessWidget {
                         textAlign: TextAlign.center,
                         maxLines: 2,
                         style: TextStyle(
-                          fontSize: 10.5,
+                          fontSize: 11.5,
                           color: AppColors.matn2,
                           fontWeight: FontWeight.w600,
                           height: 1.15,
@@ -1192,6 +1385,7 @@ class _BugungiSozState extends State<_BugungiSoz> {
             ),
           ),
           IconButton(
+            tooltip: 'Tinglash',
             onPressed: () => Tts.instance.speak(e.ovoz, id: e.kalit),
             icon: const Icon(Icons.volume_up_rounded, color: AppColors.emerald),
           ),
@@ -1609,7 +1803,7 @@ class _ApkBanner extends StatelessWidget {
                       ),
                       SizedBox(height: 2),
                       Text(
-                        'Android uchun APK — brauzersiz ishlatasiz',
+                        'Android · APK, 42 MB — brauzersiz ishlatasiz',
                         style: TextStyle(color: AppColors.matn2, fontSize: 13),
                       ),
                     ],

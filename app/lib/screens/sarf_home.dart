@@ -169,9 +169,8 @@ class _SarfLessonScreenState extends State<SarfLessonScreen> {
   /// Kitob mazmuni o'zgarmaydi — faqat ko'rsatish tartibi.
   bool _tarjimaYashirin = false;
 
-  int get _tarjimaliMisollar => lesson.blocks
-      .where((b) => b.type == 'misol' && b.uz.isNotEmpty)
-      .length;
+  int get _tarjimaliMisollar =>
+      lesson.blocks.where((b) => b.type == 'misol' && b.uz.isNotEmpty).length;
 
   Widget _sinashTugmasi() {
     if (_tarjimaliMisollar < 2) return const SizedBox.shrink();
@@ -193,8 +192,8 @@ class _SarfLessonScreenState extends State<SarfLessonScreen> {
         ),
         style: TextButton.styleFrom(
           foregroundColor: AppColors.indigo,
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-          visualDensity: VisualDensity.compact,
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+          minimumSize: const Size(44, 40),
         ),
       ),
     );
@@ -375,10 +374,10 @@ class _ParadigmaState extends State<_Paradigma> {
               style: TextButton.styleFrom(
                 foregroundColor: AppColors.indigo,
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 10,
-                  vertical: 4,
+                  horizontal: 12,
+                  vertical: 10,
                 ),
-                visualDensity: VisualDensity.compact,
+                minimumSize: const Size(44, 40),
               ),
             ),
           ],
@@ -443,7 +442,7 @@ class _ParadigmaState extends State<_Paradigma> {
                       Text(
                         nom,
                         style: TextStyle(
-                          fontSize: 10.5,
+                          fontSize: 11.5,
                           color: AppColors.matn2,
                           fontWeight: FontWeight.w700,
                         ),

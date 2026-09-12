@@ -123,7 +123,11 @@ class NahvHome extends StatelessWidget {
 
   Widget _tile(BuildContext context, NahvLesson l) => PremiumTile(
     title: l.title,
-    subtitle: '${MashqBank.nahvDars(l).length} ta mashq',
+    subtitle: () {
+      final n = MashqBank.nahvDars(l).length;
+      // Bo'sh holat raqam bilan («0 ta mashq») xato kabi ko'rinardi.
+      return n == 0 ? 'Nazariy dars — takror bilan' : '$n ta mashq';
+    }(),
     arabicSubtitle: l.titleAr,
     label: '${l.num}',
     accent: AppColors.coral,
@@ -167,9 +171,7 @@ class _NahvLessonScreenState extends State<NahvLessonScreen> {
     child: TextButton.icon(
       onPressed: () => setState(() => _tarjimaYashirin = !_tarjimaYashirin),
       icon: Icon(
-        _tarjimaYashirin
-            ? Icons.visibility_rounded
-            : Icons.psychology_rounded,
+        _tarjimaYashirin ? Icons.visibility_rounded : Icons.psychology_rounded,
         size: 16,
       ),
       label: Text(
@@ -180,8 +182,8 @@ class _NahvLessonScreenState extends State<NahvLessonScreen> {
       ),
       style: TextButton.styleFrom(
         foregroundColor: AppColors.indigo,
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-        visualDensity: VisualDensity.compact,
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+        minimumSize: const Size(44, 40),
       ),
     ),
   );

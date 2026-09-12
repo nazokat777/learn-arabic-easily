@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'content.dart';
 import 'mavzu.dart';
 import 'progress.dart';
+import 'services/xabar.dart';
 
 import 'services/content_updater.dart';
 import 'services/kirish.dart';
@@ -57,6 +58,7 @@ class ArabApp extends StatelessWidget {
         key: ValueKey(Mavzu.instance.qorongu),
         title: "Arab tilini oson o'rganamiz",
         debugShowCheckedModeBanner: false,
+        scaffoldMessengerKey: xabarKaliti,
         theme: AppTheme.light,
         home: KirishDarvozasi(
           kod: kirishKodi,

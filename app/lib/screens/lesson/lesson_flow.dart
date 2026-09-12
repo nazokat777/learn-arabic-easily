@@ -146,7 +146,7 @@ class _LessonFlowState extends State<LessonFlow> {
                     value: order.indexOf(items[i + 1].$1) <= curIdx ? 1 : 0,
                     height: 4,
                     color: AppColors.emerald,
-                    background: Colors.black12,
+                    background: AppColors.chiziq2,
                     duration: const Duration(milliseconds: 650),
                   ),
                 ),
@@ -178,9 +178,9 @@ class _LessonFlowState extends State<LessonFlow> {
                     colors: [AppColors.emerald, AppColors.emeraldDark],
                   )
                 : null,
-            color: done ? null : Colors.white,
+            color: done ? null : AppColors.karta,
             border: Border.all(
-              color: active ? AppColors.emerald : Colors.black26,
+              color: active ? AppColors.emerald : AppColors.chiziq,
               width: current ? 2.4 : 1.6,
             ),
             boxShadow: current
@@ -198,7 +198,7 @@ class _LessonFlowState extends State<LessonFlow> {
             size: 19,
             color: done
                 ? Colors.white
-                : (current ? AppColors.emerald : Colors.black38),
+                : (current ? AppColors.emerald : AppColors.matn3),
           ),
         ),
         const SizedBox(height: 4),
@@ -207,7 +207,7 @@ class _LessonFlowState extends State<LessonFlow> {
           style: TextStyle(
             fontSize: 10.5,
             fontWeight: current ? FontWeight.w800 : FontWeight.w600,
-            color: active ? AppColors.emeraldDark : Colors.black45,
+            color: active ? AppColors.emeraldDark : AppColors.matn3,
           ),
         ),
       ],
@@ -301,7 +301,7 @@ class _IntroView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Row(
+              Row(
                 children: [
                   Icon(
                     Icons.waving_hand_rounded,
@@ -396,10 +396,7 @@ class _IntroView extends StatelessWidget {
         Icon(e, size: 18, color: AppColors.emerald),
         const SizedBox(width: 10),
         Expanded(
-          child: Text(
-            t,
-            style: const TextStyle(color: AppColors.ink, height: 1.3),
-          ),
+          child: Text(t, style: TextStyle(color: AppColors.ink, height: 1.3)),
         ),
       ],
     ),
@@ -497,7 +494,7 @@ class _DoneView extends StatelessWidget {
                   mastered
                       ? "Dars to'liq o'zlashtirildi"
                       : 'Dars tugadi — endi uni mustahkamlang',
-                  style: const TextStyle(color: Colors.black54, fontSize: 13.5),
+                  style: TextStyle(color: AppColors.matn2, fontSize: 13.5),
                 ),
               ),
               const SizedBox(height: 18),

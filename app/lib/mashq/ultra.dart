@@ -235,7 +235,7 @@ class KomboMarra extends StatelessWidget {
       style: TextStyle(
         fontSize: 11,
         fontWeight: FontWeight.w800,
-        color: qoldi == 1 ? AppColors.coral : Colors.black45,
+        color: qoldi == 1 ? AppColors.coral : AppColors.matn3,
       ),
     );
   }
@@ -275,7 +275,7 @@ Future<void> darajaOynasi(
               padding: const EdgeInsets.fromLTRB(26, 30, 26, 24),
               constraints: const BoxConstraints(maxWidth: 380),
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: AppColors.karta,
                 borderRadius: BorderRadius.circular(28),
               ),
               child: Column(
@@ -293,19 +293,19 @@ Future<void> darajaOynasi(
                     ),
                   ),
                   const SizedBox(height: 18),
-                  const Text(
+                  Text(
                     'Yangi daraja!',
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w800,
-                      color: Colors.black54,
+                      color: AppColors.matn2,
                       letterSpacing: 0.5,
                     ),
                   ),
                   const SizedBox(height: 4),
                   Text(
                     nom,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.w900,
                       color: AppColors.ink,

@@ -53,7 +53,7 @@ class QiroatBooksHome extends StatelessWidget {
                     style: AppTheme.arabic(size: 32, color: AppColors.emerald),
                   ),
                   const SizedBox(width: 14),
-                  const Expanded(
+                  Expanded(
                     child: Text(
                       '«Mabdaul qiroa» (o\'qish asosi). Kitobni tanlang.',
                       style: TextStyle(color: AppColors.ink, height: 1.35),
@@ -154,7 +154,7 @@ class QiroatLessonsList extends StatelessWidget {
         Expanded(
           child: Text(
             '«Mabdaul qiroa» $book-kitob. Har bir darsda o\'qish matni va lug\'at bor.',
-            style: const TextStyle(color: AppColors.ink, height: 1.35),
+            style: TextStyle(color: AppColors.ink, height: 1.35),
           ),
         ),
       ],
@@ -337,7 +337,7 @@ class QiroatLessonDetail extends StatelessWidget {
       const SizedBox(width: 8),
       Text(
         text,
-        style: const TextStyle(
+        style: TextStyle(
           fontWeight: FontWeight.w800,
           fontSize: 16,
           color: AppColors.ink,
@@ -387,7 +387,7 @@ class _ReadingBlockState extends State<_ReadingBlock> {
       width: double.infinity,
       padding: const EdgeInsets.fromLTRB(14, 10, 14, 16),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.karta,
         borderRadius: BorderRadius.circular(18),
         boxShadow: [
           BoxShadow(color: Colors.black.withValues(alpha: 0.04), blurRadius: 8),
@@ -452,7 +452,7 @@ class _VocabRow extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 8),
       padding: const EdgeInsets.fromLTRB(6, 10, 14, 10),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.karta,
         borderRadius: BorderRadius.circular(14),
       ),
       child: Row(
@@ -471,7 +471,7 @@ class _VocabRow extends StatelessWidget {
           Expanded(
             child: Text(
               v.uz,
-              style: const TextStyle(
+              style: TextStyle(
                 color: AppColors.ink,
                 fontWeight: FontWeight.w600,
                 fontSize: 14.5,
@@ -610,7 +610,7 @@ class _BoshqaOyinlarState extends State<_BoshqaOyinlar> {
             "Boshqa o'yinlar",
             style: TextStyle(fontWeight: FontWeight.w700),
           ),
-          style: TextButton.styleFrom(foregroundColor: Colors.black54),
+          style: TextButton.styleFrom(foregroundColor: AppColors.matn2),
         ),
         AnimatedCrossFade(
           duration: const Duration(milliseconds: 280),
@@ -681,7 +681,7 @@ class _FoldBlockState extends State<_FoldBlock> {
                   Expanded(
                     child: Text(
                       widget.title,
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontWeight: FontWeight.w800,
                         color: AppColors.ink,
                       ),
@@ -726,10 +726,7 @@ class _FoldBlockState extends State<_FoldBlock> {
                     )
                   : Text(
                       widget.text,
-                      style: const TextStyle(
-                        color: AppColors.ink,
-                        height: 1.45,
-                      ),
+                      style: TextStyle(color: AppColors.ink, height: 1.45),
                     ),
             ),
         ],

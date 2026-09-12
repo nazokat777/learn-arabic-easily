@@ -45,7 +45,7 @@ class HarfHolatiBolimi extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
+        Text(
           "So'zda qayerda turadi?",
           style: TextStyle(fontWeight: FontWeight.w800, color: AppColors.ink),
         ),
@@ -104,7 +104,7 @@ class _YonalishKarta extends StatelessWidget {
       ),
       child: Column(
         children: [
-          const Text(
+          Text(
             "Arabcha O'NGDAN CHAPGA yoziladi.\n"
             "Shuning uchun so'z BOSHI — o'ng tomonda, OXIRI — chap tomonda.",
             textAlign: TextAlign.center,
@@ -121,13 +121,13 @@ class _YonalishKarta extends StatelessWidget {
           const SizedBox(height: 6),
           Row(
             children: [
-              const Expanded(
+              Expanded(
                 child: Text(
                   '← OXIRI',
                   style: TextStyle(
                     fontWeight: FontWeight.w800,
                     fontSize: 11.5,
-                    color: Colors.black45,
+                    color: AppColors.matn3,
                   ),
                 ),
               ),
@@ -163,11 +163,7 @@ class _Eslatma extends StatelessWidget {
       ),
       child: Text(
         matn,
-        style: const TextStyle(
-          color: AppColors.ink,
-          height: 1.35,
-          fontSize: 12.5,
-        ),
+        style: TextStyle(color: AppColors.ink, height: 1.35, fontSize: 12.5),
       ),
     );
   }
@@ -194,9 +190,9 @@ class _HolatQatori extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: AppColors.karta,
           borderRadius: BorderRadius.circular(14),
-          border: Border.all(color: Colors.black12),
+          border: Border.all(color: AppColors.chiziq2),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -227,7 +223,7 @@ class _HolatQatori extends StatelessWidget {
                     children: [
                       Text(
                         sarlavha,
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontWeight: FontWeight.w800,
                           fontSize: 13.5,
                           color: AppColors.ink,
@@ -235,9 +231,9 @@ class _HolatQatori extends StatelessWidget {
                       ),
                       Text(
                         izoh,
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 11.5,
-                          color: Colors.black45,
+                          color: AppColors.matn3,
                         ),
                       ),
                     ],
@@ -271,10 +267,7 @@ class _HolatQatori extends StatelessWidget {
                   ),
                   Text(
                     misol!.uz,
-                    style: const TextStyle(
-                      color: Colors.black54,
-                      fontSize: 12.5,
-                    ),
+                    style: TextStyle(color: AppColors.matn2, fontSize: 12.5),
                   ),
                 ],
               ),
@@ -322,7 +315,7 @@ class _AjratilganSoz extends StatelessWidget {
                     : AppColors.cream,
                 borderRadius: BorderRadius.circular(8),
                 border: Border.all(
-                  color: i == belgi ? AppColors.gold : Colors.black12,
+                  color: i == belgi ? AppColors.gold : AppColors.chiziq2,
                   width: i == belgi ? 1.6 : 1,
                 ),
               ),

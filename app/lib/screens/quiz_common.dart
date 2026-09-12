@@ -238,22 +238,22 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
           children: [
             Text(
               '$_done / $_total',
-              style: const TextStyle(
-                color: Colors.black45,
+              style: TextStyle(
+                color: AppColors.matn3,
                 fontWeight: FontWeight.w700,
               ),
             ),
             const SizedBox(height: 20),
             Text(
               _q.promptLabel,
-              style: const TextStyle(color: Colors.black54, fontSize: 14),
+              style: TextStyle(color: AppColors.matn2, fontSize: 14),
             ),
             const SizedBox(height: 16),
             Container(
               width: double.infinity,
               padding: const EdgeInsets.symmetric(vertical: 32),
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: AppColors.karta,
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Center(child: _q.prompt),
@@ -314,8 +314,8 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
   }
 
   Widget _option(int i) {
-    Color bg = Colors.white;
-    Color border = Colors.black12;
+    Color bg = AppColors.karta;
+    Color border = AppColors.chiziq2;
     Widget? trailing;
     if (_answered) {
       if (i == _q.correct) {
@@ -371,7 +371,7 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
                               )
                             : Text(
                                 _q.options[i],
-                                style: const TextStyle(
+                                style: TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.w600,
                                   color: AppColors.ink,
@@ -452,7 +452,7 @@ class _ResultDialog extends StatelessWidget {
             Text(
               mastered ? "Mukammal — o'zlashtirildi!" : 'Yaqin qoldi',
               textAlign: TextAlign.center,
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w800,
                 color: AppColors.ink,
@@ -461,7 +461,7 @@ class _ResultDialog extends StatelessWidget {
             const SizedBox(height: 12),
             Text(
               "Birinchi urinishda: $firstTry / $total",
-              style: const TextStyle(fontSize: 16, color: Colors.black54),
+              style: TextStyle(fontSize: 16, color: AppColors.matn2),
             ),
             const SizedBox(height: 6),
             Container(

@@ -152,7 +152,7 @@ class _QiroatMatchGameState extends State<QiroatMatchGame> {
               const SizedBox(height: 8),
               Text(
                 '${_all.length} juft · $_mistakes xato · +$_xp ball',
-                style: const TextStyle(fontSize: 15, color: Colors.black54),
+                style: TextStyle(fontSize: 15, color: AppColors.matn2),
               ),
               const SizedBox(height: 20),
               Row(
@@ -239,7 +239,7 @@ class _QiroatMatchGameState extends State<QiroatMatchGame> {
               _fikr.isEmpty ? 'Arabcha so\'zni ma\'nosi bilan juftlang' : _fikr,
               style: TextStyle(
                 color: _fikr.isEmpty
-                    ? Colors.black54
+                    ? AppColors.matn2
                     : (_wrong ? AppColors.coral : AppColors.success),
                 fontSize: 14,
                 fontWeight: _fikr.isEmpty ? FontWeight.w400 : FontWeight.w800,
@@ -283,8 +283,8 @@ class _QiroatMatchGameState extends State<QiroatMatchGame> {
     final selected = isLeft ? _selLeft == idx : _selRight == idx;
     final done = _matched.contains(word);
 
-    Color bg = Colors.white;
-    Color border = Colors.black12;
+    Color bg = AppColors.karta;
+    Color border = AppColors.chiziq2;
     if (done) {
       bg = AppColors.success.withValues(alpha: 0.12);
       border = AppColors.success.withValues(alpha: 0.5);
@@ -333,7 +333,7 @@ class _QiroatMatchGameState extends State<QiroatMatchGame> {
                   : Text(
                       word.uz,
                       textAlign: TextAlign.center,
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 14.5,
                         fontWeight: FontWeight.w600,
                         color: AppColors.ink,

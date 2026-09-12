@@ -122,7 +122,7 @@ class MasteryCallToAction extends StatelessWidget {
                                 'testni bitta ham xatosiz o\'tish kerak.'
                           : 'Eng yaxshi natijangiz: $best%. Xatosiz '
                                 'o\'tsangiz, dars o\'zlashtirilgan bo\'ladi.',
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 13,
                         height: 1.35,
                         color: AppColors.ink,

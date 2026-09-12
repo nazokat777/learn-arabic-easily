@@ -17,14 +17,14 @@ import '../theme.dart';
 /// 8 uchli yulduz (xatam) tiling — CustomPainter bilan chiziladi,
 /// rasm fayli kerak emas, har o'lchamda tiniq.
 class GirihPattern extends StatelessWidget {
-  final Color color;
+  final Color? color;
   final double opacity;
   final double cell;
   final double strokeWidth;
 
   const GirihPattern({
     super.key,
-    this.color = Colors.white,
+    this.color,
     this.opacity = 0.08,
     this.cell = 56,
     this.strokeWidth = 1.1,
@@ -35,7 +35,7 @@ class GirihPattern extends StatelessWidget {
     return IgnorePointer(
       child: CustomPaint(
         painter: _GirihPainter(
-          color: color.withValues(alpha: opacity),
+          color: (color ?? AppColors.karta).withValues(alpha: opacity),
           cell: cell,
           strokeWidth: strokeWidth,
         ),
@@ -344,7 +344,7 @@ class _GlowRingState extends State<GlowRing>
             height: widget.size * 0.86,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: Colors.white,
+              color: AppColors.karta,
               boxShadow: [
                 BoxShadow(
                   color: widget.color.withValues(alpha: 0.35),

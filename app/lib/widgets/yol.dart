@@ -133,7 +133,7 @@ class _GlowDotState extends State<GlowDot> with SingleTickerProviderStateMixin {
           height: 20,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: Colors.white,
+            color: AppColors.karta,
             border: Border.all(color: widget.rang, width: 3),
             boxShadow: [
               BoxShadow(

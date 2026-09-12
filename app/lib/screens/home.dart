@@ -7,6 +7,7 @@ import '../main.dart';
 import '../progress.dart';
 import '../theme.dart';
 import 'sarf_home.dart';
+import '../mavzu.dart';
 import '../uz_yozuv.dart';
 import '../widgets/motion.dart';
 import '../widgets/olov.dart';
@@ -288,7 +289,7 @@ class _Hero extends StatelessWidget {
                     'اِقْرَأْ',
                     style: AppTheme.arabic(
                       size: 96,
-                      color: Colors.white,
+                      color: AppColors.karta,
                       w: FontWeight.w700,
                     ),
                   ),
@@ -399,6 +400,7 @@ class _Hero extends StatelessWidget {
                                   : AppColors.coral.withValues(alpha: 0.55),
                             ),
                             const _YozuvTugmasi(),
+                            const _MavzuTugmasi(),
                           ],
                         ),
                       ],
@@ -423,6 +425,48 @@ class _Hero extends StatelessWidget {
 /// Nega hero'ning burchagida emas: u yerda `Stack` ning ustki qatlamlari
 /// (oltin nur, sarlavha qatori) bosishni yutib yuborardi — tugma ko'rinib
 /// turib, bosilmasdi. Chiplar qatorida esa hech narsa ustida turmaydi.
+/// Yorug' ↔ qorong'u tugmasi — yozuv tugmasi yonida, xuddi shu shaklda.
+class _MavzuTugmasi extends StatelessWidget {
+  const _MavzuTugmasi();
+
+  @override
+  Widget build(BuildContext context) {
+    final q = Mavzu.instance.qorongu;
+    return Tactile(
+      child: Material(
+        color: Colors.white.withValues(alpha: 0.14),
+        borderRadius: BorderRadius.circular(999),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(999),
+          onTap: Mavzu.instance.almashtir,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(
+                  q ? Icons.light_mode_rounded : Icons.dark_mode_rounded,
+                  size: 15,
+                  color: AppColors.goldLight,
+                ),
+                const SizedBox(width: 5),
+                XomText(
+                  q ? "Yorug'" : "Qorong'u",
+                  style: const TextStyle(
+                    color: AppColors.goldLight,
+                    fontWeight: FontWeight.w800,
+                    fontSize: 12.5,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 class _YozuvTugmasi extends StatelessWidget {
   const _YozuvTugmasi();
 
@@ -513,7 +557,8 @@ class _Chip extends StatelessWidget {
     );
   }
 
-  Color get fg => color == AppColors.gold ? AppColors.goldLight : Colors.white;
+  Color get fg =>
+      color == AppColors.gold ? AppColors.goldLight : AppColors.karta;
 }
 
 /// XP paneli — raqam yugurib o'sadi, chiziq silliq to'ladi.
@@ -525,7 +570,7 @@ class _XpPanel extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.fromLTRB(20, 18, 20, 18),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.karta,
         borderRadius: BorderRadius.circular(24),
         boxShadow: [
           BoxShadow(
@@ -541,11 +586,11 @@ class _XpPanel extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              const Expanded(
+              Expanded(
                 child: Text(
                   'Umumiy ball',
                   style: TextStyle(
-                    color: Colors.black54,
+                    color: AppColors.matn2,
                     fontWeight: FontWeight.w700,
                     fontSize: 13,
                     letterSpacing: 0.3,
@@ -575,7 +620,7 @@ class _XpPanel extends StatelessWidget {
           const SizedBox(height: 8),
           Text(
             'Keyingi darajagacha: ${100 - progress.xpInLevel} ball',
-            style: const TextStyle(color: Colors.black45, fontSize: 12.5),
+            style: TextStyle(color: AppColors.matn3, fontSize: 12.5),
           ),
           const SizedBox(height: 14),
           const _KunlikMaqsad(),
@@ -708,7 +753,7 @@ class _Hafta extends StatelessWidget {
           style: TextStyle(
             fontSize: 11,
             fontWeight: bugunmi ? FontWeight.w900 : FontWeight.w600,
-            color: bugunmi ? AppColors.coral : Colors.black45,
+            color: bugunmi ? AppColors.coral : AppColors.matn3,
           ),
         ),
       ],
@@ -768,7 +813,7 @@ class _Statistika extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.karta,
         borderRadius: BorderRadius.circular(22),
         boxShadow: [
           BoxShadow(
@@ -781,7 +826,7 @@ class _Statistika extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
+          Text(
             'Statistika',
             style: TextStyle(
               fontWeight: FontWeight.w900,
@@ -825,9 +870,9 @@ class _Statistika extends StatelessWidget {
                         nom,
                         textAlign: TextAlign.center,
                         maxLines: 2,
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 10.5,
-                          color: Colors.black54,
+                          color: AppColors.matn2,
                           fontWeight: FontWeight.w600,
                           height: 1.15,
                         ),
@@ -854,7 +899,7 @@ class _EslashKartasi extends StatelessWidget {
   Widget build(BuildContext context) {
     return Tactile(
       child: Material(
-        color: Colors.white,
+        color: AppColors.karta,
         borderRadius: BorderRadius.circular(18),
         child: InkWell(
           borderRadius: BorderRadius.circular(18),
@@ -904,15 +949,18 @@ class _EslashKartasi extends StatelessWidget {
                     children: [
                       Text(
                         'Eslash vaqti keldi: $soni so\'z',
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontWeight: FontWeight.w800,
                           fontSize: 15,
                           color: AppColors.ink,
                         ),
                       ),
-                      const Text(
+                      Text(
                         'Unutilishidan oldin qaytaring — 5 daqiqa yetadi',
-                        style: TextStyle(fontSize: 12.5, color: Colors.black54),
+                        style: TextStyle(
+                          fontSize: 12.5,
+                          color: AppColors.matn2,
+                        ),
                       ),
                     ],
                   ),
@@ -1007,7 +1055,7 @@ class _BugungiSozState extends State<_BugungiSoz> {
                 ),
                 Text(
                   e.uz,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontWeight: FontWeight.w700,
                     color: AppColors.ink,
                   ),
@@ -1123,7 +1171,7 @@ class _QiyinBanner extends StatelessWidget {
   Widget build(BuildContext context) {
     return Tactile(
       child: Material(
-        color: Colors.white,
+        color: AppColors.karta,
         borderRadius: BorderRadius.circular(18),
         child: InkWell(
           borderRadius: BorderRadius.circular(18),
@@ -1158,15 +1206,18 @@ class _QiyinBanner extends StatelessWidget {
                     children: [
                       Text(
                         "Qiyin so'zlarim: $soni ta",
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontWeight: FontWeight.w800,
                           fontSize: 15,
                           color: AppColors.ink,
                         ),
                       ),
-                      const Text(
+                      Text(
                         "3+ marta adashilgan — avval o'rgatiladi, keyin so'raladi",
-                        style: TextStyle(fontSize: 12.5, color: Colors.black54),
+                        style: TextStyle(
+                          fontSize: 12.5,
+                          color: AppColors.matn2,
+                        ),
                       ),
                     ],
                   ),
@@ -1205,7 +1256,11 @@ class _ModuleCard extends StatelessWidget {
     final dark = Color.lerp(accent, Colors.black, 0.28)!;
     final glyph = Text(
       arabic,
-      style: AppTheme.arabic(size: 26, color: Colors.white, w: FontWeight.w700),
+      style: AppTheme.arabic(
+        size: 26,
+        color: AppColors.karta,
+        w: FontWeight.w700,
+      ),
     );
 
     return Tactile(
@@ -1221,7 +1276,7 @@ class _ModuleCard extends StatelessWidget {
           ],
         ),
         child: Material(
-          color: Colors.white,
+          color: AppColors.karta,
           borderRadius: radius,
           child: InkWell(
             borderRadius: radius,
@@ -1260,7 +1315,7 @@ class _ModuleCard extends StatelessWidget {
                             Flexible(
                               child: Text(
                                 title,
-                                style: const TextStyle(
+                                style: TextStyle(
                                   fontWeight: FontWeight.w900,
                                   fontSize: 17,
                                   color: AppColors.ink,
@@ -1273,8 +1328,8 @@ class _ModuleCard extends StatelessWidget {
                         const SizedBox(height: 4),
                         Text(
                           subtitle,
-                          style: const TextStyle(
-                            color: Colors.black54,
+                          style: TextStyle(
+                            color: AppColors.matn2,
                             fontSize: 13,
                             height: 1.3,
                           ),
@@ -1339,7 +1394,7 @@ class _ApkBanner extends StatelessWidget {
                   width: 44,
                   height: 44,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: AppColors.karta,
                     borderRadius: BorderRadius.circular(14),
                   ),
                   child: const Icon(
@@ -1349,7 +1404,7 @@ class _ApkBanner extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 14),
-                const Expanded(
+                Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -1363,7 +1418,7 @@ class _ApkBanner extends StatelessWidget {
                       SizedBox(height: 2),
                       Text(
                         'Android uchun APK — brauzersiz ishlatasiz',
-                        style: TextStyle(color: Colors.black54, fontSize: 13),
+                        style: TextStyle(color: AppColors.matn2, fontSize: 13),
                       ),
                     ],
                   ),

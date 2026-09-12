@@ -182,9 +182,9 @@ class _VocabStageState extends State<VocabStage> {
             children: [
               Text(
                 'So\'zlar guruhi ${_ci + 1} / $total',
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 12.5,
-                  color: Colors.black54,
+                  color: AppColors.matn2,
                   fontWeight: FontWeight.w700,
                 ),
               ),
@@ -220,7 +220,7 @@ class _VocabStageState extends State<VocabStage> {
         children: [
           Text(
             'So\'z ${_li + 1} / ${_chunk.length}',
-            style: const TextStyle(fontSize: 12, color: Colors.black38),
+            style: TextStyle(fontSize: 12, color: AppColors.matn3),
           ),
           const SizedBox(height: 10),
           Expanded(
@@ -235,9 +235,9 @@ class _VocabStageState extends State<VocabStage> {
                     front: _cardFace(
                       head: head,
                       v: v,
-                      body: const Text(
+                      body: Text(
                         "Ma'nosini ko'rish uchun kartani bosing",
-                        style: TextStyle(color: Colors.black38, fontSize: 13),
+                        style: TextStyle(color: AppColors.matn3, fontSize: 13),
                       ),
                     ),
                     back: _cardFace(
@@ -252,7 +252,7 @@ class _VocabStageState extends State<VocabStage> {
                           Text(
                             v.uz,
                             textAlign: TextAlign.center,
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontSize: 24,
                               fontWeight: FontWeight.w900,
                               color: AppColors.ink,
@@ -261,8 +261,8 @@ class _VocabStageState extends State<VocabStage> {
                           const SizedBox(height: 6),
                           Text(
                             '≈ ${approxTranslit(head)}',
-                            style: const TextStyle(
-                              color: Colors.black45,
+                            style: TextStyle(
+                              color: AppColors.matn3,
                               fontStyle: FontStyle.italic,
                             ),
                           ),
@@ -311,7 +311,7 @@ class _VocabStageState extends State<VocabStage> {
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.karta,
         borderRadius: BorderRadius.circular(24),
         border: Border.all(
           color: accent
@@ -409,12 +409,12 @@ class _VocabStageState extends State<VocabStage> {
         children: [
           Text(
             'Mashq ${_pi + 1} / ${_chunk.length}',
-            style: const TextStyle(fontSize: 12, color: Colors.black38),
+            style: TextStyle(fontSize: 12, color: AppColors.matn3),
           ),
           const Spacer(),
-          const Text(
+          Text(
             'Bu so\'z nima degani?',
-            style: TextStyle(color: Colors.black54),
+            style: TextStyle(color: AppColors.matn2),
           ),
           const SizedBox(height: 14),
           SlideSwitch(
@@ -426,7 +426,7 @@ class _VocabStageState extends State<VocabStage> {
                   vertical: 22,
                 ),
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: AppColors.karta,
                   borderRadius: BorderRadius.circular(20),
                   boxShadow: [
                     BoxShadow(
@@ -488,8 +488,8 @@ class _VocabStageState extends State<VocabStage> {
   }
 
   Widget _optTile(int i) {
-    Color border = Colors.black12;
-    Color bg = Colors.white;
+    Color border = AppColors.chiziq2;
+    Color bg = AppColors.karta;
     if (_answered) {
       if (i == _correct) {
         border = AppColors.success;
@@ -528,7 +528,7 @@ class _VocabStageState extends State<VocabStage> {
                     ),
                     child: Text(
                       _opts[i],
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w600,
                         color: AppColors.ink,

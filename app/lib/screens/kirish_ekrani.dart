@@ -66,7 +66,7 @@ class _KirishEkraniState extends State<KirishEkrani> {
                     child: Container(
                       padding: const EdgeInsets.fromLTRB(24, 28, 24, 24),
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: AppColors.karta,
                         borderRadius: BorderRadius.circular(26),
                         boxShadow: [
                           BoxShadow(
@@ -92,7 +92,7 @@ class _KirishEkraniState extends State<KirishEkrani> {
                             ),
                           ),
                           const SizedBox(height: 16),
-                          const Text(
+                          Text(
                             "Arab tilini oson o'rganamiz",
                             textAlign: TextAlign.center,
                             style: TextStyle(
@@ -102,11 +102,14 @@ class _KirishEkraniState extends State<KirishEkrani> {
                             ),
                           ),
                           const SizedBox(height: 6),
-                          const Text(
+                          Text(
                             "Bu sayt o'quv guruhi uchun. Kirish kodini "
                             "kiriting — bir marta so'raladi.",
                             textAlign: TextAlign.center,
-                            style: TextStyle(color: Colors.black54, height: 1.4),
+                            style: TextStyle(
+                              color: AppColors.matn2,
+                              height: 1.4,
+                            ),
                           ),
                           const SizedBox(height: 18),
                           const OrnamentDivider(),

@@ -45,7 +45,7 @@ class NahvHome extends StatelessWidget {
                   style: AppTheme.arabic(size: 30, color: AppColors.emerald),
                 ),
                 const SizedBox(width: 14),
-                const Expanded(
+                Expanded(
                   child: Text(
                     '«الدروس النحوية» — jumla tuzilishi. Kitob arabcha; '
                     'o\'zbekchasi tarjima qilib berilgan.',
@@ -57,9 +57,9 @@ class NahvHome extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           if (lessons.isEmpty)
-            const Text(
+            Text(
               'Darslar hali qo\'shilmagan.',
-              style: TextStyle(color: Colors.black54),
+              style: TextStyle(color: AppColors.matn2),
             )
           else
             // Kitoblar bo'yicha ajratamiz: dars raqamlari har kitobda
@@ -173,9 +173,9 @@ class NahvLessonScreen extends StatelessWidget {
               Center(
                 child: Text(
                   lesson.title,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontWeight: FontWeight.w700,
-                    color: Colors.black54,
+                    color: AppColors.matn2,
                   ),
                 ),
               ),
@@ -344,7 +344,7 @@ class _Bilingual extends StatelessWidget {
             padding: const EdgeInsets.only(left: 26, top: 2),
             child: Text(
               pair.uz,
-              style: const TextStyle(color: Colors.black54, height: 1.35),
+              style: TextStyle(color: AppColors.matn2, height: 1.35),
             ),
           ),
         ],

@@ -23,7 +23,7 @@ class HarakatLesson extends StatelessWidget {
               color: AppColors.softGreen,
               borderRadius: BorderRadius.circular(16),
             ),
-            child: const Text(
+            child: Text(
               'Harakatlar — harf ustidagi yoki ostidagi kichik belgilar. Ular harfning tovushini belgilaydi. Quyida "baa" (ب) harfida ko\'ring:',
               style: TextStyle(color: AppColors.ink, height: 1.35),
             ),
@@ -51,7 +51,7 @@ class HarakatLesson extends StatelessWidget {
     child: Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.karta,
         borderRadius: BorderRadius.circular(18),
       ),
       child: Row(
@@ -82,7 +82,7 @@ class HarakatLesson extends StatelessWidget {
                   children: [
                     Text(
                       h.nameUz,
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontWeight: FontWeight.w800,
                         fontSize: 16,
                         color: AppColors.ink,
@@ -119,8 +119,8 @@ class HarakatLesson extends StatelessWidget {
                 const SizedBox(height: 4),
                 Text(
                   h.descUz,
-                  style: const TextStyle(
-                    color: Colors.black54,
+                  style: TextStyle(
+                    color: AppColors.matn2,
                     fontSize: 13,
                     height: 1.3,
                   ),

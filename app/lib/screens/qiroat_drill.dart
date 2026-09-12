@@ -187,11 +187,7 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
                   ? 'Bu darsning barcha ${_pool.length} so\'zi yodlandi (har biri ${Progress.masteryGoal} marta)! +$_xpEarned ball'
                   : 'Zo\'r! +$_xpEarned ball. Yodlangan: $_learned / ${_pool.length} so\'z.',
               textAlign: TextAlign.center,
-              style: const TextStyle(
-                fontSize: 15,
-                color: AppColors.ink,
-                height: 1.4,
-              ),
+              style: TextStyle(fontSize: 15, color: AppColors.ink, height: 1.4),
             ),
             const SizedBox(height: 28),
             if (!allLearned)
@@ -297,7 +293,7 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
             children: [
               Text(
                 'Yodlangan: $_learned / $total so\'z',
-                style: const TextStyle(fontSize: 12, color: Colors.black45),
+                style: TextStyle(fontSize: 12, color: AppColors.matn3),
               ),
               // Shu so'zning yodlash darajasi (nuqtalar): ●●●○○
               _masteryDots(wordLvl),
@@ -309,14 +305,14 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
           q.arToUz
               ? 'Bu so\'z nima degani?'
               : 'Qaysi so\'z «${q.word.uz}» degani?',
-          style: const TextStyle(fontSize: 14, color: Colors.black54),
+          style: TextStyle(fontSize: 14, color: AppColors.matn2),
         ),
         const SizedBox(height: 16),
         Container(
           margin: const EdgeInsets.symmetric(horizontal: 24),
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: AppColors.karta,
             borderRadius: BorderRadius.circular(20),
             boxShadow: [
               BoxShadow(
@@ -365,7 +361,7 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
           child: Icon(
             on ? Icons.circle : Icons.circle_outlined,
             size: 9,
-            color: on ? AppColors.success : Colors.black26,
+            color: on ? AppColors.success : AppColors.chiziq,
           ),
         );
       }),
@@ -374,8 +370,8 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
 
   Widget _optionTile(_Question q, int i) {
     final isArabic = !q.arToUz;
-    Color border = Colors.black12;
-    Color bg = Colors.white;
+    Color border = AppColors.chiziq2;
+    Color bg = AppColors.karta;
     if (_answered) {
       if (i == q.correct) {
         border = AppColors.success;
@@ -414,7 +410,7 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
                     )
                   : Text(
                       q.options[i],
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w600,
                         color: AppColors.ink,

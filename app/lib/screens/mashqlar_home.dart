@@ -93,7 +93,7 @@ class MashqlarHome extends StatelessWidget {
       color: AppColors.softGreen,
       borderRadius: BorderRadius.circular(16),
     ),
-    child: const Row(
+    child: Row(
       children: [
         Icon(Icons.psychology_rounded, size: 28, color: AppColors.emerald),
         SizedBox(width: 14),

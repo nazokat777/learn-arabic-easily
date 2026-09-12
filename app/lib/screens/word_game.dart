@@ -111,10 +111,7 @@ class _WordGameState extends State<WordGame> {
               ),
               child: Column(
                 children: [
-                  const Text(
-                    'Tuzing:',
-                    style: TextStyle(color: Colors.black54),
-                  ),
+                  Text('Tuzing:', style: TextStyle(color: AppColors.matn2)),
                   const SizedBox(height: 4),
                   Text(
                     '«${_word.uz}»',
@@ -133,11 +130,11 @@ class _WordGameState extends State<WordGame> {
               height: 90,
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: AppColors.karta,
                 borderRadius: BorderRadius.circular(18),
                 border: Border.all(
                   color: _result == null
-                      ? Colors.black12
+                      ? AppColors.chiziq2
                       : _result!
                       ? AppColors.success
                       : AppColors.coral,
@@ -193,7 +190,7 @@ class _WordGameState extends State<WordGame> {
                       width: 64,
                       height: 64,
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: AppColors.karta,
                         borderRadius: BorderRadius.circular(16),
                         border: Border.all(
                           color: AppColors.emerald.withValues(alpha: 0.3),

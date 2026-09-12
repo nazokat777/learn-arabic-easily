@@ -57,7 +57,7 @@ class GrammarTable extends StatelessWidget {
     margin: const EdgeInsets.only(bottom: 8),
     padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
     decoration: BoxDecoration(
-      color: Colors.white,
+      color: AppColors.karta,
       borderRadius: BorderRadius.circular(14),
     ),
     child: Column(
@@ -81,7 +81,7 @@ class GrammarTable extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 8),
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.karta,
         borderRadius: BorderRadius.circular(14),
       ),
       child: Column(
@@ -127,9 +127,9 @@ class GrammarTable extends StatelessWidget {
                           )
                         : Text(
                             r.cells[i],
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontSize: 13,
-                              color: Colors.black54,
+                              color: AppColors.matn2,
                               height: 1.3,
                             ),
                           ),
@@ -140,10 +140,7 @@ class GrammarTable extends StatelessWidget {
                     child: Text(
                       i < table.columns.length ? table.columns[i] : '',
                       textDirection: TextDirection.rtl,
-                      style: const TextStyle(
-                        color: Colors.black45,
-                        fontSize: 11,
-                      ),
+                      style: TextStyle(color: AppColors.matn3, fontSize: 11),
                     ),
                   ),
                 ],
@@ -170,7 +167,7 @@ class GrammarTable extends StatelessWidget {
         Expanded(
           child: Text(
             uz,
-            style: const TextStyle(color: Colors.black54, fontSize: 13),
+            style: TextStyle(color: AppColors.matn2, fontSize: 13),
           ),
         ),
       ],

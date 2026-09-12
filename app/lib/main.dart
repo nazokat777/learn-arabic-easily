@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'content.dart';
+import 'mavzu.dart';
 import 'progress.dart';
 
 import 'services/content_updater.dart';
@@ -23,6 +24,7 @@ Future<void> main() async {
   await repo.load();
   await progress.load();
   await UzYozuv.instance.load(); // lotin yoki kirill
+  await Mavzu.instance.load(); // yorug' yoki qorong'u (palitrani ham o'rnatadi)
   // Ovozni oldindan sozlaymiz — tugma bosilganda kutish bo'lmasin
   // (telefon brauzerlari kutishdan keyingi ovozni bloklaydi).
   await VocabAudio.instance.load(); // tayyor ovozlar ro'yxati
@@ -40,24 +42,27 @@ class ArabApp extends StatelessWidget {
   final String kirishKodi;
   final bool darvozaKerak;
 
-  const ArabApp({
-    super.key,
-    this.kirishKodi = '',
-    this.darvozaKerak = false,
-  });
+  const ArabApp({super.key, this.kirishKodi = '', this.darvozaKerak = false});
 
   @override
   Widget build(BuildContext context) {
     // Diqqat: yozuv almashtirilganda bu yerdan qayta chizish SHART EMAS —
     // har bir matn vidjeti o'zgarishni o'zi tinglaydi (widgets/uz_text.dart).
-    return MaterialApp(
-      title: "Arab tilini oson o'rganamiz",
-      debugShowCheckedModeBanner: false,
-      theme: AppTheme.light,
-      home: KirishDarvozasi(
-        kod: kirishKodi,
-        kerak: darvozaKerak,
-        child: const HomeScreen(),
+    // Mavzu almashganda MaterialApp yangi kalit bilan qayta quriladi —
+    // palitra static maydonlarda, shuning uchun butun daraxt yangidan
+    // o'qishi kerak.
+    return ListenableBuilder(
+      listenable: Mavzu.instance,
+      builder: (context, _) => MaterialApp(
+        key: ValueKey(Mavzu.instance.qorongu),
+        title: "Arab tilini oson o'rganamiz",
+        debugShowCheckedModeBanner: false,
+        theme: AppTheme.light,
+        home: KirishDarvozasi(
+          kod: kirishKodi,
+          kerak: darvozaKerak,
+          child: const HomeScreen(),
+        ),
       ),
     );
   }

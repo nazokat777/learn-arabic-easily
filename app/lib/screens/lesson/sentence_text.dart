@@ -14,7 +14,7 @@ class SentenceText extends StatelessWidget {
   final List<QiroatVocab> vocab; // shu darsning lug'ati (so'z izlash uchun)
   final String reading; // misol jumla uchun
   final double size;
-  final Color color;
+  final Color? color;
 
   const SentenceText({
     super.key,
@@ -22,7 +22,7 @@ class SentenceText extends StatelessWidget {
     required this.vocab,
     required this.reading,
     this.size = 26,
-    this.color = AppColors.ink,
+    this.color,
   });
 
   /// So'zni avval SHU DARS lug'atidan, topilmasa butun ilova lug'atidan
@@ -64,7 +64,10 @@ class SentenceText extends StatelessWidget {
             if (!t.isWord) {
               return TextSpan(
                 text: t.text,
-                style: AppTheme.arabic(size: size, color: color),
+                style: AppTheme.arabic(
+                  size: size,
+                  color: color ?? AppColors.ink,
+                ),
               );
             }
             final topilma = _qidir(t.text);
@@ -72,7 +75,9 @@ class SentenceText extends StatelessWidget {
               text: t.text,
               style: AppTheme.arabic(
                 size: size,
-                color: topilma != null ? AppColors.emeraldDark : color,
+                color: topilma != null
+                    ? AppColors.emeraldDark
+                    : (color ?? AppColors.ink),
                 w: FontWeight.w500,
               ),
               recognizer: TapGestureRecognizer()

@@ -21,7 +21,7 @@ class RasmBelgi extends StatelessWidget {
       width: olcham,
       height: olcham,
       alignment: Alignment.center,
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         color: AppColors.softGreen,
         shape: BoxShape.circle,
       ),

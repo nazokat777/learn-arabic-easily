@@ -145,7 +145,7 @@ class _QuizStageState extends State<QuizStage> {
                 color: AppColors.emerald,
               ),
               const SizedBox(width: 6),
-              const Text(
+              Text(
                 'Savollar',
                 style: TextStyle(
                   fontWeight: FontWeight.w800,
@@ -178,7 +178,7 @@ class _QuizStageState extends State<QuizStage> {
           q.arToUz
               ? 'Bu so\'z nima degani?'
               : 'Qaysi so\'z «${q.word.uz}» degani?',
-          style: const TextStyle(color: Colors.black54),
+          style: TextStyle(color: AppColors.matn2),
         ),
         const SizedBox(height: 14),
         SlideSwitch(
@@ -188,7 +188,7 @@ class _QuizStageState extends State<QuizStage> {
               margin: const EdgeInsets.symmetric(horizontal: 24),
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 22),
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: AppColors.karta,
                 borderRadius: BorderRadius.circular(20),
                 boxShadow: [
                   BoxShadow(
@@ -261,8 +261,8 @@ class _QuizStageState extends State<QuizStage> {
 
   Widget _optTile(_QQ q, int i) {
     final isArabic = !q.arToUz;
-    Color border = Colors.black12;
-    Color bg = Colors.white;
+    Color border = AppColors.chiziq2;
+    Color bg = AppColors.karta;
     if (_answered) {
       if (i == q.correct) {
         border = AppColors.success;
@@ -312,7 +312,7 @@ class _QuizStageState extends State<QuizStage> {
                           )
                         : Text(
                             q.options[i],
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
                               color: AppColors.ink,
@@ -398,7 +398,7 @@ class _ReviewStageState extends State<ReviewStage> {
                 color: AppColors.coral,
               ),
               const SizedBox(width: 6),
-              const Text(
+              Text(
                 'Xatolar ustida ishlash',
                 style: TextStyle(
                   fontWeight: FontWeight.w800,
@@ -432,9 +432,9 @@ class _ReviewStageState extends State<ReviewStage> {
                 flipped: _revealed,
                 front: _face(
                   head,
-                  const Text(
+                  Text(
                     "Ma'nosini eslang, keyin ochish uchun bosing",
-                    style: TextStyle(color: Colors.black38),
+                    style: TextStyle(color: AppColors.matn3),
                   ),
                 ),
                 back: _face(
@@ -445,7 +445,7 @@ class _ReviewStageState extends State<ReviewStage> {
                       Text(
                         v.uz,
                         textAlign: TextAlign.center,
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 22,
                           fontWeight: FontWeight.w800,
                           color: AppColors.ink,
@@ -517,7 +517,7 @@ class _ReviewStageState extends State<ReviewStage> {
       width: double.infinity,
       padding: const EdgeInsets.all(24),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.karta,
         borderRadius: BorderRadius.circular(24),
         border: Border.all(
           color: accent

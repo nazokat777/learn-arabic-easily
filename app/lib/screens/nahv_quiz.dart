@@ -326,7 +326,7 @@ class _NahvQuizState extends State<NahvQuiz> {
                 _ => "Tinglang — ma'nosi qaysi?",
               },
               textAlign: TextAlign.center,
-              style: const TextStyle(color: Colors.black54, fontSize: 14),
+              style: TextStyle(color: AppColors.matn2, fontSize: 14),
             ),
             const SizedBox(height: 14),
             _prompt(q),
@@ -351,7 +351,7 @@ class _NahvQuizState extends State<NahvQuiz> {
       inner = Text(
         q.pair.uz,
         textAlign: TextAlign.center,
-        style: const TextStyle(
+        style: TextStyle(
           fontSize: 17,
           fontWeight: FontWeight.w700,
           color: AppColors.ink,
@@ -378,7 +378,7 @@ class _NahvQuizState extends State<NahvQuiz> {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.karta,
         borderRadius: BorderRadius.circular(18),
       ),
       child: Row(
@@ -398,8 +398,8 @@ class _NahvQuizState extends State<NahvQuiz> {
   }
 
   Widget _option(_NQ q, int i) {
-    Color bg = Colors.white;
-    Color border = Colors.black12;
+    Color bg = AppColors.karta;
+    Color border = AppColors.chiziq2;
     if (_answered) {
       if (i == q.correct) {
         bg = AppColors.success.withValues(alpha: 0.12);
@@ -447,7 +447,7 @@ class _NahvQuizState extends State<NahvQuiz> {
                       )
                     : Text(
                         q.options[i],
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 14.5,
                           fontWeight: FontWeight.w600,
                           color: AppColors.ink,

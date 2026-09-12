@@ -455,10 +455,7 @@ class _MashqEkranState extends State<MashqEkran> {
                   Text(
                     '${_s.raundRaqami}-raund · '
                     '${MashqSessiya.raundHajmi - _s.raunddaSoralgan} ta qoldi',
-                    style: const TextStyle(
-                      fontSize: 11.5,
-                      color: Colors.black45,
-                    ),
+                    style: TextStyle(fontSize: 11.5, color: AppColors.matn3),
                   ),
                 ],
               ),
@@ -539,7 +536,7 @@ class _MashqEkranState extends State<MashqEkran> {
         ichi = Text(
           e.uz,
           textAlign: TextAlign.center,
-          style: const TextStyle(
+          style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w800,
             color: AppColors.ink,
@@ -571,7 +568,7 @@ class _MashqEkranState extends State<MashqEkran> {
             Text(
               e.uz,
               textAlign: TextAlign.center,
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w800,
                 color: AppColors.ink,
@@ -591,7 +588,7 @@ class _MashqEkranState extends State<MashqEkran> {
             Text(
               s.variantlar.first,
               textAlign: TextAlign.center,
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 19,
                 fontWeight: FontWeight.w800,
                 color: AppColors.ink,
@@ -605,7 +602,7 @@ class _MashqEkranState extends State<MashqEkran> {
       children: [
         Text(
           korsatma,
-          style: const TextStyle(color: Colors.black54, fontSize: 13.5),
+          style: TextStyle(color: AppColors.matn2, fontSize: 13.5),
         ),
         const SizedBox(height: 12),
         KomboNur(
@@ -621,7 +618,7 @@ class _MashqEkranState extends State<MashqEkran> {
                   vertical: 22,
                 ),
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: AppColors.karta,
                   borderRadius: BorderRadius.circular(20),
                   boxShadow: [
                     BoxShadow(
@@ -688,7 +685,7 @@ class _MashqEkranState extends State<MashqEkran> {
                 color: bor ? AppColors.softGreen : Colors.transparent,
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(
-                  color: bor ? AppColors.emerald : Colors.black26,
+                  color: bor ? AppColors.emerald : AppColors.chiziq,
                   width: bor ? 1.8 : 1.2,
                 ),
               ),
@@ -717,7 +714,7 @@ class _MashqEkranState extends State<MashqEkran> {
             opacity: ishlatilgan ? 0.25 : 1,
             child: Tactile(
               child: Material(
-                color: Colors.white,
+                color: AppColors.karta,
                 borderRadius: BorderRadius.circular(12),
                 child: InkWell(
                   borderRadius: BorderRadius.circular(12),
@@ -814,7 +811,7 @@ class _MashqEkranState extends State<MashqEkran> {
       trigger: togriBosildi ? _portlash : null,
       child: Tactile(
         child: Material(
-          color: korsat ? rang.withValues(alpha: 0.15) : Colors.white,
+          color: korsat ? rang.withValues(alpha: 0.15) : AppColors.karta,
           borderRadius: BorderRadius.circular(16),
           child: InkWell(
             borderRadius: BorderRadius.circular(16),
@@ -843,8 +840,8 @@ class _MashqEkranState extends State<MashqEkran> {
   }
 
   Widget _variant(MashqSavol s, int i) {
-    Color chegara = Colors.black12;
-    Color fon = Colors.white;
+    Color chegara = AppColors.chiziq2;
+    Color fon = AppColors.karta;
     if (_kutilmoqda && i == _tanlangan) {
       chegara = AppColors.gold;
       fon = AppColors.gold.withValues(alpha: 0.10);
@@ -905,7 +902,7 @@ class _MashqEkranState extends State<MashqEkran> {
                           )
                         : Text(
                             s.variantlar[i],
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
                               color: AppColors.ink,
@@ -1061,7 +1058,7 @@ class _Yakun extends StatelessWidget {
                 child: Text(
                   izoh,
                   textAlign: TextAlign.center,
-                  style: const TextStyle(color: Colors.black54, fontSize: 14),
+                  style: TextStyle(color: AppColors.matn2, fontSize: 14),
                 ),
               ),
               if (engUzunKombo >= 3) ...[
@@ -1281,9 +1278,9 @@ class _ZaifRoyxat extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 4),
-          const Text(
+          Text(
             'Keyingi mashqda aynan shular ko\'proq qaytadi.',
-            style: TextStyle(fontSize: 12.5, color: Colors.black54),
+            style: TextStyle(fontSize: 12.5, color: AppColors.matn2),
           ),
           const SizedBox(height: 10),
           for (final e in zaiflar)
@@ -1303,10 +1300,7 @@ class _ZaifRoyxat extends StatelessWidget {
                   Expanded(
                     child: Text(
                       e.uz,
-                      style: const TextStyle(
-                        color: Colors.black54,
-                        fontSize: 13.5,
-                      ),
+                      style: TextStyle(color: AppColors.matn2, fontSize: 13.5),
                     ),
                   ),
                   Text(

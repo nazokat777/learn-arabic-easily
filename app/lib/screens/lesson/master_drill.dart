@@ -393,11 +393,7 @@ class _MasterDrillState extends State<MasterDrill> {
                   ? 'Bu darsning barcha ${_pool.length} so\'zi 6 xil usulda chuqur yodlandi! +$_xpEarned ball'
                   : 'Yodlangan: $_doneCount / ${_pool.length} so\'z. +$_xpEarned ball',
               textAlign: TextAlign.center,
-              style: const TextStyle(
-                fontSize: 15,
-                color: AppColors.ink,
-                height: 1.4,
-              ),
+              style: TextStyle(fontSize: 15, color: AppColors.ink, height: 1.4),
             ),
             const SizedBox(height: 26),
             if (!all)
@@ -476,7 +472,7 @@ class _MasterDrillState extends State<MasterDrill> {
             children: [
               Text(
                 'Yodlangan: $_doneCount / $total so\'z',
-                style: const TextStyle(fontSize: 12, color: Colors.black45),
+                style: TextStyle(fontSize: 12, color: AppColors.matn3),
               ),
               _modeChip(),
             ],
@@ -487,7 +483,7 @@ class _MasterDrillState extends State<MasterDrill> {
         const Spacer(),
         Text(
           _modeMeta[_mode].$3,
-          style: const TextStyle(fontSize: 14, color: Colors.black54),
+          style: TextStyle(fontSize: 14, color: AppColors.matn2),
         ),
         const SizedBox(height: 14),
         Expanded(flex: 6, child: _modeBody(v)),
@@ -536,14 +532,14 @@ class _MasterDrillState extends State<MasterDrill> {
             decoration: BoxDecoration(
               color: !required
                   ? Colors.transparent
-                  : (done ? AppColors.success : Colors.white),
+                  : (done ? AppColors.success : AppColors.karta),
               shape: BoxShape.circle,
               border: Border.all(
                 color: !required
-                    ? Colors.black12
+                    ? AppColors.chiziq2
                     : (cur
                           ? AppColors.emerald
-                          : (done ? AppColors.success : Colors.black26)),
+                          : (done ? AppColors.success : AppColors.chiziq)),
                 width: cur ? 2 : 1.4,
               ),
             ),
@@ -551,8 +547,8 @@ class _MasterDrillState extends State<MasterDrill> {
               _modeMeta[i].$1,
               size: 13,
               color: !required
-                  ? Colors.black12
-                  : (done ? Colors.white : Colors.black38),
+                  ? AppColors.chiziq2
+                  : (done ? AppColors.karta : AppColors.matn3),
             ),
           );
         }),
@@ -594,7 +590,7 @@ class _MasterDrillState extends State<MasterDrill> {
           margin: const EdgeInsets.symmetric(horizontal: 24),
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 22),
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: AppColors.karta,
             borderRadius: BorderRadius.circular(20),
             boxShadow: [
               BoxShadow(
@@ -626,7 +622,7 @@ class _MasterDrillState extends State<MasterDrill> {
           margin: const EdgeInsets.symmetric(horizontal: 24),
           padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 16),
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: AppColors.karta,
             borderRadius: BorderRadius.circular(18),
             boxShadow: [
               BoxShadow(
@@ -688,16 +684,16 @@ class _MasterDrillState extends State<MasterDrill> {
     children: [
       _bigPlay(_head(v)),
       const SizedBox(height: 8),
-      const Text(
+      Text(
         'Tinglang va ma\'nosini tanlang',
-        style: TextStyle(fontSize: 13, color: Colors.black45),
+        style: TextStyle(fontSize: 13, color: AppColors.matn3),
       ),
     ],
   );
 
   Widget _optTile(int i, bool arabic, {bool grid = false}) {
-    Color border = Colors.black12;
-    Color bg = Colors.white;
+    Color border = AppColors.chiziq2;
+    Color bg = AppColors.karta;
     if (_answered) {
       if (i == _correct) {
         border = AppColors.success;
@@ -724,7 +720,7 @@ class _MasterDrillState extends State<MasterDrill> {
         : Text(
             _options[i],
             textAlign: grid ? TextAlign.center : TextAlign.start,
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w600,
               color: AppColors.ink,
@@ -769,11 +765,11 @@ class _MasterDrillState extends State<MasterDrill> {
           constraints: const BoxConstraints(minHeight: 72),
           padding: const EdgeInsets.all(12),
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: AppColors.karta,
             borderRadius: BorderRadius.circular(16),
             border: Border.all(
               color: _arrangeOk == null
-                  ? Colors.black12
+                  ? AppColors.chiziq2
                   : (_arrangeOk! ? AppColors.success : AppColors.coral),
               width: 1.6,
             ),
@@ -786,9 +782,9 @@ class _MasterDrillState extends State<MasterDrill> {
               runSpacing: 6,
               children: built.isEmpty
                   ? [
-                      const Text(
+                      Text(
                         'Bu yerga tartiblang',
-                        style: TextStyle(color: Colors.black26),
+                        style: TextStyle(color: AppColors.chiziq),
                       ),
                     ]
                   : List.generate(
@@ -810,7 +806,7 @@ class _MasterDrillState extends State<MasterDrill> {
           _mode == 4
               ? 'Harflarni tartib bilan bosing'
               : 'So\'zlarni tartib bilan bosing',
-          style: const TextStyle(fontSize: 12, color: Colors.black38),
+          style: TextStyle(fontSize: 12, color: AppColors.matn3),
         ),
         const SizedBox(height: 8),
         // Tanlanadigan tokenlar

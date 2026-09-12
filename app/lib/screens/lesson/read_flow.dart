@@ -74,7 +74,7 @@ class _ListenStageState extends State<ListenStage> {
                 color: AppColors.emerald,
               ),
               const SizedBox(width: 6),
-              const Text(
+              Text(
                 'Avval tinglang',
                 style: TextStyle(
                   fontWeight: FontWeight.w800,
@@ -111,10 +111,10 @@ class _ListenStageState extends State<ListenStage> {
                 margin: const EdgeInsets.only(bottom: 10),
                 padding: const EdgeInsets.all(14),
                 decoration: BoxDecoration(
-                  color: active ? AppColors.softGreen : Colors.white,
+                  color: active ? AppColors.softGreen : AppColors.karta,
                   borderRadius: BorderRadius.circular(16),
                   border: Border.all(
-                    color: active ? AppColors.emerald : Colors.black12,
+                    color: active ? AppColors.emerald : AppColors.chiziq2,
                     width: active ? 1.6 : 1,
                   ),
                 ),
@@ -245,7 +245,7 @@ class _ReadStageState extends State<ReadStage> {
                     color: AppColors.emerald,
                   ),
                   const SizedBox(width: 6),
-                  const Text(
+                  Text(
                     'O\'qing va tushuning',
                     style: TextStyle(
                       fontWeight: FontWeight.w800,
@@ -273,9 +273,9 @@ class _ReadStageState extends State<ReadStage> {
                 background: AppColors.softGreen,
               ),
               const SizedBox(height: 4),
-              const Text(
+              Text(
                 'So\'zga bosib — ma\'nosini ko\'ring. Jumlani tushunsangiz «Tushundim» ni bosing.',
-                style: TextStyle(fontSize: 11.5, color: Colors.black45),
+                style: TextStyle(fontSize: 11.5, color: AppColors.matn3),
               ),
             ],
           ),
@@ -291,10 +291,10 @@ class _ReadStageState extends State<ReadStage> {
                 margin: const EdgeInsets.only(bottom: 10),
                 padding: const EdgeInsets.fromLTRB(14, 12, 14, 8),
                 decoration: BoxDecoration(
-                  color: done ? const Color(0xFFDDF1E4) : Colors.white,
+                  color: done ? const Color(0xFFDDF1E4) : AppColors.karta,
                   borderRadius: BorderRadius.circular(16),
                   border: Border.all(
-                    color: done ? AppColors.success : Colors.black12,
+                    color: done ? AppColors.success : AppColors.chiziq2,
                     width: done ? 1.4 : 1,
                   ),
                 ),
@@ -326,13 +326,13 @@ class _ReadStageState extends State<ReadStage> {
                             done
                                 ? Icons.check_circle
                                 : Icons.check_circle_outline,
-                            color: done ? AppColors.success : Colors.black38,
+                            color: done ? AppColors.success : AppColors.matn3,
                             size: 20,
                           ),
                           label: Text(
                             done ? 'Tushundim' : 'Tushundim',
                             style: TextStyle(
-                              color: done ? AppColors.success : Colors.black54,
+                              color: done ? AppColors.success : AppColors.matn2,
                               fontWeight: FontWeight.w700,
                             ),
                           ),

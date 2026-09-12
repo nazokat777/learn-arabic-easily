@@ -35,9 +35,9 @@ class UlashLesson extends StatelessWidget {
           const _QoidaCard(),
           const SizedBox(height: 18),
           if (stages.isEmpty)
-            const Text(
+            Text(
               'Dars hali yuklanmagan.',
-              style: TextStyle(color: Colors.black54),
+              style: TextStyle(color: AppColors.matn2),
             )
           else
             for (final st in stages) _stageTile(context, st),
@@ -94,7 +94,7 @@ class _QoidaCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 8),
-          const Text(
+          Text(
             "Arab yozuvida harflar bir-biriga ulanadi. Lekin oltita harf "
             "o'zidan KEYINGI harfga ulanmaydi — ular zanjirni uzadi:",
             style: TextStyle(color: AppColors.ink, height: 1.4, fontSize: 13.5),
@@ -112,7 +112,7 @@ class _QoidaCard extends StatelessWidget {
                     width: 46,
                     height: 46,
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: AppColors.karta,
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(
                         color: AppColors.gold.withValues(alpha: 0.5),
@@ -129,11 +129,11 @@ class _QoidaCard extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 10),
-          const Text(
+          Text(
             "Qolgan harflar esa qo'shnisiga bog'lanib, shaklini o'zgartiradi. "
             "Shuning uchun bitta harf so'z boshida, o'rtasida va oxirida "
             "boshqa-boshqa ko'rinadi.",
-            style: TextStyle(color: Colors.black54, height: 1.4, fontSize: 13),
+            style: TextStyle(color: AppColors.matn2, height: 1.4, fontSize: 13),
           ),
         ],
       ),
@@ -167,9 +167,9 @@ class UlashStageScreen extends StatelessWidget {
           Center(
             child: Text(
               stage.title,
-              style: const TextStyle(
+              style: TextStyle(
                 fontWeight: FontWeight.w700,
-                color: Colors.black54,
+                color: AppColors.matn2,
               ),
             ),
           ),
@@ -182,7 +182,7 @@ class UlashStageScreen extends StatelessWidget {
             ),
             child: Text(
               stage.explain,
-              style: const TextStyle(
+              style: TextStyle(
                 color: AppColors.ink,
                 height: 1.4,
                 fontSize: 13.5,
@@ -224,7 +224,7 @@ class _WordCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
       child: Material(
-        color: Colors.white,
+        color: AppColors.karta,
         borderRadius: BorderRadius.circular(16),
         child: InkWell(
           borderRadius: BorderRadius.circular(16),
@@ -255,18 +255,18 @@ class _WordCard extends StatelessWidget {
                           ),
                         ),
                         if (i < letters.length - 1)
-                          const Text(
+                          Text(
                             '+',
                             style: TextStyle(
-                              color: Colors.black26,
+                              color: AppColors.chiziq,
                               fontWeight: FontWeight.w700,
                             ),
                           ),
                       ],
-                      const Text(
+                      Text(
                         '  =  ',
                         style: TextStyle(
-                          color: Colors.black26,
+                          color: AppColors.chiziq,
                           fontWeight: FontWeight.w700,
                         ),
                       ),
@@ -292,17 +292,13 @@ class _WordCard extends StatelessWidget {
                     Expanded(
                       child: Text(
                         word.uz,
-                        style: const TextStyle(
-                          color: Colors.black54,
+                        style: TextStyle(
+                          color: AppColors.matn2,
                           fontSize: 13.5,
                         ),
                       ),
                     ),
-                    const Icon(
-                      Icons.info_outline,
-                      size: 16,
-                      color: Colors.black26,
-                    ),
+                    Icon(Icons.info_outline, size: 16, color: AppColors.chiziq),
                   ],
                 ),
               ],
@@ -320,7 +316,7 @@ void _showHarfSheet(BuildContext context, UlashWord word) {
   final holatlar = harfHolatlari(letters);
   showModalBottomSheet(
     context: context,
-    backgroundColor: Colors.white,
+    backgroundColor: AppColors.karta,
     // Olti harfli so'zda ro'yxat past ekranga sig'may qoladi — shuning
     // uchun oyna balandligi cheklanmaydi va ichi aylanadi.
     isScrollControlled: true,
@@ -343,7 +339,7 @@ void _showHarfSheet(BuildContext context, UlashWord word) {
                   width: 40,
                   height: 4,
                   decoration: BoxDecoration(
-                    color: Colors.black12,
+                    color: AppColors.chiziq2,
                     borderRadius: BorderRadius.circular(2),
                   ),
                 ),
@@ -361,8 +357,8 @@ void _showHarfSheet(BuildContext context, UlashWord word) {
               Center(
                 child: Text(
                   word.uz,
-                  style: const TextStyle(
-                    color: Colors.black54,
+                  style: TextStyle(
+                    color: AppColors.matn2,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
@@ -388,8 +384,8 @@ void _showHarfSheet(BuildContext context, UlashWord word) {
               Text(
                 "«${stripDiacritics(word.ar)}» — ${letters.length} harf. "
                 'Oltin rangdagi harf o\'zidan keyingisiga ulanmaydi.',
-                style: const TextStyle(
-                  color: Colors.black45,
+                style: TextStyle(
+                  color: AppColors.matn3,
                   fontSize: 12.5,
                   height: 1.4,
                 ),
@@ -432,8 +428,8 @@ class _HarfRow extends StatelessWidget {
             width: 22,
             child: Text(
               '$tartib.',
-              style: const TextStyle(
-                color: Colors.black26,
+              style: TextStyle(
+                color: AppColors.chiziq,
                 fontWeight: FontWeight.w700,
               ),
             ),
@@ -462,7 +458,7 @@ class _HarfRow extends StatelessWidget {
               children: [
                 Text(
                   holatNomi(holat),
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontWeight: FontWeight.w800,
                     fontSize: 14,
                     color: AppColors.ink,
@@ -476,7 +472,9 @@ class _HarfRow extends StatelessWidget {
                       : "keyingi harfga ULANMAYDI",
                   style: TextStyle(
                     fontSize: 12,
-                    color: (ulanar || oxirgi) ? Colors.black45 : AppColors.gold,
+                    color: (ulanar || oxirgi)
+                        ? AppColors.matn3
+                        : AppColors.gold,
                   ),
                 ),
               ],
@@ -484,7 +482,7 @@ class _HarfRow extends StatelessWidget {
           ),
           Text(
             stripDiacritics(letter),
-            style: AppTheme.arabic(size: 24, color: Colors.black26),
+            style: AppTheme.arabic(size: 24, color: AppColors.chiziq),
           ),
         ],
       ),

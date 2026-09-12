@@ -49,7 +49,7 @@ class _WordSheet extends StatelessWidget {
       maxChildSize: 0.92,
       expand: false,
       builder: (context, scroll) => Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           color: AppColors.cream,
           borderRadius: BorderRadius.vertical(top: Radius.circular(26)),
         ),
@@ -62,7 +62,7 @@ class _WordSheet extends StatelessWidget {
                 width: 44,
                 height: 5,
                 decoration: BoxDecoration(
-                  color: Colors.black12,
+                  color: AppColors.chiziq2,
                   borderRadius: BorderRadius.circular(3),
                 ),
               ),
@@ -96,8 +96,8 @@ class _WordSheet extends StatelessWidget {
             Center(
               child: Text(
                 '≈ ${approxTranslit(head)}',
-                style: const TextStyle(
-                  color: Colors.black45,
+                style: TextStyle(
+                  color: AppColors.matn3,
                   fontSize: 15,
                   fontStyle: FontStyle.italic,
                 ),
@@ -119,9 +119,12 @@ class _WordSheet extends StatelessWidget {
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      const Text(
+                      Text(
                         'Matndagi shakli:',
-                        style: TextStyle(fontSize: 12.5, color: Colors.black54),
+                        style: TextStyle(
+                          fontSize: 12.5,
+                          color: AppColors.matn2,
+                        ),
                       ),
                       const SizedBox(width: 6),
                       Directionality(
@@ -147,7 +150,7 @@ class _WordSheet extends StatelessWidget {
               label: 'Ma\'nosi',
               child: Text(
                 v.uz,
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w700,
                   color: AppColors.ink,
@@ -257,7 +260,7 @@ class _WordSheet extends StatelessWidget {
         Expanded(
           child: Text(
             label,
-            style: const TextStyle(fontSize: 12.5, color: Colors.black54),
+            style: TextStyle(fontSize: 12.5, color: AppColors.matn2),
           ),
         ),
         const SizedBox(width: 8),
@@ -286,7 +289,7 @@ class _WordSheet extends StatelessWidget {
     margin: const EdgeInsets.only(top: 12),
     padding: const EdgeInsets.all(16),
     decoration: BoxDecoration(
-      color: Colors.white,
+      color: AppColors.karta,
       borderRadius: BorderRadius.circular(16),
       boxShadow: [
         BoxShadow(color: Colors.black.withValues(alpha: 0.03), blurRadius: 6),

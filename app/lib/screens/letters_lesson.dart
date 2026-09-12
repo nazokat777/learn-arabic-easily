@@ -34,7 +34,7 @@ class LettersLesson extends StatelessWidget {
               itemBuilder: (context, i) {
                 final L = letters[i];
                 return Material(
-                  color: Colors.white,
+                  color: AppColors.karta,
                   borderRadius: BorderRadius.circular(16),
                   child: InkWell(
                     borderRadius: BorderRadius.circular(16),
@@ -59,7 +59,7 @@ class LettersLesson extends StatelessWidget {
                             const SizedBox(height: 4),
                             Text(
                               L.nameUz,
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontWeight: FontWeight.w700,
                                 fontSize: 12.5,
                                 color: AppColors.ink,
@@ -67,8 +67,8 @@ class LettersLesson extends StatelessWidget {
                             ),
                             Text(
                               L.translit,
-                              style: const TextStyle(
-                                color: Colors.black45,
+                              style: TextStyle(
+                                color: AppColors.matn3,
                                 fontSize: 11,
                               ),
                             ),
@@ -130,7 +130,7 @@ class LettersLesson extends StatelessWidget {
   void _showDetail(BuildContext context, Letter L) {
     showModalBottomSheet(
       context: context,
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.karta,
       // Bo'lim uzun — oyna balandligi cheklanadi va ichi aylanadi.
       isScrollControlled: true,
       shape: const RoundedRectangleBorder(
@@ -151,7 +151,7 @@ class LettersLesson extends StatelessWidget {
                     width: 40,
                     height: 4,
                     decoration: BoxDecoration(
-                      color: Colors.black12,
+                      color: AppColors.chiziq2,
                       borderRadius: BorderRadius.circular(2),
                     ),
                   ),
@@ -167,7 +167,7 @@ class LettersLesson extends StatelessWidget {
                   children: [
                     Text(
                       '${L.nameUz}  ·  ${L.nameAr}',
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontWeight: FontWeight.w800,
                         fontSize: 20,
                         color: AppColors.ink,
@@ -205,17 +205,14 @@ class LettersLesson extends StatelessWidget {
                       Expanded(
                         child: Text(
                           'Maxraj: ${L.makhrajUz}',
-                          style: const TextStyle(
-                            color: AppColors.ink,
-                            height: 1.3,
-                          ),
+                          style: TextStyle(color: AppColors.ink, height: 1.3),
                         ),
                       ),
                     ],
                   ),
                 ),
                 const SizedBox(height: 20),
-                const Align(
+                Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
                     'Harakatlar bilan tinglang:',
@@ -267,10 +264,7 @@ class LettersLesson extends StatelessWidget {
           ),
         ),
         SpeakButton(text: text, id: 'bogin-$text', size: 18),
-        Text(
-          sound,
-          style: const TextStyle(fontSize: 11.5, color: Colors.black54),
-        ),
+        Text(sound, style: TextStyle(fontSize: 11.5, color: AppColors.matn2)),
       ],
     );
   }

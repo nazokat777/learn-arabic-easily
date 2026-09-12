@@ -126,10 +126,10 @@ class _AjratilganHarflar extends StatelessWidget {
               style: AppTheme.arabic(size: 40, color: AppColors.ink),
             ),
             if (i < letters.length - 1)
-              const Text(
+              Text(
                 '+',
                 style: TextStyle(
-                  color: Colors.black26,
+                  color: AppColors.chiziq,
                   fontSize: 20,
                   fontWeight: FontWeight.w700,
                 ),

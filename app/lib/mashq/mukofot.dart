@@ -311,19 +311,21 @@ class KomboOlov extends StatelessWidget {
 class SegmentliBar extends StatelessWidget {
   final int jami;
   final int tolgan;
-  final Color rang;
-  final Color fon;
+  final Color? rang;
+  final Color? fon;
 
   const SegmentliBar({
     super.key,
     required this.jami,
     required this.tolgan,
-    this.rang = AppColors.emerald,
-    this.fon = AppColors.softGreen,
+    this.rang,
+    this.fon,
   });
 
   @override
   Widget build(BuildContext context) {
+    final rang = this.rang ?? AppColors.emerald;
+    final fon = this.fon ?? AppColors.softGreen;
     return Row(
       children: [
         for (var i = 0; i < jami; i++) ...[
@@ -461,7 +463,7 @@ class RaundBekati extends StatelessWidget {
                 delay: const Duration(milliseconds: 900),
                 child: Text(
                   sarlavha,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 26,
                     fontWeight: FontWeight.w900,
                     color: AppColors.ink,
@@ -473,7 +475,7 @@ class RaundBekati extends StatelessWidget {
                 delay: const Duration(milliseconds: 980),
                 child: Text(
                   '$raund-raund · $togri / $jami to\'g\'ri',
-                  style: const TextStyle(color: Colors.black54, fontSize: 14),
+                  style: TextStyle(color: AppColors.matn2, fontSize: 14),
                 ),
               ),
               const SizedBox(height: 20),
@@ -532,10 +534,10 @@ class RaundBekati extends StatelessWidget {
                     const SizedBox(height: 8),
                     TextButton(
                       onPressed: onYetadi,
-                      child: const Text(
+                      child: Text(
                         'Bugunga yetadi',
                         style: TextStyle(
-                          color: Colors.black45,
+                          color: AppColors.matn3,
                           fontWeight: FontWeight.w700,
                         ),
                       ),
@@ -585,10 +587,7 @@ class _Korsatkich extends StatelessWidget {
               color: rang,
             ),
           ),
-          Text(
-            nom,
-            style: const TextStyle(fontSize: 12, color: Colors.black54),
-          ),
+          Text(nom, style: TextStyle(fontSize: 12, color: AppColors.matn2)),
         ],
       ),
     );
@@ -720,7 +719,7 @@ class QiyinKarta extends StatelessWidget {
               width: double.infinity,
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 26),
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: AppColors.karta,
                 borderRadius: BorderRadius.circular(24),
                 border: Border.all(
                   color: AppColors.coral.withValues(alpha: 0.45),
@@ -754,7 +753,7 @@ class QiyinKarta extends StatelessWidget {
                   Text(
                     uz,
                     textAlign: TextAlign.center,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.w900,
                       color: AppColors.ink,
@@ -785,9 +784,9 @@ class QiyinKarta extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 14),
-          const Text(
+          Text(
             'Bir daqiqa qarab turing, keyin so\'raymiz.',
-            style: TextStyle(color: Colors.black45, fontSize: 13),
+            style: TextStyle(color: AppColors.matn3, fontSize: 13),
           ),
           const Spacer(),
           SizedBox(

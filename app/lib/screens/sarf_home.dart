@@ -125,9 +125,9 @@ class _Sarlavha extends StatelessWidget {
             style: TextStyle(fontWeight: FontWeight.w800, fontSize: 15),
           ),
           const SizedBox(height: 2),
-          const Text(
+          Text(
             "Do'stmuhammad Nasriddin Bodariy — Toshkent, «Movarounnahr», 2009",
-            style: TextStyle(color: Colors.black54, fontSize: 12.5),
+            style: TextStyle(color: AppColors.matn2, fontSize: 12.5),
           ),
         ],
       ),
@@ -139,14 +139,14 @@ class _BoshHolat extends StatelessWidget {
   const _BoshHolat();
 
   @override
-  Widget build(BuildContext context) => const Padding(
+  Widget build(BuildContext context) => Padding(
     padding: EdgeInsets.all(28),
     child: Center(
       child: Text(
         'Sarf darslari hali yuklanmadi. Internetga ulanib, ilovani qayta '
         'oching — darslar saytdan olinadi.',
         textAlign: TextAlign.center,
-        style: TextStyle(color: Colors.black54, height: 1.4),
+        style: TextStyle(color: AppColors.matn2, height: 1.4),
       ),
     ),
   );
@@ -186,9 +186,9 @@ class SarfLessonScreen extends StatelessWidget {
               Center(
                 child: Text(
                   lesson.title,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontWeight: FontWeight.w700,
-                    color: Colors.black54,
+                    color: AppColors.matn2,
                   ),
                 ),
               ),
@@ -278,7 +278,7 @@ class _Paradigma extends StatelessWidget {
               constraints: const BoxConstraints(minWidth: 96),
               padding: const EdgeInsets.fromLTRB(12, 8, 12, 6),
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: AppColors.karta,
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(
                   color: AppColors.indigo.withValues(alpha: 0.25),
@@ -297,9 +297,9 @@ class _Paradigma extends StatelessWidget {
                   const SizedBox(height: 2),
                   Text(
                     nom,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 10.5,
-                      color: Colors.black54,
+                      color: AppColors.matn2,
                       fontWeight: FontWeight.w700,
                     ),
                   ),
@@ -368,7 +368,7 @@ class _Misol extends StatelessWidget {
               padding: const EdgeInsets.only(left: 26),
               child: Text(
                 block.uz,
-                style: const TextStyle(color: Colors.black54, height: 1.35),
+                style: TextStyle(color: AppColors.matn2, height: 1.35),
               ),
             ),
           ],
@@ -514,10 +514,10 @@ class _Jadval extends StatelessWidget {
       children: [
         Text(
           '${q.raqam})',
-          style: const TextStyle(
+          style: TextStyle(
             fontWeight: FontWeight.w800,
             fontSize: 11.5,
-            color: Colors.black45,
+            color: AppColors.matn3,
           ),
         ),
         const SizedBox(width: 4),

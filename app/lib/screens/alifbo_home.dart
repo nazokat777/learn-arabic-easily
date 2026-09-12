@@ -118,7 +118,7 @@ class AlifboHome extends StatelessWidget {
           style: AppTheme.arabic(size: 28, color: AppColors.emerald),
         ),
         const SizedBox(width: 14),
-        const Expanded(
+        Expanded(
           child: Text(
             'Arab harflarini va ularning tovushlarini (maxraj) noldan o\'rganasiz.',
             style: TextStyle(color: AppColors.ink, height: 1.35),

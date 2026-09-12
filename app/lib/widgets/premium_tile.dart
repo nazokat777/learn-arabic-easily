@@ -76,7 +76,7 @@ class PremiumTile extends StatelessWidget {
               ],
             ),
             child: Material(
-              color: Colors.white,
+              color: AppColors.karta,
               borderRadius: radius,
               child: InkWell(
                 borderRadius: radius,
@@ -109,7 +109,7 @@ class PremiumTile extends StatelessWidget {
                                   arabic!,
                                   style: AppTheme.arabic(
                                     size: 22,
-                                    color: Colors.white,
+                                    color: AppColors.karta,
                                     w: FontWeight.w700,
                                   ),
                                 )
@@ -132,7 +132,7 @@ class PremiumTile extends StatelessWidget {
                           children: [
                             Text(
                               title,
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontWeight: FontWeight.w800,
                                 fontSize: 15.5,
                                 color: AppColors.ink,
@@ -156,8 +156,8 @@ class PremiumTile extends StatelessWidget {
                               const SizedBox(height: 3),
                               Text(
                                 subtitle,
-                                style: const TextStyle(
-                                  color: Colors.black54,
+                                style: TextStyle(
+                                  color: AppColors.matn2,
                                   fontSize: 12.5,
                                   height: 1.3,
                                 ),

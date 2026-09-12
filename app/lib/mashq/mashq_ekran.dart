@@ -1391,6 +1391,85 @@ class _ZaifRoyxat extends StatelessWidget {
   final List<MashqElement> zaiflar;
   const _ZaifRoyxat({required this.zaiflar});
 
+  /// So'z varag'i — qiyin so'zga bosilsa: katta arabcha, ma'no, ovoz.
+  /// Yakundagi ro'yxat shunchaki hisobot emas, o'rganish nuqtasi.
+  void _sozVaragi(BuildContext context, MashqElement e) {
+    if (e.ovoz.isNotEmpty) Tts.instance.speak(e.ovoz, id: e.kalit);
+    showModalBottomSheet<void>(
+      context: context,
+      backgroundColor: AppColors.karta,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(26)),
+      ),
+      builder: (_) => Padding(
+        padding: const EdgeInsets.fromLTRB(24, 18, 24, 30),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Container(
+              width: 44,
+              height: 5,
+              decoration: BoxDecoration(
+                color: AppColors.chiziq2,
+                borderRadius: BorderRadius.circular(3),
+              ),
+            ),
+            const SizedBox(height: 18),
+            Directionality(
+              textDirection: TextDirection.rtl,
+              child: Text(
+                e.ar,
+                textAlign: TextAlign.center,
+                style: AppTheme.arabic(
+                  size: 40,
+                  color: AppColors.emerald,
+                  w: FontWeight.w700,
+                ),
+              ),
+            ),
+            const SizedBox(height: 10),
+            const OrnamentDivider(),
+            const SizedBox(height: 10),
+            Text(
+              e.uz,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w800,
+                color: AppColors.ink,
+              ),
+            ),
+            const SizedBox(height: 6),
+            Text(
+              '${e.modul} · ${progress.xatoSoni(e.kalit)} marta adashilgan',
+              style: TextStyle(fontSize: 12.5, color: AppColors.matn2),
+            ),
+            const SizedBox(height: 16),
+            Tactile(
+              child: Material(
+                color: AppColors.emerald,
+                shape: const CircleBorder(),
+                child: InkWell(
+                  customBorder: const CircleBorder(),
+                  onTap: () => Tts.instance.speak(e.ovoz, id: e.kalit),
+                  child: const SizedBox(
+                    width: 56,
+                    height: 56,
+                    child: Icon(
+                      Icons.volume_up_rounded,
+                      color: Colors.white,
+                      size: 28,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -1428,36 +1507,43 @@ class _ZaifRoyxat extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           for (final e in zaiflar)
-            Padding(
-              padding: const EdgeInsets.only(bottom: 8),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Directionality(
-                    textDirection: TextDirection.rtl,
-                    child: Text(
-                      e.ar,
-                      style: AppTheme.arabic(size: 21, color: AppColors.ink),
+            InkWell(
+              borderRadius: BorderRadius.circular(10),
+              onTap: () => _sozVaragi(context, e),
+              child: Padding(
+                padding: const EdgeInsets.only(bottom: 8),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Directionality(
+                      textDirection: TextDirection.rtl,
+                      child: Text(
+                        e.ar,
+                        style: AppTheme.arabic(size: 21, color: AppColors.ink),
+                      ),
                     ),
-                  ),
-                  const SizedBox(width: 10),
-                  Expanded(
-                    child: Text(
-                      e.uz,
-                      style: TextStyle(color: AppColors.matn2, fontSize: 13.5),
+                    const SizedBox(width: 10),
+                    Expanded(
+                      child: Text(
+                        e.uz,
+                        style: TextStyle(
+                          color: AppColors.matn2,
+                          fontSize: 13.5,
+                        ),
+                      ),
                     ),
-                  ),
-                  Text(
-                    progress.qiyinMi(e.kalit)
-                        ? 'qiyin'
-                        : '${progress.xatoSoni(e.kalit)} xato',
-                    style: const TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w700,
-                      color: AppColors.coral,
+                    Text(
+                      progress.qiyinMi(e.kalit)
+                          ? 'qiyin'
+                          : '${progress.xatoSoni(e.kalit)} xato',
+                      style: const TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w700,
+                        color: AppColors.coral,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
         ],

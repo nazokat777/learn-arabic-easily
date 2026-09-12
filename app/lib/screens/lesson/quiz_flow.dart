@@ -1,5 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart' hide Text;
+import 'package:flutter/services.dart'
+    show KeyEvent, KeyDownEvent, LogicalKeyboardKey;
 import '../../widgets/uz_text.dart';
 import '../../arabic.dart';
 import '../../content.dart';
@@ -52,6 +54,7 @@ class _QuizStageState extends State<QuizStage> {
   int _ketmaKet = 0;
   int _portlash = 0;
   String _fikr = '';
+  bool _bilmadim = false;
   final _maqtovRnd = Random();
 
   String _key(QiroatVocab v) => '${widget.lesson.completionId}::${v.ar}';
@@ -99,6 +102,7 @@ class _QuizStageState extends State<QuizStage> {
     setState(() {
       _picked = i;
       _answered = true;
+      _bilmadim = false;
       if (ok) {
         _ketmaKet++;
         _portlash++;
@@ -128,134 +132,192 @@ class _QuizStageState extends State<QuizStage> {
     });
   }
 
+  /// «Bilmadim» — jazosiz: daraja tushmaydi, ball yo'q; so'z takror
+  /// bosqichiga tushadi (o'rganish shart), javob oltin rangda, ovozi
+  /// o'qib beriladi.
+  Future<void> _bilmadimBos() async {
+    if (_answered) return;
+    final q = _questions[_qi];
+    Haptic.tap();
+    setState(() {
+      _picked = null;
+      _answered = true;
+      _bilmadim = true;
+      _ketmaKet = 0;
+      _fikr = "Mana to'g'ri javob — eslab qoling";
+    });
+    if (!_missed.contains(q.word)) _missed.add(q.word);
+    Tts.instance.speak(splitForms(q.word.ar).first, id: 'q');
+    await Future.delayed(const Duration(milliseconds: 1900));
+    if (!mounted) return;
+    if (_qi + 1 < _questions.length) {
+      setState(() {
+        _qi++;
+        _picked = null;
+        _answered = false;
+        _bilmadim = false;
+      });
+    } else {
+      widget.onFinish(_missed, _questions.length);
+    }
+  }
+
+  /// Klaviatura: 1–4 variant, B — «bilmadim».
+  void _tugma(KeyEvent e) {
+    if (e is! KeyDownEvent || _answered) return;
+    final k = e.logicalKey;
+    if (k == LogicalKeyboardKey.keyB) {
+      _bilmadimBos();
+      return;
+    }
+    const raqamlar = [
+      LogicalKeyboardKey.digit1,
+      LogicalKeyboardKey.digit2,
+      LogicalKeyboardKey.digit3,
+      LogicalKeyboardKey.digit4,
+    ];
+    final i = raqamlar.indexOf(k);
+    if (i >= 0 && i < _questions[_qi].options.length) _answer(i);
+  }
+
   @override
   Widget build(BuildContext context) {
     if (_questions.isEmpty) return const SizedBox.shrink();
     final q = _questions[_qi];
     final head = splitForms(q.word.ar).first;
-    return Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.fromLTRB(20, 8, 20, 6),
-          child: Row(
-            children: [
-              const Icon(
-                Icons.quiz_rounded,
-                size: 18,
-                color: AppColors.emerald,
-              ),
-              const SizedBox(width: 6),
-              Text(
-                'Savollar',
-                style: TextStyle(
-                  fontWeight: FontWeight.w800,
-                  color: AppColors.ink,
-                  fontSize: 15,
-                ),
-              ),
-              const Spacer(),
-              Text(
-                '${_qi + 1} / ${_questions.length}',
-                style: const TextStyle(
-                  fontWeight: FontWeight.w800,
+    return Focus(
+      autofocus: true,
+      onKeyEvent: (_, e) {
+        _tugma(e);
+        return KeyEventResult.ignored;
+      },
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 8, 20, 6),
+            child: Row(
+              children: [
+                const Icon(
+                  Icons.quiz_rounded,
+                  size: 18,
                   color: AppColors.emerald,
                 ),
-              ),
-            ],
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: AnimatedBar(
-            value: (_qi + (_answered ? 1 : 0)) / _questions.length,
-            height: 8,
-            color: AppColors.emerald,
-            background: AppColors.softGreen,
-          ),
-        ),
-        const Spacer(),
-        Text(
-          q.arToUz
-              ? 'Bu so\'z nima degani?'
-              : 'Qaysi so\'z «${q.word.uz}» degani?',
-          style: TextStyle(color: AppColors.matn2),
-        ),
-        const SizedBox(height: 14),
-        SlideSwitch(
-          child: KeyedSubtree(
-            key: ValueKey(_qi),
-            child: Container(
-              margin: const EdgeInsets.symmetric(horizontal: 24),
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 22),
-              decoration: BoxDecoration(
-                color: AppColors.karta,
-                borderRadius: BorderRadius.circular(20),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withValues(alpha: 0.05),
-                    blurRadius: 10,
+                const SizedBox(width: 6),
+                Text(
+                  'Savollar',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w800,
+                    color: AppColors.ink,
+                    fontSize: 15,
                   ),
-                ],
-              ),
-              child: q.arToUz
-                  ? Row(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Flexible(
-                          child: Directionality(
-                            textDirection: TextDirection.rtl,
-                            child: Text(
-                              head,
-                              textAlign: TextAlign.center,
-                              style: AppTheme.arabic(
-                                size: 40,
-                                color: AppColors.emerald,
-                              ),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(width: 8),
-                        Material(
-                          color: AppColors.emerald,
-                          shape: const CircleBorder(),
-                          child: InkWell(
-                            customBorder: const CircleBorder(),
-                            onTap: () => Tts.instance.speak(head, id: head),
-                            child: const SizedBox(
-                              width: 42,
-                              height: 42,
-                              child: Icon(
-                                Icons.volume_up_rounded,
-                                color: Colors.white,
-                                size: 22,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    )
-                  : Text(
-                      q.word.uz,
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(
-                        fontSize: 26,
-                        fontWeight: FontWeight.w800,
-                        color: AppColors.emerald,
-                      ),
-                    ),
+                ),
+                const Spacer(),
+                Text(
+                  '${_qi + 1} / ${_questions.length}',
+                  style: const TextStyle(
+                    fontWeight: FontWeight.w800,
+                    color: AppColors.emerald,
+                  ),
+                ),
+              ],
             ),
           ),
-        ),
-        const Spacer(),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(20, 0, 20, 8),
-          child: Column(
-            children: List.generate(q.options.length, (i) => _optTile(q, i)),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: AnimatedBar(
+              value: (_qi + (_answered ? 1 : 0)) / _questions.length,
+              height: 8,
+              color: AppColors.emerald,
+              background: AppColors.softGreen,
+            ),
           ),
-        ),
-        _feedback(q),
-      ],
+          const Spacer(),
+          Text(
+            q.arToUz
+                ? 'Bu so\'z nima degani?'
+                : 'Qaysi so\'z «${q.word.uz}» degani?',
+            style: TextStyle(color: AppColors.matn2),
+          ),
+          const SizedBox(height: 14),
+          SlideSwitch(
+            child: KeyedSubtree(
+              key: ValueKey(_qi),
+              child: Container(
+                margin: const EdgeInsets.symmetric(horizontal: 24),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 22,
+                ),
+                decoration: BoxDecoration(
+                  color: AppColors.karta,
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withValues(alpha: 0.05),
+                      blurRadius: 10,
+                    ),
+                  ],
+                ),
+                child: q.arToUz
+                    ? Row(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Flexible(
+                            child: Directionality(
+                              textDirection: TextDirection.rtl,
+                              child: Text(
+                                head,
+                                textAlign: TextAlign.center,
+                                style: AppTheme.arabic(
+                                  size: 40,
+                                  color: AppColors.emerald,
+                                ),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          Material(
+                            color: AppColors.emerald,
+                            shape: const CircleBorder(),
+                            child: InkWell(
+                              customBorder: const CircleBorder(),
+                              onTap: () => Tts.instance.speak(head, id: head),
+                              child: const SizedBox(
+                                width: 42,
+                                height: 42,
+                                child: Icon(
+                                  Icons.volume_up_rounded,
+                                  color: Colors.white,
+                                  size: 22,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      )
+                    : Text(
+                        q.word.uz,
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                          fontSize: 26,
+                          fontWeight: FontWeight.w800,
+                          color: AppColors.emerald,
+                        ),
+                      ),
+              ),
+            ),
+          ),
+          const Spacer(),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 0, 20, 8),
+            child: Column(
+              children: List.generate(q.options.length, (i) => _optTile(q, i)),
+            ),
+          ),
+          _feedback(q),
+        ],
+      ),
     );
   }
 
@@ -329,20 +391,40 @@ class _QuizStageState extends State<QuizStage> {
   }
 
   Widget _feedback(_QQ q) {
-    if (!_answered) return const SizedBox(height: 52);
+    if (!_answered) {
+      return SizedBox(
+        height: 52,
+        child: Center(
+          child: TextButton.icon(
+            onPressed: _bilmadimBos,
+            icon: const Icon(Icons.help_outline_rounded, size: 18),
+            label: const Text(
+              "Bilmadim — javobni ko'rsat",
+              style: TextStyle(fontWeight: FontWeight.w700),
+            ),
+            style: TextButton.styleFrom(foregroundColor: AppColors.gold),
+          ),
+        ),
+      );
+    }
     final ok = _picked == q.correct;
+    final rang = ok
+        ? AppColors.success
+        : (_bilmadim ? AppColors.gold : AppColors.coral);
     return Container(
       width: double.infinity,
       height: 52,
       alignment: Alignment.centerLeft,
-      color: (ok ? AppColors.success : AppColors.coral).withValues(alpha: 0.12),
+      color: rang.withValues(alpha: 0.12),
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Row(
         children: [
           Icon(
-            ok ? Icons.check_circle_rounded : Icons.cancel_rounded,
+            ok
+                ? Icons.check_circle_rounded
+                : (_bilmadim ? Icons.lightbulb_rounded : Icons.cancel_rounded),
             size: 20,
-            color: ok ? AppColors.success : AppColors.coral,
+            color: rang,
           ),
           const SizedBox(width: 8),
           Expanded(
@@ -350,10 +432,7 @@ class _QuizStageState extends State<QuizStage> {
               ok
                   ? '$_fikr  +2 ball'
                   : "$_fikr · To'g'ri javob: ${q.options[q.correct]}",
-              style: TextStyle(
-                fontWeight: FontWeight.w800,
-                color: ok ? AppColors.success : AppColors.coral,
-              ),
+              style: TextStyle(fontWeight: FontWeight.w800, color: rang),
             ),
           ),
         ],

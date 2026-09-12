@@ -24,6 +24,7 @@ class MashqlarHome extends StatelessWidget {
           children: [
             _intro(),
             const SizedBox(height: 16),
+            _chaqmoqPlitka(context),
             _qiyinPlitka(context),
             // Lug'at testi — haqiqiy test, shuning uchun belgisi ham
             // o'zlashtirish belgisi: xatosiz o'tilmaguncha berilmaydi.
@@ -49,6 +50,23 @@ class MashqlarHome extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+  /// Chaqmoq raund — 60 soniya, bekatsiz, 2× ball, rekord bilan.
+  /// Havza: o'quvchi allaqachon ko'rgan so'zlar (kamida bir marta to'g'ri
+  /// javob berilgan); hali hech narsa ko'rmagan bo'lsa — alifbo va
+  /// 1-kitob boshi. Tezkor raundda notanish so'z emas, TEZLIK sinaladi.
+  Widget _chaqmoqPlitka(BuildContext context) {
+    final rekord = progress.chaqmoqRekord;
+    return PremiumTile(
+      title: 'Chaqmoq raund',
+      subtitle: rekord > 0
+          ? "60 soniya · 2× ball · rekord: $rekord ta to'g'ri"
+          : '60 soniya · 2× ball · birinchi rekordni qo\'ying',
+      icon: Icons.bolt_rounded,
+      accent: AppColors.amber,
+      onTap: () => chaqmoqRaundiniOch(context),
     );
   }
 
@@ -142,6 +160,25 @@ class MashqlarHome extends StatelessWidget {
           Navigator.push(context, MaterialPageRoute(builder: (_) => page)),
     );
   }
+}
+
+/// Chaqmoq raundini ochadi: tanish so'zlardan 40 tasi tasodifiy.
+void chaqmoqRaundiniOch(BuildContext context) {
+  final hammasi = MashqBank.hammasi();
+  var havza = hammasi.where((e) => progress.wordMastery(e.kalit) > 0).toList();
+  if (havza.length < 12) havza = hammasi.take(60).toList();
+  havza.shuffle();
+  Navigator.push(
+    context,
+    MaterialPageRoute(
+      builder: (_) => MashqEkran(
+        sarlavha: 'Chaqmoq raund',
+        darsniki: havza.take(40).toList(),
+        oldingilar: const [],
+        tezkorSoniya: 60,
+      ),
+    ),
+  );
 }
 
 /// «Qiyin so'zlarim» mashqini ochadi — elementlar aynan shu paytda

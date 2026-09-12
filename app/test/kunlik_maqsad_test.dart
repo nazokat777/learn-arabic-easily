@@ -50,10 +50,11 @@ void main() {
     // Kunlik tarixda bugun: 5 savol, 4 to'g'ri, 17 ball; kecha — bo'sh.
     expect(p.kunNatijasi(DateTime.now()), (5, 4, 17));
     expect(p.haftaNatijasi(), (5, 4, 17));
-    expect(
-      p.kunNatijasi(DateTime.now().subtract(const Duration(days: 1))),
-      (0, 0, 0),
-    );
+    expect(p.kunNatijasi(DateTime.now().subtract(const Duration(days: 1))), (
+      0,
+      0,
+      0,
+    ));
   });
 
   test("seriya faqat maqsad bajarilgan kunda oshadi", () async {

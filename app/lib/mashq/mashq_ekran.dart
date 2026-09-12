@@ -8,6 +8,7 @@ import '../widgets/uz_text.dart';
 
 import '../main.dart';
 import '../progress.dart';
+import '../screens/nishonlar_ekrani.dart';
 import '../services/tts.dart';
 import '../theme.dart';
 import '../widgets/motion.dart';
@@ -41,6 +42,11 @@ class MashqEkran extends StatefulWidget {
   /// Yakunda «Testga o'tish» tugmasi shuni chaqiradi (ixtiyoriy).
   final VoidCallback? testgaOt;
 
+  /// Chaqmoq raund: shuncha soniya, bekatsiz, har ball 2×. Vaqt tugaganda
+  /// yakun. Vaqt bosimi — «oqim» holatining eng tez yo'li: diqqat to'la
+  /// jamlanadi, har javob qimmat, oxirida rekord bilan solishtiriladi.
+  final int? tezkorSoniya;
+
   const MashqEkran({
     super.key,
     required this.sarlavha,
@@ -48,7 +54,10 @@ class MashqEkran extends StatefulWidget {
     required this.oldingilar,
     this.darsId,
     this.testgaOt,
+    this.tezkorSoniya,
   });
+
+  bool get tezkor => tezkorSoniya != null;
 
   @override
   State<MashqEkran> createState() => _MashqEkranState();
@@ -89,6 +98,12 @@ class _MashqEkranState extends State<MashqEkran> {
   // Qiyin bosqichida allaqachon o'rgatilgan elementlar.
   final Set<String> _orgatilgan = {};
 
+  // Chaqmoq raund: qolgan soniya, vaqt tugadimi, rekord yangilandimi.
+  Timer? _tezkorTaymer;
+  int _qolganSoniya = 0;
+  bool _vaqtTugadi = false;
+  bool _chaqmoqRekord = false;
+
   // Harflab yozish uchun: aralashtirilgan harf tugmalari va terilgani.
   List<String> _harfTugmalari = const [];
   final List<int> _terilgan = [];
@@ -101,11 +116,26 @@ class _MashqEkranState extends State<MashqEkran> {
       oldingilar: widget.oldingilar,
       rnd: _rnd,
     );
+    if (widget.tezkor) {
+      _qolganSoniya = widget.tezkorSoniya!;
+      _tezkorTaymer = Timer.periodic(const Duration(seconds: 1), (_) {
+        if (!mounted || _korinish == _Korinish.yakun) return;
+        setState(() => _qolganSoniya--);
+        if (_qolganSoniya == 10) Tovush.bekat(); // «10 soniya qoldi» ishorasi
+        if (_qolganSoniya <= 0) {
+          _tezkorTaymer?.cancel();
+          _vaqtTugadi = true;
+          _toliqTugadi = false;
+          _yakunla();
+        }
+      });
+    }
     _keyingi();
   }
 
   @override
   void dispose() {
+    _tezkorTaymer?.cancel();
     _maqsadTaymeri?.cancel();
     _rekordTaymeri?.cancel();
     Tts.instance.stop();
@@ -202,6 +232,7 @@ class _MashqEkranState extends State<MashqEkran> {
       ball += 3;
       bonus = true;
     }
+    if (widget.tezkor) ball *= 2; // chaqmoq raund: har ball ikki karra
     return (ball, bonus);
   }
 
@@ -287,6 +318,10 @@ class _MashqEkranState extends State<MashqEkran> {
     // Raund to'ldi yoki bosqich almashdi — bekat.
     if (_s.raundTugadi ||
         (_s.bosqich != oldingiBosqich && _s.raunddaSoralgan >= 3)) {
+      if (widget.tezkor) {
+        _davom(); // chaqmoqda bekat yo'q — vaqt ketyapti
+        return;
+      }
       _sandiqBonus = _s.raundYulduzi == 3
           ? XazinaSandigi.tasodifiyBonus(_rnd)
           : 0;
@@ -324,6 +359,10 @@ class _MashqEkranState extends State<MashqEkran> {
     }
     if (_s.raundTugadi ||
         (_s.bosqich != oldingiBosqich && _s.raunddaSoralgan >= 3)) {
+      if (widget.tezkor) {
+        _davom();
+        return;
+      }
       _sandiqBonus = 0;
       Tovush.bekat();
       setState(() => _korinish = _Korinish.bekat);
@@ -345,11 +384,23 @@ class _MashqEkranState extends State<MashqEkran> {
     if (id != null && _toliqTugadi && _s.jamiSoralgan > 0) {
       await progress.recordAttempt(id, _s.birinchidanTogri, _s.jamiSoralgan);
     }
+    if (widget.tezkor) {
+      _tezkorTaymer?.cancel();
+      _chaqmoqRekord = await progress.chaqmoqRekordniYangila(
+        _s.birinchidanTogri,
+      );
+    }
     if (mounted) {
       setState(() {
         _savol = null;
         _korinish = _Korinish.yakun;
       });
+    }
+    // Yangi nishon ochilgan bo'lsa — yakun ko'ringach marosim.
+    final yangi = await progress.yangiNishonlar();
+    if (yangi.isNotEmpty && mounted) {
+      await Future.delayed(const Duration(milliseconds: 900));
+      if (mounted) await nishonOynasi(context, yangi);
     }
   }
 
@@ -444,6 +495,11 @@ class _MashqEkranState extends State<MashqEkran> {
           child: SafeArea(
             child: Column(
               children: [
+                if (widget.tezkor && _korinish != _Korinish.yakun)
+                  _VaqtChizigi(
+                    qolgan: _qolganSoniya,
+                    jami: widget.tezkorSoniya!,
+                  ),
                 if (_maqsadBajarildi)
                   const MaqsadBanner(ball: Progress.kunlikMukofotBalli),
                 if (_rekord)
@@ -462,6 +518,10 @@ class _MashqEkranState extends State<MashqEkran> {
                           toliq: _toliqTugadi,
                           engUzunKombo: _engUzunKombo,
                           testgaOt: widget.testgaOt,
+                          tezkor: widget.tezkor,
+                          vaqtTugadi: _vaqtTugadi,
+                          ball: _ball,
+                          chaqmoqRekord: _chaqmoqRekord,
                         ),
                         _Korinish.bekat => RaundBekati(
                           raund: _s.raundRaqami,
@@ -1197,18 +1257,73 @@ class _BugunChizigi extends StatelessWidget {
   }
 }
 
+/// Chaqmoq raundning qolgan vaqti — yuqorida yupqa qizil chiziq va
+/// soniya. Oxirgi 10 soniyada rang marjonga o'tadi: shoshilish hissi.
+class _VaqtChizigi extends StatelessWidget {
+  final int qolgan;
+  final int jami;
+  const _VaqtChizigi({required this.qolgan, required this.jami});
+
+  @override
+  Widget build(BuildContext context) {
+    final oz = qolgan <= 10;
+    final rang = oz ? AppColors.coral : AppColors.amber;
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(20, 8, 20, 4),
+      child: Row(
+        children: [
+          Icon(Icons.bolt_rounded, size: 18, color: rang),
+          const SizedBox(width: 6),
+          Expanded(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(999),
+              child: LinearProgressIndicator(
+                value: (qolgan / jami).clamp(0, 1).toDouble(),
+                minHeight: 8,
+                color: rang,
+                backgroundColor: rang.withValues(alpha: 0.15),
+              ),
+            ),
+          ),
+          const SizedBox(width: 10),
+          Pulse(
+            trigger: oz ? qolgan : null, // oxirgi 10 s: har soniya urish
+            child: Text(
+              '$qolgan s',
+              style: TextStyle(
+                fontWeight: FontWeight.w900,
+                fontSize: 15,
+                color: rang,
+                fontFeatures: const [FontFeature.tabularFigures()],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 class _Yakun extends StatelessWidget {
   final MashqSessiya s;
   final String nom;
   final bool toliq;
   final int engUzunKombo;
   final VoidCallback? testgaOt;
+  final bool tezkor;
+  final bool vaqtTugadi;
+  final int ball;
+  final bool chaqmoqRekord;
   const _Yakun({
     required this.s,
     required this.nom,
     required this.toliq,
     required this.engUzunKombo,
     this.testgaOt,
+    this.tezkor = false,
+    this.vaqtTugadi = false,
+    this.ball = 0,
+    this.chaqmoqRekord = false,
   });
 
   @override
@@ -1225,12 +1340,21 @@ class _Yakun extends StatelessWidget {
               progress.xatoSoni(b.kalit).compareTo(progress.xatoSoni(a.kalit)),
         );
     final qiyinlar = zaiflar.where((e) => progress.qiyinMi(e.kalit)).toList();
-    final sarlavha = mukammal
+    final sarlavha = tezkor
+        ? (chaqmoqRekord
+              ? 'Yangi chaqmoq rekordi!'
+              : vaqtTugadi
+              ? 'Vaqt tugadi!'
+              : 'Chaqmoq raund tugadi')
+        : mukammal
         ? 'Mukammal!'
         : toliq
         ? 'Mashq tugadi'
         : 'Yaxshi dam oling';
-    final izoh = toliq
+    final izoh = tezkor
+        ? "${s.birinchidanTogri} ta to'g'ri  ·  +$ball ball (2×)"
+              "${chaqmoqRekord ? '' : '  ·  rekord: ${progress.chaqmoqRekord}'}"
+        : toliq
         ? 'Birinchi urinishda: ${s.birinchidanTogri} / ${s.jamiSoralgan}'
               '  ·  $foiz%'
         : "${s.jamiSoralgan} ta savol yechildi. O'zlashtirish belgisi "
@@ -1246,11 +1370,17 @@ class _Yakun extends StatelessWidget {
                 fromScale: 0.6,
                 child: GlowRing(
                   size: 132,
-                  color: mukammal ? AppColors.gold : AppColors.emerald,
+                  color: mukammal || chaqmoqRekord
+                      ? AppColors.gold
+                      : tezkor
+                      ? AppColors.amber
+                      : AppColors.emerald,
                   child: Float(
                     amplitude: 4,
                     child: Icon(
-                      mukammal
+                      tezkor
+                          ? Icons.bolt_rounded
+                          : mukammal
                           ? Icons.emoji_events_rounded
                           : toliq
                           ? Icons.trending_up_rounded

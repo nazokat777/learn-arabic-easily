@@ -61,9 +61,6 @@ void main() {
 
     // Ko'p so'zli arabcha ibora bitta bo'lak bo'lib qoladi — uning ichki
     // tartibi o'zgarmaydi (o'ngdan chapga o'qiladi).
-    expect(
-      _bolaklar(tester).any((s) => s.contains('فاءُ، عينُ، لام')),
-      isTrue,
-    );
+    expect(_bolaklar(tester).any((s) => s.contains('فاءُ، عينُ، لام')), isTrue);
   });
 }

@@ -16,7 +16,11 @@ void main() {
     expect(Rasm.topish('yugurmoq'), isNull);
     expect(Rasm.topish('mashaqqat'), isNull);
     expect(Rasm.topish('kitoblar'), isNull, reason: 'faqat aynan mos');
-    expect(Rasm.topish('yoz'), isNull, reason: "«yoz» — yozmoq ham, yoz fasli ham");
+    expect(
+      Rasm.topish('yoz'),
+      isNull,
+      reason: "«yoz» — yozmoq ham, yoz fasli ham",
+    );
     expect(Rasm.topish(''), isNull);
   });
 }

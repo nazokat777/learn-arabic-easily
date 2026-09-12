@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/foundation.dart'
     show kIsWeb, defaultTargetPlatform, TargetPlatform;
 import 'package:flutter/material.dart' hide Text;
@@ -23,6 +25,10 @@ import 'alifbo_home.dart';
 import 'davom.dart';
 import 'mashqlar_home.dart';
 import 'nahv_home.dart';
+import 'nishonlar_ekrani.dart';
+import '../nishonlar.dart';
+import '../mashq/ultra.dart';
+import '../mashq/tovush.dart';
 import 'qiroat_lessons.dart';
 
 /// Bosh ekran — ilovaning «yuzi».
@@ -66,6 +72,21 @@ class HomeScreen extends StatelessWidget {
                       delay: Duration(milliseconds: 60),
                       child: _TezYol(),
                     ),
+                    const _NishonTekshiruvchi(),
+                    if (!progress.sandiqOchilganBugun) ...[
+                      const SizedBox(height: 12),
+                      const Reveal(
+                        delay: Duration(milliseconds: 75),
+                        child: _KunlikSandiq(),
+                      ),
+                    ],
+                    if (progress.olovHimoyalandiBugun) ...[
+                      const SizedBox(height: 12),
+                      const Reveal(
+                        delay: Duration(milliseconds: 80),
+                        child: _HimoyaBanner(),
+                      ),
+                    ],
                     const SizedBox(height: 12),
                     const Reveal(
                       delay: Duration(milliseconds: 90),
@@ -91,6 +112,11 @@ class HomeScreen extends StatelessWidget {
                     const Reveal(
                       delay: Duration(milliseconds: 115),
                       child: _Statistika(),
+                    ),
+                    const SizedBox(height: 12),
+                    const Reveal(
+                      delay: Duration(milliseconds: 117),
+                      child: _NishonlarKarta(),
                     ),
                     if (progress.eslashKerakKalitlar.isNotEmpty) ...[
                       const SizedBox(height: 12),
@@ -412,9 +438,15 @@ class _Hero extends StatelessWidget {
                                 size: 18,
                                 xira: !progress.bugunSeriyada,
                               ),
-                              text: progress.streak == 0
-                                  ? 'Seriya boshlang'
-                                  : '${progress.streak} kun ketma-ket',
+                              text:
+                                  (progress.streak == 0
+                                      ? 'Seriya boshlang'
+                                      : '${progress.streak} kun ketma-ket') +
+                                  (progress.muzlatish > 0
+                                      ? '  ·  🛡${progress.muzlatish}'
+                                      : ''),
+                              izoh: 'Olov va himoya haqida',
+                              onTap: () => _olovOynasi(context),
                               // Bugun hali maqsad bajarilmagan bo'lsa
                               // olov xira — «bugun ham yoqing» ishorasi.
                               color: progress.bugunSeriyada
@@ -759,6 +791,497 @@ class _TezYol extends StatelessWidget {
             ),
           );
         },
+      ),
+    );
+  }
+}
+
+/// Bosh ekran ochilganda yangi nishon bor-yo'qligini bir marta tekshiradi
+/// (masalan, seriya nishoni kun boshida ochiladi) va marosim ko'rsatadi.
+class _NishonTekshiruvchi extends StatefulWidget {
+  const _NishonTekshiruvchi();
+
+  @override
+  State<_NishonTekshiruvchi> createState() => _NishonTekshiruvchiState();
+}
+
+class _NishonTekshiruvchiState extends State<_NishonTekshiruvchi> {
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      final yangi = await progress.yangiNishonlar();
+      if (yangi.isNotEmpty && mounted) {
+        await Future.delayed(const Duration(milliseconds: 1200));
+        if (mounted) await nishonOynasi(context, yangi);
+      }
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) => const SizedBox.shrink();
+}
+
+/// Kunlik sandiq kartasi — kunda bir marta, ochilmaguncha bosh ekranda
+/// oltin rangda «nafas olib» turadi. Kutish (nima chiqar ekan?) —
+/// mukofotning o'zidan ham kuchliroq dofamin manbai.
+class _KunlikSandiq extends StatelessWidget {
+  const _KunlikSandiq();
+
+  @override
+  Widget build(BuildContext context) {
+    final bonus = progress.streak.clamp(0, 20);
+    return Tactile(
+      child: Material(
+        color: Colors.transparent,
+        borderRadius: BorderRadius.circular(20),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(20),
+          onTap: () => _sandiqOynasi(context),
+          child: Container(
+            padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  AppColors.gold.withValues(alpha: 0.22),
+                  AppColors.amber.withValues(alpha: 0.10),
+                ],
+              ),
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(color: AppColors.gold.withValues(alpha: 0.55)),
+              boxShadow: [
+                BoxShadow(
+                  color: AppColors.gold.withValues(alpha: 0.25),
+                  blurRadius: 18,
+                  offset: const Offset(0, 6),
+                ),
+              ],
+            ),
+            child: Row(
+              children: [
+                Float(
+                  amplitude: 3,
+                  child: Container(
+                    width: 48,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      gradient: const LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [AppColors.gold, AppColors.amber],
+                      ),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: const Icon(
+                      Icons.lock_rounded,
+                      color: Colors.white,
+                      size: 22,
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 14),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Bugungi sandiq sizni kutmoqda',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w900,
+                          fontSize: 15,
+                          color: AppColors.ink,
+                        ),
+                      ),
+                      Text(
+                        bonus > 0
+                            ? "Ichida sovg'a bor · seriya bonusi +$bonus"
+                            : "Ichida sovg'a bor — oching!",
+                        style: TextStyle(
+                          fontSize: 12.5,
+                          color: AppColors.matn2,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const Icon(Icons.chevron_right_rounded, color: AppColors.gold),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Sandiq oynasi: sovg'a oynani ochish paytida beriladi (bir marta), sandiq
+/// bosilganda ko'rsatiladi. Himoya chiqsa alohida satr.
+Future<void> _sandiqOynasi(BuildContext context) async {
+  final natija = await progress.sandiqniOch(Random());
+  if (natija == null || !context.mounted) return;
+  final (ball, himoya) = natija;
+  await showGeneralDialog<void>(
+    context: context,
+    barrierDismissible: true,
+    barrierLabel: 'sandiq',
+    barrierColor: AppColors.deep.withValues(alpha: 0.75),
+    transitionDuration: const Duration(milliseconds: 380),
+    transitionBuilder: (context, a, _, child) => FadeTransition(
+      opacity: a,
+      child: ScaleTransition(
+        scale: CurvedAnimation(parent: a, curve: Curves.easeOutBack),
+        child: child,
+      ),
+    ),
+    pageBuilder: (context, _, _) => _SandiqOynasi(ball: ball, himoya: himoya),
+  );
+}
+
+class _SandiqOynasi extends StatefulWidget {
+  final int ball;
+  final bool himoya;
+  const _SandiqOynasi({required this.ball, required this.himoya});
+
+  @override
+  State<_SandiqOynasi> createState() => _SandiqOynasiState();
+}
+
+class _SandiqOynasiState extends State<_SandiqOynasi> {
+  bool _ochildi = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Material(
+        color: Colors.transparent,
+        child: Container(
+          margin: const EdgeInsets.all(28),
+          padding: const EdgeInsets.fromLTRB(26, 28, 26, 22),
+          constraints: const BoxConstraints(maxWidth: 360),
+          decoration: BoxDecoration(
+            color: AppColors.karta,
+            borderRadius: BorderRadius.circular(28),
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                _ochildi ? 'Bugungi sovg\'a' : 'Kunlik sandiq',
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w800,
+                  color: AppColors.matn2,
+                ),
+              ),
+              const SizedBox(height: 18),
+              XazinaSandigi(
+                bonus: widget.ball,
+                onOchildi: () {
+                  Tovush.sandiq();
+                  setState(() => _ochildi = true);
+                },
+              ),
+              if (_ochildi && widget.himoya) ...[
+                const SizedBox(height: 10),
+                Reveal(
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      const Icon(
+                        Icons.shield_rounded,
+                        color: AppColors.teal,
+                        size: 20,
+                      ),
+                      const SizedBox(width: 6),
+                      Text(
+                        'Olov himoyasi +1',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w900,
+                          color: AppColors.teal,
+                          fontSize: 15,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+              const SizedBox(height: 18),
+              if (_ochildi)
+                SizedBox(
+                  width: double.infinity,
+                  child: FilledButton(
+                    onPressed: () => Navigator.pop(context),
+                    style: FilledButton.styleFrom(
+                      backgroundColor: AppColors.gold,
+                      padding: const EdgeInsets.symmetric(vertical: 14),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                    ),
+                    child: const Text(
+                      'Rahmat!',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w900,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                )
+              else
+                Text(
+                  'Ertaga yana keladi — har kuni bittadan',
+                  style: TextStyle(fontSize: 12, color: AppColors.matn3),
+                ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Olov oynasi: seriya nima, himoya qanday ishlaydi, sotib olish.
+Future<void> _olovOynasi(BuildContext context) {
+  return showModalBottomSheet<void>(
+    context: context,
+    backgroundColor: AppColors.karta,
+    shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(top: Radius.circular(26)),
+    ),
+    builder: (context) => AnimatedBuilder(
+      animation: progress,
+      builder: (context, _) {
+        final p = progress;
+        final olsaBoladi =
+            p.xp >= Progress.muzlatishNarxi &&
+            p.muzlatish < Progress.muzlatishChegarasi;
+        return Padding(
+          padding: const EdgeInsets.fromLTRB(22, 18, 22, 28),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  const Olov(size: 26),
+                  const SizedBox(width: 8),
+                  Text(
+                    p.streak == 0
+                        ? 'Olov hali yoqilmagan'
+                        : '${p.streak} kun ketma-ket',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w900,
+                      fontSize: 17,
+                      color: AppColors.ink,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 8),
+              Text(
+                'Olov har kuni kunlik maqsad (${Progress.kunlikMaqsad} savol) '
+                'bajarilganda yonadi. Bir kun o\'tkazib yuborilsa o\'chadi — '
+                'HIMOYA bo\'lsa, o\'sha kun uchun himoya sarflanadi va olov '
+                'saqlanib qoladi.',
+                style: TextStyle(color: AppColors.matn2, height: 1.45),
+              ),
+              const SizedBox(height: 14),
+              Row(
+                children: [
+                  for (var i = 0; i < Progress.muzlatishChegarasi; i++)
+                    Padding(
+                      padding: const EdgeInsets.only(right: 8),
+                      child: Icon(
+                        i < p.muzlatish
+                            ? Icons.shield_rounded
+                            : Icons.shield_outlined,
+                        size: 30,
+                        color: i < p.muzlatish
+                            ? AppColors.teal
+                            : AppColors.chiziq,
+                      ),
+                    ),
+                  const SizedBox(width: 4),
+                  Text(
+                    '${p.muzlatish} / ${Progress.muzlatishChegarasi} himoya',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w800,
+                      color: AppColors.matn2,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 14),
+              SizedBox(
+                width: double.infinity,
+                child: FilledButton.icon(
+                  onPressed: olsaBoladi
+                      ? () async {
+                          final ok = await progress.muzlatishSotibOl();
+                          if (ok) Haptic.ok();
+                        }
+                      : null,
+                  icon: const Icon(Icons.shield_rounded),
+                  label: Text(
+                    p.muzlatish >= Progress.muzlatishChegarasi
+                        ? 'Himoya to\'la'
+                        : 'Himoya olish — ${Progress.muzlatishNarxi} ball',
+                    style: const TextStyle(fontWeight: FontWeight.w800),
+                  ),
+                  style: FilledButton.styleFrom(
+                    backgroundColor: AppColors.teal,
+                    padding: const EdgeInsets.symmetric(vertical: 14),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                  ),
+                ),
+              ),
+              if (!olsaBoladi && p.muzlatish < Progress.muzlatishChegarasi)
+                Padding(
+                  padding: const EdgeInsets.only(top: 8),
+                  child: Text(
+                    'Ballingiz: ${p.xp}. Himoya kunlik sandiqdan ham chiqadi.',
+                    style: TextStyle(fontSize: 12, color: AppColors.matn3),
+                  ),
+                ),
+            ],
+          ),
+        );
+      },
+    ),
+  );
+}
+
+/// «Olov himoyalandi» — kecha o'tkazib yuborilgan, himoya ishlagan kun.
+/// Yo'qotish bo'lmagani aytiladi: o'quvchi «hammasi ketdi» demasin.
+class _HimoyaBanner extends StatelessWidget {
+  const _HimoyaBanner();
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      decoration: BoxDecoration(
+        color: AppColors.teal.withValues(alpha: 0.10),
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: AppColors.teal.withValues(alpha: 0.45)),
+      ),
+      child: Row(
+        children: [
+          const Icon(Icons.shield_rounded, color: AppColors.teal, size: 28),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Olov himoyalandi',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w900,
+                    fontSize: 15,
+                    color: AppColors.ink,
+                  ),
+                ),
+                Text(
+                  "Kecha o'tkazib yuborgan edingiz — himoya ishladi, "
+                  "${progress.streak} kunlik seriya saqlanib qoldi.",
+                  style: TextStyle(fontSize: 12.5, color: AppColors.matn2),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// Nishonlar kartasi — nechtasi ochilgani, oxirgi ochilganlar va
+/// keyingi maqsad. To'plam «to'ldirilishi» kerakligi ko'rinib turadi.
+class _NishonlarKarta extends StatelessWidget {
+  const _NishonlarKarta();
+
+  @override
+  Widget build(BuildContext context) {
+    final p = progress;
+    final ochilgan = nishonlar.where((n) => p.nishonOlinganmi(n.id)).toList();
+    final keyingi = nishonlar
+        .where((n) => !p.nishonOlinganmi(n.id))
+        .firstOrNull;
+    return Tactile(
+      child: Material(
+        color: AppColors.karta,
+        borderRadius: BorderRadius.circular(22),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(22),
+          onTap: () => Navigator.push(
+            context,
+            MaterialPageRoute(builder: (_) => const NishonlarEkrani()),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(16, 14, 14, 14),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          const Icon(
+                            Icons.emoji_events_rounded,
+                            color: AppColors.gold,
+                            size: 20,
+                          ),
+                          const SizedBox(width: 6),
+                          Text(
+                            'Nishonlar  ${ochilgan.length} / ${nishonlar.length}',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w900,
+                              fontSize: 15,
+                              color: AppColors.ink,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 8),
+                      Row(
+                        children: [
+                          for (final n in ochilgan.reversed.take(5))
+                            Padding(
+                              padding: const EdgeInsets.only(right: 6),
+                              child: CircleAvatar(
+                                radius: 15,
+                                backgroundColor: n.rang.withValues(alpha: 0.18),
+                                child: Icon(n.ikon, size: 16, color: n.rang),
+                              ),
+                            ),
+                          if (keyingi != null)
+                            Flexible(
+                              child: Text(
+                                ochilgan.isEmpty
+                                    ? 'Birinchisi: ${keyingi.tavsif}'
+                                    : 'Keyingisi: ${keyingi.tavsif}',
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: AppColors.matn2,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                const Icon(Icons.chevron_right_rounded, color: AppColors.gold),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }

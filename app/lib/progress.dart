@@ -1,3 +1,6 @@
+import 'nishonlar.dart';
+import 'dart:math';
+import 'dart:async';
 import 'services/manzil.dart';
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
@@ -13,6 +16,37 @@ class Progress extends ChangeNotifier {
   int xp = 0;
   int streak = 0;
   String? _lastActiveDay; // 'YYYY-MM-DD'
+
+  /// Olov himoyasi (muzlatish) — bir kun o'tkazib yuborilsa seriya
+  /// o'chmaydi, himoya sarflanadi. Yo'qotish qo'rquvi eng kuchli
+  /// «qaytish» sababi; himoya uni yumshatib, uzilishdan keyingi
+  /// «baribir hammasi ketdi» hissini oldini oladi. Ko'pi bilan 3 ta.
+  int muzlatish = 0;
+  static const int muzlatishNarxi = 50;
+  static const int muzlatishChegarasi = 3;
+  String? _himoyaKuni; // himoya ishlagan kun — banner shu kuni chiqadi
+
+  /// Kunlik sandiq — kunda bir marta, tasodifiy sovg'a; seriya uzun
+  /// bo'lsa sovg'a ham kattaroq. «Bugun nima chiqar ekan» — kutish
+  /// dofaminining eng sodda shakli.
+  String? _sandiqKuni;
+  int sandiqSoni = 0;
+
+  /// Ochilgan nishonlar: id → sana.
+  final Map<String, String> _nishonlar = {};
+
+  /// Chaqmoq raund (60 s) rekordi — birinchi urinishda to'g'ri javoblar.
+  int chaqmoqRekord = 0;
+
+  /// Rekord yangilansa `true`.
+  Future<bool> chaqmoqRekordniYangila(int togri) async {
+    if (togri <= chaqmoqRekord) return false;
+    chaqmoqRekord = togri;
+    await _save();
+    notifyListeners();
+    return true;
+  }
+
   final Set<String> _completed = {};
   // Har bir so'z uchun to'g'ri javoblar soni (0..masteryGoal). Kalit: darsId::arabcha
   final Map<String, int> _mastery = {};
@@ -153,6 +187,17 @@ class Progress extends ChangeNotifier {
     xp = _prefs!.getInt('xp') ?? 0;
     streak = _prefs!.getInt('streak') ?? 0;
     _lastActiveDay = _prefs!.getString('lastDay');
+    muzlatish = _prefs!.getInt('muzlatish') ?? 0;
+    _himoyaKuni = _prefs!.getString('himoyaKuni');
+    _sandiqKuni = _prefs!.getString('sandiqKuni');
+    sandiqSoni = _prefs!.getInt('sandiqSoni') ?? 0;
+    chaqmoqRekord = _prefs!.getInt('chaqmoqRekord') ?? 0;
+    final ns = _prefs!.getString('nishonlar');
+    if (ns != null) {
+      (json.decode(ns) as Map).forEach(
+        (k, v) => _nishonlar[k as String] = v as String,
+      );
+    }
     _completed.addAll(_prefs!.getStringList('completed') ?? []);
     final ms = _prefs!.getString('mastery');
     if (ms != null) {
@@ -445,9 +490,83 @@ class Progress extends ChangeNotifier {
     final yesterday = DateTime.now().subtract(const Duration(days: 1));
     final y =
         '${yesterday.year}-${yesterday.month.toString().padLeft(2, '0')}-${yesterday.day.toString().padLeft(2, '0')}';
-    if (_lastActiveDay != y) {
-      streak = 0; // seriya uzildi
+    if (_lastActiveDay == y) return;
+    // Aynan BIR kun o'tkazilgan va himoya bor — seriya saqlanadi,
+    // himoya sarflanadi. Ikki va undan ko'p kun bo'lsa himoya yetmaydi.
+    final oldingiKun = _sana(DateTime.now().subtract(const Duration(days: 2)));
+    if (_lastActiveDay == oldingiKun && muzlatish > 0 && streak > 0) {
+      muzlatish -= 1;
+      _lastActiveDay = y; // zanjir uzilmagan hisoblanadi
+      _himoyaKuni = today;
+      unawaited(_save());
+      return;
     }
+    streak = 0; // seriya uzildi
+  }
+
+  /// Bugun olov himoyasi ishladimi (bosh ekranda bir kun ko'rsatiladi).
+  bool get olovHimoyalandiBugun => _himoyaKuni == _today();
+
+  /// Himoya sotib olish — 50 ball. Ball yetmasa yoki 3 ta bo'lsa `false`.
+  Future<bool> muzlatishSotibOl() async {
+    if (xp < muzlatishNarxi || muzlatish >= muzlatishChegarasi) return false;
+    xp -= muzlatishNarxi;
+    muzlatish += 1;
+    await _save();
+    notifyListeners();
+    return true;
+  }
+
+  // --- Kunlik sandiq ---
+
+  bool get sandiqOchilganBugun => _sandiqKuni == _today();
+
+  /// Sandiqni ochadi: (ball, himoya berildimi). Bugun ochilgan bo'lsa `null`.
+  ///
+  /// Ball: ko'pincha kichik, ba'zan katta (o'zgaruvchan mukofot) + seriya
+  /// bonusi (har kun +1, ko'pi bilan +20) — uzun seriya sandiqni ham
+  /// qimmatlashtiradi. 10% hollarda himoya ham chiqadi (3 tadan kam bo'lsa).
+  Future<(int, bool)?> sandiqniOch(Random rnd) async {
+    if (sandiqOchilganBugun) return null;
+    final r = rnd.nextInt(100);
+    var ball = r < 55
+        ? 5
+        : r < 85
+        ? 10
+        : r < 97
+        ? 20
+        : 50;
+    ball += streak.clamp(0, 20);
+    final himoya = muzlatish < muzlatishChegarasi && rnd.nextInt(100) < 10;
+    if (himoya) muzlatish += 1;
+    _sandiqKuni = _today();
+    sandiqSoni += 1;
+    await addXp(ball); // saqlaydi va xabar beradi
+    return (ball, himoya);
+  }
+
+  // --- Nishonlar ---
+
+  bool nishonOlinganmi(String id) => _nishonlar.containsKey(id);
+  int get nishonSoni => _nishonlar.length;
+  String? nishonSanasi(String id) => _nishonlar[id];
+
+  /// Shartlari bajarilgan, hali ochilmagan nishonlarni ochadi va ularning
+  /// id'larini qaytaradi (UI «yangi nishon!» ko'rsatadi).
+  Future<List<String>> yangiNishonlar() async {
+    final yangi = <String>[];
+    for (final n in nishonlar) {
+      if (_nishonlar.containsKey(n.id)) continue;
+      if (n.shart(this)) {
+        _nishonlar[n.id] = _today();
+        yangi.add(n.id);
+      }
+    }
+    if (yangi.isNotEmpty) {
+      await _save();
+      notifyListeners();
+    }
+    return yangi;
   }
 
   Future<void> addXp(int amount) async {
@@ -530,6 +649,12 @@ class Progress extends ChangeNotifier {
     await p.setInt('xp', xp);
     await p.setInt('streak', streak);
     if (_lastActiveDay != null) await p.setString('lastDay', _lastActiveDay!);
+    await p.setInt('muzlatish', muzlatish);
+    if (_himoyaKuni != null) await p.setString('himoyaKuni', _himoyaKuni!);
+    if (_sandiqKuni != null) await p.setString('sandiqKuni', _sandiqKuni!);
+    await p.setInt('sandiqSoni', sandiqSoni);
+    await p.setInt('chaqmoqRekord', chaqmoqRekord);
+    await p.setString('nishonlar', json.encode(_nishonlar));
     await p.setStringList('completed', _completed.toList());
     await p.setString('mastery', json.encode(_mastery));
     await p.setString('modeMask', json.encode(_modeMask));

@@ -12,8 +12,16 @@ void main() {
     AppColors.rejim(true);
     expect(AppColors.qorongu, isTrue);
     expect(AppColors.karta, isNot(Colors.white));
-    expect(AppColors.ink.computeLuminance(), greaterThan(0.5), reason: "qorong'uda matn yorug'");
-    expect(AppColors.cream.computeLuminance(), lessThan(0.1), reason: "qorong'uda fon to'q");
+    expect(
+      AppColors.ink.computeLuminance(),
+      greaterThan(0.5),
+      reason: "qorong'uda matn yorug'",
+    );
+    expect(
+      AppColors.cream.computeLuminance(),
+      lessThan(0.1),
+      reason: "qorong'uda fon to'q",
+    );
     expect(AppColors.emerald, oldinEmerald);
     AppColors.rejim(false);
     expect(AppColors.ink.computeLuminance(), lessThan(0.1));

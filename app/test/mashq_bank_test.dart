@@ -32,21 +32,23 @@ void main() {
     expect(uz["يَوْجَى"], "muzore' (وَجِيَ)");
     expect(uz['لَمْ يَوْجَ'], "fe'li jahd (وَجِيَ)");
     expect(uz['مِيْجَاءٌ'], 'ismi olat (وَجِيَ)');
-    expect(uz.containsKey('وَجِيَ'), isFalse, reason: 'asosning o\'zi savol emas');
+    expect(
+      uz.containsKey('وَجِيَ'),
+      isFalse,
+      reason: 'asosning o\'zi savol emas',
+    );
     expect(e.length, 5);
   });
 
   test('tire bilan yozilgan juftliklar — asos sarlavhadan', () {
     final e = MashqBank.sarfDars(
-      dars(
-        [
-          {
-            'type': 'matn',
-            'uz': "مَوْثُوبُ – ismi maf'ul, لَمْ يَثِبْ – fe'li jahd, ثِبْ – amri hozir",
-          },
-        ],
-        title: "Misol fe'lining (وَثَبَ) sarfi",
-      ),
+      dars([
+        {
+          'type': 'matn',
+          'uz':
+              "مَوْثُوبُ – ismi maf'ul, لَمْ يَثِبْ – fe'li jahd, ثِبْ – amri hozir",
+        },
+      ], title: "Misol fe'lining (وَثَبَ) sarfi"),
     );
     expect(e.map((x) => x.uz), [
       "ismi maf'ul (وَثَبَ)",
@@ -76,11 +78,7 @@ void main() {
               'وَثَبْتُ، وَثَبْنا.',
         },
         {'type': 'bolim', 'uz': 'Qoida'},
-        {
-          'type': 'matn',
-          'uz':
-              'أ، ب، ت، ث، ج، ح، خ، د، ذ، ر، ز، س، ش، ص.',
-        },
+        {'type': 'matn', 'uz': 'أ، ب، ت، ث، ج، ح، خ، د، ذ، ر، ز، س، ش، ص.'},
       ]),
     );
     // Takrorlangan وَثَبْتُمَا bir marta — 13 ta element.
@@ -118,21 +116,23 @@ void main() {
 
   test("6 va 3 siyg'alik paradigmalar: amr — muxotab, ism — jins/son", () {
     final e = MashqBank.sarfDars(
-      dars(
-        [
-          {'type': 'bolim', 'uz': 'Amri hozir'},
-          {'type': 'matn', 'uz': 'رُدَّ، رُدَّا، رُدُّوْا، رُدِّي، رُدَّا، اُرْدُدْنَ'},
-          {'type': 'bolim', 'uz': 'Ismi foil'},
-          {
-            'type': 'matn',
-            'uz': 'فَارٌّ، فَارَّانِ، فَارُّونَ، فَارَّةٌ، فَارَّتَانِ، فَارَّاتٌ',
-          },
-          {'type': 'bolim', 'uz': 'Ismi zamon va makon'},
-          {'type': 'matn', 'uz': 'مَوْحًى، مَوْحَيَانِ، مَوَاحٍ'},
-          {'type': 'bolim', 'uz': "Amri g'oib"},
-          {'type': 'matn', 'uz': 'أ، ب، ت، ث، ج، ح'},
-        ],
-      ),
+      dars([
+        {'type': 'bolim', 'uz': 'Amri hozir'},
+        {
+          'type': 'matn',
+          'uz': 'رُدَّ، رُدَّا، رُدُّوْا، رُدِّي، رُدَّا، اُرْدُدْنَ',
+        },
+        {'type': 'bolim', 'uz': 'Ismi foil'},
+        {
+          'type': 'matn',
+          'uz':
+              'فَارٌّ، فَارَّانِ، فَارُّونَ، فَارَّةٌ، فَارَّتَانِ، فَارَّاتٌ',
+        },
+        {'type': 'bolim', 'uz': 'Ismi zamon va makon'},
+        {'type': 'matn', 'uz': 'مَوْحًى، مَوْحَيَانِ، مَوَاحٍ'},
+        {'type': 'bolim', 'uz': "Amri g'oib"},
+        {'type': 'matn', 'uz': 'أ، ب، ت، ث، ج، ح'},
+      ]),
     );
     final uz = {for (final x in e) x.ar: x.uz};
     expect(uz['رُدَّ'], 'Amri hozir · muxotab');
@@ -145,12 +145,9 @@ void main() {
 
   test("bo'limsiz paradigma dars sarlavhasini oladi", () {
     final e = MashqBank.sarfDars(
-      dars(
-        [
-          {'type': 'matn', 'uz': 'دُمْ، دُومَا، دُومُوا، دُومِي، دُومَا، دُمْنَ'},
-        ],
-        title: 'دام amri hozir',
-      ),
+      dars([
+        {'type': 'matn', 'uz': 'دُمْ، دُومَا، دُومُوا، دُومِي، دُومَا، دُمْنَ'},
+      ], title: 'دام amri hozir'),
     );
     expect(e.first.uz, 'دام amri hozir · muxotab');
     expect(e.length, 5, reason: 'takror دُومَا bir marta');

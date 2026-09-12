@@ -77,40 +77,46 @@ void main() {
     }
   });
 
-  testWidgets("misollarda o'zimni sinayman: tarjima yopiladi, bosilsa ochiladi",
-      (tester) async {
-    tester.view.physicalSize = const Size(900, 5000);
-    tester.view.devicePixelRatio = 1;
-    addTearDown(tester.view.resetPhysicalSize);
-    addTearDown(tester.view.resetDevicePixelRatio);
-    final dars = darslar.firstWhere(
-      (l) =>
-          l.blocks.where((b) => b.type == 'misol' && b.uz.isNotEmpty).length >=
-          2,
-    );
-    final misollar = dars.blocks
-        .where((b) => b.type == 'misol' && b.uz.isNotEmpty)
-        .toList();
-    await tester.pumpWidget(MaterialApp(home: SarfLessonScreen(lesson: dars)));
-    await tester.pump(const Duration(milliseconds: 800));
-    // Oddiy rejim: tarjimalar ko'rinadi, sinash tugmasi bor.
-    expect(find.text(misollar.first.uz), findsWidgets);
-    expect(find.text("Misollarda o'zimni sinayman"), findsOneWidget);
-    await tester.tap(find.text("Misollarda o'zimni sinayman"));
-    await tester.pump(const Duration(milliseconds: 400));
-    // Sinash rejimi: har misolda yopiq katak, tarjima yo'q.
-    final yopiq = find.text("Avval o'zingiz tarjima qiling, keyin bosing");
-    expect(yopiq, findsNWidgets(misollar.length));
-    expect(find.text("Tarjimalarni ko'rsatish"), findsOneWidget);
-    // Bittasi bosilsa — faqat o'sha ochiladi.
-    await tester.tap(yopiq.first);
-    // Avval bo'sh pump: AnimatedSwitcher yangi bolani ko'rib o'tishni
-    // boshlaydi; keyin vaqt o'tkaziladi — chiqib ketayotgan katak yo'qoladi.
-    await tester.pump();
-    await tester.pump(const Duration(milliseconds: 400));
-    await tester.pump(); // AnimatedSwitcher chiqib ketgan bolani tozalaydi
-    expect(yopiq, findsNWidgets(misollar.length - 1));
-    expect(find.text(misollar.first.uz), findsWidgets);
-    expect(tester.takeException(), isNull);
-  });
+  testWidgets(
+    "misollarda o'zimni sinayman: tarjima yopiladi, bosilsa ochiladi",
+    (tester) async {
+      tester.view.physicalSize = const Size(900, 5000);
+      tester.view.devicePixelRatio = 1;
+      addTearDown(tester.view.resetPhysicalSize);
+      addTearDown(tester.view.resetDevicePixelRatio);
+      final dars = darslar.firstWhere(
+        (l) =>
+            l.blocks
+                .where((b) => b.type == 'misol' && b.uz.isNotEmpty)
+                .length >=
+            2,
+      );
+      final misollar = dars.blocks
+          .where((b) => b.type == 'misol' && b.uz.isNotEmpty)
+          .toList();
+      await tester.pumpWidget(
+        MaterialApp(home: SarfLessonScreen(lesson: dars)),
+      );
+      await tester.pump(const Duration(milliseconds: 800));
+      // Oddiy rejim: tarjimalar ko'rinadi, sinash tugmasi bor.
+      expect(find.text(misollar.first.uz), findsWidgets);
+      expect(find.text("Misollarda o'zimni sinayman"), findsOneWidget);
+      await tester.tap(find.text("Misollarda o'zimni sinayman"));
+      await tester.pump(const Duration(milliseconds: 400));
+      // Sinash rejimi: har misolda yopiq katak, tarjima yo'q.
+      final yopiq = find.text("Avval o'zingiz tarjima qiling, keyin bosing");
+      expect(yopiq, findsNWidgets(misollar.length));
+      expect(find.text("Tarjimalarni ko'rsatish"), findsOneWidget);
+      // Bittasi bosilsa — faqat o'sha ochiladi.
+      await tester.tap(yopiq.first);
+      // Avval bo'sh pump: AnimatedSwitcher yangi bolani ko'rib o'tishni
+      // boshlaydi; keyin vaqt o'tkaziladi — chiqib ketayotgan katak yo'qoladi.
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 400));
+      await tester.pump(); // AnimatedSwitcher chiqib ketgan bolani tozalaydi
+      expect(yopiq, findsNWidgets(misollar.length - 1));
+      expect(find.text(misollar.first.uz), findsWidgets);
+      expect(tester.takeException(), isNull);
+    },
+  );
 }

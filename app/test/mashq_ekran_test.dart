@@ -197,11 +197,15 @@ void main() {
   ) async {
     await _ochish(tester, 'sinov-6');
     // Harflab yozish bo'lmasin — birinchi savol dars bosqichida variantli.
-    final oldingiXato = _elementlar.map((e) => progress.xatoSoni(e.kalit)).toList();
+    final oldingiXato = _elementlar
+        .map((e) => progress.xatoSoni(e.kalit))
+        .toList();
     await tester.tap(find.textContaining('Bilmadim'));
     await _kut(tester, 600);
     expect(find.textContaining("Mana to'g'ri javob"), findsOneWidget);
-    final keyingiXato = _elementlar.map((e) => progress.xatoSoni(e.kalit)).toList();
+    final keyingiXato = _elementlar
+        .map((e) => progress.xatoSoni(e.kalit))
+        .toList();
     expect(keyingiXato, oldingiXato, reason: 'bilmadim — xato emas');
     // Sessiya davom etadi va oxirigacha boradi.
     var qadam = 0;

@@ -137,7 +137,9 @@ void main() {
     test('qisqa bir so\'zli element yoziladi, uzun jumla — yo\'q', () {
       expect(MashqSessiya.yozibBoladi(el('كِتَاب', 'kitob')), isTrue);
       expect(
-        MashqSessiya.yozibBoladi(el('الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ', 'hamd')),
+        MashqSessiya.yozibBoladi(
+          el('الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ', 'hamd'),
+        ),
         isFalse,
       );
     });
@@ -165,20 +167,23 @@ void main() {
   });
 
   group('Raundlar', () {
-    test("8 savoldan keyin raund to'ladi, yangi raundda hisob nolga tushadi", () {
-      final s = sessiya();
-      for (var i = 0; i < MashqSessiya.raundHajmi; i++) {
+    test(
+      "8 savoldan keyin raund to'ladi, yangi raundda hisob nolga tushadi",
+      () {
+        final s = sessiya();
+        for (var i = 0; i < MashqSessiya.raundHajmi; i++) {
+          expect(s.raundTugadi, isFalse);
+          s.joriySavol();
+          s.javobBer(true, birinchiUrinish: true);
+        }
+        expect(s.raundTugadi, isTrue);
+        expect(s.raundYulduzi, 3);
+        s.yangiRaund();
+        expect(s.raundRaqami, 2);
+        expect(s.raunddaSoralgan, 0);
         expect(s.raundTugadi, isFalse);
-        s.joriySavol();
-        s.javobBer(true, birinchiUrinish: true);
-      }
-      expect(s.raundTugadi, isTrue);
-      expect(s.raundYulduzi, 3);
-      s.yangiRaund();
-      expect(s.raundRaqami, 2);
-      expect(s.raunddaSoralgan, 0);
-      expect(s.raundTugadi, isFalse);
-    });
+      },
+    );
 
     test('bitta xato — ikki yulduz, ikki xato — bitta', () {
       final s = sessiya();
@@ -212,38 +217,44 @@ void main() {
       toza('جَبَل', "tog'"),
     ];
 
-    test("3 marta xato — «qiyin»; 3 marta ketma-ket to'g'ri — chiqadi", () async {
-      const k = 'test::qiyin-1';
-      for (var i = 0; i < 3; i++) {
-        await app.progress.bumpWord(k, false);
-      }
-      expect(app.progress.qiyinMi(k), isTrue);
-      await app.progress.bumpWord(k, true);
-      await app.progress.bumpWord(k, true);
-      expect(app.progress.qiyinMi(k), isTrue, reason: 'ikkita yetmaydi');
-      await app.progress.bumpWord(k, false);
-      expect(app.progress.ketmaKetTogri(k), 0, reason: 'xato seriyani uzadi');
-      for (var i = 0; i < 3; i++) {
+    test(
+      "3 marta xato — «qiyin»; 3 marta ketma-ket to'g'ri — chiqadi",
+      () async {
+        const k = 'test::qiyin-1';
+        for (var i = 0; i < 3; i++) {
+          await app.progress.bumpWord(k, false);
+        }
+        expect(app.progress.qiyinMi(k), isTrue);
         await app.progress.bumpWord(k, true);
-      }
-      expect(app.progress.qiyinMi(k), isFalse);
-    });
+        await app.progress.bumpWord(k, true);
+        expect(app.progress.qiyinMi(k), isTrue, reason: 'ikkita yetmaydi');
+        await app.progress.bumpWord(k, false);
+        expect(app.progress.ketmaKetTogri(k), 0, reason: 'xato seriyani uzadi');
+        for (var i = 0; i < 3; i++) {
+          await app.progress.bumpWord(k, true);
+        }
+        expect(app.progress.qiyinMi(k), isFalse);
+      },
+    );
 
-    test("darsdan keyin qiyin bosqichi ochiladi va faqat qiyinlarni oladi", () async {
-      final qiyin = toza('نَهْر', 'daryo');
-      for (var i = 0; i < 3; i++) {
-        await app.progress.bumpWord(qiyin.kalit, false);
-      }
-      final s = sessiya(dars: tozaBeshta, oldin: [...tozaBeshta, qiyin]);
-      // Dars bosqichini xatosiz o'tamiz.
-      while (s.bosqich == Bosqich.dars) {
-        s.joriySavol();
-        s.javobBer(true, birinchiUrinish: true);
-      }
-      expect(s.bosqich, Bosqich.qiyin);
-      expect(s.qiyinlar.map((e) => e.kalit), [qiyin.kalit]);
-      expect(s.navbat.jami, 1);
-    });
+    test(
+      "darsdan keyin qiyin bosqichi ochiladi va faqat qiyinlarni oladi",
+      () async {
+        final qiyin = toza('نَهْر', 'daryo');
+        for (var i = 0; i < 3; i++) {
+          await app.progress.bumpWord(qiyin.kalit, false);
+        }
+        final s = sessiya(dars: tozaBeshta, oldin: [...tozaBeshta, qiyin]);
+        // Dars bosqichini xatosiz o'tamiz.
+        while (s.bosqich == Bosqich.dars) {
+          s.joriySavol();
+          s.javobBer(true, birinchiUrinish: true);
+        }
+        expect(s.bosqich, Bosqich.qiyin);
+        expect(s.qiyinlar.map((e) => e.kalit), [qiyin.kalit]);
+        expect(s.navbat.jami, 1);
+      },
+    );
 
     test("qiyin element bo'lmasa bosqich o'tkazib yuboriladi", () {
       final s = sessiya(dars: tozaBeshta, oldin: tozaBeshta);

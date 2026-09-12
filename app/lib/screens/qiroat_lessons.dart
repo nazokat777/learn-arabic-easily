@@ -13,6 +13,7 @@ import '../widgets/grammar_table.dart';
 import '../widgets/mastery_badge.dart';
 import '../widgets/premium_tile.dart';
 import '../widgets/rasm_belgi.dart';
+import '../widgets/yol.dart';
 import '../widgets/speak_button.dart';
 import 'qiroat_drill.dart';
 import 'qiroat_match.dart';
@@ -117,7 +118,18 @@ class QiroatLessonsList extends StatelessWidget {
                 delay: Duration(
                   milliseconds: 40 + (e.key < 12 ? e.key : 12) * 45,
                 ),
-                child: _lessonTile(context, e.value),
+                child: YolBand(
+                  rang: AppColors.teal,
+                  birinchi: e.key == 0,
+                  oxirgi: e.key == lessons.length - 1,
+                  bajarildi: progress.isMastered(e.value.completionId),
+                  joriy:
+                      e.key ==
+                      lessons.indexWhere(
+                        (l) => !progress.isMastered(l.completionId),
+                      ),
+                  child: _lessonTile(context, e.value),
+                ),
               ),
             ),
           ],

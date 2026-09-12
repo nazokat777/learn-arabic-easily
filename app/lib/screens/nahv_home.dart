@@ -9,6 +9,7 @@ import '../theme.dart';
 import '../widgets/entrance.dart';
 import '../widgets/mastery_badge.dart';
 import '../widgets/premium_tile.dart';
+import '../widgets/yol.dart';
 import '../widgets/grammar_table.dart';
 import '../widgets/speak_button.dart';
 import 'lesson/sentence_text.dart';
@@ -65,6 +66,9 @@ class NahvHome extends StatelessWidget {
             // qaytadan boshlanadi, aralashsa o'quvchi adashadi.
             ...() {
               final out = <Widget>[];
+              final joriy = lessons.indexWhere(
+                (l) => !progress.isMastered('nahv-${l.book}-${l.num}'),
+              );
               int? oxirgiKitob;
               for (var i = 0; i < lessons.length; i++) {
                 final l = lessons[i];
@@ -96,7 +100,14 @@ class NahvHome extends StatelessWidget {
                 out.add(
                   EntranceFade(
                     delay: Duration(milliseconds: 40 + (i < 12 ? i : 12) * 45),
-                    child: _tile(context, l),
+                    child: YolBand(
+                      rang: AppColors.coral,
+                      birinchi: i == 0,
+                      oxirgi: i == lessons.length - 1,
+                      bajarildi: progress.isMastered('nahv-${l.book}-${l.num}'),
+                      joriy: i == joriy,
+                      child: _tile(context, l),
+                    ),
                   ),
                 );
               }

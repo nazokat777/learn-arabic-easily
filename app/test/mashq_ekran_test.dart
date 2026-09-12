@@ -54,7 +54,9 @@ String? _korinayotgan(Iterable<String> nomzodlar) {
 
 /// Animatsiyalar tugashini kutadi. `pumpAndSettle` ishlatilmaydi: ekranda
 /// to'xtovsiz aylanadigan bezaklar bor va u hech qachon tinchimaydi.
-Future<void> _kut(WidgetTester tester, [int ms = 2200]) async {
+// 260 ms kutish lahzasi + 1500 ms xato ko'rsatish + o'tish animatsiyasi —
+// ikkita savol bir vaqtda daraxtda turmasin.
+Future<void> _kut(WidgetTester tester, [int ms = 2800]) async {
   for (var i = 0; i < 8; i++) {
     await tester.pump(Duration(milliseconds: ms ~/ 8));
   }

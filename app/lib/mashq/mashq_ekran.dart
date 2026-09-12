@@ -329,69 +329,87 @@ class _MashqEkranState extends State<MashqEkran> {
           ),
         ],
       ),
-      body: SafeArea(
-        child: Column(
-          children: [
-            if (_maqsadBajarildi)
-              const MaqsadBanner(ball: Progress.kunlikMukofotBalli),
-            if (_rekord)
-              MukofotBanner(
-                ikon: Icons.military_tech_rounded,
-                matn: 'Yangi rekord: $_ketmaKet ta ketma-ket!',
-              ),
-            Expanded(
-              child: Center(
-                child: ConstrainedBox(
-                  constraints: const BoxConstraints(maxWidth: 640),
-                  child: switch (_korinish) {
-                    _Korinish.yakun => _Yakun(
-                      s: _s,
-                      nom: widget.sarlavha,
-                      toliq: _toliqTugadi,
-                      engUzunKombo: _engUzunKombo,
-                      testgaOt: widget.testgaOt,
-                    ),
-                    _Korinish.bekat => RaundBekati(
-                      raund: _s.raundRaqami,
-                      yulduz: _s.raundYulduzi,
-                      togri: _s.raunddaTogri,
-                      jami: _s.raunddaSoralgan,
-                      ball: _ball - _raundBoshidagiBall,
-                      engUzunKombo: _engUzunKombo,
-                      keyingiNomi: _bosqichQisqaNomi,
-                      sandiq: _sandiqBonus > 0
-                          ? XazinaSandigi(
-                              bonus: _sandiqBonus,
-                              onOchildi: () {
-                                Tovush.sandiq();
-                                setState(() => _ball += _sandiqBonus);
-                                progress.addXp(_sandiqBonus);
-                              },
-                            )
-                          : null,
-                      onDavom: _davom,
-                      onYetadi: () {
-                        _toliqTugadi = false;
-                        _yakunla();
-                      },
-                    ),
-                    _Korinish.qiyinKarta => QiyinKarta(
-                      ar: _savol!.element.ar,
-                      uz: _savol!.element.uz,
-                      xatoSoni: progress.xatoSoni(_savol!.element.kalit),
-                      onOvoz: () => Tts.instance.speak(
-                        _savol!.element.ovoz,
-                        id: _savol!.element.kalit,
+      // Bosqich rangi fonda yumshoq nur bo'lib turadi: dars — zumrad,
+      // qiyin — marjon, takror — binafsha, yozish — oltin. Bosqich
+      // almashganda rang erib o'tadi — o'quvchi «boshqa joyga keldim»ni
+      // o'qimasdan sezadi.
+      body: AnimatedContainer(
+        duration: const Duration(milliseconds: 700),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              _bosqichRangi.withValues(alpha: 0.16),
+              _bosqichRangi.withValues(alpha: 0.0),
+            ],
+            stops: const [0, 0.45],
+          ),
+        ),
+        child: SafeArea(
+          child: Column(
+            children: [
+              if (_maqsadBajarildi)
+                const MaqsadBanner(ball: Progress.kunlikMukofotBalli),
+              if (_rekord)
+                MukofotBanner(
+                  ikon: Icons.military_tech_rounded,
+                  matn: 'Yangi rekord: $_ketmaKet ta ketma-ket!',
+                ),
+              Expanded(
+                child: Center(
+                  child: ConstrainedBox(
+                    constraints: const BoxConstraints(maxWidth: 640),
+                    child: switch (_korinish) {
+                      _Korinish.yakun => _Yakun(
+                        s: _s,
+                        nom: widget.sarlavha,
+                        toliq: _toliqTugadi,
+                        engUzunKombo: _engUzunKombo,
+                        testgaOt: widget.testgaOt,
                       ),
-                      onTayyor: () =>
-                          setState(() => _korinish = _Korinish.savol),
-                    ),
-                    _Korinish.savol => _savolKorinishi(),
-                  },
+                      _Korinish.bekat => RaundBekati(
+                        raund: _s.raundRaqami,
+                        yulduz: _s.raundYulduzi,
+                        togri: _s.raunddaTogri,
+                        jami: _s.raunddaSoralgan,
+                        ball: _ball - _raundBoshidagiBall,
+                        engUzunKombo: _engUzunKombo,
+                        keyingiNomi: _bosqichQisqaNomi,
+                        sandiq: _sandiqBonus > 0
+                            ? XazinaSandigi(
+                                bonus: _sandiqBonus,
+                                onOchildi: () {
+                                  Tovush.sandiq();
+                                  setState(() => _ball += _sandiqBonus);
+                                  progress.addXp(_sandiqBonus);
+                                },
+                              )
+                            : null,
+                        onDavom: _davom,
+                        onYetadi: () {
+                          _toliqTugadi = false;
+                          _yakunla();
+                        },
+                      ),
+                      _Korinish.qiyinKarta => QiyinKarta(
+                        ar: _savol!.element.ar,
+                        uz: _savol!.element.uz,
+                        xatoSoni: progress.xatoSoni(_savol!.element.kalit),
+                        onOvoz: () => Tts.instance.speak(
+                          _savol!.element.ovoz,
+                          id: _savol!.element.kalit,
+                        ),
+                        onTayyor: () =>
+                            setState(() => _korinish = _Korinish.savol),
+                      ),
+                      _Korinish.savol => _savolKorinishi(),
+                    },
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

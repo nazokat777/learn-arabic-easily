@@ -12,6 +12,7 @@ import '../widgets/mastery_badge.dart';
 import '../widgets/motion.dart';
 import '../widgets/premium_tile.dart';
 import '../widgets/speak_button.dart';
+import '../widgets/yol.dart';
 
 /// Sarf moduli — «Mukammal sarf darsligi» (Do'stmuhammad Nasriddin
 /// Bodariy, Toshkent, 2009).
@@ -39,8 +40,17 @@ class SarfHome extends StatelessWidget {
                     const SizedBox(height: 14),
                     for (var i = 0; i < darslar.length; i++)
                       Reveal(
-                        delay: Duration(milliseconds: 40 * i),
-                        child: _tile(context, darslar[i]),
+                        delay: Duration(milliseconds: 40 * (i < 12 ? i : 12)),
+                        child: YolBand(
+                          rang: AppColors.indigo,
+                          birinchi: i == 0,
+                          oxirgi: i == darslar.length - 1,
+                          bajarildi: progress.isMastered(
+                            darslar[i].completionId,
+                          ),
+                          joriy: i == _joriy(darslar),
+                          child: _tile(context, darslar[i]),
+                        ),
                       ),
                   ],
                 ),
@@ -48,6 +58,10 @@ class SarfHome extends StatelessWidget {
       ),
     );
   }
+
+  /// Navbatdagi dars — birinchi o'zlashtirilmagani.
+  int _joriy(List<SarfLesson> d) =>
+      d.indexWhere((l) => !progress.isMastered(l.completionId));
 
   Widget _tile(BuildContext context, SarfLesson l) {
     final mashq = MashqBank.sarfSoni(l);

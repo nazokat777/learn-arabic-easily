@@ -9,6 +9,7 @@ import '../../services/tts.dart';
 import '../../theme.dart';
 import '../../widgets/motion.dart';
 import '../../mashq/mukofot.dart';
+import '../../mashq/tovush.dart';
 import '../../widgets/ornament.dart';
 import '../../widgets/rasm_belgi.dart';
 import 'word_sheet.dart';
@@ -118,6 +119,7 @@ class _VocabStageState extends State<VocabStage> {
     final word = _chunk[_pi];
     final ok = i == _correct;
     ok ? Haptic.ok() : Haptic.wrong();
+    ok ? Tovush.togri(_ketmaKet + 1) : Tovush.xato();
     setState(() {
       _picked = i;
       _answered = true;

@@ -4,6 +4,7 @@ import '../widgets/uz_text.dart';
 import '../main.dart';
 import '../theme.dart';
 import '../mashq/mukofot.dart';
+import '../mashq/tovush.dart';
 import '../widgets/motion.dart';
 import '../services/tts.dart';
 
@@ -145,6 +146,7 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
         _fikr = Maqtov.xato(_maqtovRnd);
       }
     });
+    correct ? Tovush.togri(_ketmaKet) : Tovush.xato();
     if (correct) {
       _done++;
       if (!_queue.first.retried) _firstTry++;

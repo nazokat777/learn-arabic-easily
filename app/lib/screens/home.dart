@@ -9,6 +9,7 @@ import '../theme.dart';
 import 'sarf_home.dart';
 import '../uz_yozuv.dart';
 import '../widgets/motion.dart';
+import '../widgets/olov.dart';
 import '../widgets/ornament.dart';
 import 'alifbo_home.dart';
 import 'davom.dart';
@@ -328,7 +329,10 @@ class _Hero extends StatelessWidget {
                               color: AppColors.gold,
                             ),
                             _Chip(
-                              icon: Icons.local_fire_department_rounded,
+                              belgi: Olov(
+                                size: 18,
+                                xira: !progress.bugunSeriyada,
+                              ),
                               text: progress.streak == 0
                                   ? 'Seriya boshlang'
                                   : '${progress.streak} kun ketma-ket',
@@ -424,8 +428,8 @@ String _salom() {
 class _Chip extends StatelessWidget {
   final String text;
   final Color color;
-  final IconData? icon;
-  const _Chip({required this.text, required this.color, this.icon});
+  final Widget? belgi;
+  const _Chip({required this.text, required this.color, this.belgi});
 
   @override
   Widget build(BuildContext context) {
@@ -439,10 +443,7 @@ class _Chip extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          if (icon != null) ...[
-            Icon(icon, size: 14, color: fg),
-            const SizedBox(width: 4),
-          ],
+          if (belgi != null) ...[belgi!, const SizedBox(width: 5)],
           Text(
             text,
             style: TextStyle(

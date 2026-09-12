@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart' hide Text;
+import 'package:flutter/services.dart' show Clipboard, ClipboardData;
 import '../widgets/uz_text.dart';
 
 import '../main.dart';
@@ -13,6 +14,7 @@ import '../widgets/ornament.dart';
 import 'element.dart';
 import 'mukofot.dart';
 import 'sessiya.dart';
+import 'tovush.dart';
 import 'ultra.dart';
 
 /// Butun ilova uchun yagona mashq ekrani.
@@ -63,6 +65,7 @@ class _MashqEkranState extends State<MashqEkran> {
   bool? _tugriMiJavob; // «to'g'rimi» savolidagi javob
   bool _javobBerildi = false;
   bool _shuSavolgaXato = false; // shu savolda xato qilindimi
+  bool _kutilmoqda = false; // bosildi, natija hali ochilmadi
 
   int _ketmaKet = 0; // to'g'ri javoblar ketma-ketligi (kombo)
   int _engUzunKombo = 0;
@@ -200,7 +203,14 @@ class _MashqEkranState extends State<MashqEkran> {
   }
 
   Future<void> _javob(bool togri) async {
-    if (_javobBerildi) return;
+    if (_javobBerildi || _kutilmoqda) return;
+    // Kutish lahzasi: dofamin natijada emas, natijani KUTISHDA eng
+    // baland. Tanlangan variant oltin rangda «o'ylab turadi», keyin
+    // ochiladi — 260 ms, sezilarli lekin zeriktirmaydigan.
+    setState(() => _kutilmoqda = true);
+    await Future.delayed(const Duration(milliseconds: 260));
+    if (!mounted) return;
+    _kutilmoqda = false;
     var qoshildi = 0;
     var bonus = false;
     setState(() {
@@ -220,6 +230,7 @@ class _MashqEkranState extends State<MashqEkran> {
       }
     });
     togri ? Haptic.ok() : Haptic.wrong();
+    togri ? Tovush.togri(_ketmaKet) : Tovush.xato();
 
     final e = _savol!.element;
     await progress.bumpWord(e.kalit, togri);
@@ -254,6 +265,7 @@ class _MashqEkranState extends State<MashqEkran> {
     if (!mounted) return;
     // Daraja — butun ekranli lahza; o'quvchi o'zi yopadi.
     if (darajaOshdi) {
+      Tovush.daraja();
       await darajaOynasi(
         context,
         nom: progress.levelName,
@@ -275,6 +287,7 @@ class _MashqEkranState extends State<MashqEkran> {
       _sandiqBonus = _s.raundYulduzi == 3
           ? XazinaSandigi.tasodifiyBonus(_rnd)
           : 0;
+      Tovush.bekat();
       setState(() => _korinish = _Korinish.bekat);
       return;
     }
@@ -333,6 +346,7 @@ class _MashqEkranState extends State<MashqEkran> {
                   child: switch (_korinish) {
                     _Korinish.yakun => _Yakun(
                       s: _s,
+                      nom: widget.sarlavha,
                       toliq: _toliqTugadi,
                       engUzunKombo: _engUzunKombo,
                       testgaOt: widget.testgaOt,
@@ -349,6 +363,7 @@ class _MashqEkranState extends State<MashqEkran> {
                           ? XazinaSandigi(
                               bonus: _sandiqBonus,
                               onOchildi: () {
+                                Tovush.sandiq();
                                 setState(() => _ball += _sandiqBonus);
                                 progress.addXp(_sandiqBonus);
                               },
@@ -812,6 +827,10 @@ class _MashqEkranState extends State<MashqEkran> {
   Widget _variant(MashqSavol s, int i) {
     Color chegara = Colors.black12;
     Color fon = Colors.white;
+    if (_kutilmoqda && i == _tanlangan) {
+      chegara = AppColors.gold;
+      fon = AppColors.gold.withValues(alpha: 0.10);
+    }
     if (_javobBerildi) {
       if (i == s.togri) {
         chegara = AppColors.success;
@@ -839,7 +858,7 @@ class _MashqEkranState extends State<MashqEkran> {
                 borderRadius: BorderRadius.circular(14),
                 child: InkWell(
                   borderRadius: BorderRadius.circular(14),
-                  onTap: _javobBerildi
+                  onTap: (_javobBerildi || _kutilmoqda)
                       ? null
                       : () {
                           setState(() => _tanlangan = i);
@@ -944,11 +963,13 @@ class _MashqEkranState extends State<MashqEkran> {
 /// Sessiya yakuni: natija va «qaysi joyi qiyin kelyapti» tahlili.
 class _Yakun extends StatelessWidget {
   final MashqSessiya s;
+  final String nom;
   final bool toliq;
   final int engUzunKombo;
   final VoidCallback? testgaOt;
   const _Yakun({
     required this.s,
+    required this.nom,
     required this.toliq,
     required this.engUzunKombo,
     this.testgaOt,
@@ -1100,6 +1121,41 @@ class _Yakun extends StatelessWidget {
                 ),
               ],
               const SizedBox(height: 22),
+              // Natijani kursdoshlarga yuborish — ijtimoiy motivatsiya:
+              // guruhda o'qiganda «men ham qildim» eng kuchli turtki.
+              Reveal(
+                delay: const Duration(milliseconds: 380),
+                child: SizedBox(
+                  width: double.infinity,
+                  child: TextButton.icon(
+                    onPressed: () async {
+                      final matn =
+                          "Arab tili — $nom: ${s.birinchidanTogri}/"
+                          "${s.jamiSoralgan} to'g'ri ($foiz%), eng uzun seriya "
+                          "$engUzunKombo. Bugun ${progress.bugungiSavollar} savol, "
+                          "${progress.streak} kun ketma-ket.";
+                      await Clipboard.setData(ClipboardData(text: matn));
+                      if (!context.mounted) return;
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          content: Text(
+                            'Natija nusxalandi — kursdoshlarga yuboring!',
+                          ),
+                        ),
+                      );
+                    },
+                    icon: const Icon(Icons.ios_share_rounded, size: 18),
+                    label: const Text(
+                      'Natijani ulashish',
+                      style: TextStyle(fontWeight: FontWeight.w800),
+                    ),
+                    style: TextButton.styleFrom(
+                      foregroundColor: AppColors.emerald,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 6),
               if (testgaOt != null) ...[
                 Reveal(
                   delay: const Duration(milliseconds: 400),

@@ -16,6 +16,15 @@ class Progress extends ChangeNotifier {
   // Har bir so'z uchun to'g'ri javoblar soni (0..masteryGoal). Kalit: darsId::arabcha
   final Map<String, int> _mastery = {};
 
+  /// Element oxirgi marta qachon so'ralgan (kun raqami, 1970 dan).
+  /// Oraliqli takror uchun: unutish egri chizig'i bo'yicha so'z
+  /// darajasiga qarab 1, 2, 4, 7, 14, 30 kundan keyin qaytadi.
+  final Map<String, int> _korilganKun = {};
+
+  /// Yodlangan so'zlar soni — bilim daraxtining barglari.
+  int get yodlanganSoni =>
+      _mastery.values.where((v) => v >= masteryGoal).length;
+
   /// Ko'p usulli yodlash: so'z HAR usulda kamida bir marta to'g'ri o'tilishi kerak.
   /// Har usul — bitta bit. So'z «to'liq yodlangan» = barcha usullar bitlari yoqilgan.
   static const int masterModeCount =
@@ -154,6 +163,12 @@ class Progress extends ChangeNotifier {
     oxirgiModul = _prefs!.getString('oxirgiModul');
     oxirgiDarsId = _prefs!.getString('oxirgiDarsId');
     oxirgiDarsNomi = _prefs!.getString('oxirgiDarsNomi');
+    final kk = _prefs!.getString('korilganKun');
+    if (kk != null) {
+      (json.decode(kk) as Map).forEach(
+        (k, v) => _korilganKun[k as String] = (v as num).toInt(),
+      );
+    }
     final ks = _prefs!.getString('ketma');
     if (ks != null) {
       (json.decode(ks) as Map).forEach(
@@ -176,6 +191,7 @@ class Progress extends ChangeNotifier {
     final cur = _mastery[key] ?? 0;
     final next = (correct ? cur + 1 : cur - 1).clamp(0, masteryGoal);
     _mastery[key] = next;
+    _korilganKun[key] = _bugunRaqami();
     _urinish[key] = (_urinish[key] ?? 0) + 1;
     if (correct) {
       _ketma[key] = (_ketma[key] ?? 0) + 1;
@@ -196,6 +212,23 @@ class Progress extends ChangeNotifier {
 
   /// Element hech qachon so'ralmaganmi.
   bool yangiElement(String key) => !_urinish.containsKey(key);
+
+  static int _bugunRaqami() => DateTime.now().difference(DateTime(1970)).inDays;
+
+  /// Daraja bo'yicha qaytish oralig'i (kun): 0→1, 1→2, 2→4, 3→7, 4→14, 5→30.
+  static const List<int> _oraliq = [1, 2, 4, 7, 14, 30];
+
+  /// Bugun eslash vaqti kelgan elementlar — oxirgi ko'rilganidan beri
+  /// darajasiga mos oraliq o'tgan bo'lsa. Hech ko'rilmaganlar kirmaydi.
+  Iterable<String> get eslashKerakKalitlar {
+    final bugun = _bugunRaqami();
+    return _korilganKun.entries
+        .where((e) {
+          final d = (_mastery[e.key] ?? 0).clamp(0, _oraliq.length - 1);
+          return bugun - e.value >= _oraliq[d];
+        })
+        .map((e) => e.key);
+  }
 
   /// Element bo'yicha hozirgi ketma-ket to'g'ri javoblar soni.
   int ketmaKetTogri(String key) => _ketma[key] ?? 0;
@@ -403,6 +436,7 @@ class Progress extends ChangeNotifier {
     await p.setString('xato', json.encode(_xato));
     await p.setString('urinish', json.encode(_urinish));
     await p.setString('ketma', json.encode(_ketma));
+    await p.setString('korilganKun', json.encode(_korilganKun));
     if (_kunSana != null) await p.setString('kunSana', _kunSana!);
     await p.setInt('kunSoni', _kunSoni);
     await p.setBool('kunMukofot', _kunMukofotOlindi);

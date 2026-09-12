@@ -10,6 +10,12 @@ import 'sarf_home.dart';
 import '../uz_yozuv.dart';
 import '../widgets/motion.dart';
 import '../widgets/olov.dart';
+import '../widgets/daraxt.dart';
+import '../mashq/bank.dart';
+import '../mashq/element.dart';
+import '../mashq/mashq_ekran.dart';
+import '../rasm.dart';
+import '../services/tts.dart';
 import '../widgets/ornament.dart';
 import 'alifbo_home.dart';
 import 'davom.dart';
@@ -62,6 +68,25 @@ class HomeScreen extends StatelessWidget {
                       child: _DavomKarta(nom: progress.oxirgiDarsNomi ?? ''),
                     ),
                   ],
+                  const SizedBox(height: 12),
+                  const Reveal(
+                    delay: Duration(milliseconds: 115),
+                    child: _DaraxtKartasi(),
+                  ),
+                  if (progress.eslashKerakKalitlar.isNotEmpty) ...[
+                    const SizedBox(height: 12),
+                    Reveal(
+                      delay: const Duration(milliseconds: 118),
+                      child: _EslashKartasi(
+                        soni: progress.eslashKerakKalitlar.length,
+                      ),
+                    ),
+                  ],
+                  const SizedBox(height: 12),
+                  const Reveal(
+                    delay: Duration(milliseconds: 122),
+                    child: _BugungiSoz(),
+                  ),
                   if (progress.qiyinKalitlar.isNotEmpty) ...[
                     const SizedBox(height: 12),
                     Reveal(
@@ -656,6 +681,245 @@ class _Hafta extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+/// Bilim daraxti kartasi — daraja shoxlarni, yodlangan so'zlar
+/// barglarni o'stiradi.
+class _DaraxtKartasi extends StatelessWidget {
+  const _DaraxtKartasi();
+
+  @override
+  Widget build(BuildContext context) {
+    final barglar = progress.yodlanganSoni;
+    return Container(
+      padding: const EdgeInsets.fromLTRB(16, 12, 16, 10),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(22),
+        boxShadow: [
+          BoxShadow(
+            color: AppColors.ink.withValues(alpha: 0.05),
+            blurRadius: 20,
+            offset: const Offset(0, 8),
+          ),
+        ],
+      ),
+      child: Column(
+        children: [
+          BilimDaraxti(daraja: progress.level, barglar: barglar),
+          const SizedBox(height: 4),
+          Text(
+            barglar == 0
+                ? 'Bilim daraxtingiz — har yodlangan so\'z bitta barg'
+                : 'Bilim daraxtingiz: $barglar barg · ${progress.level}-daraja shox',
+            style: const TextStyle(fontSize: 12.5, color: Colors.black54),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// «Eslash vaqti» — oraliqli takror (Ebbinghaus): yodlangan so'z
+/// unutilishidan sal oldin qaytariladi. Har kuni kichik, aniq vazifa —
+/// qaytishning eng pedagogik sababi.
+class _EslashKartasi extends StatelessWidget {
+  final int soni;
+  const _EslashKartasi({required this.soni});
+
+  @override
+  Widget build(BuildContext context) {
+    return Tactile(
+      child: Material(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(18),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(18),
+          onTap: () {
+            final kalitlar = progress.eslashKerakKalitlar.toSet();
+            final elementlar = MashqBank.kalitlarBoyicha(kalitlar);
+            if (elementlar.isEmpty) return;
+            final darsniki = elementlar.take(20).toList();
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (_) => MashqEkran(
+                  sarlavha: 'Eslash vaqti',
+                  darsniki: darsniki,
+                  oldingilar: MashqBank.qiyinHavzasi(darsniki),
+                ),
+              ),
+            );
+          },
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(18),
+              border: Border.all(
+                color: AppColors.indigo.withValues(alpha: 0.4),
+                width: 1.4,
+              ),
+            ),
+            child: Row(
+              children: [
+                Container(
+                  width: 42,
+                  height: 42,
+                  decoration: BoxDecoration(
+                    color: AppColors.indigo.withValues(alpha: 0.12),
+                    shape: BoxShape.circle,
+                  ),
+                  child: const Icon(
+                    Icons.hourglass_top_rounded,
+                    color: AppColors.indigo,
+                  ),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Eslash vaqti keldi: $soni so\'z',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.w800,
+                          fontSize: 15,
+                          color: AppColors.ink,
+                        ),
+                      ),
+                      const Text(
+                        'Unutilishidan oldin qaytaring — 5 daqiqa yetadi',
+                        style: TextStyle(fontSize: 12.5, color: Colors.black54),
+                      ),
+                    ],
+                  ),
+                ),
+                const Icon(
+                  Icons.arrow_forward_rounded,
+                  color: AppColors.indigo,
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Bugungi so'z — darsni ochmasdan ham bitta so'z: ko'rish, eshitish,
+/// «bildim». Kunlik maqsadga 1 savol qo'shiladi — «boshlab qo'ydim»
+/// hissi eng kichik qadamdan tug'iladi.
+class _BugungiSoz extends StatefulWidget {
+  const _BugungiSoz();
+
+  @override
+  State<_BugungiSoz> createState() => _BugungiSozState();
+}
+
+class _BugungiSozState extends State<_BugungiSoz> {
+  static MashqElement? _soz;
+  static int _sozKuni = -1;
+  bool _bildim = false;
+
+  MashqElement? _bugungi() {
+    final kun = DateTime.now().difference(DateTime(1970)).inDays;
+    if (_sozKuni == kun) return _soz;
+    // Qiroat lug'atidan — konkret, qisqa; kun raqami tanlaydi.
+    final havza = <MashqElement>[
+      for (final l in repo.qiroatLessons) ...MashqBank.qiroatDars(l),
+    ];
+    if (havza.isEmpty) return null;
+    _soz = havza[kun % havza.length];
+    _sozKuni = kun;
+    return _soz;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final e = _bugungi();
+    if (e == null) return const SizedBox.shrink();
+    final rasm = Rasm.topish(e.uz);
+    return Container(
+      padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
+      decoration: BoxDecoration(
+        color: AppColors.cream,
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: AppColors.gold.withValues(alpha: 0.4)),
+      ),
+      child: Row(
+        children: [
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  "BUGUNGI SO'Z",
+                  style: TextStyle(
+                    fontSize: 11,
+                    fontWeight: FontWeight.w900,
+                    color: AppColors.gold,
+                    letterSpacing: 1.2,
+                  ),
+                ),
+                const SizedBox(height: 4),
+                Row(
+                  children: [
+                    if (rasm != null) ...[
+                      Text(rasm, style: const TextStyle(fontSize: 22)),
+                      const SizedBox(width: 8),
+                    ],
+                    Directionality(
+                      textDirection: TextDirection.rtl,
+                      child: Text(
+                        e.ar,
+                        style: AppTheme.arabic(
+                          size: 28,
+                          color: AppColors.emerald,
+                          w: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Text(
+                  e.uz,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.w700,
+                    color: AppColors.ink,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          IconButton(
+            onPressed: () => Tts.instance.speak(e.ovoz, id: e.kalit),
+            icon: const Icon(Icons.volume_up_rounded, color: AppColors.emerald),
+          ),
+          _bildim
+              ? const Icon(Icons.check_circle_rounded, color: AppColors.success)
+              : FilledButton(
+                  onPressed: () {
+                    Haptic.ok();
+                    progress.bumpWord(e.kalit, true);
+                    setState(() => _bildim = true);
+                  },
+                  style: FilledButton.styleFrom(
+                    backgroundColor: AppColors.gold,
+                    padding: const EdgeInsets.symmetric(horizontal: 14),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                  child: const Text(
+                    'Bildim',
+                    style: TextStyle(fontWeight: FontWeight.w800),
+                  ),
+                ),
+        ],
+      ),
     );
   }
 }

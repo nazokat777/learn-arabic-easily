@@ -434,6 +434,10 @@ class MashqBank {
     for (final l in repo.sarfLessons) ...sarfDars(l),
   ];
 
+  /// Berilgan kalitlarga mos elementlar (eslash vaqti kelganlar uchun).
+  static List<MashqElement> kalitlarBoyicha(Set<String> kalitlar) =>
+      hammasi().where((e) => kalitlar.contains(e.kalit)).toList();
+
   /// O'quvchi ko'p adashgan («qiyin») elementlar — hamma moduldan.
   ///
   /// Eng ko'p xato qilingani birinchi: mashq aynan shundan boshlansin.

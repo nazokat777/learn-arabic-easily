@@ -258,55 +258,157 @@ class SarfLessonScreen extends StatelessWidget {
 /// Kitobda 14 shakl bitta uzun satrda vergul bilan keladi; o'quvchi
 /// «qaysi biri muxotabot?» deb sanab o'tiradi. Jadvalda esa har shakl
 /// o'z nomi bilan turadi — mashqdagi savolga tayyor.
-class _Paradigma extends StatelessWidget {
+class _Paradigma extends StatefulWidget {
   final List<(String, String)> shakllar;
   const _Paradigma({required this.shakllar});
 
   @override
+  State<_Paradigma> createState() => _ParadigmaState();
+}
+
+/// Paradigma jadvali ikki rejimda: KO'RISH (kitobdagidek, bosilsa o'qiydi)
+/// va SINASH — shakllar yopiladi, faqat siyg'a nomi qoladi; o'quvchi
+/// avval eslashga urinib, keyin katakni ochadi.
+///
+/// Nega: qayta o'qish xotirada deyarli iz qoldirmaydi, ESLAB CHIQARISH
+/// esa eng kuchli yodlash usuli (retrieval practice). Jadval o'sha —
+/// kitob mazmuni o'zgarmadi — faqat unga «o'zingni sina» tugmasi qo'shildi.
+class _ParadigmaState extends State<_Paradigma> {
+  bool _sinash = false;
+  final Set<int> _ochilgan = {};
+
+  void _rejim() {
+    setState(() {
+      _sinash = !_sinash;
+      _ochilgan.clear();
+    });
+  }
+
+  void _katak(int i, String shakl) {
+    if (_sinash && !_ochilgan.contains(i)) {
+      Haptic.tap();
+      setState(() => _ochilgan.add(i));
+    }
+    Tts.instance.speak(shakl, id: 'p$shakl');
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Wrap(
-      spacing: 8,
-      runSpacing: 8,
+    final shakllar = widget.shakllar;
+    final hammasi = _sinash && _ochilgan.length == shakllar.length;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        for (final (shakl, nom) in shakllar)
-          // Katakka bosilsa shakl o'qib beriladi — sarf quloq bilan
-          // ham yodlanadi, ayniqsa harakatlar farqi (فَعِلَ / فَعُلَ).
-          InkWell(
-            borderRadius: BorderRadius.circular(12),
-            onTap: () => Tts.instance.speak(shakl, id: 'p$shakl'),
-            child: Container(
-              constraints: const BoxConstraints(minWidth: 96),
-              padding: const EdgeInsets.fromLTRB(12, 8, 12, 6),
-              decoration: BoxDecoration(
-                color: AppColors.karta,
-                borderRadius: BorderRadius.circular(12),
-                border: Border.all(
-                  color: AppColors.indigo.withValues(alpha: 0.25),
+        Row(
+          children: [
+            if (_sinash)
+              Text(
+                hammasi
+                    ? "Hammasi ochildi — yana sinab ko'ring"
+                    : '${_ochilgan.length} / ${shakllar.length} ochildi · '
+                          'avval eslang, keyin bosing',
+                style: TextStyle(
+                  fontSize: 11.5,
+                  fontWeight: FontWeight.w700,
+                  color: hammasi ? AppColors.success : AppColors.matn2,
                 ),
               ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Directionality(
-                    textDirection: TextDirection.rtl,
-                    child: Text(
-                      shakl,
-                      style: AppTheme.arabic(size: 22, color: AppColors.ink),
-                    ),
-                  ),
-                  const SizedBox(height: 2),
-                  Text(
-                    nom,
-                    style: TextStyle(
-                      fontSize: 10.5,
-                      color: AppColors.matn2,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                ],
+            const Spacer(),
+            TextButton.icon(
+              onPressed: _rejim,
+              icon: Icon(
+                _sinash ? Icons.visibility_rounded : Icons.psychology_rounded,
+                size: 16,
+              ),
+              label: Text(
+                _sinash ? "Ko'rsatish" : "O'zimni sinayman",
+                style: const TextStyle(
+                  fontWeight: FontWeight.w800,
+                  fontSize: 12,
+                ),
+              ),
+              style: TextButton.styleFrom(
+                foregroundColor: AppColors.indigo,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 10,
+                  vertical: 4,
+                ),
+                visualDensity: VisualDensity.compact,
               ),
             ),
-          ),
+          ],
+        ),
+        Wrap(
+          spacing: 8,
+          runSpacing: 8,
+          children: [
+            for (final (i, (shakl, nom)) in shakllar.indexed)
+              // Katakka bosilsa shakl o'qib beriladi — sarf quloq bilan
+              // ham yodlanadi, ayniqsa harakatlar farqi (فَعِلَ / فَعُلَ).
+              InkWell(
+                borderRadius: BorderRadius.circular(12),
+                onTap: () => _katak(i, shakl),
+                child: AnimatedContainer(
+                  duration: const Duration(milliseconds: 260),
+                  curve: Curves.easeOutCubic,
+                  constraints: const BoxConstraints(minWidth: 96),
+                  padding: const EdgeInsets.fromLTRB(12, 8, 12, 6),
+                  decoration: BoxDecoration(
+                    color: _sinash && !_ochilgan.contains(i)
+                        ? AppColors.indigo.withValues(alpha: 0.08)
+                        : AppColors.karta,
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(
+                      color: _sinash && _ochilgan.contains(i)
+                          ? AppColors.success.withValues(alpha: 0.6)
+                          : AppColors.indigo.withValues(alpha: 0.25),
+                    ),
+                  ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      AnimatedSwitcher(
+                        duration: const Duration(milliseconds: 260),
+                        child: _sinash && !_ochilgan.contains(i)
+                            ? Container(
+                                key: const ValueKey('yopiq'),
+                                height: 31,
+                                alignment: Alignment.center,
+                                child: Icon(
+                                  Icons.help_outline_rounded,
+                                  size: 20,
+                                  color: AppColors.indigo.withValues(
+                                    alpha: 0.7,
+                                  ),
+                                ),
+                              )
+                            : Directionality(
+                                key: const ValueKey('ochiq'),
+                                textDirection: TextDirection.rtl,
+                                child: Text(
+                                  shakl,
+                                  style: AppTheme.arabic(
+                                    size: 22,
+                                    color: AppColors.ink,
+                                  ),
+                                ),
+                              ),
+                      ),
+                      const SizedBox(height: 2),
+                      Text(
+                        nom,
+                        style: TextStyle(
+                          fontSize: 10.5,
+                          color: AppColors.matn2,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+          ],
+        ),
       ],
     );
   }

@@ -8,6 +8,7 @@ import '../widgets/mastery_badge.dart';
 import '../widgets/premium_tile.dart';
 import 'vocab_test.dart';
 import 'gap_tuzish_ekrani.dart';
+import 'kartochkalar.dart';
 import 'word_game.dart';
 
 /// «Mashqlar» — lug'at testi va so'z yasash o'yini (o'rganilgan so'zlarni mustahkamlash).
@@ -26,6 +27,14 @@ class MashqlarHome extends StatelessWidget {
             _intro(),
             const SizedBox(height: 16),
             _chaqmoqPlitka(context),
+            PremiumTile(
+              title: 'Kartochkalar',
+              subtitle:
+                  "Svayp bilan tez takror: o'ngga — bildim, chapga — bilmadim",
+              icon: Icons.style_rounded,
+              accent: AppColors.teal,
+              onTap: () => kartochkalarniOch(context),
+            ),
             PremiumTile(
               title: 'Gap tuzish',
               subtitle: "O'zbekcha gapni arabcha so'zlardan tuzing",

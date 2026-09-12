@@ -71,6 +71,19 @@ class Progress extends ChangeNotifier {
   String? _kunSana;
   bool _kunMukofotOlindi = false;
 
+  /// Eng uzun ketma-ket to'g'ri javoblar rekordi (butun tarix).
+  int rekordKombo = 0;
+
+  /// Rekord yangilandimi. Faqat 5 dan boshlab — 1, 2, 3 «rekord»
+  /// bo'lsa so'z qadrsizlanadi.
+  Future<bool> rekordniYangila(int kombo) async {
+    if (kombo < 5 || kombo <= rekordKombo) return false;
+    rekordKombo = kombo;
+    await _save();
+    notifyListeners();
+    return true;
+  }
+
   /// Oxirgi ochilgan dars — bosh ekrandagi «Davom etish» uchun.
   /// Modul ('qiroat' | 'nahv' | 'sarf'), dars kaliti va ko'rsatiladigan nomi.
   String? oxirgiModul;
@@ -137,6 +150,7 @@ class Progress extends ChangeNotifier {
     _kunSoni = _prefs!.getInt('kunSoni') ?? 0;
     _kunMukofotOlindi = _prefs!.getBool('kunMukofot') ?? false;
     _maqsadKunlari.addAll(_prefs!.getStringList('maqsadKunlari') ?? []);
+    rekordKombo = _prefs!.getInt('rekordKombo') ?? 0;
     oxirgiModul = _prefs!.getString('oxirgiModul');
     oxirgiDarsId = _prefs!.getString('oxirgiDarsId');
     oxirgiDarsNomi = _prefs!.getString('oxirgiDarsNomi');
@@ -264,8 +278,7 @@ class Progress extends ChangeNotifier {
   bool get kunlikMaqsadBajarildi => bugungiSavollar >= kunlikMaqsad;
 
   /// Bugungi mukofot allaqachon olinganmi.
-  bool get kunlikMukofotOlindi =>
-      _kunSana == _today() && _kunMukofotOlindi;
+  bool get kunlikMukofotOlindi => _kunSana == _today() && _kunMukofotOlindi;
 
   void _kunlikQosh() {
     final bugun = _today();
@@ -328,8 +341,7 @@ class Progress extends ChangeNotifier {
   bool get bugunSeriyada => _lastActiveDay == _today();
 
   /// Shu kunda maqsad bajarilganmi.
-  bool maqsadBajarilganKun(DateTime kun) =>
-      _maqsadKunlari.contains(_sana(kun));
+  bool maqsadBajarilganKun(DateTime kun) => _maqsadKunlari.contains(_sana(kun));
 
   String _sana(DateTime n) =>
       '${n.year}-${n.month.toString().padLeft(2, '0')}-'
@@ -395,6 +407,7 @@ class Progress extends ChangeNotifier {
     await p.setInt('kunSoni', _kunSoni);
     await p.setBool('kunMukofot', _kunMukofotOlindi);
     await p.setStringList('maqsadKunlari', _maqsadKunlari.toList());
+    await p.setInt('rekordKombo', rekordKombo);
     if (oxirgiModul != null) {
       await p.setString('oxirgiModul', oxirgiModul!);
       await p.setString('oxirgiDarsId', oxirgiDarsId ?? '');

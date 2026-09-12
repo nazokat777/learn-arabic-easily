@@ -147,9 +147,7 @@ class _PortlashState extends State<Portlash>
             child: AnimatedBuilder(
               animation: _c,
               builder: (context, _) => _c.isAnimating
-                  ? CustomPaint(
-                      painter: _PortlashPainter(_zarralar, _c.value),
-                    )
+                  ? CustomPaint(painter: _PortlashPainter(_zarralar, _c.value))
                   : const SizedBox.shrink(),
             ),
           ),
@@ -232,9 +230,9 @@ class _UchuvchiBallState extends State<UchuvchiBall>
           if (!_c.isAnimating) return const SizedBox.shrink();
           final t = kExpoOut.transform(_c.value);
           final fade = _c.value < 0.6 ? 1.0 : 1 - (_c.value - 0.6) / 0.4;
-          final kattalik = 1.0 + 0.35 * Curves.elasticOut.transform(
-            _c.value.clamp(0, 0.5) * 2,
-          );
+          final kattalik =
+              1.0 +
+              0.35 * Curves.elasticOut.transform(_c.value.clamp(0, 0.5) * 2);
           return Transform.translate(
             offset: Offset(0, -70 * t),
             child: Transform.scale(
@@ -247,9 +245,7 @@ class _UchuvchiBallState extends State<UchuvchiBall>
                     fontWeight: FontWeight.w900,
                     fontSize: 22,
                     color: widget.rang,
-                    shadows: const [
-                      Shadow(color: Colors.white, blurRadius: 8),
-                    ],
+                    shadows: const [Shadow(color: Colors.white, blurRadius: 8)],
                   ),
                 ),
               ),
@@ -288,7 +284,11 @@ class KomboOlov extends StatelessWidget {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(Icons.local_fire_department_rounded, size: olcham, color: rang),
+            Icon(
+              Icons.local_fire_department_rounded,
+              size: olcham,
+              color: rang,
+            ),
             const SizedBox(width: 2),
             Text(
               '$ketmaKet',
@@ -417,6 +417,9 @@ class RaundBekati extends StatelessWidget {
   final VoidCallback onDavom;
   final VoidCallback onYetadi;
 
+  /// Mukammal raundda yulduzlar ostida ko'rsatiladigan sovg'a (ixtiyoriy).
+  final Widget? sandiq;
+
   const RaundBekati({
     super.key,
     required this.raund,
@@ -428,6 +431,7 @@ class RaundBekati extends StatelessWidget {
     required this.keyingiNomi,
     required this.onDavom,
     required this.onYetadi,
+    this.sandiq,
   });
 
   @override
@@ -444,6 +448,14 @@ class RaundBekati extends StatelessWidget {
           child: Column(
             children: [
               Yulduzlar(soni: yulduz),
+              if (sandiq != null) ...[
+                const SizedBox(height: 10),
+                Reveal(
+                  delay: const Duration(milliseconds: 1000),
+                  fromScale: 0.6,
+                  child: sandiq!,
+                ),
+              ],
               const SizedBox(height: 14),
               Reveal(
                 delay: const Duration(milliseconds: 900),
@@ -573,7 +585,10 @@ class _Korsatkich extends StatelessWidget {
               color: rang,
             ),
           ),
-          Text(nom, style: const TextStyle(fontSize: 12, color: Colors.black54)),
+          Text(
+            nom,
+            style: const TextStyle(fontSize: 12, color: Colors.black54),
+          ),
         ],
       ),
     );

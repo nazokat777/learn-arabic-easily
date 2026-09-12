@@ -13,6 +13,7 @@ import '../widgets/ornament.dart';
 import 'element.dart';
 import 'mukofot.dart';
 import 'sessiya.dart';
+import 'ultra.dart';
 
 /// Butun ilova uchun yagona mashq ekrani.
 ///
@@ -74,10 +75,11 @@ class _MashqEkranState extends State<MashqEkran> {
   String _uchuvchiMatn = '';
   String _fikrMatni = '';
   int _daraja = progress.level;
-  bool _darajaOshdi = false;
-  Timer? _darajaTaymeri;
   bool _maqsadBajarildi = false;
   Timer? _maqsadTaymeri;
+  bool _rekord = false;
+  Timer? _rekordTaymeri;
+  int _sandiqBonus = 0; // mukammal raund sovg'asi
 
   // Qiyin bosqichida allaqachon o'rgatilgan elementlar.
   final Set<String> _orgatilgan = {};
@@ -99,8 +101,8 @@ class _MashqEkranState extends State<MashqEkran> {
 
   @override
   void dispose() {
-    _darajaTaymeri?.cancel();
     _maqsadTaymeri?.cancel();
+    _rekordTaymeri?.cancel();
     Tts.instance.stop();
     super.dispose();
   }
@@ -181,6 +183,12 @@ class _MashqEkranState extends State<MashqEkran> {
   (int, bool) _mukofot() {
     var ball = 2 + (_ketmaKet ~/ 5);
     var bonus = false;
+    // Kunning birinchi javobi — «boshlab qo'ydingiz» bonusi: boshlangan
+    // ish tashlanmaydi, birinchi qadam eng qimmati.
+    if (progress.bugungiSavollar == 0) {
+      ball += 3;
+      bonus = true;
+    }
     if (_ketmaKet == 3) ball += 1;
     if (_ketmaKet == 5) ball += 2;
     if (_ketmaKet == 10) ball += 5;
@@ -226,20 +234,33 @@ class _MashqEkranState extends State<MashqEkran> {
         if (mounted) setState(() => _maqsadBajarildi = false);
       });
     }
+    var darajaOshdi = false;
     if (togri) {
       await progress.addXp(qoshildi);
       if (progress.level > _daraja) {
         _daraja = progress.level;
-        if (mounted) setState(() => _darajaOshdi = true);
-        _darajaTaymeri?.cancel();
-        _darajaTaymeri = Timer(const Duration(milliseconds: 2600), () {
-          if (mounted) setState(() => _darajaOshdi = false);
+        darajaOshdi = true;
+      }
+      if (await progress.rekordniYangila(_ketmaKet)) {
+        if (mounted) setState(() => _rekord = true);
+        _rekordTaymeri?.cancel();
+        _rekordTaymeri = Timer(const Duration(milliseconds: 2600), () {
+          if (mounted) setState(() => _rekord = false);
         });
       }
     }
 
     await Future.delayed(Duration(milliseconds: togri ? 700 : 1500));
     if (!mounted) return;
+    // Daraja — butun ekranli lahza; o'quvchi o'zi yopadi.
+    if (darajaOshdi) {
+      await darajaOynasi(
+        context,
+        nom: progress.levelName,
+        daraja: progress.level,
+      );
+      if (!mounted) return;
+    }
 
     final oldingiBosqich = _s.bosqich;
     _s.javobBer(togri, birinchiUrinish: !_shuSavolgaXato);
@@ -251,6 +272,9 @@ class _MashqEkranState extends State<MashqEkran> {
     // Raund to'ldi yoki bosqich almashdi — bekat.
     if (_s.raundTugadi ||
         (_s.bosqich != oldingiBosqich && _s.raunddaSoralgan >= 3)) {
+      _sandiqBonus = _s.raundYulduzi == 3
+          ? XazinaSandigi.tasodifiyBonus(_rnd)
+          : 0;
       setState(() => _korinish = _Korinish.bekat);
       return;
     }
@@ -297,8 +321,11 @@ class _MashqEkranState extends State<MashqEkran> {
           children: [
             if (_maqsadBajarildi)
               const MaqsadBanner(ball: Progress.kunlikMukofotBalli),
-            if (_darajaOshdi)
-              DarajaBanner(nom: progress.levelName, daraja: progress.level),
+            if (_rekord)
+              MukofotBanner(
+                ikon: Icons.military_tech_rounded,
+                matn: 'Yangi rekord: $_ketmaKet ta ketma-ket!',
+              ),
             Expanded(
               child: Center(
                 child: ConstrainedBox(
@@ -318,6 +345,15 @@ class _MashqEkranState extends State<MashqEkran> {
                       ball: _ball - _raundBoshidagiBall,
                       engUzunKombo: _engUzunKombo,
                       keyingiNomi: _bosqichQisqaNomi,
+                      sandiq: _sandiqBonus > 0
+                          ? XazinaSandigi(
+                              bonus: _sandiqBonus,
+                              onOchildi: () {
+                                setState(() => _ball += _sandiqBonus);
+                                progress.addXp(_sandiqBonus);
+                              },
+                            )
+                          : null,
                       onDavom: _davom,
                       onYetadi: () {
                         _toliqTugadi = false;
@@ -379,13 +415,19 @@ class _MashqEkranState extends State<MashqEkran> {
                 rang: _bosqichRangi,
               ),
               const SizedBox(height: 4),
-              Align(
-                alignment: Alignment.centerRight,
-                child: Text(
-                  '${_s.raundRaqami}-raund · '
-                  '${MashqSessiya.raundHajmi - _s.raunddaSoralgan} ta qoldi',
-                  style: const TextStyle(fontSize: 11.5, color: Colors.black45),
-                ),
+              Row(
+                children: [
+                  KomboMarra(ketmaKet: _ketmaKet),
+                  const Spacer(),
+                  Text(
+                    '${_s.raundRaqami}-raund · '
+                    '${MashqSessiya.raundHajmi - _s.raunddaSoralgan} ta qoldi',
+                    style: const TextStyle(
+                      fontSize: 11.5,
+                      color: Colors.black45,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
@@ -533,38 +575,44 @@ class _MashqEkranState extends State<MashqEkran> {
           style: const TextStyle(color: Colors.black54, fontSize: 13.5),
         ),
         const SizedBox(height: 12),
-        Stack(
-          clipBehavior: Clip.none,
-          alignment: Alignment.topCenter,
-          children: [
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 22),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withValues(alpha: 0.05),
-                    blurRadius: 14,
-                    offset: const Offset(0, 6),
-                  ),
-                ],
+        KomboNur(
+          ketmaKet: _ketmaKet,
+          child: Stack(
+            clipBehavior: Clip.none,
+            alignment: Alignment.topCenter,
+            children: [
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 18,
+                  vertical: 22,
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withValues(alpha: 0.05),
+                      blurRadius: 14,
+                      offset: const Offset(0, 6),
+                    ),
+                  ],
+                ),
+                child: Center(child: ichi),
               ),
-              child: Center(child: ichi),
-            ),
-            // Uchuvchi «+N» — karta tepasidan ko'tariladi.
-            Positioned(
-              top: -6,
-              child: UchuvchiBall(
-                trigger: _portlash == 0 ? null : _portlash,
-                matn: _uchuvchiMatn,
-                rang: _uchuvchiMatn.contains('bonus')
-                    ? AppColors.indigo
-                    : AppColors.gold,
+              // Uchuvchi «+N» — karta tepasidan ko'tariladi.
+              Positioned(
+                top: -6,
+                child: UchuvchiBall(
+                  trigger: _portlash == 0 ? null : _portlash,
+                  matn: _uchuvchiMatn,
+                  rang: _uchuvchiMatn.contains('bonus')
+                      ? AppColors.indigo
+                      : AppColors.gold,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
         const SizedBox(height: 16),
       ],

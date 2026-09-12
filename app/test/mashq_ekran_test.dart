@@ -63,6 +63,12 @@ Future<void> _kut(WidgetTester tester, [int ms = 2200]) async {
 /// Joriy savolga javob beradi. Savol turini ko'rsatma matnidan aniqlaydi —
 /// foydalanuvchi ham ekrandan aynan shuni o'qiydi.
 Future<void> _javobBer(WidgetTester tester, {bool togri = true}) async {
+  // Daraja oynasi — butun ekranli; o'quvchi o'zi yopadi.
+  if (_bor('Davom etamiz!')) {
+    await tester.tap(find.text('Davom etamiz!'));
+    await _kut(tester);
+    return;
+  }
   // Raund bekati — «davom» bosiladi; qiyin so'z kartasi — «eslab oldim».
   if (_bor('Bugunga yetadi')) {
     await tester.tap(find.textContaining('Davom etish'));

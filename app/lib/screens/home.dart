@@ -535,6 +535,16 @@ class _XpPanel extends StatelessWidget {
 class _KunlikMaqsad extends StatelessWidget {
   const _KunlikMaqsad();
 
+  /// Marraga yaqinlashganda matn qizg'inlashadi — «goal gradient»:
+  /// odam marra yaqinida tezlashadi, shuni ko'rsatib qo'yamiz.
+  static String _maqsadMatni(int soni) {
+    final qoldi = Progress.kunlikMaqsad - soni;
+    if (soni == 0) return 'Bugungi maqsad: ${Progress.kunlikMaqsad} savol';
+    if (qoldi <= 3) return 'Faqat $qoldi ta qoldi — olovni yoqing!';
+    if (qoldi <= 8) return 'Yarmidan oshdingiz: $qoldi ta qoldi';
+    return 'Bugungi maqsad: $soni / ${Progress.kunlikMaqsad} savol';
+  }
+
   @override
   Widget build(BuildContext context) {
     final soni = progress.bugungiSavollar;
@@ -555,9 +565,7 @@ class _KunlikMaqsad extends StatelessWidget {
             const SizedBox(width: 6),
             Expanded(
               child: Text(
-                bajarildi
-                    ? 'Bugungi maqsad bajarildi!'
-                    : 'Bugungi maqsad: $soni / ${Progress.kunlikMaqsad} savol',
+                bajarildi ? 'Bugungi maqsad bajarildi!' : _maqsadMatni(soni),
                 style: TextStyle(
                   fontWeight: FontWeight.w800,
                   fontSize: 13,

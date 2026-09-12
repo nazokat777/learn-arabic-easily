@@ -73,6 +73,7 @@ Future<void> _javobBer(WidgetTester tester, {bool togri = true}) async {
   }
   // Raund bekati — «davom» bosiladi; qiyin so'z kartasi — «eslab oldim».
   if (_bor('Bugunga yetadi')) {
+    await tester.ensureVisible(find.textContaining('Davom etish'));
     await tester.tap(find.textContaining('Davom etish'));
     await _kut(tester);
     return;
@@ -248,6 +249,7 @@ void main() {
     expect(find.text('Bugunga yetadi'), findsOneWidget);
     // Bekat tugmalari kechikib (Reveal) chiqadi — animatsiya tugasin.
     await _kut(tester);
+    await tester.ensureVisible(find.text('Bugunga yetadi'));
     await tester.tap(find.text('Bugunga yetadi'));
     await _kut(tester);
     expect(find.text('Yaxshi dam oling'), findsOneWidget);

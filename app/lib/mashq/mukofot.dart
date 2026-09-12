@@ -2,6 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart' hide Text;
 
+import '../main.dart';
+import '../progress.dart';
 import '../theme.dart';
 import '../widgets/motion.dart';
 import '../widgets/ornament.dart';
@@ -478,7 +480,14 @@ class RaundBekati extends StatelessWidget {
                   style: TextStyle(color: AppColors.matn2, fontSize: 14),
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 14),
+              // Bekatda kunlik maqsad holati: «yana 6 ta — olov yonadi» —
+              // «yana bir raund» qarori aynan shu yerda beriladi.
+              const Reveal(
+                delay: Duration(milliseconds: 1020),
+                child: BugunChizigi(ixcham: true),
+              ),
+              const SizedBox(height: 14),
               Reveal(
                 delay: const Duration(milliseconds: 1060),
                 child: Row(
@@ -805,6 +814,144 @@ class QiyinKarta extends StatelessWidget {
                   'Eslab oldim',
                   style: TextStyle(fontWeight: FontWeight.w800, fontSize: 16),
                 ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// Yakundagi «Bugun» chizig'i — sessiya natijasini KUN natijasiga
+/// ulaydi: kunlik maqsadgacha qancha qoldi va bugun jami qancha ball.
+/// Marra yaqin ko'rinsa («yana 6 ta — olov yonadi») o'quvchi chiqib
+/// ketmay yana bir raund boshlaydi; maqsad bajarilgan bo'lsa olov
+/// holati tasdiqlanadi — bu «bugun yetarli» degan xotirjam yakun.
+class BugunChizigi extends StatelessWidget {
+  /// Ixcham: faqat bir qator (bekat uchun), chiziqsiz.
+  final bool ixcham;
+  const BugunChizigi({super.key, this.ixcham = false});
+
+  @override
+  Widget build(BuildContext context) {
+    final p = progress;
+    final soni = p.bugungiSavollar;
+    if (soni == 0) return const SizedBox.shrink();
+    final bajarildi = p.kunlikMaqsadBajarildi;
+    final qoldi = Progress.kunlikMaqsad - soni;
+    final rang = bajarildi ? AppColors.success : AppColors.coral;
+    final matn = bajarildi
+        ? (p.streak > 0
+              ? 'Bugungi maqsad bajarildi · ${p.streak} kun ketma-ket'
+              : 'Bugungi maqsad bajarildi')
+        : (qoldi <= 8
+              ? 'Yana $qoldi ta savol — olov yonadi'
+              : 'Bugun: $soni / ${Progress.kunlikMaqsad} savol');
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.fromLTRB(14, 10, 14, 10),
+      decoration: BoxDecoration(
+        color: rang.withValues(alpha: 0.08),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: rang.withValues(alpha: 0.35)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Icon(
+                bajarildi
+                    ? Icons.local_fire_department_rounded
+                    : Icons.track_changes_rounded,
+                size: 18,
+                color: rang,
+              ),
+              const SizedBox(width: 6),
+              Expanded(
+                child: Text(
+                  matn,
+                  style: TextStyle(
+                    fontWeight: FontWeight.w800,
+                    fontSize: 13.5,
+                    color: rang,
+                  ),
+                ),
+              ),
+              Text(
+                '+${p.bugungiBall} ball bugun',
+                style: const TextStyle(
+                  fontWeight: FontWeight.w900,
+                  fontSize: 12.5,
+                  color: AppColors.gold,
+                ),
+              ),
+            ],
+          ),
+          if (!ixcham) ...[
+            const SizedBox(height: 8),
+            SegmentliBar(
+              tolgan: soni.clamp(0, Progress.kunlikMaqsad),
+              jami: Progress.kunlikMaqsad,
+              rang: rang,
+              fon: rang.withValues(alpha: 0.14),
+            ),
+            const SizedBox(height: 6),
+            // Keyingi daraja yaqin bo'lsa — aniq, kichik marra.
+            Text(
+              'Keyingi darajagacha ${100 - p.xpInLevel} ball',
+              style: TextStyle(
+                fontSize: 11.5,
+                fontWeight: FontWeight.w700,
+                color: AppColors.matn3,
+              ),
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+}
+
+/// Chaqmoq raundning qolgan vaqti — yuqorida yupqa qizil chiziq va
+/// soniya. Oxirgi 10 soniyada rang marjonga o'tadi: shoshilish hissi.
+class VaqtChizigi extends StatelessWidget {
+  final int qolgan;
+  final int jami;
+  const VaqtChizigi({super.key, required this.qolgan, required this.jami});
+
+  @override
+  Widget build(BuildContext context) {
+    final oz = qolgan <= 10;
+    final rang = oz ? AppColors.coral : AppColors.amber;
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(20, 8, 20, 4),
+      child: Row(
+        children: [
+          Icon(Icons.bolt_rounded, size: 18, color: rang),
+          const SizedBox(width: 6),
+          Expanded(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(999),
+              child: LinearProgressIndicator(
+                value: (qolgan / jami).clamp(0, 1).toDouble(),
+                minHeight: 8,
+                color: rang,
+                backgroundColor: rang.withValues(alpha: 0.15),
+              ),
+            ),
+          ),
+          const SizedBox(width: 10),
+          Pulse(
+            trigger: oz ? qolgan : null, // oxirgi 10 s: har soniya urish
+            child: Text(
+              '$qolgan s',
+              style: TextStyle(
+                fontWeight: FontWeight.w900,
+                fontSize: 15,
+                color: rang,
+                fontFeatures: const [FontFeature.tabularFigures()],
               ),
             ),
           ),

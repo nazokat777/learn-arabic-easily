@@ -9,6 +9,8 @@ import '../../theme.dart';
 import '../../widgets/motion.dart';
 import '../../widgets/ornament.dart';
 import '../qiroat_lessons.dart' show QiroatLessonDetail, QiroatMashqTugmasi;
+import '../../mashq/mukofot.dart' show BugunChizigi;
+import '../nishonlar_ekrani.dart';
 import 'master_drill.dart';
 import 'quiz_flow.dart';
 import 'read_flow.dart';
@@ -45,7 +47,7 @@ class _LessonFlowState extends State<LessonFlow> {
     super.dispose();
   }
 
-  void _goDone() {
+  Future<void> _goDone() async {
     if (!progress.isCompleted(widget.lesson.completionId)) {
       _award(15); // darsni tugatgani uchun bonus
       progress.markCompleted(widget.lesson.completionId);
@@ -61,6 +63,12 @@ class _LessonFlowState extends State<LessonFlow> {
       );
     }
     setState(() => _step = _Step.done);
+    // Yangi nishon bo'lsa — yakun ko'ringach marosim.
+    final yangi = await progress.yangiNishonlar();
+    if (yangi.isNotEmpty && mounted) {
+      await Future.delayed(const Duration(milliseconds: 1100));
+      if (mounted) await nishonOynasi(context, yangi);
+    }
   }
 
   /// Testni boshidan topshirish — o'zlashtira olmaganlar uchun.
@@ -541,6 +549,11 @@ class _DoneView extends StatelessWidget {
                     ],
                   ),
                 ),
+              ),
+              const SizedBox(height: 16),
+              const Reveal(
+                delay: Duration(milliseconds: 450),
+                child: BugunChizigi(),
               ),
               if (!mastered) ...[
                 const SizedBox(height: 16),

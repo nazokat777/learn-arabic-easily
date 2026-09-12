@@ -3,6 +3,7 @@ import 'package:flutter/material.dart' hide Text;
 import '../widgets/uz_text.dart';
 import '../main.dart';
 import '../mashq/mukofot.dart';
+import '../mashq/tovush.dart';
 import '../widgets/motion.dart';
 import '../content.dart';
 import '../theme.dart';
@@ -80,6 +81,7 @@ class _QiroatMatchGameState extends State<QiroatMatchGame> {
       // Juftlash ham so'z yodlash darajasiga hissa qo'shadi (+1).
       progress.bumpWord('${widget.lesson.completionId}::${word.ar}', true);
       Haptic.ok();
+      Tovush.togri(_matched.length + 1);
       setState(() {
         _matched.add(word);
         _matchedTotal++;
@@ -104,6 +106,7 @@ class _QiroatMatchGameState extends State<QiroatMatchGame> {
       }
     } else {
       Haptic.wrong();
+      Tovush.xato();
       setState(() {
         _mistakes++;
         _wrong = true;

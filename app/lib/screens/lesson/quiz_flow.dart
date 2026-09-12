@@ -9,6 +9,7 @@ import '../../main.dart';
 import '../../mashq/mukofot.dart';
 import '../../services/tts.dart';
 import '../../theme.dart';
+import '../../mashq/tovush.dart';
 import '../../widgets/motion.dart';
 import 'vocab_flow.dart' show AwardXp;
 import 'word_sheet.dart';
@@ -99,6 +100,7 @@ class _QuizStageState extends State<QuizStage> {
     final q = _questions[_qi];
     final ok = i == q.correct;
     ok ? Haptic.ok() : Haptic.wrong();
+    ok ? Tovush.togri(_ketmaKet + 1) : Tovush.xato();
     setState(() {
       _picked = i;
       _answered = true;

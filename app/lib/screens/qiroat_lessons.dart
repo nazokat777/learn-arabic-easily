@@ -16,6 +16,7 @@ import '../widgets/rasm_belgi.dart';
 import '../widgets/yol.dart';
 import '../widgets/speak_button.dart';
 import 'qiroat_drill.dart';
+import 'tarjima_mashqi.dart';
 import 'qiroat_match.dart';
 import 'lesson/lesson_flow.dart';
 import 'lesson/master_drill.dart';
@@ -220,24 +221,11 @@ class QiroatLessonDetail extends StatelessWidget {
                 text: lesson.translation,
               ),
             ],
+            // Kitobdagi tarjima mashqi — yig'ma blok emas, ochiq va
+            // interaktiv: jumlalar alohida, javob bosilganda ochiladi.
             if (lesson.exercise.isNotEmpty) ...[
-              const SizedBox(height: 8),
-              _FoldBlock(
-                icon: Icons.edit_note_rounded,
-                title: 'Mashq',
-                text: lesson.exercise,
-              ),
-            ],
-            if (lesson.exerciseAnswer.isNotEmpty) ...[
-              const SizedBox(height: 8),
-              _FoldBlock(
-                icon: Icons.check_circle_rounded,
-                title: 'Mashqning javobi',
-                text: lesson.exerciseAnswer,
-                arabic: true,
-                vocab: lesson.vocab,
-                reading: lesson.reading,
-              ),
+              const SizedBox(height: 12),
+              TarjimaMashqi(lesson: lesson),
             ],
             const SizedBox(height: 24),
             _sectionLabel(

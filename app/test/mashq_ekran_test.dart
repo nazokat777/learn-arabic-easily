@@ -188,6 +188,28 @@ void main() {
     expect(find.textContaining('qiyin'), findsWidgets);
   });
 
+  testWidgets("«Bilmadim» javobni ko'rsatadi, xato sanamaydi, element qaytadi", (
+    tester,
+  ) async {
+    await _ochish(tester, 'sinov-6');
+    // Harflab yozish bo'lmasin — birinchi savol dars bosqichida variantli.
+    final oldingiXato = _elementlar.map((e) => progress.xatoSoni(e.kalit)).toList();
+    await tester.tap(find.textContaining('Bilmadim'));
+    await _kut(tester, 600);
+    expect(find.textContaining("Mana to'g'ri javob"), findsOneWidget);
+    final keyingiXato = _elementlar.map((e) => progress.xatoSoni(e.kalit)).toList();
+    expect(keyingiXato, oldingiXato, reason: 'bilmadim — xato emas');
+    // Sessiya davom etadi va oxirigacha boradi.
+    var qadam = 0;
+    while (!_tugadi() && qadam < 200) {
+      await _javobBer(tester);
+      qadam++;
+    }
+    expect(_tugadi(), isTrue);
+    // Ko'rsatilgan element navbatga qaytgani uchun tur toza emas — «Mukammal» emas.
+    expect(find.text('Mashq tugadi'), findsOneWidget);
+  });
+
   testWidgets("har 8 savoldan keyin bekat chiqadi, yulduzlar ko'rinadi", (
     tester,
   ) async {

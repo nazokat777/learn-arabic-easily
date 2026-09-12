@@ -67,6 +67,7 @@ class _MashqEkranState extends State<MashqEkran> {
   bool _javobBerildi = false;
   bool _shuSavolgaXato = false; // shu savolda xato qilindimi
   bool _kutilmoqda = false; // bosildi, natija hali ochilmadi
+  bool _bilmadim = false; // javob ko'rsatildi (jazosiz)
 
   int _ketmaKet = 0; // to'g'ri javoblar ketma-ketligi (kombo)
   int _engUzunKombo = 0;
@@ -145,6 +146,7 @@ class _MashqEkranState extends State<MashqEkran> {
       _tugriMiJavob = null;
       _javobBerildi = false;
       _shuSavolgaXato = false;
+      _bilmadim = false;
       _terilgan.clear();
       _harfTugmalari = s.turi == MashqTuri.harflabYoz
           ? _harflarniAralashtir(s.element.ar)
@@ -295,6 +297,41 @@ class _MashqEkranState extends State<MashqEkran> {
     _keyingi();
   }
 
+  /// «Bilmadim» — taxmin qilish o'rniga halol javob. Jazo yo'q: xato
+  /// sanalmaydi, seriya uzilmaydi; lekin element navbatga qaytadi va
+  /// tur «toza» hisoblanmaydi — o'rganish shart, o'tib ketish yo'q.
+  Future<void> _bilmadimBos() async {
+    if (_javobBerildi || _kutilmoqda) return;
+    final s = _savol!;
+    setState(() {
+      _javobBerildi = true;
+      _shuSavolgaXato = true;
+      _bilmadim = true;
+      _fikrMatni = "Mana to'g'ri javob — eslab qoling";
+    });
+    Haptic.tap();
+    if (s.element.ovoz.isNotEmpty) {
+      Tts.instance.speak(s.element.ovoz, id: s.element.kalit);
+    }
+    await Future.delayed(const Duration(milliseconds: 1900));
+    if (!mounted) return;
+    final oldingiBosqich = _s.bosqich;
+    _s.javobBer(false, birinchiUrinish: false);
+    if (_s.bosqich == Bosqich.tugadi) {
+      _toliqTugadi = true;
+      await _yakunla();
+      return;
+    }
+    if (_s.raundTugadi ||
+        (_s.bosqich != oldingiBosqich && _s.raunddaSoralgan >= 3)) {
+      _sandiqBonus = 0;
+      Tovush.bekat();
+      setState(() => _korinish = _Korinish.bekat);
+      return;
+    }
+    _keyingi();
+  }
+
   void _davom() {
     _raundBoshidagiBall = _ball;
     _s.yangiRaund();
@@ -336,6 +373,10 @@ class _MashqEkranState extends State<MashqEkran> {
     }
     final s = _savol;
     if (s == null || _korinish != _Korinish.savol || _javobBerildi) return;
+    if (k == LogicalKeyboardKey.keyB) {
+      _bilmadimBos();
+      return;
+    }
     if (s.turi == MashqTuri.tugriMi) {
       if (k == LogicalKeyboardKey.keyT || k == LogicalKeyboardKey.digit1) {
         setState(() => _tugriMiJavob = true);
@@ -999,9 +1040,28 @@ class _MashqEkranState extends State<MashqEkran> {
   }
 
   Widget _fikr(MashqSavol s) {
-    if (!_javobBerildi) return const SizedBox(height: 56);
+    if (!_javobBerildi) {
+      return SizedBox(
+        height: 56,
+        child: Center(
+          child: TextButton.icon(
+            onPressed: _kutilmoqda ? null : _bilmadimBos,
+            icon: const Icon(Icons.help_outline_rounded, size: 18),
+            label: Text(
+              _keycap(context)
+                  ? "Bilmadim — javobni ko'rsat (B)"
+                  : "Bilmadim — javobni ko'rsat",
+              style: const TextStyle(fontWeight: FontWeight.w700),
+            ),
+            style: TextButton.styleFrom(foregroundColor: AppColors.gold),
+          ),
+        ),
+      );
+    }
     final ok = !_shuSavolgaXato;
-    final rang = ok ? AppColors.success : AppColors.coral;
+    final rang = ok
+        ? AppColors.success
+        : (_bilmadim ? AppColors.gold : AppColors.coral);
     final izoh = ok
         ? null
         : s.turi == MashqTuri.tugriMi
@@ -1023,7 +1083,11 @@ class _MashqEkranState extends State<MashqEkran> {
             offsetY: 0,
             duration: const Duration(milliseconds: 420),
             child: Icon(
-              ok ? Icons.check_circle_rounded : Icons.cancel_rounded,
+              ok
+                  ? Icons.check_circle_rounded
+                  : (_bilmadim
+                        ? Icons.lightbulb_rounded
+                        : Icons.cancel_rounded),
               color: rang,
               size: 26,
             ),

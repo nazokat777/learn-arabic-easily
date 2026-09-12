@@ -8,6 +8,7 @@ import '../mashq/mashq_ekran.dart';
 import '../theme.dart';
 import '../widgets/entrance.dart';
 import '../widgets/mastery_badge.dart';
+import '../widgets/ornament.dart';
 import '../widgets/premium_tile.dart';
 import '../widgets/yol.dart';
 import '../widgets/grammar_table.dart';
@@ -257,43 +258,82 @@ class _RuleBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Qoida — darsning yuragi. Kitobda ramkada; bu yerda oltin chetli,
+    // ichi yumshoq gradientli karta, kattaroq arabcha va bezak chizig'i —
+    // ko'z avval shunga tushsin.
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-        color: AppColors.cream,
-        borderRadius: BorderRadius.circular(14),
-        border: Border.all(
-          color: AppColors.emerald.withValues(alpha: 0.35),
-          width: 1.5,
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [AppColors.karta, AppColors.softGreen],
         ),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              const Icon(
-                Icons.push_pin_rounded,
-                size: 16,
-                color: AppColors.gold,
-              ),
-              const SizedBox(width: 6),
-              const Text(
-                'Qoida',
-                style: TextStyle(
-                  fontWeight: FontWeight.w800,
-                  color: AppColors.gold,
-                  fontSize: 13,
-                ),
-              ),
-              const Spacer(),
-              SpeakButton(text: rule.ar, id: 'nahv-qoida-${rule.ar}', size: 20),
-            ],
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: AppColors.gold.withValues(alpha: 0.45)),
+        boxShadow: [
+          BoxShadow(
+            color: AppColors.gold.withValues(alpha: 0.12),
+            blurRadius: 18,
+            offset: const Offset(0, 6),
           ),
-          const SizedBox(height: 4),
-          _Bilingual(pair: rule, arabicSize: 22),
         ],
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(18),
+        child: Stack(
+          children: [
+            const Positioned.fill(
+              child: GirihPattern(
+                color: AppColors.gold,
+                opacity: 0.05,
+                cell: 44,
+              ),
+            ),
+            Positioned(
+              left: 0,
+              top: 0,
+              bottom: 0,
+              child: Container(width: 4, color: AppColors.gold),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(18, 14, 14, 14),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      const Icon(
+                        Icons.auto_awesome_rounded,
+                        size: 15,
+                        color: AppColors.gold,
+                      ),
+                      const SizedBox(width: 6),
+                      const Text(
+                        'QOIDA',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w900,
+                          color: AppColors.gold,
+                          fontSize: 12,
+                          letterSpacing: 1.4,
+                        ),
+                      ),
+                      const Spacer(),
+                      SpeakButton(
+                        text: rule.ar,
+                        id: 'nahv-qoida-${rule.ar}',
+                        size: 20,
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 6),
+                  _Bilingual(pair: rule, arabicSize: 25),
+                  const OrnamentDivider(),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

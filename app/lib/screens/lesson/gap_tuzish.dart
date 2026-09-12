@@ -238,23 +238,29 @@ class _GapTuzishState extends State<GapTuzish> {
           ),
         ),
         const SizedBox(height: 12),
-        // Havza — hali tanlanmagan so'zlar.
-        Directionality(
-          textDirection: TextDirection.rtl,
-          child: Wrap(
-            spacing: 8,
-            runSpacing: 8,
-            alignment: WrapAlignment.center,
-            children: [
-              for (final idx in _havza)
-                if (!_tanlangan.contains(idx))
-                  _Chip(
-                    matn: _asl[idx],
-                    rang: AppColors.indigo,
-                    tolgan: false,
-                    onTap: () => _tanla(idx),
-                  ),
-            ],
+        // Havza — hali tanlanmagan so'zlar. Balandligi qat'iy: oxirgi so'z
+        // tanlanganda havza bo'shab, tugmalar yuqoriga sakrab ketmasin —
+        // aks holda «Tekshirish» o'rniga «Bilmadim» bosilib qoladi.
+        Container(
+          constraints: const BoxConstraints(minHeight: 56),
+          alignment: Alignment.center,
+          child: Directionality(
+            textDirection: TextDirection.rtl,
+            child: Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              alignment: WrapAlignment.center,
+              children: [
+                for (final idx in _havza)
+                  if (!_tanlangan.contains(idx))
+                    _Chip(
+                      matn: _asl[idx],
+                      rang: AppColors.indigo,
+                      tolgan: false,
+                      onTap: () => _tanla(idx),
+                    ),
+              ],
+            ),
           ),
         ),
         const SizedBox(height: 14),

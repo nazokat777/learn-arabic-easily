@@ -5,6 +5,7 @@ import '../mashq/bank.dart';
 import '../mashq/element.dart';
 import '../mashq/mashq_ekran.dart';
 import '../theme.dart';
+import 'harf_chizish.dart';
 import 'letters_lesson.dart';
 import 'letter_test.dart';
 import 'harakat_lesson.dart';
@@ -40,6 +41,19 @@ class AlifboHome extends StatelessWidget {
               title: 'Harflar darsi',
               sub: '28 harf — nomi, maxraj va holatlari',
               page: const LettersLesson(),
+            ),
+            // Harf chizish — barmoq bilan andoza ustidan yozish (motor xotira).
+            PremiumTile(
+              title: 'Harf chizish',
+              subtitle: "Barmoq bilan harflarni yozing — 28 harf",
+              icon: Icons.draw_rounded,
+              accent: AppColors.teal,
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => HarfChizishEkrani(harflar: repo.letters),
+                ),
+              ),
             ),
             _tile(
               context,

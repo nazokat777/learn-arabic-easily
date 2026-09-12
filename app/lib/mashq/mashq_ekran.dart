@@ -1120,6 +1120,83 @@ class _MashqEkranState extends State<MashqEkran> {
 }
 
 /// Sessiya yakuni: natija va «qaysi joyi qiyin kelyapti» tahlili.
+/// Yakundagi «Bugun» chizig'i — sessiya natijasini KUN natijasiga
+/// ulaydi: kunlik maqsadgacha qancha qoldi va bugun jami qancha ball.
+/// Marra yaqin ko'rinsa («yana 6 ta — olov yonadi») o'quvchi chiqib
+/// ketmay yana bir raund boshlaydi; maqsad bajarilgan bo'lsa olov
+/// holati tasdiqlanadi — bu «bugun yetarli» degan xotirjam yakun.
+class _BugunChizigi extends StatelessWidget {
+  const _BugunChizigi();
+
+  @override
+  Widget build(BuildContext context) {
+    final p = progress;
+    final soni = p.bugungiSavollar;
+    if (soni == 0) return const SizedBox.shrink();
+    final bajarildi = p.kunlikMaqsadBajarildi;
+    final qoldi = Progress.kunlikMaqsad - soni;
+    final rang = bajarildi ? AppColors.success : AppColors.coral;
+    final matn = bajarildi
+        ? (p.streak > 0
+              ? 'Bugungi maqsad bajarildi · ${p.streak} kun ketma-ket'
+              : 'Bugungi maqsad bajarildi')
+        : (qoldi <= 8
+              ? 'Yana $qoldi ta savol — olov yonadi'
+              : 'Bugun: $soni / ${Progress.kunlikMaqsad} savol');
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.fromLTRB(14, 10, 14, 10),
+      decoration: BoxDecoration(
+        color: rang.withValues(alpha: 0.08),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: rang.withValues(alpha: 0.35)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Icon(
+                bajarildi
+                    ? Icons.local_fire_department_rounded
+                    : Icons.track_changes_rounded,
+                size: 18,
+                color: rang,
+              ),
+              const SizedBox(width: 6),
+              Expanded(
+                child: Text(
+                  matn,
+                  style: TextStyle(
+                    fontWeight: FontWeight.w800,
+                    fontSize: 13.5,
+                    color: rang,
+                  ),
+                ),
+              ),
+              Text(
+                '+${p.bugungiBall} ball bugun',
+                style: const TextStyle(
+                  fontWeight: FontWeight.w900,
+                  fontSize: 12.5,
+                  color: AppColors.gold,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 8),
+          SegmentliBar(
+            tolgan: soni.clamp(0, Progress.kunlikMaqsad),
+            jami: Progress.kunlikMaqsad,
+            rang: rang,
+            fon: rang.withValues(alpha: 0.14),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 class _Yakun extends StatelessWidget {
   final MashqSessiya s;
   final String nom;
@@ -1229,9 +1306,14 @@ class _Yakun extends StatelessWidget {
                   ),
                 ),
               ],
-              const SizedBox(height: 18),
+              const SizedBox(height: 14),
               const Reveal(
-                delay: Duration(milliseconds: 280),
+                delay: Duration(milliseconds: 300),
+                child: _BugunChizigi(),
+              ),
+              const SizedBox(height: 14),
+              const Reveal(
+                delay: Duration(milliseconds: 320),
                 child: OrnamentDivider(),
               ),
               const SizedBox(height: 18),

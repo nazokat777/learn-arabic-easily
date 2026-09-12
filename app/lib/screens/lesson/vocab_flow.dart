@@ -145,6 +145,29 @@ class _VocabStageState extends State<VocabStage> {
     });
   }
 
+  /// «Bilmadim» — jazosiz: daraja tushmaydi, ball yo'q; javob oltin
+  /// rangda ko'rsatilib o'qib beriladi, keyin davom.
+  Future<void> _bilmadim() async {
+    if (_answered) return;
+    final word = _chunk[_pi];
+    Haptic.tap();
+    setState(() {
+      _picked = null;
+      _answered = true;
+      _ketmaKet = 0;
+      _fikr = "Mana to'g'ri javob — eslab qoling";
+    });
+    Tts.instance.speak(splitForms(word.ar).first, id: 'card');
+    await Future.delayed(const Duration(milliseconds: 1900));
+    if (!mounted) return;
+    if (_pi + 1 < _chunk.length) {
+      setState(() => _pi++);
+      _buildQuestion();
+    } else {
+      _nextChunk();
+    }
+  }
+
   void _nextChunk() {
     if (_ci + 1 < _chunks.length) {
       setState(() {
@@ -471,9 +494,11 @@ class _VocabStageState extends State<VocabStage> {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontWeight: FontWeight.w800,
-                        color: _picked == _correct
-                            ? AppColors.success
-                            : AppColors.coral,
+                        color: _picked == null
+                            ? AppColors.gold
+                            : (_picked == _correct
+                                  ? AppColors.success
+                                  : AppColors.coral),
                       ),
                     ),
                   )
@@ -481,7 +506,16 @@ class _VocabStageState extends State<VocabStage> {
           ),
           const Spacer(),
           ...List.generate(_opts.length, (i) => _optTile(i)),
-          const SizedBox(height: 8),
+          TextButton.icon(
+            onPressed: _answered ? null : _bilmadim,
+            icon: const Icon(Icons.help_outline_rounded, size: 18),
+            label: const Text(
+              "Bilmadim — javobni ko'rsat",
+              style: TextStyle(fontWeight: FontWeight.w700),
+            ),
+            style: TextButton.styleFrom(foregroundColor: AppColors.gold),
+          ),
+          const SizedBox(height: 4),
         ],
       ),
     );

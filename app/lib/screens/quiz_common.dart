@@ -1,5 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart' hide Text;
+import 'package:flutter/services.dart'
+    show KeyEvent, KeyDownEvent, LogicalKeyboardKey;
 import '../widgets/uz_text.dart';
 import '../main.dart';
 import '../theme.dart';
@@ -216,61 +218,88 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
     );
   }
 
+  /// Klaviatura: 1–4 variant, B — «bilmadim». Kompyuterda test
+  /// sichqonchasiz ketadi.
+  void _tugma(KeyEvent e) {
+    if (e is! KeyDownEvent || _answered || _queue.isEmpty) return;
+    final k = e.logicalKey;
+    if (k == LogicalKeyboardKey.keyB) {
+      _dontKnow();
+      return;
+    }
+    const raqamlar = [
+      LogicalKeyboardKey.digit1,
+      LogicalKeyboardKey.digit2,
+      LogicalKeyboardKey.digit3,
+      LogicalKeyboardKey.digit4,
+    ];
+    final i = raqamlar.indexOf(k);
+    if (i >= 0 && i < _q.options.length) _choose(i);
+  }
+
   @override
   Widget build(BuildContext context) {
     if (_queue.isEmpty) return const Scaffold(body: SizedBox());
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-        bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(6),
-          child: LinearProgressIndicator(
-            value: _total == 0 ? 0 : _done / _total,
-            minHeight: 6,
-            backgroundColor: AppColors.softGreen,
-            valueColor: const AlwaysStoppedAnimation(AppColors.emerald),
+    return Focus(
+      autofocus: true,
+      onKeyEvent: (_, e) {
+        _tugma(e);
+        return KeyEventResult.ignored;
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text(widget.title),
+          bottom: PreferredSize(
+            preferredSize: const Size.fromHeight(6),
+            child: LinearProgressIndicator(
+              value: _total == 0 ? 0 : _done / _total,
+              minHeight: 6,
+              backgroundColor: AppColors.softGreen,
+              valueColor: const AlwaysStoppedAnimation(AppColors.emerald),
+            ),
           ),
         ),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          children: [
-            Text(
-              '$_done / $_total',
-              style: TextStyle(
-                color: AppColors.matn3,
-                fontWeight: FontWeight.w700,
+        body: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            children: [
+              Text(
+                '$_done / $_total',
+                style: TextStyle(
+                  color: AppColors.matn3,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
-            ),
-            const SizedBox(height: 20),
-            Text(
-              _q.promptLabel,
-              style: TextStyle(color: AppColors.matn2, fontSize: 14),
-            ),
-            const SizedBox(height: 16),
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.symmetric(vertical: 32),
-              decoration: BoxDecoration(
-                color: AppColors.karta,
-                borderRadius: BorderRadius.circular(20),
+              const SizedBox(height: 20),
+              Text(
+                _q.promptLabel,
+                style: TextStyle(color: AppColors.matn2, fontSize: 14),
               ),
-              child: Center(child: _q.prompt),
-            ),
-            if (_q.speak != null && (!_q.speakRevealsAnswer || _answered)) ...[
-              const SizedBox(height: 10),
-              _ListenButton(text: _q.speak!),
+              const SizedBox(height: 16),
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.symmetric(vertical: 32),
+                decoration: BoxDecoration(
+                  color: AppColors.karta,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Center(child: _q.prompt),
+              ),
+              if (_q.speak != null &&
+                  (!_q.speakRevealsAnswer || _answered)) ...[
+                const SizedBox(height: 10),
+                _ListenButton(text: _q.speak!),
+              ],
+              const SizedBox(height: 20),
+              ...List.generate(_q.options.length, (i) => _option(i)),
+              const Spacer(),
+              // Javobdan oldin — «Bilmadim»; javobdan keyin — qisqa fikr.
+              SizedBox(
+                height: 48,
+                child: _answered ? _feedback() : _dontKnowButton(),
+              ),
             ],
-            const SizedBox(height: 20),
-            ...List.generate(_q.options.length, (i) => _option(i)),
-            const Spacer(),
-            // Javobdan oldin — «Bilmadim»; javobdan keyin — qisqa fikr.
-            SizedBox(
-              height: 48,
-              child: _answered ? _feedback() : _dontKnowButton(),
-            ),
-          ],
+          ),
         ),
       ),
     );
@@ -293,13 +322,20 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
 
   Widget _feedback() {
     if (_selected == null) {
-      return const Text(
-        'Mana to\'g\'ri javob — yodlab oling',
-        style: TextStyle(
-          fontWeight: FontWeight.w800,
-          fontSize: 15,
-          color: AppColors.gold,
-        ),
+      return const Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(Icons.lightbulb_rounded, size: 18, color: AppColors.gold),
+          SizedBox(width: 6),
+          Text(
+            'Mana to\'g\'ri javob — yodlab oling',
+            style: TextStyle(
+              fontWeight: FontWeight.w800,
+              fontSize: 15,
+              color: AppColors.gold,
+            ),
+          ),
+        ],
       );
     }
     final ok = _selected == _q.correct;

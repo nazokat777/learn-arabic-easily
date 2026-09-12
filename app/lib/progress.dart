@@ -21,7 +21,24 @@ class Progress extends ChangeNotifier {
   /// darajasiga qarab 1, 2, 4, 7, 14, 30 kundan keyin qaytadi.
   final Map<String, int> _korilganKun = {};
 
-  /// Yodlangan so'zlar soni — bilim daraxtining barglari.
+  /// Jami berilgan javoblar (butun tarix).
+  int get jamiJavoblar => _urinish.values.fold(0, (s, v) => s + v);
+
+  /// Umumiy aniqlik foizi (0..100); javob bo'lmasa 0.
+  int get aniqlikFoizi {
+    final j = jamiJavoblar;
+    if (j == 0) return 0;
+    final x = _xato.values.fold(0, (s, v) => s + v);
+    return ((j - x) * 100 / j).round().clamp(0, 100);
+  }
+
+  /// Xatosiz o'zlashtirilgan darslar soni.
+  int get ozlashtirilganDarslar => _mastered.length;
+
+  /// Kunlik maqsad bajarilgan kunlar soni (butun tarix).
+  int get maqsadKunlariSoni => _maqsadKunlari.length;
+
+  /// Yodlangan so'zlar soni.
   int get yodlanganSoni =>
       _mastery.values.where((v) => v >= masteryGoal).length;
 

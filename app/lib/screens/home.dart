@@ -10,7 +10,6 @@ import 'sarf_home.dart';
 import '../uz_yozuv.dart';
 import '../widgets/motion.dart';
 import '../widgets/olov.dart';
-import '../widgets/daraxt.dart';
 import '../mashq/bank.dart';
 import '../mashq/element.dart';
 import '../mashq/mashq_ekran.dart';
@@ -71,7 +70,7 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(height: 12),
                   const Reveal(
                     delay: Duration(milliseconds: 115),
-                    child: _DaraxtKartasi(),
+                    child: _Statistika(),
                   ),
                   if (progress.eslashKerakKalitlar.isNotEmpty) ...[
                     const SizedBox(height: 12),
@@ -685,16 +684,57 @@ class _Hafta extends StatelessWidget {
   }
 }
 
-/// Bilim daraxti kartasi — daraja shoxlarni, yodlangan so'zlar
-/// barglarni o'stiradi.
-class _DaraxtKartasi extends StatelessWidget {
-  const _DaraxtKartasi();
+/// Statistika — raqamlar sanab chiqadi, har biri o'z rangi bilan.
+///
+/// O'quvchi yo'lini raqamda ko'radi: yodlangan so'zlar, o'zlashtirilgan
+/// darslar, aniqlik, rekord seriya, maqsad bajarilgan kunlar. Raqam
+/// sanab chiqishi (CountUp) — «o'sish» hissi, statik raqam bermaydi.
+class _Statistika extends StatelessWidget {
+  const _Statistika();
 
   @override
   Widget build(BuildContext context) {
-    final barglar = progress.yodlanganSoni;
+    final p = progress;
+    final kataklar = <(IconData, Color, int, String, String)>[
+      (
+        Icons.spellcheck_rounded,
+        AppColors.emerald,
+        p.yodlanganSoni,
+        '',
+        "yodlangan so'z",
+      ),
+      (
+        Icons.verified_rounded,
+        AppColors.gold,
+        p.ozlashtirilganDarslar,
+        '',
+        "o'zlashtirilgan dars",
+      ),
+      (Icons.gps_fixed_rounded, AppColors.teal, p.aniqlikFoizi, '%', 'aniqlik'),
+      (
+        Icons.local_fire_department_rounded,
+        AppColors.coral,
+        p.rekordKombo,
+        '',
+        'rekord seriya',
+      ),
+      (
+        Icons.event_available_rounded,
+        AppColors.success,
+        p.maqsadKunlariSoni,
+        '',
+        'maqsad bajarilgan kun',
+      ),
+      (
+        Icons.question_answer_rounded,
+        AppColors.indigo,
+        p.jamiJavoblar,
+        '',
+        'jami javob',
+      ),
+    ];
     return Container(
-      padding: const EdgeInsets.fromLTRB(16, 12, 16, 10),
+      padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(22),
@@ -707,14 +747,63 @@ class _DaraxtKartasi extends StatelessWidget {
         ],
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          BilimDaraxti(daraja: progress.level, barglar: barglar),
-          const SizedBox(height: 4),
-          Text(
-            barglar == 0
-                ? 'Bilim daraxtingiz — har yodlangan so\'z bitta barg'
-                : 'Bilim daraxtingiz: $barglar barg · ${progress.level}-daraja shox',
-            style: const TextStyle(fontSize: 12.5, color: Colors.black54),
+          const Text(
+            'Statistika',
+            style: TextStyle(
+              fontWeight: FontWeight.w900,
+              fontSize: 15,
+              color: AppColors.ink,
+            ),
+          ),
+          const SizedBox(height: 12),
+          GridView.count(
+            crossAxisCount: 3,
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            mainAxisSpacing: 10,
+            crossAxisSpacing: 10,
+            childAspectRatio: 1.05,
+            children: [
+              for (final (ikon, rang, qiymat, qoshimcha, nom) in kataklar)
+                Container(
+                  padding: const EdgeInsets.fromLTRB(8, 10, 8, 8),
+                  decoration: BoxDecoration(
+                    color: rang.withValues(alpha: 0.09),
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(ikon, color: rang, size: 20),
+                      const SizedBox(height: 4),
+                      CountUp(
+                        value: qiymat,
+                        suffix: qoshimcha,
+                        duration: const Duration(milliseconds: 900),
+                        style: TextStyle(
+                          fontWeight: FontWeight.w900,
+                          fontSize: 20,
+                          color: rang,
+                          height: 1.1,
+                        ),
+                      ),
+                      Text(
+                        nom,
+                        textAlign: TextAlign.center,
+                        maxLines: 2,
+                        style: const TextStyle(
+                          fontSize: 10.5,
+                          color: Colors.black54,
+                          fontWeight: FontWeight.w600,
+                          height: 1.15,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+            ],
           ),
         ],
       ),

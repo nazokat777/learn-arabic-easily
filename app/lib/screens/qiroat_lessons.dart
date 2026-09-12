@@ -625,19 +625,10 @@ class _FoldBlock extends StatefulWidget {
   final IconData icon;
   final String title;
   final String text;
-  final bool arabic;
-
-  /// Arabcha bo'limda so'z bosilganda izoh ko'rsatish uchun darsning
-  /// lug'ati va matni kerak bo'ladi.
-  final List<QiroatVocab> vocab;
-  final String reading;
   const _FoldBlock({
     required this.icon,
     required this.title,
     required this.text,
-    this.arabic = false,
-    this.vocab = const [],
-    this.reading = '',
   });
   @override
   State<_FoldBlock> createState() => _FoldBlockState();
@@ -686,36 +677,10 @@ class _FoldBlockState extends State<_FoldBlock> {
           if (_open)
             Padding(
               padding: const EdgeInsets.fromLTRB(14, 0, 14, 14),
-              child: widget.arabic
-                  ? Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        // Javob ham o'qish matni kabi tinglanadi: har bir jumla
-                        // alohida, so'zini bossa - o'sha so'z.
-                        for (final s in splitSentences(widget.text))
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 4),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                SpeakButton(text: s, id: 'javob-$s', size: 18),
-                                const SizedBox(width: 4),
-                                Expanded(
-                                  child: SentenceText(
-                                    sentence: s,
-                                    vocab: widget.vocab,
-                                    reading: widget.reading,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                      ],
-                    )
-                  : Text(
-                      widget.text,
-                      style: TextStyle(color: AppColors.ink, height: 1.45),
-                    ),
+              child: Text(
+                widget.text,
+                style: TextStyle(color: AppColors.ink, height: 1.45),
+              ),
             ),
         ],
       ),

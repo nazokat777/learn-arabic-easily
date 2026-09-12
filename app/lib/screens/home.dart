@@ -81,6 +81,14 @@ class HomeScreen extends StatelessWidget {
                         delay: Duration(milliseconds: 75),
                         child: _KunlikSandiq(),
                       ),
+                    ] else if (progress.kunlikMaqsadBajarildi) ...[
+                      // Kun yopilgan: ertangi sovg'a haqida ishora — kutish
+                      // ertaga qaytishning o'zi sabab bo'ladi.
+                      const SizedBox(height: 12),
+                      const Reveal(
+                        delay: Duration(milliseconds: 75),
+                        child: _ErtangiSovga(),
+                      ),
                     ],
                     if (progress.olovHimoyalandiBugun) ...[
                       const SizedBox(height: 12),
@@ -305,13 +313,24 @@ class _Hero extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final radius = BorderRadius.circular(28);
+    // Seriya aurasi — o'ziga xoslik: 3+ kun zumrad, 7+ oltin, 30+ kuchli
+    // oltin. Olov o'sgani hero'ning o'zida ko'rinadi, raqamni o'qimasdan.
+    final s = progress.streak;
+    final aura = s >= 30
+        ? AppColors.gold.withValues(alpha: 0.6)
+        : s >= 7
+        ? AppColors.gold.withValues(alpha: 0.42)
+        : s >= 3
+        ? AppColors.emerald.withValues(alpha: 0.5)
+        : AppColors.emerald.withValues(alpha: 0.35);
     return Container(
       decoration: BoxDecoration(
         borderRadius: radius,
         boxShadow: [
           BoxShadow(
-            color: AppColors.emerald.withValues(alpha: 0.35),
-            blurRadius: 34,
+            color: aura,
+            blurRadius: s >= 7 ? 44 : 34,
+            spreadRadius: s >= 30 ? 2 : 0,
             offset: const Offset(0, 16),
           ),
         ],
@@ -894,6 +913,44 @@ class _NishonTekshiruvchiState extends State<_NishonTekshiruvchi> {
 /// Kunlik sandiq kartasi — kunda bir marta, ochilmaguncha bosh ekranda
 /// oltin rangda «nafas olib» turadi. Kutish (nima chiqar ekan?) —
 /// mukofotning o'zidan ham kuchliroq dofamin manbai.
+/// «Ertaga sandiq yana keladi» — kun yopilgach ertangi kutish. Sovg'a
+/// hajmi ochiq aytilmaydi (tasodifiy), faqat seriya bonusi — kutishning
+/// o'zi mukofot, aniq va'da esa kutishni o'ldiradi.
+class _ErtangiSovga extends StatelessWidget {
+  const _ErtangiSovga();
+
+  @override
+  Widget build(BuildContext context) {
+    final bonus = (progress.streak + 1).clamp(1, 20);
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+      decoration: BoxDecoration(
+        color: AppColors.gold.withValues(alpha: 0.08),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: AppColors.gold.withValues(alpha: 0.3)),
+      ),
+      child: Row(
+        children: [
+          const Icon(Icons.nightlight_round, size: 18, color: AppColors.gold),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Text(
+              'Bugun tugadi. Ertaga sandiq yana keladi — seriya bonusi +$bonus '
+              'bo\'ladi. Ertaga ko\'rishguncha!',
+              style: TextStyle(
+                fontSize: 12.5,
+                fontWeight: FontWeight.w700,
+                color: AppColors.matn2,
+                height: 1.35,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 class _KunlikSandiq extends StatelessWidget {
   const _KunlikSandiq();
 
@@ -2168,6 +2225,12 @@ class _BugungiSozState extends State<_BugungiSoz> {
   static int _sozKuni = -1;
   bool get _bildim => progress.bugungiSozBildimmi;
 
+  /// Ma'no avval yopiq — «taxmin qiling» (qiziqish bo'shlig'i): javobni
+  /// bilish istagi ochilgan lahzada dofamin beradi; allaqachon «bildim»
+  /// bo'lsa ochiq.
+  bool _ochildi = false;
+  bool get _ochiq => _ochildi || _bildim;
+
   MashqElement? _bugungi() {
     final kun = DateTime.now().difference(DateTime(1970)).inDays;
     if (_sozKuni == kun) return _soz;
@@ -2211,7 +2274,7 @@ class _BugungiSozState extends State<_BugungiSoz> {
                 const SizedBox(height: 4),
                 Row(
                   children: [
-                    if (rasm != null) ...[
+                    if (rasm != null && _ochiq) ...[
                       Text(rasm, style: const TextStyle(fontSize: 22)),
                       const SizedBox(width: 8),
                     ],
@@ -2228,13 +2291,39 @@ class _BugungiSozState extends State<_BugungiSoz> {
                     ),
                   ],
                 ),
-                Text(
-                  e.uz,
-                  style: TextStyle(
-                    fontWeight: FontWeight.w700,
-                    color: AppColors.ink,
-                  ),
-                ),
+                _ochiq
+                    ? Text(
+                        e.uz,
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                          color: AppColors.ink,
+                        ),
+                      )
+                    : InkWell(
+                        borderRadius: BorderRadius.circular(10),
+                        onTap: () {
+                          Haptic.tap();
+                          setState(() => _ochildi = true);
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 10,
+                            vertical: 5,
+                          ),
+                          decoration: BoxDecoration(
+                            color: AppColors.gold.withValues(alpha: 0.14),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Text(
+                            "Ma'nosini taxmin qiling — bosib tekshiring",
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w800,
+                              color: AppColors.ink,
+                            ),
+                          ),
+                        ),
+                      ),
               ],
             ),
           ),
@@ -2278,6 +2367,11 @@ class _OlovEslatmasi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final qoldi = Progress.kunlikMaqsad - progress.bugungiSavollar;
+    // Kechqurun (20:00 dan keyin) eslatma shoshiltiradi: yarim tungacha
+    // qancha qoldi. Yo'qotish yaqinlashgani aniq ko'rinsa, harakat tezroq.
+    final soat = DateTime.now().hour;
+    final kech = soat >= 20;
+    final qolganSoat = 24 - soat;
     return Tactile(
       child: Material(
         color: AppColors.karta,
@@ -2306,15 +2400,20 @@ class _OlovEslatmasi extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        '${progress.streak} kunlik olovni saqlang',
+                        kech
+                            ? '${progress.streak} kunlik olov o\'chib qolmasin!'
+                            : '${progress.streak} kunlik olovni saqlang',
                         style: TextStyle(
                           fontWeight: FontWeight.w900,
                           fontSize: 15,
-                          color: AppColors.ink,
+                          color: kech ? AppColors.coral : AppColors.ink,
                         ),
                       ),
                       Text(
-                        "Bugun yana $qoldi ta savol — bir raund yetadi",
+                        kech
+                            ? "Yarim tungacha $qolganSoat soat — $qoldi ta savol, "
+                                  "bir raund yetadi"
+                            : "Bugun yana $qoldi ta savol — bir raund yetadi",
                         style: TextStyle(
                           fontSize: 12.5,
                           color: AppColors.matn2,

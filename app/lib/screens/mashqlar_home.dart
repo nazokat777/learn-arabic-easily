@@ -7,6 +7,7 @@ import '../theme.dart';
 import '../widgets/mastery_badge.dart';
 import '../widgets/premium_tile.dart';
 import 'vocab_test.dart';
+import 'gap_tuzish_ekrani.dart';
 import 'word_game.dart';
 
 /// «Mashqlar» — lug'at testi va so'z yasash o'yini (o'rganilgan so'zlarni mustahkamlash).
@@ -25,6 +26,13 @@ class MashqlarHome extends StatelessWidget {
             _intro(),
             const SizedBox(height: 16),
             _chaqmoqPlitka(context),
+            PremiumTile(
+              title: 'Gap tuzish',
+              subtitle: "O'zbekcha gapni arabcha so'zlardan tuzing",
+              icon: Icons.extension_rounded,
+              accent: AppColors.indigo,
+              onTap: () => gapTuzishniOch(context),
+            ),
             _qiyinPlitka(context),
             // Lug'at testi — haqiqiy test, shuning uchun belgisi ham
             // o'zlashtirish belgisi: xatosiz o'tilmaguncha berilmaydi.

@@ -1,46 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="uz">
 <head>
   <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
+    Base href — `flutter build web --base-href` qiymati bilan almashtiriladi
+    (GitHub Pages'da /learn-arabic-easily/).
   -->
   <base href="$FLUTTER_BASE_HREF">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Arab tilini oson o'rganamiz — alifbo, qiroat, nahv va sarf: shaxsiy muallim kabi mashqlar bilan.">
+  <meta name="theme-color" content="#07332B">
 
-  <!-- iOS meta tags & icons -->
+  <!-- iOS -->
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="learn_arabic">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Arab tili">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>learn_arabic</title>
+  <title>Arab tilini oson o'rganamiz</title>
   <link rel="manifest" href="manifest.json">
+
+  <!--
+    Yuklanish sahnasi. Flutter web (CanvasKit) birinchi ochilishda 3–5 s
+    yuklanadi — bu vaqtda bo'sh oq ekran o'rniga ilovaning o'z pardasi:
+    to'q zumrad fon, nafas oluvchi oltin halqa, harf va nom. Birinchi kadr
+    chizilgach (`flutter-first-frame`) parda erib yo'qoladi va ilovaning
+    o'z ochilish sahnasi davom ettiradi.
+  -->
+  <style>
+    html, body { height: 100%; margin: 0; background: #07332B; }
+    #parda {
+      position: fixed; inset: 0; z-index: 9999;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      background: radial-gradient(120% 90% at 50% 20%, #0A5C4B 0%, #07332B 60%, #05251F 100%);
+      color: #fff; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      transition: opacity .55s ease; opacity: 1;
+    }
+    #parda.ketdi { opacity: 0; pointer-events: none; }
+    .halqa {
+      width: 128px; height: 128px; border-radius: 50%;
+      border: 4px solid rgba(212,165,55,.35);
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+      animation: nafas 1.8s ease-in-out infinite;
+    }
+    .halqa::before {
+      content: ""; position: absolute; inset: -4px; border-radius: 50%;
+      border: 4px solid transparent; border-top-color: #D4A537;
+      animation: aylan 1.4s linear infinite;
+    }
+    .harf { font-size: 64px; line-height: 1; color: #F2D27A; font-weight: 700;
+            font-family: "Amiri", "Scheherazade New", "Noto Naskh Arabic", serif; }
+    .nom { margin-top: 26px; font-size: 19px; font-weight: 800; letter-spacing: -.2px; }
+    .izoh { margin-top: 8px; font-size: 13px; color: rgba(255,255,255,.6); }
+    @keyframes aylan { to { transform: rotate(360deg); } }
+    @keyframes nafas {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(212,165,55,.0); }
+      50% { box-shadow: 0 0 34px 6px rgba(212,165,55,.25); }
+    }
+  </style>
 </head>
 <body>
-  <!--
-    You can customize the "flutter_bootstrap.js" script.
-    This is useful to provide a custom configuration to the Flutter loader
-    or to give the user feedback during the initialization process.
-
-    For more details:
-    * https://docs.flutter.dev/platform-integration/web/initialization
-  -->
+  <div id="parda">
+    <div class="halqa"><div class="harf">ع</div></div>
+    <div class="nom">Arab tilini oson o'rganamiz</div>
+    <div class="izoh">Yuklanmoqda…</div>
+  </div>
+  <script>
+    // Flutter birinchi kadrni chizgach parda eriydi; ehtiyot uchun 20 s dan
+    // keyin ham olib tashlanadi (hodisa kelmasa ilova qulflanib qolmasin).
+    (function () {
+      var p = document.getElementById('parda');
+      function ket() { if (!p) return; p.classList.add('ketdi'); setTimeout(function(){ p && p.remove(); p = null; }, 600); }
+      window.addEventListener('flutter-first-frame', ket);
+      setTimeout(ket, 20000);
+    })();
+  </script>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>

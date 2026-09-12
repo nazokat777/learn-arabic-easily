@@ -1,11 +1,11 @@
 {
-    "name": "learn_arabic",
-    "short_name": "learn_arabic",
+    "name": "Arab tilini oson o'rganamiz",
+    "short_name": "Arab tili",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#07332B",
+    "theme_color": "#07332B",
+    "description": "Alifbo, qiroat, nahv va sarf — shaxsiy muallim kabi mashqlar bilan.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

@@ -470,6 +470,7 @@ class _Hero extends StatelessWidget {
                             ),
                             const _YozuvTugmasi(),
                             const _MavzuTugmasi(),
+                            const _OvozTugmasi(),
                           ],
                         ),
                       ],
@@ -495,6 +496,53 @@ class _Hero extends StatelessWidget {
 /// (oltin nur, sarlavha qatori) bosishni yutib yuborardi — tugma ko'rinib
 /// turib, bosilmasdi. Chiplar qatorida esa hech narsa ustida turmaydi.
 /// Yorug' ↔ qorong'u tugmasi — yozuv tugmasi yonida, xuddi shu shaklda.
+/// Mashq tovushlari — yoqish/o'chirish (saqlanadi). Avtonomiya: o'quvchi
+/// tovushni o'zi boshqaradi; o'chirilgan bo'lsa ham darslar ovozi qoladi.
+class _OvozTugmasi extends StatelessWidget {
+  const _OvozTugmasi();
+
+  @override
+  Widget build(BuildContext context) {
+    return ValueListenableBuilder<bool>(
+      valueListenable: Tovush.holat,
+      builder: (context, yoqilgan, _) => Tactile(
+        child: Material(
+          color: Colors.white.withValues(alpha: 0.14),
+          borderRadius: BorderRadius.circular(999),
+          child: InkWell(
+            borderRadius: BorderRadius.circular(999),
+            onTap: Tovush.almashtir,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(
+                    yoqilgan
+                        ? Icons.music_note_rounded
+                        : Icons.music_off_rounded,
+                    size: 15,
+                    color: AppColors.goldLight,
+                  ),
+                  const SizedBox(width: 5),
+                  Text(
+                    yoqilgan ? 'Tovush' : "Tovush o'chiq",
+                    style: const TextStyle(
+                      color: AppColors.goldLight,
+                      fontWeight: FontWeight.w800,
+                      fontSize: 12.5,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 class _MavzuTugmasi extends StatelessWidget {
   const _MavzuTugmasi();
 

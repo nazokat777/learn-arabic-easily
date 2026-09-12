@@ -2,6 +2,8 @@ import 'dart:math';
 import 'dart:typed_data';
 
 import 'package:audioplayers/audioplayers.dart';
+import 'package:flutter/foundation.dart' show ValueNotifier;
+import 'package:shared_preferences/shared_preferences.dart';
 
 /// Mukofot tovushlari — fayl emas, dasturda sintez qilinadi.
 ///
@@ -21,6 +23,30 @@ class Tovush {
   static final AudioPlayer _p = AudioPlayer()..setReleaseMode(ReleaseMode.stop);
 
   static bool yoqilgan = true;
+
+  /// UI uchun: tugma holatini kuzatadi (yoqilgan/o'chiq).
+  static final ValueNotifier<bool> holat = ValueNotifier(true);
+  static const _kalit = 'tovush';
+
+  /// Saqlangan tanlovni o'qiydi (ilova ishga tushganda).
+  static Future<void> load() async {
+    try {
+      final p = await SharedPreferences.getInstance();
+      yoqilgan = p.getBool(_kalit) ?? true;
+      holat.value = yoqilgan;
+    } catch (_) {}
+  }
+
+  /// Tovushni yoqadi/o'chiradi va saqlaydi — o'quvchi o'zi hal qilsin
+  /// (jamoat joyida, tunda). Ovozli darslar (TTS, kliplar) bunga bog'liq emas.
+  static Future<void> almashtir() async {
+    yoqilgan = !yoqilgan;
+    holat.value = yoqilgan;
+    try {
+      final p = await SharedPreferences.getInstance();
+      await p.setBool(_kalit, yoqilgan);
+    } catch (_) {}
+  }
 
   static const _hz = 22050;
 

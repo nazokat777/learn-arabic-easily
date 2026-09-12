@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'content.dart';
 import 'mavzu.dart';
 import 'progress.dart';
+import 'mashq/tovush.dart';
 import 'services/manzil.dart';
 import 'services/xabar.dart';
 import 'screens/davom.dart';
@@ -28,6 +29,7 @@ Future<void> main() async {
   await progress.load();
   await UzYozuv.instance.load(); // lotin yoki kirill
   await Mavzu.instance.load(); // yorug' yoki qorong'u (palitrani ham o'rnatadi)
+  await Tovush.load(); // mashq tovushlari yoqilgan/o'chiq
   // Ovozni oldindan sozlaymiz — tugma bosilganda kutish bo'lmasin
   // (telefon brauzerlari kutishdan keyingi ovozni bloklaydi).
   await VocabAudio.instance.load(); // tayyor ovozlar ro'yxati

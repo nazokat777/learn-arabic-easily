@@ -131,6 +131,13 @@ void main() {
         ),
       );
       await tester.pump(const Duration(milliseconds: 300));
+      // Juftlar mos kelgan darsda avval gap tuzish o'yini chiqadi —
+      // o'tkazib yuborilsa ro'yxat va davom tugmasi.
+      if (find.text('Gap tuzish').evaluate().isNotEmpty) {
+        expect(find.text("O'yinni o'tkazib yuborish"), findsOneWidget);
+        await tester.tap(find.text("O'yinni o'tkazib yuborish"));
+        await tester.pump(const Duration(milliseconds: 300));
+      }
       expect(find.text("Mashq: o'zbekchadan arabchaga"), findsOneWidget);
       await tester.tap(find.text("Savollarga o'tish"));
       await tester.pump();

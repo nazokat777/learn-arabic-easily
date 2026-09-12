@@ -5,6 +5,7 @@ import '../theme.dart';
 import '../widgets/motion.dart';
 import '../widgets/speak_button.dart';
 import '../widgets/uz_text.dart';
+import 'lesson/gap_tuzish.dart';
 import 'lesson/sentence_text.dart';
 import 'lesson/vocab_flow.dart' show AwardXp;
 
@@ -236,9 +237,10 @@ class _TarjimaMashqiState extends State<TarjimaMashqi> {
   }
 }
 
-/// Dars oqimidagi «Tarjima» bosqichi: kitob mashqi + «Savollarga o'tish».
+/// Dars oqimidagi «Tarjima» bosqichi: avval GAP TUZISH o'yini (juftlar mos
+/// kelgan darslarda), so'ng kitob mashqi ro'yxati + «Savollarga o'tish».
 /// Bosqich uchun +5 ball — mashqni ochib ko'rganga emas, o'tganga.
-class TarjimaStage extends StatelessWidget {
+class TarjimaStage extends StatefulWidget {
   final QiroatLesson lesson;
   final VoidCallback onDone;
   final AwardXp award;
@@ -250,7 +252,23 @@ class TarjimaStage extends StatelessWidget {
   });
 
   @override
+  State<TarjimaStage> createState() => _TarjimaStageState();
+}
+
+class _TarjimaStageState extends State<TarjimaStage> {
+  bool _oyinTugadi = false;
+
+  List<(String, String)> get _juftlar {
+    final (_, uz, ar) = TarjimaMashqi.ajrat(widget.lesson);
+    if (ar == null) return const [];
+    return [for (var i = 0; i < uz.length; i++) (uz[i], ar[i])];
+  }
+
+  @override
   Widget build(BuildContext context) {
+    final lesson = widget.lesson;
+    final juftlar = _juftlar;
+    final oyin = juftlar.length >= 3 && !_oyinTugadi;
     return Column(
       children: [
         Expanded(
@@ -277,12 +295,32 @@ class TarjimaStage extends StatelessWidget {
               ),
               const SizedBox(height: 4),
               Text(
-                "Kitobdagi mashq. Har gapni o'zingiz arabcha ayting (yoki "
-                "yozing), keyin «Javob» bilan tekshiring.",
+                oyin
+                    ? "Kitobdagi mashq o'yin ko'rinishida: so'zlarni to'g'ri "
+                          "tartibda bosib, gapni tuzing."
+                    : "Kitobdagi mashq. Har gapni o'zingiz arabcha ayting (yoki "
+                          "yozing), keyin «Javob» bilan tekshiring.",
                 style: TextStyle(fontSize: 11.5, color: AppColors.matn3),
               ),
               const SizedBox(height: 10),
-              TarjimaMashqi(lesson: lesson),
+              if (oyin)
+                Container(
+                  padding: const EdgeInsets.fromLTRB(14, 12, 14, 12),
+                  decoration: BoxDecoration(
+                    color: AppColors.karta,
+                    borderRadius: BorderRadius.circular(18),
+                    border: Border.all(
+                      color: AppColors.indigo.withValues(alpha: 0.35),
+                    ),
+                  ),
+                  child: GapTuzish(
+                    juftlar: juftlar,
+                    award: widget.award,
+                    onDone: () => setState(() => _oyinTugadi = true),
+                  ),
+                )
+              else
+                TarjimaMashqi(lesson: lesson),
             ],
           ),
         ),
@@ -290,23 +328,37 @@ class TarjimaStage extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(20, 4, 20, 16),
           child: SizedBox(
             width: double.infinity,
-            child: FilledButton(
-              onPressed: () {
-                award(5);
-                onDone();
-              },
-              style: FilledButton.styleFrom(
-                backgroundColor: AppColors.emerald,
-                padding: const EdgeInsets.symmetric(vertical: 15),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(14),
-                ),
-              ),
-              child: const Text(
-                "Savollarga o'tish",
-                style: TextStyle(fontWeight: FontWeight.w800, fontSize: 16),
-              ),
-            ),
+            child: oyin
+                ? TextButton(
+                    onPressed: () => setState(() => _oyinTugadi = true),
+                    child: Text(
+                      "O'yinni o'tkazib yuborish",
+                      style: TextStyle(
+                        color: AppColors.matn3,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  )
+                : FilledButton(
+                    onPressed: () {
+                      widget.award(5);
+                      widget.onDone();
+                    },
+                    style: FilledButton.styleFrom(
+                      backgroundColor: AppColors.emerald,
+                      padding: const EdgeInsets.symmetric(vertical: 15),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(14),
+                      ),
+                    ),
+                    child: const Text(
+                      "Savollarga o'tish",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w800,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
           ),
         ),
       ],

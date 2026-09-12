@@ -65,6 +65,13 @@ void main() {
     expect(nishonTop('yoq'), isNull);
   });
 
+  test('tanishuv bir marta belgilanadi', () async {
+    final p = Progress();
+    expect(p.tanishuvKurildi, isFalse);
+    await p.tanishuvniBelgila();
+    expect(p.tanishuvKurildi, isTrue);
+  });
+
   test('kombo va daraja nishonlari', () async {
     final p = Progress();
     await p.rekordniYangila(12);

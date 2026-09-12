@@ -13,7 +13,8 @@ import 'package:learn_arabic/progress.dart';
 import 'package:learn_arabic/screens/home.dart';
 
 void main() {
-  progress = Progress();
+  progress = Progress()
+    ..tanishuvKurildi = true; // tanishuv oynasi kartalarni yopmasin
   repo = ContentRepository();
 
   Future<void> ochish(WidgetTester tester) async {

@@ -27,6 +27,7 @@ import 'davom.dart';
 import 'mashqlar_home.dart';
 import 'nahv_home.dart';
 import 'nishonlar_ekrani.dart';
+import 'tanishuv.dart';
 import '../nishonlar.dart';
 import '../mashq/ultra.dart';
 import '../mashq/tovush.dart';
@@ -824,6 +825,12 @@ class _NishonTekshiruvchiState extends State<_NishonTekshiruvchi> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) async {
+      // Birinchi ochilish — avval tanishuv, keyin nishonlar.
+      if (!progress.tanishuvKurildi) {
+        await Future.delayed(const Duration(milliseconds: 900));
+        if (!mounted) return;
+        await tanishuvniKorsat(context);
+      }
       final yangi = await progress.yangiNishonlar();
       if (yangi.isNotEmpty && mounted) {
         await Future.delayed(const Duration(milliseconds: 1200));

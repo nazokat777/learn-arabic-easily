@@ -493,75 +493,86 @@ class _MashqEkranState extends State<MashqEkran> {
             ),
           ),
           child: SafeArea(
-            child: Column(
+            child: Stack(
               children: [
-                if (widget.tezkor && _korinish != _Korinish.yakun)
-                  _VaqtChizigi(
-                    qolgan: _qolganSoniya,
-                    jami: widget.tezkorSoniya!,
-                  ),
+                // Kunlik maqsad bajarilgan lahza — bir marta konfetti.
                 if (_maqsadBajarildi)
-                  const MaqsadBanner(ball: Progress.kunlikMukofotBalli),
-                if (_rekord)
-                  MukofotBanner(
-                    ikon: Icons.military_tech_rounded,
-                    matn: 'Yangi rekord: $_ketmaKet ta ketma-ket!',
+                  const Positioned.fill(
+                    child: IgnorePointer(child: Confetti(count: 110)),
                   ),
-                Expanded(
-                  child: Center(
-                    child: ConstrainedBox(
-                      constraints: const BoxConstraints(maxWidth: 640),
-                      child: switch (_korinish) {
-                        _Korinish.yakun => _Yakun(
-                          s: _s,
-                          nom: widget.sarlavha,
-                          toliq: _toliqTugadi,
-                          engUzunKombo: _engUzunKombo,
-                          testgaOt: widget.testgaOt,
-                          tezkor: widget.tezkor,
-                          vaqtTugadi: _vaqtTugadi,
-                          ball: _ball,
-                          chaqmoqRekord: _chaqmoqRekord,
-                        ),
-                        _Korinish.bekat => RaundBekati(
-                          raund: _s.raundRaqami,
-                          yulduz: _s.raundYulduzi,
-                          togri: _s.raunddaTogri,
-                          jami: _s.raunddaSoralgan,
-                          ball: _ball - _raundBoshidagiBall,
-                          engUzunKombo: _engUzunKombo,
-                          keyingiNomi: _bosqichQisqaNomi,
-                          sandiq: _sandiqBonus > 0
-                              ? XazinaSandigi(
-                                  bonus: _sandiqBonus,
-                                  onOchildi: () {
-                                    Tovush.sandiq();
-                                    setState(() => _ball += _sandiqBonus);
-                                    progress.addXp(_sandiqBonus);
-                                  },
-                                )
-                              : null,
-                          onDavom: _davom,
-                          onYetadi: () {
-                            _toliqTugadi = false;
-                            _yakunla();
+                Column(
+                  children: [
+                    if (widget.tezkor && _korinish != _Korinish.yakun)
+                      _VaqtChizigi(
+                        qolgan: _qolganSoniya,
+                        jami: widget.tezkorSoniya!,
+                      ),
+                    if (_maqsadBajarildi)
+                      const MaqsadBanner(ball: Progress.kunlikMukofotBalli),
+                    if (_rekord)
+                      MukofotBanner(
+                        ikon: Icons.military_tech_rounded,
+                        matn: 'Yangi rekord: $_ketmaKet ta ketma-ket!',
+                      ),
+                    Expanded(
+                      child: Center(
+                        child: ConstrainedBox(
+                          constraints: const BoxConstraints(maxWidth: 640),
+                          child: switch (_korinish) {
+                            _Korinish.yakun => _Yakun(
+                              s: _s,
+                              nom: widget.sarlavha,
+                              toliq: _toliqTugadi,
+                              engUzunKombo: _engUzunKombo,
+                              testgaOt: widget.testgaOt,
+                              tezkor: widget.tezkor,
+                              vaqtTugadi: _vaqtTugadi,
+                              ball: _ball,
+                              chaqmoqRekord: _chaqmoqRekord,
+                            ),
+                            _Korinish.bekat => RaundBekati(
+                              raund: _s.raundRaqami,
+                              yulduz: _s.raundYulduzi,
+                              togri: _s.raunddaTogri,
+                              jami: _s.raunddaSoralgan,
+                              ball: _ball - _raundBoshidagiBall,
+                              engUzunKombo: _engUzunKombo,
+                              keyingiNomi: _bosqichQisqaNomi,
+                              sandiq: _sandiqBonus > 0
+                                  ? XazinaSandigi(
+                                      bonus: _sandiqBonus,
+                                      onOchildi: () {
+                                        Tovush.sandiq();
+                                        setState(() => _ball += _sandiqBonus);
+                                        progress.addXp(_sandiqBonus);
+                                      },
+                                    )
+                                  : null,
+                              onDavom: _davom,
+                              onYetadi: () {
+                                _toliqTugadi = false;
+                                _yakunla();
+                              },
+                            ),
+                            _Korinish.qiyinKarta => QiyinKarta(
+                              ar: _savol!.element.ar,
+                              uz: _savol!.element.uz,
+                              xatoSoni: progress.xatoSoni(
+                                _savol!.element.kalit,
+                              ),
+                              onOvoz: () => Tts.instance.speak(
+                                _savol!.element.ovoz,
+                                id: _savol!.element.kalit,
+                              ),
+                              onTayyor: () =>
+                                  setState(() => _korinish = _Korinish.savol),
+                            ),
+                            _Korinish.savol => _savolKorinishi(),
                           },
                         ),
-                        _Korinish.qiyinKarta => QiyinKarta(
-                          ar: _savol!.element.ar,
-                          uz: _savol!.element.uz,
-                          xatoSoni: progress.xatoSoni(_savol!.element.kalit),
-                          onOvoz: () => Tts.instance.speak(
-                            _savol!.element.ovoz,
-                            id: _savol!.element.kalit,
-                          ),
-                          onTayyor: () =>
-                              setState(() => _korinish = _Korinish.savol),
-                        ),
-                        _Korinish.savol => _savolKorinishi(),
-                      },
+                      ),
                     ),
-                  ),
+                  ],
                 ),
               ],
             ),

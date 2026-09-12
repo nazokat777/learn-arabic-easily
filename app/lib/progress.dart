@@ -38,6 +38,13 @@ class Progress extends ChangeNotifier {
   /// Chaqmoq raund (60 s) rekordi — birinchi urinishda to'g'ri javoblar.
   int chaqmoqRekord = 0;
 
+  /// Tanishuv (birinchi ochilishdagi 3 qadam) ko'rildimi.
+  bool tanishuvKurildi = false;
+  Future<void> tanishuvniBelgila() async {
+    tanishuvKurildi = true;
+    await _save();
+  }
+
   /// Kunlik reja to'liq bajarilgan kun uchun bonus (kunda bir marta).
   static const int rejaBonusBalli = 5;
   String? _rejaKuni;
@@ -235,6 +242,7 @@ class Progress extends ChangeNotifier {
     chaqmoqRekord = _prefs!.getInt('chaqmoqRekord') ?? 0;
     _sozKuni = _prefs!.getString('sozKuni');
     _rejaKuni = _prefs!.getString('rejaKuni');
+    tanishuvKurildi = _prefs!.getBool('tanishuv') ?? false;
     final ns = _prefs!.getString('nishonlar');
     if (ns != null) {
       (json.decode(ns) as Map).forEach(
@@ -699,6 +707,7 @@ class Progress extends ChangeNotifier {
     await p.setInt('chaqmoqRekord', chaqmoqRekord);
     if (_sozKuni != null) await p.setString('sozKuni', _sozKuni!);
     if (_rejaKuni != null) await p.setString('rejaKuni', _rejaKuni!);
+    await p.setBool('tanishuv', tanishuvKurildi);
     await p.setString('nishonlar', json.encode(_nishonlar));
     await p.setStringList('completed', _completed.toList());
     await p.setString('mastery', json.encode(_mastery));

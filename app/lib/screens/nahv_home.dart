@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart' hide Text;
+import 'gap_tuzish_ekrani.dart';
 import '../widgets/uz_text.dart';
 
 import '../main.dart';

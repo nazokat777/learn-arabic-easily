@@ -26,6 +26,29 @@ void main() {
     expect(p.xp, oldingiBall + Progress.kunlikMukofotBalli);
   });
 
+  test("bugungi natija: to'g'ri javoblar, aniqlik va bugungi ball", () async {
+    final p = Progress();
+    expect(p.bugungiTogri, 0);
+    expect(p.bugungiAniqlik, 0);
+    expect(p.bugungiBall, 0);
+    await p.bumpWord('natija::a', true);
+    await p.bumpWord('natija::b', true);
+    await p.bumpWord('natija::c', false);
+    await p.bumpWord('natija::d', true);
+    expect(p.bugungiSavollar, 4);
+    expect(p.bugungiTogri, 3);
+    expect(p.bugungiAniqlik, 75);
+    // markMode ham hisobga kiradi.
+    await p.markMode('natija::a', 0, true);
+    expect(p.bugungiSavollar, 5);
+    expect(p.bugungiTogri, 4);
+    // Bugungi ball faqat bugun olingan ballni sanaydi.
+    await p.addXp(12);
+    await p.addXp(5);
+    expect(p.bugungiBall, 17);
+    expect(p.xp, 17);
+  });
+
   test("seriya faqat maqsad bajarilgan kunda oshadi", () async {
     final p = Progress();
     // Oddiy ball seriyani yoqmaydi.

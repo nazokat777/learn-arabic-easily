@@ -97,6 +97,12 @@ class Progress extends ChangeNotifier {
   String? _kunSana;
   bool _kunMukofotOlindi = false;
 
+  /// Bugungi to'g'ri javoblar va bugun olingan ball — «bugun nima
+  /// qildim» hissi uchun. Umumiy ball o'sishi sezilmaydi (340 → 377),
+  /// bugungi «+37» esa ko'z oldida: har kunning o'z natijasi bor.
+  int _kunTogri = 0;
+  int _kunBall = 0;
+
   /// Eng uzun ketma-ket to'g'ri javoblar rekordi (butun tarix).
   int rekordKombo = 0;
 
@@ -174,6 +180,8 @@ class Progress extends ChangeNotifier {
     }
     _kunSana = _prefs!.getString('kunSana');
     _kunSoni = _prefs!.getInt('kunSoni') ?? 0;
+    _kunTogri = _prefs!.getInt('kunTogri') ?? 0;
+    _kunBall = _prefs!.getInt('kunBall') ?? 0;
     _kunMukofotOlindi = _prefs!.getBool('kunMukofot') ?? false;
     _maqsadKunlari.addAll(_prefs!.getStringList('maqsadKunlari') ?? []);
     rekordKombo = _prefs!.getInt('rekordKombo') ?? 0;
@@ -204,7 +212,7 @@ class Progress extends ChangeNotifier {
 
   /// To'g'ri javobda +1, xatoda -1 (0..masteryGoal orasida). Yangi darajani qaytaradi.
   Future<int> bumpWord(String key, bool correct) async {
-    _kunlikQosh();
+    _kunlikQosh(togri: correct);
     final cur = _mastery[key] ?? 0;
     final next = (correct ? cur + 1 : cur - 1).clamp(0, masteryGoal);
     _mastery[key] = next;
@@ -302,7 +310,7 @@ class Progress extends ChangeNotifier {
 
   /// Usul natijasini belgilash: to'g'ri bo'lsa bitni yoqadi; xato bo'lsa o'sha bitni o'chiradi.
   Future<void> markMode(String key, int mode, bool correct) async {
-    _kunlikQosh();
+    _kunlikQosh(togri: correct);
     final cur = _modeMask[key] ?? 0;
     _modeMask[key] = correct ? (cur | (1 << mode)) : (cur & ~(1 << mode));
     await _save();
@@ -327,17 +335,35 @@ class Progress extends ChangeNotifier {
 
   bool get kunlikMaqsadBajarildi => bugungiSavollar >= kunlikMaqsad;
 
+  /// Bugungi to'g'ri javoblar soni.
+  int get bugungiTogri => _kunSana == _today() ? _kunTogri : 0;
+
+  /// Bugun olingan ball (mukofotlar bilan).
+  int get bugungiBall => _kunSana == _today() ? _kunBall : 0;
+
+  /// Bugungi aniqlik foizi (savol bo'lmasa 0).
+  int get bugungiAniqlik =>
+      bugungiSavollar == 0 ? 0 : (bugungiTogri * 100 / bugungiSavollar).round();
+
   /// Bugungi mukofot allaqachon olinganmi.
   bool get kunlikMukofotOlindi => _kunSana == _today() && _kunMukofotOlindi;
 
-  void _kunlikQosh() {
+  /// Kun almashgan bo'lsa bugungi hisoblagichlarni noldan boshlaydi.
+  void _kunniYangila() {
     final bugun = _today();
     if (_kunSana != bugun) {
       _kunSana = bugun;
       _kunSoni = 0;
+      _kunTogri = 0;
+      _kunBall = 0;
       _kunMukofotOlindi = false;
     }
+  }
+
+  void _kunlikQosh({required bool togri}) {
+    _kunniYangila();
     _kunSoni++;
+    if (togri) _kunTogri++;
   }
 
   /// Kunlik mukofotni beradi — kunda faqat bir marta. Berilgan bo'lsa
@@ -369,6 +395,8 @@ class Progress extends ChangeNotifier {
   }
 
   Future<void> addXp(int amount) async {
+    _kunniYangila();
+    _kunBall += amount;
     xp += amount;
     await _save();
     notifyListeners();
@@ -456,6 +484,8 @@ class Progress extends ChangeNotifier {
     await p.setString('korilganKun', json.encode(_korilganKun));
     if (_kunSana != null) await p.setString('kunSana', _kunSana!);
     await p.setInt('kunSoni', _kunSoni);
+    await p.setInt('kunTogri', _kunTogri);
+    await p.setInt('kunBall', _kunBall);
     await p.setBool('kunMukofot', _kunMukofotOlindi);
     await p.setStringList('maqsadKunlari', _maqsadKunlari.toList());
     await p.setInt('rekordKombo', rekordKombo);

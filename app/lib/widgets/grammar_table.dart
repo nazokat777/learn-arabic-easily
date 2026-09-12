@@ -32,11 +32,11 @@ class _GrammarTableState extends State<GrammarTable> {
   bool _sinash = false;
   final Set<String> _ochilgan = {};
 
-  int get _arabchaSoni => [
+  int get _arabchaSoni => {
     for (final r in table.rows)
       for (final c in r.cells)
         if (_arabchami(c)) c,
-  ].toSet().length;
+  }.length;
 
   /// Arabcha katak: sinashda yopiq «?» plitka, ochilgach — matn.
   Widget _yashirin(String ar, Widget ochiq, {required String id}) {

@@ -693,8 +693,92 @@ class _KunlikMaqsad extends StatelessWidget {
           color: rang,
           background: rang.withValues(alpha: 0.12),
         ),
+        if (soni > 0) ...[
+          const SizedBox(height: 10),
+          const _BugungiNatija(),
+        ],
         const SizedBox(height: 12),
         const _Hafta(),
+      ],
+    );
+  }
+}
+
+/// Bugungi natija — «bugun nima qildim»: to'g'ri javoblar, aniqlik,
+/// bugun olingan ball. Umumiy ball o'sishi sezilmaydi, bugungi «+37»
+/// esa ko'z oldida — har kunning o'z yakuni bor, shuning uchun ertaga
+/// ham qaytish oson. Faqat bugun kamida bitta javob bo'lsa chiqadi.
+class _BugungiNatija extends StatelessWidget {
+  const _BugungiNatija();
+
+  @override
+  Widget build(BuildContext context) {
+    final p = progress;
+    final aniqlik = p.bugungiAniqlik;
+    final aniqRang = aniqlik >= 80
+        ? AppColors.success
+        : (aniqlik >= 50 ? AppColors.gold : AppColors.coral);
+    final kataklar = <(IconData, Color, String, String)>[
+      (
+        Icons.check_rounded,
+        AppColors.success,
+        '${p.bugungiTogri} / ${p.bugungiSavollar}',
+        "to'g'ri",
+      ),
+      (Icons.gps_fixed_rounded, aniqRang, '$aniqlik%', 'aniqlik'),
+      (Icons.bolt_rounded, AppColors.gold, '+${p.bugungiBall}', 'bugun ball'),
+    ];
+    return Row(
+      children: [
+        for (final (i, (ikon, rang, qiymat, nom)) in kataklar.indexed) ...[
+          if (i > 0) const SizedBox(width: 8),
+          Expanded(
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+              decoration: BoxDecoration(
+                color: rang.withValues(alpha: 0.09),
+                borderRadius: BorderRadius.circular(14),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(ikon, size: 16, color: rang),
+                  const SizedBox(width: 5),
+                  Flexible(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          qiymat,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            fontWeight: FontWeight.w900,
+                            fontSize: 13.5,
+                            color: rang,
+                            height: 1.1,
+                          ),
+                        ),
+                        Text(
+                          nom,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            fontSize: 10,
+                            fontWeight: FontWeight.w600,
+                            color: AppColors.matn2,
+                            height: 1.1,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
       ],
     );
   }

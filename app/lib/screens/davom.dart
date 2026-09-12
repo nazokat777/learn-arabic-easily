@@ -14,6 +14,13 @@ Widget? oxirgiDarsEkrani() {
   final modul = progress.oxirgiModul;
   final id = progress.oxirgiDarsId;
   if (modul == null || id == null || id.isEmpty) return null;
+  return darsEkrani(modul, id);
+}
+
+/// Modul va dars kalitidan ekran — «Davom etish» va manzil (`#/modul/id`)
+/// ikkalasi shu yerdan foydalanadi. Topilmasa `null`.
+Widget? darsEkrani(String modul, String id) {
+  if (id.isEmpty) return null;
   switch (modul) {
     case 'alifbo':
       return alifboDarsEkrani(id);

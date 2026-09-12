@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'content.dart';
 import 'mavzu.dart';
 import 'progress.dart';
+import 'services/manzil.dart';
 import 'services/xabar.dart';
+import 'screens/davom.dart';
 
 import 'services/content_updater.dart';
 import 'services/kirish.dart';
@@ -39,6 +41,45 @@ Future<void> main() async {
   runApp(ArabApp(kirishKodi: kirishKodi, darvozaKerak: darvozaKerak));
 }
 
+/// Ilova `#/modul/id` manzili bilan ochilgan bo'lsa (yangilash yoki
+/// havola), bosh ekran ustiga o'sha dars bir marta ochiladi. Kirish
+/// darvozasidan KEYIN turadi — kodsiz darsga o'tib bo'lmaydi.
+class BoshlangichManzil extends StatefulWidget {
+  final Widget child;
+  const BoshlangichManzil({super.key, required this.child});
+
+  @override
+  State<BoshlangichManzil> createState() => _BoshlangichManzilState();
+}
+
+class _BoshlangichManzilState extends State<BoshlangichManzil> {
+  static bool _ochildi = false;
+
+  @override
+  void initState() {
+    super.initState();
+    if (_ochildi) return;
+    _ochildi = true;
+    final m = Manzil.boshlangich();
+    if (m == null) return;
+    final ekran = darsEkrani(m.$1, m.$2);
+    if (ekran == null) {
+      Manzil.tozala();
+      return;
+    }
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+      Navigator.push(context, MaterialPageRoute(builder: (_) => ekran));
+      // Flutter ishga tushganda manzilni «/» qilib qo'yadi — darsni
+      // ochgach uni qaytaramiz, aks holda yangilash bosh ekranga olib boradi.
+      Manzil.yangila(m.$1, m.$2);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) => widget.child;
+}
+
 class ArabApp extends StatelessWidget {
   final String kirishKodi;
   final bool darvozaKerak;
@@ -59,11 +100,12 @@ class ArabApp extends StatelessWidget {
         title: "Arab tilini oson o'rganamiz",
         debugShowCheckedModeBanner: false,
         scaffoldMessengerKey: xabarKaliti,
+        navigatorObservers: [ManzilKuzatuvchi()],
         theme: AppTheme.light,
         home: KirishDarvozasi(
           kod: kirishKodi,
           kerak: darvozaKerak,
-          child: const HomeScreen(),
+          child: const BoshlangichManzil(child: HomeScreen()),
         ),
       ),
     );

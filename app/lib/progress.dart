@@ -1,3 +1,4 @@
+import 'services/manzil.dart';
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -335,6 +336,7 @@ class Progress extends ChangeNotifier {
   /// uchun. Duolingo'dagi «Continue»: o'quvchi qayerda qolganini
   /// qidirmaydi, ilova o'zi eslatadi.
   Future<void> oxirgiDarsniYoz(String modul, String id, String nom) async {
+    Manzil.yangila(modul, id); // brauzer manzili: #/modul/id
     oxirgiModul = modul;
     oxirgiDarsId = id;
     oxirgiDarsNomi = nom;

@@ -2,7 +2,8 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart' hide Text;
-import 'package:flutter/services.dart' show Clipboard, ClipboardData;
+import 'package:flutter/services.dart'
+    show Clipboard, ClipboardData, KeyEvent, KeyDownEvent, LogicalKeyboardKey;
 import '../widgets/uz_text.dart';
 
 import '../main.dart';
@@ -315,100 +316,154 @@ class _MashqEkranState extends State<MashqEkran> {
     }
   }
 
+  /// Klaviatura: 1–4 variantni tanlaydi, T/X — «to'g'rimi» savolida,
+  /// Enter/bo'sh joy — bekatda «Davom». Kompyuterda mashq sichqonchasiz
+  /// ketadi — tezlik o'z-o'zidan «oqim» holatini beradi.
+  void _tugma(KeyEvent e) {
+    if (e is! KeyDownEvent) return;
+    final k = e.logicalKey;
+    if (_korinish == _Korinish.bekat) {
+      if (k == LogicalKeyboardKey.enter || k == LogicalKeyboardKey.space) {
+        _davom();
+      }
+      return;
+    }
+    if (_korinish == _Korinish.qiyinKarta) {
+      if (k == LogicalKeyboardKey.enter || k == LogicalKeyboardKey.space) {
+        setState(() => _korinish = _Korinish.savol);
+      }
+      return;
+    }
+    final s = _savol;
+    if (s == null || _korinish != _Korinish.savol || _javobBerildi) return;
+    if (s.turi == MashqTuri.tugriMi) {
+      if (k == LogicalKeyboardKey.keyT || k == LogicalKeyboardKey.digit1) {
+        setState(() => _tugriMiJavob = true);
+        _javob(s.juftlikTogri);
+      } else if (k == LogicalKeyboardKey.keyX ||
+          k == LogicalKeyboardKey.digit2) {
+        setState(() => _tugriMiJavob = false);
+        _javob(!s.juftlikTogri);
+      }
+      return;
+    }
+    if (s.turi == MashqTuri.harflabYoz) return;
+    const raqamlar = [
+      LogicalKeyboardKey.digit1,
+      LogicalKeyboardKey.digit2,
+      LogicalKeyboardKey.digit3,
+      LogicalKeyboardKey.digit4,
+    ];
+    final i = raqamlar.indexOf(k);
+    if (i < 0 || i >= s.variantlar.length) return;
+    setState(() => _tanlangan = i);
+    _javob(i == s.togri);
+  }
+
+  /// Keycap belgilarini faqat klaviaturali (keng) ekranda ko'rsatamiz.
+  bool _keycap(BuildContext context) => MediaQuery.sizeOf(context).width >= 700;
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.sarlavha),
-        actions: [
-          Center(
-            child: Padding(
-              padding: const EdgeInsets.only(right: 12),
-              child: XpChip(value: _ball),
+    return Focus(
+      autofocus: true,
+      onKeyEvent: (_, e) {
+        _tugma(e);
+        return KeyEventResult.ignored;
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text(widget.sarlavha),
+          actions: [
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.only(right: 12),
+                child: XpChip(value: _ball),
+              ),
+            ),
+          ],
+        ),
+        // Bosqich rangi fonda yumshoq nur bo'lib turadi: dars — zumrad,
+        // qiyin — marjon, takror — binafsha, yozish — oltin. Bosqich
+        // almashganda rang erib o'tadi — o'quvchi «boshqa joyga keldim»ni
+        // o'qimasdan sezadi.
+        body: AnimatedContainer(
+          duration: const Duration(milliseconds: 700),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+                _bosqichRangi.withValues(alpha: 0.16),
+                _bosqichRangi.withValues(alpha: 0.0),
+              ],
+              stops: const [0, 0.45],
             ),
           ),
-        ],
-      ),
-      // Bosqich rangi fonda yumshoq nur bo'lib turadi: dars — zumrad,
-      // qiyin — marjon, takror — binafsha, yozish — oltin. Bosqich
-      // almashganda rang erib o'tadi — o'quvchi «boshqa joyga keldim»ni
-      // o'qimasdan sezadi.
-      body: AnimatedContainer(
-        duration: const Duration(milliseconds: 700),
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              _bosqichRangi.withValues(alpha: 0.16),
-              _bosqichRangi.withValues(alpha: 0.0),
-            ],
-            stops: const [0, 0.45],
-          ),
-        ),
-        child: SafeArea(
-          child: Column(
-            children: [
-              if (_maqsadBajarildi)
-                const MaqsadBanner(ball: Progress.kunlikMukofotBalli),
-              if (_rekord)
-                MukofotBanner(
-                  ikon: Icons.military_tech_rounded,
-                  matn: 'Yangi rekord: $_ketmaKet ta ketma-ket!',
-                ),
-              Expanded(
-                child: Center(
-                  child: ConstrainedBox(
-                    constraints: const BoxConstraints(maxWidth: 640),
-                    child: switch (_korinish) {
-                      _Korinish.yakun => _Yakun(
-                        s: _s,
-                        nom: widget.sarlavha,
-                        toliq: _toliqTugadi,
-                        engUzunKombo: _engUzunKombo,
-                        testgaOt: widget.testgaOt,
-                      ),
-                      _Korinish.bekat => RaundBekati(
-                        raund: _s.raundRaqami,
-                        yulduz: _s.raundYulduzi,
-                        togri: _s.raunddaTogri,
-                        jami: _s.raunddaSoralgan,
-                        ball: _ball - _raundBoshidagiBall,
-                        engUzunKombo: _engUzunKombo,
-                        keyingiNomi: _bosqichQisqaNomi,
-                        sandiq: _sandiqBonus > 0
-                            ? XazinaSandigi(
-                                bonus: _sandiqBonus,
-                                onOchildi: () {
-                                  Tovush.sandiq();
-                                  setState(() => _ball += _sandiqBonus);
-                                  progress.addXp(_sandiqBonus);
-                                },
-                              )
-                            : null,
-                        onDavom: _davom,
-                        onYetadi: () {
-                          _toliqTugadi = false;
-                          _yakunla();
-                        },
-                      ),
-                      _Korinish.qiyinKarta => QiyinKarta(
-                        ar: _savol!.element.ar,
-                        uz: _savol!.element.uz,
-                        xatoSoni: progress.xatoSoni(_savol!.element.kalit),
-                        onOvoz: () => Tts.instance.speak(
-                          _savol!.element.ovoz,
-                          id: _savol!.element.kalit,
+          child: SafeArea(
+            child: Column(
+              children: [
+                if (_maqsadBajarildi)
+                  const MaqsadBanner(ball: Progress.kunlikMukofotBalli),
+                if (_rekord)
+                  MukofotBanner(
+                    ikon: Icons.military_tech_rounded,
+                    matn: 'Yangi rekord: $_ketmaKet ta ketma-ket!',
+                  ),
+                Expanded(
+                  child: Center(
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxWidth: 640),
+                      child: switch (_korinish) {
+                        _Korinish.yakun => _Yakun(
+                          s: _s,
+                          nom: widget.sarlavha,
+                          toliq: _toliqTugadi,
+                          engUzunKombo: _engUzunKombo,
+                          testgaOt: widget.testgaOt,
                         ),
-                        onTayyor: () =>
-                            setState(() => _korinish = _Korinish.savol),
-                      ),
-                      _Korinish.savol => _savolKorinishi(),
-                    },
+                        _Korinish.bekat => RaundBekati(
+                          raund: _s.raundRaqami,
+                          yulduz: _s.raundYulduzi,
+                          togri: _s.raunddaTogri,
+                          jami: _s.raunddaSoralgan,
+                          ball: _ball - _raundBoshidagiBall,
+                          engUzunKombo: _engUzunKombo,
+                          keyingiNomi: _bosqichQisqaNomi,
+                          sandiq: _sandiqBonus > 0
+                              ? XazinaSandigi(
+                                  bonus: _sandiqBonus,
+                                  onOchildi: () {
+                                    Tovush.sandiq();
+                                    setState(() => _ball += _sandiqBonus);
+                                    progress.addXp(_sandiqBonus);
+                                  },
+                                )
+                              : null,
+                          onDavom: _davom,
+                          onYetadi: () {
+                            _toliqTugadi = false;
+                            _yakunla();
+                          },
+                        ),
+                        _Korinish.qiyinKarta => QiyinKarta(
+                          ar: _savol!.element.ar,
+                          uz: _savol!.element.uz,
+                          xatoSoni: progress.xatoSoni(_savol!.element.kalit),
+                          onOvoz: () => Tts.instance.speak(
+                            _savol!.element.ovoz,
+                            id: _savol!.element.kalit,
+                          ),
+                          onTayyor: () =>
+                              setState(() => _korinish = _Korinish.savol),
+                        ),
+                        _Korinish.savol => _savolKorinishi(),
+                      },
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
@@ -889,25 +944,50 @@ class _MashqEkranState extends State<MashqEkran> {
                       borderRadius: BorderRadius.circular(14),
                       border: Border.all(color: chegara, width: 1.8),
                     ),
-                    child: s.arabchaVariantlar
-                        ? Directionality(
-                            textDirection: TextDirection.rtl,
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: s.arabchaVariantlar
+                              ? Directionality(
+                                  textDirection: TextDirection.rtl,
+                                  child: Text(
+                                    s.variantlar[i],
+                                    style: AppTheme.arabic(
+                                      size: 24,
+                                      color: AppColors.ink,
+                                    ),
+                                  ),
+                                )
+                              : Text(
+                                  s.variantlar[i],
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w600,
+                                    color: AppColors.ink,
+                                  ),
+                                ),
+                        ),
+                        if (_keycap(context))
+                          Container(
+                            margin: const EdgeInsets.only(left: 10),
+                            width: 22,
+                            height: 22,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(6),
+                              border: Border.all(color: AppColors.chiziq),
+                            ),
                             child: Text(
-                              s.variantlar[i],
-                              style: AppTheme.arabic(
-                                size: 24,
-                                color: AppColors.ink,
+                              '${i + 1}',
+                              style: TextStyle(
+                                fontSize: 11,
+                                fontWeight: FontWeight.w800,
+                                color: AppColors.matn3,
                               ),
                             ),
-                          )
-                        : Text(
-                            s.variantlar[i],
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600,
-                              color: AppColors.ink,
-                            ),
                           ),
+                      ],
+                    ),
                   ),
                 ),
               ),

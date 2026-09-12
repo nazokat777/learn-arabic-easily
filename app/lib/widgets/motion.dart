@@ -450,18 +450,26 @@ class Tactile extends StatefulWidget {
 
 class _TactileState extends State<Tactile> {
   bool _down = false;
+  bool _hover = false;
 
   @override
   Widget build(BuildContext context) {
-    return Listener(
-      onPointerDown: (_) => setState(() => _down = true),
-      onPointerUp: (_) => setState(() => _down = false),
-      onPointerCancel: (_) => setState(() => _down = false),
-      child: AnimatedScale(
-        scale: _down ? widget.scale : 1,
-        duration: const Duration(milliseconds: 140),
-        curve: Curves.easeOutCubic,
-        child: widget.child,
+    // Sichqoncha ustiga kelganda (kompyuter, brauzer) plitka sal
+    // ko'tariladi — «bosish mumkin» degan jim ishora. Sensorda hover
+    // yo'q, shuning uchun telefonda hech nima o'zgarmaydi.
+    return MouseRegion(
+      onEnter: (_) => setState(() => _hover = true),
+      onExit: (_) => setState(() => _hover = false),
+      child: Listener(
+        onPointerDown: (_) => setState(() => _down = true),
+        onPointerUp: (_) => setState(() => _down = false),
+        onPointerCancel: (_) => setState(() => _down = false),
+        child: AnimatedScale(
+          scale: _down ? widget.scale : (_hover ? 1.015 : 1),
+          duration: const Duration(milliseconds: 140),
+          curve: Curves.easeOutCubic,
+          child: widget.child,
+        ),
       ),
     );
   }

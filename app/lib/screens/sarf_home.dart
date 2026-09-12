@@ -153,9 +153,52 @@ class _BoshHolat extends StatelessWidget {
 }
 
 /// Bitta sarf darsi.
-class SarfLessonScreen extends StatelessWidget {
+class SarfLessonScreen extends StatefulWidget {
   final SarfLesson lesson;
   const SarfLessonScreen({super.key, required this.lesson});
+
+  @override
+  State<SarfLessonScreen> createState() => _SarfLessonScreenState();
+}
+
+class _SarfLessonScreenState extends State<SarfLessonScreen> {
+  SarfLesson get lesson => widget.lesson;
+
+  /// Misollar tarjimasi yashirin rejimda: o'quvchi arabcha misolni
+  /// o'qib, avval o'zi tarjima qiladi, keyin katakni ochib tekshiradi.
+  /// Kitob mazmuni o'zgarmaydi — faqat ko'rsatish tartibi.
+  bool _tarjimaYashirin = false;
+
+  int get _tarjimaliMisollar => lesson.blocks
+      .where((b) => b.type == 'misol' && b.uz.isNotEmpty)
+      .length;
+
+  Widget _sinashTugmasi() {
+    if (_tarjimaliMisollar < 2) return const SizedBox.shrink();
+    return Align(
+      alignment: Alignment.centerRight,
+      child: TextButton.icon(
+        onPressed: () => setState(() => _tarjimaYashirin = !_tarjimaYashirin),
+        icon: Icon(
+          _tarjimaYashirin
+              ? Icons.visibility_rounded
+              : Icons.psychology_rounded,
+          size: 16,
+        ),
+        label: Text(
+          _tarjimaYashirin
+              ? 'Tarjimalarni ko\'rsatish'
+              : 'Misollarda o\'zimni sinayman',
+          style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 12),
+        ),
+        style: TextButton.styleFrom(
+          foregroundColor: AppColors.indigo,
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+          visualDensity: VisualDensity.compact,
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -192,7 +235,9 @@ class SarfLessonScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 8),
+              _sinashTugmasi(),
+              const SizedBox(height: 8),
               for (final (i, b) in lesson.blocks.indexed) ...[
                 _blok(b, _yorliq(i)),
                 const SizedBox(height: 10),
@@ -240,7 +285,7 @@ class SarfLessonScreen extends StatelessWidget {
     }
     switch (b.type) {
       case 'misol':
-        return _Misol(block: b);
+        return _Misol(block: b, yashirin: _tarjimaYashirin);
       case 'list':
         return _Royxat(block: b);
       case 'jadval':
@@ -439,12 +484,73 @@ class _Bolim extends StatelessWidget {
 }
 
 /// Alohida turgan arabcha satr — o'qib berish tugmasi bilan.
-class _Misol extends StatelessWidget {
+class _Misol extends StatefulWidget {
   final SarfBlock block;
-  const _Misol({required this.block});
+
+  /// Sinash rejimi: tarjima bosilguncha yopiq turadi.
+  final bool yashirin;
+  const _Misol({required this.block, this.yashirin = false});
+
+  @override
+  State<_Misol> createState() => _MisolState();
+}
+
+class _MisolState extends State<_Misol> {
+  bool _ochildi = false;
+
+  @override
+  void didUpdateWidget(covariant _Misol old) {
+    super.didUpdateWidget(old);
+    if (old.yashirin != widget.yashirin) _ochildi = false;
+  }
+
+  Widget _tarjima() {
+    final block = widget.block;
+    if (!widget.yashirin || _ochildi) {
+      return Text(
+        block.uz,
+        style: TextStyle(color: AppColors.matn2, height: 1.35),
+      );
+    }
+    return InkWell(
+      borderRadius: BorderRadius.circular(10),
+      onTap: () {
+        Haptic.tap();
+        setState(() => _ochildi = true);
+      },
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+        decoration: BoxDecoration(
+          color: AppColors.indigo.withValues(alpha: 0.08),
+          borderRadius: BorderRadius.circular(10),
+          border: Border.all(color: AppColors.indigo.withValues(alpha: 0.3)),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(
+              Icons.help_outline_rounded,
+              size: 16,
+              color: AppColors.indigo.withValues(alpha: 0.8),
+            ),
+            const SizedBox(width: 6),
+            Text(
+              'Avval o\'zingiz tarjima qiling, keyin bosing',
+              style: TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.w700,
+                color: AppColors.indigo,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
+    final block = widget.block;
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
@@ -468,9 +574,12 @@ class _Misol extends StatelessWidget {
             const SizedBox(height: 4),
             Padding(
               padding: const EdgeInsets.only(left: 26),
-              child: Text(
-                block.uz,
-                style: TextStyle(color: AppColors.matn2, height: 1.35),
+              child: AnimatedSwitcher(
+                duration: const Duration(milliseconds: 220),
+                child: KeyedSubtree(
+                  key: ValueKey(!widget.yashirin || _ochildi),
+                  child: _tarjima(),
+                ),
               ),
             ),
           ],

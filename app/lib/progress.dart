@@ -38,6 +38,39 @@ class Progress extends ChangeNotifier {
   /// Chaqmoq raund (60 s) rekordi — birinchi urinishda to'g'ri javoblar.
   int chaqmoqRekord = 0;
 
+  /// Haftalik maqsad — haftada 5 kun kunlik maqsad. Kunlik maqsaddan
+  /// kattaroq marra: bir kun o'tkazib yuborilsa ham hafta yutilishi mumkin
+  /// (7 emas, 5) — mukammallik talabi emas, barqarorlik. Bonus haftada bir.
+  static const int haftaMaqsadi = 5;
+  static const int haftaBonusBalli = 15;
+  String? _haftaBonusDushanba;
+
+  String _buDushanba() {
+    final b = DateTime.now();
+    return _sana(DateTime(b.year, b.month, b.day - (b.weekday - 1)));
+  }
+
+  /// Shu haftada maqsad bajarilgan kunlar soni.
+  int get haftaKunlari {
+    final b = DateTime.now();
+    final d = DateTime(b.year, b.month, b.day - (b.weekday - 1));
+    var n = 0;
+    for (var i = 0; i < 7; i++) {
+      if (maqsadBajarilganKun(d.add(Duration(days: i)))) n++;
+    }
+    return n;
+  }
+
+  bool get haftaBonusOlindi => _haftaBonusDushanba == _buDushanba();
+
+  /// 5 kunga yetilganda bir martalik bonus; yetmagan yoki olingan — `false`.
+  Future<bool> haftaBonusiniOl() async {
+    if (haftaKunlari < haftaMaqsadi || haftaBonusOlindi) return false;
+    _haftaBonusDushanba = _buDushanba();
+    await addXp(haftaBonusBalli);
+    return true;
+  }
+
   /// Tanishuv (birinchi ochilishdagi 3 qadam) ko'rildimi.
   bool tanishuvKurildi = false;
   Future<void> tanishuvniBelgila() async {
@@ -243,6 +276,7 @@ class Progress extends ChangeNotifier {
     _sozKuni = _prefs!.getString('sozKuni');
     _rejaKuni = _prefs!.getString('rejaKuni');
     tanishuvKurildi = _prefs!.getBool('tanishuv') ?? false;
+    _haftaBonusDushanba = _prefs!.getString('haftaBonus');
     final ns = _prefs!.getString('nishonlar');
     if (ns != null) {
       (json.decode(ns) as Map).forEach(
@@ -708,6 +742,9 @@ class Progress extends ChangeNotifier {
     if (_sozKuni != null) await p.setString('sozKuni', _sozKuni!);
     if (_rejaKuni != null) await p.setString('rejaKuni', _rejaKuni!);
     await p.setBool('tanishuv', tanishuvKurildi);
+    if (_haftaBonusDushanba != null) {
+      await p.setString('haftaBonus', _haftaBonusDushanba!);
+    }
     await p.setString('nishonlar', json.encode(_nishonlar));
     await p.setStringList('completed', _completed.toList());
     await p.setString('mastery', json.encode(_mastery));

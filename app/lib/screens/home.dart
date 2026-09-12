@@ -26,6 +26,7 @@ import 'alifbo_home.dart';
 import 'davom.dart';
 import 'mashqlar_home.dart';
 import 'nahv_home.dart';
+import 'kartochkalar.dart';
 import 'nishonlar_ekrani.dart';
 import 'tanishuv.dart';
 import '../nishonlar.dart';
@@ -1885,6 +1886,39 @@ class _BugungiNatija extends StatelessWidget {
 /// Seriya raqami mavhum, yetti doira esa ko'z oldida: «shanba bo'sh
 /// qolibdi» degan his keyingi haftani tekis qiladi. Bugungi kun
 /// hoshiya bilan ajratiladi.
+/// Hafta maqsadi 5 kunga yetganda bir martalik +15 va marosim xabari.
+class _HaftaBonusTekshiruvchi extends StatefulWidget {
+  const _HaftaBonusTekshiruvchi();
+
+  @override
+  State<_HaftaBonusTekshiruvchi> createState() =>
+      _HaftaBonusTekshiruvchiState();
+}
+
+class _HaftaBonusTekshiruvchiState extends State<_HaftaBonusTekshiruvchi> {
+  bool _tekshirildi = false;
+
+  @override
+  Widget build(BuildContext context) {
+    final p = progress;
+    if (!_tekshirildi &&
+        p.haftaKunlari >= Progress.haftaMaqsadi &&
+        !p.haftaBonusOlindi) {
+      _tekshirildi = true;
+      WidgetsBinding.instance.addPostFrameCallback((_) async {
+        if (await progress.haftaBonusiniOl()) {
+          Tovush.daraja();
+          xabarBer(
+            'Hafta maqsadi bajarildi — +${Progress.haftaBonusBalli} ball!',
+            ikon: Icons.verified_rounded,
+          );
+        }
+      });
+    }
+    return const SizedBox.shrink();
+  }
+}
+
 class _Hafta extends StatelessWidget {
   const _Hafta();
 
@@ -1900,8 +1934,39 @@ class _Hafta extends StatelessWidget {
       bugun.day - (bugun.weekday - 1),
     );
     final (savol, togri, ball) = progress.haftaNatijasi();
+    final haftaKun = progress.haftaKunlari;
+    final haftaTayyor = haftaKun >= Progress.haftaMaqsadi;
     return Column(
       children: [
+        // Haftalik maqsad: 5 kun — bir kun o'tkazib yuborilsa ham hafta
+        // yutiladi. Kunlik marradan kattaroq, lekin yetib bo'ladigan marra.
+        Padding(
+          padding: const EdgeInsets.only(bottom: 8),
+          child: Row(
+            children: [
+              Icon(
+                haftaTayyor
+                    ? Icons.verified_rounded
+                    : Icons.calendar_month_rounded,
+                size: 15,
+                color: haftaTayyor ? AppColors.success : AppColors.matn3,
+              ),
+              const SizedBox(width: 5),
+              Text(
+                haftaTayyor
+                    ? 'Hafta maqsadi bajarildi: $haftaKun kun'
+                    : 'Hafta maqsadi: $haftaKun / ${Progress.haftaMaqsadi} kun',
+                style: TextStyle(
+                  fontSize: 11.5,
+                  fontWeight: FontWeight.w800,
+                  color: haftaTayyor ? AppColors.success : AppColors.matn3,
+                ),
+              ),
+              const Spacer(),
+              const _HaftaBonusTekshiruvchi(),
+            ],
+          ),
+        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -2196,6 +2261,13 @@ class _EslashKartasi extends StatelessWidget {
                       ),
                     ],
                   ),
+                ),
+                // Ikki yo'l: test (o'q) yoki kartochkalar (svayp) —
+                // o'quvchi kayfiyatiga qarab tanlaydi.
+                IconButton(
+                  tooltip: 'Kartochkalar bilan',
+                  onPressed: () => kartochkalarniOch(context),
+                  icon: const Icon(Icons.style_rounded, color: AppColors.teal),
                 ),
                 const Icon(
                   Icons.arrow_forward_rounded,

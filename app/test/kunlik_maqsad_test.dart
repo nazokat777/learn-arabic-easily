@@ -80,6 +80,9 @@ void main() {
     expect(await p.kunlikMukofotniOl(), isTrue);
     expect(p.streak, 1);
     expect(p.bugunSeriyada, isTrue);
+    // Haftalik maqsad: bugun 1 kun; 5 ga yetmagan — bonus yo'q.
+    expect(p.haftaKunlari, 1);
+    expect(await p.haftaBonusiniOl(), isFalse);
     // O'sha kuni yana ball olsa ham seriya ikkiga chiqmaydi.
     await p.addXp(50);
     expect(p.streak, 1);

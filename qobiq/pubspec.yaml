@@ -1,0 +1,21 @@
+name: learn_arabic
+description: "Arab tilini oson o'rganamiz — qobiq ilova (sayt telefon ichida)."
+publish_to: 'none'
+version: 1.0.0+2
+
+environment:
+  sdk: ^3.11.5
+
+dependencies:
+  flutter:
+    sdk: flutter
+  webview_flutter: ^4.14.1
+  webview_flutter_android: ^4.12.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true

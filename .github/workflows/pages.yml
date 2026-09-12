@@ -94,8 +94,8 @@ jobs:
             echo "Imzo kaliti yo'q — debug imzo bilan yig'iladi"
             exit 0
           fi
-          echo "$KEYSTORE_B64" | base64 -d > app/android/app/release.jks
-          cat > app/android/key.properties <<EOF
+          echo "$KEYSTORE_B64" | base64 -d > qobiq/android/app/release.jks
+          cat > qobiq/android/key.properties <<EOF
           storeFile=release.jks
           storePassword=$STORE_PASSWORD
           keyAlias=$KEY_ALIAS
@@ -103,15 +103,17 @@ jobs:
           EOF
           echo "Imzo kaliti tayyor"
 
-      - name: APK yig'ish
-        # Ko'p foydalanuvchi ilovani telefonga o'rnatib ishlatadi. APK ichida
-        # darslar bor (ovoz va yangilanishlar internetdan keladi), shuning
-        # uchun hajmi kichik.
-        working-directory: app
+      - name: APK yig'ish (qobiq)
+        # APK — yupqa qobiq: saytni telefon ichida ochadi. Kod, darslar va
+        # ovoz saytdan keladi, shuning uchun bir marta o'rnatiladi, keyin
+        # har push bilan o'zi yangi bo'ladi. applicationId va imzo asosiy
+        # ilova bilan bir xil — eski ilova USTIGA yangilanish bo'lib tushadi.
+        working-directory: qobiq
         run: |
+          flutter pub get
           flutter build apk --release
-          cp build/app/outputs/flutter-apk/app-release.apk build/web/arab-tili.apk
-          echo "APK: $(du -h build/web/arab-tili.apk | cut -f1)"
+          cp build/app/outputs/flutter-apk/app-release.apk ../app/build/web/arab-tili.apk
+          echo "APK: $(du -h ../app/build/web/arab-tili.apk | cut -f1)"
 
       - name: Yuklab olish sahifasi
         working-directory: app
@@ -142,9 +144,9 @@ jobs:
             <li>«Noma'lum manbadan o'rnatishga ruxsat» so'ralsa — ruxsat bering.</li>
             <li>«O'rnatish» ni bosing.</li>
           </ol>
-          <p class="small">Darslar ilova ichida. Ovozlar internetdan yuklanadi.
-          Yangi darslar qo'shilsa ilova o'zi yangilanadi — APK ni qayta
-          o'rnatish shart emas.</p>
+          <p class="small">Ilova saytni telefon ichida ochadi: darslar, ovoz va
+          barcha yangiliklar internetdan keladi. Bir marta o'rnatiladi — keyin
+          hech qachon qayta o'rnatish shart emas. Internet kerak.</p>
           <p class="small"><a href="./">Brauzerda ochish</a></p>
           </div></body></html>
           HTML

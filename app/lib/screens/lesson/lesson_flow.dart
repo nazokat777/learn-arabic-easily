@@ -13,6 +13,7 @@ import '../../mashq/mukofot.dart' show BugunChizigi;
 import '../nishonlar_ekrani.dart';
 import 'master_drill.dart';
 import 'quiz_flow.dart';
+import '../tarjima_mashqi.dart';
 import 'read_flow.dart';
 import 'vocab_flow.dart';
 
@@ -27,7 +28,7 @@ class LessonFlow extends StatefulWidget {
   State<LessonFlow> createState() => _LessonFlowState();
 }
 
-enum _Step { intro, vocab, listen, read, quiz, review, done }
+enum _Step { intro, vocab, listen, read, tarjima, quiz, review, done }
 
 class _LessonFlowState extends State<LessonFlow> {
   _Step _step = _Step.intro;
@@ -119,16 +120,19 @@ class _LessonFlowState extends State<LessonFlow> {
   /// yo'l bilan bog'langan. O'quvchi qaysi bosqichda ekanini bir qarashda
   /// ko'radi; hozirgi bosqich nur bilan ajralib turadi.
   Widget _stepStrip() {
-    const items = [
+    final items = [
       (_Step.vocab, Icons.style_rounded, "Lug'at"),
       (_Step.listen, Icons.headphones_rounded, 'Tinglash'),
       (_Step.read, Icons.menu_book_rounded, "O'qish"),
+      if (widget.lesson.exercise.isNotEmpty)
+        (_Step.tarjima, Icons.edit_note_rounded, 'Tarjima'),
       (_Step.quiz, Icons.quiz_rounded, 'Savol'),
     ];
     final order = [
       _Step.vocab,
       _Step.listen,
       _Step.read,
+      if (widget.lesson.exercise.isNotEmpty) _Step.tarjima,
       _Step.quiz,
       _Step.review,
     ];
@@ -246,6 +250,16 @@ class _LessonFlowState extends State<LessonFlow> {
         return ReadStage(
           lesson: l,
           award: _award,
+          onDone: () => setState(
+            () => _step = l.exercise.isNotEmpty ? _Step.tarjima : _Step.quiz,
+          ),
+        );
+      // Kitobdagi tarjima mashqi — o'qishdan keyin, savollardan oldin:
+      // matn hali xotirada, o'quvchi o'zbekchadan arabchaga o'zi tuzadi.
+      case _Step.tarjima:
+        return TarjimaStage(
+          lesson: l,
+          award: _award,
           onDone: () => setState(() => _step = _Step.quiz),
         );
       case _Step.quiz:
@@ -342,6 +356,11 @@ class _IntroView extends StatelessWidget {
                 Icons.menu_book_rounded,
                 'Keyin matnni o\'zimiz o\'qib tushunamiz',
               ),
+              if (lesson.exercise.isNotEmpty)
+                _row(
+                  Icons.edit_note_rounded,
+                  "So'ng o'zbekcha gaplarni arabchaga tarjima qilamiz",
+                ),
               _row(
                 Icons.quiz_rounded,
                 'Oxirida savollarga javob beramiz va xatolarni ko\'ramiz',

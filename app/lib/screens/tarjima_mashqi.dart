@@ -6,6 +6,7 @@ import '../widgets/motion.dart';
 import '../widgets/speak_button.dart';
 import '../widgets/uz_text.dart';
 import 'lesson/sentence_text.dart';
+import 'lesson/vocab_flow.dart' show AwardXp;
 
 /// Kitobdagi «Quyidagi gaplarni arab tiliga tarjima qiling» mashqi —
 /// interaktiv: har o'zbekcha jumla alohida, o'quvchi avval o'zi tarjima
@@ -231,6 +232,84 @@ class _TarjimaMashqiState extends State<TarjimaMashqi> {
           ],
         ],
       ),
+    );
+  }
+}
+
+/// Dars oqimidagi «Tarjima» bosqichi: kitob mashqi + «Savollarga o'tish».
+/// Bosqich uchun +5 ball — mashqni ochib ko'rganga emas, o'tganga.
+class TarjimaStage extends StatelessWidget {
+  final QiroatLesson lesson;
+  final VoidCallback onDone;
+  final AwardXp award;
+  const TarjimaStage({
+    super.key,
+    required this.lesson,
+    required this.onDone,
+    required this.award,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Expanded(
+          child: ListView(
+            padding: const EdgeInsets.fromLTRB(20, 6, 20, 16),
+            children: [
+              Row(
+                children: [
+                  const Icon(
+                    Icons.edit_note_rounded,
+                    size: 18,
+                    color: AppColors.gold,
+                  ),
+                  const SizedBox(width: 6),
+                  Text(
+                    "O'zbekchadan arabchaga",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w800,
+                      color: AppColors.ink,
+                      fontSize: 15,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 4),
+              Text(
+                "Kitobdagi mashq. Har gapni o'zingiz arabcha ayting (yoki "
+                "yozing), keyin «Javob» bilan tekshiring.",
+                style: TextStyle(fontSize: 11.5, color: AppColors.matn3),
+              ),
+              const SizedBox(height: 10),
+              TarjimaMashqi(lesson: lesson),
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(20, 4, 20, 16),
+          child: SizedBox(
+            width: double.infinity,
+            child: FilledButton(
+              onPressed: () {
+                award(5);
+                onDone();
+              },
+              style: FilledButton.styleFrom(
+                backgroundColor: AppColors.emerald,
+                padding: const EdgeInsets.symmetric(vertical: 15),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(14),
+                ),
+              ),
+              child: const Text(
+                "Savollarga o'tish",
+                style: TextStyle(fontWeight: FontWeight.w800, fontSize: 16),
+              ),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

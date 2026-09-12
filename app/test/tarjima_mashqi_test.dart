@@ -108,4 +108,34 @@ void main() {
     expect(find.text('Javobni ko\'rish'), findsNothing);
     expect(tester.takeException(), isNull);
   });
+
+  testWidgets('tarjima bosqichi: «Savollarga o'tish» ball beradi va davom etadi', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(900, 2000);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+    final dars = darslar.firstWhere((l) => l.exercise.isNotEmpty);
+    var ball = 0;
+    var tugadi = 0;
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Scaffold(
+          body: TarjimaStage(
+            lesson: dars,
+            award: (x) => ball += x,
+            onDone: () => tugadi++,
+          ),
+        ),
+      ),
+    );
+    await tester.pump(const Duration(milliseconds: 300));
+    expect(find.text("Mashq: o'zbekchadan arabchaga"), findsOneWidget);
+    await tester.tap(find.text("Savollarga o'tish"));
+    await tester.pump();
+    expect(ball, 5);
+    expect(tugadi, 1);
+    expect(tester.takeException(), isNull);
+  });
 }

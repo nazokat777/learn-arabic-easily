@@ -266,6 +266,37 @@ class _NahvLessonScreenState extends State<NahvLessonScreen> {
                         color: AppColors.gold,
                       ),
                     ),
+                    const Spacer(),
+                    // Mashq gaplari o'yin ko'rinishida: so'zlardan tuzish.
+                    if (lesson.exercise.length >= 2)
+                      TextButton.icon(
+                        onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => GapTuzishEkrani(
+                              juftlar: [
+                                for (final j in lesson.exercise) (j.uz, j.ar),
+                              ],
+                            ),
+                          ),
+                        ),
+                        icon: const Icon(Icons.extension_rounded, size: 16),
+                        label: const Text(
+                          'Gap tuzish',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w800,
+                            fontSize: 12,
+                          ),
+                        ),
+                        style: TextButton.styleFrom(
+                          foregroundColor: AppColors.indigo,
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 12,
+                            vertical: 10,
+                          ),
+                          minimumSize: const Size(44, 40),
+                        ),
+                      ),
                   ],
                 ),
                 const SizedBox(height: 8),

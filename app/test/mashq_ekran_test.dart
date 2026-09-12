@@ -101,6 +101,8 @@ Future<void> _javobBer(WidgetTester tester, {bool togri = true}) async {
     final bosiladi = togri
         ? javob
         : _arlar.firstWhere((a) => a != javob && _bor(a));
+    await tester.ensureVisible(find.text(bosiladi).last);
+    await tester.pump();
     await tester.tap(find.text(bosiladi).last);
   } else {
     final ar = _korinayotgan(_arlar);
@@ -113,6 +115,8 @@ Future<void> _javobBer(WidgetTester tester, {bool togri = true}) async {
     final bosiladi = togri
         ? javob
         : _uzlar.firstWhere((u) => u != javob && _bor(u));
+    await tester.ensureVisible(find.text(bosiladi).last);
+    await tester.pump();
     await tester.tap(find.text(bosiladi).last);
   }
   await _kut(tester);

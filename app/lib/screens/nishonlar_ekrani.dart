@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart' hide Text;
 
 import '../main.dart';
+import '../mashq/tovush.dart';
 import '../nishonlar.dart';
 import '../theme.dart';
 import '../widgets/motion.dart';
@@ -151,6 +152,7 @@ Future<void> nishonOynasi(BuildContext context, List<String> idlar) async {
   for (final id in idlar) {
     final n = nishonTop(id);
     if (n == null || !context.mounted) continue;
+    Tovush.daraja();
     await showGeneralDialog<void>(
       context: context,
       barrierDismissible: true,

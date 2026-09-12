@@ -92,6 +92,19 @@ class HomeScreen extends StatelessWidget {
                       delay: Duration(milliseconds: 90),
                       child: _XpPanel(),
                     ),
+                    const SizedBox(height: 12),
+                    const Reveal(
+                      delay: Duration(milliseconds: 100),
+                      child: _KunlikReja(),
+                    ),
+                    if (DateTime.now().weekday == DateTime.monday &&
+                        progress.otganHaftaNatijasi().$1 > 0) ...[
+                      const SizedBox(height: 12),
+                      const Reveal(
+                        delay: Duration(milliseconds: 104),
+                        child: _OtganHafta(),
+                      ),
+                    ],
                     if (progress.streak > 0 &&
                         !progress.bugunSeriyada &&
                         !progress.kunlikMaqsadBajarildi) ...[
@@ -1409,7 +1422,11 @@ class _KunlikMaqsad extends StatelessWidget {
           color: rang,
           background: rang.withValues(alpha: 0.12),
         ),
-        if (soni > 0) ...[const SizedBox(height: 10), const _BugungiNatija()],
+        if (soni > 0) ...[
+          const SizedBox(height: 10),
+          const _BugungiNatija(),
+          const _KechaTaqqos(),
+        ],
         const SizedBox(height: 12),
         const _Hafta(),
       ],
@@ -1421,6 +1438,234 @@ class _KunlikMaqsad extends StatelessWidget {
 /// bugun olingan ball. Umumiy ball o'sishi sezilmaydi, bugungi «+37»
 /// esa ko'z oldida — har kunning o'z yakuni bor, shuning uchun ertaga
 /// ham qaytish oson. Faqat bugun kamida bitta javob bo'lsa chiqadi.
+/// Kecha bilan taqqoslash — o'sish sezilsin: «kechadan 6 ta ko'p».
+/// Kechagi natija hali oshilmagan bo'lsa — aniq, yaqin marra.
+class _KechaTaqqos extends StatelessWidget {
+  const _KechaTaqqos();
+
+  @override
+  Widget build(BuildContext context) {
+    final p = progress;
+    final (kecha, _, _) = p.kunNatijasi(
+      DateTime.now().subtract(const Duration(days: 1)),
+    );
+    if (kecha == 0) return const SizedBox.shrink();
+    final bugun = p.bugungiSavollar;
+    final farq = bugun - kecha;
+    final String matn;
+    final Color rang;
+    if (farq > 0) {
+      matn = 'Kechadan $farq ta ko\'p — o\'sish!';
+      rang = AppColors.success;
+    } else if (farq == 0) {
+      matn = 'Kechagi bilan teng — yana bittasi o\'tkazadi';
+      rang = AppColors.gold;
+    } else {
+      matn = 'Kecha $kecha ta edi — yana ${-farq} ta va o\'tasiz';
+      rang = AppColors.matn2;
+    }
+    return Padding(
+      padding: const EdgeInsets.only(top: 8),
+      child: Row(
+        children: [
+          Icon(
+            farq > 0 ? Icons.trending_up_rounded : Icons.flag_rounded,
+            size: 15,
+            color: rang,
+          ),
+          const SizedBox(width: 5),
+          Expanded(
+            child: Text(
+              matn,
+              style: TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.w700,
+                color: rang,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// Kunlik reja — 4 ta mikro-vazifa, har biri belgilanadi. Ro'yxat
+/// «to'lmagan» bo'lsa ong uni tugatishga intiladi (Zeigarnik); hammasi
+/// bajarilganda «Kun to'liq» — tinch yakun, ertaga toza boshlash.
+class _KunlikReja extends StatelessWidget {
+  const _KunlikReja();
+
+  @override
+  Widget build(BuildContext context) {
+    final p = progress;
+    final eslash = p.eslashKerakKalitlar.length;
+    final vazifalar = <(String, bool, IconData)>[
+      (
+        'Kunlik sandiqni ochish',
+        p.sandiqOchilganBugun,
+        Icons.inventory_2_rounded,
+      ),
+      (
+        'Kunlik maqsad: ${Progress.kunlikMaqsad} savol',
+        p.kunlikMaqsadBajarildi,
+        Icons.track_changes_rounded,
+      ),
+      ('Bugungi so\'zni bilib olish', p.bugungiSozBildimmi, Icons.star_rounded),
+      (
+        eslash == 0
+            ? 'Eslash vaqti kelgan so\'zlar — yo\'q'
+            : 'Eslash vaqti kelgan $eslash ta so\'z',
+        eslash == 0,
+        Icons.replay_rounded,
+      ),
+    ];
+    final bajarildi = vazifalar.where((v) => v.$2).length;
+    final toliq = bajarildi == vazifalar.length;
+    final rang = toliq ? AppColors.success : AppColors.emerald;
+    return Container(
+      padding: const EdgeInsets.fromLTRB(16, 14, 16, 12),
+      decoration: BoxDecoration(
+        color: AppColors.karta,
+        borderRadius: BorderRadius.circular(22),
+        border: toliq
+            ? Border.all(
+                color: AppColors.success.withValues(alpha: 0.5),
+                width: 1.4,
+              )
+            : null,
+        boxShadow: [
+          BoxShadow(
+            color: AppColors.ink.withValues(alpha: 0.05),
+            blurRadius: 20,
+            offset: const Offset(0, 8),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Icon(
+                toliq ? Icons.verified_rounded : Icons.checklist_rounded,
+                color: rang,
+                size: 20,
+              ),
+              const SizedBox(width: 6),
+              Expanded(
+                child: Text(
+                  toliq ? 'Bugungi reja to\'liq bajarildi!' : 'Bugungi reja',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w900,
+                    fontSize: 15,
+                    color: AppColors.ink,
+                  ),
+                ),
+              ),
+              Text(
+                '$bajarildi / ${vazifalar.length}',
+                style: TextStyle(fontWeight: FontWeight.w900, color: rang),
+              ),
+            ],
+          ),
+          const SizedBox(height: 8),
+          AnimatedBar(
+            value: bajarildi / vazifalar.length,
+            height: 6,
+            color: rang,
+            background: rang.withValues(alpha: 0.12),
+          ),
+          const SizedBox(height: 10),
+          for (final (nom, ok, ikon) in vazifalar)
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 3),
+              child: Row(
+                children: [
+                  AnimatedContainer(
+                    duration: const Duration(milliseconds: 300),
+                    width: 22,
+                    height: 22,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: ok ? AppColors.success : AppColors.chiziq2,
+                    ),
+                    child: Icon(
+                      ok ? Icons.check_rounded : ikon,
+                      size: 14,
+                      color: ok ? Colors.white : AppColors.matn3,
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: Text(
+                      nom,
+                      style: TextStyle(
+                        fontSize: 13.5,
+                        fontWeight: FontWeight.w600,
+                        color: ok ? AppColors.matn3 : AppColors.ink,
+                        decoration: ok ? TextDecoration.lineThrough : null,
+                        decorationColor: AppColors.matn3,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+        ],
+      ),
+    );
+  }
+}
+
+/// Dushanba kuni — o'tgan haftaning yakuni: bir qarashda «qancha qildim».
+class _OtganHafta extends StatelessWidget {
+  const _OtganHafta();
+
+  @override
+  Widget build(BuildContext context) {
+    final (savol, togri, ball, kunlar) = progress.otganHaftaNatijasi();
+    return Container(
+      padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
+      decoration: BoxDecoration(
+        color: AppColors.indigo.withValues(alpha: 0.08),
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: AppColors.indigo.withValues(alpha: 0.35)),
+      ),
+      child: Row(
+        children: [
+          const Icon(
+            Icons.calendar_month_rounded,
+            color: AppColors.indigo,
+            size: 26,
+          ),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'O\'tgan hafta yakuni',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w900,
+                    fontSize: 14.5,
+                    color: AppColors.ink,
+                  ),
+                ),
+                Text(
+                  '$savol savol · $togri to\'g\'ri · +$ball ball · '
+                  '$kunlar kun maqsad bajarildi',
+                  style: TextStyle(fontSize: 12.5, color: AppColors.matn2),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 class _BugungiNatija extends StatelessWidget {
   const _BugungiNatija();
 
@@ -1840,7 +2085,7 @@ class _BugungiSoz extends StatefulWidget {
 class _BugungiSozState extends State<_BugungiSoz> {
   static MashqElement? _soz;
   static int _sozKuni = -1;
-  bool _bildim = false;
+  bool get _bildim => progress.bugungiSozBildimmi;
 
   MashqElement? _bugungi() {
     final kun = DateTime.now().difference(DateTime(1970)).inDays;
@@ -1923,7 +2168,7 @@ class _BugungiSozState extends State<_BugungiSoz> {
                   onPressed: () {
                     Haptic.ok();
                     progress.bumpWord(e.kalit, true);
-                    setState(() => _bildim = true);
+                    progress.bugungiSozniBildim();
                   },
                   style: FilledButton.styleFrom(
                     backgroundColor: AppColors.gold,

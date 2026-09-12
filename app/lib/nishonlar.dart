@@ -166,6 +166,14 @@ const List<Nishon> nishonlar = [
     shart: _aniq90,
   ),
   Nishon(
+    id: 'chaqmoq-15',
+    nom: 'Chaqmoq',
+    tavsif: "Chaqmoq raundda 15 ta to'g'ri javob",
+    ikon: Icons.bolt_rounded,
+    rang: AppColors.amber,
+    shart: _chaqmoq15,
+  ),
+  Nishon(
     id: 'sandiq-7',
     nom: 'Xazina izlovchi',
     tavsif: 'Kunlik sandiq 7 marta ochildi',
@@ -193,6 +201,7 @@ bool _daraja5(Progress p) => p.level >= 5;
 bool _dars5(Progress p) => p.ozlashtirilganDarslar >= 5;
 bool _aniq90(Progress p) => p.jamiJavoblar >= 100 && p.aniqlikFoizi >= 90;
 bool _sandiq7(Progress p) => p.sandiqSoni >= 7;
+bool _chaqmoq15(Progress p) => p.chaqmoqRekord >= 15;
 
 /// Id bo'yicha nishon (yo'q bo'lsa null).
 Nishon? nishonTop(String id) {

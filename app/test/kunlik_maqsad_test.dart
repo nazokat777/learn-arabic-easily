@@ -50,6 +50,11 @@ void main() {
     // Kunlik tarixda bugun: 5 savol, 4 to'g'ri, 17 ball; kecha — bo'sh.
     expect(p.kunNatijasi(DateTime.now()), (5, 4, 17));
     expect(p.haftaNatijasi(), (5, 4, 17));
+    // O'tgan hafta hali bo'sh; bugungi so'z belgilanadi.
+    expect(p.otganHaftaNatijasi(), (0, 0, 0, 0));
+    expect(p.bugungiSozBildimmi, isFalse);
+    await p.bugungiSozniBildim();
+    expect(p.bugungiSozBildimmi, isTrue);
     expect(p.kunNatijasi(DateTime.now().subtract(const Duration(days: 1))), (
       0,
       0,

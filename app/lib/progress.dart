@@ -38,6 +38,36 @@ class Progress extends ChangeNotifier {
   /// Chaqmoq raund (60 s) rekordi — birinchi urinishda to'g'ri javoblar.
   int chaqmoqRekord = 0;
 
+  /// Bugungi so'z «bildim» deb belgilangan kun — kunlik rejadagi vazifa.
+  String? _sozKuni;
+  bool get bugungiSozBildimmi => _sozKuni == _today();
+  Future<void> bugungiSozniBildim() async {
+    _sozKuni = _today();
+    await _save();
+    notifyListeners();
+  }
+
+  /// O'tgan hafta (dushanba–yakshanba) yig'indisi: (savol, to'g'ri, ball,
+  /// maqsad bajarilgan kunlar). Dushanba kuni «o'tgan hafta» kartasi uchun.
+  (int, int, int, int) otganHaftaNatijasi() {
+    final bugun = DateTime.now();
+    final buDushanba = DateTime(
+      bugun.year,
+      bugun.month,
+      bugun.day - (bugun.weekday - 1),
+    );
+    var s = 0, t = 0, b = 0, m = 0;
+    for (var i = 7; i >= 1; i--) {
+      final kun = buDushanba.subtract(Duration(days: i));
+      final (ks, kt, kb) = kunNatijasi(kun);
+      s += ks;
+      t += kt;
+      b += kb;
+      if (maqsadBajarilganKun(kun)) m++;
+    }
+    return (s, t, b, m);
+  }
+
   /// Rekord yangilansa `true`.
   Future<bool> chaqmoqRekordniYangila(int togri) async {
     if (togri <= chaqmoqRekord) return false;
@@ -192,6 +222,7 @@ class Progress extends ChangeNotifier {
     _sandiqKuni = _prefs!.getString('sandiqKuni');
     sandiqSoni = _prefs!.getInt('sandiqSoni') ?? 0;
     chaqmoqRekord = _prefs!.getInt('chaqmoqRekord') ?? 0;
+    _sozKuni = _prefs!.getString('sozKuni');
     final ns = _prefs!.getString('nishonlar');
     if (ns != null) {
       (json.decode(ns) as Map).forEach(
@@ -654,6 +685,7 @@ class Progress extends ChangeNotifier {
     if (_sandiqKuni != null) await p.setString('sandiqKuni', _sandiqKuni!);
     await p.setInt('sandiqSoni', sandiqSoni);
     await p.setInt('chaqmoqRekord', chaqmoqRekord);
+    if (_sozKuni != null) await p.setString('sozKuni', _sozKuni!);
     await p.setString('nishonlar', json.encode(_nishonlar));
     await p.setStringList('completed', _completed.toList());
     await p.setString('mastery', json.encode(_mastery));

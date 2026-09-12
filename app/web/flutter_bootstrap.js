@@ -24,11 +24,12 @@ function holat(m) { if (window.pardaHolat) window.pardaHolat(m); }
 // tarmoqlarda u sekin yoki yopiq). Har bosqichda parda matni yangilanadi.
 holat('Ilova yuklanmoqda…');
 _flutter.loader.load({
+  // Diqqat: canvasKitBaseUrl shu yerda (loader config) berilishi shart —
+  // initializeEngine'ga berilsa loader baribir gstatic'dan oladi.
+  config: { canvasKitBaseUrl: 'canvaskit/' },
   onEntrypointLoaded: async function (engineInitializer) {
     holat('Chizish dvigateli tayyorlanmoqda…');
-    var appRunner = await engineInitializer.initializeEngine({
-      canvasKitBaseUrl: 'canvaskit/'
-    });
+    var appRunner = await engineInitializer.initializeEngine();
     holat('Darslar yuklanmoqda…');
     await appRunner.runApp();
   }

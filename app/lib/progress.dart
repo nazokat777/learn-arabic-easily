@@ -362,6 +362,26 @@ class Progress extends ChangeNotifier {
     return (r[0], r[1], r[2]);
   }
 
+  /// Joriy hafta (dushanbadan bugungacha) yig'indisi: (savol, to'g'ri, ball).
+  (int, int, int) haftaNatijasi() {
+    final bugun = DateTime.now();
+    final dushanba = DateTime(
+      bugun.year,
+      bugun.month,
+      bugun.day - (bugun.weekday - 1),
+    );
+    var s = 0, t = 0, b = 0;
+    for (var i = 0; i < 7; i++) {
+      final kun = dushanba.add(Duration(days: i));
+      if (kun.isAfter(bugun)) break;
+      final (ks, kt, kb) = kunNatijasi(kun);
+      s += ks;
+      t += kt;
+      b += kb;
+    }
+    return (s, t, b);
+  }
+
   void _tarixniYoz() {
     final s = _kunSana;
     if (s == null) return;

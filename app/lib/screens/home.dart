@@ -800,11 +800,29 @@ class _Hafta extends StatelessWidget {
       bugun.month,
       bugun.day - (bugun.weekday - 1),
     );
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    final (savol, togri, ball) = progress.haftaNatijasi();
+    return Column(
       children: [
-        for (var i = 0; i < 7; i++)
-          _kun(_nomlar[i], dushanba.add(Duration(days: i)), bugun),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            for (var i = 0; i < 7; i++)
+              _kun(_nomlar[i], dushanba.add(Duration(days: i)), bugun),
+          ],
+        ),
+        // Hafta yig'indisi — kunlar alohida raqam, hafta esa bitta yutuq:
+        // «bu hafta 120 ta savol» hissi kunlik maqsaddan kattaroq marra.
+        if (savol > 0) ...[
+          const SizedBox(height: 8),
+          Text(
+            "Bu hafta: $savol savol · $togri to'g'ri · +$ball ball",
+            style: TextStyle(
+              fontSize: 11.5,
+              fontWeight: FontWeight.w700,
+              color: AppColors.matn3,
+            ),
+          ),
+        ],
       ],
     );
   }

@@ -681,8 +681,8 @@ class _Jadval extends StatelessWidget {
   );
 
   Widget _qator(SarfQator q, int ustunSoni) => DecoratedBox(
-    decoration: const BoxDecoration(
-      border: Border(top: BorderSide(color: Color(0x22000000))),
+    decoration: BoxDecoration(
+      border: Border(top: BorderSide(color: AppColors.chiziq2)),
     ),
     child: IntrinsicHeight(
       child: Row(
@@ -740,8 +740,8 @@ class _Jadval extends StatelessWidget {
   Widget _katak(double eni, {required Widget child}) => Container(
     width: eni,
     padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 8),
-    decoration: const BoxDecoration(
-      border: Border(right: BorderSide(color: Color(0x22000000))),
+    decoration: BoxDecoration(
+      border: Border(right: BorderSide(color: AppColors.chiziq2)),
     ),
     child: Center(child: child),
   );

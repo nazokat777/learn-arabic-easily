@@ -192,6 +192,95 @@ class _ListenStageState extends State<ListenStage> {
 
 /// O'qish bosqichi — har jumlani tushunish. Bosilgan jumla yashil bo'ladi,
 /// har bir so'z bosiladi (ma'no/audio). Progress: N / jami jumla.
+/// Matnning to'liq tarjimasi — yopiq karta. Nega yopiq: tarjima ochiq
+/// tursa ko'z avval unga tushadi va arabcha o'qilmay qoladi; o'quvchi
+/// avval o'zi tushunib, keyin tekshirsa, o'qish mashqi haqiqiy bo'ladi.
+/// Matn kitobdagi tarjimaning o'zi — mazmun o'zgarmaydi.
+class _TarjimaKarta extends StatefulWidget {
+  final String matn;
+  const _TarjimaKarta({required this.matn});
+
+  @override
+  State<_TarjimaKarta> createState() => _TarjimaKartaState();
+}
+
+class _TarjimaKartaState extends State<_TarjimaKarta> {
+  bool _ochiq = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.only(top: 4, bottom: 6),
+      decoration: BoxDecoration(
+        color: AppColors.indigo.withValues(alpha: _ochiq ? 0.06 : 0.08),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: AppColors.indigo.withValues(alpha: 0.3)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          InkWell(
+            borderRadius: BorderRadius.circular(16),
+            onTap: () {
+              Haptic.tap();
+              setState(() => _ochiq = !_ochiq);
+            },
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(14, 12, 12, 12),
+              child: Row(
+                children: [
+                  const Icon(
+                    Icons.translate_rounded,
+                    size: 18,
+                    color: AppColors.indigo,
+                  ),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Text(
+                      _ochiq
+                          ? 'Tarjimasi'
+                          : "Tarjimasini tekshirish — avval o'zingiz tushuning",
+                      style: const TextStyle(
+                        fontWeight: FontWeight.w800,
+                        fontSize: 13.5,
+                        color: AppColors.indigo,
+                      ),
+                    ),
+                  ),
+                  Icon(
+                    _ochiq
+                        ? Icons.expand_less_rounded
+                        : Icons.expand_more_rounded,
+                    color: AppColors.indigo,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          AnimatedSize(
+            duration: const Duration(milliseconds: 260),
+            curve: Curves.easeOutCubic,
+            alignment: Alignment.topCenter,
+            child: _ochiq
+                ? Padding(
+                    padding: const EdgeInsets.fromLTRB(14, 0, 14, 14),
+                    child: Text(
+                      widget.matn,
+                      style: TextStyle(
+                        fontSize: 14.5,
+                        height: 1.5,
+                        color: AppColors.ink,
+                      ),
+                    ),
+                  )
+                : const SizedBox(width: double.infinity),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 class ReadStage extends StatefulWidget {
   final QiroatLesson lesson;
   final VoidCallback onDone;
@@ -283,15 +372,24 @@ class _ReadStageState extends State<ReadStage> {
         Expanded(
           child: ListView.builder(
             padding: const EdgeInsets.fromLTRB(20, 4, 20, 16),
-            itemCount: _sentences.length,
+            // Oxirgi element — yopiq tarjima kartasi: o'quvchi avval o'zi
+            // tushunadi, keyin tekshiradi (faol eslash).
+            itemCount:
+                _sentences.length +
+                (widget.lesson.translation.isNotEmpty ? 1 : 0),
             itemBuilder: (context, i) {
+              if (i == _sentences.length) {
+                return _TarjimaKarta(matn: widget.lesson.translation);
+              }
               final done = _done.contains(i);
               return AnimatedContainer(
                 duration: const Duration(milliseconds: 250),
                 margin: const EdgeInsets.only(bottom: 10),
                 padding: const EdgeInsets.fromLTRB(14, 12, 14, 8),
                 decoration: BoxDecoration(
-                  color: done ? const Color(0xFFDDF1E4) : AppColors.karta,
+                  color: done
+                      ? AppColors.success.withValues(alpha: 0.14)
+                      : AppColors.karta,
                   borderRadius: BorderRadius.circular(16),
                   border: Border.all(
                     color: done ? AppColors.success : AppColors.chiziq2,

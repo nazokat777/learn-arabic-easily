@@ -1156,13 +1156,18 @@ class _Statistika extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 12),
-          GridView.count(
-            crossAxisCount: 3,
+          // Keng ekranda (planshet, brauzer) 3 ustunli nisbatli katak
+          // 250 px balandlikda cho'zilib ketardi; endi katak eni ≤ 160 px,
+          // balandligi doim 96 px — telefonda 3, kengda 5-6 ustun.
+          GridView(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
-            mainAxisSpacing: 10,
-            crossAxisSpacing: 10,
-            childAspectRatio: 1.05,
+            gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+              maxCrossAxisExtent: 160,
+              mainAxisExtent: 96,
+              mainAxisSpacing: 10,
+              crossAxisSpacing: 10,
+            ),
             children: [
               for (final (ikon, rang, qiymat, qoshimcha, nom) in kataklar)
                 Container(

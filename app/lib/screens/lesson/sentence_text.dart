@@ -76,7 +76,7 @@ class SentenceText extends StatelessWidget {
               style: AppTheme.arabic(
                 size: size,
                 color: topilma != null
-                    ? AppColors.emeraldDark
+                    ? AppColors.zumradMatn
                     : (color ?? AppColors.ink),
                 w: FontWeight.w500,
               ),

@@ -891,7 +891,7 @@ class _MasterDrillState extends State<MasterDrill> {
                 text,
                 style: AppTheme.arabic(
                   size: isSentence ? 20 : 26,
-                  color: AppColors.emeraldDark,
+                  color: AppColors.zumradMatn,
                 ),
               ),
             ),

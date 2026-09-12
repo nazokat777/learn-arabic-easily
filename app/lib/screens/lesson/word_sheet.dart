@@ -182,7 +182,7 @@ class _WordSheet extends StatelessWidget {
                             c,
                             style: AppTheme.arabic(
                               size: 24,
-                              color: AppColors.emeraldDark,
+                              color: AppColors.zumradMatn,
                             ),
                           ),
                         ),

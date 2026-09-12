@@ -76,7 +76,7 @@ class AralashMatn extends StatelessWidget {
           text: b.matn,
           style: AppTheme.arabic(
             size: arabchaOlchami,
-            color: AppColors.emeraldDark,
+            color: AppColors.zumradMatn,
             w: FontWeight.w600,
           ),
           recognizer: TapGestureRecognizer()

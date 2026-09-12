@@ -207,7 +207,7 @@ class _LessonFlowState extends State<LessonFlow> {
           style: TextStyle(
             fontSize: 10.5,
             fontWeight: current ? FontWeight.w800 : FontWeight.w600,
-            color: active ? AppColors.emeraldDark : AppColors.matn3,
+            color: active ? AppColors.zumradMatn : AppColors.matn3,
           ),
         ),
       ],

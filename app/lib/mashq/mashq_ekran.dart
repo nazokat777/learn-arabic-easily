@@ -787,7 +787,7 @@ class _MashqEkranState extends State<MashqEkran> {
               ),
               child: Text(
                 harf,
-                style: AppTheme.arabic(size: 26, color: AppColors.emeraldDark),
+                style: AppTheme.arabic(size: 26, color: AppColors.zumradMatn),
               ),
             ),
           );

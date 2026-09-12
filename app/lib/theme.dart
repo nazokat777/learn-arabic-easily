@@ -42,6 +42,11 @@ class AppColors {
   /// Yumshoq yashil fon (progress fonlari, xira kartalar).
   static Color softGreen = _yorugSoftGreen;
 
+  /// Zumrad MATN rangi — yorug'da to'q zumrad (emeraldDark), qorong'uda
+  /// yorqin yalpiz: to'q zumrad qora-yashil fonda ko'rinmay qoladi
+  /// (matndagi topilgan so'zlar, urg'uli arabcha, yorliqlar).
+  static Color zumradMatn = emeraldDark;
+
   static bool qorongu = false;
 
   static const _yorugCream = Color(0xFFF7F3E9);
@@ -61,6 +66,7 @@ class AppColors {
       chiziq = const Color(0x38FFFFFF);
       chiziq2 = const Color(0x1FFFFFFF);
       softGreen = const Color(0xFF1C332C);
+      zumradMatn = const Color(0xFF6FD8B8);
     } else {
       cream = _yorugCream;
       karta = Colors.white;
@@ -70,6 +76,7 @@ class AppColors {
       chiziq = Colors.black26;
       chiziq2 = Colors.black12;
       softGreen = _yorugSoftGreen;
+      zumradMatn = emeraldDark;
     }
   }
 

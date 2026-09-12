@@ -443,7 +443,7 @@ class _Hero extends StatelessWidget {
                                       ? 'Seriya boshlang'
                                       : '${progress.streak} kun ketma-ket') +
                                   (progress.muzlatish > 0
-                                      ? '  ·  🛡${progress.muzlatish}'
+                                      ? '  ·  ${progress.muzlatish} himoya'
                                       : ''),
                               izoh: 'Olov va himoya haqida',
                               onTap: () => _olovOynasi(context),

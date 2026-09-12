@@ -54,6 +54,7 @@ class VocabAudio {
       'assets/audio/word_manifest.json': 'words',
       'assets/audio/alifbo_manifest.json': 'alifbo',
       'assets/audio/extra_manifest.json': 'extra',
+      'assets/audio/sarf_manifest.json': 'sarf',
     }.entries) {
       try {
         final raw = await rootBundle.loadString(entry.key);

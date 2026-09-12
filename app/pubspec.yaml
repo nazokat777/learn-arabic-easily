@@ -45,6 +45,7 @@ flutter:
     - assets/audio/word_manifest.json
     - assets/audio/alifbo_manifest.json
     - assets/audio/extra_manifest.json
+    - assets/audio/sarf_manifest.json
   fonts:
     # Amiri ilova ichida. Avval google_fonts orqali internetdan olinardi:
     # shrift kelguncha (yoki internet bo'lmasa) matn zaxira shriftda

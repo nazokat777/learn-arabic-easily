@@ -64,7 +64,7 @@ jobs:
         working-directory: app
         run: |
           mkdir -p build/web/audio
-          for d in vocab sentences words alifbo extra; do
+          for d in vocab sentences words alifbo extra sarf; do
             cp -r "assets/audio/$d" build/web/audio/
           done
           echo "ovoz: $(du -sh build/web/audio | cut -f1)"

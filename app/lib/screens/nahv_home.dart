@@ -8,6 +8,7 @@ import '../mashq/mashq_ekran.dart';
 import '../theme.dart';
 import '../widgets/entrance.dart';
 import '../widgets/mastery_badge.dart';
+import '../widgets/motion.dart';
 import '../widgets/ornament.dart';
 import '../widgets/premium_tile.dart';
 import '../widgets/yol.dart';
@@ -143,12 +144,50 @@ class NahvHome extends StatelessWidget {
 }
 
 /// Bitta nahv darsi: qoida, izoh va misollar.
-class NahvLessonScreen extends StatelessWidget {
+class NahvLessonScreen extends StatefulWidget {
   final NahvLesson lesson;
   const NahvLessonScreen({super.key, required this.lesson});
 
   @override
+  State<NahvLessonScreen> createState() => _NahvLessonScreenState();
+}
+
+class _NahvLessonScreenState extends State<NahvLessonScreen> {
+  NahvLesson get lesson => widget.lesson;
+
+  /// Tarjimalar yashirin: o'quvchi arabcha bandni o'qib, avval o'zi
+  /// tushunishga urinadi, keyin tarjimani ochib tekshiradi. Qoida
+  /// ramkasi ochiq qoladi — u darsning tayanchi. Kitob mazmuni
+  /// o'zgarmaydi, faqat ko'rsatish tartibi.
+  bool _tarjimaYashirin = false;
+
+  Widget _sinashTugmasi() => Align(
+    alignment: Alignment.centerRight,
+    child: TextButton.icon(
+      onPressed: () => setState(() => _tarjimaYashirin = !_tarjimaYashirin),
+      icon: Icon(
+        _tarjimaYashirin
+            ? Icons.visibility_rounded
+            : Icons.psychology_rounded,
+        size: 16,
+      ),
+      label: Text(
+        _tarjimaYashirin
+            ? 'Tarjimalarni ko\'rsatish'
+            : 'Tarjimasiz o\'qib sinayman',
+        style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 12),
+      ),
+      style: TextButton.styleFrom(
+        foregroundColor: AppColors.indigo,
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+        visualDensity: VisualDensity.compact,
+      ),
+    ),
+  );
+
+  @override
   Widget build(BuildContext context) {
+    final y = _tarjimaYashirin;
     return Scaffold(
       appBar: AppBar(title: Text('${lesson.num}-dars')),
       // Matn ustuni cheklanadi: keng ekranda (planshet, brauzer) arabcha
@@ -183,16 +222,22 @@ class NahvLessonScreen extends StatelessWidget {
               const SizedBox(height: 18),
               // Qoida - kitobda ramka ichida beriladi, bu yerda ham ajratib turadi.
               if (lesson.rule.ar.isNotEmpty) _RuleBox(rule: lesson.rule),
-              const SizedBox(height: 18),
+              const SizedBox(height: 6),
+              _sinashTugmasi(),
+              const SizedBox(height: 6),
               for (final b in lesson.blocks) ...[
                 if (b.type == 'list' && (b.intro?.ar.isNotEmpty ?? false))
-                  _Bilingual(pair: b.intro!),
-                if (b.type != 'list') _Bilingual(pair: b.main!),
+                  _Bilingual(pair: b.intro!, yashirin: y),
+                if (b.type != 'list') _Bilingual(pair: b.main!, yashirin: y),
                 if (b.type == 'list')
                   for (var i = 0; i < b.items.length; i++)
                     Padding(
                       padding: const EdgeInsets.only(left: 6, bottom: 2),
-                      child: _Bilingual(pair: b.items[i], bullet: '${i + 1}.'),
+                      child: _Bilingual(
+                        pair: b.items[i],
+                        bullet: '${i + 1}.',
+                        yashirin: y,
+                      ),
                     ),
                 const SizedBox(height: 12),
               ],
@@ -222,7 +267,11 @@ class NahvLessonScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
                 for (var i = 0; i < lesson.exercise.length; i++)
-                  _Bilingual(pair: lesson.exercise[i], bullet: '${i + 1}.'),
+                  _Bilingual(
+                    pair: lesson.exercise[i],
+                    bullet: '${i + 1}.',
+                    yashirin: y,
+                  ),
               ],
               const SizedBox(height: 20),
               // Duolingo uslubidagi test: darsdagi juftliklardan avtomatik
@@ -341,14 +390,83 @@ class _RuleBox extends StatelessWidget {
 
 /// Arabcha matn (tinglash tugmasi va bosiladigan so'zlar bilan) va uning
 /// tagida o'zbekcha tarjimasi.
-class _Bilingual extends StatelessWidget {
+class _Bilingual extends StatefulWidget {
   final NahvPair pair;
   final String? bullet;
   final double arabicSize;
-  const _Bilingual({required this.pair, this.bullet, this.arabicSize = 20});
+
+  /// Sinash rejimi: tarjima bosilguncha yopiq.
+  final bool yashirin;
+  const _Bilingual({
+    required this.pair,
+    this.bullet,
+    this.arabicSize = 20,
+    this.yashirin = false,
+  });
+
+  @override
+  State<_Bilingual> createState() => _BilingualState();
+}
+
+class _BilingualState extends State<_Bilingual> {
+  bool _ochildi = false;
+
+  @override
+  void didUpdateWidget(covariant _Bilingual old) {
+    super.didUpdateWidget(old);
+    if (old.yashirin != widget.yashirin) _ochildi = false;
+  }
+
+  bool get _ochiq => !widget.yashirin || _ochildi;
+
+  Widget _tarjima() {
+    if (_ochiq) {
+      return Text(
+        widget.pair.uz,
+        style: TextStyle(color: AppColors.matn2, height: 1.35),
+      );
+    }
+    return InkWell(
+      borderRadius: BorderRadius.circular(10),
+      onTap: () {
+        Haptic.tap();
+        setState(() => _ochildi = true);
+      },
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+        decoration: BoxDecoration(
+          color: AppColors.indigo.withValues(alpha: 0.08),
+          borderRadius: BorderRadius.circular(10),
+          border: Border.all(color: AppColors.indigo.withValues(alpha: 0.3)),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(
+              Icons.help_outline_rounded,
+              size: 15,
+              color: AppColors.indigo.withValues(alpha: 0.8),
+            ),
+            const SizedBox(width: 6),
+            Text(
+              'Tarjimasi — avval o\'zingiz, keyin bosing',
+              style: TextStyle(
+                fontSize: 11.5,
+                fontWeight: FontWeight.w700,
+                color: AppColors.indigo,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
+    final pair = widget.pair;
+    final bullet = widget.bullet;
+    final arabicSize = widget.arabicSize;
     return Padding(
       padding: const EdgeInsets.only(bottom: 8),
       child: Column(
@@ -361,7 +479,7 @@ class _Bilingual extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: 6, right: 2),
                   child: Text(
-                    bullet!,
+                    bullet,
                     style: const TextStyle(
                       fontWeight: FontWeight.w700,
                       color: AppColors.gold,
@@ -382,9 +500,9 @@ class _Bilingual extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.only(left: 26, top: 2),
-            child: Text(
-              pair.uz,
-              style: TextStyle(color: AppColors.matn2, height: 1.35),
+            child: AnimatedSwitcher(
+              duration: const Duration(milliseconds: 220),
+              child: KeyedSubtree(key: ValueKey(_ochiq), child: _tarjima()),
             ),
           ),
         ],

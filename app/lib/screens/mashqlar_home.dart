@@ -2,6 +2,7 @@ import 'package:flutter/material.dart' hide Text;
 import '../widgets/uz_text.dart';
 import '../main.dart';
 import '../mashq/bank.dart';
+import '../mashq/element.dart';
 import '../mashq/mashq_ekran.dart';
 import '../theme.dart';
 import '../widgets/mastery_badge.dart';
@@ -27,6 +28,14 @@ class MashqlarHome extends StatelessWidget {
             _intro(),
             const SizedBox(height: 16),
             _chaqmoqPlitka(context),
+            PremiumTile(
+              title: 'Tasnif mashqi',
+              subtitle:
+                  "Qaysi kalima noqis? Bu ism yoki fe'lmi? — kitob jadvallaridan",
+              icon: Icons.account_tree_rounded,
+              accent: AppColors.emerald,
+              onTap: () => tasnifMashqiniOch(context),
+            ),
             PremiumTile(
               title: 'Kartochkalar',
               subtitle:
@@ -177,6 +186,47 @@ class MashqlarHome extends StatelessWidget {
           Navigator.push(context, MaterialPageRoute(builder: (_) => page)),
     );
   }
+}
+
+/// Tasnif mashqi: Sarf boblar/shakllar jadvallari va Nahv ro'yxatlaridagi
+/// misollar — «qaysi turga kiradi?». Guruhlar aralash, chalg'ituvchi har
+/// doim o'z guruhidan (yasagich shuni ta'minlaydi). 24 ta savol.
+void tasnifMashqiniOch(BuildContext context) {
+  final hammasi = MashqBank.tasniflar();
+  if (hammasi.length < 8) return;
+  // Zaiflari oldinga, qolgani tasodifiy — lekin har guruhdan kamida 4 ta
+  // bo'lsin, aks holda chalg'ituvchi yetmaydi va savol o'tkazib yuboriladi.
+  final guruhlar = <String, List<MashqElement>>{};
+  for (final e in hammasi) {
+    guruhlar.putIfAbsent(e.guruh, () => []).add(e);
+  }
+  // Har guruhda kamida 2 xil tur va 4 ta element bo'lsin.
+  final yaroqliGuruhlar =
+      guruhlar.values
+          .where((g) => g.length >= 4 && g.map((e) => e.uz).toSet().length >= 2)
+          .toList()
+        ..shuffle();
+  if (yaroqliGuruhlar.isEmpty) return;
+  // 3 ta guruh, har biridan 8 tagacha (zaiflari oldin) — savol
+  // ichida chalg'ituvchi o'z guruhidan yetarli bo'lsin.
+  final tanlangan = <MashqElement>[];
+  for (final g in yaroqliGuruhlar.take(3)) {
+    final s = List.of(g)..shuffle();
+    s.sort((a, b) => b.zaiflik.compareTo(a.zaiflik));
+    tanlangan.addAll(s.take(8));
+  }
+  tanlangan.shuffle();
+  final yaroqli = [for (final g in yaroqliGuruhlar) ...g];
+  Navigator.push(
+    context,
+    MaterialPageRoute(
+      builder: (_) => MashqEkran(
+        sarlavha: 'Tasnif mashqi',
+        darsniki: tanlangan,
+        oldingilar: yaroqli,
+      ),
+    ),
+  );
 }
 
 /// Chaqmoq raundini ochadi: tanish so'zlardan 40 tasi tasodifiy.

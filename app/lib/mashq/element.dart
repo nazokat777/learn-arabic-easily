@@ -201,7 +201,10 @@ class SavolYasagich {
       if (arabchaJavob && x.uz.trim() == e.uz.trim()) continue;
       boshqalar.add(j);
     }
-    if (boshqalar.length < 3) return null;
+    // Tasnifda «qaysi tur?» savoli 2–3 turli guruhda ham ma'noli
+    // (Muzakkar / Muannas) — kamida bitta chalg'ituvchi yetadi; oddiy
+    // so'zlarda 4 variant.
+    if (boshqalar.length < (e.turkum ? 1 : 3)) return null;
 
     final ro = boshqalar.toList()..shuffle(_rnd);
     final variantlar = <String>[togriJavob, ...ro.take(3)]..shuffle(_rnd);

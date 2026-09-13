@@ -637,6 +637,13 @@ class MashqBank {
     for (final l in repo.sarfLessons) ...sarfDars(l),
   ];
 
+  /// Barcha tasnif elementlari (Sarf jadvallari + Nahv ro'yxatlari) —
+  /// «Tasnif mashqi» uchun; har biri o'z guruhida qoladi.
+  static List<MashqElement> tasniflar() => [
+    for (final l in repo.nahvLessons) ...nahvTurkumlar(l),
+    for (final l in repo.sarfLessons) ...sarfDars(l).where((e) => e.turkum),
+  ];
+
   /// Berilgan kalitlarga mos elementlar (eslash vaqti kelganlar uchun).
   static List<MashqElement> kalitlarBoyicha(Set<String> kalitlar) =>
       hammasi().where((e) => kalitlar.contains(e.kalit)).toList();

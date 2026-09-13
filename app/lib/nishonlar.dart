@@ -17,6 +17,10 @@ class Nishon {
   final Color rang;
   final bool Function(Progress p) shart;
 
+  /// Taraqqiyot: (joriy, maqsad) — yopiq nishonda «40 / 100» chizig'i.
+  /// «Sal qoldi» hissi yopiq nishonni maqsadga aylantiradi.
+  final (int, int) Function(Progress p) holat;
+
   const Nishon({
     required this.id,
     required this.nom,
@@ -24,7 +28,14 @@ class Nishon {
     required this.ikon,
     required this.rang,
     required this.shart,
+    required this.holat,
   });
+
+  /// 0..1 ulush.
+  double ulush(Progress p) {
+    final (j, m) = holat(p);
+    return m == 0 ? 0 : (j / m).clamp(0, 1).toDouble();
+  }
 }
 
 /// Barcha nishonlar — tartib: osondan qiyinga, ekranda shu tartibda.
@@ -36,6 +47,7 @@ const List<Nishon> nishonlar = [
     ikon: Icons.directions_walk_rounded,
     rang: AppColors.emerald,
     shart: _birinchiQadam,
+    holat: _birinchiQadamH,
   ),
   Nishon(
     id: 'javob-100',
@@ -44,6 +56,7 @@ const List<Nishon> nishonlar = [
     ikon: Icons.question_answer_rounded,
     rang: AppColors.teal,
     shart: _javob100,
+    holat: _javob100H,
   ),
   Nishon(
     id: 'javob-500',
@@ -52,6 +65,7 @@ const List<Nishon> nishonlar = [
     ikon: Icons.forum_rounded,
     rang: AppColors.teal,
     shart: _javob500,
+    holat: _javob500H,
   ),
   Nishon(
     id: 'javob-2000',
@@ -60,6 +74,7 @@ const List<Nishon> nishonlar = [
     ikon: Icons.workspace_premium_rounded,
     rang: AppColors.gold,
     shart: _javob2000,
+    holat: _javob2000H,
   ),
   Nishon(
     id: 'soz-10',
@@ -68,6 +83,7 @@ const List<Nishon> nishonlar = [
     ikon: Icons.spellcheck_rounded,
     rang: AppColors.emerald,
     shart: _soz10,
+    holat: _soz10H,
   ),
   Nishon(
     id: 'soz-50',
@@ -76,6 +92,7 @@ const List<Nishon> nishonlar = [
     ikon: Icons.menu_book_rounded,
     rang: AppColors.emerald,
     shart: _soz50,
+    holat: _soz50H,
   ),
   Nishon(
     id: 'soz-200',
@@ -84,6 +101,7 @@ const List<Nishon> nishonlar = [
     ikon: Icons.auto_stories_rounded,
     rang: AppColors.gold,
     shart: _soz200,
+    holat: _soz200H,
   ),
   Nishon(
     id: 'seriya-3',
@@ -92,6 +110,7 @@ const List<Nishon> nishonlar = [
     ikon: Icons.local_fire_department_rounded,
     rang: AppColors.coral,
     shart: _seriya3,
+    holat: _seriya3H,
   ),
   Nishon(
     id: 'seriya-7',
@@ -100,6 +119,7 @@ const List<Nishon> nishonlar = [
     ikon: Icons.local_fire_department_rounded,
     rang: AppColors.coral,
     shart: _seriya7,
+    holat: _seriya7H,
   ),
   Nishon(
     id: 'seriya-30',
@@ -108,6 +128,7 @@ const List<Nishon> nishonlar = [
     ikon: Icons.whatshot_rounded,
     rang: AppColors.gold,
     shart: _seriya30,
+    holat: _seriya30H,
   ),
   Nishon(
     id: 'maqsad-10',
@@ -116,6 +137,7 @@ const List<Nishon> nishonlar = [
     ikon: Icons.event_available_rounded,
     rang: AppColors.success,
     shart: _maqsad10,
+    holat: _maqsad10H,
   ),
   Nishon(
     id: 'kombo-10',
@@ -124,6 +146,7 @@ const List<Nishon> nishonlar = [
     ikon: Icons.bolt_rounded,
     rang: AppColors.amber,
     shart: _kombo10,
+    holat: _kombo10H,
   ),
   Nishon(
     id: 'kombo-25',
@@ -132,6 +155,7 @@ const List<Nishon> nishonlar = [
     ikon: Icons.electric_bolt_rounded,
     rang: AppColors.amber,
     shart: _kombo25,
+    holat: _kombo25H,
   ),
   Nishon(
     id: 'daraja-3',
@@ -140,6 +164,7 @@ const List<Nishon> nishonlar = [
     ikon: Icons.military_tech_rounded,
     rang: AppColors.indigo,
     shart: _daraja3,
+    holat: _daraja3H,
   ),
   Nishon(
     id: 'daraja-5',
@@ -148,6 +173,7 @@ const List<Nishon> nishonlar = [
     ikon: Icons.emoji_events_rounded,
     rang: AppColors.gold,
     shart: _daraja5,
+    holat: _daraja5H,
   ),
   Nishon(
     id: 'dars-5',
@@ -156,6 +182,7 @@ const List<Nishon> nishonlar = [
     ikon: Icons.verified_rounded,
     rang: AppColors.success,
     shart: _dars5,
+    holat: _dars5H,
   ),
   Nishon(
     id: 'aniq-90',
@@ -164,6 +191,7 @@ const List<Nishon> nishonlar = [
     ikon: Icons.gps_fixed_rounded,
     rang: AppColors.teal,
     shart: _aniq90,
+    holat: _aniq90H,
   ),
   Nishon(
     id: 'chaqmoq-15',
@@ -172,6 +200,7 @@ const List<Nishon> nishonlar = [
     ikon: Icons.bolt_rounded,
     rang: AppColors.amber,
     shart: _chaqmoq15,
+    holat: _chaqmoq15H,
   ),
   Nishon(
     id: 'xattot',
@@ -180,6 +209,7 @@ const List<Nishon> nishonlar = [
     ikon: Icons.draw_rounded,
     rang: AppColors.teal,
     shart: _xattot,
+    holat: _xattotH,
   ),
   Nishon(
     id: 'kartochka-100',
@@ -188,6 +218,7 @@ const List<Nishon> nishonlar = [
     ikon: Icons.style_rounded,
     rang: AppColors.teal,
     shart: _kartochka100,
+    holat: _kartochka100H,
   ),
   Nishon(
     id: 'gap-50',
@@ -196,6 +227,7 @@ const List<Nishon> nishonlar = [
     ikon: Icons.extension_rounded,
     rang: AppColors.indigo,
     shart: _gap50,
+    holat: _gap50H,
   ),
   Nishon(
     id: 'sandiq-7',
@@ -204,6 +236,7 @@ const List<Nishon> nishonlar = [
     ikon: Icons.inventory_2_rounded,
     rang: AppColors.gold,
     shart: _sandiq7,
+    holat: _sandiq7H,
   ),
 ];
 
@@ -229,6 +262,30 @@ bool _chaqmoq15(Progress p) => p.chaqmoqRekord >= 15;
 bool _xattot(Progress p) => p.chizilganHarflar >= 28;
 bool _kartochka100(Progress p) => p.kartochkaBildim >= 100;
 bool _gap50(Progress p) => p.gapTuzilgan >= 50;
+
+(int, int) _birinchiQadamH(Progress p) => (p.jamiJavoblar.clamp(0, 1), 1);
+(int, int) _javob100H(Progress p) => (p.jamiJavoblar, 100);
+(int, int) _javob500H(Progress p) => (p.jamiJavoblar, 500);
+(int, int) _javob2000H(Progress p) => (p.jamiJavoblar, 2000);
+(int, int) _soz10H(Progress p) => (p.yodlanganSoni, 10);
+(int, int) _soz50H(Progress p) => (p.yodlanganSoni, 50);
+(int, int) _soz200H(Progress p) => (p.yodlanganSoni, 200);
+(int, int) _seriya3H(Progress p) => (p.streak, 3);
+(int, int) _seriya7H(Progress p) => (p.streak, 7);
+(int, int) _seriya30H(Progress p) => (p.streak, 30);
+(int, int) _maqsad10H(Progress p) => (p.maqsadKunlariSoni, 10);
+(int, int) _kombo10H(Progress p) => (p.rekordKombo, 10);
+(int, int) _kombo25H(Progress p) => (p.rekordKombo, 25);
+(int, int) _daraja3H(Progress p) => (p.level, 3);
+(int, int) _daraja5H(Progress p) => (p.level, 5);
+(int, int) _dars5H(Progress p) => (p.ozlashtirilganDarslar, 5);
+(int, int) _aniq90H(Progress p) =>
+    (p.jamiJavoblar >= 100 ? p.aniqlikFoizi : 0, 90);
+(int, int) _chaqmoq15H(Progress p) => (p.chaqmoqRekord, 15);
+(int, int) _xattotH(Progress p) => (p.chizilganHarflar, 28);
+(int, int) _kartochka100H(Progress p) => (p.kartochkaBildim, 100);
+(int, int) _gap50H(Progress p) => (p.gapTuzilgan, 50);
+(int, int) _sandiq7H(Progress p) => (p.sandiqSoni, 7);
 
 /// Id bo'yicha nishon (yo'q bo'lsa null).
 Nishon? nishonTop(String id) {

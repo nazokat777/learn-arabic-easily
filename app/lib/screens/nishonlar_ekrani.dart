@@ -52,7 +52,7 @@ class NishonlarEkrani extends StatelessWidget {
                 physics: const NeverScrollableScrollPhysics(),
                 gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
                   maxCrossAxisExtent: 170,
-                  mainAxisExtent: 150,
+                  mainAxisExtent: 172,
                   mainAxisSpacing: 10,
                   crossAxisSpacing: 10,
                 ),
@@ -139,6 +139,34 @@ class NishonKatagi extends StatelessWidget {
               color: AppColors.matn3,
             ),
           ),
+          if (!ochiq) ...[
+            const Spacer(),
+            // Taraqqiyot: qancha qoldi — yopiq nishon maqsadga aylanadi.
+            Builder(
+              builder: (context) {
+                final (j, m) = nishon.holat(progress);
+                return Column(
+                  children: [
+                    AnimatedBar(
+                      value: nishon.ulush(progress),
+                      height: 4,
+                      color: nishon.rang,
+                      background: nishon.rang.withValues(alpha: 0.12),
+                    ),
+                    const SizedBox(height: 3),
+                    Text(
+                      '${j.clamp(0, m)} / $m',
+                      style: TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w800,
+                        color: nishon.rang,
+                      ),
+                    ),
+                  ],
+                );
+              },
+            ),
+          ],
         ],
       ),
     );

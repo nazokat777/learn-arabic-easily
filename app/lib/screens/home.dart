@@ -1356,9 +1356,10 @@ class _NishonlarKarta extends StatelessWidget {
   Widget build(BuildContext context) {
     final p = progress;
     final ochilgan = nishonlar.where((n) => p.nishonOlinganmi(n.id)).toList();
-    final keyingi = nishonlar
-        .where((n) => !p.nishonOlinganmi(n.id))
-        .firstOrNull;
+    // Keyingisi — eng yaqini (ulushi eng katta): «sal qoldi» hissi.
+    final yopiqlar = nishonlar.where((n) => !p.nishonOlinganmi(n.id)).toList()
+      ..sort((a, b) => b.ulush(p).compareTo(a.ulush(p)));
+    final keyingi = yopiqlar.firstOrNull;
     return Tactile(
       child: Material(
         color: AppColors.karta,
@@ -1410,9 +1411,9 @@ class _NishonlarKarta extends StatelessWidget {
                           if (keyingi != null)
                             Flexible(
                               child: Text(
-                                ochilgan.isEmpty
-                                    ? 'Birinchisi: ${keyingi.tavsif}'
-                                    : 'Keyingisi: ${keyingi.tavsif}',
+                                '${keyingi.nom}: '
+                                '${keyingi.holat(p).$1.clamp(0, keyingi.holat(p).$2)}'
+                                ' / ${keyingi.holat(p).$2}',
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyle(

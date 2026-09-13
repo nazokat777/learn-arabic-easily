@@ -72,6 +72,14 @@ void main() {
     expect(p.tanishuvKurildi, isTrue);
   });
 
+  test('yangi rejimlar hisobi va nishonlari', () async {
+    final p = Progress();
+    await p.hisobQosh(harf: 28, karta: 100, gap: 50);
+    expect(p.chizilganHarflar, 28);
+    final yangi = await p.yangiNishonlar();
+    expect(yangi, containsAll(['xattot', 'kartochka-100', 'gap-50']));
+  });
+
   test('kombo va daraja nishonlari', () async {
     final p = Progress();
     await p.rekordniYangila(12);

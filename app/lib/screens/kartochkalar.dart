@@ -8,6 +8,7 @@ import '../mashq/element.dart';
 import '../mashq/mukofot.dart' show BugunChizigi;
 import '../mashq/tovush.dart';
 import '../rasm.dart';
+import 'nishonlar_ekrani.dart';
 import '../services/tts.dart';
 import '../theme.dart';
 import '../widgets/motion.dart';
@@ -79,6 +80,7 @@ class _KartochkalarEkraniState extends State<KartochkalarEkrani>
       _ball += 1;
       progress.bumpWord(e.kalit, true);
       progress.addXp(1);
+      progress.hisobQosh(karta: 1);
       Tovush.togri(_bildim);
     } else {
       _bilmadim++;
@@ -91,6 +93,15 @@ class _KartochkalarEkraniState extends State<KartochkalarEkrani>
       _agdarilgan = false;
       if (_navbat.isEmpty) _tugadi = true;
     });
+    if (_tugadi) _nishonlarniTekshir();
+  }
+
+  Future<void> _nishonlarniTekshir() async {
+    final yangi = await progress.yangiNishonlar();
+    if (yangi.isNotEmpty && mounted) {
+      await Future.delayed(const Duration(milliseconds: 900));
+      if (mounted) await nishonOynasi(context, yangi);
+    }
   }
 
   void _yanaTakror() {

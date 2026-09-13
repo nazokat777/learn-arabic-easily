@@ -7,6 +7,7 @@ import '../widgets/motion.dart';
 import '../widgets/ornament.dart';
 import '../widgets/uz_text.dart';
 import 'lesson/gap_tuzish.dart';
+import 'nishonlar_ekrani.dart';
 import 'tarjima_mashqi.dart';
 
 /// Mashqlar bo'limidagi «Gap tuzish» — o'tilgan Qiroat darslarining kitob
@@ -76,7 +77,18 @@ class _GapTuzishEkraniState extends State<GapTuzishEkrani> {
                           _ball += b;
                           progress.addXp(b);
                         },
-                        onDone: () => setState(() => _tugadi = true),
+                        onDone: () async {
+                          setState(() => _tugadi = true);
+                          final yangi = await progress.yangiNishonlar();
+                          if (yangi.isNotEmpty && context.mounted) {
+                            await Future.delayed(
+                              const Duration(milliseconds: 900),
+                            );
+                            if (context.mounted) {
+                              await nishonOynasi(context, yangi);
+                            }
+                          }
+                        },
                       ),
                     ),
                   ],

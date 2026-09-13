@@ -40,6 +40,7 @@ class _HarfChizishEkraniState extends State<HarfChizishEkrani> {
       _yozilgan++;
       Tovush.togri(_yozilgan);
       Haptic.ok();
+      progress.hisobQosh(harf: 1);
       // Har 5 harfda +3 ball — chizish ham mehnat.
       if (_yozilgan % 5 == 0) progress.addXp(3);
     }

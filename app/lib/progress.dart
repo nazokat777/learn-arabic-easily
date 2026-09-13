@@ -71,6 +71,19 @@ class Progress extends ChangeNotifier {
     return true;
   }
 
+  /// Yangi rejimlar hisobi — nishonlar uchun: chizilgan harflar,
+  /// «bildim» kartochkalar, to'g'ri tuzilgan gaplar (butun tarix).
+  int chizilganHarflar = 0;
+  int kartochkaBildim = 0;
+  int gapTuzilgan = 0;
+
+  Future<void> hisobQosh({int harf = 0, int karta = 0, int gap = 0}) async {
+    chizilganHarflar += harf;
+    kartochkaBildim += karta;
+    gapTuzilgan += gap;
+    await _save();
+  }
+
   /// Tanishuv (birinchi ochilishdagi 3 qadam) ko'rildimi.
   bool tanishuvKurildi = false;
   Future<void> tanishuvniBelgila() async {
@@ -277,6 +290,9 @@ class Progress extends ChangeNotifier {
     _rejaKuni = _prefs!.getString('rejaKuni');
     tanishuvKurildi = _prefs!.getBool('tanishuv') ?? false;
     _haftaBonusDushanba = _prefs!.getString('haftaBonus');
+    chizilganHarflar = _prefs!.getInt('chizilganHarflar') ?? 0;
+    kartochkaBildim = _prefs!.getInt('kartochkaBildim') ?? 0;
+    gapTuzilgan = _prefs!.getInt('gapTuzilgan') ?? 0;
     final ns = _prefs!.getString('nishonlar');
     if (ns != null) {
       (json.decode(ns) as Map).forEach(
@@ -742,6 +758,9 @@ class Progress extends ChangeNotifier {
     if (_sozKuni != null) await p.setString('sozKuni', _sozKuni!);
     if (_rejaKuni != null) await p.setString('rejaKuni', _rejaKuni!);
     await p.setBool('tanishuv', tanishuvKurildi);
+    await p.setInt('chizilganHarflar', chizilganHarflar);
+    await p.setInt('kartochkaBildim', kartochkaBildim);
+    await p.setInt('gapTuzilgan', gapTuzilgan);
     if (_haftaBonusDushanba != null) {
       await p.setString('haftaBonus', _haftaBonusDushanba!);
     }

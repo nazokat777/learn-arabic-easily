@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart' hide Text;
 
+import '../../main.dart';
 import '../../mashq/mukofot.dart' show Maqtov, Portlash;
 import '../../mashq/tovush.dart';
 import '../../services/tts.dart';
@@ -112,6 +113,7 @@ class _GapTuzishState extends State<GapTuzish> {
       Haptic.ok();
       Tovush.togri(_togri);
       widget.award(2);
+      progress.hisobQosh(gap: 1);
     } else {
       Haptic.wrong();
       Tovush.xato();

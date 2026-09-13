@@ -174,6 +174,30 @@ const List<Nishon> nishonlar = [
     shart: _chaqmoq15,
   ),
   Nishon(
+    id: 'xattot',
+    nom: 'Xattot',
+    tavsif: 'Harf chizishda 28 ta harf yozildi',
+    ikon: Icons.draw_rounded,
+    rang: AppColors.teal,
+    shart: _xattot,
+  ),
+  Nishon(
+    id: 'kartochka-100',
+    nom: 'Karta ustasi',
+    tavsif: '100 ta kartochka «bildim» bilan',
+    ikon: Icons.style_rounded,
+    rang: AppColors.teal,
+    shart: _kartochka100,
+  ),
+  Nishon(
+    id: 'gap-50',
+    nom: 'Gap ustasi',
+    tavsif: "50 ta gap to'g'ri tuzildi",
+    ikon: Icons.extension_rounded,
+    rang: AppColors.indigo,
+    shart: _gap50,
+  ),
+  Nishon(
     id: 'sandiq-7',
     nom: 'Xazina izlovchi',
     tavsif: 'Kunlik sandiq 7 marta ochildi',
@@ -202,6 +226,9 @@ bool _dars5(Progress p) => p.ozlashtirilganDarslar >= 5;
 bool _aniq90(Progress p) => p.jamiJavoblar >= 100 && p.aniqlikFoizi >= 90;
 bool _sandiq7(Progress p) => p.sandiqSoni >= 7;
 bool _chaqmoq15(Progress p) => p.chaqmoqRekord >= 15;
+bool _xattot(Progress p) => p.chizilganHarflar >= 28;
+bool _kartochka100(Progress p) => p.kartochkaBildim >= 100;
+bool _gap50(Progress p) => p.gapTuzilgan >= 50;
 
 /// Id bo'yicha nishon (yo'q bo'lsa null).
 Nishon? nishonTop(String id) {

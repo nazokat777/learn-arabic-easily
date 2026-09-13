@@ -56,7 +56,10 @@ class Tts {
   /// arabcha TTS ovozi bo'lmasa ham eshitiladi. Topilmasa (masalan foydalanuvchi
   /// bosgan alohida so'z) qurilma TTS'iga o'tamiz.
   Future<void> speak(String text, {String? id}) async {
-    final clean = text.trim();
+    // «ماضي (moziy)» — lotin izoh o'qilmasin: faqat arabcha qism.
+    final clean = text
+        .replaceAll(RegExp(r'\s*\([^)]*[A-Za-z][^)]*\)'), '')
+        .trim();
     if (clean.isEmpty) return;
 
     if (VocabAudio.instance.has(clean)) {

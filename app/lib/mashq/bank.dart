@@ -72,6 +72,8 @@ class MashqBank {
       if (!_yaroqli(p.ar, p.uz) || !korilgan.add(p.ar)) continue;
       // «وَقَدْ تَكُونُ الْكَلِمَةُ:» kabi ro'yxat sarlavhasi — savol emas.
       if (p.ar.trim().endsWith(':') || p.uz.trim().endsWith(':')) continue;
+      // «(١) أَيْ: …» izoh, «(وَفِيهِ تِسْعَةُ أَبْوَابٍ)» sarlavha — savol emas.
+      if (p.ar.trim().startsWith('(')) continue;
       natija.add(
         MashqElement(
           kalit: 'nahv::${l.book}-${l.num}::${p.ar}',
@@ -341,6 +343,10 @@ class MashqBank {
   static final RegExp _arabcha = RegExp('[؀-ۿ]');
   static final RegExp _sarlavhaQavs = RegExp(r'\(([؀-ۿ\s]+)\)');
 
+  /// Lotin harfli qavsni olib tashlaydi: «ماضي (moziy)» → «ماضي».
+  static final RegExp _lotinQavs = RegExp(r'\s*\([^)]*[A-Za-z][^)]*\)');
+  static String lotinQavsSiz(String s) => s.replaceAll(_lotinQavs, '').trim();
+
   /// Apostrof variantlarini birlashtiradi — matnda ' ʼ ‘ ’ aralash.
   static String _apostrof(String s) =>
       s.replaceAll('ʼ', "'").replaceAll('‘', "'").replaceAll('’', "'");
@@ -453,7 +459,9 @@ class MashqBank {
               .where((c) => _lotin.hasMatch(c) && !_arabcha.hasMatch(c))
               .toList();
           if (ar.isNotEmpty && uz.isNotEmpty) {
-            qosh(ar.last.trim(), uz.last.trim());
+            // «ماضي (moziy)» — lotin izohli katak: ovoz va savol uchun
+            // faqat arabcha qismi.
+            qosh(lotinQavsSiz(ar.last), uz.last.trim());
           }
         }
         continue;

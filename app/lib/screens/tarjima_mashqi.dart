@@ -211,25 +211,29 @@ class _TarjimaMashqiState extends State<TarjimaMashqi> {
                 ),
               )
             else
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SpeakButton(
-                    text: l.exerciseAnswer,
-                    id: 'tarjima-hammasi',
-                    size: 18,
+              // Jumla-jumla: har birining o'z klipi bor (butun matn uchun
+              // klip yo'q — TTS xato o'qishi mumkin edi).
+              for (final (i, j) in TarjimaMashqi.jumlalar(
+                l.exerciseAnswer,
+              ).indexed)
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 4),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SpeakButton(text: j, id: 'tarjima-butun-$i', size: 18),
+                      const SizedBox(width: 4),
+                      Expanded(
+                        child: SentenceText(
+                          sentence: j,
+                          vocab: l.vocab,
+                          reading: l.reading,
+                          size: 21,
+                        ),
+                      ),
+                    ],
                   ),
-                  const SizedBox(width: 4),
-                  Expanded(
-                    child: SentenceText(
-                      sentence: l.exerciseAnswer,
-                      vocab: l.vocab,
-                      reading: l.reading,
-                      size: 21,
-                    ),
-                  ),
-                ],
-              ),
+                ),
           ],
         ],
       ),

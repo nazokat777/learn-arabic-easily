@@ -295,8 +295,10 @@ class MashqBank {
         // «misol ↔ ma'no», shakl jadvalida «arabcha ↔ shakl nomi».
         for (final q in b.qatorlar) {
           final ar = q.kataklar.where(_arabcha.hasMatch).toList();
+          // O'zbekcha katak — lotin harfli bo'lsin: boblar jadvalidagi
+          // bo'sh katak belgisi («———») ma'no emas, u variant bo'lmasin.
           final uz = q.kataklar
-              .where((c) => c.trim().isNotEmpty && !_arabcha.hasMatch(c))
+              .where((c) => _lotin.hasMatch(c) && !_arabcha.hasMatch(c))
               .toList();
           if (ar.isNotEmpty && uz.isNotEmpty) {
             qosh(ar.last.trim(), uz.last.trim());

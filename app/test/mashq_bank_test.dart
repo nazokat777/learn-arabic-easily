@@ -199,4 +199,35 @@ void main() {
       "يَرِثُ=Muzore'",
     ]);
   });
+
+  test("boblar jadvalidagi bo'sh katak («———») variant bo'lmaydi", () {
+    final e = MashqBank.sarfDars(
+      dars([
+        {
+          'type': 'jadval',
+          'sarlavha': 'BOB',
+          'ustunlar': [
+            {'ar': 'السَّالِمُ'},
+            {'ar': 'الْمُضَعَّفُ'},
+          ],
+          'qatorlar': [
+            {
+              'bob': '',
+              'raqam': '3',
+              'kataklar': ['مَنَعَ – يَمْنَعُ', '———', 'رَعَى', '———'],
+            },
+            {
+              'bob': '',
+              'raqam': '1',
+              'kataklar': ['ضَرَبَ – يَضْرِبُ', "sog'lom", 'رَمَى', 'noqis'],
+            },
+          ],
+        },
+      ]),
+    );
+    final uz = {for (final x in e) x.ar: x.uz};
+    expect(uz.values.any((v) => v.contains('———')), isFalse);
+    expect(uz['رَمَى'], 'noqis');
+    expect(uz.containsKey('رَعَى'), isFalse);
+  });
 }

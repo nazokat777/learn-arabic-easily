@@ -384,6 +384,17 @@ class MashqBank {
   static int sarfSoni(SarfLesson l) =>
       _sarfSoni.putIfAbsent(l.num, () => sarfDars(l).length);
 
+  /// Ro'yxat yozuvi: «12 ta mashq · 25 tasnif» — o'quvchi darsni ochmasdan
+  /// qanday savollar borligini ko'radi. Tasnif bo'lmasa faqat mashq soni.
+  static String mashqYozuvi(List<MashqElement> e) {
+    final tasnif = e.where((x) => x.turkum).length;
+    final oddiy = e.length - tasnif;
+    if (e.isEmpty) return 'Nazariy dars — takror bilan';
+    if (tasnif == 0) return '$oddiy ta mashq';
+    if (oddiy == 0) return '$tasnif ta tasnif savoli';
+    return '$oddiy ta mashq · $tasnif tasnif';
+  }
+
   static List<MashqElement> sarfDars(SarfLesson l) {
     final korilgan = <String>{};
     final natija = <MashqElement>[];

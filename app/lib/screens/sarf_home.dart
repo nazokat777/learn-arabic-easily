@@ -71,7 +71,7 @@ class SarfHome extends StatelessWidget {
       // O'quvchi darsni ochmasdan turib unda mashq bor-yo'qligini
       // ko'rsin: nazariy darsda faqat takror bo'ladi.
       subtitle: mashqBorMi(mashq)
-          ? '$mashq ta mashq'
+          ? MashqBank.mashqYozuvi(MashqBank.sarfDars(l))
           : 'Nazariy dars — takror bilan',
       // Kitobda sarlavhasi bo'lmagan darsda arabcha satr chizilmaydi.
       arabicSubtitle: l.titleAr.isEmpty ? null : l.titleAr,

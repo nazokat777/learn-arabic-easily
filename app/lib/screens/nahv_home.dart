@@ -124,11 +124,9 @@ class NahvHome extends StatelessWidget {
 
   Widget _tile(BuildContext context, NahvLesson l) => PremiumTile(
     title: l.title,
-    subtitle: () {
-      final n = MashqBank.nahvDars(l).length;
-      // Bo'sh holat raqam bilan («0 ta mashq») xato kabi ko'rinardi.
-      return n == 0 ? 'Nazariy dars — takror bilan' : '$n ta mashq';
-    }(),
+    // Bo'sh holat raqam bilan («0 ta mashq») xato kabi ko'rinardi —
+    // matnli holat; tasnif bo'lsa alohida ko'rsatiladi.
+    subtitle: MashqBank.mashqYozuvi(MashqBank.nahvDars(l)),
     arabicSubtitle: l.titleAr,
     label: '${l.num}',
     accent: AppColors.coral,

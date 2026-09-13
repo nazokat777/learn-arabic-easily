@@ -78,10 +78,64 @@ class Progress extends ChangeNotifier {
   int gapTuzilgan = 0;
 
   Future<void> hisobQosh({int harf = 0, int karta = 0, int gap = 0}) async {
+    _kunniYangila();
     chizilganHarflar += harf;
     kartochkaBildim += karta;
     gapTuzilgan += gap;
+    _kunHarf += harf;
+    _kunKarta += karta;
+    _kunGap += gap;
     await _save();
+    notifyListeners();
+  }
+
+  // --- Bugungi maxsus vazifa ---
+  //
+  // Kunlik reja har kuni bir xil; maxsus vazifa esa har kuni boshqa rejimga
+  // chaqiradi (harf chizish, kartochkalar, gap tuzish, chaqmoq). Yangilik
+  // + aniq raqamli marra + bir martalik +10 — «bugun nima bor ekan»
+  // qiziqishi. Kunlik hisoblagichlar kun almashganda nolga tushadi.
+  int _kunHarf = 0;
+  int _kunKarta = 0;
+  int _kunGap = 0;
+  int _kunChaqmoq = 0; // bugungi eng yaxshi chaqmoq natijasi
+  String? _maxsusKuni;
+  static const int maxsusBonusBalli = 10;
+
+  /// Chaqmoq raund natijasi (bugungi eng yaxshisi saqlanadi).
+  Future<void> chaqmoqNatija(int togri) async {
+    _kunniYangila();
+    if (togri > _kunChaqmoq) _kunChaqmoq = togri;
+    await _save();
+    notifyListeners();
+  }
+
+  /// Bugungi vazifa: (tur, maqsad, joriy). Tur: 'harf' | 'karta' | 'gap' |
+  /// 'chaqmoq'. Kun raqami bo'yicha aylanadi — hamma uchun bir xil kun,
+  /// bir xil vazifa (kursdoshlar bilan gaplashish mavzusi).
+  (String, int, int) get maxsusVazifa {
+    _kunniYangila();
+    final kun = _bugunRaqami();
+    return switch (kun % 4) {
+      0 => ('harf', 10, _kunHarf),
+      1 => ('karta', 15, _kunKarta),
+      2 => ('gap', 5, _kunGap),
+      _ => ('chaqmoq', 10, _kunChaqmoq),
+    };
+  }
+
+  bool get maxsusBajarildi {
+    final (_, maqsad, joriy) = maxsusVazifa;
+    return joriy >= maqsad;
+  }
+
+  bool get maxsusBonusOlindi => _maxsusKuni == _today();
+
+  Future<bool> maxsusBonusiniOl() async {
+    if (!maxsusBajarildi || maxsusBonusOlindi) return false;
+    _maxsusKuni = _today();
+    await addXp(maxsusBonusBalli);
+    return true;
   }
 
   /// Tanishuv (birinchi ochilishdagi 3 qadam) ko'rildimi.
@@ -291,6 +345,11 @@ class Progress extends ChangeNotifier {
     tanishuvKurildi = _prefs!.getBool('tanishuv') ?? false;
     _haftaBonusDushanba = _prefs!.getString('haftaBonus');
     chizilganHarflar = _prefs!.getInt('chizilganHarflar') ?? 0;
+    _kunHarf = _prefs!.getInt('kunHarf') ?? 0;
+    _kunKarta = _prefs!.getInt('kunKarta') ?? 0;
+    _kunGap = _prefs!.getInt('kunGap') ?? 0;
+    _kunChaqmoq = _prefs!.getInt('kunChaqmoq') ?? 0;
+    _maxsusKuni = _prefs!.getString('maxsusKuni');
     kartochkaBildim = _prefs!.getInt('kartochkaBildim') ?? 0;
     gapTuzilgan = _prefs!.getInt('gapTuzilgan') ?? 0;
     final ns = _prefs!.getString('nishonlar');
@@ -557,6 +616,10 @@ class Progress extends ChangeNotifier {
       _kunSoni = 0;
       _kunTogri = 0;
       _kunBall = 0;
+      _kunHarf = 0;
+      _kunKarta = 0;
+      _kunGap = 0;
+      _kunChaqmoq = 0;
       _kunMukofotOlindi = false;
     }
   }
@@ -759,6 +822,11 @@ class Progress extends ChangeNotifier {
     if (_rejaKuni != null) await p.setString('rejaKuni', _rejaKuni!);
     await p.setBool('tanishuv', tanishuvKurildi);
     await p.setInt('chizilganHarflar', chizilganHarflar);
+    await p.setInt('kunHarf', _kunHarf);
+    await p.setInt('kunKarta', _kunKarta);
+    await p.setInt('kunGap', _kunGap);
+    await p.setInt('kunChaqmoq', _kunChaqmoq);
+    if (_maxsusKuni != null) await p.setString('maxsusKuni', _maxsusKuni!);
     await p.setInt('kartochkaBildim', kartochkaBildim);
     await p.setInt('gapTuzilgan', gapTuzilgan);
     if (_haftaBonusDushanba != null) {

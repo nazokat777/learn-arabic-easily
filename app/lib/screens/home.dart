@@ -26,6 +26,8 @@ import 'alifbo_home.dart';
 import 'davom.dart';
 import 'mashqlar_home.dart';
 import 'nahv_home.dart';
+import 'gap_tuzish_ekrani.dart';
+import 'harf_chizish.dart';
 import 'kartochkalar.dart';
 import 'nishonlar_ekrani.dart';
 import 'tanishuv.dart';
@@ -107,6 +109,11 @@ class HomeScreen extends StatelessWidget {
                     const Reveal(
                       delay: Duration(milliseconds: 100),
                       child: _KunlikReja(),
+                    ),
+                    const SizedBox(height: 12),
+                    const Reveal(
+                      delay: Duration(milliseconds: 102),
+                      child: _MaxsusVazifa(),
                     ),
                     if (DateTime.now().weekday == DateTime.monday &&
                         progress.otganHaftaNatijasi().$1 > 0) ...[
@@ -1787,6 +1794,160 @@ class _KunlikRejaState extends State<_KunlikReja> {
 }
 
 /// Dushanba kuni — o'tgan haftaning yakuni: bir qarashda «qancha qildim».
+/// Bugungi maxsus vazifa — har kuni boshqa rejim, aniq raqam, +10.
+class _MaxsusVazifa extends StatefulWidget {
+  const _MaxsusVazifa();
+
+  @override
+  State<_MaxsusVazifa> createState() => _MaxsusVazifaState();
+}
+
+class _MaxsusVazifaState extends State<_MaxsusVazifa> {
+  bool _tekshirildi = false;
+
+  static (String, IconData, Color, String) _tavsif(String tur, int maqsad) =>
+      switch (tur) {
+        'harf' => (
+          'Harf chizish',
+          Icons.draw_rounded,
+          AppColors.teal,
+          '$maqsad ta harfni chizing',
+        ),
+        'karta' => (
+          'Kartochkalar',
+          Icons.style_rounded,
+          AppColors.teal,
+          '$maqsad ta kartochkani «bildim» qiling',
+        ),
+        'gap' => (
+          'Gap tuzish',
+          Icons.extension_rounded,
+          AppColors.indigo,
+          "$maqsad ta gapni to'g'ri tuzing",
+        ),
+        _ => (
+          'Chaqmoq raund',
+          Icons.bolt_rounded,
+          AppColors.amber,
+          "Bir raundda $maqsad ta to'g'ri javob",
+        ),
+      };
+
+  void _och(BuildContext context, String tur) {
+    switch (tur) {
+      case 'harf':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) => HarfChizishEkrani(harflar: repo.letters),
+          ),
+        );
+      case 'karta':
+        kartochkalarniOch(context);
+      case 'gap':
+        gapTuzishniOch(context);
+      default:
+        chaqmoqRaundiniOch(context);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final p = progress;
+    final (tur, maqsad, joriy) = p.maxsusVazifa;
+    final (nom, ikon, rang, matn) = _tavsif(tur, maqsad);
+    final tayyor = joriy >= maqsad;
+    if (tayyor && !_tekshirildi && !p.maxsusBonusOlindi) {
+      _tekshirildi = true;
+      WidgetsBinding.instance.addPostFrameCallback((_) async {
+        if (await progress.maxsusBonusiniOl()) {
+          Tovush.daraja();
+          xabarBer(
+            'Maxsus vazifa bajarildi — +${Progress.maxsusBonusBalli} ball!',
+            ikon: Icons.auto_awesome_rounded,
+          );
+        }
+      });
+    }
+    return Tactile(
+      child: Material(
+        color: AppColors.karta,
+        borderRadius: BorderRadius.circular(20),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(20),
+          onTap: tayyor ? null : () => _och(context, tur),
+          child: Container(
+            padding: const EdgeInsets.fromLTRB(16, 13, 14, 13),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(
+                color: (tayyor ? AppColors.success : rang).withValues(
+                  alpha: 0.45,
+                ),
+                width: 1.4,
+              ),
+            ),
+            child: Row(
+              children: [
+                Container(
+                  width: 44,
+                  height: 44,
+                  decoration: BoxDecoration(
+                    color: (tayyor ? AppColors.success : rang).withValues(
+                      alpha: 0.14,
+                    ),
+                    borderRadius: BorderRadius.circular(14),
+                  ),
+                  child: Icon(
+                    tayyor ? Icons.verified_rounded : ikon,
+                    color: tayyor ? AppColors.success : rang,
+                  ),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        tayyor
+                            ? 'Maxsus vazifa bajarildi!'
+                            : 'Bugungi maxsus vazifa · $nom',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w900,
+                          fontSize: 14.5,
+                          color: AppColors.ink,
+                        ),
+                      ),
+                      const SizedBox(height: 2),
+                      Text(
+                        tayyor
+                            ? '$matn — +${Progress.maxsusBonusBalli} ball olindi'
+                            : '$matn · ${joriy.clamp(0, maqsad)} / $maqsad',
+                        style: TextStyle(
+                          fontSize: 12.5,
+                          color: AppColors.matn2,
+                        ),
+                      ),
+                      const SizedBox(height: 6),
+                      AnimatedBar(
+                        value: (joriy / maqsad).clamp(0, 1).toDouble(),
+                        height: 5,
+                        color: tayyor ? AppColors.success : rang,
+                        background: rang.withValues(alpha: 0.12),
+                      ),
+                    ],
+                  ),
+                ),
+                if (!tayyor) Icon(Icons.chevron_right_rounded, color: rang),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 class _OtganHafta extends StatelessWidget {
   const _OtganHafta();
 

@@ -80,6 +80,32 @@ void main() {
     expect(yangi, containsAll(['xattot', 'kartochka-100', 'gap-50']));
   });
 
+  test(
+    'maxsus vazifa: kunlik hisob, bajarilganda bir martalik bonus',
+    () async {
+      final p = Progress();
+      final (tur, maqsad, joriy) = p.maxsusVazifa;
+      expect(joriy, 0);
+      expect(p.maxsusBajarildi, isFalse);
+      expect(await p.maxsusBonusiniOl(), isFalse);
+      switch (tur) {
+        case 'harf':
+          await p.hisobQosh(harf: maqsad);
+        case 'karta':
+          await p.hisobQosh(karta: maqsad);
+        case 'gap':
+          await p.hisobQosh(gap: maqsad);
+        default:
+          await p.chaqmoqNatija(maqsad);
+      }
+      expect(p.maxsusBajarildi, isTrue);
+      final oldin = p.xp;
+      expect(await p.maxsusBonusiniOl(), isTrue);
+      expect(p.xp, oldin + Progress.maxsusBonusBalli);
+      expect(await p.maxsusBonusiniOl(), isFalse);
+    },
+  );
+
   test('kombo va daraja nishonlari', () async {
     final p = Progress();
     await p.rekordniYangila(12);

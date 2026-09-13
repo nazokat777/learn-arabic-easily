@@ -389,6 +389,7 @@ class _MashqEkranState extends State<MashqEkran> {
       _chaqmoqRekord = await progress.chaqmoqRekordniYangila(
         _s.birinchidanTogri,
       );
+      await progress.chaqmoqNatija(_s.birinchidanTogri);
     }
     if (mounted) {
       setState(() {

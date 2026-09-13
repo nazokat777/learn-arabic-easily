@@ -123,6 +123,14 @@ class HomeScreen extends StatelessWidget {
                         child: _OtganHafta(),
                       ),
                     ],
+                    if (progress.seriyaBugunUzildi &&
+                        !progress.kunlikMaqsadBajarildi) ...[
+                      const SizedBox(height: 12),
+                      const Reveal(
+                        delay: Duration(milliseconds: 105),
+                        child: _YangiBoshlanish(),
+                      ),
+                    ],
                     if (progress.streak > 0 &&
                         !progress.bugunSeriyada &&
                         !progress.kunlikMaqsadBajarildi) ...[
@@ -2291,6 +2299,13 @@ class _Statistika extends StatelessWidget {
         '',
         'jami javob',
       ),
+      (
+        Icons.whatshot_rounded,
+        AppColors.amber,
+        p.engUzunSeriya,
+        '',
+        'eng uzun olov (kun)',
+      ),
     ];
     return Container(
       padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),
@@ -2623,6 +2638,76 @@ class _BugungiSozState extends State<_BugungiSoz> {
 /// Olov eslatmasi — seriya bor, bugun hali yoqilmagan: «yo'qotish»
 /// hissi yutuqdan kuchli, shuning uchun eslatma olovni saqlash haqida,
 /// jazo haqida emas. Bosilsa oxirgi dars (yoki mashqlar) ochiladi.
+/// Seriya uzilgan kun — «yangi boshlanish» kartasi. Yo'qotish tan
+/// olinadi, lekin rekord saqlanib qolgani va bugun yangi seriya boshlash
+/// mumkinligi aytiladi. Aybdorlik emas — yangi sahifa.
+class _YangiBoshlanish extends StatelessWidget {
+  const _YangiBoshlanish();
+
+  @override
+  Widget build(BuildContext context) {
+    final p = progress;
+    return Tactile(
+      child: Material(
+        color: AppColors.karta,
+        borderRadius: BorderRadius.circular(18),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(18),
+          onTap: () {
+            final ekran = oxirgiDarsEkrani() ?? const MashqlarHome();
+            Navigator.push(context, MaterialPageRoute(builder: (_) => ekran));
+          },
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(18),
+              border: Border.all(
+                color: AppColors.gold.withValues(alpha: 0.5),
+                width: 1.4,
+              ),
+            ),
+            child: Row(
+              children: [
+                const Icon(
+                  Icons.wb_twilight_rounded,
+                  color: AppColors.gold,
+                  size: 30,
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Yangi boshlanish',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w900,
+                          fontSize: 15,
+                          color: AppColors.ink,
+                        ),
+                      ),
+                      Text(
+                        '${p.uzilganSeriya} kunlik seriya uzildi — rekordingiz '
+                        '(${p.engUzunSeriya} kun) saqlanib qoldi. Bugun ${Progress.kunlikMaqsad} '
+                        'savol — va yangi olov yonadi.',
+                        style: TextStyle(
+                          fontSize: 12.5,
+                          color: AppColors.matn2,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const Icon(Icons.arrow_forward_rounded, color: AppColors.gold),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 class _OlovEslatmasi extends StatelessWidget {
   const _OlovEslatmasi();
 

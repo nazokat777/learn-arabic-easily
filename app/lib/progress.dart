@@ -17,6 +17,18 @@ class Progress extends ChangeNotifier {
   int streak = 0;
   String? _lastActiveDay; // 'YYYY-MM-DD'
 
+  /// Eng uzun seriya (butun tarix) — uzilganda ham yutuq yo'qolmaydi.
+  int engUzunSeriya = 0;
+
+  /// Seriya uzilgan kun va uzilgan seriya uzunligi — «yangi boshlanish»
+  /// kartasi uchun. Yo'qotish «hammasi ketdi» emas, «rekordingiz saqlanib
+  /// qoldi, yangisini boshlang» deb aytiladi (fresh start).
+  int _uzilganSeriya = 0;
+  String? _uzilishKuni;
+  bool get seriyaBugunUzildi =>
+      _uzilganSeriya > 0 && _uzilishKuni == _today() && streak == 0;
+  int get uzilganSeriya => _uzilganSeriya;
+
   /// Olov himoyasi (muzlatish) — bir kun o'tkazib yuborilsa seriya
   /// o'chmaydi, himoya sarflanadi. Yo'qotish qo'rquvi eng kuchli
   /// «qaytish» sababi; himoya uni yumshatib, uzilishdan keyingi
@@ -336,6 +348,9 @@ class Progress extends ChangeNotifier {
     streak = _prefs!.getInt('streak') ?? 0;
     _lastActiveDay = _prefs!.getString('lastDay');
     muzlatish = _prefs!.getInt('muzlatish') ?? 0;
+    engUzunSeriya = _prefs!.getInt('engUzunSeriya') ?? 0;
+    _uzilganSeriya = _prefs!.getInt('uzilganSeriya') ?? 0;
+    _uzilishKuni = _prefs!.getString('uzilishKuni');
     _himoyaKuni = _prefs!.getString('himoyaKuni');
     _sandiqKuni = _prefs!.getString('sandiqKuni');
     sandiqSoni = _prefs!.getInt('sandiqSoni') ?? 0;
@@ -665,6 +680,11 @@ class Progress extends ChangeNotifier {
       unawaited(_save());
       return;
     }
+    if (streak > 0) {
+      _uzilganSeriya = streak;
+      _uzilishKuni = today;
+      unawaited(_save());
+    }
     streak = 0; // seriya uzildi
   }
 
@@ -753,6 +773,7 @@ class Progress extends ChangeNotifier {
     if (_lastActiveDay == today) return;
     _lastActiveDay = today;
     streak += 1;
+    if (streak > engUzunSeriya) engUzunSeriya = streak;
   }
 
   /// Bugun seriya uchun hisoblangan kunmi (maqsad bajarilgan).
@@ -814,6 +835,9 @@ class Progress extends ChangeNotifier {
     await p.setInt('streak', streak);
     if (_lastActiveDay != null) await p.setString('lastDay', _lastActiveDay!);
     await p.setInt('muzlatish', muzlatish);
+    await p.setInt('engUzunSeriya', engUzunSeriya);
+    await p.setInt('uzilganSeriya', _uzilganSeriya);
+    if (_uzilishKuni != null) await p.setString('uzilishKuni', _uzilishKuni!);
     if (_himoyaKuni != null) await p.setString('himoyaKuni', _himoyaKuni!);
     if (_sandiqKuni != null) await p.setString('sandiqKuni', _sandiqKuni!);
     await p.setInt('sandiqSoni', sandiqSoni);

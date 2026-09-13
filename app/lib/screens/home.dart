@@ -288,6 +288,14 @@ class HomeScreen extends StatelessWidget {
                         delay: Duration(milliseconds: 700),
                         child: _ApkBanner(),
                       ),
+                    ] else if (kIsWeb &&
+                        defaultTargetPlatform == TargetPlatform.iOS) ...[
+                      // iPhone: APK yo'q — «Asosiy ekranga qo'shish» yo'li.
+                      const SizedBox(height: 22),
+                      const Reveal(
+                        delay: Duration(milliseconds: 700),
+                        child: _IosBanner(),
+                      ),
                     ],
                   ],
                 ),
@@ -2784,6 +2792,61 @@ void launchApkPage() {
 }
 
 /// «Telefonga o'rnatish» taklifi — faqat brauzerda ko'rinadi.
+/// iPhone uchun: Safari → Ulashish → «Asosiy ekranga qo'shish» — ilova
+/// kabi ochiladi (to'liq ekran, belgi). Android'dagi APK'ning o'rnini bosadi.
+class _IosBanner extends StatelessWidget {
+  const _IosBanner();
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: AppColors.softGreen,
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: Row(
+        children: [
+          Container(
+            width: 44,
+            height: 44,
+            decoration: BoxDecoration(
+              color: AppColors.karta,
+              borderRadius: BorderRadius.circular(14),
+            ),
+            child: const Icon(
+              Icons.ios_share_rounded,
+              color: AppColors.emerald,
+              size: 24,
+            ),
+          ),
+          const SizedBox(width: 14),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "iPhone'ga o'rnatish",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w800,
+                    color: AppColors.ink,
+                  ),
+                ),
+                const SizedBox(height: 2),
+                Text(
+                  "Safari'da «Ulashish» → «Asosiy ekranga qo'shish» — ilova "
+                  "kabi ochiladi",
+                  style: TextStyle(color: AppColors.matn2, fontSize: 13),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 class _ApkBanner extends StatelessWidget {
   const _ApkBanner();
 

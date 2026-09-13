@@ -2307,6 +2307,20 @@ class _Statistika extends StatelessWidget {
         '',
         'eng uzun olov (kun)',
       ),
+      (
+        Icons.inventory_2_rounded,
+        AppColors.gold,
+        p.sandiqSoni,
+        '',
+        'ochilgan sandiq',
+      ),
+      (
+        Icons.extension_rounded,
+        AppColors.indigo,
+        p.gapTuzilgan,
+        '',
+        'tuzilgan gap',
+      ),
     ];
     return Container(
       padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),

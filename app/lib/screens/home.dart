@@ -1646,24 +1646,41 @@ class _KunlikRejaState extends State<_KunlikReja> {
   Widget build(BuildContext context) {
     final p = progress;
     final eslash = p.eslashKerakKalitlar.length;
-    final vazifalar = <(String, bool, IconData)>[
+    // Har vazifa bosiladi — ro'yxat shunchaki belgi emas, yo'l ham.
+    final vazifalar = <(String, bool, IconData, VoidCallback?)>[
       (
         'Kunlik sandiqni ochish',
         p.sandiqOchilganBugun,
         Icons.inventory_2_rounded,
+        p.sandiqOchilganBugun ? null : () => _sandiqOynasi(context),
       ),
       (
         'Kunlik maqsad: ${Progress.kunlikMaqsad} savol',
         p.kunlikMaqsadBajarildi,
         Icons.track_changes_rounded,
+        p.kunlikMaqsadBajarildi
+            ? null
+            : () {
+                final ekran = oxirgiDarsEkrani() ?? const MashqlarHome();
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => ekran),
+                );
+              },
       ),
-      ('Bugungi so\'zni bilib olish', p.bugungiSozBildimmi, Icons.star_rounded),
+      (
+        "Bugungi so'zni bilib olish",
+        p.bugungiSozBildimmi,
+        Icons.star_rounded,
+        null,
+      ),
       (
         eslash == 0
-            ? 'Eslash vaqti kelgan so\'zlar — yo\'q'
-            : 'Eslash vaqti kelgan $eslash ta so\'z',
+            ? "Eslash vaqti kelgan so'zlar — yo'q"
+            : "Eslash vaqti kelgan $eslash ta so'z",
         eslash == 0,
         Icons.replay_rounded,
+        eslash == 0 ? null : () => kartochkalarniOch(context),
       ),
     ];
     final bajarildi = vazifalar.where((v) => v.$2).length;
@@ -1724,39 +1741,43 @@ class _KunlikRejaState extends State<_KunlikReja> {
             background: rang.withValues(alpha: 0.12),
           ),
           const SizedBox(height: 10),
-          for (final (nom, ok, ikon) in vazifalar)
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 3),
-              child: Row(
-                children: [
-                  AnimatedContainer(
-                    duration: const Duration(milliseconds: 300),
-                    width: 22,
-                    height: 22,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: ok ? AppColors.success : AppColors.chiziq2,
-                    ),
-                    child: Icon(
-                      ok ? Icons.check_rounded : ikon,
-                      size: 14,
-                      color: ok ? Colors.white : AppColors.matn3,
-                    ),
-                  ),
-                  const SizedBox(width: 10),
-                  Expanded(
-                    child: Text(
-                      nom,
-                      style: TextStyle(
-                        fontSize: 13.5,
-                        fontWeight: FontWeight.w600,
-                        color: ok ? AppColors.matn3 : AppColors.ink,
-                        decoration: ok ? TextDecoration.lineThrough : null,
-                        decorationColor: AppColors.matn3,
+          for (final (nom, ok, ikon, onTap) in vazifalar)
+            InkWell(
+              onTap: onTap,
+              borderRadius: BorderRadius.circular(10),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 3),
+                child: Row(
+                  children: [
+                    AnimatedContainer(
+                      duration: const Duration(milliseconds: 300),
+                      width: 22,
+                      height: 22,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: ok ? AppColors.success : AppColors.chiziq2,
+                      ),
+                      child: Icon(
+                        ok ? Icons.check_rounded : ikon,
+                        size: 14,
+                        color: ok ? Colors.white : AppColors.matn3,
                       ),
                     ),
-                  ),
-                ],
+                    const SizedBox(width: 10),
+                    Expanded(
+                      child: Text(
+                        nom,
+                        style: TextStyle(
+                          fontSize: 13.5,
+                          fontWeight: FontWeight.w600,
+                          color: ok ? AppColors.matn3 : AppColors.ink,
+                          decoration: ok ? TextDecoration.lineThrough : null,
+                          decorationColor: AppColors.matn3,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
         ],

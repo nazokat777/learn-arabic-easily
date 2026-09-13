@@ -97,16 +97,24 @@ class MashqBank {
   /// boshi (birinchi «;», « —», «:» gacha), qisqa va lotin. Bitta ro'yxat
   /// = bitta guruh; kamida ikki xil tur bo'lishi shart. Bir so'z ikki
   /// turda kelsa — tashlanadi.
-  static List<(String, String)> nahvTurkum(NahvBlock b) {
+  static List<(String, String)> nahvTurkum(NahvBlock b) => [
+    for (final (a, u, _) in nahvTurkumIzohli(b)) (a, u),
+  ];
+
+  /// Tasnif juftliklari kitob ta'rifi bilan: (kalima, tur, ta'rif).
+  /// Ta'rif — o'zbekcha bandda tur nomidan «masalan»gacha bo'lgan qism
+  /// («Mozi — o'tgan zamonda … fe'l; masalan: …» → o'rta qismi); bo'lmasa ''.
+  static List<(String, String, String)> nahvTurkumIzohli(NahvBlock b) {
     if (b.type != 'list') return const [];
     final misolBoshi = RegExp(r'(?:مِثْلُ|نَحْوُ)\s*:');
-    final natija = <(String, String)>[];
+    final natija = <(String, String, String)>[];
     final turlar = <String>{};
     final korilgan = <String, String>{};
     final ziddiyat = <String>{};
     for (final it in b.items) {
       final m = misolBoshi.firstMatch(it.ar);
       if (m == null) continue;
+      final izoh = _turIzohi(it.uz);
       var bolak = it.ar.substring(m.end);
       final kes = RegExp('[.؛]|وَغَيْرِ').firstMatch(bolak);
       if (kes != null) bolak = bolak.substring(0, kes.start);
@@ -136,15 +144,30 @@ class MashqBank {
         if (oldingi != null && oldingi != tur) ziddiyat.add(s);
         if (oldingi == null) {
           korilgan[s] = tur;
-          natija.add((s, tur));
+          natija.add((s, tur, izoh));
         }
       }
     }
     if (turlar.length < 2) return const [];
     return [
-      for (final (s, tur) in natija)
-        if (!ziddiyat.contains(s)) (s, tur),
+      for (final (s, tur, iz) in natija)
+        if (!ziddiyat.contains(s)) (s, tur, iz),
     ];
+  }
+
+  /// «Mozi — o'tgan zamonda … fe'l; masalan: …» → «o'tgan zamonda … fe'l».
+  /// Tur nomidan keyingi ajratgich («—», «;», «:») dan «masalan» gacha;
+  /// qisqa (< 12 belgi) yoki yo'q bo'lsa — ''.
+  static String _turIzohi(String uz) {
+    final s = uz.trim();
+    final bosh = RegExp(r'[;:]| — | – ').firstMatch(s);
+    if (bosh == null) return '';
+    var qolgan = s.substring(bosh.end).trim();
+    final oxir = RegExp(r'[;:]?\s*masalan').firstMatch(qolgan);
+    if (oxir != null) qolgan = qolgan.substring(0, oxir.start).trim();
+    qolgan = qolgan.replaceAll(RegExp(r'[;:—–]+$'), '').trim();
+    if (qolgan.length < 12 || !_lotin.hasMatch(qolgan)) return '';
+    return qolgan;
   }
 
   /// O'zbekcha banddan tur nomi: «Fe'l; masalan: …» → «Fe'l»,
@@ -163,7 +186,7 @@ class MashqBank {
   static List<MashqElement> nahvTurkumlar(NahvLesson l) {
     final natija = <MashqElement>[];
     for (final (i, b) in l.blocks.indexed) {
-      for (final (ar, uz) in nahvTurkum(b)) {
+      for (final (ar, uz, izoh) in nahvTurkumIzohli(b)) {
         if (!_yaroqli(ar, uz)) continue;
         natija.add(
           MashqElement(
@@ -176,6 +199,7 @@ class MashqBank {
             ovoz: '',
             turkum: true,
             guruh: 'nahv-${l.book}-${l.num}-$i',
+            izoh: izoh,
           ),
         );
       }

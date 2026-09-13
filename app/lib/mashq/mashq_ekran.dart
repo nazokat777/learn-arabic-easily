@@ -1140,13 +1140,18 @@ class _MashqEkranState extends State<MashqEkran> {
     final rang = ok
         ? AppColors.success
         : (_bilmadim ? AppColors.gold : AppColors.coral);
-    final izoh = ok
+    final xatoIzoh = ok
         ? null
         : s.turi == MashqTuri.tugriMi
         ? "${s.element.ar} = ${s.element.uz}"
         : s.turi == MashqTuri.harflabYoz
         ? "To'g'ri yozilishi yuqorida"
         : "To'g'ri javob: ${s.variantlar[s.togri]}";
+    // Tasnifda kitob ta'rifi — to'g'ri bo'lsa ham: «nega» tushunilsin.
+    final tarif = s.element.turkum && s.element.izoh.isNotEmpty
+        ? '${s.element.uz} — ${s.element.izoh}'
+        : null;
+    final izoh = [xatoIzoh, tarif].whereType<String>().join('\n');
     return AnimatedContainer(
       duration: const Duration(milliseconds: 250),
       width: double.infinity,
@@ -1180,7 +1185,7 @@ class _MashqEkranState extends State<MashqEkran> {
                   _fikrMatni,
                   style: TextStyle(fontWeight: FontWeight.w800, color: rang),
                 ),
-                if (izoh != null)
+                if (izoh.isNotEmpty)
                   Text(
                     izoh,
                     style: TextStyle(

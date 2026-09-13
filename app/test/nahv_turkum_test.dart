@@ -80,4 +80,19 @@ void main() {
       greaterThan(25),
     );
   });
+
+  test("tasnif ta'rifi kitob bandidan olinadi", () {
+    final e = MashqBank.nahvTurkumlar(dars(1, 3));
+    final mozi = e.firstWhere((x) => x.ar == 'كَتَبَ');
+    expect(mozi.uz, 'Mozi');
+    expect(
+      mozi.izoh,
+      "o'tgan zamonda biror ish sodir bo'lganiga dalolat qiladigan fe'l",
+    );
+    // «Fe'l; masalan: …» — ta'rif yo'q.
+    final fel = MashqBank.nahvTurkumlar(
+      dars(1, 2),
+    ).firstWhere((x) => x.ar == 'كَتَبَ');
+    expect(fel.izoh, '');
+  });
 }

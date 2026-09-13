@@ -42,6 +42,10 @@ class MashqElement {
   /// ikkinchi to'g'ri javob bo'lib qolardi.
   final String guruh;
 
+  /// Kitobdagi ta'rif (tasnif uchun): javobdan keyin «Mozi — o'tgan
+  /// zamonda … dalolat qiladigan fe'l» ko'rsatiladi. Bo'sh bo'lishi mumkin.
+  final String izoh;
+
   const MashqElement({
     required this.kalit,
     required this.ar,
@@ -52,6 +56,7 @@ class MashqElement {
     String? ovoz,
     this.turkum = false,
     this.guruh = '',
+    this.izoh = '',
   }) : ovoz = ovoz ?? ar;
 
   /// Element hozir qanchalik zaif (katta son = ko'proq mashq kerak).

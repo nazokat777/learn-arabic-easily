@@ -72,6 +72,20 @@ class _KartochkalarEkraniState extends State<KartochkalarEkrani>
 
   MashqElement get _joriy => _navbat.first;
 
+  @override
+  void initState() {
+    super.initState();
+    _oqi();
+  }
+
+  /// Joriy karta ochilganda so'z o'qiladi — ko'rish + eshitish.
+  void _oqi() {
+    final e = _navbat.isEmpty ? null : _navbat.first;
+    if (e != null && e.ovoz.isNotEmpty) {
+      Tts.instance.speak(e.ovoz, id: e.kalit);
+    }
+  }
+
   void _yechim(bool ok) {
     final e = _joriy;
     Haptic.tap();
@@ -93,7 +107,11 @@ class _KartochkalarEkraniState extends State<KartochkalarEkrani>
       _agdarilgan = false;
       if (_navbat.isEmpty) _tugadi = true;
     });
-    if (_tugadi) _nishonlarniTekshir();
+    if (_tugadi) {
+      _nishonlarniTekshir();
+    } else {
+      _oqi();
+    }
   }
 
   Future<void> _nishonlarniTekshir() async {
@@ -114,6 +132,7 @@ class _KartochkalarEkraniState extends State<KartochkalarEkrani>
       _agdarilgan = false;
       _dx = 0;
     });
+    _oqi();
   }
 
   @override
@@ -198,7 +217,8 @@ class _KartochkalarEkraniState extends State<KartochkalarEkrani>
               onTap: () {
                 Haptic.tap();
                 setState(() => _agdarilgan = !_agdarilgan);
-                if (!_agdarilgan && e.ovoz.isNotEmpty) {
+                // Ma'nosi ochilganda so'z yana bir bor eshitiladi.
+                if (_agdarilgan && e.ovoz.isNotEmpty) {
                   Tts.instance.speak(e.ovoz, id: e.kalit);
                 }
               },

@@ -196,7 +196,8 @@ class MashqBank {
             darsId: 'nahv-${l.book}-${l.num}',
             tartib: l.book * 1000 + l.num,
             modul: 'Nahv',
-            ovoz: '',
+            // Kalima o'qib beriladi (klip bo'lsa klip, bo'lmasa TTS).
+            ovoz: ar,
             turkum: true,
             guruh: 'nahv-${l.book}-${l.num}-$i',
             izoh: izoh,
@@ -546,7 +547,7 @@ class MashqBank {
           darsId: l.completionId,
           tartib: l.num,
           modul: 'Sarf',
-          ovoz: '',
+          ovoz: e.key, // kalima o'qib beriladi
           turkum: true,
           guruh: 'sarf-${l.num}',
         ),

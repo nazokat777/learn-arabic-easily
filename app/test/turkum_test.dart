@@ -72,7 +72,7 @@ void main() {
     final e = MashqBank.sarfDars(darslar.firstWhere((l) => l.num == 3));
     final turkumlar = e.where((x) => x.turkum).toList();
     expect(turkumlar.length, greaterThan(100));
-    expect(turkumlar.every((x) => x.ovoz.isEmpty), isTrue);
+    expect(turkumlar.every((x) => x.ovoz == x.ar), isTrue); // o'qiladi
     expect(turkumlar.every((x) => !MashqSessiya.yozibBoladi(x)), isTrue);
   });
 

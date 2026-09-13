@@ -63,7 +63,7 @@ void main() {
         expect(x.ar.contains(' '), isFalse, reason: x.ar);
         expect(x.ar.contains('«') || x.ar.contains('﴿'), isFalse, reason: x.ar);
         expect(x.turkum, isTrue);
-        expect(x.ovoz, isEmpty);
+        expect(x.ovoz, x.ar); // kalima o'qib beriladi
         expect(x.guruh, startsWith('nahv-'));
       }
     }

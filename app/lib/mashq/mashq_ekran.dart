@@ -182,7 +182,13 @@ class _MashqEkranState extends State<MashqEkran> {
           ? _harflarniAralashtir(s.element.ar)
           : const [];
     });
-    if (orgat && s.element.ovoz.isNotEmpty) {
+    // Ovoz: o'rgatish kartasida va arabcha KO'RSATILGAN savollarda so'z
+    // darrov o'qiladi — ko'z bilan quloq bir vaqtda o'rganadi. «Arabchasini
+    // top» va «tinglab top» turlarida javobgacha jim (aks holda javob
+    // aytilib qo'yiladi).
+    final korsatiladi =
+        s.turi == MashqTuri.manoTop || s.turi == MashqTuri.tugriMi;
+    if ((orgat || korsatiladi) && s.element.ovoz.isNotEmpty) {
       Tts.instance.speak(s.element.ovoz, id: s.element.kalit);
     }
   }
@@ -265,6 +271,15 @@ class _MashqEkranState extends State<MashqEkran> {
     });
     togri ? Haptic.ok() : Haptic.wrong();
     togri ? Tovush.togri(_ketmaKet) : Tovush.xato();
+    // Arabchasi topilganda (yoki tinglab topilganda) so'z o'qib beriladi —
+    // to'g'ri javob ovoz bilan mustahkamlanadi; xatoda ham to'g'risi eshitilsin.
+    final s0 = _savol!;
+    if ((s0.turi == MashqTuri.arabchaTop || s0.turi == MashqTuri.tinglabTop) &&
+        s0.element.ovoz.isNotEmpty) {
+      Future.delayed(const Duration(milliseconds: 350), () {
+        if (mounted) Tts.instance.speak(s0.element.ovoz, id: s0.element.kalit);
+      });
+    }
 
     final e = _savol!.element;
     await progress.bumpWord(e.kalit, togri);
@@ -705,7 +720,25 @@ class _MashqEkranState extends State<MashqEkran> {
     Widget ichi;
     switch (s.turi) {
       case MashqTuri.manoTop:
-        ichi = _arabchaMatn(e.ar);
+        // Bosilsa qayta o'qiladi; kichik karnay belgisi — ovoz borligi ko'rinsin.
+        ichi = e.ovoz.isEmpty
+            ? _arabchaMatn(e.ar)
+            : InkWell(
+                borderRadius: BorderRadius.circular(12),
+                onTap: () => Tts.instance.speak(e.ovoz, id: e.kalit),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    _arabchaMatn(e.ar),
+                    const SizedBox(height: 4),
+                    Icon(
+                      Icons.volume_up_rounded,
+                      size: 18,
+                      color: AppColors.emerald.withValues(alpha: 0.7),
+                    ),
+                  ],
+                ),
+              );
       case MashqTuri.arabchaTop:
         ichi = Text(
           e.uz,

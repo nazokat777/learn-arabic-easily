@@ -27,6 +27,15 @@ class _HarfChizishEkraniState extends State<HarfChizishEkrani> {
 
   Letter get _harf => widget.harflar[_i];
 
+  @override
+  void initState() {
+    super.initState();
+    // Birinchi harf ham o'qiladi — keyingilari kabi.
+    WidgetsBinding.instance.addPostFrameCallback(
+      (_) => Tts.instance.speak(_harf.nameAr, id: 'chiz-${_harf.ar}'),
+    );
+  }
+
   void _boshla(Offset p) => setState(() => _chiziqlar.add([p]));
   void _davom(Offset p) => setState(() => _chiziqlar.last.add(p));
 
@@ -51,10 +60,13 @@ class _HarfChizishEkraniState extends State<HarfChizishEkrani> {
     Tts.instance.speak(_harf.nameAr, id: 'chiz-${_harf.ar}');
   }
 
-  void _oldingi() => setState(() {
-    _chiziqlar.clear();
-    _i = (_i - 1 + widget.harflar.length) % widget.harflar.length;
-  });
+  void _oldingi() {
+    setState(() {
+      _chiziqlar.clear();
+      _i = (_i - 1 + widget.harflar.length) % widget.harflar.length;
+    });
+    Tts.instance.speak(_harf.nameAr, id: 'chiz-${_harf.ar}');
+  }
 
   @override
   Widget build(BuildContext context) {

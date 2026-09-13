@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart' hide Text;
 
 import '../main.dart';
+import '../nishonlar.dart';
 import '../progress.dart';
 import '../theme.dart';
 import '../widgets/motion.dart';
@@ -44,7 +45,7 @@ class _Tanishuv extends StatefulWidget {
 class _TanishuvState extends State<_Tanishuv> {
   int _qadam = 0;
 
-  static const _qadamlar = <(IconData, Color, String, String)>[
+  static final _qadamlar = <(IconData, Color, String, String)>[
     (
       Icons.track_changes_rounded,
       AppColors.coral,
@@ -65,7 +66,7 @@ class _TanishuvState extends State<_Tanishuv> {
       AppColors.gold,
       'Nishonlar va darajalar',
       "Har to'g'ri javob ball beradi, har 100 ball — yangi daraja. Yo'lda "
-          "19 ta nishon ochiladi. Qiynalgan so'zlarni ilova o'zi eslab, "
+          "${nishonlar.length} ta nishon ochiladi. Qiynalgan so'zlarni ilova o'zi eslab, "
           "qayta so'raydi — hech narsa unutilmaydi.",
     ),
   ];

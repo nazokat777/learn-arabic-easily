@@ -86,7 +86,108 @@ class MashqBank {
     return natija;
   }
 
-  static List<MashqElement> nahvDars(NahvLesson l) => _nahvJuftlar(l);
+  /// Nahv ro'yxatlaridagi tasnif: «Fe'l; masalan: كَتَبَ، يَكْتُبُ…»,
+  /// «Ism; masalan: مُحَمَّد…», «Muzakkar … masalan: عَلِيّ…». Kitob
+  /// o'zi bergan misollar o'z turi bilan — «كَتَبَ qaysi turga kiradi?».
+  ///
+  /// QAT'IY qoidalar (taxmin yo'q): faqat «مِثْلُ:» / «نَحْوُ:» dan
+  /// keyingi bo'lak; nuqta, «؛» yoki «وَغَيْرِ» gacha; «،» bilan bo'lingan
+  /// BIR SO'ZLI arabcha misollar (bosh «وَ»/«أَوْ» tashlanadi); oyat (﴿),
+  /// «جَمْعِ» kabi izohli misol — tashlanadi. Tur nomi — o'zbekcha bandning
+  /// boshi (birinchi «;», « —», «:» gacha), qisqa va lotin. Bitta ro'yxat
+  /// = bitta guruh; kamida ikki xil tur bo'lishi shart. Bir so'z ikki
+  /// turda kelsa — tashlanadi.
+  static List<(String, String)> nahvTurkum(NahvBlock b) {
+    if (b.type != 'list') return const [];
+    final misolBoshi = RegExp(r'(?:مِثْلُ|نَحْوُ)\s*:');
+    final natija = <(String, String)>[];
+    final turlar = <String>{};
+    final korilgan = <String, String>{};
+    final ziddiyat = <String>{};
+    for (final it in b.items) {
+      final m = misolBoshi.firstMatch(it.ar);
+      if (m == null) continue;
+      var bolak = it.ar.substring(m.end);
+      final kes = RegExp('[.؛]|وَغَيْرِ').firstMatch(bolak);
+      if (kes != null) bolak = bolak.substring(0, kes.start);
+      if (bolak.contains('﴿') || bolak.contains('جَمْعِ')) continue;
+      final tur = _turNomi(it.uz);
+      if (tur == null) continue;
+      final sozlar = <String>[];
+      for (var s in bolak.split('،')) {
+        s = s.replaceAll(RegExp('[«»]'), '').trim();
+        if (s.isEmpty) continue; // oxirgi «،» dan keyingi bo'shliq
+        // «أَوْ X» — muqobil shakl; «وَX» — bog'lovchi bilan.
+        s = s.replaceFirst(RegExp(r'^(?:أَوْ|وَ)\s*'), '').trim();
+        if (s.isEmpty || s.contains(' ') || !_arabcha.hasMatch(s)) {
+          sozlar.clear();
+          break; // shubhali bo'lak — butun band tashlanadi
+        }
+        if (_lotin.hasMatch(s)) {
+          sozlar.clear();
+          break;
+        }
+        sozlar.add(s);
+      }
+      if (sozlar.isEmpty) continue;
+      turlar.add(tur);
+      for (final s in sozlar) {
+        final oldingi = korilgan[s];
+        if (oldingi != null && oldingi != tur) ziddiyat.add(s);
+        if (oldingi == null) {
+          korilgan[s] = tur;
+          natija.add((s, tur));
+        }
+      }
+    }
+    if (turlar.length < 2) return const [];
+    return [
+      for (final (s, tur) in natija)
+        if (!ziddiyat.contains(s)) (s, tur),
+    ];
+  }
+
+  /// O'zbekcha banddan tur nomi: «Fe'l; masalan: …» → «Fe'l»,
+  /// «Muzakkar — erkak zotga…» → «Muzakkar». Uzun yoki lotinsiz — null.
+  static String? _turNomi(String uz) {
+    var s = uz.trim();
+    final kes = RegExp(r'[;:]| — | – |\(').firstMatch(s);
+    if (kes != null) s = s.substring(0, kes.start);
+    s = s.trim();
+    if (s.isEmpty || s.length > 32 || !_lotin.hasMatch(s)) return null;
+    if (_arabcha.hasMatch(s)) return null;
+    return s;
+  }
+
+  /// Nahv darsining tasnif elementlari (ro'yxat bo'yicha guruhlangan).
+  static List<MashqElement> nahvTurkumlar(NahvLesson l) {
+    final natija = <MashqElement>[];
+    for (final (i, b) in l.blocks.indexed) {
+      for (final (ar, uz) in nahvTurkum(b)) {
+        if (!_yaroqli(ar, uz)) continue;
+        natija.add(
+          MashqElement(
+            kalit: 'nahv::${l.book}-${l.num}::tur::$ar',
+            ar: ar,
+            uz: uz,
+            darsId: 'nahv-${l.book}-${l.num}',
+            tartib: l.book * 1000 + l.num,
+            modul: 'Nahv',
+            ovoz: '',
+            turkum: true,
+            guruh: 'nahv-${l.book}-${l.num}-$i',
+          ),
+        );
+      }
+    }
+    return natija;
+  }
+
+  /// Dars mashqi: qoida/misol juftliklari + ro'yxatlardan tasnif.
+  static List<MashqElement> nahvDars(NahvLesson l) => [
+    ..._nahvJuftlar(l),
+    ...nahvTurkumlar(l),
+  ];
 
   static List<MashqElement> nahvGacha(NahvLesson l) {
     final chegara = l.book * 1000 + l.num;
@@ -94,6 +195,7 @@ class MashqBank {
     for (final x in repo.nahvLessons) {
       if (x.book * 1000 + x.num > chegara) continue;
       natija.addAll(_nahvJuftlar(x));
+      natija.addAll(nahvTurkumlar(x));
     }
     return natija;
   }

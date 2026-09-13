@@ -281,6 +281,7 @@ class MashqSessiya {
 
   /// So'zni harflab yig'ish mumkinmi: 2-8 ta asosiy harf va bitta so'z.
   static bool yozibBoladi(MashqElement e) {
+    if (e.turkum) return false; // tur nomidan so'z yozib bo'lmaydi
     if (e.ar.trim().contains(' ')) return false;
     final n = harflarga(e.ar).length;
     return n >= 2 && n <= 8;

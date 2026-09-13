@@ -32,6 +32,16 @@ class MashqElement {
   /// mumkin. Bo'sh bo'lsa — ovoz tugmasi ko'rsatilmaydi.
   final String ovoz;
 
+  /// Tasnif elementi: `uz` — ma'no emas, TUR nomi (masalan «Noqis»).
+  /// Savol matni boshqacha («qaysi turga kiradi?»), yozish bosqichiga
+  /// kirmaydi. Manba — kitobning o'z jadvali (katak ↔ ustun).
+  final bool turkum;
+
+  /// Tasnif guruhi (masalan «sarf-3»): chalg'ituvchilar faqat shu guruh
+  /// ichidan — boshqa darsning so'zi ham o'sha turga kirishi mumkin va
+  /// ikkinchi to'g'ri javob bo'lib qolardi.
+  final String guruh;
+
   const MashqElement({
     required this.kalit,
     required this.ar,
@@ -40,6 +50,8 @@ class MashqElement {
     required this.tartib,
     required this.modul,
     String? ovoz,
+    this.turkum = false,
+    this.guruh = '',
   }) : ovoz = ovoz ?? ar;
 
   /// Element hozir qanchalik zaif (katta son = ko'proq mashq kerak).
@@ -150,7 +162,14 @@ class SavolYasagich {
       final togri = _rnd.nextBool();
       var korsatiladigan = e.uz;
       if (!togri) {
-        final boshqa = havza.where((x) => x.uz.trim() != e.uz.trim()).toList();
+        final boshqa = havza
+            .where(
+              (x) =>
+                  x.uz.trim() != e.uz.trim() &&
+                  x.turkum == e.turkum &&
+                  (!e.turkum || x.guruh == e.guruh),
+            )
+            .toList();
         if (boshqa.isEmpty) return null;
         korsatiladigan = boshqa[_rnd.nextInt(boshqa.length)].uz;
       }
@@ -168,9 +187,18 @@ class SavolYasagich {
 
     final togriJavob = javob(e);
     final boshqalar = <String>{};
-    for (final x in havza) {
+    // Tasnif savoli — chalg'ituvchilar faqat o'z guruhidan; oddiy savolga
+    // tasnif elementi (tur nomi) chalg'ituvchi bo'lmaydi.
+    final manba = e.turkum
+        ? havza.where((x) => x.turkum && x.guruh == e.guruh)
+        : havza.where((x) => !x.turkum);
+    for (final x in manba) {
       final j = javob(x);
       if (j.trim().isEmpty || j == togriJavob) continue;
+      // Teskari savolda («qaysi kalima noqis?») bir xil ma'noli boshqa
+      // element ham to'g'ri javob bo'lardi — ikki to'g'ri variant
+      // bo'lmasin. Tasnifda bu har doim, oddiy so'zlarda sinonimlarda.
+      if (arabchaJavob && x.uz.trim() == e.uz.trim()) continue;
       boshqalar.add(j);
     }
     if (boshqalar.length < 3) return null;

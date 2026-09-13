@@ -685,13 +685,19 @@ class _MashqEkranState extends State<MashqEkran> {
     final String korsatma;
     switch (s.turi) {
       case MashqTuri.manoTop:
-        korsatma = "Bu nima degani?";
+        korsatma = e.turkum
+            ? 'Bu kalima qaysi turga kiradi?'
+            : "Bu nima degani?";
       case MashqTuri.arabchaTop:
-        korsatma = "Buning arabchasi qaysi?";
+        korsatma = e.turkum
+            ? 'Qaysi kalima shu turga kiradi?'
+            : "Buning arabchasi qaysi?";
       case MashqTuri.tinglabTop:
         korsatma = "Eshiting va toping";
       case MashqTuri.tugriMi:
-        korsatma = "Bu juftlik to'g'rimi?";
+        korsatma = e.turkum
+            ? 'Bu kalima shu turga kiradimi?'
+            : "Bu juftlik to'g'rimi?";
       case MashqTuri.harflabYoz:
         korsatma = "Arabchasini harflab yozing";
     }

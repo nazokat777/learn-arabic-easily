@@ -70,6 +70,8 @@ class MashqBank {
     final natija = <MashqElement>[];
     for (final p in juftlar) {
       if (!_yaroqli(p.ar, p.uz) || !korilgan.add(p.ar)) continue;
+      // «وَقَدْ تَكُونُ الْكَلِمَةُ:» kabi ro'yxat sarlavhasi — savol emas.
+      if (p.ar.trim().endsWith(':') || p.uz.trim().endsWith(':')) continue;
       natija.add(
         MashqElement(
           kalit: 'nahv::${l.book}-${l.num}::${p.ar}',
@@ -280,6 +282,9 @@ class MashqBank {
     // Bir xil tarjimali ikkinchi shakl olinmaydi — «urdilar» ikkita
     // arabchaga to'g'ri kelsa, «arabchasini top» savoli buziladi.
     final tarjimalar = <String>{};
+    // Tasnif juftliklari (kalima → tur) — jadvallardan, dars oxirida qo'shiladi.
+    final turkumJuft = <String, String>{};
+    final turkumZiddiyat = <String>{};
 
     for (final b in l.blocks) {
       if (b.type == 'misol') {
@@ -291,6 +296,15 @@ class MashqBank {
         continue;
       }
       if (b.type == 'jadval') {
+        // Tasnif jadvali: katak ↔ ustun sarlavhasi («qaysi kalima noqis?»).
+        // Faqat kitobning o'z jadvali — ustunlar sarlavhasi, kataklar so'z.
+        // Bir dars ichidagi HAMMA jadvallar birga: bir kalima ikki turda
+        // (masalan «لا تَضْرِبْنَ» — nafiy ham, nahiy ham) — tashlanadi.
+        for (final (ar, uz) in turkumJadvali(b)) {
+          final oldingi = turkumJuft[ar];
+          if (oldingi != null && oldingi != uz) turkumZiddiyat.add(ar);
+          turkumJuft.putIfAbsent(ar, () => uz);
+        }
         // Oxirgi arabcha katak ↔ oxirgi o'zbekcha katak: vazn jadvalida
         // «misol ↔ ma'no», shakl jadvalida «arabcha ↔ shakl nomi».
         for (final q in b.qatorlar) {
@@ -382,7 +396,92 @@ class MashqBank {
         }
       }
     }
+    // Tasnif elementlari — o'z guruhi bilan: chalg'ituvchilar faqat shu
+    // guruhdan olinadi (boshqa dars so'zi ham «noqis» bo'lishi mumkin).
+    for (final e in turkumJuft.entries) {
+      if (turkumZiddiyat.contains(e.key)) continue;
+      if (!_yaroqli(e.key, e.value)) continue;
+      natija.add(
+        MashqElement(
+          kalit: 'sarf::${l.num}::tur::${e.key}',
+          ar: e.key,
+          uz: e.value,
+          darsId: l.completionId,
+          tartib: l.num,
+          modul: 'Sarf',
+          ovoz: '',
+          turkum: true,
+          guruh: 'sarf-${l.num}',
+        ),
+      );
+    }
     return natija;
+  }
+
+  /// Boblar jadvali (3-dars) ustunlari — kitobning IV–X darslari
+  /// sarlavhalari bilan bir xil tartibda: Sahih, Muzo'af, Misol, Ajvaf,
+  /// Noqis, Lafif, Multaviy. Kalit — jadvaldagi ustun sarlavhasi (aynan),
+  /// qiymat — kitobdagi bob nomi. Sarlavha mos kelmasa ustun O'TKAZIB
+  /// YUBORILADI — taxmin yo'q.
+  static const Map<String, String> _bobTurlari = {
+    'السَّالِمُ': 'Sahih',
+    'الْمُضَعَّفُ': "Muzo'af",
+    'الْمُعْتَلُّ الفَاء': 'Misol',
+    'الْمُعْتَلُّ العَيْنُ': 'Ajvaf',
+    'الْمُعْتَلّ اللاَّم': 'Noqis',
+    'اللَّفِيفُ الْمَقْرُونُ': 'Lafif',
+    'الْمَفْرُوق اللَّفِيفُ': 'Multaviy',
+  };
+
+  /// Jadvaldan tasnif juftliklari: (kalima, tur nomi).
+  ///
+  /// Ikki xil jadval: (1) boblar jadvali — arabcha ustun sarlavhalari,
+  /// tur nomi [_bobTurlari] dan; (2) shakllar jadvali (36-dars) —
+  /// o'zbekcha ustun sarlavhalari («Ismi foil»…), tur nomi sarlavhaning
+  /// o'zi. Bo'sh («———») kataklar tashlanadi; «موزيي – مضارع» kabi
+  /// juft katakdan faqat birinchi so'z olinadi. Bir kalima ikki xil
+  /// turda uchrasa — ikkalasi ham tashlanadi (ikki to'g'ri javob bo'lmasin).
+  static List<(String, String)> turkumJadvali(SarfBlock b) {
+    if (b.ustunlar.isEmpty) return const [];
+    // Tasnif jadvalida KATAKLAR faqat arabcha. Bironta o'zbekcha katak
+    // bo'lsa (vazn/misol/ma'no jadvali) — bu tasnif emas, o'tkazib
+    // yuboriladi: «فِعْلٌ ↔ Vaznlar» kabi soxta juftlik chiqmasin.
+    for (final q in b.qatorlar) {
+      if (q.kataklar.any(_lotin.hasMatch)) return const [];
+    }
+    final turlar = <String?>[];
+    for (final u in b.ustunlar) {
+      final ar = u.ar.trim();
+      if (_arabcha.hasMatch(ar)) {
+        final nom = _bobTurlari[ar];
+        turlar.add(nom == null ? null : '$nom · $ar ${u.ar2}'.trim());
+      } else if (_lotin.hasMatch(ar)) {
+        turlar.add(ar);
+      } else {
+        turlar.add(null);
+      }
+    }
+    if (turlar.every((t) => t == null)) return const [];
+    final topilgan = <String, String>{};
+    final ziddiyat = <String>{};
+    for (final q in b.qatorlar) {
+      for (var i = 0; i < q.kataklar.length && i < turlar.length; i++) {
+        final tur = turlar[i];
+        if (tur == null) continue;
+        var k = q.kataklar[i].trim();
+        if (k.isEmpty || !_arabcha.hasMatch(k)) continue;
+        // «ضَرَبَ – يَضْرِبُ» → faqat moziy.
+        k = k.split(RegExp(r'\s+[–-]\s+')).first.trim();
+        if (k.isEmpty) continue;
+        final oldingi = topilgan[k];
+        if (oldingi != null && oldingi != tur) ziddiyat.add(k);
+        topilgan.putIfAbsent(k, () => tur);
+      }
+    }
+    return [
+      for (final e in topilgan.entries)
+        if (!ziddiyat.contains(e.key)) (e.key, e.value),
+    ];
   }
 
   static List<MashqElement> sarfGacha(SarfLesson l) {

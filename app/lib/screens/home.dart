@@ -27,6 +27,7 @@ import 'davom.dart';
 import 'mashqlar_home.dart';
 import 'nahv_home.dart';
 import 'gap_tuzish_ekrani.dart';
+import 'hafta_hisoboti.dart';
 import 'harf_chizish.dart';
 import 'kartochkalar.dart';
 import 'nishonlar_ekrani.dart';
@@ -921,6 +922,11 @@ class _NishonTekshiruvchiState extends State<_NishonTekshiruvchi> {
         await Future.delayed(const Duration(milliseconds: 900));
         if (!mounted) return;
         await tanishuvniKorsat(context);
+      }
+      // Yangi hafta — o'tgan hafta hisoboti (bir marta).
+      if (progress.haftaHisobotiKerak && mounted) {
+        await Future.delayed(const Duration(milliseconds: 700));
+        if (mounted) await haftaHisobotiOynasi(context);
       }
       final yangi = await progress.yangiNishonlar();
       if (yangi.isNotEmpty && mounted) {
@@ -1963,42 +1969,63 @@ class _OtganHafta extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final (savol, togri, ball, kunlar) = progress.otganHaftaNatijasi();
-    return Container(
-      padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
-      decoration: BoxDecoration(
+    return Tactile(
+      child: Material(
         color: AppColors.indigo.withValues(alpha: 0.08),
         borderRadius: BorderRadius.circular(18),
-        border: Border.all(color: AppColors.indigo.withValues(alpha: 0.35)),
-      ),
-      child: Row(
-        children: [
-          const Icon(
-            Icons.calendar_month_rounded,
-            color: AppColors.indigo,
-            size: 26,
-          ),
-          const SizedBox(width: 12),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+        child: InkWell(
+          borderRadius: BorderRadius.circular(18),
+          onTap: () {
+            Haptic.tap();
+            haftaHisobotiOynasi(context);
+          },
+          child: Container(
+            padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(18),
+              border: Border.all(
+                color: AppColors.indigo.withValues(alpha: 0.35),
+              ),
+            ),
+            child: Row(
               children: [
-                Text(
-                  'O\'tgan hafta yakuni',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w900,
-                    fontSize: 14.5,
-                    color: AppColors.ink,
+                const Icon(
+                  Icons.calendar_month_rounded,
+                  color: AppColors.indigo,
+                  size: 26,
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'O\'tgan hafta yakuni',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w900,
+                          fontSize: 14.5,
+                          color: AppColors.ink,
+                        ),
+                      ),
+                      Text(
+                        '$savol savol · $togri to\'g\'ri · +$ball ball · '
+                        '$kunlar kun maqsad bajarildi',
+                        style: TextStyle(
+                          fontSize: 12.5,
+                          color: AppColors.matn2,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-                Text(
-                  '$savol savol · $togri to\'g\'ri · +$ball ball · '
-                  '$kunlar kun maqsad bajarildi',
-                  style: TextStyle(fontSize: 12.5, color: AppColors.matn2),
+                const Icon(
+                  Icons.chevron_right_rounded,
+                  color: AppColors.indigo,
                 ),
               ],
             ),
           ),
-        ],
+        ),
       ),
     );
   }

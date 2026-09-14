@@ -83,6 +83,49 @@ class Progress extends ChangeNotifier {
     return true;
   }
 
+  /// Hafta hisoboti — yangi hafta boshlanganda o'tgan hafta yakuni bir
+  /// marta tantanali ko'rsatiladi (kalit: shu haftaning dushanbasi).
+  String? _hisobotDushanba;
+  bool get haftaHisobotiKurildi => _hisobotDushanba == _buDushanba();
+
+  /// Ko'rsatish sharti: o'tgan haftada faollik bo'lgan va hali ko'rilmagan.
+  bool get haftaHisobotiKerak =>
+      !haftaHisobotiKurildi && otganHaftaNatijasi().$1 > 0;
+
+  Future<void> haftaHisobotiniKordim() async {
+    _hisobotDushanba = _buDushanba();
+    await _save();
+    notifyListeners();
+  }
+
+  /// O'tgan haftaning 7 kuni (dushanbadan): (kun, savol, to'g'ri, ball).
+  List<(DateTime, int, int, int)> otganHaftaKunlari() {
+    final b = DateTime.now();
+    final buDushanba = DateTime(b.year, b.month, b.day - (b.weekday - 1));
+    return [
+      for (var i = 7; i >= 1; i--)
+        () {
+          final kun = buDushanba.subtract(Duration(days: i));
+          final (s, t, bl) = kunNatijasi(kun);
+          return (kun, s, t, bl);
+        }(),
+    ];
+  }
+
+  /// Undan oldingi hafta yig'indisi (taqqoslash uchun): (savol, to'g'ri, ball).
+  (int, int, int) undanOldingiHaftaNatijasi() {
+    final b = DateTime.now();
+    final buDushanba = DateTime(b.year, b.month, b.day - (b.weekday - 1));
+    var s = 0, t = 0, bl = 0;
+    for (var i = 14; i >= 8; i--) {
+      final (ks, kt, kb) = kunNatijasi(buDushanba.subtract(Duration(days: i)));
+      s += ks;
+      t += kt;
+      bl += kb;
+    }
+    return (s, t, bl);
+  }
+
   /// Yangi rejimlar hisobi — nishonlar uchun: chizilgan harflar,
   /// «bildim» kartochkalar, to'g'ri tuzilgan gaplar (butun tarix).
   int chizilganHarflar = 0;
@@ -359,6 +402,7 @@ class Progress extends ChangeNotifier {
     _rejaKuni = _prefs!.getString('rejaKuni');
     tanishuvKurildi = _prefs!.getBool('tanishuv') ?? false;
     _haftaBonusDushanba = _prefs!.getString('haftaBonus');
+    _hisobotDushanba = _prefs!.getString('haftaHisobot');
     chizilganHarflar = _prefs!.getInt('chizilganHarflar') ?? 0;
     _kunHarf = _prefs!.getInt('kunHarf') ?? 0;
     _kunKarta = _prefs!.getInt('kunKarta') ?? 0;
@@ -855,6 +899,9 @@ class Progress extends ChangeNotifier {
     await p.setInt('gapTuzilgan', gapTuzilgan);
     if (_haftaBonusDushanba != null) {
       await p.setString('haftaBonus', _haftaBonusDushanba!);
+    }
+    if (_hisobotDushanba != null) {
+      await p.setString('haftaHisobot', _hisobotDushanba!);
     }
     await p.setString('nishonlar', json.encode(_nishonlar));
     await p.setStringList('completed', _completed.toList());

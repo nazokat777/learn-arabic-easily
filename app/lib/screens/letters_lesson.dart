@@ -7,6 +7,7 @@ import '../theme.dart';
 import '../widgets/harf_holati.dart';
 import '../widgets/mastery_badge.dart';
 import '../widgets/speak_button.dart';
+import 'harf_chizish.dart';
 import 'letter_test.dart';
 
 class LettersLesson extends StatelessWidget {
@@ -230,6 +231,38 @@ class LettersLesson extends StatelessWidget {
                     _syllable(L.ar, 'ِ', 'i'), // kasra
                     _syllable(L.ar, 'ُ', 'u'), // zamma
                   ],
+                ),
+                const SizedBox(height: 16),
+                // Ko'rish + eshitish + YOZISH — uch kanal, motor xotira.
+                SizedBox(
+                  width: double.infinity,
+                  child: OutlinedButton.icon(
+                    onPressed: () {
+                      Navigator.pop(ctx);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => HarfChizishEkrani(
+                            harflar: repo.letters,
+                            boshlanish: repo.letters.indexOf(L),
+                          ),
+                        ),
+                      );
+                    },
+                    icon: const Icon(Icons.draw_rounded, size: 18),
+                    label: const Text(
+                      "Bu harfni yozib ko'ring",
+                      style: TextStyle(fontWeight: FontWeight.w800),
+                    ),
+                    style: OutlinedButton.styleFrom(
+                      foregroundColor: AppColors.emerald,
+                      side: const BorderSide(color: AppColors.emerald),
+                      padding: const EdgeInsets.symmetric(vertical: 12),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(14),
+                      ),
+                    ),
+                  ),
                 ),
                 const SizedBox(height: 22),
                 HarfHolatiBolimi(letter: L, lugat: _lugat),

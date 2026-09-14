@@ -14,7 +14,14 @@ import '../widgets/uz_text.dart';
 /// «o'zim yozdim» hissini oladi. Baholash yo'q: chizish erkin, jazosiz.
 class HarfChizishEkrani extends StatefulWidget {
   final List<Letter> harflar;
-  const HarfChizishEkrani({super.key, required this.harflar});
+
+  /// Boshlang'ich harf (dars oynasidan «shu harfni yozib ko'ring»).
+  final int boshlanish;
+  const HarfChizishEkrani({
+    super.key,
+    required this.harflar,
+    this.boshlanish = 0,
+  });
 
   @override
   State<HarfChizishEkrani> createState() => _HarfChizishEkraniState();
@@ -30,6 +37,7 @@ class _HarfChizishEkraniState extends State<HarfChizishEkrani> {
   @override
   void initState() {
     super.initState();
+    _i = widget.boshlanish.clamp(0, widget.harflar.length - 1);
     // Birinchi harf ham o'qiladi — keyingilari kabi.
     WidgetsBinding.instance.addPostFrameCallback(
       (_) => Tts.instance.speak(_harf.nameAr, id: 'chiz-${_harf.ar}'),

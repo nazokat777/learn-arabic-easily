@@ -63,4 +63,16 @@ void main() {
     expect(find.text('Bugun yozildi: 5 ta harf'), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
+
+  testWidgets("boshlang'ich harf: dars oynasidan kelganda o'sha harf", (
+    tester,
+  ) async {
+    final harflar = [for (var i = 1; i <= 6; i++) _h(i, 'ب', 'Harf $i')];
+    await tester.pumpWidget(
+      MaterialApp(home: HarfChizishEkrani(harflar: harflar, boshlanish: 3)),
+    );
+    await tester.pump(const Duration(milliseconds: 300));
+    expect(find.text('4 / 6'), findsOneWidget);
+    expect(find.textContaining('Harf 4'), findsOneWidget);
+  });
 }

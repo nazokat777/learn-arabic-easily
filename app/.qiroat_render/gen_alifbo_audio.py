@@ -15,7 +15,7 @@ are what a teacher says anyway.
 
 Small set (~130 clips, well under 1 MB), so it regenerates from scratch quickly.
 """
-import asyncio, json, subprocess, sys
+import asyncio, json, re, subprocess, sys
 from pathlib import Path
 
 import edge_tts
@@ -48,8 +48,37 @@ def collect() -> list[str]:
     return list(texts)
 
 
+HARAKAT = re.compile(r"^[ء-ي][َُِ]$")
+
+
 async def synth(text: str, dest: Path, attempt: int = 0) -> bool:
-    """Yolg'iz so'z oxirgi harakati bilan o'qilsin - synth_word ga topshiramiz."""
+    """Yolg'iz so'z oxirgi harakati bilan o'qilsin - synth_word ga topshiramiz.
+
+    BO'G'IN (بَ بِ بُ) — istisno: «وَ» dumi bilan TTS «ba-wa» deb qo'shib
+    o'qiydi va so'z chegarasidan kesganda unli o'rtasidan uzilib, «tiqilib»
+    qoladi (2026-09-14 da shunday edi). Nuqta qo'yib ham bo'lmaydi: «بُ.»
+    ni TTS harf NOMI («baa») deb o'qiydi — uchala harakat bir xil chiqadi.
+    Yolg'iz «بُ» esa to'g'ri: unli aytiladi va tabiiy so'nadi (o'lchab
+    tekshirilgan: a/i/u spektri farqli, uzunligi qisqa). Sekinroq o'qitiladi.
+    """
+    if HARAKAT.match(text.strip()):
+        raw = dest.with_suffix(".raw.mp3")
+        try:
+            await edge_tts.Communicate(text.strip(), VOICE, rate="-40%").save(str(raw))
+        except Exception as e:
+            if attempt < RETRIES:
+                await asyncio.sleep(1.5 * (attempt + 1))
+                return await synth(text, dest, attempt + 1)
+            print(f"  !! {text}: {e}")
+            return False
+        cmd = ["ffmpeg", "-y", "-v", "error", "-i", str(raw),
+               # TTS oxirida ~1.5 s jimlik qoldiradi - uni kesib, 0.3 s qoldiramiz.
+               "-af", "areverse,silenceremove=start_periods=1:start_threshold=-60dB,"
+                      "areverse,apad=pad_dur=0.3", "-ac", "1", "-ar", "24000",
+               "-b:a", "48k", str(dest)]
+        ok = subprocess.run(cmd, capture_output=True).returncode == 0
+        raw.unlink(missing_ok=True)
+        return ok
     return await word_synth(text, dest, VOICE, RATE, FFMPEG_TRIM, RETRIES, attempt)
 
 

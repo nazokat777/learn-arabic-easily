@@ -924,8 +924,9 @@ class _NishonTekshiruvchiState extends State<_NishonTekshiruvchi> {
         await tanishuvniKorsat(context);
       }
       // Yangi hafta — o'tgan hafta hisoboti (bir marta).
+      // Ochilish pardasi (1.9 s) erigach — hisobot parda ustiga chiqmasin.
       if (progress.haftaHisobotiKerak && mounted) {
-        await Future.delayed(const Duration(milliseconds: 700));
+        await Future.delayed(const Duration(milliseconds: 2100));
         if (mounted) await haftaHisobotiOynasi(context);
       }
       final yangi = await progress.yangiNishonlar();

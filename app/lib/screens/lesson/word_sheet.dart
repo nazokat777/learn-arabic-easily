@@ -217,8 +217,14 @@ class _WordSheet extends StatelessWidget {
 
   Widget _grammarCard(List<String> forms) {
     final rows = <Widget>[];
-    if (v.pl.trim().isNotEmpty) {
-      rows.add(_grammarRow('Ism (ot) · ko\'plik', v.pl));
+    // Bir nechta ko'plik shakli — har biri o'z ovozi bilan (bittasi
+    // sifatida o'qilsa xato). Faqat qo'shimcha («ـات») — ovozsiz.
+    final shakllar = v.plShakllari;
+    for (final (i, sh) in shakllar.indexed) {
+      rows.add(_grammarRow(i == 0 ? 'Ism (ot) · ko\'plik' : '', sh));
+    }
+    if (shakllar.isEmpty && v.pl.trim().isNotEmpty) {
+      rows.add(_grammarRow('Ism (ot) · ko\'plik', v.pl, ovoz: false));
     }
     if (forms.length >= 3) {
       const labels4 = [
@@ -252,7 +258,7 @@ class _WordSheet extends StatelessWidget {
     );
   }
 
-  Widget _grammarRow(String label, String ar) => Padding(
+  Widget _grammarRow(String label, String ar, {bool ovoz = true}) => Padding(
     padding: const EdgeInsets.symmetric(vertical: 5),
     child: Row(
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -274,8 +280,10 @@ class _WordSheet extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(width: 6),
-        _PlayButton(text: ar, big: false),
+        if (ovoz) ...[
+          const SizedBox(width: 6),
+          _PlayButton(text: ar, big: false),
+        ],
       ],
     ),
   );

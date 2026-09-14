@@ -50,6 +50,7 @@ def collect() -> list[str]:
         t = line.split("\t", 1)[1].strip()
         # Ilova ham lotin qavsni o'qimaydi (Tts.speak) — klip ham shunday.
         t = LOTIN_QAVS.sub("", t).strip()
+        t = re.sub(r"\s*=\s*", "، ", t)
         if t and t not in covered and LETTER.search(t):
             out.setdefault(t, True)
     return list(out)

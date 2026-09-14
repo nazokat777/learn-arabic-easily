@@ -4,12 +4,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:learn_arabic/main.dart' as app;
 import 'package:learn_arabic/progress.dart';
+import 'package:learn_arabic/content.dart';
 import 'package:learn_arabic/screens/hafta_hisoboti.dart';
+import 'package:learn_arabic/screens/home.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// Hafta hisoboti: o'tgan haftada faollik bo'lsa bir marta ko'rsatiladi,
 /// ko'rilgach shu hafta qayta chiqmaydi; raqamlar tarixdan to'g'ri yig'iladi.
 void main() {
+  setUpAll(() {
+    app.repo = ContentRepository();
+    app.progress = Progress();
+  });
   String sana(DateTime n) =>
       '${n.year}-${n.month.toString().padLeft(2, '0')}-'
       '${n.day.toString().padLeft(2, '0')}';
@@ -62,7 +68,6 @@ void main() {
         sana(d.subtract(const Duration(days: 10))): [5, 5, 9],
       }),
     });
-    app.progress = Progress();
     await app.progress.load();
     late BuildContext ctx;
     await tester.pumpWidget(
@@ -86,5 +91,36 @@ void main() {
     await tester.pumpAndSettle();
     await f;
     expect(app.progress.haftaHisobotiKerak, isFalse);
+  });
+
+  testWidgets("bosh ekran: yangi hafta — hisobot o'zi ochiladi", (
+    tester,
+  ) async {
+    final d = buDushanba();
+    SharedPreferences.setMockInitialValues({
+      'kunTarix': json.encode({
+        sana(d.subtract(const Duration(days: 7))): [12, 10, 24],
+        sana(d.subtract(const Duration(days: 6))): [20, 18, 35],
+        sana(d.subtract(const Duration(days: 5))): [34, 31, 52],
+        sana(d.subtract(const Duration(days: 3))): [8, 6, 12],
+        sana(d.subtract(const Duration(days: 2))): [16, 15, 28],
+        sana(d.subtract(const Duration(days: 10))): [9, 8, 15],
+      }),
+      'maqsadKunlari': [
+        for (final i in [7, 6, 5, 3, 2])
+          sana(d.subtract(Duration(days: i))),
+      ],
+      'tanishuv': true,
+    });
+    await app.progress.load();
+    tester.view.physicalSize = const Size(900, 1600);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.reset);
+    await tester.pumpWidget(const MaterialApp(home: HomeScreen()));
+    for (var i = 0; i < 16; i++) {
+      await tester.pump(const Duration(milliseconds: 200));
+    }
+    expect(find.text('Hafta yutildi!'), findsOneWidget);
+    expect(tester.takeException(), isNull);
   });
 }

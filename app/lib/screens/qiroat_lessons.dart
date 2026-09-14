@@ -478,15 +478,25 @@ class _VocabRow extends StatelessWidget {
                   style: AppTheme.arabic(size: 22, color: AppColors.emerald),
                 ),
                 if (v.pl.isNotEmpty)
-                  Text(
-                    'ko\'pligi: ${v.pl}',
-                    textDirection: TextDirection.rtl,
-                    textAlign: TextAlign.right,
-                    style: AppTheme.arabic(
-                      size: 15,
-                      color: AppColors.gold,
-                      w: FontWeight.w500,
-                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      // Ko'plik ham o'qiladi — har shakl alohida.
+                      for (final sh in v.plShakllari)
+                        SpeakButton(text: sh, id: 'pl-$sh', size: 16),
+                      Flexible(
+                        child: Text(
+                          "ko'pligi: ${v.pl}",
+                          textDirection: TextDirection.rtl,
+                          textAlign: TextAlign.right,
+                          style: AppTheme.arabic(
+                            size: 15,
+                            color: AppColors.gold,
+                            w: FontWeight.w500,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
               ],
             ),

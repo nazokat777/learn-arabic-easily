@@ -113,6 +113,16 @@ class QiroatVocab {
 
   factory QiroatVocab.fromJson(Map<String, dynamic> j) =>
       QiroatVocab(ar: j['ar'], pl: j['pl'] ?? '', uz: j['uz']);
+
+  /// Ko'plikning OVOZ uchun shakllari: kitobda «دَفَاتِرُ = كُرَّاسَةٌ» yoki
+  /// «كُتَّابٌ، كَتَبَةٌ» kabi bir nechta shakl bo'ladi — har biri alohida
+  /// o'qiladi (bittasi sifatida o'qilsa xato). Faqat qo'shimcha («ـات»)
+  /// bo'lsa — o'qiladigan so'z yo'q.
+  List<String> get plShakllari => pl
+      .split(RegExp(r'\s*[=،,]\s*'))
+      .map((s) => s.trim())
+      .where((s) => s.isNotEmpty && !s.startsWith('ـ'))
+      .toList();
 }
 
 /// «Mabdaul qiroat» kitobining bitta darsi: o'qish matni + lug'at.

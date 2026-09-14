@@ -7,6 +7,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:learn_arabic/arabic.dart';
 import 'package:learn_arabic/content.dart';
 import 'package:learn_arabic/main.dart' show progress, repo;
 import 'package:learn_arabic/mashq/bank.dart';
@@ -53,6 +54,8 @@ void main() {
       // Tts.speak kabi: lotin qavs o'qilmaydi.
       final t = matn
           .replaceAll(RegExp(r'\s*\([^)]*[A-Za-z][^)]*\)'), '')
+          // «قُعُودٌ = جَلَسَ» — «=» o'qilmasin, ikki so'z orasida pauza.
+          .replaceAll(RegExp(r'\s*=\s*'), '، ')
           .trim();
       if (t.isEmpty) return;
       kerak.putIfAbsent(t, () => manba);
@@ -65,6 +68,15 @@ void main() {
       q(e.ovoz, 'tasnif ${e.modul}');
     }
     for (final l in r.qiroatLessons) {
+      for (final v in l.vocab) {
+        // So'z kartasi: bosh shakl va har grammatik shakl alohida o'qiladi.
+        for (final f in splitForms(v.ar)) {
+          q(f, 'lugat qiroat ${l.book}-${l.num}');
+        }
+        for (final sh in v.plShakllari) {
+          q(sh, 'koplik qiroat ${l.book}-${l.num}');
+        }
+      }
       final (_, _, ar) = TarjimaMashqi.ajrat(l);
       for (final s in ar ?? TarjimaMashqi.jumlalar(l.exerciseAnswer)) {
         q(s, 'gap qiroat ${l.book}-${l.num}');

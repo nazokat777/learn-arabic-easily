@@ -59,6 +59,8 @@ class Tts {
     // «ماضي (moziy)» — lotin izoh o'qilmasin: faqat arabcha qism.
     final clean = text
         .replaceAll(RegExp(r'\s*\([^)]*[A-Za-z][^)]*\)'), '')
+        // «قُعُودٌ = جَلَسَ» — «=» o'qilmasin, ikki so'z orasida pauza.
+        .replaceAll(RegExp(r'\s*=\s*'), '، ')
         .trim();
     if (clean.isEmpty) return;
 

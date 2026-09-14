@@ -15,6 +15,7 @@ import '../widgets/premium_tile.dart';
 import '../widgets/rasm_belgi.dart';
 import '../widgets/yol.dart';
 import '../widgets/speak_button.dart';
+import 'bosh_joy.dart';
 import 'qiroat_drill.dart';
 import 'tarjima_mashqi.dart';
 import 'qiroat_match.dart';
@@ -273,6 +274,16 @@ class QiroatLessonDetail extends StatelessWidget {
                   label: "Juftlash o'yini",
                   page: QiroatMatchGame(lesson: lesson),
                 ),
+                if (BoshJoy.yasa(lesson).length >= 3) ...[
+                  const SizedBox(height: 10),
+                  _exerciseButton(
+                    context,
+                    color: AppColors.indigo,
+                    icon: Icons.space_bar_rounded,
+                    label: "Bo'sh joy — so'zni jumlada top",
+                    page: BoshJoyEkrani(lesson: lesson),
+                  ),
+                ],
               ],
             ),
           ],

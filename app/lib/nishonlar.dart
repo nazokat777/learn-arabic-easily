@@ -238,6 +238,15 @@ const List<Nishon> nishonlar = [
     shart: _sandiq7,
     holat: _sandiq7H,
   ),
+  Nishon(
+    id: 'hafta-3',
+    nom: "Hafta g'olibi",
+    tavsif: 'Haftalik maqsad 3 marta bajarildi',
+    ikon: Icons.calendar_month_rounded,
+    rang: AppColors.indigo,
+    shart: _hafta3,
+    holat: _hafta3H,
+  ),
 ];
 
 bool _birinchiQadam(Progress p) => p.jamiJavoblar >= 1;
@@ -262,6 +271,7 @@ bool _chaqmoq15(Progress p) => p.chaqmoqRekord >= 15;
 bool _xattot(Progress p) => p.chizilganHarflar >= 28;
 bool _kartochka100(Progress p) => p.kartochkaBildim >= 100;
 bool _gap50(Progress p) => p.gapTuzilgan >= 50;
+bool _hafta3(Progress p) => p.haftaSoni >= 3;
 
 (int, int) _birinchiQadamH(Progress p) => (p.jamiJavoblar.clamp(0, 1), 1);
 (int, int) _javob100H(Progress p) => (p.jamiJavoblar, 100);
@@ -286,6 +296,7 @@ bool _gap50(Progress p) => p.gapTuzilgan >= 50;
 (int, int) _kartochka100H(Progress p) => (p.kartochkaBildim, 100);
 (int, int) _gap50H(Progress p) => (p.gapTuzilgan, 50);
 (int, int) _sandiq7H(Progress p) => (p.sandiqSoni, 7);
+(int, int) _hafta3H(Progress p) => (p.haftaSoni, 3);
 
 /// Id bo'yicha nishon (yo'q bo'lsa null).
 Nishon? nishonTop(String id) {

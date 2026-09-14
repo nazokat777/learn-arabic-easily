@@ -57,6 +57,9 @@ class Progress extends ChangeNotifier {
   static const int haftaBonusBalli = 15;
   String? _haftaBonusDushanba;
 
+  /// Yutilgan haftalar soni (butun tarix) — nishon uchun.
+  int haftaSoni = 0;
+
   String _buDushanba() {
     final b = DateTime.now();
     return _sana(DateTime(b.year, b.month, b.day - (b.weekday - 1)));
@@ -79,6 +82,7 @@ class Progress extends ChangeNotifier {
   Future<bool> haftaBonusiniOl() async {
     if (haftaKunlari < haftaMaqsadi || haftaBonusOlindi) return false;
     _haftaBonusDushanba = _buDushanba();
+    haftaSoni += 1;
     await addXp(haftaBonusBalli);
     return true;
   }
@@ -402,6 +406,7 @@ class Progress extends ChangeNotifier {
     _rejaKuni = _prefs!.getString('rejaKuni');
     tanishuvKurildi = _prefs!.getBool('tanishuv') ?? false;
     _haftaBonusDushanba = _prefs!.getString('haftaBonus');
+    haftaSoni = _prefs!.getInt('haftaSoni') ?? 0;
     _hisobotDushanba = _prefs!.getString('haftaHisobot');
     chizilganHarflar = _prefs!.getInt('chizilganHarflar') ?? 0;
     _kunHarf = _prefs!.getInt('kunHarf') ?? 0;
@@ -900,6 +905,7 @@ class Progress extends ChangeNotifier {
     if (_haftaBonusDushanba != null) {
       await p.setString('haftaBonus', _haftaBonusDushanba!);
     }
+    await p.setInt('haftaSoni', haftaSoni);
     if (_hisobotDushanba != null) {
       await p.setString('haftaHisobot', _hisobotDushanba!);
     }

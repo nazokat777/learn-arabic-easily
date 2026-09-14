@@ -34,7 +34,8 @@ class VocabAudio {
   /// Ovoz bazasi qayta yasalganda shu raqam oshiriladi - manzil o'zgargani
   /// uchun kesh chetlab o'tiladi. Oshirish esdan chiqmasligi uchun:
   /// ovoz commit'ida version.json bilan birga tekshiriladi.
-  static const int audioVersion = 2;
+  static const int audioVersion =
+      3; // 3: bo'g'in kliplari qayta yasaldi (2026-09-14)
 
   /// Matn → fayl yo'li («vocab/0001.mp3»). Barcha to'plamlar shu yerda:
   /// lug'at, matn jumlalari, so'zlar, alifbo va qo'shimchalar.

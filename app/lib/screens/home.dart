@@ -2349,6 +2349,13 @@ class _Statistika extends StatelessWidget {
         '',
         'tuzilgan gap',
       ),
+      (
+        Icons.calendar_month_rounded,
+        AppColors.indigo,
+        p.haftaSoni,
+        '',
+        'yutilgan hafta',
+      ),
     ];
     return Container(
       padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),

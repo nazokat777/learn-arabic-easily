@@ -410,6 +410,7 @@ class _ReadingBlockState extends State<_ReadingBlock> {
                       sentence: _sentences[i],
                       vocab: widget.lesson.vocab,
                       reading: widget.lesson.reading,
+                      lessonId: widget.lesson.completionId,
                     ),
                   ),
                 ],

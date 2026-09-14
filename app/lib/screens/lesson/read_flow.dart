@@ -403,6 +403,7 @@ class _ReadStageState extends State<ReadStage> {
                       sentence: _sentences[i],
                       vocab: widget.lesson.vocab,
                       reading: widget.lesson.reading,
+                      lessonId: widget.lesson.completionId,
                       size: 24,
                     ),
                     const SizedBox(height: 4),

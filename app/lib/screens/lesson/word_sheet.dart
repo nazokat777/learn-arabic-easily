@@ -3,6 +3,9 @@ import '../../widgets/uz_text.dart';
 import '../../arabic.dart';
 import '../../content.dart';
 import '../../lugat.dart';
+import '../../main.dart';
+import '../../progress.dart';
+import '../../widgets/motion.dart';
 import '../../services/tts.dart';
 import '../../theme.dart';
 import '../../widgets/rasm_belgi.dart';
@@ -19,12 +22,18 @@ void showWordSheet(
   QiroatVocab v, {
   String? reading,
   String? bosilgan,
+  String? lessonId,
 }) {
   showModalBottomSheet(
     context: context,
     backgroundColor: Colors.transparent,
     isScrollControlled: true,
-    builder: (_) => _WordSheet(v: v, reading: reading, bosilgan: bosilgan),
+    builder: (_) => _WordSheet(
+      v: v,
+      reading: reading,
+      bosilgan: bosilgan,
+      lessonId: lessonId,
+    ),
   );
 }
 
@@ -32,7 +41,15 @@ class _WordSheet extends StatelessWidget {
   final QiroatVocab v;
   final String? reading;
   final String? bosilgan;
-  const _WordSheet({required this.v, this.reading, this.bosilgan});
+
+  /// Dars id (completionId) — xotira kuchi shu dars kaliti bo'yicha.
+  final String? lessonId;
+  const _WordSheet({
+    required this.v,
+    this.reading,
+    this.bosilgan,
+    this.lessonId,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -157,6 +174,10 @@ class _WordSheet extends StatelessWidget {
                 ),
               ),
             ),
+            // Xotira kuchi — so'z qanchalik mustahkam, keyingi takror qachon.
+            // Ko'rinadigan o'sish (progress bar) + «unutish egri chizig'i»
+            // ma'nosida takror sanog'i: o'quvchi so'zni «tirik» deb his qiladi.
+            if (lessonId != null) _xotiraKarta(lessonId!),
             // Grammatika
             _grammarCard(forms),
             // Harflar
@@ -211,6 +232,48 @@ class _WordSheet extends StatelessWidget {
               ),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _xotiraKarta(String darsId) {
+    final key = '$darsId::${v.ar}';
+    final p = progress;
+    final daraja = p.wordMastery(key);
+    final ulush = daraja / Progress.masteryGoal;
+    final kun = p.keyingiTakrorKun(key);
+    final yangi = p.yangiElement(key);
+    final rang = daraja >= Progress.masteryGoal
+        ? AppColors.success
+        : (daraja >= 3 ? AppColors.emerald : AppColors.gold);
+    final holat = yangi
+        ? "Yangi so'z — hali so'ralmagan"
+        : daraja >= Progress.masteryGoal
+        ? 'Mustahkam yodlangan'
+        : kun == 0
+        ? 'Bugun eslash vaqti — mashqda chiqadi'
+        : 'Keyingi takror: $kun kundan keyin';
+    return _card(
+      icon: Icons.psychology_rounded,
+      label: 'Xotira kuchi',
+      trailing: Text(
+        '$daraja / ${Progress.masteryGoal}',
+        style: TextStyle(fontWeight: FontWeight.w900, color: rang),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          AnimatedBar(value: ulush, color: rang, background: AppColors.chiziq),
+          const SizedBox(height: 8),
+          Text(
+            holat,
+            style: TextStyle(
+              fontSize: 12.5,
+              color: AppColors.matn2,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+        ],
       ),
     );
   }

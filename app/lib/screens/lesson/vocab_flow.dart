@@ -45,6 +45,12 @@ class _VocabStageState extends State<VocabStage> {
   // learn
   int _li = 0;
   bool _revealed = false;
+  // Taxmin (pretesting): ma'no ochilishidan OLDIN o'quvchi taxmin qiladi.
+  // Neyro asos: bashorat xatosi (prediction error) — miya kutilmagan
+  // javobni kuchliroq kodlaydi; noto'g'ri taxmin ham foydali (Kornell 2009).
+  // Taxmin qilib so'ng ko'rilgan so'z shunchaki ko'rilganidan yaxshi qoladi.
+  List<String> _taxminOpts = const [];
+  int? _taxmin; // tanlangan variant; null — hali tanlanmagan
 
   // practice
   int _pi = 0;
@@ -73,7 +79,39 @@ class _VocabStageState extends State<VocabStage> {
     }
     if (_chunks.isEmpty) {
       WidgetsBinding.instance.addPostFrameCallback((_) => widget.onDone());
+    } else {
+      _taxminYasa();
     }
+  }
+
+  /// 3 variant: to'g'risi + shu darsdan 2 ta chalg'ituvchi. Dars 3 so'zdan
+  /// kam bo'lsa taxmin yo'q — oddiy ochish.
+  void _taxminYasa() {
+    _taxmin = null;
+    final uz = _card.uz;
+    final boshqa =
+        _pool.where((v) => v.uz != uz).map((v) => v.uz).toSet().toList()
+          ..shuffle(_rnd);
+    if (boshqa.length < 2) {
+      _taxminOpts = const [];
+      return;
+    }
+    _taxminOpts = <String>[uz, ...boshqa.take(2)]..shuffle(_rnd);
+  }
+
+  Future<void> _taxminQil(int i) async {
+    if (_revealed) return;
+    final ok = _taxminOpts[i] == _card.uz;
+    ok ? Haptic.ok() : Haptic.tap();
+    if (ok) {
+      Tovush.togri(1);
+      widget.award(1);
+    }
+    setState(() {
+      _taxmin = i;
+      _revealed = true;
+    });
+    Tts.instance.speak(splitForms(_card.ar).first, id: 'card');
   }
 
   List<QiroatVocab> get _chunk => _chunks[_ci];
@@ -91,6 +129,7 @@ class _VocabStageState extends State<VocabStage> {
       setState(() {
         _li++;
         _revealed = false;
+        _taxminYasa();
       });
     } else {
       // mashqqa o'tamiz
@@ -175,6 +214,7 @@ class _VocabStageState extends State<VocabStage> {
         _phase = _Phase.learn;
         _li = 0;
         _revealed = false;
+        _taxminYasa();
       });
     } else {
       widget.onDone();
@@ -252,16 +292,21 @@ class _VocabStageState extends State<VocabStage> {
               child: KeyedSubtree(
                 key: ValueKey('$_ci-$_li'),
                 child: GestureDetector(
-                  onTap: _revealed ? null : _reveal,
+                  onTap: _revealed || _taxminOpts.isNotEmpty ? null : _reveal,
                   child: FlipCard(
                     flipped: _revealed,
                     front: _cardFace(
                       head: head,
                       v: v,
-                      body: Text(
-                        "Ma'nosini ko'rish uchun kartani bosing",
-                        style: TextStyle(color: AppColors.matn3, fontSize: 13),
-                      ),
+                      body: _taxminOpts.isEmpty
+                          ? Text(
+                              "Ma'nosini ko'rish uchun kartani bosing",
+                              style: TextStyle(
+                                color: AppColors.matn3,
+                                fontSize: 13,
+                              ),
+                            )
+                          : _taxminBody(),
                     ),
                     back: _cardFace(
                       head: head,
@@ -289,6 +334,10 @@ class _VocabStageState extends State<VocabStage> {
                               fontStyle: FontStyle.italic,
                             ),
                           ),
+                          if (_taxmin != null) ...[
+                            const SizedBox(height: 12),
+                            _taxminFikri(),
+                          ],
                         ],
                       ),
                     ),
@@ -303,18 +352,108 @@ class _VocabStageState extends State<VocabStage> {
             child: FilledButton(
               onPressed: _revealed ? _nextCard : _reveal,
               style: FilledButton.styleFrom(
-                backgroundColor: _revealed ? AppColors.emerald : AppColors.gold,
+                backgroundColor: _revealed
+                    ? AppColors.emerald
+                    : (_taxminOpts.isEmpty ? AppColors.gold : AppColors.matn3),
                 padding: const EdgeInsets.symmetric(vertical: 15),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(14),
                 ),
               ),
               child: Text(
-                _revealed ? 'Keyingi so\'z' : 'Ochish',
+                _revealed
+                    ? 'Keyingi so\'z'
+                    : (_taxminOpts.isEmpty ? 'Ochish' : 'Bilmadim — ochish'),
                 style: const TextStyle(
                   fontWeight: FontWeight.w800,
                   fontSize: 16,
                 ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  /// Old tomon: «Sizningcha?» — 3 variant. Kartani ko'rib, eshitib,
+  /// rasmini ko'rib taxmin qilinadi. Bu «ochish»dan ko'ra faol jarayon.
+  Widget _taxminBody() {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Text(
+          "Sizningcha, ma'nosi qaysi?",
+          style: TextStyle(
+            color: AppColors.matn2,
+            fontSize: 13,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+        const SizedBox(height: 10),
+        for (final (i, o) in _taxminOpts.indexed)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 6),
+            child: SizedBox(
+              width: double.infinity,
+              child: OutlinedButton(
+                onPressed: () => _taxminQil(i),
+                style: OutlinedButton.styleFrom(
+                  foregroundColor: AppColors.ink,
+                  side: BorderSide(color: AppColors.chiziq2),
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 10,
+                    horizontal: 12,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+                child: Text(
+                  o,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.w700,
+                    fontSize: 14,
+                  ),
+                ),
+              ),
+            ),
+          ),
+      ],
+    );
+  }
+
+  /// Orqa tomon: taxmin natijasi. To'g'ri — «sezgi»; noto'g'ri — ta'na
+  /// emas, aksincha: xato taxmin so'zni yaxshiroq eslab qoldiradi.
+  Widget _taxminFikri() {
+    final ok = _taxminOpts[_taxmin!] == _card.uz;
+    final rang = ok ? AppColors.success : AppColors.indigo;
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      decoration: BoxDecoration(
+        color: rang.withValues(alpha: 0.1),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(
+            ok ? Icons.auto_awesome_rounded : Icons.psychology_rounded,
+            size: 16,
+            color: rang,
+          ),
+          const SizedBox(width: 6),
+          Flexible(
+            child: Text(
+              ok
+                  ? "Sezgi kuchli — taxmin to'g'ri! +1"
+                  : 'Taxmin «${_taxminOpts[_taxmin!]}» edi — endi bu so\'z '
+                        'kuchliroq esda qoladi',
+              style: TextStyle(
+                fontSize: 12.5,
+                fontWeight: FontWeight.w700,
+                color: rang,
               ),
             ),
           ),
@@ -399,6 +538,7 @@ class _VocabStageState extends State<VocabStage> {
                           context,
                           v,
                           reading: widget.lesson.reading,
+                          lessonId: widget.lesson.completionId,
                         ),
                         icon: const Icon(Icons.info_outline, size: 18),
                         label: const Text('Batafsil'),

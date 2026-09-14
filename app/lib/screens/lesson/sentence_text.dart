@@ -23,7 +23,12 @@ class SentenceText extends StatelessWidget {
     required this.reading,
     this.size = 26,
     this.color,
+    this.lessonId,
   });
+
+  /// Dars id — so'z kartasida «xotira kuchi» uchun (dars lug'atidan
+  /// topilgan so'zlarga). Yo'q bo'lsa karta xotira bo'limisiz.
+  final String? lessonId;
 
   /// So'zni avval SHU DARS lug'atidan, topilmasa butun ilova lug'atidan
   /// qidiradi. Dars lug'ati birinchi: undagi ma'no shu matn uchun aniqroq.
@@ -88,6 +93,7 @@ class SentenceText extends StatelessWidget {
                       topilma.soz,
                       reading: reading,
                       bosilgan: topilma.aynan ? null : t.text,
+                      lessonId: vocab.contains(topilma.soz) ? lessonId : null,
                     );
                   } else {
                     Tts.instance.speak(t.text, id: t.text);

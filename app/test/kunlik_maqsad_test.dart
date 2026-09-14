@@ -31,7 +31,9 @@ void main() {
     expect(p.bugungiTogri, 0);
     expect(p.bugungiAniqlik, 0);
     expect(p.bugungiBall, 0);
+    expect(p.keyingiTakrorKun('natija::a'), isNull); // hali ko'rilmagan
     await p.bumpWord('natija::a', true);
+    expect(p.keyingiTakrorKun('natija::a'), 2); // daraja 1 → 2 kun
     await p.bumpWord('natija::b', true);
     await p.bumpWord('natija::c', false);
     await p.bumpWord('natija::d', true);

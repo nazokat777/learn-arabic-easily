@@ -538,6 +538,7 @@ class _ReviewStageState extends State<ReviewStage> {
                           context,
                           v,
                           reading: widget.lesson.reading,
+                          lessonId: widget.lesson.completionId,
                         ),
                         icon: const Icon(Icons.info_outline, size: 18),
                         label: const Text('Batafsil'),

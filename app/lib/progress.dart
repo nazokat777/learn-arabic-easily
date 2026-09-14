@@ -539,6 +539,15 @@ class Progress extends ChangeNotifier {
         .map((e) => e.key);
   }
 
+  /// Keyingi eslash vaqtigacha necha kun qoldi (0 — bugun/o'tib ketgan;
+  /// null — hech ko'rilmagan). So'z kartasidagi «xotira kuchi» uchun.
+  int? keyingiTakrorKun(String key) {
+    final k = _korilganKun[key];
+    if (k == null) return null;
+    final d = (_mastery[key] ?? 0).clamp(0, _oraliq.length - 1);
+    return (k + _oraliq[d] - _bugunRaqami()).clamp(0, 365);
+  }
+
   /// Element bo'yicha hozirgi ketma-ket to'g'ri javoblar soni.
   int ketmaKetTogri(String key) => _ketma[key] ?? 0;
 

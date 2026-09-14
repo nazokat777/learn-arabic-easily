@@ -986,8 +986,12 @@ class _MasterDrillState extends State<MasterDrill> {
             ),
           ),
           IconButton(
-            onPressed: () =>
-                showWordSheet(context, v, reading: widget.lesson.reading),
+            onPressed: () => showWordSheet(
+              context,
+              v,
+              reading: widget.lesson.reading,
+              lessonId: widget.lesson.completionId,
+            ),
             icon: const Icon(Icons.info_outline, color: AppColors.emerald),
             tooltip: uz('Grammatik tahlil'),
           ),

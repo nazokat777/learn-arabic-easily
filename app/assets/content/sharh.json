@@ -1964,6 +1964,428 @@
           "izoh": "(لَا): حَرْفُ نَهْيٍ، مَبْنِيٌّ عَلَى السُّكُونِ، لَا مَحَلَّ لَهُ مِنَ الْإِعْرَابِ."
         }
       ]
+    },
+    "sarf-1": {
+      "sharh": [
+        "Sarf — so'zning ICHKI qurilishi ilmi: so'z necha harfdan, qaysi qolipda, undan qanday shakllar yasaladi. Nahv gapdagi o'rinni o'rgatsa, sarf so'zning o'zini o'rgatadi.",
+        "Kalima (so'z) uch xil: ISM (رَجُل — kishi), FE'L (ضَرَبَ — urdi), HARF (عَنْ، مِنْ). Bu nahvdagi bo'linishning o'zi.",
+        "Ism harf soniga qarab: SULOSIY — uch harfli (زَيْد), RUBOIY — to'rt harfli (جَعْفَر), XUMOSIY — besh harfli (سَفَرْجَل — behi). Fe'l esa faqat ikki xil: sulosiy (ضَرَبَ) va ruboiy (دَحْرَجَ — dumalatdi). Besh harfli o'zak fe'l YO'Q — bu muhim farq."
+      ],
+      "savollar": [
+        {
+          "savol": "«جَعْفَر» ismi qaysi tur?",
+          "variantlar": [
+            "Ruboiy — to'rt harfli",
+            "Sulosiy",
+            "Xumosiy"
+          ],
+          "togri": 0,
+          "izoh": "Ismi rubo'iy deb to'rt harflik ismga aytiladi. Masalan: جَعْفَر."
+        },
+        {
+          "savol": "Fe'l necha xil bo'ladi (harf soni bo'yicha)?",
+          "variantlar": [
+            "Ikki xil: sulosiy va ruboiy",
+            "Uch xil: sulosiy, ruboiy, xumosiy",
+            "Bir xil"
+          ],
+          "togri": 0,
+          "izoh": "Kitob fe'l uchun faqat sulosiy (ضَرَبَ) va ruboiy (دَحْرَجَ) ni keltiradi; xumosiy fe'l yo'q."
+        },
+        {
+          "savol": "«سَفَرْجَل» (behi) — qaysi tur ism?",
+          "variantlar": [
+            "Xumosiy — besh harfli",
+            "Ruboiy",
+            "Sulosiy"
+          ],
+          "togri": 0,
+          "izoh": "Ismi xumosiy deb besh harflik ismga aytiladi. Masalan: سَفَرْجَل."
+        }
+      ]
+    },
+    "sarf-2": {
+      "sharh": [
+        "Sarfning asosiy asbobi — TAROZI: ف ع ل (fo, ayn, lom). Har so'zni shu qolipga solib o'lchaymiz: ضَرَبَ → فَعَلَ (ض=ف, ر=ع, ب=ل). Qolipdagi harfga to'g'ri kelgan harf — ASLIY; qolipda ف ع ل dan biriga to'g'ri kelmagan, «ortiqcha» harf — ZOID (orttirilgan).",
+        "أَكْرَمَ → أَفْعَلَ: ك=ف, ر=ع, م=ل, boshidagi أ esa qolipda ham أ bo'lib turibdi — zoid. Asli كَرُمَ. Asliy harflar soni: uch harfli so'zda 3 (ف ع ل), to'rt harflida 4 (ف ع ل ل), besh harflida 5 (ف ع ل ل ل).",
+        "MUJARRAD («yalang'och») — faqat asliy harflar, zoid yo'q: ضَرَبَ (فَعَلَ), دَحْرَجَ (فَعْلَلَ). MAZID («orttirilgan») — asliyga zoid qo'shilgan: أَكْرَمَ (أَفْعَلَ), تَدَخْرَجَ (تَفَعْلَلَ). Sinov: so'zni vaznga soling; vaznda ف ع ل dan ortiqcha harf bo'lsa — mazid."
+      ],
+      "savollar": [
+        {
+          "savol": "«أَكْرَمَ» so'zida qaysi harf zoid?",
+          "variantlar": [
+            "Boshidagi أ (hamza)",
+            "ك",
+            "م"
+          ],
+          "togri": 0,
+          "izoh": "أَكْرَمَ – أَفْعَلَ vaznida: ك ر م — ف ع ل ga to'g'ri keladi, أ esa ortiqcha (zoid). Asli كَرُمَ."
+        },
+        {
+          "savol": "«دَحْرَجَ» — mujarradmi, mazidmi?",
+          "variantlar": [
+            "Ruboiy mujarrad — to'rt asliy, zoid yo'q",
+            "Ruboiy mazid",
+            "Sulosiy mazid"
+          ],
+          "togri": 0,
+          "izoh": "Ruboiy mujarrad … Masalan: دَحْرَجَ – فَعْلَلَ vaznida."
+        },
+        {
+          "savol": "Asliy harf nima?",
+          "variantlar": [
+            "ف ع ل dan birining qarshisida turgan harf",
+            "So'zning birinchi harfi",
+            "Harakatli harf"
+          ],
+          "togri": 0,
+          "izoh": "Asliy harf shunday harfki, فاءُ، عَينُ، لام ning bittasi qarshisida bo'ladi."
+        },
+        {
+          "savol": "To'rt harfli mujarrad kalimada nechta asliy harf bor va vazni qanday?",
+          "variantlar": [
+            "To'rtta — فَعْلَلَ (fo, ayn, ikki lom)",
+            "Uchta — فَعَلَ",
+            "Beshta"
+          ],
+          "togri": 0,
+          "izoh": "Asliy harf to'rt harflik bo'lgan kalimada to'rttadir: فا، عين ikki لام dir."
+        }
+      ]
+    },
+    "sarf-3": {
+      "sharh": [
+        "Ism ham, fe'l ham harflarining «sog'lomligi»ga qarab YETTI turga bo'linadi: SAHIH (illat harfi yo'q: ضَرَبَ), MUZOAF (ikki harf bir xil: فَرَّ), MISOL (fo o'rnida illat: وَثَبَ), AJVAF (ayn o'rnida illat: بَاعَ), NOQIS (lom o'rnida illat: رَمَى), LAFIF (ikki illat: رَوَى), MULTAVIY (fo va lom illat: وَحَى). Keyingi yetti dars har birini alohida beradi.",
+        "Illat harflari — و ا ي («voy»). Ular fe'l tuslanganda o'zgarib, tushib, boshqasiga aylanib turadi — shuning uchun sarfda alohida e'tibor beriladi. Jadvaldagi 3 bob (ضَرَبَ – يَضْرِبُ, نَصَرَ – يَنْصُرُ, مَنَعَ – يَمْنَعُ) — sulosiy mujarradning muzori' ayn harakatiga ko'ra boblari."
+      ],
+      "savollar": [
+        {
+          "savol": "Ism va fe'l (harflar sog'lomligiga ko'ra) necha turga bo'linadi?",
+          "variantlar": [
+            "Yettita: sahih, muzoaf, misol, ajvaf, noqis, lafif, multaviy",
+            "Uchta: sulosiy, ruboiy, xumosiy",
+            "Ikkita: mujarrad, mazid"
+          ],
+          "togri": 0,
+          "izoh": "Kitob ro'yxati: صَحِيحْ، مُضاعفْ، مِثال، أَجْوَف، ناقِص، لَفِيفُ، مُلْتَوِي."
+        },
+        {
+          "savol": "«بَاعَ» (sotdi) jadvalda qaysi ustunda?",
+          "variantlar": [
+            "Ajvaf — o'rtasida (ayn o'rnida) illat",
+            "Misol",
+            "Noqis"
+          ],
+          "togri": 0,
+          "izoh": "Jadvalda I-bob qatori: ضَرَبَ (sahih), فَرَّ (muzoaf), وَثَبَ (misol), بَاعَ (ajvaf), رَمَى (noqis)…"
+        }
+      ]
+    },
+    "sarf-4": {
+      "sharh": [
+        "SAHIH kalima — ف ع ل o'rinlarida ILLAT HARFI (و ا ي) yo'q va ikki harf bir xil emas: ضَرَبَ, ضَرْبٌ. Bayt eslatadi: «illat harflari uchta — jam' qilsang «voy» (واي) bo'ladi».",
+        "Hamza (ء) illat harfi EMAS, lekin alohida nomlanadi — hamza qayerda tursa: fo o'rnida — MAHMUZUL-FO (أَبَرَ), ayn o'rnida — MAHMUZUL-AYN (بَأَرَ — choh qazidi), lom o'rnida — MAHMUZUL-LOM (بَرَأَ — yaratdi). Hammasi فَعَلَ vaznida — ya'ni sahih hisoblanadi, faqat hamzali.",
+        "Sinov: so'zni فَعَلَ ga soling; ف ع ل o'rinlarida و ا ي yo'qmi? ikkita bir xil harf yo'qmi? — sahih. Hamza bo'lsa — «mahmuz» deb qo'shimcha nom bering."
+      ],
+      "savollar": [
+        {
+          "savol": "Illat harflari qaysilar?",
+          "variantlar": [
+            "و ا ي",
+            "ء ة ى",
+            "ب ت ث"
+          ],
+          "togri": 0,
+          "izoh": "Harfi illat uchtadir: و (vov), ا (alif), ي (yo) dir — «voy»."
+        },
+        {
+          "savol": "«بَرَأَ» (yaratdi) — hamza lom o'rnida. Bu nima deyiladi?",
+          "variantlar": [
+            "Mahmuzul-lom",
+            "Mahmuzul-fo",
+            "Mahmuzul-ayn"
+          ],
+          "togri": 0,
+          "izoh": "Agar lomining barobarida hamza kelsa, مَهْمُوزُ الْلام deyiladi. Masalan: بَرَأَ."
+        },
+        {
+          "savol": "Sahih kalimada ف ع ل o'rinlarida nima bo'lmaydi?",
+          "variantlar": [
+            "Illat harfi va bir jinsli ikki harf",
+            "Hamza",
+            "Harakat"
+          ],
+          "togri": 0,
+          "izoh": "Sahih … harfi illat va ikki harf bir jinsdan bo'lmaydi. Masalan: ضَرْبٌ va ضَرَبَ."
+        }
+      ]
+    },
+    "sarf-5": {
+      "sharh": [
+        "MUZOAF («ikkilangan») — ikki harf BIR XIL. Sulosiyda ayn va lom bir xil: فَرَّ (qochdi) — asli فَرَرَ, فَعَلَ vaznida; ikki ر qo'shilib shadda bo'lgan. Ruboiyda fo=lomi ulo, ayn=lomi soniy: صَرْصَرَ (فَعْلَلَ) — ص ر ص ر.",
+        "Sinov: so'zda shadda ko'rsangiz (فَرَّ، رَدَّ، وَدَّ) — asliga qaytaring (فَرَرَ): ayn va lom bir xil → muzoafi sulosiy. Bu turda tuslanishda shadda ochilib-yopilib turadi (رَدَّ – رَدَدْتُ)."
+      ],
+      "savollar": [
+        {
+          "savol": "«فَرَّ» ning asli qanday va u qaysi tur?",
+          "variantlar": [
+            "فَرَرَ — muzoafi sulosiy (ayn va lom bir xil)",
+            "فَرَى — noqis",
+            "فَرَأَ — mahmuz"
+          ],
+          "togri": 0,
+          "izoh": "Masalan: فَرَّ Aslida فَرَرَ edi, فَعَلَ vaznida."
+        },
+        {
+          "savol": "«صَرْصَرَ» qaysi tur?",
+          "variantlar": [
+            "Muzoafi ruboiy — فَعْلَلَ",
+            "Muzoafi sulosiy",
+            "Sahih ruboiy"
+          ],
+          "togri": 0,
+          "izoh": "Muzoafi ruboiy … Masalan: صَرْصَرَ – فَعْلَلَ vaznida."
+        }
+      ]
+    },
+    "sarf-6": {
+      "sharh": [
+        "MISOL — FO o'rnida illat harfi (odatda و, ba'zan ي): وَعَدَ (va'da berdi), وَعْدٌ — فَعَلَ / فَعْلٌ vaznida. Nomi «misol» — chunki moziysida e'lol (o'zgarish) bo'lmay, sahihga O'XSHAYDI: وَعَدَ xuddi ضَرَبَ kabi tuslanadi.",
+        "Farq muzori'da chiqadi: يَعِدُ — boshidagi و tushib ketadi (bu keyingi darslarda). Sinov: so'zning birinchi asliy harfi و yoki ي bo'lsa — misol."
+      ],
+      "savollar": [
+        {
+          "savol": "«وَعَدَ» qaysi tur va nega?",
+          "variantlar": [
+            "Misol — fo o'rnida illat harfi (و)",
+            "Ajvaf — ayn o'rnida illat",
+            "Sahih"
+          ],
+          "togri": 0,
+          "izoh": "Misol shunday kalimadirki … فا sining barobarida harfi illat bo'ladi. Masalan: وَعَدَ."
+        },
+        {
+          "savol": "Misol nega «misol» (o'xshash) deb ataladi?",
+          "variantlar": [
+            "Moziysida e'lol bo'lmay, sahih fe'lga o'xshagani uchun",
+            "Fe'lga misol bo'lgani uchun",
+            "Eng oson tur bo'lgani uchun"
+          ],
+          "togri": 0,
+          "izoh": "مِثال ya'ni, fe'li sahihga o'xshaydi moziysining e'loli yo'qligida."
+        }
+      ]
+    },
+    "sarf-7": {
+      "sharh": [
+        "AJVAF («ichi bo'sh») — AYN (o'rta) o'rnida illat harfi: قَوَلَ → قَالَ (aytdi), قَوْلٌ (so'z). Vazn فَعَلَ, lekin o'rtadagi و tuslanishda alifga aylanadi (قَالَ), ba'zi shakllarda tushadi (قُلْتُ).",
+        "Nomi «ichi bo'sh» — chunki o'rtasi sahih harfdan xoli. Sinov: ikkinchi asliy harf و yoki ي bo'lsa — ajvaf (بَاعَ asli بَيَعَ, دَامَ asli دَوَمَ)."
+      ],
+      "savollar": [
+        {
+          "savol": "«قَالَ» (aytdi) ning asli va turi?",
+          "variantlar": [
+            "قَوَلَ — ajvaf (ayn o'rnida و)",
+            "قَلَلَ — muzoaf",
+            "وَقَلَ — misol"
+          ],
+          "togri": 0,
+          "izoh": "Masalan: قَوْلٌ va قَوَلَ – فَعْلٌ va فَعَلَ vaznida — ayn o'rnida illat."
+        },
+        {
+          "savol": "Ajvaf so'zda illat harfi qaysi o'rinda?",
+          "variantlar": [
+            "Ayn (o'rta) o'rnida",
+            "Fo (bosh) o'rnida",
+            "Lom (oxir) o'rnida"
+          ],
+          "togri": 0,
+          "izoh": "أَجْوَفْ ya'ni, o'rtasi harfi sahihdan holi kalimadir."
+        }
+      ]
+    },
+    "sarf-8": {
+      "sharh": [
+        "NOQIS («nuqsonli») — LOM (oxirgi) o'rnida illat harfi: رَمَيَ → رَمَى (otdi), رَمْيٌ. Nega nuqsonli? Chunki ba'zi shakllarda oxirgi harf TUSHIB ketadi (hazf): لَمْ يَرْمِ — nahv 13-darsdagi «illatli fe'l» aynan shu.",
+        "Sinov: uchinchi asliy harf و yoki ي (yozuvda ko'pincha ى yoki ا ko'rinadi: رَمَى، دَعَا) — noqis."
+      ],
+      "savollar": [
+        {
+          "savol": "«رَمَى» (otdi) — qaysi tur?",
+          "variantlar": [
+            "Noqis — lom o'rnida illat",
+            "Ajvaf",
+            "Misol"
+          ],
+          "togri": 0,
+          "izoh": "Noqis … «lomi»ning barobarida harfi illat bo'ladi. Masalan: رَمْيٌ va رَمَيَ."
+        },
+        {
+          "savol": "Noqis nega «nuqsonli» deyiladi?",
+          "variantlar": [
+            "Ba'zi siyg'alarda oxirgi harfi tushib qoladi",
+            "Ma'nosi nuqsonli",
+            "Bir harfi kam"
+          ],
+          "togri": 0,
+          "izoh": "Oxirgi harfini ba'zi siyg'alarida hazf qilishlik bilan nuqsonli bo'ladi."
+        }
+      ]
+    },
+    "sarf-9": {
+      "sharh": [
+        "LAFIF («o'ralgan») — IKKITA illat harfi: ayn VA lom o'rnida: قَوِيَ (kuchli bo'ldi) — و va ي yonma-yon, قَوْيٌ. Vazn فَعِلَ / فَعْلٌ.",
+        "Sinov: so'zda ikkita و/ي ketma-ket (2- va 3-asliy) — lafif. Bu tur eng murakkab tuslanadi, chunki ikki illat bir vaqtda o'zgaradi."
+      ],
+      "savollar": [
+        {
+          "savol": "«قَوِيَ» da illat harflari qaysi o'rinlarda?",
+          "variantlar": [
+            "Ayn va lom — lafif",
+            "Fo va lom — multaviy",
+            "Faqat ayn — ajvaf"
+          ],
+          "togri": 0,
+          "izoh": "Lafif … عَيْن va لامِ ning barobarida harfi illat bo'ladi. Masalan: قَوْيٌ va قَوِيَ."
+        }
+      ]
+    },
+    "sarf-10": {
+      "sharh": [
+        "MULTAVIY («ikki tomondan o'ralgan») — FO va LOM o'rnida illat, o'rtasi sahih: وَشَيَ → وَشَى (naqshladi), وَشْيٌ — فَعَلَ / فَعْلٌ. Ya'ni so'zning boshi ham, oxiri ham illatli, o'rtasi sog'lom.",
+        "Lafif bilan farqi: lafifda ikki illat YONMA-YON (ayn+lom: قَوِيَ), multaviyda ikki CHEKKADA (fo+lom: وَشَى). Shu bilan yetti tur tugadi: sahih, muzoaf, misol (fo), ajvaf (ayn), noqis (lom), lafif (ayn+lom), multaviy (fo+lom)."
+      ],
+      "savollar": [
+        {
+          "savol": "«وَشَى» — qaysi tur?",
+          "variantlar": [
+            "Multaviy — fo va lom o'rnida illat",
+            "Lafif — ayn va lom",
+            "Misol — faqat fo"
+          ],
+          "togri": 0,
+          "izoh": "Multaviy … فا va لامِ ning barobarida harfi illat bo'ladi. Masalan: وَشْيٌ va وَشَيَ."
+        },
+        {
+          "savol": "Lafif bilan multaviyning farqi?",
+          "variantlar": [
+            "Lafif: ayn+lom (yonma-yon); multaviy: fo+lom (ikki chekka)",
+            "Farqi yo'q",
+            "Lafif uch illatli"
+          ],
+          "togri": 0,
+          "izoh": "Lafif — bir tomondan ikki illat bilan o'ralgan; multaviy — ikki tomondan."
+        }
+      ]
+    },
+    "sarf-11": {
+      "sharh": [
+        "Ism ikki xil: ISMI JOMID («qotgan») — o'zgarmas, undan boshqa so'z yasalmaydi (رَجُل, فَرَس); ISMI MASDAR — ish-harakat nomi, undan 12 xil so'z «ichidan yorib» olinadi (ضَرْب — urmoq). Keyingi darslar shu ikkisini ochadi."
+      ],
+      "savollar": [
+        {
+          "savol": "Ism necha qismga bo'linadi?",
+          "variantlar": [
+            "Ikki: ismi jomid va ismi masdar",
+            "Uch: sulosiy, ruboiy, xumosiy",
+            "Yetti"
+          ],
+          "togri": 0,
+          "izoh": "Ism bayoni: اسمِ جامِدْ va اِسْمِ مَصْدَرْ."
+        }
+      ]
+    },
+    "sarf-12": {
+      "sharh": [
+        "ISMI JOMID — «muzlagan» ism: undan hech narsa ISHTIQOQ qilinmaydi (yasalmaydi). رَجُل (kishi), فَرَس (ot) — bulardan fe'l ham, boshqa ism ham chiqmaydi. Sinov: so'zdan «…moq» ma'noli fe'l yasab bo'lmasa — jomid."
+      ],
+      "savollar": [
+        {
+          "savol": "«فَرَس» (ot) qaysi ism?",
+          "variantlar": [
+            "Ismi jomid — undan boshqa so'z yasalmaydi",
+            "Ismi masdar",
+            "Ismi foil"
+          ],
+          "togri": 0,
+          "izoh": "Masalan: رَجُل va فَرَس – ismi jomid."
+        }
+      ]
+    },
+    "sarf-13": {
+      "sharh": [
+        "ISMI MASDAR — ish-harakat NOMI; o'zbekchaga «-moq/-mak» bilan tarjima qilinadi: الضَّرْبُ — urmoq, الْمَحَبَّةُ — sevmak. Bu — sarfning «manbai»: undan 12 narsa yasaladi (keyingi dars). Sinov: tarjimasi «-moq» bilan tugasa — masdar."
+      ],
+      "savollar": [
+        {
+          "savol": "«الْمَحَبَّةُ» (sevmak) qaysi ism?",
+          "variantlar": [
+            "Ismi masdar — «-mak» bilan tarjima qilinadi",
+            "Ismi jomid",
+            "Fe'l"
+          ],
+          "togri": 0,
+          "izoh": "Uni o'zbekchaga tarjima qilganda … -moq yoki -mak qo'shimchasi bo'ladi. Masalan: الْمَحَبَّةُ – sevmak."
+        },
+        {
+          "savol": "Ismi masdardan nima qilinadi?",
+          "variantlar": [
+            "Ishtiqoq — undan boshqa so'zlar yasaladi",
+            "Hech narsa — u qotgan",
+            "Faqat ko'plik"
+          ],
+          "togri": 0,
+          "izoh": "Ismi masdar shunday ismdurkim, undan biror narsani ishtiqoq qilinadi."
+        }
+      ]
+    },
+    "sarf-14": {
+      "sharh": [
+        "Har masdardan 12 narsa yasaladi — bu sarfning butun rejasi. Masalan ضَرْب (urmoq) dan: 1) moziy ضَرَبَ (urdi), 2) muzori' يَضْرِبُ (uradi), 3) ismi foil ضَارِب (uruvchi), 4) ismi maf'ul مَضْرُوب (urilgan), 5) fe'li jahd لَمْ يَضْرِبْ (urmadi), 6) fe'li nafiy لَنْ يَضْرِبَ (urmaydi), 7) amri hozir اِضْرِبْ (ur!), 8) amri g'oib لِيَضْرِبْ (ursin), 9) nahiy hozir لَا تَضْرِبْ (urma), 10) ismi zamon/makon مَضْرِب (urish vaqti/joyi), 11) ismi olat مِضْرَب (uradigan asbob), 12) ismi tafzil أَضْرَب (ko'proq uruvchi).",
+        "Nahv bilan bog'lang: fe'li jahd — لَمْ bilan jazm (nahv 17-dars), fe'li nafiy — لَنْ bilan nasb (16-dars), amri g'oib — buyruq lomi, nahiy — qaytariq لَا. Sarf shakllarni, nahv ularning i'robini beradi."
+      ],
+      "savollar": [
+        {
+          "savol": "Har bir masdardan nechta narsa ishtiqoq qilinadi?",
+          "variantlar": [
+            "12",
+            "7",
+            "3"
+          ],
+          "togri": 0,
+          "izoh": "Arab tilida har bir مَصْدَرْ (masdar)dan 12 narsani ishtiqoq qilinadi."
+        },
+        {
+          "savol": "«Fe'li jahd» nima?",
+          "variantlar": [
+            "O'tgan zamonda bo'lmagan fe'l (لَمْ bilan)",
+            "Kelasi zamonda bo'lmaydigan fe'l",
+            "Buyruq"
+          ],
+          "togri": 0,
+          "izoh": "فَعْلِ جَحْدْ (fe'li jahd) – o'tgan zamonda bo'lmagan fe'l."
+        },
+        {
+          "savol": "Ish-harakatni bajarish ASBOBINING nomi qaysi?",
+          "variantlar": [
+            "Ismi olat",
+            "Ismi makon",
+            "Ismi foil"
+          ],
+          "togri": 0,
+          "izoh": "اسْمِ آلَتْ (ismi olat) – fe'lni, ish-harakatni bajarish asbobi (olati) nomi."
+        },
+        {
+          "savol": "Uchinchi shaxsga qaratilgan buyruq nima deyiladi?",
+          "variantlar": [
+            "Amri g'oib",
+            "Amri hozir",
+            "Nahiy hozir"
+          ],
+          "togri": 0,
+          "izoh": "أَمْرِ غائبْ (amri g'oib) – uchinchi shaxsga qaratilgan buyruq fe'li."
+        }
+      ]
     }
   }
 }

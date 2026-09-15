@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart' hide Text;
 
 import '../content.dart';
@@ -136,11 +138,23 @@ class QoidaSavollari extends StatefulWidget {
 }
 
 class _QoidaSavollariState extends State<QoidaSavollari> {
-  final Map<int, int> _javob = {}; // savol → tanlangan variant
+  final Map<int, int> _javob = {}; // savol → tanlangan variant (asl indeks)
   int _portlash = 0;
+
+  /// Variantlar tartibi har ochilishda aralashtiriladi — aks holda
+  /// «birinchisi doim to'g'ri» degan yashirin qolip o'rganilib qoladi.
+  /// `_tartib[i][k]` — i-savolning ekrandagi k-o'rnida turgan asl indeks.
+  final Map<int, List<int>> _tartib = {};
+  final _rnd = Random();
 
   List<QoidaSavol> get _savollar =>
       repo.sharhlar[widget.darsId]?.savollar ?? const [];
+
+  List<int> _tartibi(int i) => _tartib.putIfAbsent(
+    i,
+    () =>
+        List.generate(_savollar[i].variantlar.length, (k) => k)..shuffle(_rnd),
+  );
 
   Future<void> _tanla(int i, int v) async {
     if (_javob.containsKey(i)) return;
@@ -207,6 +221,7 @@ class _QoidaSavollariState extends State<QoidaSavollari> {
             child: _Savol(
               raqam: i + 1,
               savol: s,
+              tartib: _tartibi(i),
               tanlangan: _javob[i],
               onTanla: (v) => _tanla(i, v),
             ),
@@ -253,7 +268,10 @@ class _QoidaSavollariState extends State<QoidaSavollari> {
                   TextButton(
                     onPressed: () {
                       Haptic.tap();
-                      setState(_javob.clear);
+                      setState(() {
+                        _javob.clear();
+                        _tartib.clear(); // yangi aralashtirish
+                      });
                     },
                     child: const Text(
                       'Qayta',
@@ -272,11 +290,13 @@ class _QoidaSavollariState extends State<QoidaSavollari> {
 class _Savol extends StatelessWidget {
   final int raqam;
   final QoidaSavol savol;
+  final List<int> tartib; // ekran o'rni → asl variant indeksi
   final int? tanlangan;
   final ValueChanged<int> onTanla;
   const _Savol({
     required this.raqam,
     required this.savol,
+    required this.tartib,
     required this.tanlangan,
     required this.onTanla,
   });
@@ -337,11 +357,11 @@ class _Savol extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 8),
-          for (final (v, matn) in savol.variantlar.indexed)
+          for (final v in tartib)
             Padding(
               padding: const EdgeInsets.only(bottom: 6),
               child: _Variant(
-                matn: matn,
+                matn: savol.variantlar[v],
                 holat: !javobBerildi
                     ? _Holat.oddiy
                     : v == savol.togri

@@ -2566,7 +2566,7 @@
     "sarf-19": {
       "sharh": [
         "Muzori' MAJHULI: muzoraat harfini (أ ن ي ت) DAMMA qil, oxiridan oldingi harfni FATHA qil: يَضْرِبُ → يُضْرَبُ (uriladi). Moziy majhulidan farqi: moziyda ـُـِـ (ضُرِبَ), muzori'da ـُـْـَـ (يُضْرَبُ).",
-        "14 siyg'a o'sha qo'shimchalar bilan: يُضْرَبُ، يُضْرَبَانِ، يُضْرَبُونَ، تُضْرَبُ، تُضْرَبَانِ، يُضْرَبْنَ، تُضْرَبُ، تُضْرَبَانِ، تُضْرَبُونَ، تُضْرَبِينَ، تُضْرَبَانِ، تُضْرَبْنَ، أُضْرَبُ، نُضْرَبُ. Muxotabah siyg'asi majhulda تُضْرَبِينَ (urilasan): qoida bo'yicha muzoraat harfi damma, oxiridan oldingisi fatha."
+        "14 siyg'a o'sha qo'shimchalar bilan: يُضْرَبُ، يُضْرَبَانِ، يُضْرَبُونَ، تُضْرَبُ، تُضْرَبَانِ، يُضْرَبْنَ، تُضْرَبُ، تُضْرَبَانِ، تُضْرَبُونَ، تُضْرَبِينَ، تُضْرَبَانِ، تُضْرَبْنَ، أُضْرَبُ، نُضْرَبُ. DIQQAT: darsda muannasi muxotabah satrida تَضْرِبِينَ (ma'lum shakl — «urasan») bosilgan; qoida bo'yicha (muzoraat harfi damma, oxiridan oldingisi fatha) majhuli تُضْرَبِينَ («urilasan») — kitobning o'zi 34-sahifada لَا تُضْرَبِينَ va 46-sahifadagi jadvalda تُضْرَبِينَ deb keltiradi."
       ],
       "savollar": [
         {
@@ -2598,6 +2598,16 @@
           ],
           "togri": 0,
           "izoh": "نُضْرَبُ – urilamiz, bizlar … mutakallimi ma'al g'ayr, muzore' majhul fe'li."
+        },
+        {
+          "savol": "«Sen (bir ayol) urilasan» — muzori' majhulining muxotabah siyg'asi?",
+          "variantlar": [
+            "تُضْرَبِينَ — muzoraat harfi damma, oxiridan oldingisi fatha",
+            "تَضْرِبِينَ — bu ma'lum shakl (urasan)",
+            "تُضْرَبْنَ"
+          ],
+          "togri": 0,
+          "izoh": "…oxiridan oldingi harfni fathali qilgin va muzoraat harflarini zammali qilgin. Kitobning 34-sahifasi: لَا تُضْرَبِينَ – urilmaysan, sen bir ayol."
         }
       ]
     },

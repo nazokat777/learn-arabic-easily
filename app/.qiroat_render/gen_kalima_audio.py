@@ -108,9 +108,44 @@ def main():
     from faster_whisper import WhisperModel
     model = WhisperModel("small", device="cpu", compute_type="int8")
 
-    def eshit(path: Path) -> str:
-        segs, _ = model.transcribe(str(path), language="ar", beam_size=5)
-        return yalang("".join(s.text for s in segs)).replace(" ", "").replace("؟", "").replace(".", "")
+    def eshit(path: Path) -> list[str]:
+        """Yolg'iz qisqa so'zda whisper gallyutsinatsiya qiladi (شكرا, مرحبا);
+        3 marta takrorlab (0.5 s jimlik bilan) transkripsiya barqaror bo'ladi.
+        Qaytaradi: eshitilgan so'zlar (harakatsiz)."""
+        x3 = path.with_suffix(".x3.wav")
+        subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", str(path), "-i", str(path), "-i", str(path),
+                        "-filter_complex",
+                        "[0:a]apad=pad_dur=0.5[a];[1:a]apad=pad_dur=0.5[b];[a][b][2:a]concat=n=3:v=0:a=1,apad=pad_dur=0.5",
+                        "-ar", "16000", "-ac", "1", str(x3)], capture_output=True)
+        segs, _ = model.transcribe(str(x3), language="ar", beam_size=5, condition_on_previous_text=False)
+        x3.unlink(missing_ok=True)
+        t = yalang(" ".join(s.text for s in segs))
+        return [w for w in re.split(r"[\s،,.؟!]+", t) if w]
+
+    def norm(s: str) -> str:
+        return (s.replace("أ", "ا").replace("إ", "ا").replace("آ", "ا").replace("ة", "ه")
+                 .replace("ى", "ي").replace("ال", "", 1) if s.startswith("ال") else
+                s.replace("أ", "ا").replace("إ", "ا").replace("آ", "ا").replace("ة", "ه").replace("ى", "ي"))
+
+    def oxshash(a: str, b: str) -> float:
+        import difflib
+        return difflib.SequenceMatcher(None, a, b).ratio()
+
+    def tekshir(y: str, sozlar: list[str]):
+        """(mos keldimi, tanvin bilan o'qilganmi). So'zlovchi «بابون» desa —
+        tanvinli o'qish: kalit tanvinli shakl bo'ladi."""
+        if not sozlar:
+            return False, False
+        from collections import Counter
+        w = Counter(sozlar).most_common(1)[0][0]
+        ny, nw = norm(y), norm(w)
+        if oxshash(ny, nw) >= 0.8:
+            return True, False
+        # tanvin: oxirida ن / ون / ين / ان (بابون, كتابن, بيتن)
+        for q in ("ون", "ين", "ان", "ن"):
+            if nw.endswith(q) and oxshash(ny, nw[: -len(q)]) >= 0.8:
+                return True, True
+        return False, False
 
     XOM.mkdir(parents=True, exist_ok=True)
     OUT.mkdir(parents=True, exist_ok=True)
@@ -129,21 +164,23 @@ def main():
             if not yukla(f["fayl"], xom):
                 continue
             try:
-                t = eshit(xom)
+                sozlar = eshit(xom)
             except Exception as e:  # buzuq fayl — o'chirib, keyingisiga
                 print(f"  buzuq {f['fayl']}: {e}", flush=True)
                 xom.unlink(missing_ok=True)
                 continue
-            # «ال» yoki «ة/ه», «ى/ي», «أ/ا» farqlarini yumshatib solishtirish
-            norm = lambda s: s.replace("أ", "ا").replace("إ", "ا").replace("آ", "ا").replace("ة", "ه").replace("ى", "ي")
-            if norm(t) == norm(y):
-                tanlandi = (f, xom)
+            ok, tanvinli = tekshir(y, sozlar)
+            if ok:
+                tanlandi = (f, xom, tanvinli)
                 break
-            print(f"  rad {y}: {f['sozlovchi']} → «{t}»", flush=True)
+            print(f"  rad {y}: {f['sozlovchi']} → «{' '.join(sozlar)}»", flush=True)
         if not tanlandi:
             hisob["rad" if fayllar else "yoq"] += 1
             continue
-        f, xom = tanlandi
+        f, xom, tanvinli = tanlandi
+        # Tanvin bilan o'qilgan bo'lsa — kalit to'liq (kitobdagi) shakl.
+        if tanvinli:
+            kalit = v["ar"].strip()
         dest = OUT / f"k{n:04d}.mp3"
         kes = ("silenceremove=start_periods=1:start_threshold=-40dB,"
                "areverse,silenceremove=start_periods=1:start_threshold=-40dB,areverse,"
@@ -164,11 +201,11 @@ def main():
             hisob["rad"] += 1
             continue
         manifest[kalit] = dest.name
-        manba[dest.name] = {"fayl": f["fayl"], "sozlovchi": f["sozlovchi"],
+        manba[dest.name] = {"fayl": f["fayl"], "sozlovchi": f["sozlovchi"], "tanvin": tanvinli,
                             "lic": (xom.with_suffix(".lic").read_text(encoding="utf-8") if xom.with_suffix(".lic").exists() else "")}
         hisob["ok"] += 1
         n += 1
-        print(f"{kalit}  ← {f['sozlovchi']}", flush=True)
+        print(f"{kalit}  ← {f['sozlovchi']}{' (tanvin)' if tanvinli else ''}", flush=True)
         MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=0), encoding="utf-8", newline="\n")
     MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=0), encoding="utf-8", newline="\n")
     mp = OUT / "manba.json"

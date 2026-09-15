@@ -399,6 +399,184 @@
           "uz": "choynak, ko'za"
         }
       ]
+    },
+    {
+      "num": 6,
+      "title": "Mad harflari — cho'ziq unlilar",
+      "titleAr": "حُرُوفُ الْمَدِّ",
+      "explain": "Uch harf ba'zan tovush emas, CHO'ZISH vazifasini bajaradi: fathadan keyingi «ا» — «aa», zammadan keyingi «و» — «uu», kasradan keyingi «ي» — «ii». Bu harflar ko'k rangda: ularni ikki barobar cho'zib o'qing. So'zlar oxirgi harakatsiz (to'xtash shaklida) berilgan — ovozda ham shunday.",
+      "focus": "mad",
+      "words": [
+        {
+          "ar": "بَدَا",
+          "uz": "ko'rinmoq"
+        },
+        {
+          "ar": "تِين",
+          "uz": "anjir"
+        },
+        {
+          "ar": "ثُوم",
+          "uz": "sarimsoq piyoz"
+        },
+        {
+          "ar": "حُوت",
+          "uz": "kit"
+        },
+        {
+          "ar": "خَال",
+          "uz": "tog'a"
+        },
+        {
+          "ar": "دَعَا",
+          "uz": "chaqirdi"
+        },
+        {
+          "ar": "آسِيا",
+          "uz": "osiyo qit'asi"
+        },
+        {
+          "ar": "أَمَام",
+          "uz": "oldida"
+        },
+        {
+          "ar": "إِمَام",
+          "uz": "imom"
+        },
+        {
+          "ar": "بَخِيل",
+          "uz": "baxil"
+        },
+        {
+          "ar": "تُرَاب",
+          "uz": "tuproq"
+        },
+        {
+          "ar": "جَانِب",
+          "uz": "yoni"
+        },
+        {
+          "ar": "جَدِيد",
+          "uz": "yangi"
+        },
+        {
+          "ar": "جَلِيد",
+          "uz": "muz"
+        },
+        {
+          "ar": "حَاجِب",
+          "uz": "qosh"
+        },
+        {
+          "ar": "خَالَة",
+          "uz": "xola"
+        },
+        {
+          "ar": "خِلَال",
+          "uz": "mobayni"
+        },
+        {
+          "ar": "دَقِيق",
+          "uz": "un (bug'doyniki)"
+        },
+        {
+          "ar": "رَاكِب",
+          "uz": "minib olib"
+        },
+        {
+          "ar": "سَاحَة",
+          "uz": "maydon"
+        }
+      ]
+    },
+    {
+      "num": 7,
+      "title": "Murakkab so'zlar",
+      "titleAr": "كَلِمَاتٌ صَعْبَةٌ",
+      "explain": "Shadda (harf ikki marta o'qiladi: «سُكَّر» — suk-kar), ketma-ket sukunlar, hamzaning turli shakllari (أ إ ئ ؤ ء) va uzun so'zlar — o'quvchi eng ko'p qoqiladigan joylar. Avval o'zingiz o'qing, keyin ovoz bilan solishtiring.",
+      "focus": "murakkab",
+      "words": [
+        {
+          "ar": "أَثَر",
+          "uz": "iz (asar)"
+        },
+        {
+          "ar": "أَجَلُّ",
+          "uz": "eng ulkani"
+        },
+        {
+          "ar": "أَحَبَّ",
+          "uz": "yaxshi ko'rmoq"
+        },
+        {
+          "ar": "أَلْف",
+          "uz": "ming (1000)"
+        },
+        {
+          "ar": "أَمْس",
+          "uz": "kecha"
+        },
+        {
+          "ar": "أَنَّه",
+          "uz": "albatta u"
+        },
+        {
+          "ar": "أَنْت",
+          "uz": "sen"
+        },
+        {
+          "ar": "إِذَن",
+          "uz": "unday bo'lsa"
+        },
+        {
+          "ar": "إِلَى",
+          "uz": "...ga"
+        },
+        {
+          "ar": "إِلَّا",
+          "uz": "-ganda"
+        },
+        {
+          "ar": "فَأْر",
+          "uz": "sichqon"
+        },
+        {
+          "ar": "فَأْس",
+          "uz": "bolta"
+        },
+        {
+          "ar": "مِئَة",
+          "uz": "yuz (100)"
+        },
+        {
+          "ar": "نَوَّم",
+          "uz": "uxlatmoq"
+        },
+        {
+          "ar": "أَحْسَن",
+          "uz": "yaxshilik qilmoq"
+        },
+        {
+          "ar": "أَرْنَب",
+          "uz": "quyon"
+        },
+        {
+          "ar": "أَعْلَم",
+          "uz": "bildirmoq"
+        },
+        {
+          "ar": "أَقْنَع",
+          "uz": "qanoatlantirmoq"
+        },
+        {
+          "ar": "أَكْبَر",
+          "uz": "kattaroq"
+        },
+        {
+          "ar": "أَمْكَن",
+          "uz": "imkon topmoq"
+        }
+      ]
     }
   ]
 }

@@ -60,7 +60,8 @@ def murakkab(w):
 cand = {}
 def qosh(ar, uz, pri):
     ar = ar.split("،")[0].strip(); uz = uz.strip()
-    if not ar or not uz or " " in ar:
+    # Qo'shimcha (ـهَا), yolg'iz harf/juda qisqa yuklamalar (لَا، أَن) — so'z emas.
+    if not ar or not uz or " " in ar or "ـ" in ar or len(bare(ar)) < 3:
         return
     k = bare(ar)
     if k in cand and cand[k][2] <= pri:
@@ -86,7 +87,8 @@ for k, (ar, uz, _) in cand.items():
 
 def tanla(shart, n, band):
     ro = sorted((p, uz) for p, uz in bor if shart(p) and bare(p) not in band)
-    ro.sort(key=lambda x: len(bare(x[0])))
+    # Qisqadan uzunga; tanvinli (pauza shaklida aytilmagan) so'zlar oxirida.
+    ro.sort(key=lambda x: (bool(TANVIN_OXIR.search(HAR.sub(lambda m: m.group() if m.group() in "ًٌٍ" else "", x[0]))) or any(t in x[0] for t in "ًٌٍ"), len(bare(x[0]))))
     out, uzlar, arlar = [], set(), set()
     for p, uz in ro:
         if uz in uzlar or p in arlar:

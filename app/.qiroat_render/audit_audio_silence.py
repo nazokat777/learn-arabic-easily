@@ -17,7 +17,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 # ketsangiz, audit 0 jim klip deb yolg'on "toza" natija beradi.
 SETS = (("vocab", "vocab"), ("sentences", "sentence"), ("words", "word"),
         ("extra", "extra"), ("alifbo", "alifbo"), ("sarf", "sarf"),
-        ("mashq", "mashq"), ("harf", "harf"))
+        ("mashq", "mashq"), ("harf", "harf"), ("kalima", "kalima"))
 RX = re.compile(r"max_volume:\s*(-?[\d.]+) dB")
 QUIET_DB = -30.0
 

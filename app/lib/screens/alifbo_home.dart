@@ -116,7 +116,7 @@ class AlifboHome extends StatelessWidget {
             const SizedBox(height: 18),
             // CC BY-SA 4.0 — manba ko'rsatish shart.
             Text(
-              "Harf nomlari ovozi: Ruaa Ghareeb, «Wiki Arabic for all» "
+              "Harf nomlari ovozi: «Arabic alphabets» — Atef1975 "
               "(Wikimedia Commons, CC BY-SA 4.0).",
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 10.5, color: AppColors.matn3),

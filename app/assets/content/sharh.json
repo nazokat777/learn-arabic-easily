@@ -2772,6 +2772,421 @@
           "izoh": "Nafiyda muzori' o'z holida (marfu'); jazm faqat لَمْ / nahiy لَا bilan."
         }
       ]
+    },
+    "sarf-25": {
+      "sharh": [
+        "Nafiy MAJHULI — o'sha qolip: muzoraat harfi damma, oxiridan oldingisi fatha: لَا يَضْرِبُ → لَا يُضْرَبُ (urilmaydi). Nun turadi (raf'): لَا يُضْرَبُونَ، لَا تُضْرَبِينَ.",
+        "Shu paytgacha to'rt majhul ko'rdik — hammasi bitta qoida: MOZIYda «damma+kasra» (ضُرِبَ), qolgan barcha muzori' asosidagi shakllarda (muzori', jahd, nafiy) «damma+fatha» (يُضْرَبُ، لَمْ يُضْرَبْ، لَا يُضْرَبُ)."
+      ],
+      "savollar": [
+        {
+          "savol": "«لَا يُضْرَبُونَ» ma'nosi?",
+          "variantlar": [
+            "Ular urilmaydilar",
+            "Ular urmaydilar",
+            "Ular urilmadilar"
+          ],
+          "togri": 0,
+          "izoh": "لا يُضْرَبُونَ – urilmaydilar, ko'p er kishilar, kelasi zamon … majhuli fe'li nafiy."
+        },
+        {
+          "savol": "Nafiy ma'lumini majhulga aylantirish qoidasi?",
+          "variantlar": [
+            "Oxiridan oldingisi fatha, muzoraat harfi damma: لَا يُضْرَبُ",
+            "Oxiridan oldingisi kasra",
+            "لَا ni لَمْ ga almashtirish"
+          ],
+          "togri": 0,
+          "izoh": "…oxirgisidan oldingi harfini fathali qil va harfi muzoraatni zammalik qil. لا يَضْرِبُ – لا يُضْرَبُ."
+        }
+      ]
+    },
+    "sarf-26": {
+      "sharh": [
+        "AMR (buyruq) ikki xil: LOMSIZ (amri hozir — «sen» ga: اِضْرِبْ) va LOMLI (amri g'oib — «u» ga: لِيَضْرِبْ, keyingi dars). Lomsiz amr muzori'ning MUXOTAB (sen/siz) siyg'alaridan yasaladi: تَضْرِبُ → اِضْرِبْ.",
+        "Qadamlar: 1) muzoraat harfi تَـ ni tashlang: ضْرِبُ; 2) qolgan so'z SUKUNLI harf bilan boshlansa — boshiga vasl hamzasi qo'ying: ayn dammali bob (يَنْصُرُ) bo'lsa hamza DAMMALI — اُنْصُرْ، اُقْتُلْ; ayn fathali/kasrali bo'lsa hamza KASRALI — اِضْرِبْ، اِعْلَمْ; 3) oxirini JAZM qiling: sahih oxir — sukun (اِضْرِبْ); oxiri illatli — illat harfi tushadi (اِرْمِ، اُدْعُ، اِخْشَ); o'rtasi illatli (ajvaf) — o'rta harf tushadi (قُلْ، بِعْ); muzoaf (idg'omli) — fatha bilan (رُدَّ، فِرَّ).",
+        "Agar muzoraat harfidan keyingi harf HARAKATLI bo'lsa (قُلْ، بِعْ, mazid أَكْرِمْ — hamza bilan) hamza kerak emas — amr shu bilan tayyor. Lomsiz amr 6 siyg'ada: اِضْرِبْ، اِضْرِبَا، اِضْرِبُوا (erkak sen/ikki/sizlar), اِضْرِبِي، اِضْرِبَا، اِضْرِبْنَ (ayol)."
+      ],
+      "savollar": [
+        {
+          "savol": "«يَنْصُرُ» (ayn dammali bob) dan amr qanday?",
+          "variantlar": [
+            "اُنْصُرْ — hamza dammali",
+            "اِنْصُرْ — hamza kasrali",
+            "نُصْرْ"
+          ],
+          "togri": 0,
+          "izoh": "Agar siyg'a يَفْعُلُ «ayn» zammalik bobidan bo'lsa, uning avvaliga zammalik hamzai vasliyani keltiriladi. Masalan: اُنْصُرْ va اُقْتُلْ."
+        },
+        {
+          "savol": "«يَقُولُ» (ajvaf) dan amr?",
+          "variantlar": [
+            "قُلْ — o'rtadagi illat harfi tushadi",
+            "اُقُولْ",
+            "اِقْوُلْ"
+          ],
+          "togri": 0,
+          "izoh": "Va agar oxirgidan oldingi harf harfi illat bo'lsa, uni tashlanadi. Masalan: قُلْ va بِعْ."
+        },
+        {
+          "savol": "«يَرْمِي» (noqis) dan amr?",
+          "variantlar": [
+            "اِرْمِ — oxirgi illat harfi tushadi",
+            "اِرْمِيْ",
+            "اُرْمُ"
+          ],
+          "togri": 0,
+          "izoh": "Va agar kalimaning oxiri sukunlik harfi illat bo'lsa, uni olib tashlanadi. Masalan اِرْمِ va اُدْعُ va اِخْشَ."
+        },
+        {
+          "savol": "Lomsiz amr qaysi siyg'alardan yasaladi va nechta?",
+          "variantlar": [
+            "Muzori'ning 6 muxotab siyg'asidan — 6 ta",
+            "G'oib siyg'alaridan — 6 ta",
+            "Hammasidan — 14 ta"
+          ],
+          "togri": 0,
+          "izoh": "«Lom»siz amrni fe'li muzore'i muxotabi ma'lumning olti siyg'asidan … olinadi. Lomsiz amr olti siyg'ada keladi."
+        },
+        {
+          "savol": "«أَكْرِمْ» (hurmat qil) da hamza nega fathali?",
+          "variantlar": [
+            "أَفْعَلَ bobida hamza fathali va so'z shu bilan tugaydi",
+            "Chunki muzoaf",
+            "Chunki ayn dammali"
+          ],
+          "togri": 0,
+          "izoh": "Agar siyg'a يُفْعِلُ أَفْعَلَ bobidan bo'lsa, uning avvaliga hamzai maftuhai soqitani keltiradi … Masalan, أَكْرِمْ va أَقِمْ."
+        }
+      ]
+    },
+    "sarf-27": {
+      "sharh": [
+        "LOMLI AMR (amri g'oib) — «u ursin, ular ursin, men urayin, biz uraylik». Yasalishi eng oson: muzori'ning G'OIB (6) va MUTAKALLIM (2) siyg'alari oldiga KASRALI LOM (لِـ) qo'yib, oxirini jazm qilish: يَضْرِبُ → لِيَضْرِبْ.",
+        "8 siyg'a: لِيَضْرِبْ، لِيَضْرِبَا، لِيَضْرِبُوا، لِتَضْرِبْ (u ayol), لِتَضْرِبَا، لِيَضْرِبْنَ; لِأَضْرِبْ (men urayin), لِنَضْرِبْ (biz uraylik). Nahv 17-darsdagi «buyruq lomi» — jazm qiluvchi — aynan shu: لِيَلْزَمْ كُلُّ إِنْسَانٍ حَدَّهُ."
+      ],
+      "savollar": [
+        {
+          "savol": "«لِنَضْرِبْ» ma'nosi?",
+          "variantlar": [
+            "Biz uraylik",
+            "Biz uramiz",
+            "Bizni ursin"
+          ],
+          "togri": 0,
+          "izoh": "لِنَضْرِبْ – uraylik bizlar … mutakallimi ma'al g'ayr, ma'lumi amri bo «lom»."
+        },
+        {
+          "savol": "Lomli amr nechta siyg'ada?",
+          "variantlar": [
+            "8: 6 g'oib + 2 mutakallim",
+            "6: muxotab",
+            "14"
+          ],
+          "togri": 0,
+          "izoh": "Amri bo «lom» 8 siyg'ada keladi: oltitasi g'oib, ikkitasi mutakallim."
+        },
+        {
+          "savol": "«لِيَضْرِبْ» dagi lom qanday harakatli va fe'lga nima qiladi?",
+          "variantlar": [
+            "Kasrali; fe'lni jazm qiladi (oxiri sukun)",
+            "Fathali; nasb qiladi",
+            "Sukunli; hech narsa"
+          ],
+          "togri": 0,
+          "izoh": "Fe'li muzore'ning avvaliga kasrali «lom»ni keltirgandan keyin amri bo «lom» hosil bo'ladi: لِيَضْرِبْ."
+        }
+      ]
+    },
+    "sarf-28": {
+      "sharh": [
+        "Amri g'oib MAJHULI: yana o'sha qoida — muzoraat harfi damma, oxiridan oldingisi fatha: لِيَضْرِبْ → لِيُضْرَبْ (urilsin). Majhulda 14 siyg'a — chunki muxotab siyg'alari ham bor: لِتُضْرَبْ (urilgin sen) — ma'lumda «sen» uchun lomsiz amr (اِضْرِبْ) ishlatilgani uchun, majhulda esa lomsiz shakl yo'q, shuning uchun lom bilan.",
+        "Kitob muxotab siyg'alarini g'oibdan OLDIN keltiradi: لِتُضْرَبْ، لِتُضْرَبَا، لِتُضْرَبُوا، لِتُضْرَبِي، لِتُضْرَبَا، لِتُضْرَبْنَ (sen/siz urilgin/urilinglar); keyin g'oib: لِيُضْرَبْ، لِيُضْرَبَا، لِيُضْرَبُوا، لِتُضْرَبْ، لِتُضْرَبَا، لِيُضْرَبْنَ; mutakallim: لِأُضْرَبْ، لِنُضْرَبْ."
+      ],
+      "savollar": [
+        {
+          "savol": "Amri g'oib majhulida nechta siyg'a bor va nega ma'lumdan ko'p?",
+          "variantlar": [
+            "14 — majhulda muxotab (sen/siz) siyg'alari ham lom bilan keladi",
+            "8 — ma'lumdagidek",
+            "6"
+          ],
+          "togri": 0,
+          "izoh": "Amri g'oib majhulini 14 siyg'asi bor: 6 tasi g'oib, 6 tasi muxotab va 2 tasi mutakallimdir."
+        },
+        {
+          "savol": "«لِتُضْرَبِي» ma'nosi?",
+          "variantlar": [
+            "Urilgin, sen (ayol)",
+            "Urgin, sen (ayol)",
+            "Urilsin, u (ayol)"
+          ],
+          "togri": 0,
+          "izoh": "لِتُضْرَبِي – urilgin, sen bir ayol kishi, siyg'asi vohidai muannas, muxotabah, amr g'oib majhuli."
+        }
+      ]
+    },
+    "sarf-29": {
+      "sharh": [
+        "NAHIY — qaytariq, «urma!». Yasalishi: لَا (nahiy) + muzori' JAZM holatida: لَا تَضْرِبْ (urmagin). Nafiydan farqi (24-dars): nafiy لَا يَضْرِبُ — damma, «urmaydi» (xabar); nahiy لَا تَضْرِبْ — sukun, «urma!» (buyruq). Nahv 17-dars: «qaytariq لَا si» — jazm qiluvchi.",
+        "14 siyg'a, muxotab birinchi (chunki qaytariq asosan «sen»ga): لَا تَضْرِبْ، لَا تَضْرِبَا، لَا تَضْرِبُوا، لَا تَضْرِبِي، لَا تَضْرِبَا، لَا تَضْرِبْنَ; g'oib: لَا يَضْرِبْ (urmasin)…; mutakallim: لَا أَضْرِبْ (urmayin), لَا نَضْرِبْ (urmaylik)."
+      ],
+      "savollar": [
+        {
+          "savol": "«لَا تَضْرِبْ» va «لَا تَضْرِبُ» farqi?",
+          "variantlar": [
+            "Birinchisi nahiy — urma! (sukun); ikkinchisi nafiy — sen urmaysan (damma)",
+            "Farqi yo'q",
+            "Birinchisi majhul"
+          ],
+          "togri": 0,
+          "izoh": "Nahiy: لا تَضْرِبْ – urmagin (jazm); nafiy: لا تَضْرِبُ – urmaysan (raf')."
+        },
+        {
+          "savol": "«لَا تَضْرِبُوا» — nun nega yo'q?",
+          "variantlar": [
+            "Nahiy لَا jazm qiladi — besh misolda nun tushadi",
+            "Xato",
+            "Ko'plikda nun bo'lmaydi"
+          ],
+          "togri": 0,
+          "izoh": "Nahv 14/17: jazm nunni tushirish bilan; لا تَضْرِبُوا – urmangizlar."
+        },
+        {
+          "savol": "«لَا يَضْرِبْ» (nahiy g'oib) ma'nosi?",
+          "variantlar": [
+            "U urmasin",
+            "U urmaydi",
+            "U urmadi"
+          ],
+          "togri": 0,
+          "izoh": "لا يَضْرِبْ – urmasin u bir er kishi … ma'lumi fe'li nahiy."
+        }
+      ]
+    },
+    "sarf-30": {
+      "sharh": [
+        "Nahiy MAJHULI: لَا تَضْرِبْ → لَا تُضْرَبْ (urilmagin) — muzoraat harfi damma, oxiridan oldingisi fatha. 14 siyg'a: لَا تُضْرَبْ، لَا تُضْرَبَا، لَا تُضْرَبُوا، لَا تُضْرَبِي… لَا يُضْرَبْ (urilmasin), لَا أُضْرَبْ، لَا نُضْرَبْ.",
+        "Xulosa (17–30-darslar): majhul yasash IKKI qolip — moziy: ـُـِـَ (ضُرِبَ); muzori' asosli hamma shakllar (muzori', jahd, nafiy, amri g'oib, nahiy): muzoraat harfi ـُ + oxiridan oldingi ـَ (يُضْرَبُ). Buni bilsangiz, 5 ta majhul jadvalni yodlash shart emas — yasab olasiz."
+      ],
+      "savollar": [
+        {
+          "savol": "«لَا تُضْرَبُوا» ma'nosi?",
+          "variantlar": [
+            "Urilmanglar, sizlar",
+            "Urmanglar, sizlar",
+            "Urilmaydilar"
+          ],
+          "togri": 0,
+          "izoh": "لا تُضْرَبُوا – urilmanglar, sizlar ko'p erlar … majhuli fe'li nahiy."
+        },
+        {
+          "savol": "Muzori' asosidagi shakllarni (muzori', jahd, nafiy, amri g'oib, nahiy) majhul qilishning umumiy qoidasi?",
+          "variantlar": [
+            "Muzoraat harfi damma, oxiridan oldingisi fatha",
+            "Boshi damma, oxiridan oldingisi kasra",
+            "Har birida boshqa qoida"
+          ],
+          "togri": 0,
+          "izoh": "17–30-darslarda takrorlangan qoida; faqat moziyda kasra (ضُرِبَ)."
+        }
+      ]
+    },
+    "sarf-31": {
+      "sharh": [
+        "ISMI ZAMON va ISMI MAKON — ish bo'ladigan VAQT va JOY nomi, ikkalasi bir shaklda. Sulosiy mujarradda ikki vazn: مَفْعِل (ayn kasrali) — يَفْعِلُ bobidan (ضَرَبَ–يَضْرِبُ → مَضْرِب) va misol fe'llardan (وَعَدَ → مَوْعِد — va'da vaqti/joyi, يَسَرَ → مَيْسِر); مَفْعَل (ayn fathali) — boshqa boblardan va noqis fe'llardan (فَتَلَ → مَفْتَل, رَمَى → مَرْمًى, دَعَا → مَدْعًى).",
+        "Mazid boblarda — ismi maf'ul vaznida: مُكْرَم (hurmat joyi/vaqti = hurmat qilingan), مُدَحْرَج. Uch siyg'a (jins yo'q): مَضْرِب، مَضْرِبَانِ، مَضَارِب (ko'plik — فَعَالِل qolipi)."
+      ],
+      "savollar": [
+        {
+          "savol": "«يَضْرِبُ» (ayn kasrali bob) dan ismi makon qanday?",
+          "variantlar": [
+            "مَضْرِب — مَفْعِل vaznida",
+            "مَضْرَب — مَفْعَل",
+            "مِضْرَب"
+          ],
+          "togri": 0,
+          "izoh": "…يَفْعِلُ «ayn»i kasralik bo'lgan fe'llardan … مَفْعِل vaznida keladi. Masalan: مَضْرِبُ."
+        },
+        {
+          "savol": "«وَعَدَ» (misol fe'l) dan ismi zamon/makon?",
+          "variantlar": [
+            "مَوْعِد — misol fe'ldan مَفْعِل",
+            "مَوْعَد",
+            "مُوعَد"
+          ],
+          "togri": 0,
+          "izoh": "…hamda misol fe'li xoh «vov»lik bo'lsin, xoh «yo»lik bo'lsin مَفْعِل vaznida keladi. Masalan: مَوْعِدَ."
+        },
+        {
+          "savol": "Noqis fe'l (رَمَى) dan ismi makon qaysi vaznda?",
+          "variantlar": [
+            "مَفْعَل (ayn fathali) — مَرْمًى",
+            "مَفْعِل — مَرْمِي",
+            "مِفْعَال"
+          ],
+          "togri": 0,
+          "izoh": "يَفْعِلُ bobidan boshqa boblarda hamda noqis fe'lidan … مَفْعَل vaznida keladi. Masalan: مَرْمَىً va مَدْعَىً."
+        },
+        {
+          "savol": "Ismi zamon/makon nechta siyg'ada?",
+          "variantlar": [
+            "3: مَضْرِب، مَضْرِبَانِ، مَضَارِب",
+            "6",
+            "14"
+          ],
+          "togri": 0,
+          "izoh": "اِسْمِ زمان va اسم مكان uch siyg'ada keladi."
+        }
+      ]
+    },
+    "sarf-32": {
+      "sharh": [
+        "MIMLI MASDAR — mim bilan boshlanadigan masdar (ish nomi): sulosiy mujarradda مَفْعَل (ayn FATHALI): مَضْرَب (urmoq), مَنْصَر, مَعْلَم. Ismi makondan (مَضْرِب — ayn kasrali) faqat ayn harakati bilan farq qiladi. Mazid boblarda ismi maf'ul bilan bir xil (mushtarak): مُكْرَم — ham «hurmat qilingan», ham «hurmat qilmoq», ham «hurmat joyi» — kontekst hal qiladi."
+      ],
+      "savollar": [
+        {
+          "savol": "«مَضْرَب» (ayn fathali) va «مَضْرِب» (ayn kasrali) — qaysi biri mimli masdar?",
+          "variantlar": [
+            "مَضْرَب — masdar (urmoq); مَضْرِب — ismi zamon/makon",
+            "مَضْرِب — masdar",
+            "Ikkalasi masdar"
+          ],
+          "togri": 0,
+          "izoh": "«Mim»lik masdar sulosiy mujarraddan مَفْعَل vaznida keladi, «ayn»i fathali bo'ladi. Masalan مَضْرَبٌ."
+        },
+        {
+          "savol": "Mazid boblarda mimli masdar qaysi vaznda?",
+          "variantlar": [
+            "Ismi maf'ul vaznida (mushtarak): مُكْرَم",
+            "فَاعِل",
+            "مِفْعَال"
+          ],
+          "togri": 0,
+          "izoh": "Sulosiy mujarraddan boshqa boblarda ismi maf'ulning vaznida mushtarak keladi. Masalan: مُكْرَمُ."
+        }
+      ]
+    },
+    "sarf-33": {
+      "sharh": [
+        "ISMI OLAT — ish bajariladigan ASBOB nomi. Uch vazn, hammasi KASRALI MIM bilan: مِفْعَل (مِسْطَر — chizg'ich), مِفْعَال (مِفْتَاح — kalit, مِضْرَاب), مِفْعَلَة (مِكْنَسَة — supurgi). Eslash: «asbob — kasra» (مِـ), «joy — fatha» (مَـ).",
+        "Uch siyg'a: مِضْرَاب، مِضْرَابَانِ، مَضَارِيب (ko'plik — مَفَاعِيل)."
+      ],
+      "savollar": [
+        {
+          "savol": "«مِفْتَاح» (kalit) qaysi vaznda va nima?",
+          "variantlar": [
+            "مِفْعَال — ismi olat (asbob)",
+            "مَفْعَل — mimli masdar",
+            "مَفْعِل — ismi makon"
+          ],
+          "togri": 0,
+          "izoh": "Ismi olat sulosiy mujarraddan مِفْعَلٌ va مِفْعالُ va مِفْعَلَةٌ vaznida keladi. Masalan: مِسْطَرٌ va مِفْتاحٌ va مِكْنَسَةٌ."
+        },
+        {
+          "savol": "Ismi olatning mimi qanday harakatli?",
+          "variantlar": [
+            "Kasrali (مِـ)",
+            "Fathali (مَـ)",
+            "Dammali (مُـ)"
+          ],
+          "togri": 0,
+          "izoh": "Uchala vazn ham مِـ bilan: مِفْعَل، مِفْعَال، مِفْعَلَة."
+        }
+      ]
+    },
+    "sarf-34": {
+      "sharh": [
+        "ISMI TAFZIL — «…roq», boshqalardan ORTIQ bajaruvchi: أَضْرَب (uruvchiroq). Muzakkar vazni أَفْعَل: أَضْرَب، أَضْرَبَانِ، أَضْرَبُونَ. Muannas vazni فُعْلَى: ضُرْبَى، ضُرْبَيَانِ، ضُرْبَيَات. Jami 6 siyg'a.",
+        "Chegara: ismi tafzil faqat sulosiy mujarraddan yasaladi (mazid boblardan kelmaydi). Shu bilan 12 shaklning hammasi tugadi — kitob shu yerda «shukr» aytadi."
+      ],
+      "savollar": [
+        {
+          "savol": "«أَكْبَر» (kattaroq) qaysi vazn va shakl?",
+          "variantlar": [
+            "أَفْعَل — ismi tafzil, muzakkar",
+            "فَاعِل — ismi foil",
+            "مَفْعُول"
+          ],
+          "togri": 0,
+          "izoh": "أَضْرَبُ – uruvchiroq … siyg'asi vohid, muzakkar, ismi tafzil — أَفْعَل vaznida."
+        },
+        {
+          "savol": "Ismi tafzilning muannasi qaysi vaznda?",
+          "variantlar": [
+            "فُعْلَى — ضُرْبَى",
+            "فَاعِلَة",
+            "أَفْعَلَة"
+          ],
+          "togri": 0,
+          "izoh": "ضُرْبِى – uruvchiroq bir ayol, siyg'asi vohidah, muannas, ismi tafzil."
+        },
+        {
+          "savol": "Mazid boblardan ismi tafzil yasaladimi?",
+          "variantlar": [
+            "Yo'q — faqat sulosiy mujarraddan",
+            "Ha, hammasidan",
+            "Faqat ruboiydan"
+          ],
+          "togri": 0,
+          "izoh": "Ilova: sulosiy mujarraddan boshqa fe'llardan ismi tafzil kelgan emas."
+        }
+      ]
+    },
+    "sarf-35": {
+      "sharh": [
+        "Sarf ilmining TA'RIFI: turli ma'no uchun kalimalarning turlanishini o'rgatadigan ilm. Asoschisi — Muoz ibn Muslim al-Harro. Mavzusi — arab kalimalari; bahs qiladigan hodisalari: e'lol (illat harflarining o'zgarishi), taz'if (ikkilantirish), imola, nisbat. Maqsadi — yangi o'rganuvchini LAFZDAGI xatodan saqlash (nahv esa i'robdagi xatodan)."
+      ],
+      "savollar": [
+        {
+          "savol": "Sarf ilmining asosiy maqsadi nima?",
+          "variantlar": [
+            "O'rganuvchini so'z lafzidagi xatolardan saqlash",
+            "Gapdagi i'robni o'rgatish",
+            "Lug'at yodlatish"
+          ],
+          "togri": 0,
+          "izoh": "Bu ilmni o'qishdan asosiy maqsad mubtadilarning … zehniga lafzda bo'ladigan xatolardan saqlashdir."
+        },
+        {
+          "savol": "Sarf ilmini birinchi kim ijod qilgan?",
+          "variantlar": [
+            "Muoz ibn Muslim al-Harro",
+            "Sibavayh",
+            "Imom Ali"
+          ],
+          "togri": 0,
+          "izoh": "Bu fanni birinchi ijod qilgan Mu'oz ibn Musliminil-Harrodir."
+        }
+      ]
+    },
+    "sarf-36": {
+      "sharh": [
+        "Sulosiy mujarrad OLTI BOBga bo'linadi — moziy va muzori'ning AYN harakatiga qarab. BIRINCHI BOB: فَعَلَ – يَفْعِلُ (moziyda ayn fatha, muzori'da kasra): ضَرَبَ – يَضْرِبُ. Bu darsdagi jadval — birinchi bobning to'liq «xaritasi»: barcha 12 shakl 14 siyg'ada, ma'lum va majhul yonma-yon.",
+        "Jadvalni o'qish: ustunlar — moziy ma'lum/majhul, muzori' ma'lum/majhul; keyin ismi foil/maf'ul, jahd; nafiy, amr, amri g'oib; nahiy; ismi zamon-makon, olat, tafzil. Qatorlar — siyg'alar (u, ikkisi, ular, u ayol…). Har katakni oldingi darslardagi qoida bilan tekshirib chiqing — bu eng yaxshi takror."
+      ],
+      "savollar": [
+        {
+          "savol": "Birinchi bobning belgisi nima?",
+          "variantlar": [
+            "Moziyda ayn fathali, muzori'da kasrali: فَعَلَ – يَفْعِلُ",
+            "Moziyda kasra, muzori'da fatha",
+            "Ikkalasida damma"
+          ],
+          "togri": 0,
+          "izoh": "Birinchi bob: فَعَلَ – يَفْعِلُ (ضَرَبَ – يَضْرِبُ) tarzida bo'ladi."
+        },
+        {
+          "savol": "Sulosiy mujarrad necha bob?",
+          "variantlar": [
+            "Olti",
+            "Uch",
+            "O'n ikki"
+          ],
+          "togri": 0,
+          "izoh": "Sulosiy mujarrad olti bobdir — birinchi bob."
+        }
+      ]
     }
   }
 }

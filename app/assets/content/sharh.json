@@ -4294,6 +4294,548 @@
           "izoh": "ي mutaharrik moqabli maftuh bo'lgani uchun يni alifga qalb qildik. نَالَ aslida نَيِلَ edi."
         }
       ]
+    },
+    "sarf-69": {
+      "sharh": [
+        "E'lol qoidalarining davomi: ALIFNI VOVGA qalb (1) — alif oldida damma bo'lsa → و (ضُورِبَ ← ضَارَبَ ning majhuli ضُاْرِبَ). TASKIN (4): 1) faqat taskin — harakat tashlanadi (يَرْمِي ← يَرْمِيُ); 2) taskin+naql (يَبِيعُ ← يَبْيِعُ); 3) taskin+naql+hazf (يَبِعْنَ ← يَبْيِعْنَ); 4) taskin+naql+qalb (أَقَامَ ← أَقْوَمَ).",
+        "HAZF (5): 1) و kasra (haqiqiy) bilan hamza/nun orasida — أَثِبُ، نَثِبُ ← أَوْثِبُ; 2) و taqdiriy (faraziy) kasra bilan hamza/nun orasida — أَضَعُ ← أَوْضَعُ (يَضَعُ aslida يَوْضِعُ, ayn fathaga o'tgan); 3) و muzoraat harfi bilan haqiqiy kasra orasida — يَثِبُ; 4) و muzoraat harfi bilan taqdiriy kasra orasida — يَضَعُ; 5) sukunli illat harfi boshqa sukunli harfga yo'liqsa tushadi — بِعْ ← بِيعْ, قُلْ ← قُولْ. 25 qoida: qalb 14 + naql 1 + taskin 4 + hazf 5 + idg'om 1.",
+        "IKKINCHI BOB: فَعَلَ – يَفْعُلُ (moziyda ayn fatha, muzori'da DAMMA): نَصَرَ – يَنْصُرُ (yordam bermoq). Masdari 15 vaznda (نَصْر، طَلَب، نَبَات، حِرَاسَة…). 12 shakl: نَصَرَ، يَنْصُرُ، نَاصِر، مَنْصُور، لَمْ يَنْصُرْ، لَا يَنْصُرُ، اُنْصُرْ (hamza DAMMALI — ayn dammali bob!), لِيَنْصُرْ، لَا تَنْصُرْ، مَنْصَر (ismi zamon/makon — مَفْعَل, ayn fathali, chunki يَفْعِلُ bobidan emas), مِنْصَار، أَنْصَر."
+      ],
+      "savollar": [
+        {
+          "savol": "«يَضَعُ» (qo'yadi) da و nega tushgan — ayn fathali-ku?",
+          "variantlar": [
+            "Kasra taqdiriy (faraziy): asli يَوْضِعُ, ayn tomoq harfi sababli fathaga o'tgan — hazfning 4-qoidasi",
+            "Xato — و tushmasligi kerak",
+            "Chunki majhul"
+          ],
+          "togri": 0,
+          "izoh": "Vov kelsa, harfi muzoraat bilan kasrai taqdiriy orasida vovni hazf qilinadi. يَضَعُ va تَضَعُ aslida يَوْضَعُ va تَوْضَعُ edi."
+        },
+        {
+          "savol": "«قُلْ» (ayt!) da و qaysi qoida bilan tushdi?",
+          "variantlar": [
+            "Sukunli illat harfi boshqa sukunli harfga yo'liqdi (مُلاقاة المعتل الساكن ساكنًا)",
+            "Kasra oldida",
+            "Muzoraat harfi oldida"
+          ],
+          "togri": 0,
+          "izoh": "…harfi illat o'zi sokin bo'lib, o'zga sokinlik harfga yo'liqib qolsa, shunday harfi illatni hazf qilinadi. بِعْ aslida بِيْعْ va قُلْ aslida قُوْلْ edi."
+        },
+        {
+          "savol": "Ikkinchi bobning belgisi va amr hamzasi?",
+          "variantlar": [
+            "فَعَلَ – يَفْعُلُ (muzori'da ayn damma); amr hamzasi dammali: اُنْصُرْ",
+            "فَعَلَ – يَفْعِلُ; اِنْصُرْ",
+            "فَعِلَ – يَفْعَلُ"
+          ],
+          "togri": 0,
+          "izoh": "Mozijda ayni fathali va muzore'da ayni zammali فَعَلَ – يَفْعُلُ bobidir … Ayni fe'liga qaradik. Zammalik ekan. Avvaliga zammalik hamza keltirdik اُنْصُرْ bo'ldi."
+        },
+        {
+          "savol": "«أَقَامَ» (turg'izdi) asli va qoidasi?",
+          "variantlar": [
+            "أَقْوَمَ — taskin + naql + qalb (و ning harakati ق ga, و alifga)",
+            "أَقَيَمَ",
+            "أَقْيَمَ"
+          ],
+          "togri": 0,
+          "izoh": "4. Taskin ma'annaqli val qalbi. أَقَامَ aslida أَقْوَمَ edi."
+        }
+      ]
+    },
+    "sarf-70": {
+      "sharh": [
+        "Ikkinchi bob amri: اُنْصُرْ، اُنْصُرَا، اُنْصُرُوا، اُنْصُرِي، اُنْصُرَا، اُنْصُرْنَ — hamma siyg'ada dammali hamza. MUZOAF misoli: رَدَّ – يَرُدُّ (qaytarmoq), masdari رَدّ، مَرَدَّة. 12 shakl: رَدَّ، يَرُدُّ، رَادّ، مَرْدُود، لَمْ يَرُدَّ، لَا يَرُدُّ، رُدَّ، لِيَرُدَّ، لَا تَرُدَّ، مَرَدّ، مِرْدَاد، أَرَدّ.",
+        "E'loli فَرَّ bilan bir xil, faqat ayn DAMMALI: لَمْ يَرُدَّ (asli لَمْ يَرْدُدْ): birinchi د ning dammasi ر ga ko'chdi → ikki sukun → ikkinchi د ga DAMMA (bobga muvofiq — kitob shuni ta'kidlaydi: لَمْ يَرُدُّ) yoki fatha (لَمْ يَرُدَّ) yoki kasra (لَمْ يَرُدِّ) yoki asliga (لَمْ يَرْدُدْ) — TO'RT xil! (1-bobda uch xil edi, 26-dars.)"
+      ],
+      "savollar": [
+        {
+          "savol": "«لَمْ يَرُدّ» (qaytarmadi) necha xil o'qilishi mumkin va nega 1-bobdan ko'p?",
+          "variantlar": [
+            "To'rt: damma (bobga muvofiq), fatha, kasra, asliga — ayn dammali bob bo'lgani uchun damma ham joiz",
+            "Uch — فَرَّ kabi",
+            "Bir"
+          ],
+          "togri": 0,
+          "izoh": "…ikkinchi dolga zamma harakatini berdik. Ayn bobiga muvofiq qilmoq uchun … لَمْ يَرُدُّ bo'ldi. Istasak … kasra … yoki o'z asliga qaytarib لَمْ يَرْدُدْ."
+        },
+        {
+          "savol": "«رَدَّ» ning ismi maf'uli?",
+          "variantlar": [
+            "مَرْدُود — idg'omsiz (و oraga tushgan)",
+            "مَرَدّ",
+            "مَرْدُدّ"
+          ],
+          "togri": 0,
+          "izoh": "مَرْدُودٌ ismi maf'ul — مَفْرُور kabi, bir jinsli harflar orasiga و tushgan."
+        }
+      ]
+    },
+    "sarf-71": {
+      "sharh": [
+        "Muzoaf 2-bob majhuli — ma'lum kabi, lekin UCH xil o'qish (damma emas): لَمْ يُرَدَّ / لَمْ يُرَدِّ / لَمْ يُرْدَدْ — chunki majhulda ayn FATHALI, «bobga muvofiq damma» sababi yo'q. AMRI HOZIR: رُدَّ، رُدَّا، رُدُّوا، رُدِّي، رُدَّا، اُرْدُدْنَ.",
+        "رُدَّ ni olish: تَرُدُّ → oxiri idg'omli, dammadan fathaga (تَرُدَّ) → ت tushadi → ر harakatli → amr tayyor: رُدَّ. Asli اُرْدُدْ: dammasi ر ga → ikki sukun → ikkinchi د ga damma (bobga muvofiq) → idg'om اُرُدُّ → hamza kerakmas → رُدُّ. Kasra bilan رُدِّ, fatha bilan رُدَّ, asliga اُرْدُدْ — hammasi joiz."
+      ],
+      "savollar": [
+        {
+          "savol": "Majhul «لَمْ يُرَدّ» nega to'rt emas, uch xil o'qiladi?",
+          "variantlar": [
+            "Majhulda ayn fathali — «bobga muvofiq damma» sababi yo'q; damma o'qilmaydi",
+            "Majhulda idg'om yo'q",
+            "Xato"
+          ],
+          "togri": 0,
+          "izoh": "…majhulida uch xil o'qish durustdir. Fatha va kasra va taskin zamma o'qilmaydi. Zero, majhulda ayni fe'l fatha bo'ladi."
+        },
+        {
+          "savol": "«رُدَّ» (qaytar!) qanday variantlarda aytish joiz?",
+          "variantlar": [
+            "اُرْدُدْ، رُدِّ، رُدَّ (va رُدُّ)",
+            "Faqat رُدَّ",
+            "Faqat اُرْدُدْ"
+          ],
+          "togri": 0,
+          "izoh": "Demak, اُرْدُدْ، رُدِّ، رُدَّ desak ham joizdir."
+        }
+      ]
+    },
+    "sarf-72": {
+      "sharh": [
+        "رُدَّ ga ta'kid nuni: xafifa رُدَّنْ، رُدُّنْ، رُدِّنْ; saqila رُدَّنَّ، رُدَّانِّ، رُدُّنَّ، رُدِّنَّ، رُدَّانِّ، اُرْدُدْنَانِّ. Amri g'oib ma'lumi 8 siyg'a: لِيَرُدَّ، لِيَرُدَّا، لِيَرُدُّوا، لِتَرُدَّ، لِتَرُدَّا، لِيَرْدُدْنَ، لِأَرُدَّ، لِنَرُدَّ — لِيَفِرَّ kabi (asli لِيَرْدُدْ → naql → ikki sukun → damma/fatha/kasra/asl). Majhuli: لِتُرَدَّ… لِيُرَدَّ… لِأُرَدَّ، لِنُرَدَّ."
+      ],
+      "savollar": [
+        {
+          "savol": "«لِيَرُدَّ» (qaytarsin) asli?",
+          "variantlar": [
+            "لِيَرْدُدْ — birinchi د dammasi ر ga, ikki sukun, ikkinchi د ga harakat, idg'om",
+            "لِيَرُدُّ — asli shu",
+            "لِيَرْدَدْ"
+          ],
+          "togri": 0,
+          "izoh": "لِيَرُدَّ aslida لِيَرُدُدْ [لِيَرْدُدْ] edi. Birinchi dolni harakatini moqabliga berdik … ikkinchi dolga zamma berdik … idg'om qildik."
+        }
+      ]
+    },
+    "sarf-73": {
+      "sharh": [
+        "Nahiy — jahd kabi (faqat nahiyda ta'kid nuni ko'proq ishlatiladi: لَا تَرُدَّنَّ). Ismlar: مَرَدّ، مَرَدَّانِ، مَرَادّ (zamon/makon), مِرْدَاد، مَرَادِيد (olat), أَرَدّ، رُدَّى (tafzil).",
+        "2-bobning MISOLI VOVIYSI: وَصَّ – يَوُصُّ (ishni mustahkam qilmoq) — ham misol (fo و), ham muzoaf. 12 shakl: وَصَّ، يَوُصُّ، وَاصّ، مَوْصُوص، لَمْ يَوُصَّ، لَا يَوُصُّ، وُصَّ، لِيَوُصَّ، لَا تَوُصَّ، مَوَصّ، مِيصَاص، أَوَصّ. Diqqat: muzori'da و TUSHMAYDI (يَوُصُّ) — chunki muzoraat harfi bilan KASRA orasida emas (ayn dammali)."
+      ],
+      "savollar": [
+        {
+          "savol": "«يَوُصُّ» da و nega tushmadi (يَثِبُ da tushgan edi)?",
+          "variantlar": [
+            "Hazf sharti — و muzoraat harfi bilan KASRA orasida bo'lishi; bu yerda ayn dammali",
+            "Muzoafda و tushmaydi",
+            "Xato"
+          ],
+          "togri": 0,
+          "izoh": "48-dars qoidasi: «harfi muzoraat bilan kasrai tahqiqiy orasida vov» — يَوُصُّ da kasra yo'q."
+        },
+        {
+          "savol": "Nahiy jahddan qaysi jihatda farq qiladi (kitob bo'yicha)?",
+          "variantlar": [
+            "Nahiyda ta'kid nunlari ko'proq ishlatiladi",
+            "Nahiyda idg'om yo'q",
+            "Farqi yo'q"
+          ],
+          "togri": 0,
+          "izoh": "Uni shunchalik farqi borki, fe'li jahdga ko'ra fe'li nahiyda nuni ta'kidi hafifa va saqila ko'proq ishlaydi."
+        }
+      ]
+    },
+    "sarf-74": {
+      "sharh": [
+        "وَصَّ hamma joyda رَدَّ kabi; faqat ismi olatda o'zgarish: مِيصَاص (asli مِوْصَاص — sukunli و oldida kasra → ي); ko'pligi مَوَاصِيص — asliga (و oldida fatha).",
+        "Muallifning hikoyasi va ILMIY XULOSA: ko'p sarf kitoblari 2-bob misoli voviysiga وَدَّ – يَوَدُّ ni keltiradi, lekin bu XATO — Qur'onda يَوَدُّ ayn FATHALI (4-bob, عَلِمَ bobi). Muallif do'sti Abdulazizqori e'tirozidan keyin lug'atlarni tekshirib, نَصَرَ bobidan kelmasligini aniqlagan va o'rniga وَصَّ – يَوُصُّ ni yozgan. «TADOXULI BOBAYN» — bir fe'lning ikki bobdan kelishi (فَضَلَ – يَفْضُلُ / فَضِلَ – يَفْضَلُ, hatto aralash فَضِلَ – يَفْضُلُ). Saboq: qoidani lug'at bilan tekshirish — ilmiy halollik."
+      ],
+      "savollar": [
+        {
+          "savol": "Muallif nega وَدَّ – يَوَدُّ ni misol qilib keltirmadi?",
+          "variantlar": [
+            "Lug'atlarda 2-bob (يَوُدُّ) dan kelmagan — Qur'onda يَوَدُّ ayn fathali; o'rniga وَصَّ – يَوُصُّ yozdi",
+            "Ma'nosi noqulay",
+            "Muzoaf emas"
+          ],
+          "togri": 0,
+          "izoh": "Qur'oni karimda يَوَدُّ ayni zammasi bilan kelmagan … lug'at kitoblarini qidirdik. نَصَرَ bobidan kelmabdir … وَصَّ – يَوُصُّ bor ekan."
+        },
+        {
+          "savol": "«Tadoxuli bobayn» nima?",
+          "variantlar": [
+            "Bir fe'lning ikki bobdan kelishi (فَضَلَ – يَفْضُلُ va فَضِلَ – يَفْضَلُ)",
+            "Ikki bobning bir jadvalda berilishi",
+            "Ikki masdar"
+          ],
+          "togri": 0,
+          "izoh": "…ba'zi fe'llar ikki bobdan ham keladi. Chunonchi فَضَلَ – يَفْضُلُ kabi نَصَرَ bobidan va فَضِلَ – يَفْضَلُ kabi عَلِمَ bobidan … تَدَاخُلُ بَابَيْنِ."
+        },
+        {
+          "savol": "«مِيصَاص» da ي asli nima?",
+          "variantlar": [
+            "و — sukunli, oldida kasra → ي (asli مِوْصَاص)",
+            "ي asliy",
+            "Alif"
+          ],
+          "togri": 0,
+          "izoh": "مِيْصاصٌ … aslida مِوْصاصٌ bo'lgan. Vov sokin moqabli maqsur bo'lgani uchun vovni يga qalb qildik."
+        }
+      ]
+    },
+    "sarf-75": {
+      "sharh": [
+        "Yana bir ilmiy tuzatish: مَاتَ ning asli مَيِتَ (ayn kasrali) deb yozilgan edi; sherigi Abdurazzoq Toshkandiy so'raganda muallif lug'atlarni tekshirib, aslida مَيَتَ (fathali) va مَاتَ – يَمُوتُ / يَمَاتُ ekanini topgan; misolni نَالَ (asli نَيِلَ — تَعِبَ bobidan, lug'atda bor) ga almashtirgan. Buxoro ustozlari 25 mashhur qoidani shu tartibda o'qitgan.",
+        "2-bobning AJVAFI: دَامَ – يَدُومُ (davom etmoq), masdari دَوْم، دَوَام، مُدَام. 12 shakl: دَامَ، يَدُومُ، دَائِم، مَدُوم، لَمْ يَدُمْ، لَا يَدُومُ، دُمْ، لِيَدُمْ، لَا تَدُمْ، مَدَام، مِدَام، أَدْوَم. Diqqat: vovli ajvaf — بَاعَ (yoli) bilan bir xil qoidalar, lekin tushgan harf evaziga DAMMA (دُمْتُ), بَاعَ da kasra (بِعْتُ) edi."
+      ],
+      "savollar": [
+        {
+          "savol": "Muallif مَاتَ misolini nega نَالَ ga almashtirdi?",
+          "variantlar": [
+            "Lug'atda مَاتَ ning asli مَيِتَ (kasrali) kelmagan; نَالَ ning asli نَيِلَ lug'atda bor",
+            "مَاتَ ma'nosi yoqimsiz",
+            "نَالَ osonroq"
+          ],
+          "togri": 0,
+          "izoh": "Lug'at kitoblarni tekshirishda ma'lum bo'ldiki, 'ayn kasrasi bilan kelmagan … Shunga binoan مَاتَ ni o'rniga نَالَ yozdik. Zero, نَالَ ni asli نَيِلَ ekan."
+        },
+        {
+          "savol": "«دَامَ» qaysi bob va qaysi tur?",
+          "variantlar": [
+            "2-bob (يَدُومُ — ayn damma), vovli ajvaf",
+            "1-bob, yoli ajvaf",
+            "2-bob, misol"
+          ],
+          "togri": 0,
+          "izoh": "Bu bobning أجوف ga misol: دَام – يَدُومُ."
+        }
+      ]
+    },
+    "sarf-76": {
+      "sharh": [
+        "دَامَ moziysi: دَامَ، دَامَا، دَامُوا، دَامَتْ، دَامَتَا (asli دَوَمَ — harakatli و, oldida fatha → alif), keyin 9 siyg'ada ayn tushgan: دُمْنَ، دُمْتَ … دُمْتُ، دُمْنَا. دُمْنَ asli دَوَمْنَ → و alifga → alif va م ikki sukun → alif tushdi → دَمْنَ → tushgan و ga ishora uchun د ga DAMMA → دُمْنَ. (بِعْنَ da tushgan ي ga ishora uchun kasra edi — mantiq bir xil.)",
+        "Majhuli: دَوَمَ → دَوِمَ → دُوِمَ → kasra و ga og'ir, د ga ko'chdi → دِوْمَ → sukunli و oldida kasra → ي: دِيمَ (davom ettirildi). Kitob boshqa fikrni («avval و ga damma berib, keyin naql») zaif deb belgilaydi."
+      ],
+      "savollar": [
+        {
+          "savol": "«دُمْتُ» (davom etdim) da د nega dammali (بِعْتُ da kasra edi)?",
+          "variantlar": [
+            "Tushgan harf و — unga ishora uchun damma; بِعْتُ da tushgan ي ga ishora uchun kasra",
+            "Bob dammali bo'lgani uchun",
+            "Tasodif"
+          ],
+          "togri": 0,
+          "izoh": "…دَمْنَ bo'ldi. So'ngra dolni fathasini zammaga badal qildik. Vovi mahzufaga dalolat qilmoqligi uchun دُمْنَ bo'ldi."
+        },
+        {
+          "savol": "«دِيمَ» (majhul) da ي qayerdan?",
+          "variantlar": [
+            "دُوِمَ → kasra د ga ko'chdi → sukunli و oldida kasra → ي",
+            "ي asliy",
+            "Alif ي ga aylandi"
+          ],
+          "togri": 0,
+          "izoh": "…دُوِمَ bo'ldi. Kasra vovga og'ir vovni kasrasini moqabliga berdik … دِوْمَ bo'lib, vov sokin moqabli maqsur vovni يga qalb qildik دِيْمَ bo'ldi."
+        }
+      ]
+    },
+    "sarf-77": {
+      "sharh": [
+        "Majhul moziy tuslanishi: دِيمَ، دِيمَا، دِيمُوا، دِيمَتْ، دِيمَتَا, keyin دُمْنَ، دُمْتَ… (asli دُوِمْنَ — kasra tashlandi, و va م ikki sukun → و tushdi). 9 siyg'ada ma'lum va majhul bir xil (دُمْنَ) — asli boshqa: ma'lum دَوَمْنَ, majhul دُوِمْنَ.",
+        "MUZORI' يَدُومُ (asli يَدْوُمُ — damma و ga og'ir, د ga ko'chdi — «naql faqat»); ayollar ko'pligi يَدُمْنَ، تَدُمْنَ (naql + hazf: يَدُوْمْنَ → و tushdi)."
+      ],
+      "savollar": [
+        {
+          "savol": "«يَدُمْنَ» (ayollar davom etadilar) qaysi qoida?",
+          "variantlar": [
+            "Naql + hazf: damma د ga ko'chdi, و va م ikki sukun — و tushdi",
+            "Faqat naql",
+            "Qalb"
+          ],
+          "togri": 0,
+          "izoh": "يَدُمْنَ aslida يَدْوُمْنَ … zammasini oldindagi harfga berdik يَدُوْمْنَ bo'lib, ijtimoi sokinayn hosil bo'ldi … vovni hazf qildik. النَّقْلُ مَعَ الْحَذَفِ."
+        },
+        {
+          "savol": "Moziyda «دُمْنَ» ma'lummi yoki majhul?",
+          "variantlar": [
+            "Ikkalasi bo'lishi mumkin — 9 siyg'ada mushtarak (asli دَوَمْنَ / دُوِمْنَ)",
+            "Faqat ma'lum",
+            "Faqat majhul"
+          ],
+          "togri": 0,
+          "izoh": "Ushbu 9-siyg'ada ma'lum va majhul mushtarakdir."
+        }
+      ]
+    },
+    "sarf-78": {
+      "sharh": [
+        "Muzori' MAJHULI يُدَامُ: يَدْوُمُ → يَدْوَمُ → يُدْوَمُ → و ning fathasi د ga (naql) → sukunli و aslida harakatli edi, oldi fathali → ALIF: يُدَامُ («naql + qalb»). Ayollar ko'pligi يُدَمْنَ (naql + qalb + hazf). ISMI FOIL دَائِم (asli دَاوِم — zoid alifdan keyingi و → hamza)."
+      ],
+      "savollar": [
+        {
+          "savol": "«دَائِم» (doimiy) da hamza asli nima?",
+          "variantlar": [
+            "و — zoid alifdan keyin kelgani uchun hamzaga qalb (asli دَاوِم)",
+            "ي",
+            "Hamza asliy"
+          ],
+          "togri": 0,
+          "izoh": "دَائِمٌ aslida دَاوِمٌ edi. Vov kelgani uchun alifi zoidadan keyin vovni hamzaga qalb qildik."
+        },
+        {
+          "savol": "«يُدَامُ» yasalishida qaysi qoidalar?",
+          "variantlar": [
+            "Naql (و fathasi د ga) + qalb (و alifga)",
+            "Faqat qalb",
+            "Hazf"
+          ],
+          "togri": 0,
+          "izoh": "…vovni harakatini moqabliga naql qilib berdik … oldi fathali bo'ldi deb, vovni alifga qalb qildik يُدَامُ bo'ldi. النقلُ مَعَ القَلْبِ."
+        }
+      ]
+    },
+    "sarf-79": {
+      "sharh": [
+        "ISMI MAF'UL مَدُوم (asli مَدْوُوم — damma و ga og'ir, د ga ko'chdi → ikki و sukunli → biri tushdi; Axfash: birinchisi, Sibavayh: ikkinchisi — natija bir). JAHD لَمْ يَدُمْ (asli لَمْ يَدْوُمْ — naql + hazf); 7 siyg'ada ayn tushgan (g'oib, g'oiba, g'oibot, muxotab, muxotabot, 2 mutakallim); لَمْ يَدُومَا، لَمْ يَدُومُوا — faqat naql. Majhul jahd لَمْ يُدَمْ (naql + qalb + hazf), لَمْ يُدَامَا (alif qoladi).",
+        "Umumiy: nafiy — muzori' kabi; nahiy va amri g'oib — jahd kabi. Bu qoida butun sarfda: «jahdni bil — uchtasini bilasan»."
+      ],
+      "savollar": [
+        {
+          "savol": "«مَدُوم» (davom ettirilgan) asli nima va nima bo'ldi?",
+          "variantlar": [
+            "مَدْوُوم — damma د ga ko'chdi, ikki sukunli و dan biri tushdi",
+            "مَدْيُوم",
+            "مَدُوم — asli shu"
+          ],
+          "togri": 0,
+          "izoh": "مَدُومُ aslida مَدْوُوْمُ edi … ijtimoi sokinayn hosil bo'ldi. Ikki vov orasida bir vovni hazf qildik مَدُوْمُ bo'ldi."
+        },
+        {
+          "savol": "«لَمْ يَدُمْ» va «لَمْ يَدُومَا» — nega birida و tushgan, birida yo'q?",
+          "variantlar": [
+            "Birlikda oxir sukunli — ikki sukun to'qnashdi (و tushdi); ikkilikda harakatli alif bor — faqat naql",
+            "Ikkilikda و doim qoladi",
+            "Xato"
+          ],
+          "togri": 0,
+          "izoh": "7-siyg'ada ayni fe'l mahzufdir … qolganlarida ijtimoi sokinayn yo'q."
+        }
+      ]
+    },
+    "sarf-80": {
+      "sharh": [
+        "AMRI HOZIR دُمْ (davom et!): تَدُومُ → oxiri sukun تَدُومْ → و va م ikki sukun → و tushdi تَدُمْ → ت tushdi → دُمْ harakatli — hamza kerakmas. Asli اُدْوُمْ (dammali hamza — 2-bob): naql → hazf → hamza ortiqcha → دُمْ. 6 siyg'a: دُمْ، دُومَا، دُومُوا، دُومِي، دُومَا، دُمْنَ. Ta'kid nuni bilan tushgan و qaytadi: دُومَنْ، دُومَنَّ."
+      ],
+      "savollar": [
+        {
+          "savol": "«دُمْ» ga ta'kid nuni qo'shilsa?",
+          "variantlar": [
+            "دُومَنَّ — tushgan و qaytadi (م harakatli, ikki sukun yo'q)",
+            "دُمَنَّ",
+            "دُمْنَّ"
+          ],
+          "togri": 0,
+          "izoh": "Nuni ta'kidi xofifah bilan: دُومِنْ، دُومُنْ، دُومَنْ va saqila bilan … دُومَنَّ bo'ldi."
+        },
+        {
+          "savol": "«دُمْ» da hamza nega yo'q?",
+          "variantlar": [
+            "و tushgach د harakatli — sukun bilan boshlanmaydi, hamza kerakmas (asli اُدْوُمْ)",
+            "2-bobda hamza bo'lmaydi",
+            "Xato"
+          ],
+          "togri": 0,
+          "izoh": "…اُدُمْ bo'ldi. «Moba'di» mutaharrik bo'lgandan keyin hamza bizga kerak bo'lmay qoldi. Shuning uchun hamzani hazf qildik دُمْ bo'ldi."
+        }
+      ]
+    },
+    "sarf-81": {
+      "sharh": [
+        "دَامَ ismlari: zamon/makon مَدَام (asli مَدْوَم — naql + qalb: و fathasi د ga, و alifga), ko'pligi مَدَائِم (دَائِم kabi hamza); olat مِدَام (xuddi shunday); tafzil أَدْوَم (ajvaf tafzilida و saqlanadi), muannasi دُومَى.",
+        "2-bobning NOQISI: دَعَا – يَدْعُو (chaqirmoq), masdari دَعْوَة (oshga), دِعْوَة (nasabga). 12 shakl: دَعَا، يَدْعُو، دَاعٍ، مَدْعُوّ، لَمْ يَدْعُ، لَا يَدْعُو، اُدْعُ، لِيَدْعُ، لَا تَدْعُ، مَدْعًى، مِدْعًى / مِدْعَاة / مِدْعَاء، أَدْعَى. Bu — VOVLI noqis (رَمَى yoli edi)."
+      ],
+      "savollar": [
+        {
+          "savol": "«مَدَام» (davom joyi) asli?",
+          "variantlar": [
+            "مَدْوَم — و fathasi د ga ko'chib, و alifga aylandi",
+            "مَدْيَم",
+            "مَدَام — asli shu"
+          ],
+          "togri": 0,
+          "izoh": "مَدَامٌ aslida مَدْوَمٌ edi … vovni harakatini oldindagi harfga berdik مَدَوْمٌ bo'ldi … vovni alifga qalb qildik مَدَامُ bo'ldi."
+        },
+        {
+          "savol": "«دَعَا» (chaqirdi) qaysi tur va lom harfi nima?",
+          "variantlar": [
+            "Vovli noqis — lom و (يَدْعُو)",
+            "Yoli noqis — lom ي",
+            "Ajvaf"
+          ],
+          "togri": 0,
+          "izoh": "Bu bobning ناقص ga misol: دَعَا – يدْعُوْ."
+        }
+      ]
+    },
+    "sarf-82": {
+      "sharh": [
+        "دَعَا moziysi: دَعَا (asli دَعَوَ — harakatli و, oldida fatha → alif), دَعَوَا (ikkilik — و saqlanadi, chunki keyin alif harakatli), دَعَوْا (asli دَعَوُوا → alif → ikki sukun → alif tushdi), دَعَتْ، دَعَتَا (alif tushgan), دَعَوْنَ، دَعَوْتَ … (و sukunli — saqlanadi).",
+        "IMLO QOIDASI: و dan aylangan alif ALIF shaklida yoziladi (دَعَا), ي dan aylangan alif ي (ى) shaklida yoziladi (رَمَى). Shuning uchun yozuvdan asl harfni bilib olasiz: ـا → و, ـى → ي. «Oriz — yo'qdek» (اَلْعَارِضُ كَالْمَعْدُومِ): دَعَتَا da ت ning fathasi keyin paydo bo'lgan (asli sukun) — shuning uchun alif baribir tushadi."
+      ],
+      "savollar": [
+        {
+          "savol": "«دَعَا» alif bilan, «رَمَى» yo bilan yozilishining sababi?",
+          "variantlar": [
+            "و dan aylangan alif — alif shaklida; ي dan aylangan alif — ى shaklida",
+            "Tasodifiy imlo",
+            "Ma'nosiga qarab"
+          ],
+          "togri": 0,
+          "izoh": "Qoida: vovdan qalb topgan alifni alif suratida yoziladi. دَعَا – يَدْعُو kabi. يdan qalb topgan alifni ي suratida yoziladi. رَمَى kabi."
+        },
+        {
+          "savol": "«دَعَتَا» da ت fathali — nega alif baribir tushdi?",
+          "variantlar": [
+            "ت ning fathasi oriz (keyin paydo bo'lgan), asli sukun — oriz yo'q hisoblanadi",
+            "Alif tushmagan",
+            "Xato"
+          ],
+          "togri": 0,
+          "izoh": "Zero, toi tanisning harakati asliy emas … العارِضُ كَالْمَعْدُومِ degan qoidaga suyanamiz."
+        }
+      ]
+    },
+    "sarf-83": {
+      "sharh": [
+        "دَعَا MAJHULI دُعِيَ (chaqirildi): asli دُعِوَ — so'z oxiridagi و, oldida kasra → ي («qalb faqat» — 13 siyg'ada). دُعُوا (asli دُعِوُوا → و ي ga → damma ي ga og'ir, ع ga → ikki sukun → ي tushdi). MUZORI' يَدْعُو (asli يَدْعُوُ — damma tashlandi: «taskin faqat»); يَدْعُونَ، تَدْعُونَ (ikki و — birinchisi tushdi); تَدْعِينَ (kasra و ga og'ir → ع ga → sukunli و oldida kasra → ي → ikki ي → biri tushdi)."
+      ],
+      "savollar": [
+        {
+          "savol": "«دُعِيَ» da ي asli nima?",
+          "variantlar": [
+            "و — so'z oxirida, oldida kasra → ي (asli دُعِوَ)",
+            "ي asliy",
+            "Alif"
+          ],
+          "togri": 0,
+          "izoh": "دُعِيَ aslida دُعِوَ edi. Kalimaning lomi barobarida kasradan keyin kelgan vovni يga qalb qildik."
+        },
+        {
+          "savol": "«يَدْعُونَ» (chaqiradilar) — nima bo'lgan?",
+          "variantlar": [
+            "يَدْعُوُونَ — damma tashlandi, ikki sukunli و — birinchisi tushdi",
+            "Hech narsa",
+            "و alifga aylandi"
+          ],
+          "togri": 0,
+          "izoh": "يَدْعُونَ aslida يَدْعُوُوْنَ edi … vovni zammasini tashladik يَدْعُوْوْنَ bo'lib, ijtimoi sokinayn hosil bo'ldi. Ikki vov orasida avvalgi vovni hazf qildik."
+        },
+        {
+          "savol": "«تَدْعِينَ» (sen ayol chaqirasan) da و qayerga ketdi?",
+          "variantlar": [
+            "Kasrasi ع ga ko'chdi → sukunli و oldida kasra → ي → ikki ي → biri tushdi",
+            "و tushdi, xolos",
+            "و alifga"
+          ],
+          "togri": 0,
+          "izoh": "تَدْعِيْنَ aslida تَدْعُوِيْنَ edi … تَدْعِوْيْنَ bo'ldi. Vov sokin oldi kasrali … vovni يga qalb qildik تَدْعِيْيْنَ … avvlagi يni hazf qildik."
+        }
+      ]
+    },
+    "sarf-84": {
+      "sharh": [
+        "Muzori' MAJHULI يُدْعَى: يَدْعُوُ → يَدْعَوُ → يُدْعَوُ → و so'zning 4-HARFI o'rnida, oldida damma emas → ي (qalb qoidasi 4) → يُدْعَيُ → harakatli ي, oldida fatha → alif → يُدْعَى. Shuning uchun vovli noqisning majhuli ham ى bilan tugaydi — yoli bilan bir xil (يُرْمَى). يُدْعَوْنَ، تُدْعَوْنَ (ikki qalb + alif tushishi)."
+      ],
+      "savollar": [
+        {
+          "savol": "«يُدْعَى» oxirida ى — asli و edi. Necha qalb bo'ldi?",
+          "variantlar": [
+            "Ikki: و → ي (4-harf, damma yo'q), keyin ي → alif (fatha oldida)",
+            "Bir: و → alif",
+            "Hech qanday"
+          ],
+          "togri": 0,
+          "izoh": "…vovni يga qalb qildik يُدْعَيُ bo'ldi. ي mutaharrik moqabli maftuh bo'lgani uchun يni alifga qalb qildik يُدْعى bo'ldi."
+        }
+      ]
+    },
+    "sarf-85": {
+      "sharh": [
+        "ISMI FOIL دَاعٍ (chaqiruvchi): asli دَاعِو → oxirdagi و kasradan keyin → ي (دَاعِي) → damma tashlandi → ي va tanvin → ي tushdi → دَاعٍ (رَامٍ bilan bir xil natija). ISMI MAF'UL مَدْعُوّ (asli مَدْعُوو — ikki و, idg'om — shaddali و; مَرْمِيّ dan farqi: bu yerda ي emas, و). JAHD لَمْ يَدْعُ (jazm و ni tushirdi), لَمْ يَدْعُوا، لَمْ تَدْعِي."
+      ],
+      "savollar": [
+        {
+          "savol": "«مَدْعُوّ» (chaqirilgan) oxirida shaddali و — sababi?",
+          "variantlar": [
+            "مَدْعُوو — vazn vovi va lom vovi idg'om qilindi",
+            "و+ي qalb",
+            "Xato"
+          ],
+          "togri": 0,
+          "izoh": "مَدْعُوٌّ aslida مَدْعُووٌ edi. Birinchi vovni ikkinchi vovga idg'om qildik."
+        },
+        {
+          "savol": "«دَاعٍ» da qanday o'zgarishlar bo'ldi?",
+          "variantlar": [
+            "و → ي (kasra oldida), damma tashlandi, ي tanvin oldida tushdi",
+            "Faqat و tushdi",
+            "Hech narsa"
+          ],
+          "togri": 0,
+          "izoh": "دَاعٍ aslida دَاعِوٌ edi … vovni يga qalb qildik دَاعِيٌ … zammasini tashladik … ي bilan tanvin orasida يni hazf qildik."
+        }
+      ]
+    },
+    "sarf-86": {
+      "sharh": [
+        "Jahd tafsiloti: لَمْ يَدْعُ — jazm lomi و ni tushirdi (illatli fe'lda jazm belgisi — illat harfining tushishi); لَمْ يَدْعُوا (ikki و — birinchisi tushdi); لَمْ تَدْعِي (kasra ko'chdi, و ي ga, ikki ي — biri tushdi). Majhuli لَمْ يُدْعَ (jazm ى ni tushirdi), لَمْ يُدْعَوْا، لَمْ تُدْعَيْ."
+      ],
+      "savollar": [
+        {
+          "savol": "«لَمْ يَدْعُ» da jazm belgisi nima?",
+          "variantlar": [
+            "Illat harfi (و) ning tushishi",
+            "Sukun",
+            "Nun tushishi"
+          ],
+          "togri": 0,
+          "izoh": "يَدْعُو siyg'asiga lami jozima kirdi. Oxirini jazm qildi. Jazm qilganini belgisi, harfi illatni tushurmoqligidir."
+        }
+      ]
+    },
+    "sarf-87": {
+      "sharh": [
+        "Nafiy لَا يَدْعُو / لَا يُدْعَى — muzori' kabi. AMRI HOZIR اُدْعُ (chaqir!): تَدْعُو → sukunli illat harfi tushadi تَدْعُ → ت tushadi دْعُ → sukun bilan boshlanmaydi → ayn dammali bob → DAMMALI hamza: اُدْعُ. 6 siyg'a: اُدْعُ، اُدْعُوَا، اُدْعُوا، اُدْعِي، اُدْعُوَا، اُدْعُونَ. Solishtiring: اِرْمِ (kasrali hamza — يَرْمِي kasrali bob) ↔ اُدْعُ (dammali hamza — يَدْعُو dammali bob)."
+      ],
+      "savollar": [
+        {
+          "savol": "«اُدْعُ» da hamza nega dammali, «اِرْمِ» da kasrali?",
+          "variantlar": [
+            "Ayn harakatiga qarab: يَدْعُو dammali bob → damma; يَرْمِي kasrali bob → kasra",
+            "Vovli noqisda doim damma",
+            "Tasodif"
+          ],
+          "togri": 0,
+          "izoh": "'Ayn bobiga qaradik, mazmumul 'ayn ekan. Avvaliga zammalik hamza keltirdik, اُدْعُ bo'ldi."
+        }
+      ]
+    },
+    "sarf-88": {
+      "sharh": [
+        "اُدْعُ ga ta'kid nuni: xafifa اُدْعُوَنْ، اُدْعُنْ، اُدْعِنْ (tushgan و qaytadi); saqila اُدْعُوَنَّ، اُدْعُوَانِّ، اُدْعُنَّ، اُدْعِنَّ، اُدْعُوَانِّ، اُدْعُونَانِّ. Amri g'oib لِيَدْعُ، لِيَدْعُوَا، لِيَدْعُوا…; majhuli لِتُدْعَ، لِتُدْعَيَا، لِتُدْعَوْا…; nahiy لَا تَدْعُ / لَا تُدْعَ — jahd kabi."
+      ],
+      "savollar": [
+        {
+          "savol": "«اُدْعُ» ga saqila nuni qo'shilsa?",
+          "variantlar": [
+            "اُدْعُوَنَّ — tushgan و qaytib fathali bo'ladi",
+            "اُدْعُنَّ",
+            "اُدْعَنَّ"
+          ],
+          "togri": 0,
+          "izoh": "Saqila bilan … اُدْعُوَنَّ bo'ladi (37-dars: hazf qilingan illat harfi qaytib fathali o'qiladi)."
+        }
+      ]
     }
   }
 }

@@ -856,6 +856,512 @@
           "izoh": "Kitob mashqidagi ibora: مَا (shart) — shart fe'li va javobi majzum."
         }
       ]
+    },
+    "nahv-1-19": {
+      "sharh": [
+        "Fe'l uchun xarita tugagan edi (4 nasb, 16 jazm, qolgani raf'). Endi ISM uchun xarita: ism 6 o'rinda MARFU', 11 o'rinda MANSUB, 2 o'rinda MAJRUR bo'ladi. Jami 19 «o'rin» — bular nahvning asosiy «lavozimlari»: foil, mubtado, maf'ul va hokazo.",
+        "Bu dars — kirish. Keyingi 6 dars (20–24) raf'ning oltita o'rnini birma-bir beradi: foil, noibi foil, mubtado, xabar, kananing ismi, innaning xabari. Har birida savol bitta: «bu ism gapda QANDAY vazifada?» — vazifani topsangiz, i'robini bilasiz."
+      ],
+      "savollar": [
+        {
+          "savol": "Ism necha o'rinda marfu' bo'ladi?",
+          "variantlar": [
+            "Oltita",
+            "O'n bitta",
+            "Ikkita"
+          ],
+          "togri": 0,
+          "izoh": "وَأَمَّا الاِسْمُ، فَيُرْفَعُ فِي سِتَّةِ مَوَاضِعَ — nasb 11, jarr 2 o'rinda."
+        },
+        {
+          "savol": "Ism necha o'rinda MAJRUR bo'ladi?",
+          "variantlar": [
+            "Ikkita",
+            "Oltita",
+            "O'n bitta"
+          ],
+          "togri": 0,
+          "izoh": "وَيُجَرُّ فِي مَوْضِعَيْنِ — jarr faqat ikki o'rinda (keyingi darslarda)."
+        }
+      ]
+    },
+    "nahv-1-20": {
+      "sharh": [
+        "Raf'ning birinchi o'rni — FOIL: ishni BAJARGAN kishi yoki narsa. قَطَعَ مَحْمُودٌ الْغُصْنَ (Mahmud shoxni kesdi): kim kesdi? — Mahmud → foil → MARFU' (dammali: مَحْمُودٌ). Nima kesildi? — shox → bu maf'ulun bihi (26-dars), mansub.",
+        "Foilni topish usuli: fe'ldan keyin «KIM? NIMA (bajardi)?» deb so'rang. حَفِظَ مُحَمَّدٌ الكِتَابَ — kim yodladi? Muhammad. يَأْكُلُ الذِّئْبُ الْغَنَمَ — kim yeydi? bo'ri (الذِّئْبُ). Javob — foil, damma qo'ying.",
+        "E'tibor: foil FE'LDAN KEYIN keladi (arabchada fe'liy gap tartibi: fe'l → foil → maf'ul). O'zbekchada «Mahmud shoxni kesdi» — ega oldinda; arabchada fe'l oldinda, ega keyin. Shuning uchun so'z tartibiga emas, VAZIFAGA qarang."
+      ],
+      "savollar": [
+        {
+          "savol": "«خَلَقَ اللَّهُ الْإِنْسَانَ» (Alloh insonni yaratdi) — bu gapda foil qaysi so'z?",
+          "variantlar": [
+            "اللَّهُ — yaratuvchi, marfu'",
+            "الْإِنْسَانَ — yaratilgan",
+            "خَلَقَ"
+          ],
+          "togri": 0,
+          "izoh": "Kitob ro'yxati: «اللَّهُ» فِي: خَلَقَ اللَّهُ الْإِنْسَانَ — ishni bajargan zot foil, unda raf' vojib."
+        },
+        {
+          "savol": "Foilning i'robi qanday?",
+          "variantlar": [
+            "Raf' — vojib",
+            "Nasb",
+            "Jarr"
+          ],
+          "togri": 0,
+          "izoh": "يُسَمَّى «فَاعِلًا»، وَيَجِبُ فِيهِ الرَّفْعُ."
+        },
+        {
+          "savol": "«يَأْكُلُ الذِّئْبُ الْغَنَمَ» — الذِّئْبُ nega dammali?",
+          "variantlar": [
+            "U foil — yeyish ishini bajaruvchi",
+            "U maf'ul",
+            "Chunki gap boshida"
+          ],
+          "togri": 0,
+          "izoh": "Fe'ldan keyin kelib, ishni bajarganga dalolat qilgan so'z — foil: كُلُّ كَلِمَةٍ وَقَعَتْ بَعْدَ الْفِعْلِ، وَدَلَّتْ عَلَى مَنْ فَعَلَ."
+        },
+        {
+          "savol": "«قَطَعَ مَحْمُودٌ الْغُصْنَ» — الْغُصْنَ foilmi?",
+          "variantlar": [
+            "Yo'q — u fe'l tushgan narsa (maf'ulun bihi)",
+            "Ha — u ham foil",
+            "Ha, chunki ism"
+          ],
+          "togri": 0,
+          "izoh": "Kesish unga tushdi — «مَفْعُولًا بِهِ»; foil — kesgan kishi (مَحْمُودٌ)."
+        }
+      ]
+    },
+    "nahv-1-21": {
+      "sharh": [
+        "Ba'zan bajaruvchini AYTMAYMIZ — bilmaymiz yoki aytishni istamaymiz. سَرَقَ فُلَانٌ السَّاعَةَ (falonchi soatni o'g'irladi) → foilni olib tashlaymiz → سُرِقَتِ السَّاعَةُ (soat o'g'irlandi). Endi «soat» foilning O'RNIGA o'tdi: u NOIBI FOIL (foil o'rinbosari) → MARFU' (السَّاعَةُ — dammali!).",
+        "Foil tushganda FE'L SHAKLI ham o'zgaradi (majhul shakl). MOZI: boshi damma, oxiridan oldingisi kasra — حَفِظَ → حُفِظَ, سَرَقَ → سُرِقَ, خَلَقَ → خُلِقَ. MUZORI': boshi damma, oxiridan oldingisi FATHA — يَطْلُبُ → يُطْلَبُ, يَأْكُلُ → تُؤْكَلُ, يُبْغِضُ → يُبْغَضُ.",
+        "Qiyoslang: حَفِظَ مُحَمَّدٌ الكِتَابَ (الكِتَابَ — mansub, maf'ul) ↔ حُفِظَ الكِتَابُ (الكِتَابُ — marfu', noibi foil). Bir xil so'z, lekin fe'l majhulga o'tgani uchun i'rob o'zgardi. Sinov: fe'l boshida damma (حُـ / يُـ) ko'rsangiz, undan keyingi ism — noibi foil, damma qo'ying."
+      ],
+      "savollar": [
+        {
+          "savol": "«يُطْلَبُ الْعِلْمُ» (ilm talab qilinadi) — الْعِلْمُ gapda nima?",
+          "variantlar": [
+            "Noibi foil — marfu'",
+            "Foil",
+            "Maf'ulun bihi — mansub"
+          ],
+          "togri": 0,
+          "izoh": "Fe'l majhul shaklda (يُطْلَبُ), foil yo'q — undan keyingi ism noibi foil: kitob misoli."
+        },
+        {
+          "savol": "«خَلَقَ» mozi fe'li noibi foil bilan kelganda qanday bo'ladi?",
+          "variantlar": [
+            "خُلِقَ — boshi damma, oxiridan oldingisi kasra",
+            "خَلِقَ",
+            "يُخْلَقُ"
+          ],
+          "togri": 0,
+          "izoh": "فَإِنْ كَانَ مَاضِيًا: ضُمَّ أَوَّلُهُ، وَكُسِرَ مَا قَبْلَ آخِرِهِ — خُلِقَ الْإِنْسَانُ."
+        },
+        {
+          "savol": "Muzori' fe'l majhulga o'tganda oxiridan oldingi harfi qanday bo'ladi?",
+          "variantlar": [
+            "Fatha (يُطْلَبُ)",
+            "Kasra",
+            "Sukun"
+          ],
+          "togri": 0,
+          "izoh": "وَإِنْ كَانَ مُضَارِعًا: ضُمَّ أَوَّلُهُ أَيْضًا، وَفُتِحَ مَا قَبْلَ آخِرِهِ."
+        },
+        {
+          "savol": "Noibi foilning i'robi?",
+          "variantlar": [
+            "Raf' — foil o'rnida turgani uchun",
+            "Nasb — aslida maf'ul edi",
+            "Jarr"
+          ],
+          "togri": 0,
+          "izoh": "تَجْعَلُ مَكَانَهُ اللَّفْظَ الدَّالَّ عَلَى مَا وَقَعَ عَلَيْهِ الْفِعْلُ … وَلِذَلِكَ يُرْفَعُ."
+        },
+        {
+          "savol": "«سَرَقَ فُلَانٌ السَّاعَةَ» dan foilni tushirsak, to'g'ri shakl qaysi?",
+          "variantlar": [
+            "سُرِقَتِ السَّاعَةُ",
+            "سَرَقَ السَّاعَةَ",
+            "سُرِقَتِ السَّاعَةَ"
+          ],
+          "togri": 0,
+          "izoh": "Fe'l majhul (سُرِقَتْ), soat noibi foil — marfu' (السَّاعَةُ). Kitob misoli."
+        }
+      ]
+    },
+    "nahv-1-22": {
+      "sharh": [
+        "Gap ikki xil tuziladi: fe'l+ism (foil yoki noibi foil bilan — o'tdi) yoki ISM+ISM. Ikki ismli gapda birinchisi MUBTADO (gap boshlanadigan so'z), ikkinchisi XABAR (u haqda xabar). الْبُسْتَانُ مُثْمِرٌ — bog' (mubtado) hosilli (xabar). IKKALASI HAM MARFU' — bu raf'ning 3- va 4-o'rni.",
+        "O'zbekchada «bog' hosilli(dir)» — «dir» bog'lovchisi bor; arabchada bog'lovchi YO'Q, ikki ism yonma-yon turadi: الشَّجَرُ مُورِقٌ (daraxt bargli), الْمَطَرُ غَزِيرٌ (yomg'ir mo'l). Ikkalasida damma (tanvin bilan ـٌ).",
+        "Topish usuli: gap ism bilan boshlanib, fe'l yo'q bo'lsa — birinchi ism mubtado, uning haqidagi gap xabar. Keyingi ikki darsda كَانَ va إِنَّ shu juftlikning ustiga kirib i'robini o'zgartiradi — shuning uchun mubtado/xabarni yaxshi tanib oling."
+      ],
+      "savollar": [
+        {
+          "savol": "«الكَذِبُ دَاءٌ» (yolg'on — dard) — bu gapda xabar qaysi?",
+          "variantlar": [
+            "دَاءٌ",
+            "الكَذِبُ",
+            "Ikkalasi mubtado"
+          ],
+          "togri": 0,
+          "izoh": "Birinchi ism mubtado (الكَذِبُ), u haqda xabar bergan ikkinchisi xabar (دَاءٌ) — ikkalasi marfu'."
+        },
+        {
+          "savol": "Mubtado va xabarning i'robi?",
+          "variantlar": [
+            "Ikkalasi raf'",
+            "Mubtado raf', xabar nasb",
+            "Mubtado nasb, xabar raf'"
+          ],
+          "togri": 0,
+          "izoh": "وَيَجِبُ فِيهِمَا الرَّفْعُ — ikkalasida raf' vojib (كَانَ va إِنَّ kirmaguncha)."
+        },
+        {
+          "savol": "«جَاءَ الْحَقُّ» — bu gapda mubtado bormi?",
+          "variantlar": [
+            "Yo'q — gap fe'l bilan boshlangan, الْحَقُّ foil",
+            "Ha — الْحَقُّ mubtado",
+            "Ha — جَاءَ mubtado"
+          ],
+          "togri": 0,
+          "izoh": "Fe'liy gap: fe'l (جَاءَ) + foil (الْحَقُّ). Mubtado/xabar faqat ikki ismdan tuzilgan gapda."
+        }
+      ]
+    },
+    "nahv-1-23": {
+      "sharh": [
+        "Mubtado+xabar gapining ustiga كَانَ (edi) kirsa, nomlar o'zgaradi: mubtado → «kananing ismi» (MARFU' qoladi), xabar → «kananing xabari» (endi MANSUB!). الْبُسْتَانُ مُثْمِرٌ → كَانَ الْبُسْتَانُ مُثْمِرًا. Qarang: مُثْمِرٌ (ـٌ) → مُثْمِرًا (ـًا).",
+        "كَانَ yolg'iz emas — «kana va uning opa-singillari»: صَارَ (bo'ldi, aylandi), أَصْبَحَ (tongda bo'ldi), أَضْحَى, ظَلَّ (kunduzi bo'lib turdi), أَمْسَى (kechqurun bo'ldi), بَاتَ (tunadi), مَا زَالَ / مَا بَرِحَ / مَا انْفَكَّ / مَا فَتِئَ (hamon … bo'lib turibdi), مَا دَامَ (… ekan), لَيْسَ (emas). Hammasi bir xil ish qiladi: ism marfu', xabar mansub.",
+        "Formula: كَانَ + ism (ـُ) + xabar (ـَ). Masalan لَيْسَ السَّحَابُ صُلْبًا (bulut qattiq emas): السَّحَابُ — marfu' ism, صُلْبًا — mansub xabar. Raf'ning 5-o'rni — aynan kananing ISMI."
+      ],
+      "savollar": [
+        {
+          "savol": "«الْجَوُّ مُعْتَدِلٌ» gapiga كَانَ kirsa, to'g'ri shakl qaysi?",
+          "variantlar": [
+            "كَانَ الْجَوُّ مُعْتَدِلًا",
+            "كَانَ الْجَوَّ مُعْتَدِلٌ",
+            "كَانَ الْجَوُّ مُعْتَدِلٌ"
+          ],
+          "togri": 0,
+          "izoh": "Kananing ismi marfu' (الْجَوُّ), xabari mansub (مُعْتَدِلًا) — kitob misoli."
+        },
+        {
+          "savol": "كَانَ kirganda xabarning i'robi nima bo'ladi?",
+          "variantlar": [
+            "Nasb",
+            "Raf'",
+            "Jarr"
+          ],
+          "togri": 0,
+          "izoh": "وَيَجِبُ فِي الْأَوَّلِ الرَّفْعُ، وَفِي الثَّانِي: النَّصْبُ."
+        },
+        {
+          "savol": "«لَيْسَ» (emas) so'zi qaysi guruhga kiradi?",
+          "variantlar": [
+            "كَانَ kabi — ismi marfu', xabari mansub",
+            "إِنَّ kabi",
+            "Nasb qiluvchi harflar"
+          ],
+          "togri": 0,
+          "izoh": "Kitob ro'yxatida لَيْسَ — كَانَ ning o'xshashlaridan; misol: لَيْسَ السَّحَابُ صُلْبًا."
+        },
+        {
+          "savol": "«أَصْبَحَ الْعِلْمُ مُنْتَشِرًا» — الْعِلْمُ nima deyiladi?",
+          "variantlar": [
+            "Kananing (أَصْبَحَ ning) ismi — marfu'",
+            "Foil",
+            "Mubtado"
+          ],
+          "togri": 0,
+          "izoh": "أَصْبَحَ — كَانَ kabi; undan keyingi marfu' ism «ismi», mansubi «xabari»."
+        }
+      ]
+    },
+    "nahv-1-24": {
+      "sharh": [
+        "Endi TESKARISI. Mubtado+xabar ustiga إِنَّ (albatta, haqiqatan) kirsa: birinchisi MANSUB («innaning ismi»), ikkinchisi MARFU' («innaning xabari»). الْبُسْتَانُ مُثْمِرٌ → إِنَّ الْبُسْتَانَ مُثْمِرٌ. Ya'ni كَانَ ning aynan aksi.",
+        "Eslab qolish: كَانَ — «boshi baland, oxiri past» (ism ـُ, xabar ـَ); إِنَّ — «boshi past, oxiri baland» (ism ـَ, xabar ـُ). Raf'ning 6-o'rni — innaning XABARI.",
+        "إِنَّ ning opa-singillari: أَنَّ (…ekanini), كَأَنَّ (go'yo), لَكِنَّ (lekin), لَيْتَ (koshki), لَعَلَّ (shoyad), لَا (…yo'q). عَلِمْتُ أَنَّ الْبُسْتَانَ مُثْمِرٌ, لَيْتَ الْجَوَّ مُعْتَدِلٌ. Hammasida ism fathali, xabar dammali. Shu bilan raf'ning 6 o'rni tugadi: foil, noibi foil, mubtado, xabar, kananing ismi, innaning xabari."
+      ],
+      "savollar": [
+        {
+          "savol": "«الْمَطَرُ غَزِيرٌ» gapiga إِنَّ kirsa, to'g'ri shakl qaysi?",
+          "variantlar": [
+            "إِنَّ الْمَطَرَ غَزِيرٌ",
+            "إِنَّ الْمَطَرُ غَزِيرًا",
+            "إِنَّ الْمَطَرَ غَزِيرًا"
+          ],
+          "togri": 0,
+          "izoh": "Innaning ismi mansub (الْمَطَرَ), xabari marfu' (غَزِيرٌ) — كَانَ ning aksi."
+        },
+        {
+          "savol": "إِنَّ va كَانَ ning farqi nimada?",
+          "variantlar": [
+            "إِنَّ ismni nasb, xabarni raf' qiladi; كَانَ aksincha",
+            "Farqi yo'q",
+            "إِنَّ ikkalasini nasb qiladi"
+          ],
+          "togri": 0,
+          "izoh": "إِذَا دَخَلَ عَلَيْهِمَا «إِنَّ» يَكُونُ الْأَوَّلُ مَنْصُوبًا، وَالثَّانِي مَرْفُوعًا بِعَكْسِ «كَانَ»."
+        },
+        {
+          "savol": "«لَعَلَّ» so'zi qaysi guruhga kiradi?",
+          "variantlar": [
+            "إِنَّ ning o'xshashlari",
+            "كَانَ ning o'xshashlari",
+            "Jazm qiluvchilar"
+          ],
+          "togri": 0,
+          "izoh": "وَمِثْلُ «إِنَّ»: «أَنَّ»، «كَأَنَّ»، «لَكِنَّ»، «لَيْتَ»، «لَعَلَّ»، «لَا»."
+        },
+        {
+          "savol": "«كَأَنَّ الشَّجَرَ مُورِقٌ» — مُورِقٌ nima deyiladi?",
+          "variantlar": [
+            "Innaning (كَأَنَّ ning) xabari — marfu'",
+            "Innaning ismi",
+            "Maf'ul"
+          ],
+          "togri": 0,
+          "izoh": "Raf'ning 6-o'rni: xabari إِنَّ va o'xshashlari."
+        }
+      ]
+    },
+    "nahv-1-25": {
+      "sharh": [
+        "Raf'ning 6 o'rni tugadi. Endi ism qachon MANSUB (fathali)? O'n bir o'rin bor. Kitob ularni birma-bir keltiradi: beshta maf'ul (maf'ulun bihi, mutlaq, li ajlihi, fihi, ma'ahu), mustasno, hol, tamyiz, kananing xabari, innaning ismi va boshqalar.",
+        "Bu dars — ro'yxatga kirish. Umumiy fikr: nasb — «qo'shimcha ma'lumot» holati: ish NIMAGA tushdi, QANDAY, NEGA, QACHON/QAYERDA, KIM BILAN — bularning hammasi gapga fathali ism sifatida qo'shiladi."
+      ],
+      "savollar": [
+        {
+          "savol": "Ismlardan mansub bo'ladiganlari nechta?",
+          "variantlar": [
+            "O'n bitta",
+            "Oltita",
+            "Beshta"
+          ],
+          "togri": 0,
+          "izoh": "وَالْمَنْصُوبَاتُ مِنَ الْأَسْمَاءِ أَحَدَ عَشَرَ."
+        }
+      ]
+    },
+    "nahv-1-26": {
+      "sharh": [
+        "Nasbning 1-o'rni — MAF'ULUN BIHI: ish TUSHGAN narsa (o'zbekcha «-ni» to'ldiruvchisi). حَفِظَ مُحَمَّدٌ الكِتَابَ — nimani yodladi? kitobni → الكِتَابَ mansub (fatha). Foil (kim?) — damma, maf'ul (nimani?) — fatha.",
+        "Bir qatorda ko'ring: خَلَقَ اللَّهُ (foil, ـُ) الْإِنْسَانَ (maf'ul, ـَ). يُبْغِضُ النَّاسُ (ـُ) الْخَائِنَ (ـَ). Fe'liy gapning oddiy tartibi: fe'l → foil (damma) → maf'ul (fatha).",
+        "21-dars bilan bog'lanish: fe'l MA'LUM shaklda bo'lsa (حَفِظَ) — ish tushgan narsa maf'ulun bihi, mansub. Fe'l MAJHULGA o'tsa (حُفِظَ) — o'sha so'z noibi foil bo'lib, MARFU' bo'ladi. Ya'ni bitta so'z fe'l shakliga qarab ـَ yoki ـُ oladi."
+      ],
+      "savollar": [
+        {
+          "savol": "«يَطْلُبُ الْعَاقِلُ الْعِلْمَ» — الْعِلْمَ nima?",
+          "variantlar": [
+            "Maf'ulun bihi — mansub",
+            "Foil — marfu'",
+            "Noibi foil"
+          ],
+          "togri": 0,
+          "izoh": "Talab qilish ishi «ilm»ga tushdi — maf'ulun bihi, nasb vojib."
+        },
+        {
+          "savol": "«أَرْشَدَ الْأَنْبِيَاءُ النَّاسَ» — النَّاسَ nega fathali?",
+          "variantlar": [
+            "Ish (yo'l ko'rsatish) unga tushdi — maf'ulun bihi",
+            "U foil",
+            "Chunki ko'plik"
+          ],
+          "togri": 0,
+          "izoh": "اللَّفْظُ الدَّالُّ عَلَى مَا وَقَعَ عَلَيْهِ الْفِعْلُ يُسَمَّى «مَفْعُولًا بِهِ»، وَيَجِبُ فِيهِ النَّصْبُ."
+        },
+        {
+          "savol": "«حَفِظَ مُحَمَّدٌ الكِتَابَ» va «حُفِظَ الكِتَابُ» — kitob so'zi nega bir xil emas?",
+          "variantlar": [
+            "Birinchida maf'ul (mansub), ikkinchida fe'l majhul — noibi foil (marfu')",
+            "Xato yozilgan",
+            "Ikkinchisi ko'plik"
+          ],
+          "togri": 0,
+          "izoh": "أَمَّا إِذَا غُيِّرَ لَفْظُ الْفِعْلِ، فَيَكُونُ الاِسْمُ نَائِبَ فَاعِلٍ، وَيَجِبُ رَفْعُهُ."
+        }
+      ]
+    },
+    "nahv-1-27": {
+      "sharh": [
+        "Nasbning 2-o'rni — MAF'ULI MUTLAQ: fe'lning O'Z MASDARI (ish nomi) gapga qo'shilib, ishni TA'KIDLAYDI. قَتَلَ الْحَارِسُ اللِّصَّ (qorovul o'g'rini o'ldirdi) — tinglovchi «balki urgandir?» deb shubha qilishi mumkin; shunda قَتْلًا qo'shiladi: قَتَلَ … قَتْلًا — «rostdan o'ldirdi». قَتْلًا mansub.",
+        "Belgisi: maf'uli mutlaq fe'l bilan bir ILDIZDAN: حَفِظَ … حِفْظًا, أَرْشَدَ … إِرْشَادًا, يَسِيرُ … سَيْرًا. O'zbekchada «yodlab yodladi», «chinakam yo'l ko'rsatdi» kabi.",
+        "Farqi: maf'ulun bihi — ish tushgan BOSHQA narsa (kitob, odam); maf'uli mutlaq — ishning O'ZI (yodlash, o'ldirish). Ikkalasi ham mansub, lekin savol boshqa: «nimani?» ↔ «qanday qilib / rostdan?»."
+      ],
+      "savollar": [
+        {
+          "savol": "«حَفِظَ مُحَمَّدٌ الكِتَابَ حِفْظًا» — حِفْظًا nima?",
+          "variantlar": [
+            "Maf'uli mutlaq — fe'lning o'z masdari, ta'kid",
+            "Maf'ulun bihi",
+            "Foil"
+          ],
+          "togri": 0,
+          "izoh": "Kitob misoli: foil bajargan ishning aynan o'ziga dalolat qiladigan ism — maf'uli mutlaq, mansub."
+        },
+        {
+          "savol": "«قَتَلَ الْحَارِسُ اللِّصَّ» ga «قَتْلًا» nima uchun qo'shiladi?",
+          "variantlar": [
+            "«Balki urgandir» degan gumonni ketkazish — ta'kid uchun",
+            "Foilni ko'rsatish uchun",
+            "Zamonni bildirish uchun"
+          ],
+          "togri": 0,
+          "izoh": "فَلِدَفْعِ هَذَا الْوَهْمِ تَزِيدُ … كَلِمَةَ «قَتْلًا»."
+        },
+        {
+          "savol": "Maf'uli mutlaqning i'robi?",
+          "variantlar": [
+            "Nasb",
+            "Raf'",
+            "Jarr"
+          ],
+          "togri": 0,
+          "izoh": "يُسَمَّى: «مَفْعُولًا مُطْلَقًا»، وَيَجِبُ فِيهِ النَّصْبُ."
+        }
+      ]
+    },
+    "nahv-1-28": {
+      "sharh": [
+        "Nasbning 3-o'rni — MAF'ULUN LI AJLIHI: ishning SABABI. وَقَفَ الْجُنْدُ (askarlar turdi) — nega? إِجْلَالًا لِلْأَمِيرِ (amirga hurmat yuzasidan). إِجْلَالًا — sabab ismi, mansub.",
+        "Sinov: fe'ldan keyin «NEGA? NIMA UCHUN?» deb so'rang; javob bo'lgan masdar — maf'ulun li ajlihi. حَجَّ النَّاسُ طَلَبًا لِمَرْضَاةِ اللَّهِ (rozilikni istab), زُيِّنَتِ الْمَدِينَةُ إِكْرَامًا لِلْقَادِمِ (hurmat yuzasidan).",
+        "Maf'uli mutlaqdan farqi: mutlaq — fe'lning O'Z masdari (حَفِظَ → حِفْظًا); li ajlihi — BOSHQA masdar, sababni aytadi (حَفِظَ → رَغْبَةً «istagida»)."
+      ],
+      "savollar": [
+        {
+          "savol": "«وَقَفَ الْجُنْدُ إِجْلَالًا لِلْأَمِيرِ» — إِجْلَالًا nima?",
+          "variantlar": [
+            "Maf'ulun li ajlihi — turish sababi",
+            "Maf'uli mutlaq",
+            "Foil"
+          ],
+          "togri": 0,
+          "izoh": "Ishning sodir bo'lish sababini bayon qiladigan ism — maf'ulun li ajlihi, mansub."
+        },
+        {
+          "savol": "«حَفِظَ مُحَمَّدٌ الكِتَابَ رَغْبَةً فِي التَّقَدُّمِ» — رَغْبَةً qaysi savolga javob?",
+          "variantlar": [
+            "Nega yodladi? (sabab)",
+            "Nimani yodladi?",
+            "Qachon yodladi?"
+          ],
+          "togri": 0,
+          "izoh": "رَغْبَةً — sabab: oldinga intilish istagida. Kitob misoli."
+        },
+        {
+          "savol": "«حِفْظًا» va «رَغْبَةً» — ikkalasi ham mansub masdar. Farqi?",
+          "variantlar": [
+            "حِفْظًا fe'lning o'z masdari (mutlaq), رَغْبَةً sabab (li ajlihi)",
+            "Farqi yo'q",
+            "رَغْبَةً foil"
+          ],
+          "togri": 0,
+          "izoh": "Mutlaq — foil bajargan ishning o'zi; li ajlihi — ishning sababi."
+        }
+      ]
+    },
+    "nahv-1-29": {
+      "sharh": [
+        "Nasbning 4-o'rni — MAF'ULUN FIHI (ZARF): ish QACHON va QAYERDA bo'lgani. حَفِظَ مُحَمَّدٌ الكِتَابَ صَبَاحًا (ertalab — zamon zarfi) أَمَامَ الْمُعَلِّمِ (o'qituvchi oldida — makon zarfi). Ikkalasi mansub.",
+        "Zamon zarflari: صَبَاحًا, مَسَاءً, يَوْمًا, لَيْلَةً, غَدًا (ertaga), سَحَرًا, أَبَدًا, سَاعَةً, سَنَةً, شَهْرًا … Makon zarflari: أَمَامَ / قُدَّامَ (oldida), خَلْفَ / وَرَاءَ (orqasida), فَوْقَ (ustida), تَحْتَ (ostida), يَمِينًا, شِمَالًا, عِنْدَ (huzurida), مَعَ (bilan), مِيلًا (bir mil).",
+        "Diqqat: أَمَامَ الْمُعَلِّمِ — أَمَامَ mansub (zarf), lekin الْمُعَلِّمِ kasrali — chunki u zarfdan keyingi «muzofun ilayh» (keyingi darslar). Zarfning o'zi fathali, undan keyingisi kasrali."
+      ],
+      "savollar": [
+        {
+          "savol": "«يَبِيتُ الكَسْلَانُ حَزِينًا لَيْلَةً» — لَيْلَةً nima?",
+          "variantlar": [
+            "Zamon zarfi (maf'ulun fihi) — mansub",
+            "Maf'ulun bihi",
+            "Foil"
+          ],
+          "togri": 0,
+          "izoh": "لَيْلَةً kitobdagi zamon zarflari ro'yxatida — qachon? savoliga javob."
+        },
+        {
+          "savol": "«تَحْتَ» (ostida) qaysi zarf?",
+          "variantlar": [
+            "Makon zarfi",
+            "Zamon zarfi",
+            "Zarf emas"
+          ],
+          "togri": 0,
+          "izoh": "وَمِثْلُ «أَمَامَ»: «قُدَّامَ»، «خَلْفَ»، «وَرَاءَ»، «فَوْقَ»، «تَحْتَ» … — makon."
+        },
+        {
+          "savol": "Maf'ulun fihining i'robi?",
+          "variantlar": [
+            "Nasb — يَلْزَمُ نَصْبُهُ",
+            "Raf'",
+            "Jarr"
+          ],
+          "togri": 0,
+          "izoh": "وَكُلٌّ مِنْهُمَا يُسَمَّى (مَفْعُولًا فِيهِ)، وَيَلْزَمُ نَصْبُهُ."
+        },
+        {
+          "savol": "«حَفِظَ … أَمَامَ الْمُعَلِّمِ» — أَمَامَ qanday zarf?",
+          "variantlar": [
+            "Makon zarfi — yodlash joyi",
+            "Zamon zarfi",
+            "Sabab"
+          ],
+          "togri": 0,
+          "izoh": "وَلَفْظُ «أَمَامَ» يُسَمَّى (ظَرْفَ مَكَانٍ)."
+        }
+      ]
+    },
+    "nahv-1-30": {
+      "sharh": [
+        "Nasbning 5-o'rni — MAF'ULUN MA'AHU: ish KIM/NIMA BILAN BIRGA bo'lgani; oldida «birgalik vovi» (وَاوُ الْمَعِيَّةِ) turadi. سِرْتُ وَالْجَبَلَ — tog' BO'YLAB yurdim (tog' bilan birga); الْجَبَلَ mansub. اذْهَبْ وَالشَّارِعَ الْجَدِيدَ — yangi ko'cha bo'ylab bor.",
+        "Diqqat: bu «و» — «va» (bog'lovchi) EMAS. سَارَ الْأَمِيرُ وَالْجُنْدَ — «amir askarlar bilan (birga) yurdi»; agar «va» bo'lsa الْجُنْدُ marfu' bo'lardi («amir va askarlar yurdi»). Fatha — «birga» ma'nosining belgisi.",
+        "Shu bilan BESH MAF'UL to'liq: bihi (nimani?), mutlaq (ishning o'zi/ta'kid), li ajlihi (nega?), fihi (qachon/qayerda?), ma'ahu (kim bilan birga?). Hammasi mansub."
+      ],
+      "savollar": [
+        {
+          "savol": "«تَوَجَّهَ الْقَوْمُ وَالنِّيلَ» — النِّيلَ nima?",
+          "variantlar": [
+            "Maf'ulun ma'ahu — Nil bo'ylab (birga)",
+            "Foil",
+            "Mubtado"
+          ],
+          "togri": 0,
+          "izoh": "Birgalik vovidan keyingi mansub ism — maf'ulun ma'ahu. Kitob misoli."
+        },
+        {
+          "savol": "«سَارَ الْأَمِيرُ وَالْجُنْدَ» dagi «و» qanday vov?",
+          "variantlar": [
+            "Birgalik vovi (وَاوُ الْمَعِيَّةِ)",
+            "«Va» bog'lovchisi",
+            "Qasam vovi"
+          ],
+          "togri": 0,
+          "izoh": "وَتُسَمَّى الْوَاوُ الَّتِي قَبْلَهُ وَاوَ الْمَعِيَّةِ — undan keyingi ism mansub."
+        },
+        {
+          "savol": "Maf'ullar nechta va qaysilar?",
+          "variantlar": [
+            "Beshta: bihi, mutlaq, li ajlihi, fihi, ma'ahu",
+            "Uchta: bihi, fihi, ma'ahu",
+            "Ikkita"
+          ],
+          "togri": 0,
+          "izoh": "أَنَّ الْمَفَاعِيلَ خَمْسَةٌ — kitob xulosasi."
+        },
+        {
+          "savol": "«حَفِظَ مُحَمَّدٌ وَالْمِصْبَاحَ» ma'nosi?",
+          "variantlar": [
+            "Muhammad chiroq bilan (chiroq yonida) yodladi",
+            "Muhammad va chiroq yodladi",
+            "Muhammad chiroqni yodladi"
+          ],
+          "togri": 0,
+          "izoh": "Kitob izohi: kechasi, oldida chiroq turgan holda yodladi — الْمِصْبَاحَ maf'ulun ma'ahu."
+        }
+      ]
     }
   }
 }

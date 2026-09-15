@@ -7450,6 +7450,2924 @@
           "izoh": "Marfu' o'rinlar 6 ta (2-24), mansub 11 ta (2-30), majrur 2 ta — jarr harfi va muzofun ilayh (2-42)."
         }
       ]
+    },
+    "nahv-3-1": {
+      "sharh": [
+        "Uchinchi kitob muqaddimasi. Mualliflar aytadi: bu kitob bilan boshlang'ich maktab uchun mo'ljallangan arab tili asoslari YAKUNLANADI. Ikkinchi kitobning ko'p iboralari saqlangan va ustiga QO'SHIMCHALAR kiritilgan — o'quvchi eskisini tanib, yangisini unga «ulab» olsin. Endi har mavzudan keyin ko'p misol va savollar berilmaydi: qoidalar KETMA-KET keladi, chunki o'quvchi asosni bilib bo'lgan. Izohlarda (havoshiy) tillarda tarqalgan XATOLAR va qo'shimcha FOYDALAR bor — vaqt bo'lsa o'rganing, bo'lmasa tashlab ketish mumkin.",
+        "Muqaddimaning o'zi ham nahv atamalari bilan o'ynaydi: «مُصَرِّف» (tasarruf), «جَزْم», «عَوَامِل», «مُنْتَصِب» — mualliflarning nozik yumori."
+      ],
+      "savollar": [
+        {
+          "savol": "Uchinchi kitob ikkinchisidan uslub jihatidan qanday farq qiladi?",
+          "variantlar": [
+            "Qoidalar ketma-ket, ko'p misol va savollarsiz; xatolar va foydalar izohlarda",
+            "Har mavzudan keyin ko'proq mashq",
+            "Faqat Qur'on misollari"
+          ],
+          "togri": 0,
+          "izoh": "Har bir mavzudan keyin ko'p misollar keltirish va qismlari orasini savollar bilan ajratishni lozim ko'rmadik… o'quvchi qoidalarni ketma-ket keltirishga muhtojroq."
+        },
+        {
+          "savol": "Izohlardagi «foydalar» haqida mualliflar nima deydi?",
+          "variantlar": [
+            "Vaqt bo'lsa o'rganish yaxshi, bo'lmasa tashlab ketishda gunoh yo'q",
+            "Ularni yodlash shart",
+            "Ular xato"
+          ],
+          "togri": 0,
+          "izoh": "…o'quvchining vaqti keng bo'lsa, ularni o'zlashtirgani yaxshi; aks holda tashlab ketishida gunoh yo'q."
+        }
+      ]
+    },
+    "nahv-3-2": {
+      "sharh": [
+        "Bu darsning yangiligi — har tur so'zning BELGILARI (alomatlari). FE'L belgilari (9): قَدْ، س، سَوْفَ، nasb va jazm qiluvchilar, foil ت si (قَرَأْتُ), sokin muannaslik ت si (قَرَأَتْ), ta'kid nuni (لَأَقْرَأَنَّ), muxotaba ي si (اقْرَئِي). ISM belgilari (6): jarr harfi, أل, tanvin, nido, izofa, isnod (foil/mubtado bo'lish) — «الْأَمْنُ فِي حَرَمِ مَكَّةَ وَاجِبٌ يَا جَعْفَرُ» jumlasida hammasi bor. HARF belgisi — ikkalasidan XOLI.",
+        "Belgilar bilan bahsli so'zlarni hal qilish: لَيْسَ، عَسَى، نِعْمَ، بِئْسَ — fe'l (chunki لَيْسَتْ deyiladi — muannaslik ت si qabul qiladi); هَاتِ، تَعَالَ — fe'l (هَاتِي، تَعَالَيْ); قَرَأْتُ dagi ت — ism (chunki unga isnod qilingan — foil). Yana atamalar: KALIMA — yakka so'z; KALOM — mazmunli jumla (≥2 so'z). Xato: «فُلَانٌ بِيَكْتُبُ» — jarr harfi fe'lga kirmaydi."
+      ],
+      "savollar": [
+        {
+          "savol": "«لَيْسَ» harf emas, fe'l ekani qanday isbotlanadi?",
+          "variantlar": [
+            "لَيْسَتْ deyiladi — sokin muannaslik ت sini qabul qiladi (fe'l belgisi)",
+            "Ma'nosidan",
+            "Uch harfli bo'lgani uchun"
+          ],
+          "togri": 0,
+          "izoh": "Shu xususiyat bilan bilasanki, «لَيْسَ», «عَسَى», «نِعْمَ», «بِئْسَ» — harf emas, fe'llardandir; chunki arablar «laysat», «asat»… deb aytadilar."
+        },
+        {
+          "savol": "«قَرَأْتُ» dagi ت ism ekani qaysi belgi bilan bilinadi?",
+          "variantlar": [
+            "Isnod — unga fe'l nisbat berilgan (foil)",
+            "Tanvin",
+            "أل"
+          ],
+          "togri": 0,
+          "izoh": "Ya'ni foil, noibi foil yoki mubtado bo'lishi bilan. Shu xususiyat orqali «قَرَأْتُ», «قَرَأْنَا» kabi so'zlardagi zamirlarning ism ekanini bilasan."
+        },
+        {
+          "savol": "«فُلَانٌ بِيَكْتُبُ» nega xato?",
+          "variantlar": [
+            "Jarr harfi (ب) faqat ismga kiradi, fe'lga emas",
+            "Xato emas",
+            "يَكْتُبُ mansub bo'lishi kerak"
+          ],
+          "togri": 0,
+          "izoh": "Xatolardan biri — «فلان بيكتب وبيقرأ» deb aytish (jarr harfini fe'lga kiritish; jarr harflari faqat ismga kiradi)."
+        },
+        {
+          "savol": "«Kalima» va «kalom» farqi?",
+          "variantlar": [
+            "Kalima — ma'noli yakka so'z; kalom — ≥2 so'zdan tuzilgan mazmunli jumla",
+            "Farqi yo'q",
+            "Kalom — bitta so'z"
+          ],
+          "togri": 0,
+          "izoh": "Ma'noga dalolat qiladigan yakka so'z «kalima» deb ataladi. Ikki yoki undan ortiq so'zdan tuzilgan mazmunli jumla esa «kalom» deyiladi."
+        },
+        {
+          "savol": "«هَاتِ» (keltir) — fe'lmi, harfmi? Dalil?",
+          "variantlar": [
+            "Fe'l — muxotaba ي sini qabul qiladi: هَاتِي",
+            "Harf — ma'nosi mustaqil emas",
+            "Ism"
+          ],
+          "togri": 0,
+          "izoh": "Shu xususiyat bilan bilasanki, «هَاتِ» va «تَعَالَ» — fe'llardandir; chunki arablar «hoti», «ta'olay» deb aytadilar."
+        }
+      ]
+    },
+    "nahv-3-3": {
+      "sharh": [
+        "Harflar HAMMASI MABNIY. Ro'yxat kengaytirildi: bir harfli 13 ta (hamza, alif, ب ت س ف ك ل م ن ه و ي), ikki harfli 22, uch harfli 25, to'rt harfli 15, besh harfli 3. Muhimi — harflarni MA'NO bo'yicha guruhlash: JAVOB (لَا، نَعَمْ، بَلَى، إِي، أَجَلْ، جَلَلْ، جَيْرِ، إِنَّ), INKOR (لَمْ، لَمَّا، لَنْ، مَا، لَا، لَاتَ، إِنْ), SHART (إِنْ، إِذْ مَا، لَوْ، لَوْلَا، لَوْمَا، أَمَّا), UNDASH/tahziz (أَلَا، أَلَّا، هَلَّا، لَوْلَا، لَوْمَا), MASDAR (أَنَّ، أَنْ، كَيْ، لَوْ، مَا), KELASI ZAMON (س، سَوْفَ، أَنْ، إِنْ، لَنْ), OGOHLANTIRISH (أَلَا، أَمَا، هَا، يَا), TA'KID (إِنَّ، أَنَّ، ibtido lomi, قَدْ); atf, nido, jarr, jazm harflari o'z o'rnida.",
+        "Ikki tasnif yana: AMAL qiluvchi (إِنَّ — i'robni o'zgartiradi) / amal qilmaydigan (javob harflari); ISMga xos (jarr harflari) / FE'Lga xos (tahziz harflari) / UMUMIY (مَا، لَا inkor; و، ف atf). Eslatma: bitta harf bir necha guruhda bo'lishi mumkin — لَوْلَا shart ham (لَوْلَا الْعُقُولُ…), tahziz ham (لَوْلَا أَخَّرْتَنِي)."
+      ],
+      "savollar": [
+        {
+          "savol": "«لَوْلَا» ikki guruhda keladi — qaysi?",
+          "variantlar": [
+            "Shart (لَوْلَا الْعُقُولُ لَكَانَ…) va tahziz-undash (لَوْلَا أَخَّرْتَنِي)",
+            "Javob va inkor",
+            "Masdar va ta'kid"
+          ],
+          "togri": 0,
+          "izoh": "Shart harflari: إِنْ, إِذْ مَا, لَوْ, لَوْلَا, لَوْمَا, أَمَّا… Undash (tahziz) harflari: أَلَا, أَلَّا, هَلَّا, لَوْلَا, لَوْمَا."
+        },
+        {
+          "savol": "«بَلَى» va «نَعَمْ» — ikkalasi javob harfi. Kitob misolida بَلَى qaysi savolga javob?",
+          "variantlar": [
+            "Inkor savolga: «أَلَسْتَ ابْنَ جَلَا؟ — بَلَى»",
+            "Tasdiq savolga",
+            "Shart jumlasiga"
+          ],
+          "togri": 0,
+          "izoh": "…«Sen mashhur zotning o'g'li emasmisan?» dedim — «Balki shundayman (بَلَى)» dedi."
+        },
+        {
+          "savol": "Harflar amal jihatidan qanday bo'linadi?",
+          "variantlar": [
+            "Amal qiluvchi (إِنَّ va sheriklari) va amal qilmaydigan (javob harflari)",
+            "Faqat amal qiluvchi",
+            "Ism va fe'l"
+          ],
+          "togri": 0,
+          "izoh": "Harflar quyidagilarga bo'linadi: 1 — amal qiluvchi harflar; masalan «إِنَّ» va uning sheriklari. 2 — Amal qilmaydigan harflar; masalan javob harflari."
+        },
+        {
+          "savol": "Ism va fe'lga UMUMIY harflarga misol?",
+          "variantlar": [
+            "Inkor مَا va لَا; atf و va ف",
+            "Jarr harflari",
+            "Tahziz harflari"
+          ],
+          "togri": 0,
+          "izoh": "3 — ikkalasiga umumiy harflar (inkor «مَا» va «لَا» hamda atf «و» va «ف» kabi)."
+        },
+        {
+          "savol": "«لَاتَ سَاعَةَ مَنْدَمٍ» — لَاتَ qanday harf?",
+          "variantlar": [
+            "Inkor harfi («endi… emas»)",
+            "Javob harfi",
+            "Shart harfi"
+          ],
+          "togri": 0,
+          "izoh": "Inkor harflari: لَمْ, لَمَّا, لَنْ, مَا, لَا, لَاتَ, إِنْ… «Endi pushaymon vaqti emas»."
+        }
+      ]
+    },
+    "nahv-3-4": {
+      "sharh": [
+        "Fe'l uch xil; endi har birining BELGISI: MOZI — foil ت si (قَرَأْتُ) va muannaslik ت sini (قَرَأَتْ) qabul qiladi; MUZORI' — لَمْ dan keyin kela oladi (لَمْ يَقْرَأْ); AMR — talab ma'nosi bilan birga ta'kid nunini qabul qiladi (اذْهَبَنَّ). Muzori'ni HOZIRGI zamonga xoslovchi — ta'kid lomi (إِنَّ مَحْمُودًا لَيَقْرَأُ); kelasiga — س، سَوْفَ. أَنَيْتُ harflari vazifasi: أ — men; ن — biz; ي — g'oib erkak (1/2/ko'p) va ayollar ko'pligi (يَكْتُبْنَ); ت — hamma muxotab + g'oiba ayol (1/2).",
+        "Muannaslik ت si: keyin harakatli kelsa sokin (قَالَتْ فَاطِمَةُ), keyin sokin kelsa KASRA (قَالَتِ امْرَأَتُ), ikkilik alifidan oldin FATHA (قَالَتَا). Umumiy qoida: so'z oxiridagi sokin sahih harf, ketidan sokin kelsa, KASRA oladi (خُذِ الكِتَابَ); istisnolar: مِنْ + أل → FATHA (مِنَ الكِتَابِ); ko'plik mimi → DAMMA (لَهُمُ الْبُشْرَى). FE'L ISMLARI — fe'l ma'nosida, lekin fe'l belgilarini qabul qilmaydi: mozi ma'nosida هَيْهَاتَ (uzoq!), شَتَّانَ (farq katta!); muzori' ma'nosida وَيْ (hayron!), آهِ (oh!); amr ma'nosida صَهْ (jim!), آمِينَ (ijobat qil!)."
+      ],
+      "savollar": [
+        {
+          "savol": "Muzori'ning belgisi?",
+          "variantlar": [
+            "لَمْ dan keyin kela olishi (لَمْ يَقْرَأْ)",
+            "Ta'kid nunini qabul qilishi",
+            "Foil ت sini qabul qilishi"
+          ],
+          "togri": 0,
+          "izoh": "Uning belgisi: «لَمْ» dan keyin kelishi to'g'ri bo'lishi; masalan: لَمْ يَقْرَأْ."
+        },
+        {
+          "savol": "«قَالَتِ امْرَأَتُ الْعَزِيزِ» — ت nega kasrali?",
+          "variantlar": [
+            "Keyin sokin (vasl hamzasi bilan boshlangan so'z) keldi — ikki sokin uchrashuvidan qutulish uchun",
+            "Muannas bo'lgani uchun",
+            "Xato"
+          ],
+          "togri": 0,
+          "izoh": "Agar keyin sokin harf kelsa, ikki sokinning uchrashuvidan qutulish uchun kasra bilan keladi: «Azizning xotini aytdi»."
+        },
+        {
+          "savol": "«مِنَ الكِتَابِ» — nega مِنِ emas?",
+          "variantlar": [
+            "مِنْ + أل istisno: fatha bilan harakatlanadi",
+            "Xato yozilgan",
+            "Vasl uchun"
+          ],
+          "togri": 0,
+          "izoh": "…Faqat birinchi so'z «مِنْ», ikkinchisi «أل» bo'lsa, fatha bilan keladi: «مِنَ الكِتَابِ»."
+        },
+        {
+          "savol": "Amrning belgisi?",
+          "variantlar": [
+            "Talab ma'nosi + ta'kid nunini qabul qilish (اذْهَبَنَّ)",
+            "لَمْ dan keyin kelish",
+            "Tanvin"
+          ],
+          "togri": 0,
+          "izoh": "Belgisi: talabga dalolat qilishi bilan birga ta'kid nunini qabul qilishi; masalan: اذْهَبَنَّ."
+        },
+        {
+          "savol": "«صَهْ» (jim!) — bu nima?",
+          "variantlar": [
+            "Amr fe'l ismi — اسْكُتْ ma'nosida, fe'l belgilarini qabul qilmaydi",
+            "Amr fe'li",
+            "Harf"
+          ],
+          "togri": 0,
+          "izoh": "Amr fe'l ismi; masalan «صَهْ» — «jim tur» ma'nosida; «آمِينَ» — «ijobat qil» ma'nosida."
+        },
+        {
+          "savol": "«إِنَّ مَحْمُودًا لَيَقْرَأُ» — لَ nima qiladi?",
+          "variantlar": [
+            "Ta'kid lomi — muzori'ni HOZIRGI zamonga xoslaydi",
+            "Kelasi zamonga xoslaydi",
+            "Jarr qiladi"
+          ],
+          "togri": 0,
+          "izoh": "Uni hozirgi zamonga xoslaydi — ta'kid lomi; masalan: «Albatta Mahmud o'qiyapti»."
+        }
+      ]
+    },
+    "nahv-3-5": {
+      "sharh": [
+        "MUJARRAD — hamma harfi asliy (نَصَرَ — 3 harf; دَحْرَجَ — 4 harf). MAZIYD — asliyga qo'shimcha harf(lar): 3 harfliga +1 (أَكْرَمَ، قَدَّمَ، قَاتَلَ), +2 (انْطَلَقَ، اجْتَمَعَ، احْمَرَّ، تَشَارَكَ، تَعَلَّمَ), +3 (اسْتَغْفَرَ، اخْشَوْشَنَ، اجْلَوَّذَ، احْمَارَّ); 4 harfliga +1 (تَدَحْرَجَ), +2 (احْرَنْجَمَ، اقْشَعَرَّ). Lug'atdan qidirish uchun asliy harflarni toping: اسْتَخْرَجَ → «خرج».",
+        "Uch harflining 6 bobi (Sarf bilan bog'lang): mozi ayni fatha → muzori' damma/kasra/fatha (نَصَرَ يَنْصُرُ، ضَرَبَ يَضْرِبُ، فَتَحَ يَفْتَحُ); mozi kasra → muzori' fatha/kasra (فَرِحَ يَفْرَحُ، حَسِبَ يَحْسِبُ) — damma bo'lmaydi; mozi damma → faqat damma (كَرُمَ يَكْرُمُ). Qaysi bobdan ekani NAQL bilan. Nashr izohidagi eslash: «fatha-damma, fatha-kasra, ikki fatha, kasra-fatha, damma-damma, ikki kasra»."
+      ],
+      "savollar": [
+        {
+          "savol": "«اسْتَغْفَرَ» ma'nosini lug'atdan qaysi moddada qidirasiz?",
+          "variantlar": [
+            "غفر — asliy harflar (ا س ت qo'shimcha)",
+            "استغ",
+            "سغف"
+          ],
+          "togri": 0,
+          "izoh": "…«Qomus»dan, masalan, «istaxraja» so'zining ma'nosini bilmoqchi bo'lsang, «خرج» moddasiga qaraysan."
+        },
+        {
+          "savol": "Mozida ayn DAMMALI bo'lsa (كَرُمَ), muzori'da nima bo'ladi?",
+          "variantlar": [
+            "Faqat damma: يَكْرُمُ",
+            "Fatha yoki kasra",
+            "Uchalasi mumkin"
+          ],
+          "togri": 0,
+          "izoh": "Mozida dammali bo'lsa, muzori'da faqat dammali bo'ladi."
+        },
+        {
+          "savol": "Mozida ayn KASRALI bo'lsa (فَرِحَ), muzori'da qaysi harakat bo'lMAYDI?",
+          "variantlar": [
+            "Damma",
+            "Fatha",
+            "Kasra"
+          ],
+          "togri": 0,
+          "izoh": "Mozida kasrali bo'lsa, muzori'da: yo kasrali, yo fathali bo'ladi; dammali bo'lmaydi."
+        },
+        {
+          "savol": "«اجْتَمَعَ» — mujarradmi, maziydmi? Necha harf qo'shilgan?",
+          "variantlar": [
+            "Maziyd — 3 harfli (جمع) ga 2 harf (ا، ت) qo'shilgan",
+            "Mujarrad 5 harfli",
+            "Maziyd — 1 harf"
+          ],
+          "togri": 0,
+          "izoh": "Ikki harf qo'shilgani; masalan: انْطَلَقَ, اجْتَمَعَ, احْمَرَّ, تَشَارَكُوا, تَعَلَّمَ."
+        }
+      ]
+    },
+    "nahv-3-6": {
+      "sharh": [
+        "JOMID — bitta shaklda qotib qolgan fe'l: doim mozi (عَسَى، لَيْسَ، نِعْمَ، بِئْسَ، taajjub fe'llari) yoki doim amr (هَبْ، تَعَلَّمْ). MUTASARRIF — shakli o'zgaradi: NOQIS tasarruf — uchala shakl kelmaydi (بَرِحَ، كَادَ — amri yo'q); TO'LIQ — mozi, muzori', amr bor (عَلِمَ، أَكْرَمَ).",
+        "Muzori'ni mozidan YASASH: boshiga muzoraat harfi — 4 harflida DAMMA (يُدَحْرِجُ، يُحْسِنُ), qolganida FATHA. 3 harfli: 1-harf sokin, 2-harf naql bo'yicha (يَنْصُرُ). 3 harfli bo'lmasa: boshi ortiqcha ت bo'lsa — o'zgarmaydi (يَتَقَدَّمُ); bo'lmasa — oxiridan oldingisi KASRA, ortiqcha hamza tushadi (أَكْرَمَ → يُكْرِمُ، اسْتَغْفَرَ → يَسْتَغْفِرُ). AMR muzori'dan: muzoraat harfi tushadi; qolgan boshi sokin bo'lsa hamza qo'shiladi (انْصُرْ، اسْتَغْفِرْ), harakatli bo'lsa qo'shilmaydi (تَقَابَلْ)."
+      ],
+      "savollar": [
+        {
+          "savol": "«كَادَ» qanday fe'l?",
+          "variantlar": [
+            "Noqis tasarruf — uchala shakl (xususan amr) kelmaydi",
+            "Jomid — doim mozi",
+            "To'liq tasarruf"
+          ],
+          "togri": 0,
+          "izoh": "…yo tasarrufi noqis bo'ladi — ya'ni undan uchala fe'l kelmaydi; masalan «بَرِحَ», «كَادَ»."
+        },
+        {
+          "savol": "«أَكْرَمَ» dan muzori' qanday yasaladi?",
+          "variantlar": [
+            "Dammali muzoraat harfi + hamza tushadi + oxiridan oldingisi kasra: يُكْرِمُ",
+            "يَأْكْرِمُ",
+            "يَكْرُمُ"
+          ],
+          "togri": 0,
+          "izoh": "…to'rt harflida dammali… oxiridan oldingi harfi kasra qilinadi. Boshida ortiqcha hamza bo'lsa, u tushiriladi; masalan: يُدَحْرِجُ, يُكْرِمُ."
+        },
+        {
+          "savol": "«يَتَقَابَلُ» dan amr: hamza qo'shiladimi?",
+          "variantlar": [
+            "Yo'q — muzoraat harfi tushgach boshi harakatli (تَ): تَقَابَلْ",
+            "Ha — اِتَقَابَلْ",
+            "Amri yo'q"
+          ],
+          "togri": 0,
+          "izoh": "…undan muzoraat harfi tushiriladi va qolganining boshi sokin bo'lsa, hamza qo'shiladi; masalan: تَقَابَلْ, انْصُرْ."
+        },
+        {
+          "savol": "Doim AMR shaklida qoladigan jomid fe'llar?",
+          "variantlar": [
+            "هَبْ، تَعَلَّمْ",
+            "عَسَى، لَيْسَ",
+            "نِعْمَ، بِئْسَ"
+          ],
+          "togri": 0,
+          "izoh": "…yo doim amr shaklida qoladi — masalan «هَبْ» (faraz qil), «تَعَلَّمْ» (bilib qo'y)."
+        }
+      ]
+    },
+    "nahv-3-7": {
+      "sharh": [
+        "نِعْمَ (maqtash) va بِئْسَ (yomonlash) — jomid fe'llar. Tuzilishi: نِعْمَ + FOIL (jins: التَّاجِرُ) + MAXSUS (maqtalayotgan shaxs: صَادِقٌ). Foil — 4 shaklda: أل li (نِعْمَ التَّاجِرُ), أل li ismga muzof (نِعْمَتْ عَاقِبَةُ الصِّدْقِ), tamyiz bilan aniqlangan yashirin zamir (بِئْسَ لِلْكَاذِبِ مَصِيرًا — «u» = oqibat), مَا so'zi (نِعْمَ مَا صَنَعْتَ). Maxsus (صَادِقٌ) — vojib tushirilgan mubtadoning xabari: [الْمَمْدُوحُ] صَادِقٌ. حَبَّذَا / لَا حَبَّذَا — shu kabi.",
+        "Tarjima mantiqi: «نِعْمَ التَّاجِرُ صَادِقٌ» = «Savdogar sifatida naqadar yaxshi — rostgo'y!» Avval jins maqtaladi, keyin shaxs ko'rsatiladi."
+      ],
+      "savollar": [
+        {
+          "savol": "«نِعْمَ التَّاجِرُ صَادِقٌ» da التَّاجِرُ va صَادِقٌ i'robi?",
+          "variantlar": [
+            "التَّاجِرُ — foil; صَادِقٌ — tushirilgan mubtado (الْمَمْدُوحُ) ning xabari",
+            "Ikkalasi foil",
+            "التَّاجِرُ — mubtado, صَادِقٌ — xabar"
+          ],
+          "togri": 0,
+          "izoh": "«التَّاجِر» va «الصَّانِع» — oldidagi fe'lning foili; «صَادِق» va «خَلِيل» esa vojib ravishda tushirilgan mubtadoning xabari."
+        },
+        {
+          "savol": "«بِئْسَ لِلْكَاذِبِ مَصِيرًا» — foil qayerda?",
+          "variantlar": [
+            "Yashirin zamir, مَصِيرًا tamyizi bilan aniqlangan",
+            "لِلْكَاذِبِ",
+            "مَصِيرًا"
+          ],
+          "togri": 0,
+          "izoh": "3 — Yoki tamyiz bilan aniqlangan zamir bo'lishi; masalan: «Yolg'onchi uchun naqadar yomon oqibat!»"
+        },
+        {
+          "savol": "«نِعْمَ مَا صَنَعْتَ» — foil nima?",
+          "variantlar": [
+            "مَا so'zi",
+            "صَنَعْتَ",
+            "Yashirin"
+          ],
+          "togri": 0,
+          "izoh": "4 — Yoki «مَا» so'zi bo'lishi; masalan: «Qilgan ishing naqadar yaxshi!»"
+        },
+        {
+          "savol": "نِعْمَ ning foili qanday bo'lishi mumkin? (nechta shakl)",
+          "variantlar": [
+            "4: أل li, أل liga muzof, tamyizli zamir, مَا",
+            "1: faqat أل li",
+            "2: أل li va zamir"
+          ],
+          "togri": 0,
+          "izoh": "1 — «أل» bilan… 2 — «أل» bilan kelgan so'zga muzof… 3 — tamyiz bilan aniqlangan zamir… 4 — «مَا» so'zi."
+        }
+      ]
+    },
+    "nahv-3-8": {
+      "sharh": [
+        "TAAJJUB ikki qolip: «مَا أَفْعَلَهُ» (مَا أَحْسَنَ النِّيلَ — Nil naqadar go'zal!) va «أَفْعِلْ بِهِ» (أَعْذِبْ بِمَائِهِ). Birinchisining i'robi: مَا — «narsa» ma'nosida mubtado; أَحْسَنَ — jomid mozi, foili yashirin (هُوَ → مَا ga qaytadi); النِّيلَ — maf'ul; jumla — مَا ning xabari. Ikkinchisi: أَعْذِبْ — amr shaklidagi mozi; ب — zoid jarr harfi; مَاء — FOIL (taqdiriy damma — zoid ب ning kasrasi to'sgan).",
+        "Yasash shartlari (7): fe'l 3 harfli, to'liq (noqis emas), tasdiq, ma'lum, mutasarrif, ortiq-kamlik bo'ladigan ma'noda, sifati أَفْعَل vaznida emas (rang/ayb emas). Shart buzilsa — ikki yo'l: mutlaqo yasalmaydi (ism قِرْد; jomid كَادَ; ortiq-kamlik yo'q مَاتَ) yoki VOSITA bilan: مَا أَشَدَّ / أَشْدِدْ / مَا أَعْظَمَ + masdar: مَا أَشَدَّ إِعْزَازَ النَّاسِ (4+ harfli), أَشْدِدْ بِصَيْرُورَةِ (noqis), مَا أَعْظَمَ أَلَّا يُبَالِيَ (inkor), أَعْظِمْ أَنْ يُغْلَبَ (majhul), أَكْبِرْ بِعَرَجِ حِمَارِكَ (sifati أَعْرَج)."
+      ],
+      "savollar": [
+        {
+          "savol": "«أَعْذِبْ بِمَائِهِ» da مَاء ning i'robi?",
+          "variantlar": [
+            "Foil — taqdiriy damma (zoid ب ning kasrasi to'sgan)",
+            "Majrur — ب bilan",
+            "Maf'ul"
+          ],
+          "togri": 0,
+          "izoh": "«مَاء» — «أَعْذِبْ» ning foili bo'lib, taqdiriy damma bilan marfu'; dammaning ko'rinishiga ortiqcha jarr harfining harakati to'sqinlik qilgan."
+        },
+        {
+          "savol": "«مَا أَحْسَنَ النِّيلَ» da مَا nima?",
+          "variantlar": [
+            "«Narsa» ma'nosidagi to'liq nakira — mubtado",
+            "So'roq harfi",
+            "Inkor harfi"
+          ],
+          "togri": 0,
+          "izoh": "«مَا» — «narsa» ma'nosidagi to'liq nakira bo'lib, mubtado. «أَحْسَنَ» — jomid mozi fe'l…"
+        },
+        {
+          "savol": "«عَرِجَ» (oqsadi) dan to'g'ridan-to'g'ri taajjub yasalmaydi — nega va qanday yasaladi?",
+          "variantlar": [
+            "Sifati أَفْعَل vaznida (أَعْرَج); masdar bilan: أَكْبِرْ بِعَرَجِ حِمَارِكَ",
+            "Chunki 4 harfli",
+            "Yasaladi: مَا أَعْرَجَهُ"
+          ],
+          "togri": 0,
+          "izoh": "5 — Yoki undan sifat «أَفْعَل» vaznida kelsa (masalan «عَرِجَ»)… «Eshagingning oqsashi naqadar katta ish!» (أَكْبِرْ بِعَرَجِ حِمَارِكَ)."
+        },
+        {
+          "savol": "«مَاتَ» dan taajjub?",
+          "variantlar": [
+            "Mutlaqo yasalmaydi — ortiq-kamlik yo'q",
+            "مَا أَمْوَتَهُ",
+            "Masdar bilan: مَا أَشَدَّ مَوْتَهُ"
+          ],
+          "togri": 0,
+          "izoh": "3 — Yoki unda ortiq-kamlik bo'lmasa (masalan «مَاتَ» — o'ldi), — bulardan mutlaqo taajjub yasalmaydi."
+        },
+        {
+          "savol": "Majhul fe'ldan (غُلِبَ) taajjub qanday?",
+          "variantlar": [
+            "Vosita bilan: أَعْظِمْ أَنْ يُغْلَبَ الْمُبْطِلُ",
+            "Yasalmaydi",
+            "مَا أَغْلَبَهُ"
+          ],
+          "togri": 0,
+          "izoh": "…«مَا أَعْظَمَ» va «أَعْظِمْ»… dan keyin keltirish bilan erishasan… «Botil egasining mag'lub bo'lishi naqadar ulug'!»"
+        }
+      ]
+    },
+    "nahv-3-9": {
+      "sharh": [
+        "VASL HAMZASI — kalom o'rtasida TUSHADI (aytilmaydi), faqat boshida sokin harfga «ko'prik» bo'lish uchun aytiladi. Qayerda: 5 va 6 harfli fe'lning mozi, amr, masdarida (انْطَلَقَ، انْطَلِقْ، انْطِلَاق؛ اسْتَغْفَرَ، اسْتَغْفِرْ، اسْتِغْفَار), 3 harflining amrida (اعْلَمْ), 10 ismda (ابْن، ابْنَة، اثْنَيْنِ، اثْنَتَيْنِ، امْرُؤ، امْرَأَة، اسْم، اسْت، ايْمُن) va أل da. Harakati: odatda KASRA; أل va ايْمُن da FATHA; oxiridan oldingisi dammali amrda DAMMA (اُنْصُرْ، اُكْتُبْ). QAT' hamzasi — boshqa hamma joyda: hech qachon tushmaydi (أَكْرِمْ، أَعْطِ).",
+        "Keng tarqalgan xatolar: «الإِسْم، الإِبْتِدَاء، الإِسْتِغْفَار، فُلَانٌ إِبْنُ فُلَانٍ» — qat' bilan yozish XATO (vasl bo'lishi kerak); «اعْلِ، انْعَمْ» — 4 harfli (أَعْلَى، أَنْعَمَ) amrida hamzani tushirish XATO (أَعْلِ، أَنْعِمْ); «إِعْطِهِ» — qat' hamzasini kasra bilan yozish XATO (أَعْطِهِ). Qoida: 4 harfli fe'lning hamzasi — QAT' (أَكْرَمَ، أَكْرِمْ، إِكْرَام)."
+      ],
+      "savollar": [
+        {
+          "savol": "«اسْتَغْفَرَ» ning hamzasi vaslmi, qat'mi? Sabab?",
+          "variantlar": [
+            "Vasl — 6 harfli fe'lning mozisi",
+            "Qat' — mozi fe'l",
+            "Vasl — chunki ism"
+          ],
+          "togri": 0,
+          "izoh": "…«vasl hamzasi» deb ataladi: 1 — besh harfli fe'lning mozisi, 2 — olti harflining mozisi, 3 — ikkalasining amri, 4 — masdari, 5 — uch harflining amri."
+        },
+        {
+          "savol": "«أَكْرِمِ الضَّيْفَ» — أَكْرِمْ ning hamzasi?",
+          "variantlar": [
+            "Qat' — 4 harfli fe'l amri; hech qachon tushmaydi",
+            "Vasl",
+            "Ikkalasi mumkin"
+          ],
+          "togri": 0,
+          "izoh": "Sanalganlardan boshqasining hamzasi «qat' hamzasi» deb ataladi: u hech qachon tushmaydi…; masalan: «Mehmonni ikrom qil va so'rovchiga ber»."
+        },
+        {
+          "savol": "«الإِسْم» deb yozish to'g'rimi?",
+          "variantlar": [
+            "Xato — اسْم ning hamzasi vasl: الاسْم",
+            "To'g'ri",
+            "Faqat Qur'onda"
+          ],
+          "togri": 0,
+          "izoh": "…«الإسم», «الإبتداء»… deb hamzani qat' qilib yozish/aytish xatodir."
+        },
+        {
+          "savol": "Vasl hamzasi qachon DAMMALI?",
+          "variantlar": [
+            "Oxiridan oldingisi dammali amrda: اُنْصُرْ",
+            "أل da",
+            "Hech qachon"
+          ],
+          "togri": 0,
+          "izoh": "Vasl hamzasi kasrali bo'ladi; faqat «أل» va «ايْمُن» da fathali…, hamda oxiridan oldingi harfi dammali bo'lgan amrda dammali bo'ladi."
+        },
+        {
+          "savol": "«فُلَانٌ بْنُ فُلَانٍ» da ابْن ning hamzasi aytiladimi?",
+          "variantlar": [
+            "Yo'q — vasl hamzasi kalom o'rtasida tushadi",
+            "Ha — har doim",
+            "Faqat vaqfda"
+          ],
+          "togri": 0,
+          "izoh": "Chunki u kalom o'rtasida tushib qoladi va oldingi so'z keyingisiga ulanadi; u faqat so'z boshida… talaffuz qilinadi."
+        }
+      ]
+    },
+    "nahv-3-10": {
+      "sharh": [
+        "SAHIH fe'l — asl harflarida illat harfi (و ا ي) yo'q; uch xil: SOLIM (hamza va shadda ham yo'q: نَصَرَ), MAHMUZ (asl harfi hamza: أَمِنَ، سَأَلَ، قَرَأَ), MUZA'AF (ayn va lom bir xil: مَدَّ، فَرَّ). MU'TALL — asl harfida illat bor; besh xil: MISOL (fo: وَعَدَ، يَسُرَ), AJVAF (ayn: قَامَ، بَاعَ), NOQIS (lom: دَعَا، رَمَى), LAFIFI MAFRUQ (fo+lom: وَفَى، وَقَى), LAFIFI MAQRUN (ayn+lom: طَوَى، نَوَى). Sarf kitobidagi tasnif bilan bir xil.",
+        "Oxiri illatli fe'lning zamirlar bilan o'zgarishi — 4 qoida: (1) MOZI + jamoa vovi: illat harfi tushadi; alif tushsa oldi FATHA (سَعَوْا), و/ي tushsa DAMMA (سَرُوا، رَضُوا). (2) MOZI + boshqa zamir: illat qoladi; 3-harf alif asliga qaytadi (غَزَوْنَا، رَمَيْنَا). (3) MUZORI' + jamoa vovi / muxotaba yosi: illat tushadi; alif bo'lsa oldi fatha (يَسْعَوْنَ، تَسْعَيْنَ), و/ي bo'lsa mos harakat (يَغْزُونَ، تَغْزِينَ، يَرْمُونَ، تَرْمِينَ). (4) MUZORI' + boshqa: illat qoladi; alif ي ga (يَسْعَيْنَ — ayollar). Diqqat: يَغْزُونَ (erkaklar — و tushgan) va يَغْزُونَ (ayollar — و asl) yozuvda bir xil, tarkibi boshqa."
+      ],
+      "savollar": [
+        {
+          "savol": "«وَقَى» (saqladi) qaysi tur?",
+          "variantlar": [
+            "Lafifi mafruq — fo (و) va lom (ي) illatli",
+            "Lafifi maqrun",
+            "Misol"
+          ],
+          "togri": 0,
+          "izoh": "4 — Lafifi mafruq — birinchi va oxirgi harflari illatli bo'lgani; masalan: وَفَى, وَقَى."
+        },
+        {
+          "savol": "«سَعَى» + jamoa vovi = ?",
+          "variantlar": [
+            "سَعَوْا — alif tushdi, oldi fatha",
+            "سَعُوا — damma",
+            "سَعَاوا"
+          ],
+          "togri": 0,
+          "izoh": "…tushirilgan alif bo'lsa, oldingi harf fatha bilan; vov yoki yo bo'lsa, damma bilan keladi… «سَعَى» dan «سَعَوْا»…"
+        },
+        {
+          "savol": "«رَضِيَ» + jamoa vovi = ?",
+          "variantlar": [
+            "رَضُوا — ي tushdi, oldi damma",
+            "رَضَوْا",
+            "رَضِيُوا"
+          ],
+          "togri": 0,
+          "izoh": "…«سَرُوَ» va «رَضِيَ» dan «سَرُوا» va «رَضُوا» deysan."
+        },
+        {
+          "savol": "«يَغْزُو» + muxotaba yosi (ey Hind) = ?",
+          "variantlar": [
+            "تَغْزِينَ — و tushdi, ي ga mos kasra",
+            "تَغْزُوِينَ",
+            "تَغْزَيْنَ"
+          ],
+          "togri": 0,
+          "izoh": "…vov yoki yo bo'lsa, jamoa vovi yoki muxotaba yosiga mos harakat keltiriladi… «تَغْزِينَ», «تَرْمِينَ يَا هِنْدُ»."
+        },
+        {
+          "savol": "«النِّسَاءُ يَسْعَيْنَ» — alif nega ي bo'ldi?",
+          "variantlar": [
+            "Ayollar nuni bilan illat qoladi; alif (asli ي) ي ga aylanadi",
+            "Alif tushdi",
+            "Xato"
+          ],
+          "togri": 0,
+          "izoh": "Bu ikkisidan boshqasiga bog'lansa, illat harfi tushirilmaydi… alif… yoga aylanadi… «يَسْعَى» dan: «Ayollar harakat qiladilar» (يَسْعَيْنَ)."
+        },
+        {
+          "savol": "«سَأَلَ» sahihning qaysi turi?",
+          "variantlar": [
+            "Mahmuz — asl harfi hamza",
+            "Solim",
+            "Muza'af"
+          ],
+          "togri": 0,
+          "izoh": "2 — Mahmuz — asl harflaridan biri hamza bo'lgani; masalan: أَمِنَ, سَأَلَ, قَرَأَ."
+        }
+      ]
+    },
+    "nahv-3-11": {
+      "sharh": [
+        "LOZIM — maf'ul olmaydi (خَرَجَ، فَرِحَ); MUTA'ADDIY — oladi, 4 bo'lim: (1) bitta maf'ul (كَتَبَ الدَّرْسَ); (2) asli mubtado-xabar bo'lgan IKKI maf'ul: gumon (ظَنَّ، خَالَ، حَسِبَ، زَعَمَ، جَعَلَ، عَدَّ، حَجَا، هَبْ), yaqin (رَأَى، عَلِمَ، وَجَدَ، أَلْفَى، دَرَى، تَعَلَّمْ), o'zgartirish (صَيَّرَ، رَدَّ، تَرَكَ، تَخِذَ، اتَّخَذَ، جَعَلَ، وَهَبَ); (3) asli mubtado-xabar bo'lmagan ikki maf'ul (أَعْطَى، سَأَلَ، مَنَحَ، مَنَعَ، كَسَا، أَلْبَسَ); (4) UCH maf'ul: أَرَى، أَعْلَمَ، أَنْبَأَ، نَبَّأَ، أَخْبَرَ، خَبَّرَ، حَدَّثَ (يُرِيهِمُ اللَّهُ أَعْمَالَهُمْ حَسَرَاتٍ).",
+        "O'timlilikni OSHIRISH: 3 harfli lozimga hamza yoki shadda → 1 maf'ul (خَرَجَ → أَخْرَجَ، فَرِحَ → فَرَّحَ); 1 maf'ulli → 2 maf'ulli (قَرَأَ → أَقْرَأَ، فَهِمَ → فَهَّمَ). MUTOVI' (aks ta'sir) — bir daraja KAMAYTIRADI: كَسَرْتُ (1) → انْكَسَرَ (0); عَلَّمْتُهُ الْحِسَابَ (2) → تَعَلَّمَهُ (1). Foyda: فَعُلَ يَفْعُلُ vaznidagi hamma fe'l LOZIM (كَرُمَ); فَعِلَ يَفْعَلُ — rang, ayb, ziynat, quvonch, g'am, to'lish, bo'shlik bildirsa lozim (حَمِرَ، عَمِشَ، فَرِحَ، شَبِعَ، عَطِشَ), aks holda muta'addiy (عَلِمَ، سَمِعَ). Gumon/yaqin fe'llarida ikki maf'ul o'rnini أَنَّ + ismi + xabari egallashi mumkin (يَحْسَبُونَ أَنَّهُمْ يُحْسِنُونَ)."
+      ],
+      "savollar": [
+        {
+          "savol": "Uchta maf'ul oladigan fe'llar?",
+          "variantlar": [
+            "أَرَى، أَعْلَمَ، أَنْبَأَ، نَبَّأَ، أَخْبَرَ، خَبَّرَ، حَدَّثَ",
+            "ظَنَّ، حَسِبَ، زَعَمَ",
+            "أَعْطَى، مَنَحَ، كَسَا"
+          ],
+          "togri": 0,
+          "izoh": "4 — Uchta maf'ulni nasb qiladigan bo'lim: «أَرَى», «أَعْلَمَ», «أَنْبَأَ», «نَبَّأَ», «أَخْبَرَ», «خَبَّرَ», «حَدَّثَ»."
+        },
+        {
+          "savol": "«فَهِمَ» (1 maf'ul) → «فَهَّمَ» — necha maf'ul?",
+          "variantlar": [
+            "2 — shadda o'timlilikni bir daraja oshiradi (فَهَّمْتُهُ الدَّرْسَ)",
+            "1",
+            "0 — lozim bo'ladi"
+          ],
+          "togri": 0,
+          "izoh": "Agar u bitta maf'ulga o'timli bo'lsa, ikkitaga o'timli bo'ladi; masalan: أَقْرَأَ, فَهَّمَ."
+        },
+        {
+          "savol": "«عَلَّمْتُهُ الْحِسَابَ فَتَعَلَّمَهُ» — تَعَلَّمَ necha maf'ul oladi va nega?",
+          "variantlar": [
+            "1 — mutovi' bir daraja kamaytiradi (عَلَّمَ 2 edi)",
+            "2",
+            "0"
+          ],
+          "togri": 0,
+          "izoh": "Agar u ikkita maf'ulga o'timli bo'lsa, uning mutovi'i bitta maf'ulga o'timli bo'ladi; masalan: «Unga hisobni o'rgatdim — u uni o'rgandi»."
+        },
+        {
+          "savol": "«كَرُمَ» (فَعُلَ vazni) lozimmi, muta'addiymi?",
+          "variantlar": [
+            "Lozim — فَعُلَ يَفْعُلُ vaznidagi hamma fe'l lozim",
+            "Muta'addiy",
+            "Ikkalasi"
+          ],
+          "togri": 0,
+          "izoh": "«فَعُلَ يَفْعُلُ» vaznidagi barcha fe'llar — masalan karuma–yakrumu… — lozimdir."
+        },
+        {
+          "savol": "«شَبِعَ» (to'ydi) — فَعِلَ vaznida; lozimmi?",
+          "variantlar": [
+            "Lozim — to'lish ma'nosini bildiradi",
+            "Muta'addiy — فَعِلَ vazni har doim o'timli",
+            "Jomid"
+          ],
+          "togri": 0,
+          "izoh": "«فَعِلَ يَفْعَلُ» vaznidagilar… to'lishga (shabi'a — to'ydi, raviya — qonib ichdi)… dalolat qilsa, lozim bo'ladi."
+        },
+        {
+          "savol": "﴿يَحْسَبُونَ أَنَّهُمْ يُحْسِنُونَ صُنْعًا﴾ — يَحْسَبُ ning ikki maf'uli qani?",
+          "variantlar": [
+            "أَنَّ + ismi + xabari ikki maf'ul o'rnini egallagan",
+            "Tushirilgan",
+            "صُنْعًا va أَنَّهُمْ"
+          ],
+          "togri": 0,
+          "izoh": "…gumon va yaqin fe'llarida ikki maf'ul o'rnini «أَنَّ» va uning ismi hamda xabari egallashi mumkin."
+        }
+      ]
+    },
+    "nahv-3-12": {
+      "sharh": [
+        "MA'LUM — foili aytilgan (قَطَعَ مَحْمُودٌ الْغُصْنَ); MAJHUL — foil tushirilib, maf'ul uning o'rniga (قُطِعَ الْغُصْنُ). MOZI majhuli: boshi damma + oxiridan oldingisi kasra (قُطِعَ); ortiqcha ت bilan boshlansa 2-harf ham damma (تُعُلِّمَ); vasl hamzasi bilan boshlansa 3-harf ham damma (اسْتُخْرِجَ). MUZORI' majhuli: boshi damma + oxiridan oldingisi fatha (يُقْطَعُ، يُتَعَلَّمُ، يُسْتَخْرَجُ). Ajvaf: mozida alif → ي, oldi kasra (قَالَ → قِيلَ، بَاعَ → بِيعَ، اخْتَارَ → اخْتِيرَ); muzori'da و/ي → alif (يَقُولُ → يُقَالُ، يَبِيعُ → يُبَاعُ).",
+        "LOZIM fe'ldan majhul faqat zarf yoki jorr-majrur bilan (سُهِرَتْ لَيْلَتَانِ، سِيرَ مِيلَانِ، فُرِحَ بِالْوُصُولِ). Xatolar: «الْجُنْدِيُّ أَصَابَ» (ma'lum o'rniga majhul kerak: أُصِيبَ), «يُعَافَى مِنْ» (to'g'risi يُعْفَى — أَعْفَى dan). Foyda: doim majhul keladigan fe'llar: جُنَّ (jinni bo'ldi), بُهِتَ (lol qoldi), عُنِيَ بِـ (e'tibor berdi), حُمَّ (isitmaladi), زُكِمَ (tumov bo'ldi), أُغْمِيَ عَلَيْهِ (hushidan ketdi), غُمَّ الْهِلَالُ (oy bulut ostida qoldi)…"
+      ],
+      "savollar": [
+        {
+          "savol": "«اسْتَخْرَجَ» ning majhuli?",
+          "variantlar": [
+            "اسْتُخْرِجَ — vasl hamzasi bilan boshlangan: 1- va 3-harf damma, oxiridan oldingisi kasra",
+            "أُسْتَخْرِجَ",
+            "اسْتَخْرِجَ"
+          ],
+          "togri": 0,
+          "izoh": "Boshida vasl hamzasi bo'lsa, birinchisi bilan birga uchinchisi ham damma qilinadi; masalan: «Ma'dan chiqarildi» (اسْتُخْرِجَ)."
+        },
+        {
+          "savol": "«اخْتَارَ» ning majhuli?",
+          "variantlar": [
+            "اخْتِيرَ — alif ي ga, oldi kasra",
+            "اخْتُورَ",
+            "أُخْتِيرَ"
+          ],
+          "togri": 0,
+          "izoh": "Oxiridan oldingi harfi alif bo'lsa (قَالَ, بَاعَ, اخْتَارَ, اسْتَمَالَ), alif yoga aylanadi va undan oldingisi kasra qilinadi: قِيلَ, بِيعَ, اخْتِيرَ."
+        },
+        {
+          "savol": "«يَبِيعُ» ning majhuli?",
+          "variantlar": [
+            "يُبَاعُ — ي alifga",
+            "يُبِيعُ",
+            "يُبْيَعُ"
+          ],
+          "togri": 0,
+          "izoh": "Oxiridan oldingi harfi vov yoki yo bo'lsa (يَقُولُ, يَبِيعُ…), u alifga aylanadi: يُقَالُ, يُبَاعُ."
+        },
+        {
+          "savol": "Lozim fe'ldan majhul yasaladimi?",
+          "variantlar": [
+            "Faqat mutasarrif zarf yoki jorr-majrur bilan: سُهِرَتْ لَيْلَتَانِ، فُرِحَ بِالْوُصُولِ",
+            "Hech qachon",
+            "Har doim erkin"
+          ],
+          "togri": 0,
+          "izoh": "Lozim fe'ldan majhul faqat quyidagilar bilan keladi: 1 — mutasarrif zarf, 2 — yoki jorr va majrur."
+        },
+        {
+          "savol": "«تَعَلَّمَ» ning majhuli?",
+          "variantlar": [
+            "تُعُلِّمَ — ortiqcha ت bilan: 1- va 2-harf damma",
+            "تَعُلِّمَ",
+            "أُتْعُلِّمَ"
+          ],
+          "togri": 0,
+          "izoh": "Boshida ortiqcha «to» bo'lsa, birinchisi bilan birga ikkinchisi ham damma qilinadi; masalan: «Hisob o'rganildi» (تُعُلِّمَ)."
+        },
+        {
+          "savol": "«يُعَافَى مِنْ دَفْعِ الْمَصَارِيفِ» — xato qayerda?",
+          "variantlar": [
+            "To'g'risi يُعْفَى — fe'l أَعْفَى يُعْفِي dan (عَافَى emas)",
+            "Xato yo'q",
+            "مِنْ o'rniga عَنْ"
+          ],
+          "togri": 0,
+          "izoh": "Xatolardan: «يُعافى من دفع المصاريف» deb aytish; to'g'risi «يُعْفَى», chunki u «أَعْفَاهُ يُعْفِيهِ» fe'lidandir."
+        }
+      ]
+    },
+    "nahv-3-13": {
+      "sharh": [
+        "TA'KID NUNLARI: yengil (sokin نْ) va og'ir (shaddali نَّ) — hozir/kelajakda talab qilinayotgan ishni ta'kidlaydi; shuning uchun MOZI va ISMga qo'shilmaydi. Uch hukm: (1) VOJIB — qasam javobi bo'lib, lomga tutash, tasdiq, kelasi zamon: وَاللَّهِ لَأُسَافِرَنَّ غَدًا; (2) MAN — shartlar to'liq bo'lmasa: وَاللَّهِ لَسَوْفَ أُسَافِرُ (lomga tutash emas), لَأَقُومُ الْآنَ (hozirgi zamon), تَاللَّهِ لَا يَذْهَبُ (inkor); (3) JOIZ — boshqa o'rinlarda (amr, nahiy, so'roq…): لَا تَدْنُوَنَّ / لَا تَدْنُ.",
+        "Nun oldidagi harakat — zamirga qarab: ochiq ism / birlik → FATHA (لَيَنْصُرَنَّ، لَيَدْعُوَنَّ، لَيَرْمِيَنَّ، لَيَسْعَيَنَّ — illatli oxir qoladi!); ikkilik alifi → nun shaddali + KASRA (لَيَنْصُرَانِّ); jamoa vovi → DAMMA, illatli oxir tushadi, vov ham tushadi (لَيَنْصُرُنَّ، لَيَدْعُنَّ، لَيَرْمُنَّ) — faqat alifli fe'lda vov qoladi dammali (لَيَسْعَوُنَّ); muxotaba yosi → KASRA, shu kabi (لَتَنْصُرِنَّ، لَتَدْعِنَّ؛ لَتَسْعَيِنَّ); ayollar nuni → orasiga ALIF, nun kasrali (لَيَنْصُرْنَانِّ). Amr ham shunday (انْصُرَنَّ، انْصُرَانِّ، انْصُرُنَّ، انْصُرِنَّ، انْصُرْنَانِّ). Yengil nun ikkilik alifidan va ayollar nuni alifidan keyin KELMAYDI."
+      ],
+      "savollar": [
+        {
+          "savol": "«وَاللَّهِ لَأُسَافِرَنَّ غَدًا» — ta'kid nuni nega VOJIB?",
+          "variantlar": [
+            "Qasam javobi + lomga tutash + tasdiq + kelasi zamon — 4 shart to'liq",
+            "Chunki amr",
+            "Chunki muzori'"
+          ],
+          "togri": 0,
+          "izoh": "Qasamning javobi bo'lib, uning lomiga tutash, tasdiq va kelasi zamon ma'nosida bo'lsa, ular bilan ta'kidlash vojib."
+        },
+        {
+          "savol": "«وَاللَّهِ لَسَوْفَ أُسَافِرُ» — nega nun qo'shilmaydi?",
+          "variantlar": [
+            "Fe'l lomga tutash emas (سَوْفَ orada) — shart buzilgan, ta'kid man",
+            "Chunki inkor",
+            "Chunki mozi"
+          ],
+          "togri": 0,
+          "izoh": "Qasam javobi bo'lsa-yu, sanalgan shartlar to'liq bo'lmasa, ta'kidlash man qilinadi; masalan: «وَاللَّهِ لَسَوْفَ أُسَافِرُ»…"
+        },
+        {
+          "savol": "«يَدْعُو» + jamoa vovi + ta'kid nuni = ?",
+          "variantlar": [
+            "لَيَدْعُنَّ — illatli و tushdi, jamoa vovi tushdi, damma qoldi",
+            "لَيَدْعُوُنَّ",
+            "لَيَدْعُونَنَّ"
+          ],
+          "togri": 0,
+          "izoh": "Jamoa voviga bog'lansa, nundan oldingi harf damma qilinadi; oxiri illatli fe'lning oxiri mutlaq tushiriladi; jamoa vovi ham tushiriladi…"
+        },
+        {
+          "savol": "«يَسْعَى» + jamoa vovi + ta'kid nuni = ?",
+          "variantlar": [
+            "لَيَسْعَوُنَّ — alif tushdi, lekin vov dammali qoldi",
+            "لَيَسْعُنَّ",
+            "لَيَسْعَيُنَّ"
+          ],
+          "togri": 0,
+          "izoh": "…jamoa vovi ham tushiriladi — faqat alif bilan illatli bo'lganida qoladi va damma bilan harakatlanadi; masalan: …«لَيَسْعَوُنَّ»."
+        },
+        {
+          "savol": "«يَنْصُرْنَ» (ayollar) + ta'kid nuni = ?",
+          "variantlar": [
+            "لَيَنْصُرْنَانِّ — ikki nun orasiga alif, ta'kid nuni kasrali",
+            "لَيَنْصُرْنَنَّ",
+            "لَيَنْصُرْنَّ"
+          ],
+          "togri": 0,
+          "izoh": "Ayollar nuniga bog'lansa, ikki nun orasiga alif qo'shiladi va ta'kid nuni kasrali bo'ladi; masalan: «لَيَنْصُرْنَانِّ»."
+        },
+        {
+          "savol": "Yengil ta'kid nuni (نْ) qayerda kelmaydi?",
+          "variantlar": [
+            "Ikkilik alifidan va ayollar nunini ajratuvchi alifdan keyin",
+            "Amrda",
+            "Muzori'da"
+          ],
+          "togri": 0,
+          "izoh": "Yengil ta'kid nuni ikkilik alifidan keyin ham, ayollar nuni bilan ta'kid nunini ajratuvchi alifdan keyin ham kelmaydi."
+        },
+        {
+          "savol": "Ta'kid nunlari nega moziga qo'shilmaydi?",
+          "variantlar": [
+            "Ular hozir/kelajakda talab qilinayotgan ishni ta'kidlaydi — mozi o'tgan",
+            "Qo'shiladi",
+            "Chunki mozi mabniy"
+          ],
+          "togri": 0,
+          "izoh": "Bu ikkisi hozir yoki kelajakda bajarilishi yoki tark etilishi talab qilinayotgan ishni ta'kidlash uchundir; shuning uchun ular bilan mozi fe'l ham, ism ham ta'kidlanmaydi."
+        }
+      ]
+    },
+    "nahv-3-14": {
+      "sharh": [
+        "2-kitobdagi qoidaning takrori — bir farq bilan: AMR endi «muzori'i jazm qilinadigan alomat ustiga» mabniy deb ta'riflanadi (bu umumlashtirish): اسْمَعْ (sukun — لَمْ يَسْمَعْ kabi), اسْعَ (alif tushgan — لَمْ يَسْعَ kabi), اسْمُ، ارْتَقِ (و/ي tushgan), اسْمَعَا، اسْمَعُوا، اسْمَعِي (nun tushgan), اسْمَعَنَّ (fatha — ta'kid nuni bilan). Mozi: fatha (كَتَبَ), jamoa vovi bilan damma (كَتَبُوا), harakatli raf' zamiri bilan sukun (كَتَبْتُ، كَتَبْنَا). Muzori': ta'kid nuni → fatha; ayollar nuni → sukun. Mu'rab — ikki nundan xoli muzori': raf', nasb, jazm.",
+        "Sinov: amrning alomatini bilmasangiz, uni لَمْ bilan muzori'ga aylantiring: ارْمِ → لَمْ يَرْمِ (ي tushgan); اكْتُبُوا → لَمْ يَكْتُبُوا (nun tushgan)."
+      ],
+      "savollar": [
+        {
+          "savol": "3-kitobga ko'ra amr nima ustiga mabniy?",
+          "variantlar": [
+            "Muzori'i jazm qilinadigan alomat ustiga (sukun / illat harfi hazfi / nun hazfi)",
+            "Faqat sukun ustiga",
+            "Fatha ustiga"
+          ],
+          "togri": 0,
+          "izoh": "Amrga kelsak, uning binosi muzori'i jazm qilinadigan narsa uzradir; masalan: «eshit», «harakat qil», «yuksal», «ko'taril», «ikkovingiz eshiting»…"
+        },
+        {
+          "savol": "«كَتَبْنَا» da mozi nega sukunli?",
+          "variantlar": [
+            "Harakatli raf' zamiri (نَا) qo'shilgan",
+            "Ayollar nuni",
+            "Jazm"
+          ],
+          "togri": 0,
+          "izoh": "Harakatlangan raf' zamiriga tutashsa, sokin qilinadi; masalan: «katabtu», «katabna»."
+        },
+        {
+          "savol": "﴿وَالْوَالِدَاتُ يُرْضِعْنَ﴾ — يُرْضِعْنَ ning holati?",
+          "variantlar": [
+            "Mabniy — sukun ustiga (ayollar nuni)",
+            "Marfu'",
+            "Majzum"
+          ],
+          "togri": 0,
+          "izoh": "Unga ayollar nuni tutashgani; binosi sukun uzradir; masalan: «Onalar farzandlarini emizadilar»."
+        }
+      ]
+    },
+    "nahv-3-15": {
+      "sharh": [
+        "Nasb (2-10 ning takrori + qo'shimchalar). Nasb harflari: أَنْ (masdar harfi — fe'l bilan birga masdar o'rnida), لَنْ (kelasi inkor), إِذًا (javob-jazo), كَيْ (masdar harfi; undan hosil bo'lgan masdar ل bilan majrur: لِكَيْ). Yashirin أَنْ — 5 vojib o'rin: juhud lomi (مَا كُنْتُ لِأُخْلِفَ), أَوْ (= إِلَى/إِلَّا: يُحْكَمُ عَلَى الْمُتَّهِمِ أَوْ تَظْهَرَ بَرَاءَتُهُ), حَتَّى (= إِلَى yoki ta'lil: حَتَّى يَتَبَيَّنَ), sababiyat fosi va maiyyat vovi — inkor yoki TALABdan keyin.",
+        "YANGILIK: talab 7 xil: amr (جُودُوا فَتَسُودُوا), nahiy (لَا تَعْجَلْ فَتَنْدَمَ), arz — mayin taklif (أَلَا تَحُلُّ بِنَادِينَا فَتُكْرَمَ), hazz — qattiq undash (هَلَّا كَتَبْتَ فَيَحْضُرَ), tamanniy (لَيْتَ الْكَوَاكِبَ تَدْنُو فَأَنْظِمَهَا), tarajjiy (لَعَلِّي أَمْلِكُ نِصَابًا فَأُزَكِّيَ), istifhom (هَلْ تُصْغِي فَأُحَدِّثَكَ). Maiyyat vovining ma'nosi: inkor/talab IKKALASIGA BIRGA qaratiladi — لَا تَأْكُلِ السَّمَكَ وَتَشْرَبَ اللَّبَنَ = ikkisini BIRGA qilma (alohida mumkin)."
+      ],
+      "savollar": [
+        {
+          "savol": "«لَا تَأْكُلِ السَّمَكَ وَتَشْرَبَ اللَّبَنَ» — nimadan qaytarilgan?",
+          "variantlar": [
+            "Ikkisini BIRGA qilishdan (har birini alohida emas) — maiyyat vovi",
+            "Baliq yeyishdan",
+            "Sut ichishdan"
+          ],
+          "togri": 0,
+          "izoh": "…«Baliq yeb, ustidan sut ichma» degan gapning ma'nosi — ikkisini birga qilishdan qaytarishdir, har birini alohida qilishdan emas."
+        },
+        {
+          "savol": "«لَعَلِّي أَمْلِكُ نِصَابًا فَأُزَكِّيَ» — فَأُزَكِّيَ nega mansub? Talabning qaysi turi?",
+          "variantlar": [
+            "Tarajjiy (umid) dan keyingi sababiyat fosi — yashirin أَنْ",
+            "Amr",
+            "Istifhom"
+          ],
+          "togri": 0,
+          "izoh": "…6 — Tarajjiy (umid)… «Shoyad nisobga yetadigan mol-mulkka ega bo'lsam-u, zakot bersam»."
+        },
+        {
+          "savol": "«أَلَا تَحُلُّ بِنَادِينَا فَتُكْرَمَ» — talabning qaysi turi?",
+          "variantlar": [
+            "Arz — mayin taklif",
+            "Hazz — qattiq undash",
+            "Nahiy"
+          ],
+          "togri": 0,
+          "izoh": "3 — Arz (mayin taklif)… «Majlisimizga tushsang-chi, hurmat ko'rasan!»"
+        },
+        {
+          "savol": "«كَيْ» dan hosil bo'lgan masdar qanday i'roblanadi?",
+          "variantlar": [
+            "Lom bilan majrur (لِكَيْ أَقْرَأَ = لِلْقِرَاءَةِ)",
+            "Marfu'",
+            "Mansub"
+          ],
+          "togri": 0,
+          "izoh": "Faqat «kay»dan kelib chiqadigan masdar va fe'l lom bilan jarr qilinadi."
+        },
+        {
+          "savol": "Talab necha xil va qaysilar?",
+          "variantlar": [
+            "7: amr, nahiy, arz, hazz, tamanniy, tarajjiy, istifhom",
+            "3: amr, nahiy, istifhom",
+            "5"
+          ],
+          "togri": 0,
+          "izoh": "1 — Amr. 2 — Nahy. 3 — Arz. 4 — Hazz. 5 — Tamanniy. 6 — Tarajjiy. 7 — Istifhom."
+        }
+      ]
+    },
+    "nahv-3-16": {
+      "sharh": [
+        "Jazm (2-11 takrori + qo'shimchalar). Buyruq lomi KASRALI; و، ف، ثُمَّ dan keyin SOKIN qilish joiz (وَلْنَحْمِلْ، فَلْتَفْرَحُوا); ko'proq g'oib muzori'iga, kamdan-kam mutakallim/muxotabga. YANGI: (1) muzori' TALAB JAVOBI bo'lsa jazm — yashirin shart bilan: اسْكُتْ تَسْلَمْ (= إِنْ تَسْكُتْ تَسْلَمْ); (2) shart fe'li إِلَّا (= إِنْ + لَا) dan keyin tushadi: تَكَلَّمْ بِخَيْرٍ وَإِلَّا فَاسْكُتْ; (3) shart javobi oldingi gap ma'nan javob bo'lsa tushadi: أَنْتَ مُجَازِفٌ إِنْ أَقْدَمْتَ.",
+        "JAVOBGA FO (ف) VOJIB — javob jazmga yaramaydigan 4 holda: ismiy jumla (إِنْ يَمْسَسْكَ بِخَيْرٍ فَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ), talab fe'li (إِنْ كُنْتُمْ تُحِبُّونَ اللَّهَ فَاتَّبِعُونِي), مَا/لَنْ/قَدْ/س/سَوْفَ bilan (فَمَا سَأَلْتُكُمْ، فَلَنْ يُكْفَرُوهُ، فَقَدْ سَرَقَ، فَسَيَقُولُونَ، فَسَوْفَ يُغْنِيكُمُ), jomid fe'l (فَعَسَى رَبِّي). Eslash bayti: «اسْمِيَّةٌ طَلَبِيَّةٌ وَبِجَامِدٍ * وَبِمَا وَلَنْ وَبِقَدْ وَبِالتَّنْفِيسِ» (tanfis = س/سَوْفَ)."
+      ],
+      "savollar": [
+        {
+          "savol": "«اسْكُتْ تَسْلَمْ» — تَسْلَمْ nega majzum?",
+          "variantlar": [
+            "Talab javobi — yashirin shart: إِنْ تَسْكُتْ تَسْلَمْ",
+            "اسْكُتْ jazm qiladi",
+            "Xato — marfu' bo'lishi kerak"
+          ],
+          "togri": 0,
+          "izoh": "Muzori' talabning javobi bo'lib kelsa, jazm qilinishi mumkin… Uning jazmi tushirilgan shart sababidandir; taqdiri: «Agar jim tursang — sog' qolasan»."
+        },
+        {
+          "savol": "﴿إِنْ كُنْتُمْ تُحِبُّونَ اللَّهَ فَاتَّبِعُونِي﴾ — javobda ف nega vojib?",
+          "variantlar": [
+            "Javob talab fe'li (amr) — jazm alomati ko'rinmaydi",
+            "Har doim ف keladi",
+            "Chunki qasam"
+          ],
+          "togri": 0,
+          "izoh": "2 — Yoki talabga dalolat qiluvchi fe'l bo'lsa… U «fo» bilan qo'shilishi vojib bo'ladi."
+        },
+        {
+          "savol": "«تَكَلَّمْ بِخَيْرٍ وَإِلَّا فَاسْكُتْ» — إِلَّا nima?",
+          "variantlar": [
+            "إِنْ + لَا — shart fe'li tushirilgan (وَإِنْ لَا تَتَكَلَّمْ بِخَيْرٍ)",
+            "Istisno harfi",
+            "Ta'kid"
+          ],
+          "togri": 0,
+          "izoh": "«Lo»ga idg'om qilingan «in»dan keyin shart fe'li tushirilishi mumkin; masalan: «Yaxshi gap gapir, aks holda jim tur»."
+        },
+        {
+          "savol": "Buyruq lomi qachon sokin bo'la oladi?",
+          "variantlar": [
+            "و، ف، ثُمَّ dan keyin (وَلْنَحْمِلْ، فَلْتَفْرَحُوا)",
+            "Hech qachon",
+            "Har doim"
+          ],
+          "togri": 0,
+          "izoh": "Bu lomning harakati kasradir; vov, fo va «summa»dan keyin uni sokin qilish joiz…"
+        },
+        {
+          "savol": "«أَنْتَ مُجَازِفٌ إِنْ أَقْدَمْتَ» — shart javobi qani?",
+          "variantlar": [
+            "Tushirilgan — oldingi gap (أَنْتَ مُجَازِفٌ) ma'nan javob",
+            "أَقْدَمْتَ",
+            "مُجَازِفٌ"
+          ],
+          "togri": 0,
+          "izoh": "Shartning javobi, agar undan oldin ma'nan javob bo'ladigan gap kelgan bo'lsa, tushiriladi; masalan: «Agar oldinga tashlansang, sen tavakkalchisan»."
+        },
+        {
+          "savol": "«التَّنْفِيس» harflari qaysilar (bayt)?",
+          "variantlar": [
+            "س va سَوْفَ",
+            "قَدْ va لَنْ",
+            "مَا va لَا"
+          ],
+          "togri": 0,
+          "izoh": "Ismiy gap, talab gapi, jomid fe'l, «mo», «lan», «qad» va tanfis (sin, savfa) harflari bilan kelgani."
+        }
+      ]
+    },
+    "nahv-3-17": {
+      "sharh": [
+        "Raf' (2-12 va 2-13 takrori): asl damma, besh misolda nun; nasb va jazm qiluvchi bo'lmasa raf'. Taqdiriy i'rob: alif — raf' va nasb taqdiriy (يَسْعَى، لَنْ يَتَوَانَى); و/ي — faqat raf' taqdiriy (يَسْمُو، يَرْتَقِي), nasb ochiq (لَنْ يَسْمُوَ). Sabab farqi: alifda TA'AZZUR (imkonsiz), و/ي da ISTISQOL (og'irlik) — «i'rob qoidalarini bir tekis qo'llash uchun»."
+      ],
+      "savollar": [
+        {
+          "savol": "«لَنْ يَتَوَانَى» da nasb alomati?",
+          "variantlar": [
+            "Taqdiriy fatha — alif",
+            "Ochiq fatha",
+            "Alif hazfi"
+          ],
+          "togri": 0,
+          "izoh": "…fe'l alif bilan illatli bo'lsa… oxirida raf' holida damma, nasb holida fatha taqdir qilinadi; masalan: «harakat qiladi», «sustlik qilmaydi»."
+        },
+        {
+          "savol": "«بِالرَّاعِي تَصْلُحُ الرَّعِيَّةُ» — تَصْلُحُ nega marfu'?",
+          "variantlar": [
+            "Oldida nasb va jazm qiluvchi yo'q",
+            "بِ bilan",
+            "Chunki muannas"
+          ],
+          "togri": 0,
+          "izoh": "Muzori' oldidan nasb qiluvchi ham, jazm qiluvchi ham kelmasa, raf' qilinadi."
+        }
+      ]
+    },
+    "nahv-3-18": {
+      "sharh": [
+        "Ism JOMID — sifat ma'nosi yo'q (رَجُل — faqat zot; عِلْم — faqat ma'no); MUSHTAQ — sifat ma'nosi bor (عَالِم — bilim sifatli zot; سَدِيد — to'g'rilik sifatli ma'no). Jomid ikki xil: ZOT ismi (إِنْسَان، فَرَس، نَهْر) va MA'NO ismi (فَهْم، شَجَاعَة، ارْتِفَاع; masdar bo'lmagan ma'no ismlari ham bor: ضَوْء، نُور، زَمَان، وَقْت). ISHTIQOQ — bir so'zdan boshqasini ma'no bog'liqligi va lafz o'zgarishi bilan olish; u MA'NO ISMIdan bo'ladi: كِتَابَة → كَتَبَ، يَكْتُبُ، اكْتُبْ، كَاتِب، مَكْتُوب، مَكْتَب."
+      ],
+      "savollar": [
+        {
+          "savol": "«عَالِم» va «رَجُل» — farqi?",
+          "variantlar": [
+            "عَالِم — mushtaq (bilim sifati nazarda tutilgan zot); رَجُل — jomid (faqat zot)",
+            "Farqi yo'q",
+            "رَجُل — mushtaq"
+          ],
+          "togri": 0,
+          "izoh": "Birinchisi (olim) — unda bilim sifati nazarda tutilgan zotga dalolat qiladi… «Rajul» va «ilm» bundan farq qiladi: birinchisi faqat zotga, ikkinchisi faqat ma'noga dalolat qiladi."
+        },
+        {
+          "savol": "Ishtiqoq (so'z yasalishi) nimadan bo'ladi?",
+          "variantlar": [
+            "Ma'no ismidan (masdar kabi)",
+            "Zot ismidan",
+            "Harfdan"
+          ],
+          "togri": 0,
+          "izoh": "Ishtiqoq (so'z yasalishi) ma'no ismidan bo'ladi."
+        },
+        {
+          "savol": "«ضَوْء» (yorug'lik) — masdarmi?",
+          "variantlar": [
+            "Masdar emas, lekin ma'no ismi — ma'no ismi faqat masdarga xos emas",
+            "Masdar",
+            "Zot ismi"
+          ],
+          "togri": 0,
+          "izoh": "Ma'no ismiga shular ham kiradi: «yorug'lik», «nur», «zamon», «vaqt», «payt»… Demak, ma'no ismi faqat masdarga xos emas."
+        }
+      ]
+    },
+    "nahv-3-19": {
+      "sharh": [
+        "MASDAR — mushtaqlar kelib chiqadigan asl. 3 harflining masdari SAMO'IY (eshitiladi); eshitilmagan bo'lsa MA'NO bo'yicha qiyos: hunar → فِعَالَة (زِرَاعَة، تِجَارَة); bosh tortish → فِعَال (إِبَاء); tebranish → فَعَلَان (غَلَيَان); kasallik → فُعَال (صُدَاع); yurish → فَعِيل (رَسِيم); tovush → فُعَال/فَعِيل (صُرَاخ، صَهِيل); rang → فُعْلَة (حُمْرَة). Hech biri bo'lmasa BOB bo'yicha: فَعَلَ/فَعِلَ muta'addiy → فَعْل (نَصْر، فَهْم); فَعَلَ lozim → فُعُول (خُرُوج); فَعِلَ lozim → فَعَل (فَرَح، عَطَش); فَعُلَ → فُعُولَة/فَعَالَة (سُهُولَة، نَبَاهَة).",
+        "4 harfli QIYOSIY: فَعْلَلَة (دَحْرَجَة), إِفْعَال (إِكْرَام), تَفْعِيل (تَقْدِيم), فِعَال/مُفَاعَلَة (قِتَال/مُقَاتَلَة). 5–6 harfli: mozi vaznida — ortiqcha ت bilan boshlansa oxiridan oldingisi DAMMA (تَدَحْرُج، تَعَلُّم); vasl hamzasi bilan boshlansa 3-harf KASRA + oxiridan oldin ALIF (انْطِلَاق، اسْتِخْرَاج)."
+      ],
+      "savollar": [
+        {
+          "savol": "«صُدَاع» (bosh og'rig'i) qaysi qoida bo'yicha فُعَال vaznida?",
+          "variantlar": [
+            "Kasallikka dalolat qilgani uchun",
+            "Tovushga",
+            "Rangga"
+          ],
+          "togri": 0,
+          "izoh": "Kasallikka dalolat qilsa, «fu'ol» vaznida bo'ladi; masalan: bosh og'rig'i, boshaylanish."
+        },
+        {
+          "savol": "«خَرَجَ» (lozim, فَعَلَ bobi) ning masdari qaysi vaznda?",
+          "variantlar": [
+            "فُعُول: خُرُوج",
+            "فَعْل: خَرْج",
+            "فَعَل: خَرَج"
+          ],
+          "togri": 0,
+          "izoh": "«Fa'ala» bobidan lozim bo'lsa, «fu'ul» vaznida bo'ladi; masalan: o'tirish, chiqish."
+        },
+        {
+          "savol": "«اسْتَخْرَجَ» ning masdari qanday yasaladi?",
+          "variantlar": [
+            "3-harf kasra + oxiridan oldin alif: اسْتِخْرَاج",
+            "Oxiridan oldingisi damma: اسْتَخْرُج",
+            "إِسْتِخْرَاج"
+          ],
+          "togri": 0,
+          "izoh": "Boshida vasl hamzasi bo'lsa, uchinchi harfi kasra qilinib, oxiridan oldin alif qo'shiladi; masalan: «istaxraja — istixrojan»."
+        },
+        {
+          "savol": "«تَعَلَّمَ» ning masdari?",
+          "variantlar": [
+            "تَعَلُّم — ortiqcha ت bilan: oxiridan oldingisi damma",
+            "تَعْلِيم",
+            "تَعَلُّمَة"
+          ],
+          "togri": 0,
+          "izoh": "Boshida ortiqcha «to» bo'lsa, oxiridan oldingi harfi damma qilinadi; masalan: «tadahraja — tadahrujan»."
+        },
+        {
+          "savol": "«كَرُمَ» (فَعُلَ) ning masdari qaysi vaznda?",
+          "variantlar": [
+            "فُعُولَة yoki فَعَالَة: كَرَامَة",
+            "فَعْل",
+            "فُعُول"
+          ],
+          "togri": 0,
+          "izoh": "«Fa'ula» bobidan bo'lsa, «fu'ula» yoki «fa'ola» vaznida bo'ladi; masalan: osonlik, obro'lilik."
+        }
+      ]
+    },
+    "nahv-3-20": {
+      "sharh": [
+        "Mushtaq ism 7 tur: ISM FOIL (bajaruvchi: كَاتِب), ISM MAF'UL (tushgan: مَكْتُوب), SIFATI MUSHABBAHA (barqaror sifat: حَسَن), ISM ZAMON (مَوْعِد), ISM MAKON (مَكْتَب), ISM OLA (asbob: مِفْتَاح), ISM TAFZIL (أَكْبَر). Keyingi 6 dars har birini beradi. Hammasining manbai — masdar (ma'no ismi)."
+      ],
+      "savollar": [
+        {
+          "savol": "Mushtaq ismlar nechta?",
+          "variantlar": [
+            "7: ism foil, maf'ul, sifati mushabbaha, zamon, makon, ola, tafzil",
+            "5",
+            "3"
+          ],
+          "togri": 0,
+          "izoh": "Mushtaq ism yetti turga bo'linadi."
+        },
+        {
+          "savol": "«مِفْتَاح» (kalit) qaysi tur?",
+          "variantlar": [
+            "Ism ola (asbob ismi)",
+            "Ism makon",
+            "Ism foil"
+          ],
+          "togri": 0,
+          "izoh": "6 — Va ism ola (asbob ismi)."
+        }
+      ]
+    },
+    "nahv-3-21": {
+      "sharh": [
+        "ISM FOIL — ish undan sodir bo'lgan zot. 3 harflidan فَاعِل (نَاصِر، فَاتِح); 3 harfli bo'lmaganidan — MUZORI' vaznida: muzoraat harfi → dammali مُ, oxiridan oldingisi KASRA (يُكْرِمُ → مُكْرِم، يَنْطَلِقُ → مُنْطَلِق، يَسْتَخْرِجُ → مُسْتَخْرِج). MUBOLAG'A siyg'alari (ko'plik/kuchaytirish): فَعَّال (شَرَّاب), مِفْعَال (مِقْوَال), فَعُول (صَبُور), فَعِيل (عَلِيم), فَعِل (حَذِر).",
+        "Xatolar: 3 harfli fe'ldan مُفْعِل vaznida aytish: «بَرْدٌ مُقْتِلٌ» xato → قَاتِل (قَتَلَ dan), «مُهْضِم» → هَاضِم, «مُسِمّ» → سَامّ, «مُسِرّ» → سَارّ; aksincha, 4 harfli fe'ldan فَاعِل: «الرَّاسِل» xato → الْمُرْسِل (أَرْسَلَ), «لَاغٍ» → مُلْغٍ (أَلْغَى), «غَالِق» → مُغْلِق (أَغْلَقَ). Qoida: avval FE'L necha harfli ekanini aniqlang."
+      ],
+      "savollar": [
+        {
+          "savol": "«شَرَابٌ مُهْضِمٌ» — to'g'rimi?",
+          "variantlar": [
+            "Xato — هَضَمَ 3 harfli: هَاضِم",
+            "To'g'ri",
+            "مَهْضُوم bo'lishi kerak"
+          ],
+          "togri": 0,
+          "izoh": "Xatolardan: …«hazm qildiruvchi ichimlik» (مُهْضِم)… To'g'risi: qotil, hozim (هَاضِم)…"
+        },
+        {
+          "savol": "«غَالِقُ الْبَابِ» — to'g'rimi?",
+          "variantlar": [
+            "Xato — أَغْلَقَ 4 harfli: مُغْلِق",
+            "To'g'ri",
+            "مَغْلُوق"
+          ],
+          "togri": 0,
+          "izoh": "Xatolardan: …«eshikni yopuvchi va qulflovchi» iboralarini «foil» vaznida aytish. To'g'risi: …mug'liq (مُغْلِق), muqfil."
+        },
+        {
+          "savol": "«اسْتَخْرَجَ» dan ism foil?",
+          "variantlar": [
+            "مُسْتَخْرِج — muzori' vaznida, مُ + oxiridan oldingisi kasra",
+            "مُسْتَخْرَج",
+            "سَاخِر"
+          ],
+          "togri": 0,
+          "izoh": "Uch harfli bo'lmasa, muzori'ining vaznida yasaladi: muzoraat harfi dammali «mim»ga almashtiriladi va oxiridan oldingi harf kasra qilinadi; masalan: …mustaxrij."
+        },
+        {
+          "savol": "«صَبُور» qaysi vazn va nima uchun?",
+          "variantlar": [
+            "فَعُول — mubolag'a (ko'p sabr qiluvchi)",
+            "فَاعِل — ism foil",
+            "Sifati mushabbaha"
+          ],
+          "togri": 0,
+          "izoh": "3 — Yoki «fa'ul»; masalan: sabur (ko'p sabr qiluvchi)… Bular «mubolag'a siyg'alari» deb ataladi."
+        }
+      ]
+    },
+    "nahv-3-22": {
+      "sharh": [
+        "ISM MAF'UL — ish unga tushgan narsa. 3 harflidan مَفْعُول (مَنْصُور); 3 harfli bo'lmaganidan — ism foili kabi, faqat oxiridan oldingisi FATHA (مُكْرِم → مُكْرَم، مُسْتَخْرِج → مُسْتَخْرَج). Farq bitta harakatda: kasra — foil (qiluvchi), fatha — maf'ul (qilingan): مُعَلِّم (o'qituvchi) / مُعَلَّم (o'qitilgan). LOZIM fe'ldan ism maf'ul faqat zarf yoki jorr-majrur bilan: مُجْتَمَعٌ أَمَامَهُ، مُنْطَلَقٌ بِهِ (yolg'iz هُوَ مُجْتَمَعٌ deyilmaydi).",
+        "Xatolar (4 harfli fe'ldan مَفْعُول): «الْخِطَابُ الْمَرْسُولُ» → الْمُرْسَل (أَرْسَلَ), «الْبَابُ الْمَغْلُوقُ» → الْمُغْلَق, «الْمَقْفُول» → الْمُقْفَل, «الْعَبْدُ الْمَعْتُوقُ» → الْمُعْتَق (أَعْتَقَ), «الْمَاءُ الْمَغْلِيُّ» → الْمُغْلَى (أَغْلَى), «الْمَلْغِيّ» → الْمُلْغَى, «مَلْزُوم» → مُلْزَم (أَلْزَمَ)."
+      ],
+      "savollar": [
+        {
+          "savol": "«الْبَابُ الْمَغْلُوقُ» — to'g'rimi?",
+          "variantlar": [
+            "Xato — أَغْلَقَ 4 harfli: الْمُغْلَق",
+            "To'g'ri",
+            "الْغَالِق"
+          ],
+          "togri": 0,
+          "izoh": "Xatolardan: …«yopilgan eshik» (الْمَغْلُوق)… To'g'risi: mursal, mug'laq (الْمُغْلَق)…"
+        },
+        {
+          "savol": "مُعَلِّم va مُعَلَّم — farqi?",
+          "variantlar": [
+            "Kasra — ism foil (o'qituvchi); fatha — ism maf'ul (o'qitilgan)",
+            "Farqi yo'q",
+            "Birinchisi ko'plik"
+          ],
+          "togri": 0,
+          "izoh": "Uch harfli bo'lmasa, o'zining ism foili vaznida, faqat oxiridan oldingi harfi fatha qilinib yasaladi; masalan: mudahraj, mukram, mu'azzam."
+        },
+        {
+          "savol": "«هُوَ مُنْطَلَقٌ» deyish mumkinmi?",
+          "variantlar": [
+            "Yo'q — lozim fe'ldan ism maf'ul faqat zarf/jorr-majrur bilan: مُنْطَلَقٌ بِهِ",
+            "Ha",
+            "Faqat she'rda"
+          ],
+          "togri": 0,
+          "izoh": "Lozim fe'ldan ism maf'ul faqat zarflar yoki jorr va majrur bilan yasaladi… «u bilan yo'lga chiqilgan» deyiladi."
+        },
+        {
+          "savol": "«أَنْتَ مَلْزُومٌ بِفِعْلِ كَذَا» — xato qayerda?",
+          "variantlar": [
+            "أَلْزَمَ 4 harfli: مُلْزَم",
+            "Xato yo'q",
+            "لَازِم bo'lishi kerak"
+          ],
+          "togri": 0,
+          "izoh": "…«sen falon ishni qilishga majbursan» (مَلْزُوم)… To'g'risi: …mulzam (مُلْزَم)."
+        }
+      ]
+    },
+    "nahv-3-23": {
+      "sharh": [
+        "SIFATI MUSHABBAHA — LOZIM fe'llardan (فَرِحَ يَفْرَحُ، كَرُمَ يَكْرُمُ), BARQAROR sifatni bildiradi (ism foildan farqi: كَاتِب — hozir yozayotgan; حَسَن — doim chiroyli). فَرِحَ bobidan vaznlar: فَعِل (فَرِح — muannasi فَرِحَة), أَفْعَل (أَسْوَد، أَكْحَل — muannasi فَعْلَاء: سَوْدَاء), فَعْلَان (عَطْشَان، شَبْعَان — muannasi فَعْلَى: عَطْشَى). كَرُمَ bobidan: فَعِيل (شَرِيف، ظَرِيف), فَعْل (شَهْم، ضَخْم), فَعَل (حَسَن، بَطَل).",
+        "Sarf kitobidagi وَضِرٌ، قَوِيٌّ، حَيٌّ — aynan shu tur. Sinov: rang, tashqi ko'rinish, xarakter, holat (ochlik/to'qlik) — sifati mushabbaha; ish-harakat — ism foil."
+      ],
+      "savollar": [
+        {
+          "savol": "«أَسْوَد» ning muannasi?",
+          "variantlar": [
+            "سَوْدَاء — أَفْعَل → فَعْلَاء",
+            "أَسْوَدَة",
+            "سُودَى"
+          ],
+          "togri": 0,
+          "izoh": "«Fa'il»ning muannasi — «fa'ila», «af'al»ning muannasi — «fa'lo'», «fa'lon»ning muannasi — «fa'lo»."
+        },
+        {
+          "savol": "«عَطْشَان» ning muannasi?",
+          "variantlar": [
+            "عَطْشَى — فَعْلَان → فَعْلَى",
+            "عَطْشَانَة",
+            "عَطْشَاء"
+          ],
+          "togri": 0,
+          "izoh": "…«fa'lon»ning muannasi — «fa'lo»."
+        },
+        {
+          "savol": "Sifati mushabbaha qaysi fe'llardan yasaladi?",
+          "variantlar": [
+            "Lozim fe'llardan (فَرِحَ، كَرُمَ boblari) — barqaror sifat uchun",
+            "Muta'addiy fe'llardan",
+            "Har qanday fe'ldan"
+          ],
+          "togri": 0,
+          "izoh": "Sifati mushabbaha — «fariha–yafrahu» yoki «karuma–yakrumu» kabi lozim fe'llardan, ish unda barqaror tarzda mavjud bo'lgan zotga dalolat qilish uchun yasalgan sifatdir."
+        },
+        {
+          "savol": "«حَسَن» (chiroyli) qaysi vazn va qaysi bobdan?",
+          "variantlar": [
+            "فَعَل — كَرُمَ bobidan (حَسُنَ)",
+            "فَعِل — فَرِحَ bobidan",
+            "فَاعِل"
+          ],
+          "togri": 0,
+          "izoh": "…3 — Va «fa'al»; masalan: hasan (chiroyli), batal (qahramon)."
+        }
+      ]
+    },
+    "nahv-3-24": {
+      "sharh": [
+        "ISM ZAMON / MAKON — ish vaqti yoki joyi. 3 harflidan: muzori' ayni damma yoki fatha → مَفْعَل (يَنْظُرُ → مَنْظَر، يَذْهَبُ → مَذْهَب); ayni kasra → مَفْعِل (يَجْلِسُ → مَجْلِس). NOQISda doim FATHA (مَرْمًى، مَمْشًى); lomi sahih MISOLda doim KASRA (وَرَدَ → مَوْرِد، وَضَعَ → مَوْضِع — ayni fathali bo'lsa ham!). 3 harfli bo'lmaganidan — ism maf'ul kabi (مُكْرَم، مُسْتَخْرَج). Foyda: MASDARI MIMIY (مَفْعَل vaznidagi masdar: مَنْظَر = نَظَر، مَضْرَب = ضَرْب; misolda kasra: مَوْعِد) bilan chalkashadi — 3 harfli bo'lmaganda ism maf'ul, zamon, makon, masdari mimiy BIR XIL shakl: مُسْتَخْرَج — «chiqarilgan» / «chiqarish joyi» / «chiqarish vaqti» / «chiqarish» — QARINA (kontekst) hal qiladi.",
+        "Sarf kitobidagi مَضْرَب، مَنْصَر، مَوْعِد، مِيضَاع bilan bog'lang."
+      ],
+      "savollar": [
+        {
+          "savol": "«يَجْلِسُ» dan ism makon?",
+          "variantlar": [
+            "مَجْلِس — ayn kasrali → مَفْعِل",
+            "مَجْلَس",
+            "مُجْلَس"
+          ],
+          "togri": 0,
+          "izoh": "Ayni kasrali bo'lsa, «maf'il» vaznida (ayni kasrali) bo'ladi; masalan: majlis (o'tirish joyi)."
+        },
+        {
+          "savol": "«وَضَعَ يَضَعُ» (ayn fathali) dan ism makon — nega مَوْضِع (kasra)?",
+          "variantlar": [
+            "Lomi sahih misol fe'lda doim kasra",
+            "Xato — مَوْضَع bo'lishi kerak",
+            "Chunki noqis"
+          ],
+          "togri": 0,
+          "izoh": "Lomi sahih bo'lgan misolda (birinchi harfi illatli fe'lda) kasra bo'ladi; masalan: mavrid, mavzi' (مَوْضِع)."
+        },
+        {
+          "savol": "«مُسْتَخْرَج» — bu ism maf'ulmi, makonmi, masdarmi?",
+          "variantlar": [
+            "Uchalasi ham bo'lishi mumkin — shakl bir xil, ma'no qarina bilan",
+            "Faqat ism maf'ul",
+            "Faqat ism makon"
+          ],
+          "togri": 0,
+          "izoh": "…uch harfli bo'lmagan fe'lda ism maf'ul, zamon-makon ismlari va masdari mimiyning siyg'asi bir xildir; ma'no qarina (kontekst) bilan aniqlanadi."
+        },
+        {
+          "savol": "«رَمَى» (noqis) dan ism makon?",
+          "variantlar": [
+            "مَرْمًى — noqisda doim fatha",
+            "مَرْمِي",
+            "مِرْمَى"
+          ],
+          "togri": 0,
+          "izoh": "Noqis fe'lda fatha vojibdir; masalan: marmo (otish joyi), mamsho (yurish joyi)."
+        }
+      ]
+    },
+    "nahv-3-25": {
+      "sharh": [
+        "ISM OLA — ish uning vositasida bajariladigan asbob. 3 vazn, hammasi KASRALI MIM bilan: مِفْعَل (مِبْرَد — egov, مِقْوَد — jilov), مِفْعَال (مِفْتَاح — kalit, مِسْبَار), مِفْعَلَة (مِكْنَسَة — supurgi, مِقْرَعَة، مِصْفَاة). Xato: mimni fatha bilan (مَبْرَد، مَكْنَسَة) yoki damma bilan (مُفْتَاح) aytish. Eslash: «ola — kasra» (Sarfdagi مِضْرَب، مِنْصَر kabi)."
+      ],
+      "savollar": [
+        {
+          "savol": "«مُفْتَاح» deb aytish to'g'rimi?",
+          "variantlar": [
+            "Xato — ism olada mim kasrali: مِفْتَاح",
+            "To'g'ri",
+            "Ikkalasi joiz"
+          ],
+          "togri": 0,
+          "izoh": "Bularning hammasida «mim» kasrali bo'ladi… ba'zan dammali qilib «muftoh» deydilar — bu ham xatodir."
+        },
+        {
+          "savol": "Ism olaning vaznlari?",
+          "variantlar": [
+            "مِفْعَل، مِفْعَال، مِفْعَلَة",
+            "مَفْعَل، مَفْعِل",
+            "فَاعِل، مَفْعُول"
+          ],
+          "togri": 0,
+          "izoh": "1 — «Mif'al». 2 — Yoki «mif'ol». 3 — Yoki «mif'ala»; masalan: mibrad, miqvad, miftoh, misbor, miknasa, miqra'a, misfot."
+        }
+      ]
+    },
+    "nahv-3-26": {
+      "sharh": [
+        "ISM TAFZIL — أَفْعَل vaznida: ikki narsa bir sifatda sherik, biri ortiq (أَفْضَل، أَكْبَر). Shartlari taajjub fe'llari bilan bir xil; shart buzilsa — أَشَدّ + masdar (أَشَدُّ اسْتِخْرَاجًا، أَقْوَى عَرَجًا). Moslashuv (mutobaqat) 3 hol: (1) أل siz va izofasiz, yoki NAKIRAga muzof → doim BIRLIK MUZAKKAR: الرِّجَالُ أَقْوَى مِنَ النِّسَاءِ، الْخَنْسَاءُ أَشْعَرُ امْرَأَةٍ; (2) أل bilan → MOSLASHADI: الرَّجُلُ الْأَفْضَلُ، الْمَرْأَةُ الْفُضْلَى، الرِّجَالُ الْأَفْضَلُونَ، النِّسَاءُ الْفُضْلَيَاتُ; (3) MA'RIFAga muzof → ikkalasi joiz: الْأَنْبِيَاءُ أَفْضَلُ النَّاسِ / أَفَاضِلُهُمْ.",
+        "Istisno: أَفْعَل tafzil ma'nosisiz, ism foil ma'nosida kelsa — moslashuv shart: الزَّيْدَانِ أَكْذَبَا الْقَوْمِ (= الْكَاذِبَانِ). «Mavsuf» deganda mubtado ham nazarda tutiladi (xabar ma'nan sifat)."
+      ],
+      "savollar": [
+        {
+          "savol": "«الْخَنْسَاءُ أَشْعَرُ امْرَأَةٍ» — nega أَشْعَرُ muzakkar (Xanso ayol-ku)?",
+          "variantlar": [
+            "Nakiraga muzof — doim birlik muzakkar",
+            "Xato — شُعْرَى bo'lishi kerak",
+            "Chunki alam"
+          ],
+          "togri": 0,
+          "izoh": "U «al»dan va izofadan xoli bo'lsa yoki nakiraga izofa qilinsa, doim birlik va muzakkar shaklda bo'lishi vojibdir; masalan: …«Xanso — ayollarning eng shoiri»."
+        },
+        {
+          "savol": "«النِّسَاءُ الْفُضْلَيَاتُ» — nega moslashgan?",
+          "variantlar": [
+            "أل bilan ma'rifa — mavsufga moslashuv vojib",
+            "Xato",
+            "Chunki ko'plik"
+          ],
+          "togri": 0,
+          "izoh": "«Al» bilan ma'rifa qilinsa, mavsufiga moslashuvi vojibdir; masalan: …eng afzal ayollar (الْفُضْلَيَات)."
+        },
+        {
+          "savol": "«مَرْيَمُ أَفْضَلُ النِّسَاءِ» — «فُضْلَاهُنَّ» deyish ham mumkinmi?",
+          "variantlar": [
+            "Ha — ma'rifaga muzof bo'lganda ikkalasi joiz",
+            "Yo'q — faqat أَفْضَلُ",
+            "Yo'q — faqat فُضْلَى"
+          ],
+          "togri": 0,
+          "izoh": "Ma'rifaga izofa qilinsa, ikki holat ham joizdir; masalan: …«Maryam ayollarning eng afzalidir» yoki «ularning eng afzalidir»."
+        },
+        {
+          "savol": "«الزَّيْدَانِ أَكْذَبَا الْقَوْمِ» — nega ikkilik (أَكْذَبُ emas)?",
+          "variantlar": [
+            "أَفْعَل bu yerda ism foil ma'nosida (الْكَاذِبَانِ), tafzil emas — moslashuv shart",
+            "Xato",
+            "Chunki أل bor"
+          ],
+          "togri": 0,
+          "izoh": "Faqat «af'al» ism foil ma'nosida bo'lib, unda ortiqlik ko'zda tutilmagan bo'lsa, moslashuv shart bo'ladi; masalan: «Ikki Zayd — qavmning yolg'onchilaridir»."
+        },
+        {
+          "savol": "«عَرِجَ» dan tafzil?",
+          "variantlar": [
+            "أَقْوَى عَرَجًا — sifati أَفْعَل (أَعْرَج) bo'lgani uchun vosita bilan",
+            "أَعْرَجُ",
+            "Yasalmaydi"
+          ],
+          "togri": 0,
+          "izoh": "Shartlardan birini yo'qotgan fe'ldan ortiqlik ma'nosiga uning masdarini «ashaddu» va shu kabilardan keyin keltirish bilan erishiladi; masalan: …«oqsashi kuchliroq» (أَقْوَى عَرَجًا)."
+        }
+      ]
+    },
+    "nahv-3-27": {
+      "sharh": [
+        "Maqsur (الْهُدَى), manqus (الْقَاضِي), sahih (كِتَاب) — 2-17 takrori. YANGI qoida — TANVIN bilan: maqsur tanvinlansa ALIF yozuvda tushadi (فَتًى، هُدًى، أَذًى — «hudan» o'qiladi); manqus tanvinlansa YO raf' va jarrda tushadi (هَادٍ، عَاصٍ), NASBda qoladi (مُتَمَادِيًا). Misol: هُوَ هَادٍ لِكُلِّ عَاصٍ وَإِنْ كَانَ مُتَمَادِيًا — birinchi ikkisi (raf', jarr) yo'siz, uchinchisi (nasb) yo bilan.",
+        "Eslash: manqusning yo'si «kuchsiz» — damma/kasra ko'tara olmaydi (tushadi), fathani ko'taradi (qoladi)."
+      ],
+      "savollar": [
+        {
+          "savol": "«قَاضٍ» — nega yo yo'q?",
+          "variantlar": [
+            "Tanvinli manqus raf'/jarrda yo tushadi (asli قَاضِي)",
+            "Xato yozilgan",
+            "Chunki maqsur"
+          ],
+          "togri": 0,
+          "izoh": "Manqus tanvinlansa, «yo»si raf' va jarr holatida tushiriladi, nasb holatida esa qoladi."
+        },
+        {
+          "savol": "«رَأَيْتُ قَاضِيًا» — yo nega qoldi?",
+          "variantlar": [
+            "Nasb holatida manqusning yo'si qoladi",
+            "Xato — قَاضًا bo'lishi kerak",
+            "Chunki ma'rifa"
+          ],
+          "togri": 0,
+          "izoh": "…nasb holatida esa qoladi; masalan: «…davom etib ketgan bo'lsa ham» (مُتَمَادِيًا)."
+        },
+        {
+          "savol": "«هُدًى» — maqsur tanvinlanganda nima bo'ladi?",
+          "variantlar": [
+            "Alif yozuvda tushadi (asli هُدَى)",
+            "Alif qoladi: هُدَاً",
+            "Alif ي ga aylanadi"
+          ],
+          "togri": 0,
+          "izoh": "Maqsur tanvinlansa, alifi tushiriladi; masalan: «Bu — hidoyatga ergashgan (هُدًى) va ozor keltirmagan (أَذًى) yigitdir (فَتًى)»."
+        }
+      ]
+    },
+    "nahv-3-28": {
+      "sharh": [
+        "Mufrad/musanno/jam' (2-15 takrori) + YASASH QOIDALARI. IKKILIK: birlikka ـانِ/ـيْنِ qo'shiladi; MAQSURda alif 4+ harf bo'lsa → ي (دَعْوَيَانِ، مُصْطَفَيَانِ), 3-harf bo'lsa asliga → (فَتَيَانِ، عَصَوَانِ); MANQUSda tushgan yo qaytadi (هَادٍ → هَادِيَانِ); MAMDUDda hamza ta'nis uchun → و (صَحْرَاوَانِ), asliy → qoladi (قُرَّاءَانِ), boshqa → ikkalasi (كِسَاءَانِ/كِسَاوَانِ). Mulhaq: اثْنَانِ، اثْنَتَانِ، كِلَا/كِلْتَا (zamirga muzof; ochiq ismga muzof bo'lsa alif doimiy — maqsur kabi: كِلْتَا الْجَنَّتَيْنِ).",
+        "JAM'I MUZAKKARI SOLIM: ـُونَ/ـِينَ; manqusda yo tushadi (هَادُونَ، هَادِينَ — رَاضِيِينَ xato!); maqsurda alif tushadi, fatha qoladi (مُصْطَفَوْنَ، مُصْطَفَيْنَ). Faqat aqlli erkak ALAMlari (tarkibsiz) va SIFATlari (ة qabul qiladigan yoki tafzil). Mulhaq: أُولُو، عِشْرُونَ…تِسْعُونَ، بَنُونَ، أَرَضُونَ، سِنُونَ. JAM'I MUANNASI SOLIM: ـَات; ة tushadi (فَاطِمَات); alifi ta'nis ikkilikdagidek (حُبْلَيَات، صَحْرَاوَات); دَعْد/سَجْدَة kabi o'rtasi sokinda 2-harf fatha (دَعَدَات، سَجَدَات). Qiyosiy 6 tur: ayol alamlari, aqlsiz muzakkar sifatlari (جِبَالٌ شَامِخَات), ة li so'zlar, alifi ta'nis li, taksiri eshitilmagan 5 harflilar (حَمَّامَات، سُرَادِقَات), tasg'ir (دُرَيْهِمَات). TAKSIR — naql bilan; muntahal-jumu' = 3-harfi alif, keyin 2 harf yoki o'rtasi sokin 3 harf (جَوَاهِر، مَصَابِيح، مَوَادّ)."
+      ],
+      "savollar": [
+        {
+          "savol": "«عَصًا» (hassa) ning ikkiligi?",
+          "variantlar": [
+            "عَصَوَانِ — alif 3-harf, asli و",
+            "عَصَيَانِ",
+            "عَصَاءَانِ"
+          ],
+          "togri": 0,
+          "izoh": "…uchinchi o'rinda bo'lsa, asliga qaytariladi… «fato» va «aso» so'zlariga esa: fatayani, asavani deysan."
+        },
+        {
+          "savol": "«خَرَجُوا غَيْرَ رَاضِيِينَ» — to'g'rimi?",
+          "variantlar": [
+            "Xato — manqus jam'ida yo tushadi: رَاضِينَ",
+            "To'g'ri",
+            "رَاضُونَ bo'lishi kerak"
+          ],
+          "togri": 0,
+          "izoh": "…manqusning «yo»si ikkilikda saqlanadi, ko'plikda esa tushiriladi. Ko'plikda uni saqlab qolish xatodir; masalan «xaraju g'ayra roziyina…» deyish."
+        },
+        {
+          "savol": "«صَحْرَاء» ning ikkiligi va ko'pligi?",
+          "variantlar": [
+            "صَحْرَاوَانِ، صَحْرَاوَات — ta'nis hamzasi و ga",
+            "صَحْرَاءَانِ، صَحْرَاءَات",
+            "صَحْرَايَانِ"
+          ],
+          "togri": 0,
+          "izoh": "Mamdud bo'lsa: hamza ta'nis uchun bo'lsa, «vov»ga aylantiriladi… «sahro» va «savdo» so'zlariga: sahrovani, savdovani… hublayot, sahrovot."
+        },
+        {
+          "savol": "«سَجْدَة» ning jam'i muannasi solimi?",
+          "variantlar": [
+            "سَجَدَات — o'rtasi sokin, 2-harf fatha bo'ladi",
+            "سَجْدَات",
+            "سَجْدَتَات"
+          ],
+          "togri": 0,
+          "izoh": "«Da'd» va «sajda» kabi bo'lsa, ikkinchi harf fatha qilinadi; shunday qilib: Da'adot, sajadot deysan."
+        },
+        {
+          "savol": "«مَوَادّ» (moddalar) muntahal-jumu'mi? Alifdan keyin bitta harf-ku.",
+          "variantlar": [
+            "Ha — shaddali harf haqiqatda ikki harf",
+            "Yo'q",
+            "Bu jam'i solim"
+          ],
+          "togri": 0,
+          "izoh": "Bunga «mavodd», «davobb», «avomm», «xavoss» va shu kabilar ham kiradi, chunki shaddali harf haqiqatda ikki harfdir."
+        },
+        {
+          "savol": "«حَمَّام» ning ko'pligi qanday yasaladi va nega?",
+          "variantlar": [
+            "حَمَّامَات — 5 harfli, taksiri eshitilmagan → jam'i muannasi solim qiyosiy",
+            "حَمَامِيم",
+            "حُمُم"
+          ],
+          "togri": 0,
+          "izoh": "5 — Jam' taksiri eshitilmagan har bir besh harfli so'z; masalan: surodiq, hammom, istabl."
+        },
+        {
+          "savol": "«مُصْطَفَى» ning jam'i muzakkari solimi (raf')?",
+          "variantlar": [
+            "مُصْطَفَوْنَ — alif tushdi, fatha qoldi",
+            "مُصْطَفَيُونَ",
+            "مُصْطَفُونَ"
+          ],
+          "togri": 0,
+          "izoh": "Maqsur bo'lsa, alifi tushiriladi va vov bilan yodan oldin alifga dalil bo'lib fatha qoladi; shunday qilib «Mustafo» so'ziga: Mustafavna, Mustafayna deysan."
+        }
+      ]
+    },
+    "nahv-3-29": {
+      "sharh": [
+        "Muzakkar/muannas (2-16 takrori). Muannaslik alomatlari: harakatli ة, alifi maqsura (سَلْمَى), alifi mamduda (حَسْنَاء). ة sifatda muannasni muzakkardan ajratadi (قَائِم/قَائِمَة). Ma'naviy (زَيْنَب), lafziy (حَمْزَة), majoziy (الشَّمْس) — naql bilan; majoziy muannasga ayol kabi muomala: zamir ـهَا (الدَّارُ دَخَلْتُهَا), ishora هَذِهِ, fe'l ت (قَامَتِ الْحَرْبُ).",
+        "YANGI: ة ning boshqa vazifalari — BIRLIK (jinsdan bittasini ajratish: عِنَبَة — bir dona uzum, قَمْحَة، وَرَقَة; ة siz jins: عِنَب), MUBOLAG'A (رَاوِيَة — ko'p rivoyat qiluvchi), mubolag'ani TA'KIDLASH (عَلَّامَة — juda ko'p biluvchi; erkakka ham aytiladi)."
+      ],
+      "savollar": [
+        {
+          "savol": "«عَلَّامَة» dagi ة nima uchun?",
+          "variantlar": [
+            "Mubolag'ani ta'kidlash — erkak olimga ham aytiladi",
+            "Muannaslik",
+            "Birlik"
+          ],
+          "togri": 0,
+          "izoh": "«To» muannaslik uchun bo'lgani kabi… mubolag'ani ta'kidlash uchun ham — masalan: allomiya (juda ko'p biluvchi)."
+        },
+        {
+          "savol": "«قَمْحَة» va «قَمْح» farqi?",
+          "variantlar": [
+            "قَمْحَة — bir dona (vahda ة si); قَمْح — jins (bug'doy umuman)",
+            "Farqi yo'q",
+            "قَمْحَة — ko'plik"
+          ],
+          "togri": 0,
+          "izoh": "Ya'ni «to» o'zi kirgan so'z bitta ekaniga dalolat qiladi; undan xoli bo'lgani esa jinsga dalolat qiladi; masalan: «qamha va qamh»…"
+        },
+        {
+          "savol": "«الدَّارُ دَخَلْتُهَا» — ـهَا nega muannas?",
+          "variantlar": [
+            "دَار — majoziy muannas; unga muannas zamiri qaytadi",
+            "Xato — دَخَلْتُهُ bo'lishi kerak",
+            "Chunki ko'plik"
+          ],
+          "togri": 0,
+          "izoh": "Ularga muannas zamiri qaytadi — masalan: «Uyga — men unga kirdim»; ularga muannas ishorasi bilan ishora qilinadi… ular uchun fe'l ham muannas qilinadi."
+        }
+      ]
+    },
+    "nahv-3-30": {
+      "sharh": [
+        "Nakira (aniq emas: إِنْسَان، قَلَم) va ma'rifa (aniq) — 7 tur: zamir, alam, ishora, mavsul, أل li, ma'rifaga muzof, munodo. 2-18 dagi ro'yxat; keyingi 7 dars (3-31…3-37) har birini kengroq beradi."
+      ],
+      "savollar": [
+        {
+          "savol": "Ma'rifa necha tur?",
+          "variantlar": [
+            "7: zamir, alam, ishora, mavsul, أل li, muzof, munodo",
+            "5",
+            "3"
+          ],
+          "togri": 0,
+          "izoh": "1 — Zamir. 2 — Alam. 3 — Ishora ismi. 4 — Mavsul ism. 5 — «al» bilan kelgani. 6 — Sanalganlardan biriga izofa qilingani. 7 — Munodo."
+        }
+      ]
+    },
+    "nahv-3-31": {
+      "sharh": [
+        "ZAMIR tasnifi: (1) BORIZ (lafzda ko'rinadi: فَهِمْتُ dagi ت) / MUSTATIR (yashirin: فَهِمَ dagi هُوَ). (2) Boriz: MUNFASIL (mustaqil: أَنَا، نَحْنُ) / MUTTASIL (so'zga yopishgan: فَهِمْتُ). (3) Munfasil: raf'ga xos (أَنَا، أَنْتَ، هُوَ + tarmoqlari — 12 ta) / nasbga xos (إِيَّايَ، إِيَّاكَ، إِيَّاهُ + tarmoqlari — 12 ta). (4) Muttasil i'rob o'rniga ko'ra: RAF'ga xos (ت، ا، و، ن، ي — قُمْتُ، قَامَا، قَامُوا، قُمْنَ، قُومِي), NASB va JARRga xos (ي، ك، ه — أَكْرَمَنِي / كِتَابِي), UCHALASIGA umumiy — نَا (سَمِعْنَا foil, إِنَّنَا ism, رَبَّنَا muzofun ilayh).",
+        "Mustatir: JOIZ — g'oib/g'oiba fe'li, sifatlar, mozi ma'nosidagi fe'l ismi (عَلِيٌّ فَهِمَ، هِنْدٌ فَهِمَتْ، بَكْرٌ فَاهِمٌ، شَتَّانَ) — o'rniga ochiq ism qo'yish mumkin; VOJIB — amr, muxotab, mutakallim (افْهَمْ، تَفْهَمُ، أَفْهَمُ، نَفْهَمُ). Mustatir FAQAT raf' o'rnida. Foydalar: ك — muxotabga fatha, muxotabaga kasra (أَكْرَمَكَ/أَكْرَمَكِ); ه — g'oibaga fatha (ـهَا), boshqaga damma, kasra/sokin ي dan keyin kasra (بِهِ، فِيهِ، عَلَيْهِ). و va هُمْ faqat aqlli erkaklarga: الْكُتُبُ رَجَعُوا xato → رَجَعَتْ; النِّسَاءُ يُشْفِقُونَ xato → يُشْفِقْنَ."
+      ],
+      "savollar": [
+        {
+          "savol": "«نَا» zamiri qaysi i'rob o'rinlarida keladi?",
+          "variantlar": [
+            "Uchalasida: raf' (سَمِعْنَا), nasb (إِنَّنَا), jarr (رَبَّنَا)",
+            "Faqat raf'",
+            "Faqat nasb va jarr"
+          ],
+          "togri": 0,
+          "izoh": "3 — Raf', nasb va jarr o'rtasida mushtarak bo'lgani; u — «no»dir; masalan: «Robbimiz, albatta biz eshitdik»."
+        },
+        {
+          "savol": "«أَفْهَمُ» dagi zamir qanday?",
+          "variantlar": [
+            "Vojib mustatir (أَنَا) — mutakallim fe'li",
+            "Joiz mustatir",
+            "Boriz"
+          ],
+          "togri": 0,
+          "izoh": "Ikkinchisi (vojib) — bulardan boshqasida nazarda tutilgani; masalan: «tushun», «ey Ahmad, sen tushunasan», «tushunaman», «tushunamiz»."
+        },
+        {
+          "savol": "«عَلِيٌّ فَهِمَ» dagi zamir joiz mustatir — nega «joiz»?",
+          "variantlar": [
+            "O'rniga ochiq ism qo'yish mumkin (فَهِمَ عَلِيٌّ)",
+            "Chunki tushirilgan",
+            "Chunki muzakkar"
+          ],
+          "togri": 0,
+          "izoh": "Birinchisi (joiz) — g'oyib yoki g'oiba fe'lida, sifatlarda yoxud mozi ma'nosidagi ism fe'lda nazarda tutilgani; masalan: «Ali tushundi»…"
+        },
+        {
+          "savol": "«فِيهِ» da ه nega kasrali (أَكْرَمَهُ da damma)?",
+          "variantlar": [
+            "Oldida kasra yoki sokin ي kelsa ه kasra oladi",
+            "Muannas",
+            "Xato"
+          ],
+          "togri": 0,
+          "izoh": "«Ho» esa g'oiba uchun fatha, boshqalari uchun damma qilinadi; faqat undan oldin kasra yoki sokin «yo» kelsa, kasra qilinadi."
+        },
+        {
+          "savol": "Mustatir zamir qaysi i'rob o'rnida bo'ladi?",
+          "variantlar": [
+            "Faqat raf' o'rnida",
+            "Nasb o'rnida",
+            "Har qanday"
+          ],
+          "togri": 0,
+          "izoh": "Mustatir zamir faqat raf' o'rnida bo'ladi."
+        },
+        {
+          "savol": "«الْكُتُبُ رَجَعُوا لِأَصْحَابِهِمْ» — to'g'rimi?",
+          "variantlar": [
+            "Xato — و va هُمْ faqat aqlli erkaklarga; رَجَعَتْ لِأَصْحَابِهَا",
+            "To'g'ri",
+            "Faqat she'rda"
+          ],
+          "togri": 0,
+          "izoh": "…faqat «vov» va «hum» bundan mustasno, ular erkak aqlli zotlarga xosdir. Shuning uchun «Kitoblar egalariga qaytdilar»… deb aytish joiz emas."
+        }
+      ]
+    },
+    "nahv-3-32": {
+      "sharh": [
+        "ALAM (qarinasiz aniq ism) 3 xil: ISM (هَارُون، عَمْرو), KUNYA (أَب/أُمّ bilan boshlangan izofa: أَبُو بَكْرٍ، أُمُّ عَمْرٍو), LAQAB (yuksaklik yoki pastlikni bildiradi: الرَّشِيد — ulug'; الْجَاحِظ — ko'zi chaqchaygan). Tartib: LAQAB ISMDAN KEYIN (هَارُونُ الرَّشِيدُ، عَمْرٌو الْجَاحِظُ); kunya bilan boshqalar orasida tartib yo'q (أَبُو حَفْصٍ عُمَرُ / عُمَرُ أَبُو حَفْصٍ)."
+      ],
+      "savollar": [
+        {
+          "savol": "«أَبُو بَكْرٍ» alamning qaysi turi?",
+          "variantlar": [
+            "Kunya — أَب bilan boshlangan izofa",
+            "Laqab",
+            "Ism"
+          ],
+          "togri": 0,
+          "izoh": "Kunya — boshi «ab» (ota) yoki «umm» (ona) bo'lgan har bir izofiy tarkib; masalan: Abu Bakr, Ummu Amr."
+        },
+        {
+          "savol": "Ism va laqab tartibi?",
+          "variantlar": [
+            "Laqab ismdan keyin: هَارُونُ الرَّشِيدُ",
+            "Laqab ismdan oldin",
+            "Tartib yo'q"
+          ],
+          "togri": 0,
+          "izoh": "Laqab ismdan keyin keltiriladi; masalan: Horun ar-Rashid, Amr al-Johiz. Kunya bilan boshqalari orasida esa tartib yo'q."
+        },
+        {
+          "savol": "Laqabning ta'rifi?",
+          "variantlar": [
+            "Yuksaklik yoki pastlikka ishora qiluvchi nom",
+            "أَب bilan boshlangan nom",
+            "Tug'ilganda qo'yilgan nom"
+          ],
+          "togri": 0,
+          "izoh": "Laqab — yuksaklikka yoki pastlikka ishora qiladigan har bir nom; masalan: ar-Rashid, al-Johiz."
+        }
+      ]
+    },
+    "nahv-3-33": {
+      "sharh": [
+        "ISHORA ISMI — hissiy ishora bilan aniqlangan. Erkak: ذَا; ayol: ذِي، ذِهِ، تِي، تِهِ; ikkilik: ذَانِ/ذَيْنِ، تَانِ/تَيْنِ; ko'plik (ikkala jins): أُولَاءِ. Oldiga tanbeh هَا (هَذَا، هَذِهِ); orqasiga XITOB KOFI — yolg'iz (ذَاكَ، تِيكَ) yoki lom bilan (ذَلِكَ، تِلْكَ). Bu ك — harf, lekin ismiy kof kabi o'zgaradi: ذَلِكَ، ذَلِكِ، ذَلِكُمَا، ذَلِكُمْ، ذَلِكُنَّ (tinglovchiga qarab!). هَا + ك (lomsiz) birga bo'ladi: هَاذَاكَ، هَاتِيكَ; lom bilan bo'lmaydi: هَذَلِكَ xato. Ikkilik va ko'plikka faqat ك (lomsiz): ذَانِكَ، تَانِكَ، أُولَئِكَ.",
+        "Uch masofa: هَذَا (yaqin), ذَاكَ (o'rta), ذَلِكَ (uzoq)."
+      ],
+      "savollar": [
+        {
+          "savol": "«ذَلِكُنَّ» — nega كُنَّ?",
+          "variantlar": [
+            "Xitob kofi tinglovchi ayollarga qarab o'zgaradi",
+            "Xato",
+            "Chunki ko'rsatilgan narsa ayollar"
+          ],
+          "togri": 0,
+          "izoh": "Bu «kof» xitob harfidir va ismiy «kof» kabi tasarruf qilinadi; shuning uchun muxotabga qarab: zolika, zoliki, zolikumo, zolikum, zolikunna deymiz."
+        },
+        {
+          "savol": "«هَذَلِكَ» deyish mumkinmi?",
+          "variantlar": [
+            "Yo'q — هَا lom bilan kelgan kof bilan birga bo'lmaydi; هَاذَاكَ mumkin",
+            "Ha",
+            "Faqat she'rda"
+          ],
+          "togri": 0,
+          "izoh": "«Kof»ni yolg'iz holda «ho» bilan birga keltirish joizdir; shunda: «hozoka», «hotika» deyiladi. «Lom» bilan kelgan «kof» esa bundan farq qiladi: «hazolika» deb aytilmaydi."
+        },
+        {
+          "savol": "Ikkilik va ko'plik ishorasiga qanday kof qo'shiladi?",
+          "variantlar": [
+            "Faqat yolg'iz kof: ذَانِكَ، تَانِكَ، أُولَئِكَ",
+            "Lom bilan: ذَانِلِكَ",
+            "Qo'shilmaydi"
+          ],
+          "togri": 0,
+          "izoh": "«Zayni», «tayni» va «ulo'i»ga «kof» yolg'iz qo'shiladi; shunda: «zonika», «tonika», «ulo'ika» deyiladi."
+        }
+      ]
+    },
+    "nahv-3-34": {
+      "sharh": [
+        "MAVSUL — o'zidan keyingi jumla (SILA) bilan aniqlanadi. الَّذِي، الَّتِي، اللَّذَانِ/اللَّذَيْنِ، اللَّتَانِ/اللَّتَيْنِ، الَّذِينَ / الْأُلَى (aqlli erkaklar), اللَّاتِي / اللَّائِي (ayollar), مَنْ (aqlli — hammasi uchun), مَا (aqlsiz). Silada mavsulga mos ZAMIR — «OID» (عَائِد) shart: الَّذِي عَلَّمَكَ (yashirin هُوَ), اللَّذَيْنِ عَلَّمَاكَ (ا), الَّذِينَ عَلَّمُوكَ (و), اللَّاتِي عَلَّمْنَكَ (ن), مَا تَعَلَّمْتَهُ (ـهُ).",
+        "Yangi shakllar: الْأُلَى (= الَّذِينَ), اللَّائِي (= اللَّاتِي). Sinov: sila to'liq jumla bo'lishi va oid bo'lishi — bo'lmasa jumla noto'g'ri."
+      ],
+      "savollar": [
+        {
+          "savol": "«Oid» (عَائِد) nima?",
+          "variantlar": [
+            "Silada mavsulga qaytuvchi va unga mos keluvchi zamir",
+            "Mavsulning o'zi",
+            "Sila jumlasi"
+          ],
+          "togri": 0,
+          "izoh": "Sila mavsulga mos keladigan va «oid» deb ataladigan zamirni o'z ichiga olishi shart."
+        },
+        {
+          "savol": "«اللَّائِي» kim uchun?",
+          "variantlar": [
+            "Ayollar jamoasi (= اللَّاتِي)",
+            "Erkaklar jamoasi",
+            "Ikkilik"
+          ],
+          "togri": 0,
+          "izoh": "«Allati» va «alloi» — ayollar jamoasi uchun."
+        },
+        {
+          "savol": "«احْفَظْ مَا تَعَلَّمْتَهُ» — oid qaysi?",
+          "variantlar": [
+            "ـهُ (تَعَلَّمْتَهُ dagi)",
+            "تَ",
+            "مَا"
+          ],
+          "togri": 0,
+          "izoh": "…«o'rgangan narsangni yodda saqla» (مَا تَعَلَّمْتَهُ) — va shu tariqa."
+        }
+      ]
+    },
+    "nahv-3-35": {
+      "sharh": [
+        "أل li ism — أل kirib aniqlik bergan (السَّيْف، الْقَلَم). Alamga أل faqat samo'iy: الْفَضْل، النُّعْمَان، الْحَارِث، الْعَبَّاس (2-19 da: الْحَسَن، الْحُسَيْن ham). Boshqa alamga qo'shish xato (الْمُحَمَّد)."
+      ],
+      "savollar": [
+        {
+          "savol": "«الْعَبَّاس» — alamga أل kirganmi? Qanday?",
+          "variantlar": [
+            "Ha — samo'iy (eshitilgan) alamlardan",
+            "Xato",
+            "Bu alam emas"
+          ],
+          "togri": 0,
+          "izoh": "«Al» atoqli ismlarga faqat samo' bo'yicha kiradi; masalan: al-Fazl, an-Nu'mon, al-Horis, al-Abbos."
+        }
+      ]
+    },
+    "nahv-3-36": {
+      "sharh": [
+        "Izofa bilan ma'rifa — oldingi 5 ma'rifadan biriga muzof: zamirga (قَلَمُكَ), alamga (قَلَمُ مَحْمُودٍ), ishoraga (قَلَمُ ذَلِكَ), mavsulga (قَلَمُ الَّذِي كَتَبَ), أل liga (قَلَمُ الْمُعَلِّمِ). Muzof o'zi أل va tanvin olmaydi — aniqlikni muzofun ilayhdan «yuqtiradi»."
+      ],
+      "savollar": [
+        {
+          "savol": "«قَلَمُ الَّذِي كَتَبَ» — قَلَم nega ma'rifa?",
+          "variantlar": [
+            "Mavsulga (ma'rifa) muzof",
+            "أل bor",
+            "Alam"
+          ],
+          "togri": 0,
+          "izoh": "Izofa bilan ma'rifa qilingan ism — o'tgan ma'rifalardan biriga izofa qilingan va shu bilan ma'rifalikka ega bo'lgan ismdir; masalan: …yozgan kishining qalami."
+        }
+      ]
+    },
+    "nahv-3-37": {
+      "sharh": [
+        "Nido bilan ma'rifa — يَا dan keyin aniq shaxs ko'zda tutilgan nakira: يَا رَجُلُ (muayyan kishiga), يَا غُلَامُ. Aniq ko'zda tutilmasa (يَا رَجُلًا — kim bo'lsa ham) — nakira qoladi va mansub (2-39). Ma'rifaning 7-turi shu."
+      ],
+      "savollar": [
+        {
+          "savol": "«يَا غُلَامُ» va «يَا غُلَامًا» farqi?",
+          "variantlar": [
+            "Birinchisi — aniq bola (ma'rifa, damma); ikkinchisi — istalgan bola (nakira, mansub)",
+            "Farqi yo'q",
+            "Birinchisi ko'plik"
+          ],
+          "togri": 0,
+          "izoh": "Nido bilan ma'rifa qilingan ism — aniqlanishi ko'zda tutilgan munodo bo'lib, shu bilan ma'rifalikka ega bo'lgan ismdir; masalan: «Ey kishi!», «Ey bola!»"
+        }
+      ]
+    },
+    "nahv-3-38": {
+      "sharh": [
+        "Tanvinli / tanvinsiz (2-20 takrori) + chuqurroq izohlar. ALAM 6 sabab: muannas (lekin o'rtasi sokin 3 harfli — هِنْد، دَعْد — tanvin JOIZ), ajnabiy (lekin o'rtasi sokin 3 harfli — نُوح، لُوط، هُود — tanvin VOJIB), qo'shma, ـان, fe'l vazni (3 xil: fe'lga XOS vazn — دُئِل، شَمَّر; fe'lda USTUN vazn — إِصْمِت، إِبْزَم; fe'lda ma'noli QO'SHIMCHA — أَحْمَد، يَزِيد، تَغْلِب; shundan حَسَن، جَعْفَر، صَالِح — masruf!), ma'dul (عُمَر ← عَامِر; nahvchilarning taqdiri, chunki alamlik yolg'iz yetarli emas). SIFAT 3 sabab: فَعْلَان (sharti — muannasi فَعْلَى: غَضْبَان/غَضْبَى; ة bilan muannas bo'lsa tanvinli — 14 so'z: نَدْمَان/نَدْمَانَة…; عَطْشَانَة xato), أَفْعَل, ma'dul (أُحَاد/مَوْحَد … عُشَار/مَعْشَر — «birdan, ikkidan…»; faqat na't, hol yoki xabar bo'ladi). ISM 3 sabab: alifi maqsura, mamduda, muntahal-jumu'.",
+        "Umumlashtirish: YOLG'IZ man qiluvchi (2): muntahal-jumu', alifi ta'nis; BOSHQASI BILAN man qiluvchi (2): alamlik (+6), vasflik (+3) = 12 tur."
+      ],
+      "savollar": [
+        {
+          "savol": "«هِنْد» tanvin oladimi?",
+          "variantlar": [
+            "Joiz — muannas alam, lekin o'rtasi sokin 3 harfli",
+            "Yo'q — muannas alam",
+            "Vojib"
+          ],
+          "togri": 0,
+          "izoh": "Lekin o'rtasi sokin bo'lgan uch harfli ismda tanvin joizdir; masalan: Da'd, Hind."
+        },
+        {
+          "savol": "«نُوح» tanvin oladimi?",
+          "variantlar": [
+            "Vojib — ajnabiy alam, lekin o'rtasi sokin 3 harfli",
+            "Yo'q — ajnabiy",
+            "Joiz"
+          ],
+          "togri": 0,
+          "izoh": "Lekin o'rtasi sokin bo'lgan uch harfli ismda tanvin vojibdir; masalan: Nuh, Lut, Shis, Hud."
+        },
+        {
+          "savol": "«صَالِح» va «حَسَن» alam sifatida masrufmi (tanvin oladimi)?",
+          "variantlar": [
+            "Ha — vazni fe'lga xos emas, qo'shimchasi ham ma'nosiz emas",
+            "Yo'q — fe'l vazni",
+            "Yo'q — alam"
+          ],
+          "togri": 0,
+          "izoh": "…alif, nun, yo va to fe'lda… dalolat qiladi, ismda esa hech qanday ma'noga dalolat qilmaydi. Bundan ma'lum bo'ladiki, Hasan, Ja'far, Solih kabilar masruf (tanvinlanadigan)dir."
+        },
+        {
+          "savol": "«عَطْشَانَة» deb aytish to'g'rimi?",
+          "variantlar": [
+            "Mashhur qavlga ko'ra xato — muannasi عَطْشَى",
+            "To'g'ri",
+            "Faqat she'rda"
+          ],
+          "togri": 0,
+          "izoh": "Bulardan boshqasining muannasi «fa'lo» vaznida bo'ladi… Shunga ko'ra mashhur qavlga binoan «atshona», «sakrona», «g'azbona»… aytish to'g'ri emas."
+        },
+        {
+          "savol": "«نَدْمَان» (pushaymon) tanvin oladimi?",
+          "variantlar": [
+            "Ha — ة bilan muannas bo'ladi (نَدْمَانَة) — 14 so'zdan",
+            "Yo'q — فَعْلَان sifat",
+            "Faqat jarrda"
+          ],
+          "togri": 0,
+          "izoh": "…agar «to» bilan muannas qilinsa, tanvinlanadi. «To» bilan muannaslik faqat o'n to'rtta so'zda eshitilgan… nadmon, nasron."
+        },
+        {
+          "savol": "«جَاءَ الْقَوْمُ رُبَاعَ» — رُبَاعَ nima va nega tanvinsiz?",
+          "variantlar": [
+            "Ma'dul sifat (= أَرْبَعَةً أَرْبَعَةً), hol; vasflik + adl → man'i sarf",
+            "Son",
+            "Alam"
+          ],
+          "togri": 0,
+          "izoh": "«Uhod va mavhad»… «Qavm to'rt-to'rtdan keldi»… Bu lafzlar faqat sifat, hol yoki xabar sifatida ishlatiladi."
+        },
+        {
+          "savol": "Yolg'iz o'zi man'i sarf qiluvchi sabablar?",
+          "variantlar": [
+            "Muntahal-jumu' va alifi ta'nis (maqsura/mamduda)",
+            "Alamlik va vasflik",
+            "Ajnabiylik"
+          ],
+          "togri": 0,
+          "izoh": "1 — Yolg'iz o'zi man qiladigan qism; ular: 1 — «muntahal-jumu'» siyg'asi; 2 — ta'nis alifi (mamduda yoki maqsura)."
+        }
+      ]
+    },
+    "nahv-3-39": {
+      "sharh": [
+        "Ismning mabniy/mu'rabi (2-21…2-23 takrori) + qo'shimchalar. MABNIY ismlar 7 guruh: zamirlar, ishora, mavsul, shart ismlari, FE'L ISMLARI (yangi: هَيْهَاتَ، صَهْ…), qo'shma sonlar 11–19 (12 mustasno), so'roq ismlari (مَنْ، مَا، مَتَى، أَيَّانَ، أَيْنَ، كَيْفَ، أَنَّى، كَمْ). أَيّ — mavsul, shart, so'roq bo'lsa ham MU'RAB (احْتَرِمْ أَيَّهُمْ، أَيَّ كِتَابٍ تَقْرَأْ، أَيَّ فَنٍّ تَتَعَلَّمُ؟). مَنْ، مَا، مَتَى، أَيَّانَ، أَيْنَ، أَنَّى، كَيْفَ، أَيّ — bir necha vazifada mushtarak. Mu'rab ismning i'robi: raf', nasb, jarr."
+      ],
+      "savollar": [
+        {
+          "savol": "«أَيّ» mabniymi?",
+          "variantlar": [
+            "Yo'q — mavsul, shart, so'roq bo'lsa ham mu'rab",
+            "Ha — shart ismi",
+            "Ha — so'roq ismi"
+          ],
+          "togri": 0,
+          "izoh": "…«ayyun» so'zi zikr qilinadi… U bu holatlarning hammasida mu'rabdir; shuning uchun biz uni zikr qilishdan yuz o'girdik."
+        },
+        {
+          "savol": "3-kitobda mabniy ismlar ro'yxatiga 2-kitobga nisbatan nima qo'shildi?",
+          "variantlar": [
+            "Fe'l ismlari (هَيْهَاتَ، صَهْ…)",
+            "Zamirlar",
+            "Sonlar"
+          ],
+          "togri": 0,
+          "izoh": "5 — Ism fe'llar ham mabniydir; ular haqida so'z o'tgan edi."
+        },
+        {
+          "savol": "«كَيْفَ» qaysi vazifada mabniy ism?",
+          "variantlar": [
+            "So'roq ismi (hol so'raydi)",
+            "Shart ismi",
+            "Mavsul"
+          ],
+          "togri": 0,
+          "izoh": "7 — Va so'roq ismlari; ular: «man», «mo», «mato», «ayyona», «ayna», «kayfa», «anno», «kam»."
+        }
+      ]
+    },
+    "nahv-3-40": {
+      "sharh": [
+        "Ism raf'i (2-24 takrori) + BESH ISM tafsiloti. Alomatlar: damma; alif (ikkilik); vov (jam'i muzakkari solim, besh ism: أَب، أَخ، حَم، فُو، ذُو). Besh ism vov/alif/yo bilan i'roblanishi uchun 3 shart: (1) MUZOF bo'lsin, so'zlovchi ي siga emas — muzof bo'lmasa asl bo'yicha (أَنْتَ أَخٌ، اخْتَرْتُكَ أَخًا، بِأَخٍ), ي ga muzof bo'lsa taqdiriy (أَخِي); (2) BIRLIK — ikkilik/ko'plik bo'lsa o'z i'robi (أَخَوَانِ، إِخْوَة); (3) KATTA (tasg'ir emas — أُخَيّ harakat bilan). 6 marfu' o'rin: foil, noibi foil, mubtado, xabar, كَانَ ismi, إِنَّ xabari."
+      ],
+      "savollar": [
+        {
+          "savol": "«أَنْتَ أَخٌ» — nega أَخُو emas?",
+          "variantlar": [
+            "Muzof emas — asl (damma) bilan i'roblanadi",
+            "Xato",
+            "Chunki xabar"
+          ],
+          "togri": 0,
+          "izoh": "Ulardan izofa qilinmagani asl bo'yicha i'rob qilinadi; masalan: «Sen birodarsan», «Seni birodar qilib tanladim», «Faqat rostgo'y birodargagina ishon»."
+        },
+        {
+          "savol": "Besh ism vov bilan marfu' bo'lishining shartlari?",
+          "variantlar": [
+            "Muzof (ي ga emas), birlik, tasg'irsiz",
+            "Faqat muzof",
+            "Faqat alam"
+          ],
+          "togri": 0,
+          "izoh": "…mutakallim yosidan boshqasiga izofa qilinishidir… Shuningdek ularda birlik va kattalashtirilgan bo'lish sharti bor: kichraytirilsa, harakatlar bilan i'rob qilinadi; ikkilik yoki ko'plik qilinsa, musanno va jam' i'robi bilan…"
+        },
+        {
+          "savol": "«قَالَ الْإِمَامُ وَصَاحِبَاهُ» — صَاحِبَاهُ da raf' alomati?",
+          "variantlar": [
+            "Alif — ikkilik (muzof, nun tushgan)",
+            "Vov",
+            "Damma"
+          ],
+          "togri": 0,
+          "izoh": "1 — Musannodagi alif… «Imom va uning ikki sherigi aytdi…»"
+        }
+      ]
+    },
+    "nahv-3-41": {
+      "sharh": [
+        "FOIL (2-25 takrori + qo'shimchalar): oldida MA'LUM fe'l yoki uning O'XSHASHI (ism foil, sifati mushabbaha, masdar: فَازَ السَّابِقُ فَرَسُهُ — فَرَس ism foilning foili). Foil ochiq ism yoki zamir; muannas bo'lsa fe'l ت oladi. YANGI: muannaslikni TARK ETISH JOIZ 3 holda: (1) foil fe'ldan AJRALGAN (سَافَرَ الْيَوْمَ دَعْدٌ / سَافَرَتْ); (2) MAJOZIY muannas ochiq ism (أَثْمَرَ الشَّجَرَةُ / أَثْمَرَتْ); (3) JAM'I TAKSIR — mutlaq (جَاءَ الْغِلْمَانُ / جَاءَتْ; جَاءَ الْجَوَارِي / جَاءَتْ). Ikkilik/ko'plik foil bilan fe'l birlikda qoladi."
+      ],
+      "savollar": [
+        {
+          "savol": "«أَثْمَرَ الشَّجَرَةُ» — fe'l muannas emas; to'g'rimi?",
+          "variantlar": [
+            "Ha — foil majoziy muannas ochiq ism bo'lsa, ta'nisni tark etish joiz",
+            "Xato — أَثْمَرَتْ shart",
+            "Faqat she'rda"
+          ],
+          "togri": 0,
+          "izoh": "Foil fe'ldan ajralgan bo'lsa, yoki majoziy muannas ochiq ism bo'lsa, yoxud mutlaq jam' taksir bo'lsa, muannas qilishni tark etish joizdir."
+        },
+        {
+          "savol": "«سَافَرَ الْيَوْمَ دَعْدٌ» — دَعْد haqiqiy muannas; nega سَافَرَ joiz?",
+          "variantlar": [
+            "Foil fe'ldan ajralgan (الْيَوْمَ orada)",
+            "Xato",
+            "دَعْد muzakkar"
+          ],
+          "togri": 0,
+          "izoh": "…masalan: «Bugun Da'd safarga chiqdi» (ikki xil)."
+        },
+        {
+          "savol": "Fe'lning «o'xshashi» (شِبْه) deganda nima nazarda tutiladi?",
+          "variantlar": [
+            "Ism foil, sifati mushabbaha, masdar — ular ham foil oladi",
+            "Harf",
+            "Zamir"
+          ],
+          "togri": 0,
+          "izoh": "Ya'ni ism foil, sifati mushabbaha va masdar kabi."
+        }
+      ]
+    },
+    "nahv-3-42": {
+      "sharh": [
+        "NOIBI FOIL — oldida MAJHUL fe'l yoki o'xshashi (ism maf'ul, mansub: أَقُرَشِيٌّ جَدُّهُ؟); foil hukmlari unga ham. YANGI: noibi foil asli maf'ulun bihi, lekin ZARF (سُهِرَتِ اللَّيْلَةُ), MASDAR (كُتِبَتْ كِتَابَةٌ حَسَنَةٌ), JORR-MAJRUR (نُظِرَ فِي الْأَمْرِ) ham bo'ladi. Maf'ul bir nechta bo'lsa BIRINCHISI noib: أُعْطِيَ السَّائِلُ دِرْهَمًا (ikkinchisi mansub qoladi), وُجِدَ الْخَبَرُ صَحِيحًا، أُعْلِمَ الْمُسْتَفْهِمُ الْأَمْرَ وَاقِعًا (3 maf'ulli — 2 va 3 mansub)."
+      ],
+      "savollar": [
+        {
+          "savol": "«أُعْطِيَ السَّائِلُ دِرْهَمًا» — nega دِرْهَمًا mansub qoldi?",
+          "variantlar": [
+            "Maf'ul bir nechta bo'lsa, faqat birinchisi noib bo'ladi; qolgani mansub",
+            "Xato — دِرْهَمٌ bo'lishi kerak",
+            "Hol"
+          ],
+          "togri": 0,
+          "izoh": "Maf'ul bih bir nechta bo'lsa, birinchisi noib qilinadi; masalan: «So'rovchiga bir dirham berildi»…"
+        },
+        {
+          "savol": "«نُظِرَ فِي الْأَمْرِ» — noibi foil qayerda?",
+          "variantlar": [
+            "Jorr-majrur (فِي الْأَمْرِ) — raf' o'rnida",
+            "الْأَمْر",
+            "Yashirin"
+          ],
+          "togri": 0,
+          "izoh": "U aslida maf'ul bihdir; zarf, masdar yoki jorr va majrur ham bo'lishi mumkin; masalan: …«Ish ko'rib chiqildi»."
+        },
+        {
+          "savol": "«أَقُرَشِيٌّ جَدُّهُ؟» — جَدُّهُ nima?",
+          "variantlar": [
+            "Mansub ismning (قُرَشِيّ) noibi foili — fe'l o'xshashi",
+            "Mubtado",
+            "Xabar"
+          ],
+          "togri": 0,
+          "izoh": "Ya'ni ism maf'ul va mansub kabi; masalan: «Uning bobosi qurayshiymi?»"
+        }
+      ]
+    },
+    "nahv-3-43": {
+      "sharh": [
+        "MUBTADO-XABAR (2-27 takrori + qo'shimchalar). Xabar mubtadoga son va jinsda MOSLASHADI (السَّابِقُونَ فَائِزُونَ، السَّابِقَاتُ فَائِزَاتٌ) — istisno: nakira tafzil, sababiy, masdar, birlik-ko'plik teng so'z (هُمْ عَدْلٌ). Xabar: yakka, jumla (robit zamir shart), zarf/jorr-majrur. YANGI: (1) xabar BIR NECHTA bo'ladi (وَهُوَ الْغَفُورُ الْوَدُودُ ذُو الْعَرْشِ الْمَجِيدُ); (2) mubtado INKOR yoki SO'ROQdan keyingi SIFAT bo'lsa, undan keyingi ism FOIL/NOIBI FOIL bo'lib xabar o'rnini bosadi: أَقَائِمٌ أَخَوَاكَ؟ (أَخَوَاكَ — foil; xabar yo'q), مَا عُدُولٌ تَابِعُوكَ.",
+        "Shibhu jumla xabari haqida ikki qarash: xabar zarfning o'zi (3 tur xabar) yoki tushirilgan mutaalliq (كَائِن — yakka; اسْتَقَرَّ — jumla; 2 tur xabar)."
+      ],
+      "savollar": [
+        {
+          "savol": "«أَقَائِمٌ أَخَوَاكَ؟» — أَخَوَاكَ ning i'robi?",
+          "variantlar": [
+            "Foil — xabar o'rnini bosgan (mubtado so'roqdan keyingi sifat)",
+            "Xabar",
+            "Mubtado"
+          ],
+          "togri": 0,
+          "izoh": "Mubtadodan keyin kelgan ism xabar o'rnini bosuvchi foil yoki noibi foil bo'lishi mumkin… mubtado inkor yoki so'roqdan keyin kelgan sifat bo'lgan holdadir."
+        },
+        {
+          "savol": "«هُمْ عَدْلٌ» — xabar nega ko'plik emas?",
+          "variantlar": [
+            "عَدْل masdar — birlik va ko'plik teng; moslashuv istisnosi",
+            "Xato",
+            "Chunki nakira"
+          ],
+          "togri": 0,
+          "izoh": "Bu — xabar nakira ism tafzil, sababiy, masdar yoki birlik bilan ko'plik teng bo'ladigan so'z bo'lmagan holdadir."
+        },
+        {
+          "savol": "Xabar bir nechta bo'la oladimi?",
+          "variantlar": [
+            "Ha: وَهُوَ الْغَفُورُ الْوَدُودُ ذُو الْعَرْشِ الْمَجِيدُ",
+            "Yo'q — faqat bitta",
+            "Faqat ikkita"
+          ],
+          "togri": 0,
+          "izoh": "Xabar bir nechta bo'lishi ham mumkin; masalan: «U — Mag'firat qiluvchi, Vadud, Arsh egasi, Majiddir»."
+        }
+      ]
+    },
+    "nahv-3-44": {
+      "sharh": [
+        "كَانَ va sheriklari (2-28 takrori + qo'shimchalar). YANGI: ular «NOQIS fe'llar» — marfu'i bilan gap tugallanmaydi; ba'zan TOM (to'liq) keladi — marfu'i FOIL: ﴿وَإِنْ كَانَ ذُو عُسْرَةٍ﴾ (= bo'lsa/topilsa), ﴿حِينَ تُمْسُونَ﴾, ﴿مَا دَامَتِ السَّمَاوَاتُ﴾. لَيْسَ، فَتِئَ، زَالَ — faqat noqis. لَيْسَ xabarida ko'pincha zoid ب (أَلَيْسَ اللَّهُ بِكَافٍ عَبْدَهُ). Davomiylik fe'llarida amr va masdar yo'q; لَيْسَ va دَامَ ning mozidan boshqa shakli yo'q. Ma'nolari: كَانَ mutlaq vaqt, أَصْبَحَ tong, أَضْحَى choshgoh, أَمْسَى kech, ظَلَّ kunduz, بَاتَ tun, صَارَ o'zgarish, مَا زَالَ… davomiylik, مَا دَامَ muddat, لَيْسَ inkor."
+      ],
+      "savollar": [
+        {
+          "savol": "﴿وَإِنْ كَانَ ذُو عُسْرَةٍ﴾ — ذُو ning i'robi?",
+          "variantlar": [
+            "Foil — كَانَ bu yerda TOM (mavjud bo'lsa ma'nosida)",
+            "كَانَ ning ismi (xabar tushirilgan)",
+            "Mubtado"
+          ],
+          "togri": 0,
+          "izoh": "Ular ba'zan tom (to'liq) bo'lib keladi; shunda marfu' bilan kifoyalanadi va u foil deb i'rob qilinadi; masalan: «Agar qiyinchilikda bo'lgan kishi bo'lsa…»"
+        },
+        {
+          "savol": "Qaysi fe'llar hech qachon tom bo'lmaydi?",
+          "variantlar": [
+            "لَيْسَ، فَتِئَ، زَالَ",
+            "كَانَ، صَارَ",
+            "أَصْبَحَ، أَمْسَى"
+          ],
+          "togri": 0,
+          "izoh": "Faqat «laysa», «fati'a» va «zola» hech qachon tom bo'lmaydi — ular faqat noqisdir."
+        },
+        {
+          "savol": "«أَلَيْسَ اللَّهُ بِكَافٍ عَبْدَهُ» — بِكَافٍ dagi ب nima?",
+          "variantlar": [
+            "Zoid ب — لَيْسَ xabarida ko'p keladi; كَافٍ lafzan majrur, mahallan mansub",
+            "Sabab ب si",
+            "Qasam ب si"
+          ],
+          "togri": 0,
+          "izoh": "«Laysa»ning xabarida ko'pincha «bo» ortiqcha keltiriladi; masalan: «Alloh O'z bandasiga kifoya qiluvchi emasmi?»"
+        },
+        {
+          "savol": "«مَا زَالَ» dan amr yasaladimi?",
+          "variantlar": [
+            "Yo'q — davomiylik fe'llarida amr va masdar yo'q",
+            "Ha — زَلْ",
+            "Faqat masdar bor"
+          ],
+          "togri": 0,
+          "izoh": "Davomiylik fe'llari uchun na amr, na masdar kelgan. «Laysa» va «doma»ning ham mozidan boshqa shakli yo'q."
+        }
+      ]
+    },
+    "nahv-3-45": {
+      "sharh": [
+        "إِنَّ va sheriklari (2-28 takrori) + HAMZA MASALASI. أَنَّ (fatha) + ismi + xabari MASDAR ta'vilida bo'lib, jumlada bir o'rin egallaydi: foil (يَسُرُّنِي أَنَّكَ مُجْتَهِدٌ = اجْتِهَادُكَ), noibi foil (أُوحِيَ إِلَيَّ أَنَّهُ اسْتَمَعَ), maf'ul (أَوَدُّ أَنَّكَ مُخْلِصٌ), jarrdan keyin (لِأَنَّهُ مُسْتَحِقٌّ). إِنَّ (kasra) — mustaqil jumla: gap boshida (إِنَّا فَتَحْنَا), أَلَا dan keyin, قَالَ dan keyin (قَالَ إِنِّي عَبْدُ اللَّهِ), hol jumlasi boshida (وَإِنَّهُ مُنْفَرِدٌ). IKKALASI joiz — ikkala e'tibor to'g'ri kelganda: shart javobidagi ف dan keyin (فَإِنَّهُ يَنْجَحُ: fatha — masdar mubtado, xabar tushirilgan «نَجَاحُهُ حَاصِلٌ»; kasra — mustaqil jumla), kutilmaganlik إِذَا sidan keyin, حَيْثُ va إِذْ dan keyin (Kisoiy mazhabi; fatha bo'lsa xabar taqdir qilinadi).",
+        "Sinov: أَنَّ … ni «…ligi/…ishi» deb masdarga aylantirib bo'lsa — fatha; «albatta …» deb mustaqil jumla bo'lsa — kasra."
+      ],
+      "savollar": [
+        {
+          "savol": "«يَسُرُّنِي أَنَّكَ مُجْتَهِدٌ» — nega أَنَّ (fatha)?",
+          "variantlar": [
+            "أَنَّ + ismi + xabari masdar ta'vilida foil (= اجْتِهَادُكَ)",
+            "Chunki gap boshida emas",
+            "Xato — إِنَّ bo'lishi kerak"
+          ],
+          "togri": 0,
+          "izoh": "1 — Foil o'rnida; masalan: «Sening tirishqoq ekaning meni xursand qiladi»… Ya'ni: «Tirishqoqliging meni xursand qiladi»."
+        },
+        {
+          "savol": "«قَالَ إِنِّي عَبْدُ اللَّهِ» — nega kasra?",
+          "variantlar": [
+            "قَوْل bilan hikoya qilingan — mustaqil jumla",
+            "Chunki zamir",
+            "Xato"
+          ],
+          "togri": 0,
+          "izoh": "3 — Yoki «qavl» (aytish) bilan hikoya qilinganda; masalan: «U dedi: albatta men Allohning bandasiman»."
+        },
+        {
+          "savol": "«مَنْ يَسْتَقِمْ فَإِنَّهُ يَنْجَحُ» — fatha ham, kasra ham joiz; fatha holidagi taqdir?",
+          "variantlar": [
+            "فَنَجَاحُهُ حَاصِلٌ — masdar mubtado, xabar tushirilgan",
+            "فَهُوَ يَنْجَحُ",
+            "Taqdir yo'q"
+          ],
+          "togri": 0,
+          "izoh": "…fatha — u o'zidan keyingisi bilan birga mubtado bo'lgan masdar ta'vilida bo'lgani uchundir; xabar esa tushirilgan bo'lib, taqdiri: «uning muvaffaqiyati hosildir»."
+        },
+        {
+          "savol": "حَيْثُ dan keyin أَنَّ/إِنَّ — qaysi qavl tanlangan?",
+          "variantlar": [
+            "Ikkalasi joiz — Kisoiy mazhabi; fatha bo'lsa xabar taqdir qilinadi",
+            "Faqat kasra",
+            "Faqat fatha"
+          ],
+          "togri": 0,
+          "izoh": "«Haysu» va «iz»dan keyin fatha ham, kasra ham joiz bo'lishi — tanlangan qavl bo'lib, Kisoiyning mazhabidir… Faqat fatha holida xabarni taqdir qilish vojib bo'ladi."
+        },
+        {
+          "savol": "«أَعْطَيْتُهُ لِأَنَّهُ مُسْتَحِقٌّ» — أَنَّ jumlasi qaysi o'rinda?",
+          "variantlar": [
+            "Jarr harfidan keyin — majrur o'rnida (= لِاسْتِحْقَاقِهِ)",
+            "Foil",
+            "Maf'ul"
+          ],
+          "togri": 0,
+          "izoh": "4 — Yoki jorrdan keyin; masalan: «Unga haqli bo'lgani uchun berdim»… Ya'ni: «Unga haqdorligi uchun berdim»."
+        }
+      ]
+    },
+    "nahv-3-46": {
+      "sharh": [
+        "Ism nasbi (2-30 takrori): asl fatha; alif — besh ism (أَبَاكَ), kasra — jam'i muannasi solim (عَمَّاتِكَ), yo — ikkilik va jam'i muzakkari solim (أَخَوَيْكَ، الْأَقْرَبِينَ). 11 mansub o'rin: 5 maf'ul, mustasno, hol, tamyiz, munodo, كَانَ xabari, إِنَّ ismi. Bitta jumlada: أَكْرِمْ أُمَّكَ (fatha) وَأَبَاكَ (alif) وَعَمَّاتِكَ (kasra) وَأَخَوَيْكَ (yo) وَالْأَقْرَبِينَ (yo)."
+      ],
+      "savollar": [
+        {
+          "savol": "«أَكْرِمْ عَمَّاتِكَ» — عَمَّات da nasb alomati?",
+          "variantlar": [
+            "Kasra — jam'i muannasi solim",
+            "Fatha",
+            "Yo"
+          ],
+          "togri": 0,
+          "izoh": "2 — Va jam' muannas solimdagi kasra."
+        },
+        {
+          "savol": "«أَخَوَيْكَ» da nasb alomati?",
+          "variantlar": [
+            "Yo — ikkilik (muzof, nun tushgan)",
+            "Alif — besh ism",
+            "Fatha"
+          ],
+          "togri": 0,
+          "izoh": "3 — Va musanno hamda jam' muzakkar solimdagi yo; masalan: «…ikki birodaringni (أَخَوَيْكَ) va yaqin qarindoshlaringni hurmat qil»."
+        }
+      ]
+    },
+    "nahv-3-47": {
+      "sharh": [
+        "MAF'ULUN BIHI (2-31 takrori + qo'shimchalar): ochiq ism yoki zamir — muttasil (أَرْشَدَنِي) yoki munfasil (مَا أَرْشَدَ إِلَّا إِيَّايَ — istisno/hasr uchun ajralgan). TARTIB: maf'ul foildan oldin ham, keyin ham keladi (بَنَى الْبَيْتَ إِبْرَاهِيمُ / بَنَى إِبْرَاهِيمُ الْبَيْتَ). VOJIB tartib: biri muttasil zamir bo'lsa — u oldin (قَرَأْتُ الْكِتَابَ، أَكْرَمَنِيَ الْأَمِيرُ); إِنَّمَا bilan chegaralangan — oxirda (إِنَّمَا فَهِمَ حَسَنٌ نِصْفَهُ، إِنَّمَا أَخَذَ الْكِتَابَ بَكْرٌ); chalkashlik bo'lsa foil oldin (ضَرَبَ أَخِي فَتَاكَ — i'rob ko'rinmaydi). Maf'ul fe'ldan ham oldin kela oladi (foil va noibi — yo'q).",
+        "YANGI tarkiblar (maf'ul bihi sifatida mansub, fe'l tushirilgan): IG'RO — rag'bat (الاِجْتِهَادَ الاِجْتِهَادَ = الْزَمِ), TAHZIR — ogohlantirish (الْكَسَلَ الْكَسَلَ = احْذَرْ; إِيَّاكَ وَالْكَسَلَ), IXTISOS (نَحْنُ الْعَرَبَ نَقْرِي الضَّيْفَ = أَخُصُّ الْعَرَبَ). Xato: «نَحْنُ الْمُوَقِّعُونَ عَلَى هَذَا» → الْمُوَقِّعِينَ (ixtisos — mansub)."
+      ],
+      "savollar": [
+        {
+          "savol": "«ضَرَبَ أَخِي فَتَاكَ» — nega foilni oldin keltirish vojib?",
+          "variantlar": [
+            "Chalkashlik — أَخِي va فَتَاكَ da i'rob ko'rinmaydi (taqdiriy); tartib ma'noni belgilaydi",
+            "Har doim foil oldin",
+            "Chunki zamir"
+          ],
+          "togri": 0,
+          "izoh": "Chalkashlik yuzaga kelganda foilni oldin keltirish ham vojibdir; masalan: «Akam sening yigitingni urdi»."
+        },
+        {
+          "savol": "«إِنَّمَا أَخَذَ الْكِتَابَ بَكْرٌ» — nega foil oxirda?",
+          "variantlar": [
+            "إِنَّمَا bilan chegaralangan (hasr) so'z oxirda keladi — «faqat Bakr»",
+            "Xato",
+            "Chunki alam"
+          ],
+          "togri": 0,
+          "izoh": "…ikkisidan biri muttasil zamir yoki «innama» bilan chegaralangan bo'lmagan holdadir; u holda uni oldin keltirish vojib bo'ladi; masalan: …«Kitobni faqat Bakr oldi»."
+        },
+        {
+          "savol": "«إِيَّاكَ وَالْكَسَلَ» — qanday tarkib va الْكَسَلَ nega mansub?",
+          "variantlar": [
+            "Tahzir — «o'zingni dangasalikdan saqla»; tushirilgan fe'lning maf'uli",
+            "Ig'ro",
+            "Ixtisos"
+          ],
+          "togri": 0,
+          "izoh": "Yana: «Dangasalikdan, dangasalikdan (ehtiyot bo'l)! Sen va dangasalik!» — ya'ni: «dangasalikdan ehtiyot bo'l», «o'zingni dangasalikdan uzoqlashtir…»"
+        },
+        {
+          "savol": "«نَحْنُ الْمُوَقِّعُونَ عَلَى هَذَا نَلْتَمِسُ…» — xato qayerda?",
+          "variantlar": [
+            "الْمُوَقِّعِينَ bo'lishi kerak — ixtisos bilan mansub",
+            "Xato yo'q",
+            "نَحْنُ ortiqcha"
+          ],
+          "togri": 0,
+          "izoh": "Xatolardan: «Biz — bunga imzo chekuvchilar…» iborasida «al-muvaqqi'una» deb aytish. To'g'risi: «al-muvaqqi'ina» — chunki u ixtisos sababli mansubdir."
+        },
+        {
+          "savol": "Maf'ul bihi fe'ldan OLDIN kela oladimi?",
+          "variantlar": [
+            "Ha (foil va noibi foildan farqli)",
+            "Yo'q",
+            "Faqat zamir bo'lsa"
+          ],
+          "togri": 0,
+          "izoh": "Maf'ul bihning fe'ldan oldin kelishi joizdir — foil va uning noibidan farqli o'laroq."
+        }
+      ]
+    },
+    "nahv-3-48": {
+      "sharh": [
+        "MAF'ULI MUTLAQ (2-32 takrori): fe'l lafzidan masdar — ta'kid (كَلَّمَ… تَكْلِيمًا), tur (أَخْذَ عَزِيزٍ مُقْتَدِرٍ), son (دَكَّةً وَاحِدَةً). O'rnini bosuvchilar 9: sinonim, sifat, ishora, zamir, tur (الْقَهْقَرَى), son (مَرَّتَيْنِ), asbob (سَوْطًا), كُلّ / بَعْض + masdar. Fe'li tushirilganlar: صَبْرًا عَلَى الشَّدَائِدِ، أَتَوَانِيًا؟، حَمْدًا وَشُكْرًا لَا كُفْرًا، عَجَبًا لَكَ، صِدْقًا."
+      ],
+      "savollar": [
+        {
+          "savol": "﴿فَأَخَذْنَاهُمْ أَخْذَ عَزِيزٍ مُقْتَدِرٍ﴾ — أَخْذَ qaysi tur maf'uli mutlaq?",
+          "variantlar": [
+            "Turini bayon qiluvchi (qanday tutish — qudratli zotning tutishi)",
+            "Ta'kid",
+            "Son"
+          ],
+          "togri": 0,
+          "izoh": "…uni ta'kidlash yoki turini yoxud sonini bayon qilish uchun… «Biz ularni qudratli va g'olib zotning tutishi kabi tutdik» (tur)."
+        },
+        {
+          "savol": "«صِدْقًا» (yolg'iz aytilganda) — i'robi?",
+          "variantlar": [
+            "Fe'li tushirilgan maf'uli mutlaq (أَقُولُ صِدْقًا)",
+            "Hol",
+            "Tamyiz"
+          ],
+          "togri": 0,
+          "izoh": "Uning fe'li tushirilishi ham mumkin; masalan: «Qiyinchiliklarga sabr!»… «Rostini aytganda!» (صِدْقًا)."
+        }
+      ]
+    },
+    "nahv-3-49": {
+      "sharh": [
+        "MAF'ULUN LI AJLIHI (2-33 takrori + tafsilot): sabab masdari (خَشْيَةَ إِمْلَاقٍ — kambag'allikdan qo'rqib). 3 SHART: masdar bo'lsin, QALBIY (ichki his: qo'rquv, hurmat, istak — «yozish», «mol» emas), fe'l bilan vaqt va foilda BIR. Shart buzilsa — jarr harfi VOJIB: ذَهَبَ لِلْمَالِ (masdar emas), جَلَسَ لِلْكِتَابَةِ (qalbiy emas), سَافَرَ لِلْعِلْمِ, حَمِدَنِي لِإِشْفَاقِي عَلَيْهِ (foil boshqa). Shartlar to'liq bo'lsa — 3 hol: (1) أل siz va izofasiz — ko'proq NASB (إِكْرَامًا لِلْقَادِمِ), kam jarr (لِرَغْبَةٍ); (2) أل bilan — ko'proq JARR (لِلشَّفَقَةِ), kam nasb (الْجُبْنَ); (3) MUZOF — ikkalasi teng (ابْتِغَاءَ مَرْضَاةِ اللَّهِ / لِابْتِغَاءِ)."
+      ],
+      "savollar": [
+        {
+          "savol": "«جَلَسَ لِلْكِتَابَةِ» — nega الْكِتَابَةَ (mansub) emas?",
+          "variantlar": [
+            "كِتَابَة qalbiy masdar emas (tashqi ish) — jarr harfi vojib",
+            "Xato",
+            "Chunki أل bor"
+          ],
+          "togri": 0,
+          "izoh": "Bu shartlardan biri yo'qolsa, uni jarr harfi bilan jarr qilish vojib bo'ladi; masalan: …«Yozish uchun o'tirdi»…"
+        },
+        {
+          "savol": "«اصْفَحْ عَنْهُ لِلشَّفَقَةِ بِهِ» — أل li maf'ulun li ajlihi qanday i'roblanadi?",
+          "variantlar": [
+            "Ko'proq jarr (harf bilan), kam nasb",
+            "Faqat nasb",
+            "Faqat jarr"
+          ],
+          "togri": 0,
+          "izoh": "Ikkinchisi (أل bilan) bo'lsa, ko'pincha harflar bilan jarr qilinadi… Kamdan-kam holda nasb ham qilinadi; masalan: «لَا أَقْعُدُ الْجُبْنَ عَنِ الْهَيْجَاءِ»."
+        },
+        {
+          "savol": "Maf'ulun li ajlihining 3 sharti?",
+          "variantlar": [
+            "Masdar, qalbiy, fe'l bilan vaqt va foilda bir",
+            "Nakira, mushtaq, mansub",
+            "Masdar, أل li, muzof"
+          ],
+          "togri": 0,
+          "izoh": "1 — Masdar bo'lishi. 2 — Qalbiy bo'lishi. 3 — Fe'l bilan vaqtda va foilda birlashgan bo'lishi."
+        },
+        {
+          "savol": "«تَصَدَّقْتُ ابْتِغَاءَ مَرْضَاةِ اللَّهِ» — muzof; لِابْتِغَاءِ ham mumkinmi?",
+          "variantlar": [
+            "Ha — muzof bo'lsa nasb va jarr teng joiz",
+            "Yo'q — faqat nasb",
+            "Yo'q — faqat jarr"
+          ],
+          "togri": 0,
+          "izoh": "Uchinchisi (muzof) bo'lsa, unda ikki holat ham teng joizdir; masalan: «Allohning roziligini istab sadaqa qildim» — ikki xil ifodalanadi."
+        }
+      ]
+    },
+    "nahv-3-50": {
+      "sharh": [
+        "ZARF (2-34 takrori + tafsilot): zamon — hammasi (لَيْلًا); makon — faqat mubham: 6 tomon (فَوْقَ، تَحْتَ، يَمِينَ، شِمَالَ، أَمَامَ، خَلْفَ), o'lchovlar (مِيلًا، فَرْسَخًا، بَرِيدًا), mushtaq ism makon (جَلَسَ مَجْلِسَ الْخَطِيبِ); aniq joy — فِي bilan. YANGI: MUTASARRIF zarf — zarf bo'lmay ham keladi (يَوْمُكَ يَوْمٌ مُبَارَكٌ — mubtado; الْمِيلُ ثُلُثُ الْفَرْسَخِ); G'AYRI MUTASARRIF — faqat zarf (yoki مِنْ bilan): قَطُّ (o'tgan zamon to'liq — inkordan keyin: مَا فَعَلْتُهُ قَطُّ), عَوْضُ (kelasi to'liq: لَا أَفْعَلُهُ عَوْضُ), بَيْنَا/بَيْنَمَا (alif va مَا zoid), قَبْلَ، بَعْدَ، لَدُنْ، عِنْدَ. عِنْدَ — moddiy/ma'naviy, hozir/g'oyib hammasiga; لَدُنْ — faqat HOZIR bo'lgan MODDIY narsaga (عِنْدِي مَالٌ — g'oyib bo'lsa ham; لَدُنِّي مَالٌ — faqat qo'lda bo'lsa)."
+      ],
+      "savollar": [
+        {
+          "savol": "«مَا فَعَلْتُهُ قَطُّ» — قَطُّ qanday zarf?",
+          "variantlar": [
+            "G'ayri mutasarrif — o'tgan zamonni to'liq qamraydi, inkordan keyin",
+            "Mutasarrif",
+            "Makon zarfi"
+          ],
+          "togri": 0,
+          "izoh": "«Qattu» — o'tgan zamonni to'liq qamrash uchun zarfdir… Ular, ko'rganingdek, odatda faqat inkordan keyin ishlatiladi."
+        },
+        {
+          "savol": "«هَذَا الْقَوْلُ لَدُنِّي صَوَابٌ» — to'g'rimi?",
+          "variantlar": [
+            "Xato — لَدُنْ faqat hozir bo'lgan moddiy narsaga; عِنْدِي deyiladi",
+            "To'g'ri",
+            "Faqat she'rda"
+          ],
+          "togri": 0,
+          "izoh": "…«ladun» esa faqat hozir bo'lgan aynlar uchun ishlatiladi. Shunday deysan: «Bu so'z mening nazdimda to'g'ri» — lekin buni «ladun» bilan aytmaysan."
+        },
+        {
+          "savol": "«يَوْمُكَ يَوْمٌ مُبَارَكٌ» — يَوْم bu yerda zarfmi?",
+          "variantlar": [
+            "Yo'q — mubtado va xabar; يَوْم mutasarrif (zarf bo'lmay ham keladi)",
+            "Ha — zamon zarfi",
+            "Hol"
+          ],
+          "togri": 0,
+          "izoh": "Zamon yoki makon ismlaridan zarf sifatida ham, boshqa holda ham ishlatiladigani «mutasarrif» deb ataladi… «Kuning muborak kun»…"
+        },
+        {
+          "savol": "«جَلَسَ مَجْلِسَ الْخَطِيبِ» — مَجْلِسَ nega mansub?",
+          "variantlar": [
+            "Mushtaq ism makon — zarf bo'la oladi (mubham)",
+            "Maf'ulun bihi",
+            "Xato — فِي kerak"
+          ],
+          "togri": 0,
+          "izoh": "Va mushtaqlar bo'limida sharhi o'tgan makon ismi; masalan: «Xatibning o'tirish joyiga o'tirdi»."
+        }
+      ]
+    },
+    "nahv-3-51": {
+      "sharh": [
+        "MAF'ULUN MA'AHU (2-35 takrori + qoida): «مَعَ» vovi. Uch hol: (1) ATF mumkin bo'lMASA — nasb SHART: اذْهَبْ وَالشَّارِعَ الْجَدِيدَ (ko'cha bormaydi); (2) atf mumkin bo'lsa — ikkalasi joiz, ATF CHIROYLIROQ: سَارَ الْأَمِيرُ وَالْجُنْدُ (marfu' — atf) / وَالْجُنْدَ (mansub — ma'iyyat); (3) ish faqat ko'pchilikdan bo'lsa — ATF SHART: اقْتَتَلَ زَيْدٌ وَعَمْرٌو (jang bir kishi bilan bo'lmaydi; وَعَمْرًا xato)."
+      ],
+      "savollar": [
+        {
+          "savol": "«سَارَ الْأَمِيرُ وَالْجُنْدُ» — vov atfmi, ma'iyyatmi?",
+          "variantlar": [
+            "Ikkalasi joiz (askarlar ham yurdi); atf (raf') chiroyliroq",
+            "Faqat ma'iyyat",
+            "Faqat atf"
+          ],
+          "togri": 0,
+          "izoh": "Atf to'g'ri kelsa, ikki holat ham joizdir; masalan: «Amir va askarlar yurdi». Atf esa chiroyliroqdir."
+        },
+        {
+          "savol": "«اقْتَتَلَ زَيْدٌ وَعَمْرًا» — to'g'rimi?",
+          "variantlar": [
+            "Xato — jang ko'pchilikdan bo'ladi, atf shart: وَعَمْرٌو",
+            "To'g'ri — ma'iyyat",
+            "Ikkalasi joiz"
+          ],
+          "togri": 0,
+          "izoh": "Faqat bir nechta zotdan sodir bo'ladigan ishdan keyin esa atf shart bo'ladi; masalan: «Zayd va Amr jang qildilar»."
+        },
+        {
+          "savol": "Maf'ulun ma'ahu sifatida nasb qachon SHART?",
+          "variantlar": [
+            "Oldingi so'zga atf qilib bo'lmaganda (اذْهَبْ وَالشَّارِعَ)",
+            "Har doim",
+            "Hech qachon"
+          ],
+          "togri": 0,
+          "izoh": "Ismni maf'ul ma'ah sifatida nasb qilish faqat uni oldingi so'zga atf qilish to'g'ri kelmagandagina shart bo'ladi; masalan: «Yangi ko'cha bo'ylab bor»."
+        }
+      ]
+    },
+    "nahv-3-52": {
+      "sharh": [
+        "MUSTASNO (2-36 takrori + atamalar): kalom TOM (mustasno minhu aytilgan) + MUJAB (inkorsiz) → nasb vojib (إِلَّا الْمَوْتَ); tom + inkor → nasb yoki BADAL (إِلَّا النَّيِّرَيْنِ / النَّيِّرَانِ); kalom NOQIS (mustasno minhu yo'q) — «MUFARRAG'» → إِلَّا yo'qdek i'rob (إِلَّا فَاعِلُهُ — foil, إِلَّا الْحَقَّ — maf'ul, إِلَّا دِرْهَمٌ — mubtado). غَيْر / سِوَى — keyingisi muzofun ilayh (majrur), o'zlari إِلَّا dan keyingi ism hukmida (غَيْرَ الْمَوْتِ — mansub; غَيْرُ فَاعِلِهِ — foil). خَلَا / عَدَا / حَاشَا — jarr (harf deb) yoki nasb (fe'l deb: عَدَا وَاحِدٍ / وَاحِدًا); oldida مَا bo'lsa — NASB SHART (مَا خَلَا اللَّهَ — fe'l, chunki مَا masdariya fe'lga kiradi)."
+      ],
+      "savollar": [
+        {
+          "savol": "«مَا عِنْدِي إِلَّا دِرْهَمٌ» — دِرْهَمٌ nega marfu'?",
+          "variantlar": [
+            "Mufarrag' istisno — mustasno minhu yo'q; إِلَّا yo'qdek: mubtado",
+            "Xato — دِرْهَمًا",
+            "Badal"
+          ],
+          "togri": 0,
+          "izoh": "Kalom noqis bo'lsa… mustasno tarkibda o'zidan oldingisi taqozo qilgan holatda bo'ladi; go'yo «illa» yo'qdek… «Mendagi narsa faqat bir dirhamdir»."
+        },
+        {
+          "savol": "«كُلُّ شَيْءٍ مَا خَلَا اللَّهَ بَاطِلٌ» — اللَّهَ nega mansub (majrur emas)?",
+          "variantlar": [
+            "خَلَا oldida مَا bor — fe'l bo'lib nasb shart",
+            "Xato",
+            "Chunki alam"
+          ],
+          "togri": 0,
+          "izoh": "Ulardan oldin «mo» kelsa, nasb shart bo'ladi; masalan: «Ogoh bo'l: Allohdan boshqa har bir narsa botildir»."
+        },
+        {
+          "savol": "«لَا يَقَعُ فِي السُّوءِ غَيْرُ فَاعِلِهِ» — غَيْرُ nega marfu'?",
+          "variantlar": [
+            "Mufarrag' istisnoda إِلَّا dan keyingi ism hukmida — foil",
+            "Xato — غَيْرَ",
+            "Chunki muzof"
+          ],
+          "togri": 0,
+          "izoh": "…ularning o'ziga esa «illa»dan keyin kelgan ismning hukmi beriladi… «Yomonlikka uni qiluvchidan boshqasi tushmaydi»."
+        },
+        {
+          "savol": "«قَامَ الرِّجَالُ عَدَا وَاحِدٍ» — عَدَا bu yerda nima deb qaralgan?",
+          "variantlar": [
+            "Jarr harfi (وَاحِدٍ majrur); fe'l deb qaralsa وَاحِدًا",
+            "Fe'l",
+            "Ism"
+          ],
+          "togri": 0,
+          "izoh": "1 — Ulardan keyingi so'z jarr qilinadi — ular jarr harflari deb qaralib. 2 — Yoki ular fe'llar deb qaralib, keyingi so'z maf'ul bih sifatida nasb qilinadi."
+        }
+      ]
+    },
+    "nahv-3-53": {
+      "sharh": [
+        "HOL (2-37 takrori + tafsilot): asl — NAKIRA va MUSHTAQ (صَادِقًا). Ma'rifa hol kam (آمَنْتُ بِاللَّهِ وَحْدَهُ = مُنْفَرِدًا). JOMID hol 5 holda: o'xshatish (كَرَّ عَلِيٌّ أَسَدًا = كَالْأَسَدِ), mufoala — ikki tomonlama (بِعْتُهُ يَدًا بِيَدٍ = مُتَقَايِضَيْنِ), tartib (ادْخُلُوا رَجُلًا رَجُلًا), narx (بِعْتُهُ رِطْلًا بِدِرْهَمٍ), mavsuf (قُرْآنًا عَرَبِيًّا). Hol JUMLA bo'lsa robit: faqat و (وَنَحْنُ عُصْبَةٌ), faqat zamir (بَعْضُكُمْ لِبَعْضٍ عَدُوٌّ), ikkalasi (وَهُمْ أُلُوفٌ). Hol ZARF yoki JORR-MAJRUR ham (رَأَيْتُ الْهِلَالَ بَيْنَ السَّحَابِ، أَبْصَرْتُ شُعَاعَهُ فِي الْمَاءِ). Hol bir nechta bo'ladi (غَضْبَانَ أَسِفًا)."
+      ],
+      "savollar": [
+        {
+          "savol": "«كَرَّ عَلِيٌّ أَسَدًا» — أَسَدًا jomid; nega hol?",
+          "variantlar": [
+            "O'xshatishga dalolat qiladi (= كَالْأَسَدِ) — jomid hol joiz",
+            "Maf'ulun bihi",
+            "Tamyiz"
+          ],
+          "togri": 0,
+          "izoh": "1 — O'xshatishga dalolat qilganda; masalan: «Ali sherdek hujum qildi»."
+        },
+        {
+          "savol": "«آمَنْتُ بِاللَّهِ وَحْدَهُ» — وَحْدَهُ ma'rifa; hol bo'la oladimi?",
+          "variantlar": [
+            "Ha — ma'rifa hol kam uchraydi (= مُنْفَرِدًا ta'vilida)",
+            "Yo'q — hol faqat nakira",
+            "Bu ta'kid"
+          ],
+          "togri": 0,
+          "izoh": "Uning ma'rifa bo'lib kelishi kamdan-kamdir; masalan: «Yolg'iz Allohga imon keltirdim»."
+        },
+        {
+          "savol": "«بِعْتُهُ يَدًا بِيَدٍ» — يَدًا qaysi hol turi?",
+          "variantlar": [
+            "Mufoala (ikki tomonlama) — «qo'lma-qo'l» = مُتَقَايِضَيْنِ",
+            "Tartib",
+            "Narx"
+          ],
+          "togri": 0,
+          "izoh": "Mufoala — ishning ikki tomondan sodir bo'lishidir… «Qo'lma-qo'l sotdim» degan so'zimizning ma'nosi: «ikkimiz almashib turgan holda sotdim»."
+        },
+        {
+          "savol": "«خَرَجُوا مِنْ دِيَارِهِمْ وَهُمْ أُلُوفٌ» — hol jumlasining robiti?",
+          "variantlar": [
+            "Vov va zamir (هُمْ) — ikkalasi birga",
+            "Faqat vov",
+            "Faqat zamir"
+          ],
+          "togri": 0,
+          "izoh": "3 — Yoki ikkalasi birgalikda; masalan: «Ular minglab bo'lgan holda diyorlaridan chiqdilar»."
+        },
+        {
+          "savol": "«ادْخُلُوا رَجُلًا رَجُلًا» — رَجُلًا رَجُلًا nima?",
+          "variantlar": [
+            "Jomid hol — tartibga dalolat qiladi («bir-bir»)",
+            "Maf'ulun bihi",
+            "Ta'kid"
+          ],
+          "togri": 0,
+          "izoh": "3 — Yoki tartibga dalolat qilganda; masalan: «Bir-bir kiringlar»."
+        }
+      ]
+    },
+    "nahv-3-54": {
+      "sharh": [
+        "TAMYIZ (2-38 takrori + SON QOIDALARI). Malfuz tamyiz 3 shaklda: nasb (رِطْلًا مِسْكًا), izofa (رِطْلَ مِسْكٍ), مِنْ bilan (رِطْلًا مِنْ مِسْكٍ). SON tamyizi: 3–10 → ko'plik MAJRUR (خَمْسُ تُفَّاحَاتٍ); 100, 1000 → birlik MAJRUR (مِئَةُ رُمَّانَةٍ); 11–99 → birlik MANSUB (أَحَدَ عَشَرَ غُصْنًا، خَمْسًا وَعِشْرِينَ رَيْحَانَةً). JINS: 3–9 sanalganga TESKARI (سَبْعَ لَيَالٍ — layla ayol, son muzakkar; ثَمَانِيَةَ أَيَّامٍ — yavm erkak, son ة li) — yakka, qo'shma (خَمْسَةَ عَشَرَ قَلَمًا، سِتَّ عَشْرَةَ وَرَقَةً), atf (ثَلَاثَةٍ وَعِشْرِينَ يَوْمًا) hollarida ham. 1, 2 — MOS (وَاحِدٌ/وَاحِدَةٌ، اثْنَا عَشَرَ/اثْنَتَا عَشْرَةَ). 100, 1000, o'nliklar (عِشْرُونَ…) — o'zgarmaydi. 10 — yolg'iz TESKARI (عَشَرَةُ رِجَالٍ، عَشْرُ نِسْوَةٍ), qo'shmada MOS (خَمْسَةَ عَشَرَ رَجُلًا، خَمْسَ عَشْرَةَ امْرَأَةً).",
+        "Eslash: «3–9 teskari, 1–2 mos, 10 yolg'iz teskari, qo'shma mos, o'nlik va yuz-ming qotgan»."
+      ],
+      "savollar": [
+        {
+          "savol": "«5 olma (تُفَّاحَة)» qanday aytiladi?",
+          "variantlar": [
+            "خَمْسُ تُفَّاحَاتٍ — 3–10: ko'plik majrur; تُفَّاحَة ayol → son muzakkar",
+            "خَمْسَةُ تُفَّاحَاتٍ",
+            "خَمْسَ تُفَّاحَةً"
+          ],
+          "togri": 0,
+          "izoh": "«Uch»dan «o'n»gacha… ko'plik holda jarr qilish vojib… son lafzlari muzakkarlik va muannaslikda sanaladigan narsaga teskari bo'ladi… «Beshta olma oldim» (خَمْسَ تُفَّاحَاتٍ)."
+        },
+        {
+          "savol": "«25 rayhon (رَيْحَانَة)» — tamyiz qanday?",
+          "variantlar": [
+            "خَمْسًا وَعِشْرِينَ رَيْحَانَةً — 11–99: birlik mansub",
+            "خَمْسَةً وَعِشْرِينَ رَيْحَانَاتٍ",
+            "خَمْسٍ وَعِشْرِينَ رَيْحَانَةٍ"
+          ],
+          "togri": 0,
+          "izoh": "2 — «O'n bir»dan «to'qson to'qqiz»gacha bo'lgan sonlar bilan birlik holda nasb qilinadi… «yigirma beshta rayhon»."
+        },
+        {
+          "savol": "«10 ayol» va «15 ayol» — عَشْر qanday?",
+          "variantlar": [
+            "عَشْرُ نِسْوَةٍ (yolg'iz — teskari), خَمْسَ عَشْرَةَ امْرَأَةً (qo'shma — mos)",
+            "Ikkalasida عَشَرَة",
+            "Ikkalasida عَشْر"
+          ],
+          "togri": 0,
+          "izoh": "…faqat «o'n» bundan mustasno: u yolg'iz kelsa, sanaladigan narsasiga teskari bo'ladi… tarkibli kelsa, unga mos bo'ladi."
+        },
+        {
+          "savol": "﴿سَبْعَ لَيَالٍ وَثَمَانِيَةَ أَيَّامٍ﴾ — nega سَبْعَ (ة siz) va ثَمَانِيَةَ (ة li)?",
+          "variantlar": [
+            "3–9 sanalganga teskari: لَيْلَة ayol → سَبْع; يَوْم erkak → ثَمَانِيَة",
+            "Tasodif",
+            "Qur'on uslubi"
+          ],
+          "togri": 0,
+          "izoh": "«Uch»dan «to'qqiz»gacha bo'lgan son lafzlari muzakkarlik va muannaslikda sanaladigan narsaga teskari bo'ladi… «Yetti kecha va sakkiz kunduz»."
+        },
+        {
+          "savol": "«100 anor (رُمَّانَة)» qanday?",
+          "variantlar": [
+            "مِئَةُ رُمَّانَةٍ — birlik majrur",
+            "مِئَةُ رُمَّانَاتٍ",
+            "مِئَةَ رُمَّانَةً"
+          ],
+          "togri": 0,
+          "izoh": "…«yuz» va «ming» bilan esa birlik holda jarr qilish vojibdir… «yuzta anor» (مِئَةَ رُمَّانَةٍ)."
+        },
+        {
+          "savol": "«12 varaq» — اثْنَتَا عَشْرَةَ وَرَقَةً; nega اثْنَتَا (mos)?",
+          "variantlar": [
+            "1 va 2 uchala holatda sanalganga mos keladi",
+            "Xato — اثْنَا bo'lishi kerak",
+            "Chunki mansub"
+          ],
+          "togri": 0,
+          "izoh": "«Bir» va «ikki» esa uchala holatda ham sanaladigan narsaga mos keladi… muannasda: «isnato ashrata»…"
+        }
+      ]
+    },
+    "nahv-3-55": {
+      "sharh": [
+        "MUNODO (2-39 takrori + qo'shimchalar). Nido harflari: يَا، أَيَا، هَيَا، أَيْ، hamza. Mansub 3 tur (muzof, muzofga o'xshash, aniq ko'zda tutilmagan nakira); mabniy 2 tur (aniq nakira, yakka alam — raf' alomati ustiga: يَا أُسْتَاذُ، يَا فَتَيَانِ، يَا مُنْصِفُونَ). YANGI: أل li so'zni chaqirish uchun oldiga أَيُّهَا (erkak) / أَيَّتُهَا (ayol) yoki ishora ismi: يَا أَيُّهَا الْإِنْسَانُ، يَا أَيَّتُهَا النَّفْسُ، يَا هَذَا الْإِنْسَانُ. I'robi: أَيّ / ishora — munodo (mabniy, damma), هَا — tanbeh, أل li so'z — sifat (mushtaq bo'lsa) yoki atfi bayon (jins ismi bo'lsa). Istisno — Alloh lafzi: يَا اللَّهُ; ko'proq nido harfi tushib, o'rniga shaddali mim: اللَّهُمَّ."
+      ],
+      "savollar": [
+        {
+          "savol": "«يَا الرَّجُلُ» deyish mumkinmi? To'g'risi?",
+          "variantlar": [
+            "Yo'q — أل li so'z oldiga أَيُّهَا: يَا أَيُّهَا الرَّجُلُ",
+            "Ha",
+            "يَا رَجُلُ deb أل tashlanadi"
+          ],
+          "togri": 0,
+          "izoh": "«Al» bo'lgan so'zni chaqirmoqchi bo'lsa, uning oldidan muzakkar uchun «ayyuho», muannas uchun «ayyatuho», yoxud ishora ismi keltiriladi."
+        },
+        {
+          "savol": "«اللَّهُمَّ» dagi shaddali mim nima?",
+          "variantlar": [
+            "Tushirilgan nido harfi (يَا) o'rnini bosuvchi",
+            "Ta'kid",
+            "Zamir"
+          ],
+          "togri": 0,
+          "izoh": "Faqat «Alloh» lafzi bundan mustasno… Ko'pincha u bilan nido harfi tushirilib, o'rniga shaddali «mim» qo'yiladi; shunda «Allohumma» deyiladi."
+        },
+        {
+          "savol": "«يَا أَيُّهَا الْإِنْسَانُ» — الْإِنْسَانُ ning i'robi?",
+          "variantlar": [
+            "Atfi bayon (jins ismi) — أَيّ ga tobe, marfu'; mushtaq bo'lsa sifat",
+            "Munodo",
+            "Xabar"
+          ],
+          "togri": 0,
+          "izoh": "…«ayya»… — munodo; «ho» — tanbeh harfi; «al» bo'lgan so'z esa mushtaq bo'lsa sifat, jins ismi bo'lsa atfi bayondir."
+        },
+        {
+          "savol": "«يَا إِبْرَاهِيمُونَ» — nega vov bilan (mansub emas)?",
+          "variantlar": [
+            "Yakka alam (muzof emas) — raf' alomati ustiga mabniy; ko'plik ham «yakka»ga kiradi",
+            "Xato",
+            "Chunki alam"
+          ],
+          "togri": 0,
+          "izoh": "(u — muzof ham, muzofga o'xshash ham bo'lmagani) — u raf' qilinadigan alomat uzra mabniy bo'ladi; masalan: …«Ey Ibrohimlar!»"
+        }
+      ]
+    },
+    "nahv-3-56": {
+      "sharh": [
+        "كَانَ xabari, إِنَّ ismi (marfu'larda o'tgan) + JINS INKORI لَا si (2-40 takrori + qo'shimcha). Ismi: muzof / o'xshash — mansub; yakka — nasb alomati ustiga mabniy (لَا سَمِيرَ، لَا مُتَذَاكِرَيْنِ، لَا مُتَذَاكِرِينَ). Ismi NAKIRA va TUTASH bo'lishi shart; aks holda amal BOTIL va لَا TAKRORLANADI: لَا زَيْدٌ هُنَا وَلَا عَمْرٌو (ma'rifa), لَا فِي الدَّرْسِ صُعُوبَةٌ وَلَا تَطْوِيلٌ (ajralgan). YANGI: nega «jins inkori»? — xabar jinsning HAMMA a'zosidan inkor: لَا رَجُلَ فِي الدَّارِ — «hech bir erkak yo'q» (بَلْ رَجُلَانِ deb bo'lmaydi); لَا رَجُلٌ فِي الدَّارِ (raf', tanvin) — «bir erkak yo'q» — BIRLIK inkori (بَلْ رَجُلَانِ deyish mumkin)."
+      ],
+      "savollar": [
+        {
+          "savol": "«لَا رَجُلَ فِي الدَّارِ» va «لَا رَجُلٌ فِي الدَّارِ» farqi?",
+          "variantlar": [
+            "Birinchisi — jins inkori (hech bir erkak yo'q); ikkinchisi — birlik inkori (bitta yo'q, ikkita bo'lishi mumkin)",
+            "Farqi yo'q",
+            "Birinchisi savol"
+          ],
+          "togri": 0,
+          "izoh": "…«Uyda kishi yo'q, balki ikki kishi bor» deb aytish to'g'ri emas. «Uyda bir kishi yo'q» degan gapdagi «lo» esa… «birlikni» inkor qilish uchundir; u holda «…balki ikki kishi bor» deyish to'g'ri bo'ladi."
+        },
+        {
+          "savol": "«لَا زَيْدٌ هُنَا وَلَا عَمْرٌو» — nega لَا amal qilmadi va takrorlandi?",
+          "variantlar": [
+            "Ismi ma'rifa (alam) — amal botil, takror lozim",
+            "Xato",
+            "Chunki ikki ism"
+          ],
+          "togri": 0,
+          "izoh": "Aks holda uning amali botil bo'ladi va uni takrorlash lozim bo'ladi; masalan: «Bu yerda na Zayd bor, na Amr»…"
+        },
+        {
+          "savol": "«لَا فِي الدَّرْسِ صُعُوبَةٌ» — صُعُوبَة nakira-ku, nega marfu'?",
+          "variantlar": [
+            "لَا dan ajralgan (فِي الدَّرْسِ orada) — amal botil",
+            "Xato — صُعُوبَةَ",
+            "Chunki muannas"
+          ],
+          "togri": 0,
+          "izoh": "«Lo»ning ismi nakira va unga tutash bo'lishi shartdir… Aks holda uning amali botil bo'ladi… «Darsda na qiyinchilik bor, na cho'zilish»."
+        }
+      ]
+    },
+    "nahv-3-57": {
+      "sharh": [
+        "Ism JARRI (2-42 takrori): asl kasra; yo — ikkilik, jam'i muzakkari solim, besh ism; FATHA — man'i sarfda, أل va izofadan XOLI bo'lganda (خُذْ بِقَوْلِ النُّعْمَانِ وَالصَّاحِبَيْنِ وَالتَّابِعِينَ لِأَبِي حَنِيفَةَ — حَنِيفَة muannas alam: fatha). YANGI: man'i sarfga أل kirsa yoki muzof bo'lsa — KASRA qaytadi: أَخَذْتُ بِالْأَحْسَنِ، بِأَحْسَنِ الْأَقْوَالِ (أَفْضَل vaznida bo'lsa ham)."
+      ],
+      "savollar": [
+        {
+          "savol": "«بِأَحْسَنِ الْأَقْوَالِ» — أَحْسَن man'i sarf; nega kasra?",
+          "variantlar": [
+            "Muzof bo'lgani uchun asl (kasra) qaytadi",
+            "Xato — بِأَحْسَنَ",
+            "Chunki ko'plik"
+          ],
+          "togri": 0,
+          "izoh": "Sarfdan man qilingan ismga «al» kirsa yoki u izofa qilinsa, asl bo'yicha kasra bilan jarr qilinadi; masalan: «Eng yaxshisini oldim» yoki «so'zlarning eng yaxshisini»."
+        },
+        {
+          "savol": "«لِأَبِي حَنِيفَةَ» — حَنِيفَة da jarr alomati?",
+          "variantlar": [
+            "Fatha — muannas alam (man'i sarf), أل siz",
+            "Kasra",
+            "Yo"
+          ],
+          "togri": 0,
+          "izoh": "2 — «Al»dan va izofadan xoli bo'lgan, sarfdan man qilingan ismdagi fatha; masalan: «…Abu Hanifaga ergashganlarning so'zini ol»."
+        }
+      ]
+    },
+    "nahv-3-58": {
+      "sharh": [
+        "JARR HARFLARI (2-42 takrori) — 17 ta (yangi: خَلَا، عَدَا، حَاشَا istisno harflari). Ma'nolari: مِنْ boshlanish, إِلَى/حَتَّى tugash, عَنْ o'tish, عَلَى ustunlik, فِي zarflik, رُبَّ ozlik, ب sabab/qasam, ك o'xshatish, ل EGALIK (2-kitobda «xoslik» edi), و/ت qasam, مُذْ/مُنْذُ boshlanish (o'tgan) / zarflik (hozirgi). YANGI — MUTAALLIQ: jorr-majrur va zarf bog'lanadigan so'z: fe'l, masdar, ism foil/maf'ul, sifati mushabbaha, ism tafzil. Mutaalliq tushirilishi: UMUMIY kavn (mavjudlik, «bor» — aytilmasa ham tushuniladi) → VOJIB tushadi: الْعِلْمُ فِي الصُّدُورِ (كَائِنٌ deyilmaydi); XOS kavn (tushirilsa ma'no yo'qoladi) → MAN: أَنَا وَاثِقٌ بِكَ (أَنَا بِكَ — tushunilmaydi); qarina bo'lsa tushirish mumkin (بِمَنْ تَثِقُ؟ — بِكَ). Xato: «دَخَلَ فِي مَحَلٍّ كَائِنٍ بِالْبَيْتِ»، «مَنْزِلِهِ الْكَائِنِ بِالشَّارِعِ» — كَائِن ortiqcha (umumiy kavn)!"
+      ],
+      "savollar": [
+        {
+          "savol": "«مَنْزِلِهِ الْكَائِنِ بِالشَّارِعِ الْجَدِيدِ» — xato qayerda?",
+          "variantlar": [
+            "الْكَائِن ortiqcha — umumiy kavn mutaalliqi vojib tushiriladi: مَنْزِلِهِ بِالشَّارِعِ",
+            "Xato yo'q",
+            "بِ o'rniga فِي"
+          ],
+          "togri": 0,
+          "izoh": "…mutaalliqni oshkor keltirish quyidagi kabi o'rinlarda xatodir: …«Uni yangi ko'chada joylashgan uyiga taklif qildi». To'g'risi — uni tushirishdir."
+        },
+        {
+          "savol": "«أَنَا وَاثِقٌ بِكَ» — وَاثِق ni tushirib «أَنَا بِكَ» deb bo'ladimi?",
+          "variantlar": [
+            "Yo'q — xos kavn: tushirilsa ma'no yo'qoladi (qarina bo'lmasa)",
+            "Ha — mutaalliq doim tushadi",
+            "Faqat she'rda"
+          ],
+          "togri": 0,
+          "izoh": "Uni tushirish man qilinadi — agar u xos «kavn» bo'lsa… «Men senga ishonaman» — chunki «men senga» desang, ko'zda tutilgan ma'no tushunilmaydi."
+        },
+        {
+          "savol": "3-kitobda jarr harflari ro'yxatiga qaysilar qo'shildi?",
+          "variantlar": [
+            "خَلَا، عَدَا، حَاشَا (istisno harflari)",
+            "مِنْ، إِلَى",
+            "و، ت"
+          ],
+          "togri": 0,
+          "izoh": "Jarr harflari: «min», «ilo», «an», «alo», «fi», «rubba», «bo», «kof», «lom», «vov», «to», «muz», «munzu», «hatta», «xalo», «ado», «hosho»."
+        },
+        {
+          "savol": "Mutaalliq bo'la oladigan so'zlar?",
+          "variantlar": [
+            "Fe'l va uning o'xshashlari: masdar, ism foil/maf'ul, sifati mushabbaha, ism tafzil",
+            "Faqat fe'l",
+            "Faqat ism"
+          ],
+          "togri": 0,
+          "izoh": "1 — Masdar. 2-3 — Ism foil va ism maf'ul. 4 — Sifati mushabbaha. 5 — Ism tafzil. (fe'ldan tashqari)"
+        }
+      ]
+    },
+    "nahv-3-59": {
+      "sharh": [
+        "MUZOFUN ILAYH (2-43 takrori + qo'shimcha). Muzofda tanvin tushadi; ikkilik/jam'i solimda nun tushadi (عَلَى ضَفَّتَيِ النَّهْرِ مُهَنْدِسُو الْمَدِينَةِ). YANGI: muzofga أل KIRMAYDI — istisno: muzof SIFAT bo'lsa va (a) ikkilik yoki jam'i muzakkari solim bo'lsa (الْفَاتِحَا دِمَشْقَ، السَّاكِنُو مِصْرَ), yoki (b) muzofun ilayhda أل bo'lsa (الْمُتَّبِعُ الْحَقَّ — bu yerda الْحَقَّ mansub, «izofa lafziy»; السَّالِكُ طَرِيقَ الْبَاطِلِ). Taqdiriy i'rob (2-44 takrori): ي ga muzof — 3 harakat taqdiriy; maqsur — 3 harakat; manqus — raf' va jarr."
+      ],
+      "savollar": [
+        {
+          "savol": "«السَّاكِنُو مِصْرَ» — muzofda أل; nega joiz?",
+          "variantlar": [
+            "Muzof sifat va jam'i muzakkari solim — istisno",
+            "Xato",
+            "Har doim joiz"
+          ],
+          "togri": 0,
+          "izoh": "Muzofga «al» kirishi man qilinadi — faqat u sifat bo'lsa joizdir; sharti: u musanno yoki jam' muzakkar solim bo'lishi, yoxud muzofun ilayhda «al» bo'lishi."
+        },
+        {
+          "savol": "«الْكِتَابُ الْمُعَلِّمِ» (o'qituvchining kitobi) deyish mumkinmi?",
+          "variantlar": [
+            "Yo'q — muzof sifat emas; كِتَابُ الْمُعَلِّمِ",
+            "Ha",
+            "Faqat she'rda"
+          ],
+          "togri": 0,
+          "izoh": "Muzofga «al» kirishi man qilinadi — faqat u sifat bo'lsa joizdir…"
+        },
+        {
+          "savol": "«الْمُتَّبِعُ الْحَقَّ مَنْصُورٌ» — الْحَقَّ nega mansub?",
+          "variantlar": [
+            "Muzof sifat + muzofun ilayhda أل — bu holda الْحَقَّ maf'ul sifatida mansub (lafziy izofa yo'q)",
+            "Xato",
+            "Chunki ta'kid"
+          ],
+          "togri": 0,
+          "izoh": "…yoxud muzofun ilayhda «al» bo'lishi. Masalan: …«Haqqa ergashuvchi nusratlangandir» (الْمُتَّبِعُ الْحَقَّ)."
+        }
+      ]
+    },
+    "nahv-3-60": {
+      "sharh": [
+        "TOBELAR (2-45 takrori): na't, atf, ta'kid, badal — matbu'ning i'robini oladi (raf', nasb, jarr, jazm). Keyingi 4 dars har birini beradi; 3-64 da nahvchilarning ko'pchiligi qo'shgan 5-tobe (atfi bayon) ham tilga olinadi."
+      ],
+      "savollar": [
+        {
+          "savol": "Tobe jazm o'rnida ham bo'la oladimi?",
+          "variantlar": [
+            "Ha — fe'lga fe'l atf/badal bo'lsa (يَلْقَ أَثَامًا يُضَاعَفْ)",
+            "Yo'q — faqat ism",
+            "Faqat raf'da"
+          ],
+          "togri": 0,
+          "izoh": "…raf' bo'lganda bu ham raf' bo'ladi, nasb bo'lganda nasb, jarr bo'lganda jarr, jazm bo'lganda jazm bo'ladi."
+        }
+      ]
+    },
+    "nahv-3-61": {
+      "sharh": [
+        "NA'T (2-46 takrori + istisnolar). Haqiqiy — 10 narsada ergashadi (i'rob 3 + ma'rifa/nakira 2 + son 3 + jins 2); sababiy — doim birlik, jinsda keyingi so'zga qaraydi. YANGI ISTISNOLAR (moslashmaydi): (1) MASDAR na't (هُمْ شُهُودٌ عَدْلٌ، نِسَاءٌ عَدْلٌ — birlik muzakkar); (2) NAKIRA TAFZIL (بَنَاتٌ أَكْرَمُ فَتَيَاتٍ، رِجَالٍ أَفْضَلَ مِنْ غَيْرِهِمْ); (3) AQLSIZ KO'PLIK sifati — birlik muannas yoki ko'plik (أَيَّامًا مَعْدُودَةً / مَعْدُودَاتٍ; أَقْلَامٌ جَيِّدَةٌ). Bu qoidalar XABAR (mubtadoga) va HOL (sohibiga) uchun ham — chunki xabar mubtadoning, hol sohibining ma'naviy sifati. Nakiradan keyingi jumla — sifat, ma'rifadan keyingi — hol. Hol sohibiga i'robdan tashqari narsalarda moslashadi."
+      ],
+      "savollar": [
+        {
+          "savol": "«الصُّحُفُ جَيِّدَةٌ» — xabar birlik muannas; nega?",
+          "variantlar": [
+            "Aqlsiz ko'plik (صُحُف) sifati birlik muannas kabi muomala qilinadi",
+            "Xato — جَيِّدَاتٌ shart",
+            "Chunki nakira"
+          ],
+          "togri": 0,
+          "izoh": "3 — Aqlsiz narsalar ko'pligining sifati; u birlik muannas yoki ko'plik muomalasini oladi. Shunday deysan: «sanoqli kunlar» — ikki xil shakl bilan."
+        },
+        {
+          "savol": "«شَهِدَ رِجَالٌ عَدْلٌ» — عَدْل nega ko'plik emas?",
+          "variantlar": [
+            "Masdar na't — birlik va muzakkarlikda qoladi",
+            "Xato",
+            "Chunki nakira"
+          ],
+          "togri": 0,
+          "izoh": "1 — Masdar — u bilan sifatlansa. 2 — Va nakira «af'alut-tafzil»; bu ikkisi birlik va muzakkarlikda qoladi. Shunday deysan: «Ular adolatli guvohlardir»…"
+        },
+        {
+          "savol": "«زَارَنِي رِجَالٌ كَرِيمَةٌ أُمَّهَاتُهُمْ» — كَرِيمَة muannas; nega?",
+          "variantlar": [
+            "Sababiy na't — jinsda keyingi so'zga (أُمَّهَات) qaraydi",
+            "Xato — كَرِيم",
+            "Chunki رِجَال"
+          ],
+          "togri": 0,
+          "izoh": "Sababiy na'tga kelsak, u doim birlikda bo'ladi; uning muzakkarligi va muannasligida esa o'zidan keyingi so'zga qaraladi."
+        },
+        {
+          "savol": "Na't qoidalari yana qaysi ikki narsaga tegishli?",
+          "variantlar": [
+            "Xabar va hol — ular ham ma'naviy sifat",
+            "Foil va maf'ul",
+            "Munodo va tamyiz"
+          ],
+          "togri": 0,
+          "izoh": "Xabar va hol uchun ham mubtado va sohibul-holga moslashish… na'tdagi hukm amal qiladi. Chunki xabar haqiqatda mubtadoning sifati, hol esa o'z sohibining sifatidir."
+        }
+      ]
+    },
+    "nahv-3-62": {
+      "sharh": [
+        "ATF (2-47 takrori): 9 harf (حَتَّى endi to'liq ro'yxatda — g'oya/chegara: حَتَّى الْمُشَاةُ). و mutlaq jam', ف tartib+tezlik, ثُمَّ tartib+oraliq, أَوْ ikkidan biri, أَمْ muodala (tenglashtirib so'rash), لَكِنْ istidrok, لَا inkor, بَلْ izrob, حَتَّى g'oya. YANGI: (1) MUSTATIR yoki MUTTASIL MARFU' zamirga atf — faqat AJRATUVCHI so'zdan keyin chiroyli: اسْكُنْ أَنْتَ وَزَوْجُكَ (اسْكُنْ وَزَوْجُكَ — yaxshi emas), نَجَوْتُمْ أَنْتُمْ وَمَنْ مَعَكُمْ; (2) fe'lga fe'l atf qilinadi: ﴿وَإِنْ تُؤْمِنُوا وَتَتَّقُوا يُؤْتِكُمْ… وَلَا يَسْأَلْكُمْ﴾ (majzumga majzum)."
+      ],
+      "savollar": [
+        {
+          "savol": "﴿اسْكُنْ أَنْتَ وَزَوْجُكَ الْجَنَّةَ﴾ — أَنْتَ nima uchun?",
+          "variantlar": [
+            "Ajratuvchi (fasl) — mustatir zamirga atf qilish uchun avval ochiq zamir keltiriladi",
+            "Ta'kid",
+            "Mubtado"
+          ],
+          "togri": 0,
+          "izoh": "Mustatir zamirga yoki marfu' muttasil zamirga atf qilish faqat ajratuvchi so'zdan keyingina chiroyli bo'ladi; masalan: «Sen va juftingiz jannatda turinglar»."
+        },
+        {
+          "savol": "«قَدِمَ الْحُجَّاجُ حَتَّى الْمُشَاةُ» — حَتَّى qanday ma'noda?",
+          "variantlar": [
+            "G'oya (chegara) — «hatto piyodalari ham»",
+            "Tugash (jarr)",
+            "Nasb"
+          ],
+          "togri": 0,
+          "izoh": "«Hatta» — g'oya (chegara) uchundir."
+        },
+        {
+          "savol": "«وَلَا يَسْأَلْكُمْ أَمْوَالَكُمْ» — يَسْأَلْ nega majzum?",
+          "variantlar": [
+            "Fe'lga fe'l atf — يُؤْتِكُمْ (shart javobi, majzum) ga atf qilingan",
+            "لَا nahiy",
+            "Xato"
+          ],
+          "togri": 0,
+          "izoh": "Fe'lga fe'l atf qilinadi; masalan: «Agar imon keltirib taqvo qilsangiz, U sizlarga ajrlaringizni beradi va mol-mulklaringizni sizdan so'ramaydi»."
+        }
+      ]
+    },
+    "nahv-3-63": {
+      "sharh": [
+        "TA'KID (2-48 takrori + qo'shimcha). Lafziy — takror (fe'l, ism, harf, jumla). Ma'naviy — 7 so'z (نَفْس، عَيْن، كُلّ، جَمِيع، عَامَّة، كِلَا، كِلْتَا) + mos zamir. YANGI: (1) mustatir yoki muttasil zamir MUNFASIL raf' zamiri bilan ta'kidlanadi: أَكْتُبُ أَنَا، ﴿كُنْتَ أَنْتَ الرَّقِيبَ﴾; (2) muttasil/mustatir raf' zamirini نَفْس/عَيْن bilan ta'kidlash uchun AVVAL munfasil zamir kerak: قُمْتُ أَنَا نَفْسِي (قُمْتُ نَفْسِي — noto'g'ri), قُمْ أَنْتَ عَيْنُكَ."
+      ],
+      "savollar": [
+        {
+          "savol": "«قُمْتُ نَفْسِي» deyish mumkinmi?",
+          "variantlar": [
+            "Yo'q — avval munfasil zamir: قُمْتُ أَنَا نَفْسِي",
+            "Ha",
+            "Faqat she'rda"
+          ],
+          "togri": 0,
+          "izoh": "Muttasil yoki mustatir raf' zamirini «nafs» yoki «ayn» bilan ta'kidlamoqchi bo'lsa, avval uni munfasil zamir bilan ta'kidlash vojib bo'ladi; masalan: «Men o'zim turdim»."
+        },
+        {
+          "savol": "﴿كُنْتَ أَنْتَ الرَّقِيبَ عَلَيْهِمْ﴾ — أَنْتَ nima?",
+          "variantlar": [
+            "Lafziy ta'kid — muttasil zamir (تَ) ni munfasil zamir bilan ta'kidlash",
+            "Mubtado",
+            "كَانَ ning ismi"
+          ],
+          "togri": 0,
+          "izoh": "Mustatir yoki muttasil zamir munfasil raf' zamiri bilan ta'kidlanadi; masalan: «Men yozaman», «Sen ularning ustidan kuzatuvchi eding»."
+        }
+      ]
+    },
+    "nahv-3-64": {
+      "sharh": [
+        "BADAL (2-49 takrori + qo'shimcha): mutobiq, ba'z, ishtimol, mubayin; ba'z va ishtimolda zamir shart. YANGI: (1) FE'Lga fe'l badal: ﴿يَلْقَ أَثَامًا * يُضَاعَفْ لَهُ الْعَذَابُ﴾ — يُضَاعَفْ badal (jazm — ishtimol: azob ikkilanishi jazoning mazmuni); (2) ATFI BAYON — nahvchilar ko'pchiligi qo'shgan 5-tobe, misollari mutobiq badal bilan bir xil: ismdan keyingi laqab (عَلِيٍّ زَيْنِ الْعَابِدِينَ), kunyadan keyingi ism (أَبِي حَفْصٍ عُمَرَ), ishoradan keyingi ochiq ism (هَذَا الْغُلَامُ), sifatdan keyingi mavsuf (الْكَلِيمِ مُوسَى), izoh (الْعَسْجَدِ أَيِ الذَّهَبِ). Roziy: «Badal bilan bayon farqini hali tushunmadim» — mualliflar ham farqni muhim deb bilmaydi."
+      ],
+      "savollar": [
+        {
+          "savol": "«هَذَا الْغُلَامُ» — الْغُلَام ni qanday i'roblash mumkin?",
+          "variantlar": [
+            "Atfi bayon (yoki mutobiq badal) — ishoradan keyingi ochiq ism",
+            "Xabar",
+            "Sifat"
+          ],
+          "togri": 0,
+          "izoh": "Bunga kiradi: …ishoradan keyingi ochiq ism — «bu bola» kabi…"
+        },
+        {
+          "savol": "﴿وَمَنْ يَفْعَلْ ذَلِكَ يَلْقَ أَثَامًا * يُضَاعَفْ لَهُ الْعَذَابُ﴾ — يُضَاعَفْ nega majzum?",
+          "variantlar": [
+            "يَلْقَ (shart javobi) dan badal — fe'ldan fe'l badal",
+            "لَمْ bilan",
+            "Xato"
+          ],
+          "togri": 0,
+          "izoh": "Fe'ldan fe'l badal qilinadi; masalan: «Kim shuni qilsa, jazoga yo'liqadi — unga azob ikki barobar qilinadi»."
+        },
+        {
+          "savol": "Roziy badal bilan atfi bayon haqida nima degan?",
+          "variantlar": [
+            "«Farqini hali tushunmadim» — zikr qilingan farqlarni xato deb bilgan",
+            "Ular butunlay boshqa",
+            "Atfi bayon yo'q"
+          ],
+          "togri": 0,
+          "izoh": "Roziy dedi: «Men shu paytgacha badal bilan bayon orasidagi farqni tushunmadim!» So'ng u ikkisi orasida zikr qilingan barcha farqlarni xato deb bildi."
+        }
+      ]
+    },
+    "nahv-3-65": {
+      "sharh": [
+        "XOTIMA (2-50 takrori): mabniy so'z i'rob o'rnida lafzan o'zgarmaydi, «o'rnida» deb hisoblanadi. Misol: إِنْ حَسُنَتْ مِنْكَ الْأَعْمَالُ تَسُودُ وَتَبْلُغُ نِهَايَةَ الْكَمَالِ — حَسُنَتْ (mozi) jazm o'rnida; تَسُودُ — javob (ismiy emas, lekin marfu' — shart javobi ba'zan marfu' keladi, jazm o'rnida jumla deb qaraladi); مِنْكَ dagi ك — jarr o'rnida. «Uchinchi kitob tamom bo'ldi» — boshlang'ich nahv kursi yakunlandi; 4-kitob chuqurroq masalalarga o'tadi."
+      ],
+      "savollar": [
+        {
+          "savol": "«إِنْ حَسُنَتْ مِنْكَ الْأَعْمَالُ» — حَسُنَتْ ning holati?",
+          "variantlar": [
+            "Mozi — fatha ustiga mabniy, jazm o'rnida (shart fe'li)",
+            "Majzum — sukun",
+            "Marfu'"
+          ],
+          "togri": 0,
+          "izoh": "Mabniy so'zlardan biri raf', nasb, jazm yoki jarr o'rinlaridan birida kelsa, uning oxirini o'zgartirmaysan… o'rin taqozo qilganiga ko'ra… jazm… o'rnida deb hisoblaysan."
+        },
+        {
+          "savol": "«مِنْكَ» dagi ك qanday?",
+          "variantlar": [
+            "Fatha ustiga mabniy, jarr o'rnida",
+            "Nasb o'rnida",
+            "Mu'rab majrur"
+          ],
+          "togri": 0,
+          "izoh": "…uni o'rin taqozo qilganiga ko'ra raf', nasb, jazm yoki jarr o'rnida deb hisoblaysan."
+        }
+      ]
     }
   }
 }

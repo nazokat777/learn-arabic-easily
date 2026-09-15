@@ -3570,6 +3570,364 @@
           "izoh": "Fe'li nahiyning ma'lumi va majhuli ham fe'li jahdnikidekdir."
         }
       ]
+    },
+    "sarf-48": {
+      "sharh": [
+        "MISOL fe'l (fo o'rnida و): وَثَبَ – يَثِبُ (sakramoq). Moziyda hech qanday o'zgarish yo'q — sahih kabi: وَثَبَ، وَثَبَا، وَثَبُوا … وَثَبْتُ، وَثَبْنَا; majhuli وُثِبَ… ham oddiy.",
+        "Asosiy QOIDA muzori'da: يَثِبُ aslida يَوْثِبُ — muzoraat harfi bilan HAQIQIY KASRA orasida kelgan و TUSHADI (hazf). Shuning uchun يَثِبُ، تَثِبُ، أَثِبُ، نَثِبُ — hammasida و yo'q. MAJHULda esa kasra yo'q (يُوثَبُ — ayn fathali), shuning uchun و QAYTADI: يُوثَبُ، يُوثَبَانِ…",
+        "Ismi foil وَاثِب, ismi maf'ul مَوْثُوب — و saqlanadi (yasalish qoidalari oddiy). Jahd ma'lumi (لَمْ يَثِبْ) va nafiy ma'lumi (لَا يَثِبُ) — muzori' asosida, و tushgan; majhullari (لَمْ يُوثَبْ، لَا يُوثَبُ) — و bilan."
+      ],
+      "savollar": [
+        {
+          "savol": "«يَثِبُ» da و nega yo'q (asli يَوْثِبُ)?",
+          "variantlar": [
+            "Muzoraat harfi bilan haqiqiy kasra orasidagi و tushadi",
+            "Yozuvda tushib qolgan",
+            "Misol fe'lda و hech qachon yozilmaydi"
+          ],
+          "togri": 0,
+          "izoh": "Har qachon harfi muzoraat bilan kasrai tahqiqiy orasida «vov» kelsa, unday «vov»ni hazf qilinadi."
+        },
+        {
+          "savol": "Majhulda «يُوثَبُ» — و nega qaytdi?",
+          "variantlar": [
+            "Majhulda ayn fathali — muzoraat harfi bilan kasra orasida emas, hazf sharti yo'q",
+            "Majhulda hamma harf saqlanadi",
+            "Xato"
+          ],
+          "togri": 0,
+          "izoh": "…asliga qaytaramiz يَوْثِبُ … oxiridan oldingi harfini fathali qilamiz: يَوْثَبُ … zammalik qilamiz: يُوثَبُ — kasra yo'q, و qoladi."
+        },
+        {
+          "savol": "Misol fe'lning moziysi (وَثَبَ) sahihdan farq qiladimi?",
+          "variantlar": [
+            "Yo'q — moziyda e'lol yo'q, sahih kabi tuslanadi",
+            "Ha — و tushadi",
+            "Ha — و alifga aylanadi"
+          ],
+          "togri": 0,
+          "izoh": "6-dars: misol — moziysining e'loli yo'qligida sahihga o'xshaydi. وَثَبَ، وَثَبَا، وَثَبُوا…"
+        }
+      ]
+    },
+    "sarf-49": {
+      "sharh": [
+        "Misol fe'lning AMRI: ثِبْ (sakra!) — تَثِبُ dan ت tushadi, qolgan ثِبْ harakatli harf bilan boshlanadi → hamza kerak emas. 6 siyg'a: ثِبْ، ثِبَا، ثِبُوا، ثِبِي، ثِبَا، ثِبْنَ. Amri g'oib لِيَثِبْ…, nahiy لَا تَثِبْ… — و yo'q (muzori' asosida); majhullari لِيُوثَبْ، لَا تُوثَبْ — و bilan.",
+        "Ismlar: ismi zamon/makon مَوْثِب (مَفْعِل — misol fe'ldan, 31-dars), ismi olat مِيثَاب — asli مِوْثَاب: sukunli و oldida KASRA bo'lsa و → ي ga aylanadi (qalb). Ismi tafzil أَوْثَب، وُثْبَى.",
+        "«Yo»li misol: يَسَرَ – يَيْسِرُ (qimor o'ynamoq). Bunda ي tushmaydi (qoida faqat و uchun): يَيْسِرُ. Majhulda يُوسَرُ — sukunli ي oldida DAMMA bo'lsa ي → و ga aylanadi. Ikki qalb qoidasi: «sukunli و + oldida kasra → ي» (مِيثَاب), «sukunli ي + oldida damma → و» (يُوسَرُ)."
+      ],
+      "savollar": [
+        {
+          "savol": "«مِيثَاب» (sakrash asbobi) asli «مِوْثَاب» — nega و → ي bo'ldi?",
+          "variantlar": [
+            "Sukunli و oldida kasra — و yo ga qalb qilinadi",
+            "Xato yozilgan",
+            "Ismi olatda hamma و ي bo'ladi"
+          ],
+          "togri": 0,
+          "izoh": "«Vov» sokin bo'lib, moqablisi kasrali bo'lsa, «vov»ni «yo»ga qalb qilinadi."
+        },
+        {
+          "savol": "«يَيْسِرُ» ning majhuli nega «يُوسَرُ»?",
+          "variantlar": [
+            "Sukunli ي oldida damma — ي vov ga qalb qilinadi (asli يُيْسَرُ)",
+            "و asliy harf",
+            "Majhulda ي bo'lmaydi"
+          ],
+          "togri": 0,
+          "izoh": "Qoida: «yo» sokin bo'lib, oldi zammalik bo'lsa, unda «yo»ni «vov»ga qalb qilinadi: يُوسَرُ bo'ladi."
+        },
+        {
+          "savol": "«ثِبْ» (sakra!) da hamza nega yo'q?",
+          "variantlar": [
+            "ت tashlangach so'z harakatli harf (ثِ) bilan boshlanadi",
+            "Misol fe'lda hamza bo'lmaydi",
+            "Hamza tushib qolgan"
+          ],
+          "togri": 0,
+          "izoh": "26-dars qoidasi: muzoraat harfidan keyingi harf harakatli bo'lsa amr tugaydi (قُلْ، بِعْ kabi)."
+        },
+        {
+          "savol": "Yo'li misolda (يَيْسِرُ) muzori'da ي tushadimi?",
+          "variantlar": [
+            "Yo'q — hazf qoidasi faqat و uchun",
+            "Ha — يَسِرُ",
+            "Ha, majhulda"
+          ],
+          "togri": 0,
+          "izoh": "Kitob: يَسَرَ – يَيْسِرُ — ي saqlanadi; hazf qoidasi «vov» haqida."
+        }
+      ]
+    },
+    "sarf-50": {
+      "sharh": [
+        "AJVAF (ayn o'rnida illat): بَاعَ – يَبِيعُ (sotmoq). بَاعَ aslida بَيَعَ: HARAKATLI ي, oldida FATHA → ي ALIFGA aylanadi (qalb). Bu ajvafning asosiy qoidasi: «harakatli illat harfi, oldida fatha → alif».",
+        "Moziy tuslanishi: بَاعَ، بَاعَا، بَاعُوا، بَاعَتْ، بَاعَتَا (5 siyg'ada alif), keyin بِعْنَ، بِعْتَ، بِعْتُمَا… بِعْتُ، بِعْنَا (9 siyg'ada ayn TUSHGAN!). Nega? بَيَعْنَ → ي alifga → بَاعْنَ → alif va ع ikkalasi sukunli (ijtimoi sokinayn) → alif tushadi → بَعْنَ → tushgan ي evaziga oldingi harfga KASRA: بِعْنَ. Shuning uchun «sotdim» بِعْتُ — ikki harf qolgan.",
+        "Majhuli: بَيَعَ → بَيِعَ → kasra ي ga og'ir, oldingi harfga ko'chadi → بِيعَ (sotildi). 9 siyg'ada ma'lum va majhul BIR XIL ko'rinadi (بِعْنَ) — asli boshqa (بَيَعْنَ / بُيِعْنَ). Muzori' يَبِيعُ (asli يَبْيِعُ — kasra ي dan oldingi harfga ko'chdi); ayollar ko'pligida ي tushadi: يَبِعْنَ، تَبِعْنَ."
+      ],
+      "savollar": [
+        {
+          "savol": "«بَاعَ» ning asli va nega alif bo'ldi?",
+          "variantlar": [
+            "بَيَعَ — harakatli ي, oldida fatha → alifga qalb",
+            "بَوَعَ — و alifga",
+            "بَاعَ — asli shu"
+          ],
+          "togri": 0,
+          "izoh": "باعَ aslida بَيَعَ edi. «Yo» harakatli, moqabli – maftuh, «yo»ni alifga qalb qildik, بَاعَ bo'ldi."
+        },
+        {
+          "savol": "«بِعْتُ» (sotdim) da nega faqat ikki asliy harf ko'rinadi?",
+          "variantlar": [
+            "ي alifga aylanib, ikki sukun to'qnashganda alif tushdi; evaziga ب ga kasra berildi",
+            "ي yozilmaydi",
+            "Xato"
+          ],
+          "togri": 0,
+          "izoh": "…بَاعْنَ bo'lib, alif bilan ayn orasida ijtimo'i sokinayn vujudga keldi. Alifni hazf qildik: بَعْنَ … kasra berdik: بِعْنَ."
+        },
+        {
+          "savol": "«بِيعَ» (sotildi) qanday yasaldi?",
+          "variantlar": [
+            "بَيَعَ → بَيِعَ → kasra ي ga og'ir, ب ga ko'chdi → بِيعَ",
+            "بَاعَ → بُاعَ",
+            "بَيَعَ → بُيِعَ (o'zgarishsiz)"
+          ],
+          "togri": 0,
+          "izoh": "…بَيِعَ bo'ldi. Kasra «yo»ga og'ir, «yo»ning kasrasini «yo»dan oldingi harfga beramiz … بِيْعَ bo'ladi."
+        },
+        {
+          "savol": "Moziyda «بِعْنَ» ma'lummi, majhulmi?",
+          "variantlar": [
+            "Ikkalasi ham bo'lishi mumkin — 9 siyg'ada mushtarak, aslidan farqlanadi",
+            "Faqat ma'lum",
+            "Faqat majhul"
+          ],
+          "togri": 0,
+          "izoh": "…to'qqiz siyg'ada ma'lumi va majhuli mushtarakdir. Asllariga qaraganda farqi bilinadi. بِعْنَ … asli بَيَعْنَ / majhul bo'lsa asli بُيِعْنَ."
+        }
+      ]
+    },
+    "sarf-51": {
+      "sharh": [
+        "Muzori' MAJHULI يُبَاعُ (sotiladi): يَبْيِعُ → يَبْيَعُ → يُبْيَعُ → ي ning fathasi oldingi ب ga ko'chadi يُبَيْعُ → endi ي sukunli, lekin aslida harakatli edi va oldida fatha → ALIFGA qalb: يُبَاعُ. Ayollar ko'pligida alif tushadi: يُبَعْنَ، تُبَعْنَ.",
+        "ISMI FOIL بَائِع (asli بَايِع): ZOID ALIFDAN keyin kelgan و/ي HAMZAGA aylanadi — قَاوِل → قَائِل (aytuvchi), بَايِع → بَائِع (sotuvchi). Bu qoida ajvafning barcha ismi foillarida.",
+        "ISMI MAF'UL مَبِيع (asli مَبْيُوع): damma ي ga og'ir → oldingi harfga; ي va و ikki sukun — biri tushadi. Ikki imom ikki xil tushuntiradi: Axfash — ي tushadi, keyin و ni ي ga qalb (vovli ajvaf bilan adashmaslik uchun kasra); Sibavayh — و (zoid) tushadi, ي qolsin deb oldiga kasra. Natija bir: مَبِيع. Dalillar: Axfash — «alomat (و) tushmaydi», Sibavayh — «zoid harf tushadi»."
+      ],
+      "savollar": [
+        {
+          "savol": "«بَائِع» da hamza qayerdan keldi?",
+          "variantlar": [
+            "Zoid alifdan keyingi ي hamzaga qalb qilindi (asli بَايِع)",
+            "Hamza asliy harf",
+            "Ajvafda hamza qo'shiladi"
+          ],
+          "togri": 0,
+          "izoh": "Qoida: «Vov» va «yo» alifi zoidadan keyin kelsa, «vov» va «yo»ni hamzaga qalb qilinadi. قَاوِلٌ – قائِلٌ, بايِعٌ – بائِعٌ."
+        },
+        {
+          "savol": "«يُبَاعُ» da alif qanday paydo bo'ldi?",
+          "variantlar": [
+            "يُبْيَعُ da ي ning fathasi ب ga ko'chdi, ي oldida fatha bo'lgani uchun alifga qalb",
+            "Alif asliy",
+            "و alifga aylandi"
+          ],
+          "togri": 0,
+          "izoh": "…يُبَيْعُ bo'ladi. Sokin bo'lgan «yo» aslida harakatli edi, endi oldingi harfi fathalik bo'ldi, «yo»ni … alifga qalb qilamiz: يُبَاعُ."
+        },
+        {
+          "savol": "Sibavayh nazdida «مَبِيع» da qaysi harf tushdi va nega?",
+          "variantlar": [
+            "و — chunki u zoid harf, zoid tushadi",
+            "ي — chunki alomat tushmaydi",
+            "Hech biri"
+          ],
+          "togri": 0,
+          "izoh": "Imomi Sibavayh «مَبْيُوْعٌ»da «vov»ni hazf qiladi … dalili: vov harfi zoiddir, harfi zoidni hazf qilmoq kerak."
+        }
+      ]
+    },
+    "sarf-52": {
+      "sharh": [
+        "Ajvaf JAHDI: لَمْ يَبِعْ (sotmadi) — asli لَمْ يَبْيِعْ: kasra ي dan ب ga ko'chdi (naqli harakat) → لَمْ يَبِيعْ → ي va ع ikki sukun → ي TUSHADI → لَمْ يَبِعْ. 7 siyg'ada ayn tushgan (g'oib, g'oiba, g'oibot, muxotab, muxotabot, ikki mutakallim); qolganlarida (لَمْ يَبِيعَا، لَمْ يَبِيعُوا، لَمْ تَبِيعِي) oxirida harakatli qo'shimcha — faqat naql, hazf yo'q.",
+        "Uch qoida nomi: NAQLI HARAKAT (harakatni oldingi harfga ko'chirish), QALBI HARFI ILLAT (illat harfini almashtirish), HAZFI HARFI ILLAT (illat harfini tushirish). Majhul jahd: لَمْ يُبَعْ (asli لَمْ يُبْيَعْ → naql → qalb alifga → ikki sukun → alif tushdi); لَمْ يُبَاعَا — ijtimoi sokinayn yo'q, alif qoladi.",
+        "Nafiy — muzori' kabi: لَا يَبِيعُ / لَا يُبَاعُ. Amri hozir: بِعْ، بِيعَا، بِيعُوا، بِيعِي، بِيعَا، بِعْنَ."
+      ],
+      "savollar": [
+        {
+          "savol": "«لَمْ يَبِعْ» (sotmadi) — ي qayerga ketdi?",
+          "variantlar": [
+            "Kasrasi ب ga ko'chgach ي va ع ikki sukun bo'ldi — ي tushdi",
+            "Yozilmaydi",
+            "ي alifga aylandi"
+          ],
+          "togri": 0,
+          "izoh": "لَمْ يَبِيْعْ bo'lib, ikki sokin jam' bo'ldi. «Yo» bilan 'ayn orasida «yo»ni hazf qildik. لَمْ يَبِعْ bo'ldi."
+        },
+        {
+          "savol": "«لَمْ يَبِيعَا» da nega ي qoldi?",
+          "variantlar": [
+            "Oxirida harakatli alif bor — ikki sukun to'qnashmadi, faqat naqli harakat",
+            "Xato",
+            "Ikkilikda hamma harf saqlanadi"
+          ],
+          "togri": 0,
+          "izoh": "لَمْ يَبِيْعا aslida لَمْ يَبْيِعا … moqabliga berdik. لَمْ يَبِيْعا bo'ldi. Va faqat nakli harakat qoidasi bor."
+        },
+        {
+          "savol": "Ajvaf e'lolida uch qoida qaysilar?",
+          "variantlar": [
+            "Naqli harakat, qalbi harfi illat, hazfi harfi illat",
+            "Idg'om, hamza, tanvin",
+            "Faqat hazf"
+          ],
+          "togri": 0,
+          "izoh": "…nakli harakat, qalbi harfi illat yuzaga keldi. Va hazfi harfi illat qoidasi bor."
+        }
+      ]
+    },
+    "sarf-53": {
+      "sharh": [
+        "Ajvaf AMRI بِعْ (sot!): تَبِيعُ → oxiri sukun تَبِيعْ → ت tushadi بِيعْ → ي va ع ikki sukun → ي tushadi → بِعْ. Ayollar ko'pligi بِعْنَ (asli اِبْيِعْنَ → naql → hazf → hamza kerakmas). Ta'kid nuni qo'shilsa tushgan ي QAYTADI: بِيعَنْ، بِيعَنَّ (chunki endi ع harakatli, ikki sukun yo'q).",
+        "Amri g'oib لِيَبِعْ (asli لِيَبْيِعْ — naql, hazf), لِيَبِيعَا (faqat naql); majhuli لِيُبَعْ، لِتُبَاعَا (alif qoladi). Nahiy لَا تَبِعْ (asli لَا تَبْيِعْ), لَا تَبِيعَا; majhul لَا تُبَعْ (asli لَا تُبْيَعْ → naql → alif → hazf)."
+      ],
+      "savollar": [
+        {
+          "savol": "«بِعْ» ga ta'kid nuni qo'shilsa nima bo'ladi?",
+          "variantlar": [
+            "بِيعَنَّ — tushgan ي qaytib keladi (ع endi harakatli, ikki sukun yo'q)",
+            "بِعَنَّ",
+            "بِعْنَّ"
+          ],
+          "togri": 0,
+          "izoh": "Nuni ta'kidi xofifah yoki saqila yopishgan vaqtida hazf qilingan 'ayni fe'lga qaytib keladi: بِيْعَنْ، بِيْعَنَّ…"
+        },
+        {
+          "savol": "«بِعْ» qanday olindi?",
+          "variantlar": [
+            "تَبِيعُ → oxiri sukun → ت tushdi → ikki sukun → ي tushdi",
+            "بَاعَ dan alif tushdi",
+            "يَبِيعُ dan ي tushdi"
+          ],
+          "togri": 0,
+          "izoh": "…sokin qildik va تَبِيْعْ bo'ldi. Ikkinchi amal harfi muzoraatni tashladik بِيْعْ bo'lib, ijtimoi sokinayn yuzaga keldi … «yo»ni hazf qildik بِعْ bo'ldi."
+        },
+        {
+          "savol": "«لِتُبَاعَا» da alif nega tushmadi?",
+          "variantlar": [
+            "Oxirida harakatli alif (ikkilik) bor — ijtimoi sokinayn yo'q",
+            "Xato",
+            "Majhulda alif tushmaydi"
+          ],
+          "togri": 0,
+          "izoh": "لِتُبَاعَا da ijtimoi sokinayn yo'q. Alif o'z o'rnida."
+        }
+      ]
+    },
+    "sarf-54": {
+      "sharh": [
+        "Ajvaf ISMLARI: ismi zamon/makon مَبِيع (asli مَبْيِع — naql), ko'pligi مَبَائِع (zoid alifdan keyingi ي → hamza); ismi olat مِبَاع، مَبَائِيع; ismi tafzil أَبْيَع — muzakkarda و/ي O'ZGARMAYDI (qoida: ajvaf ismi tafzilida illat harfi sobit: أَطْيَب — Qur'on/hadis misollari: وَهُوَ أَهْوَنُ عَلَيْهِ، أَطْيَبُ مِنَ الْمِسْكِ); muannasi بُوعَى (asli بُيْعَى — sukunli ي oldida damma → و).",
+        "Shu bobning NOQISI: رَمَى – يَرْمِي (o'q otmoq). رَمَى asli رَمَيَ — harakatli ي, oldida fatha → alif. Moziy: رَمَى، رَمَيَا، رَمَوْا (asli رَمَيُوا → alif → ikki sukun → alif tushdi), رَمَتْ، رَمَتَا (alif tushgan), رَمَيْنَ، رَمَيْتَ … (ي sukunli — saqlanadi)."
+      ],
+      "savollar": [
+        {
+          "savol": "«أَبْيَع» (ko'proq sotuvchi) da ي nega alifga aylanmadi?",
+          "variantlar": [
+            "Ajvaf ismi tafzilining muzakkarida و/ي o'z holida qoladi (أَطْيَب، أَهْوَن kabi)",
+            "Chunki sukunli",
+            "Xato"
+          ],
+          "togri": 0,
+          "izoh": "Qoida: Ajvafdan kelgan ismi tafzillarni muzakkar siyg'alarida «vov» va «yo» o'z holida sobit qoladi. Misol: أَطْيَبُ va أَهْوَنُ."
+        },
+        {
+          "savol": "«رَمَوْا» (otdilar) asli nima va nima bo'ldi?",
+          "variantlar": [
+            "رَمَيُوا — ي alifga, alif va و ikki sukun → alif tushdi",
+            "رَمَوُوا",
+            "رَمَاوا"
+          ],
+          "togri": 0,
+          "izoh": "رَمَوْا aslida رَمَيُوْا edi … alifga qalb qildik. رَمَاْوْا bo'lib, ijtimoi sokinayn yuzaga keldi. Alifni hazf qildik رَمَوْا bo'ldi."
+        },
+        {
+          "savol": "«رَمَتْ» (u ayol otdi) da alif nega yo'q?",
+          "variantlar": [
+            "رَمَاتْ da alif va sukunli ت to'qnashdi — alif tushdi",
+            "Muannasda alif bo'lmaydi",
+            "Xato"
+          ],
+          "togri": 0,
+          "izoh": "رَمَاتْ – رَمَاتَا bo'lib, ikki sokin jam' bo'ldi. Alif bilan «to» orasida alifni hazf qildik. رَمَتْ – رَمَتَا bo'ldi."
+        }
+      ]
+    },
+    "sarf-55": {
+      "sharh": [
+        "Noqis MAJHULI رُمِيَ (otildi) — oddiy (ـُـِـَ), faqat رُمُوا da ي tushgan (asli رُمِيُوا: damma ي ga og'ir → م ga → ikki sukun → ي tushdi). MUZORI' يَرْمِي (asli يَرْمِيُ — damma ي ga og'ir, tashlandi). Uch siyg'ada lom tushgan: يَرْمُونَ، تَرْمُونَ (asli يَرْمِيُونَ → naql → ي tushdi), تَرْمِينَ (asli تَرْمِيِينَ → kasra tashlandi → ikki ي → birinchisi tushdi).",
+        "Diqqat: تَرْمِينَ IKKI siyg'a uchun bir xil — muxotabah (sen ayol) va muxotabot (siz ayollar) — lekin muxotabotda lom tushmagan (asli تَرْمِيْنَ). Majhul muzori' يُرْمَى (ي oldida fatha → alif); يُرْمَوْنَ، تُرْمَيْنَ — alif tushgan.",
+        "Ismi foil رَامٍ (asli رَامِيٌ → damma tashlandi → ي va tanvin ikki sukun → ي tushdi, tanvin qoldi) — «rom-in». رَامُونَ (ي tushgan), رَامِيَة (ي saqlanadi)."
+      ],
+      "savollar": [
+        {
+          "savol": "«يَرْمُونَ» (otadilar) asli nima?",
+          "variantlar": [
+            "يَرْمِيُونَ — damma ي ga og'ir, م ga ko'chdi, ي va و ikki sukun → ي tushdi",
+            "يَرْمُوُونَ",
+            "يَرْمِيْنَ"
+          ],
+          "togri": 0,
+          "izoh": "يَرْمُونَ، تَرْمُونَ aslida يَرْمِيُونَ، تَرْمِيُونَ edi … يَرْمُيْوْنَ bo'lib, ijtimoi sokinayn hosil bo'ldi. ي bilan vov orasida يni hazf qildik."
+        },
+        {
+          "savol": "«رَامٍ» (otuvchi) da tanvin nega kasra ostida va ي yo'q?",
+          "variantlar": [
+            "رَامِيٌ → damma tashlandi → ي va tanvin ikki sukun → ي tushdi",
+            "Noqis ismi foilida ي yozilmaydi",
+            "Xato"
+          ],
+          "togri": 0,
+          "izoh": "رَامٍ aslida رَامِيٌ edi … يni zammasini tashladik, رَامِيْنْ bo'lib, ijtimoi sokinayn hosil bo'ldi. ي bilan tanvin orasida يni hazf qildik."
+        },
+        {
+          "savol": "«تَرْمِينَ» qaysi siyg'alar uchun?",
+          "variantlar": [
+            "Muxotabah (sen ayol) va muxotabot (siz ayollar) — shakli bir, asli boshqa",
+            "Faqat muxotabah",
+            "Faqat g'oibot"
+          ],
+          "togri": 0,
+          "izoh": "Muxotabah va muxotabot mushtarakdir. Lekin muxotabotda lomi fe'li mahzuf emas."
+        }
+      ]
+    },
+    "sarf-56": {
+      "sharh": [
+        "Noqis ISMI MAF'ULI مَرْمِيّ (otilgan) — asli مَرْمُوْيٌ (مَفْعُول vaznida): و va ي bir so'zda, birinchisi sukunli, ikkinchisi harakatli → و ي ga aylanadi (qalb) → مَرْمُيْيٌ → idg'om sharti → مَرْمُيّ → tushgan/almashgan و ga ishora bo'lsin deb oldingi harfga kasra → مَرْمِيّ. Shuning uchun noqis ismi maf'uli «maf'uul» emas, «maf'iyy» (shaddali ي) bo'ladi: مَرْمِيّ، مَقْضِيّ.",
+        "Qoida: «و va ي yonma-yon, birinchisi sukunli → و ي ga qalb, idg'om». 6 siyg'a: مَرْمِيّ، مَرْمِيَّانِ، مَرْمِيُّونَ، مَرْمِيَّة، مَرْمِيَّتَانِ، مَرْمِيَّات."
+      ],
+      "savollar": [
+        {
+          "savol": "«مَرْمِيّ» (otilgan) da shaddali ي qayerdan?",
+          "variantlar": [
+            "مَرْمُوْيٌ da sukunli و ي ga qalb qilinib ikki ي idg'om bo'ldi; oldingi harfga kasra",
+            "Ismi maf'ul har doim shaddali",
+            "ي asliy, و zoid"
+          ],
+          "togri": 0,
+          "izoh": "…Vov ni يga qalb qildik. مَرْمُيْىٌ bo'lib sharti idg'om topildi … مَرْمُيُّ bo'ldi … moqabliga kasra berdik. مَرْمِيُّ bo'ldi."
+        },
+        {
+          "savol": "و va ي bir so'zda yonma-yon, birinchisi sukunli bo'lsa qaysi qoida?",
+          "variantlar": [
+            "و ي ga qalb qilinadi va idg'om bo'ladi",
+            "ي و ga qalb qilinadi",
+            "Ikkalasi tushadi"
+          ],
+          "togri": 0,
+          "izoh": "«Vov» bilan «yo» bir kalimada jam' bo'ldi, avvalgisi sokin keyingisi mutaharrik. Vov ni يga qalb qildik."
+        }
+      ]
     }
   }
 }

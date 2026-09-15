@@ -56,7 +56,7 @@ def head(s: str) -> str:
 
 def load_manifests() -> dict:
     man = {}
-    for m in ("vocab", "sentence", "word", "alifbo", "extra", "sarf", "mashq"):
+    for m in ("vocab", "sentence", "word", "alifbo", "extra", "sarf", "mashq", "harf"):
         p = Path(f"assets/audio/{m}_manifest.json")
         if p.exists():
             for k, v in json.loads(p.read_text(encoding="utf-8")).items():

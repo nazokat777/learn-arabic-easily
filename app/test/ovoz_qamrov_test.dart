@@ -42,6 +42,7 @@ void main() {
     'extra',
     'sarf',
     'mashq',
+    'harf',
   ]) {
     final f = File('assets/audio/${m}_manifest.json');
     if (!f.existsSync()) continue;

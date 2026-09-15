@@ -113,6 +113,14 @@ class AlifboHome extends StatelessWidget {
               sub: "Harflarni bog'lab o'qish — 5 bosqich, 89 ta so'z",
               page: const UlashLesson(),
             ),
+            const SizedBox(height: 18),
+            // CC BY-SA 4.0 — manba ko'rsatish shart.
+            Text(
+              "Harf nomlari ovozi: Ruaa Ghareeb, «Wiki Arabic for all» "
+              "(Wikimedia Commons, CC BY-SA 4.0).",
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 10.5, color: AppColors.matn3),
+            ),
           ],
         ),
       ),

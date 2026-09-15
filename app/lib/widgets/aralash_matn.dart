@@ -24,11 +24,17 @@ class AralashMatn extends StatelessWidget {
   final TextStyle uslub;
   final double arabchaOlchami;
 
+  /// Arabcha bo'laklar bosilganda so'z kartasi ochilsinmi. Javob
+  /// variantlari kabi o'zi bosiladigan joylarda `false` — aks holda
+  /// arabcha so'zga bosilganda javob o'rniga karta ochilib ketadi.
+  final bool bosiladi;
+
   const AralashMatn(
     this.matn, {
     super.key,
     this.uslub = const TextStyle(fontSize: 15, height: 1.55),
     this.arabchaOlchami = 22,
+    this.bosiladi = true,
   });
 
   /// Arabcha harflar oralig'i (harakat va tinish belgilari bilan).
@@ -79,8 +85,10 @@ class AralashMatn extends StatelessWidget {
             color: AppColors.zumradMatn,
             w: FontWeight.w600,
           ),
-          recognizer: TapGestureRecognizer()
-            ..onTap = () => _bosildi(context, b.matn),
+          recognizer: bosiladi
+              ? (TapGestureRecognizer()
+                  ..onTap = () => _bosildi(context, b.matn))
+              : null,
         ),
       );
     }

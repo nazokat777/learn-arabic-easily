@@ -110,7 +110,9 @@ class AlifboHome extends StatelessWidget {
               icon: Icons.link_rounded,
               accent: AppColors.amber,
               title: 'Harflarni ulash',
-              sub: "Harflarni bog'lab o'qish — 5 bosqich, 89 ta so'z",
+              sub:
+                  "Harflarni bog'lab o'qish, mad va murakkab so'zlar — "
+                  "${repo.ulashStages.length} bosqich",
               page: const UlashLesson(),
             ),
             const SizedBox(height: 18),

@@ -31,6 +31,13 @@ void main() {
   r.letters = ((letters['letters'] ?? letters) as List)
       .map((e) => Letter.fromJson(e as Map<String, dynamic>))
       .toList();
+  r.ulashStages =
+      (json.decode(
+                File('assets/content/ulash.json').readAsStringSync(),
+              )['stages']
+              as List)
+          .map((e) => UlashStage.fromJson(e as Map<String, dynamic>))
+          .toList();
   repo = r;
 
   final klip = <String>{};
@@ -43,6 +50,7 @@ void main() {
     'sarf',
     'mashq',
     'harf',
+    'kalima',
   ]) {
     final f = File('assets/audio/${m}_manifest.json');
     if (!f.existsSync()) continue;
@@ -91,6 +99,11 @@ void main() {
     }
     for (final h in r.letters) {
       q(h.nameAr, 'harf nomi');
+    }
+    for (final st in r.ulashStages) {
+      for (final w in st.words) {
+        q(w.ar, 'ulash ${st.num}');
+      }
     }
 
     final yoq = [

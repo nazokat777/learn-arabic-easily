@@ -256,6 +256,27 @@ bool ulanadi(String letter) {
   return b.isNotEmpty && !ulanmasHarflar.contains(b);
 }
 
+/// Mad (cho'ziq unli) harflari: [splitLetters] bo'laklari uchun qaysi
+/// harf MAD ekanini qaytaradi — harakatsiz «ا» oldidagi harf fathali,
+/// harakatsiz (yoki sukunli) «و» oldidagisi zammali, «ي» oldidagisi
+/// kasrali bo'lsa. «Harflarni ulash» darsining mad bosqichida bo'yaladi.
+List<bool> madHarflari(List<String> bolaklar) {
+  final out = List<bool>.filled(bolaklar.length, false);
+  for (var i = 1; i < bolaklar.length; i++) {
+    final b = bolaklar[i];
+    final asos = stripDiacritics(b);
+    final belgilar = b.substring(asos.length);
+    // Mad harfining o'zida harakat bo'lmaydi (sukun bo'lishi mumkin).
+    if (belgilar.replaceAll('ْ', '').isNotEmpty) continue;
+    final oldingi = bolaklar[i - 1];
+    final oh = oldingi.substring(stripDiacritics(oldingi).length);
+    if (asos == 'ا' && oh.contains('َ')) out[i] = true;
+    if (asos == 'و' && oh.contains('ُ')) out[i] = true;
+    if (asos == 'ي' && oh.contains('ِ')) out[i] = true;
+  }
+  return out;
+}
+
 /// Harfning so'z ichidagi holati.
 enum HarfHolati { alohida, boshda, ortada, oxirida }
 

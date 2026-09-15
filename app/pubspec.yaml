@@ -32,6 +32,7 @@ flutter:
     - assets/content/qiroat_lessons.json
     - assets/content/nahv_lessons.json
     - assets/content/ulash.json
+    - assets/content/sharh.json
     - assets/content/grammatika.json
     - assets/content/sarf_lessons.json
     - assets/content/version.json
@@ -48,6 +49,7 @@ flutter:
     - assets/audio/sarf_manifest.json
     - assets/audio/mashq_manifest.json
     - assets/audio/harf_manifest.json
+    - assets/audio/kalima_manifest.json
   fonts:
     # Amiri ilova ichida. Avval google_fonts orqali internetdan olinardi:
     # shrift kelguncha (yoki internet bo'lmasa) matn zaxira shriftda

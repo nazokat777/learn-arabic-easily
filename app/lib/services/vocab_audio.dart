@@ -60,6 +60,8 @@ class VocabAudio {
       // Inson ovozi (Wikimedia Commons, CC BY-SA 4.0) — harf nomlari.
       // Oxirida: TTS «alifbo» nomlarini bosib o'tadi.
       'assets/audio/harf_manifest.json': 'harf',
+      // So'zlar — Lingua Libre (inson), whisper bilan tekshirilgan.
+      'assets/audio/kalima_manifest.json': 'kalima',
     }.entries) {
       try {
         final raw = await rootBundle.loadString(entry.key);

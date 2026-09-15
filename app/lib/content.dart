@@ -326,6 +326,46 @@ class QiroatLesson {
 /// Fayllar to'g'ridan-to'g'ri assets'dan emas, [ContentUpdater] orqali
 /// o'qiladi: agar saytdan yangi darslar yuklab olingan bo'lsa, o'shalar
 /// ishlatiladi; aks holda APK ichidagi nusxa.
+/// Qoida bo'yicha bitta interaktiv savol (Sharh bilan birga keladi).
+class QoidaSavol {
+  final String savol;
+  final List<String> variantlar;
+  final int togri;
+  final String izoh;
+  const QoidaSavol({
+    required this.savol,
+    required this.variantlar,
+    required this.togri,
+    this.izoh = '',
+  });
+
+  factory QoidaSavol.fromJson(Map<String, dynamic> j) => QoidaSavol(
+    savol: j['savol'] ?? '',
+    variantlar: ((j['variantlar'] as List?) ?? const [])
+        .map((e) => '$e')
+        .toList(),
+    togri: (j['togri'] as num?)?.toInt() ?? 0,
+    izoh: j['izoh'] ?? '',
+  );
+}
+
+/// Darsning ODDIY TILDA sharhi va qoida savollari (sharh.json).
+///
+/// Kitob matni emas — ustozning og'zaki tushuntirishi qatlami. Kalit:
+/// dars id (`nahv-<kitob>-<dars>`, `sarf-<dars>`).
+class Sharh {
+  final List<String> sharh;
+  final List<QoidaSavol> savollar;
+  const Sharh({required this.sharh, required this.savollar});
+
+  factory Sharh.fromJson(Map<String, dynamic> j) => Sharh(
+    sharh: ((j['sharh'] as List?) ?? const []).map((e) => '$e').toList(),
+    savollar: ((j['savollar'] as List?) ?? const [])
+        .map((e) => QoidaSavol.fromJson(e as Map<String, dynamic>))
+        .toList(),
+  );
+}
+
 /// «Harflarni ulash» darsining bitta so'zi.
 class UlashWord {
   final String ar;
@@ -348,12 +388,16 @@ class UlashStage {
   final String explain;
   final List<UlashWord> words;
 
+  /// Bosqich urg'usi: 'mad' — mad harflari bo'yaladi; bo'sh — oddiy.
+  final String focus;
+
   const UlashStage({
     required this.num,
     required this.title,
     required this.titleAr,
     required this.explain,
     required this.words,
+    this.focus = '',
   });
 
   factory UlashStage.fromJson(Map<String, dynamic> j) => UlashStage(
@@ -364,6 +408,7 @@ class UlashStage {
     words: ((j['words'] as List?) ?? const [])
         .map((e) => UlashWord.fromJson(e))
         .toList(),
+    focus: j['focus'] ?? '',
   );
 }
 
@@ -487,6 +532,9 @@ class ContentRepository {
   List<NahvLesson> nahvLessons = [];
   List<UlashStage> ulashStages = [];
 
+  /// Dars id → sharh va qoida savollari (bo'lmasa — yo'q).
+  Map<String, Sharh> sharhlar = {};
+
   /// Grammatika va bog'lovchi so'zlar — dars lug'atlarida yo'q, lekin
   /// matnda ko'p uchraydigan so'zlar (so'zga bosilganda kerak bo'ladi).
   List<QiroatVocab> grammatika = [];
@@ -532,6 +580,17 @@ class ContentRepository {
           .toList();
     } catch (_) {
       ulashStages = [];
+    }
+
+    // Sharh qatlami — yo'qligi ilovani to'xtatmasin.
+    try {
+      final sh = json.decode(await ContentUpdater.instance.read('sharh.json'));
+      sharhlar = {
+        for (final e in (sh['darslar'] as Map).entries)
+          '${e.key}': Sharh.fromJson(e.value as Map<String, dynamic>),
+      };
+    } catch (_) {
+      sharhlar = {};
     }
 
     // Grammatika lug'ati keyinroq qo'shilgan — eski APK'da fayl

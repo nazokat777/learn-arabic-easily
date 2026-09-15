@@ -7,6 +7,7 @@ import '../services/tts.dart';
 import '../mashq/bank.dart';
 import '../mashq/mashq_ekran.dart';
 import '../theme.dart';
+import '../widgets/sharh.dart';
 import '../widgets/aralash_matn.dart';
 import '../widgets/mastery_badge.dart';
 import '../widgets/motion.dart';
@@ -241,6 +242,8 @@ class _SarfLessonScreenState extends State<SarfLessonScreen> {
                 _blok(b, _yorliq(i)),
                 const SizedBox(height: 10),
               ],
+              SharhBolimi(darsId: lesson.completionId),
+              QoidaSavollari(darsId: lesson.completionId),
               const SizedBox(height: 14),
               MasteryCallToAction(
                 lessonId: lesson.completionId,

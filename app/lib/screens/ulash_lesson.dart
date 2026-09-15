@@ -190,7 +190,8 @@ class UlashStageScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 16),
-          for (final w in stage.words) _WordCard(word: w),
+          for (final w in stage.words)
+            _WordCard(word: w, mad: stage.focus == 'mad'),
           const SizedBox(height: 16),
           MasteryCallToAction(
             lessonId: ulashLessonId(stage.num),
@@ -216,11 +217,13 @@ class UlashStageScreen extends StatelessWidget {
 /// «بـ» ni ko'rib uni «ب» ekanini tanimaydi.
 class _WordCard extends StatelessWidget {
   final UlashWord word;
-  const _WordCard({required this.word});
+  final bool mad; // mad bosqichi: cho'ziq unli harflari indigo
+  const _WordCard({required this.word, this.mad = false});
 
   @override
   Widget build(BuildContext context) {
     final letters = splitLetters(word.ar);
+    final madlar = mad ? madHarflari(letters) : null;
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
       child: Material(
@@ -249,9 +252,14 @@ class _WordCard extends StatelessWidget {
                           letters[i],
                           style: AppTheme.arabic(
                             size: 26,
-                            color: ulanadi(letters[i])
+                            color: madlar != null && madlar[i]
+                                ? AppColors.indigo
+                                : ulanadi(letters[i])
                                 ? AppColors.ink
                                 : AppColors.gold,
+                            w: madlar != null && madlar[i]
+                                ? FontWeight.w700
+                                : FontWeight.w600,
                           ),
                         ),
                         if (i < letters.length - 1)

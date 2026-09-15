@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart' hide Text;
 import 'gap_tuzish_ekrani.dart';
+import '../widgets/sharh.dart';
 import '../widgets/uz_text.dart';
 
 import '../main.dart';
@@ -306,6 +307,10 @@ class _NahvLessonScreenState extends State<NahvLessonScreen> {
                     yashirin: y,
                   ),
               ],
+              const SizedBox(height: 10),
+              // Ustoz qatlami: oddiy tilda sharh + qoida savollari.
+              SharhBolimi(darsId: 'nahv-${lesson.book}-${lesson.num}'),
+              QoidaSavollari(darsId: 'nahv-${lesson.book}-${lesson.num}'),
               const SizedBox(height: 20),
               // Duolingo uslubidagi test: darsdagi juftliklardan avtomatik
               // tuziladi, xato savollar to'g'ri yechilguncha qaytaveradi.

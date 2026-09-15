@@ -40,6 +40,7 @@ class ContentUpdater {
     'ulash.json',
     'grammatika.json',
     'sarf_lessons.json',
+    'sharh.json',
   ];
 
   Directory? _dir;

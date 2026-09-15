@@ -137,17 +137,23 @@ class AppTheme {
   /// Amiri'da faqat 400 va 700 og'irlik bor. Oradagi qiymat so'ralsa Flutter
   /// eng yaqinini oladi, «sun'iy qalinlashtirish» qilmaydi — shuning uchun
   /// harakatlar joyida qoladi.
+  ///
+  /// [height] 1.9: Amiri'da harakatlar (ayniqsa ustki: fatha, shadda,
+  /// tanvin) qator balandligidan chiqib ketadi — 1.4 da ko'p qatorli
+  /// matnda pastki qatorning ustki harakatlari ustki qatorning ostki
+  /// harakatlariga (kasra) yopishib, o'qib bo'lmas edi (2026-09-15).
   static TextStyle arabic({
     double size = 40,
     Color? color,
     FontWeight w = FontWeight.w600,
+    double height = 1.9,
   }) {
     return TextStyle(
       fontFamily: 'Amiri',
       fontSize: size,
       color: color ?? AppColors.ink,
       fontWeight: w,
-      height: 1.4,
+      height: height,
     );
   }
 }

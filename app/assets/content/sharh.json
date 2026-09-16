@@ -860,7 +860,7 @@
     "nahv-1-19": {
       "sharh": [
         "Fe'l uchun xarita tugagan edi (4 nasb, 16 jazm, qolgani raf'). Endi ISM uchun xarita: ism 6 o'rinda MARFU', 11 o'rinda MANSUB, 2 o'rinda MAJRUR bo'ladi. Jami 19 «o'rin» — bular nahvning asosiy «lavozimlari»: foil, mubtado, maf'ul va hokazo.",
-        "Bu dars — kirish. Keyingi 6 dars (20–24) raf'ning oltita o'rnini birma-bir beradi: foil, noibi foil, mubtado, xabar, kananing ismi, innaning xabari. Har birida savol bitta: «bu ism gapda QANDAY vazifada?» — vazifani topsangiz, i'robini bilasiz."
+        "Bu dars — kirish. Keyingi 5 dars (20–24) raf'ning oltita o'rnini birma-bir beradi: foil, noibi foil, mubtado va xabar (bitta darsda), kananing ismi, innaning xabari. Har birida savol bitta: «bu ism gapda QANDAY vazifada?» — vazifani topsangiz, i'robini bilasiz."
       ],
       "savollar": [
         {
@@ -937,8 +937,8 @@
     "nahv-1-21": {
       "sharh": [
         "Ba'zan bajaruvchini AYTMAYMIZ — bilmaymiz yoki aytishni istamaymiz. سَرَقَ فُلَانٌ السَّاعَةَ (falonchi soatni o'g'irladi) → foilni olib tashlaymiz → سُرِقَتِ السَّاعَةُ (soat o'g'irlandi). Endi «soat» foilning O'RNIGA o'tdi: u NOIBI FOIL (foil o'rinbosari) → MARFU' (السَّاعَةُ — dammali!).",
-        "Foil tushganda FE'L SHAKLI ham o'zgaradi (majhul shakl). MOZI: boshi damma, oxiridan oldingisi kasra — حَفِظَ → حُفِظَ, سَرَقَ → سُرِقَ, خَلَقَ → خُلِقَ. MUZORI': boshi damma, oxiridan oldingisi FATHA — يَطْلُبُ → يُطْلَبُ, يَأْكُلُ → تُؤْكَلُ, يُبْغِضُ → يُبْغَضُ.",
-        "Qiyoslang: حَفِظَ مُحَمَّدٌ الكِتَابَ (الكِتَابَ — mansub, maf'ul) ↔ حُفِظَ الكِتَابُ (الكِتَابُ — marfu', noibi foil). Bir xil so'z, lekin fe'l majhulga o'tgani uchun i'rob o'zgardi. Sinov: fe'l boshida damma (حُـ / يُـ) ko'rsangiz, undan keyingi ism — noibi foil, damma qo'ying."
+        "Foil tushganda FE'L SHAKLI ham o'zgaradi (majhul shakl). MOZI: boshi damma, oxiridan oldingisi kasra — حَفِظَ → حُفِظَ, سَرَقَ → سُرِقَ, خَلَقَ → خُلِقَ. MUZORI': boshi damma, oxiridan oldingisi FATHA — يَطْلُبُ → يُطْلَبُ, يَأْكُلُ → يُؤْكَلُ (kitobda تُؤْكَلُ الْغَنَمُ — الْغَنَمُ muannas bo'lgani uchun boshi ت; harakatlar esa o'sha: boshi damma, oxiridan oldingisi fatha), يُبْغِضُ → يُبْغَضُ.",
+        "Qiyoslang: حَفِظَ مُحَمَّدٌ الكِتَابَ (الكِتَابَ — mansub, maf'ul) ↔ حُفِظَ الكِتَابُ (الكِتَابُ — marfu', noibi foil). Bir xil so'z, lekin fe'l majhulga o'tgani uchun i'rob o'zgardi. Sinov: fe'l boshida damma VA oxiridan oldingi harfida kasra (mozi: حُفِظَ) yoki fatha (muzori': يُطْلَبُ) — ikkala belgi birga bo'lsa, fe'l majhul; undan keyingi ism — noibi foil, damma qo'ying. Faqat boshdagi dammaga qaramang: يُبْغِضُ النَّاسُ الْخَائِنَ — boshi dammali, lekin oxiridan oldingisi kasrali (ma'lum fe'l), shuning uchun النَّاسُ — foil."
       ],
       "savollar": [
         {
@@ -2056,7 +2056,7 @@
     "sarf-3": {
       "sharh": [
         "Ism ham, fe'l ham harflarining «sog'lomligi»ga qarab YETTI turga bo'linadi: SAHIH (illat harfi yo'q: ضَرَبَ), MUZOAF (ikki harf bir xil: فَرَّ), MISOL (fo o'rnida illat: وَثَبَ), AJVAF (ayn o'rnida illat: بَاعَ), NOQIS (lom o'rnida illat: رَمَى), LAFIF (ikki illat: رَوَى), MULTAVIY (fo va lom illat: وَحَى). Keyingi yetti dars har birini alohida beradi.",
-        "Illat harflari — و ا ي («voy»). Ular fe'l tuslanganda o'zgarib, tushib, boshqasiga aylanib turadi — shuning uchun sarfda alohida e'tibor beriladi. Jadvaldagi 3 bob (ضَرَبَ – يَضْرِبُ, نَصَرَ – يَنْصُرُ, مَنَعَ – يَمْنَعُ) — sulosiy mujarradning muzori' ayn harakatiga ko'ra boblari."
+        "Illat harflari — و ا ي («voy»). Ular fe'l tuslanganda o'zgarib, tushib, boshqasiga aylanib turadi — shuning uchun sarfda alohida e'tibor beriladi. Jadvalda sulosiy mujarradning 6 bobi bor (ضَرَبَ – يَضْرِبُ, نَصَرَ – يَنْصُرُ, مَنَعَ – يَمْنَعُ, حَمِدَ – يَحْمَدُ, نَعِمَ – يَنْعِمُ, شَرُفَ – يَشْرُفُ) — ular moziy va muzori'da ayn harfining harakatiga ko'ra farqlanadi."
       ],
       "savollar": [
         {
@@ -2341,8 +2341,8 @@
     },
     "sarf-14": {
       "sharh": [
-        "Har masdardan 12 narsa yasaladi — bu sarfning butun rejasi. Masalan ضَرْب (urmoq) dan: 1) moziy ضَرَبَ (urdi), 2) muzori' يَضْرِبُ (uradi), 3) ismi foil ضَارِب (uruvchi), 4) ismi maf'ul مَضْرُوب (urilgan), 5) fe'li jahd لَمْ يَضْرِبْ (urmadi), 6) fe'li nafiy لَنْ يَضْرِبَ (urmaydi), 7) amri hozir اِضْرِبْ (ur!), 8) amri g'oib لِيَضْرِبْ (ursin), 9) nahiy hozir لَا تَضْرِبْ (urma), 10) ismi zamon/makon مَضْرِب (urish vaqti/joyi), 11) ismi olat مِضْرَب (uradigan asbob), 12) ismi tafzil أَضْرَب (ko'proq uruvchi).",
-        "Nahv bilan bog'lang: fe'li jahd — لَمْ bilan jazm (nahv 17-dars), fe'li nafiy — لَنْ bilan nasb (16-dars), amri g'oib — buyruq lomi, nahiy — qaytariq لَا. Sarf shakllarni, nahv ularning i'robini beradi."
+        "Har masdardan 12 narsa yasaladi — bu sarfning butun rejasi. Masalan ضَرْب (urmoq) dan: 1) moziy ضَرَبَ (urdi), 2) muzori' يَضْرِبُ (uradi), 3) ismi foil ضَارِب (uruvchi), 4) ismi maf'ul مَضْرُوب (urilgan), 5) fe'li jahd لَمْ يَضْرِبْ (urmadi), 6) fe'li nafiy لَا يَضْرِبُ (urmaydi), 7) amri hozir اِضْرِبْ (ur!), 8) amri g'oib لِيَضْرِبْ (ursin), 9) nahiy hozir لَا تَضْرِبْ (urma), 10) ismi zamon/makon مَضْرِب (urish vaqti/joyi), 11) ismi olat مِضْرَاب (uradigan asbob), 12) ismi tafzil أَضْرَب (ko'proq uruvchi).",
+        "Nahv bilan bog'lang: fe'li jahd — لَمْ bilan jazm (nahv 17-dars), fe'li nafiy — لَا bilan, fe'l raf'da qoladi (لَا يَضْرِبُ — لَا nafiy jazm ham, nasb ham qilmaydi), amri g'oib — buyruq lomi, nahiy — qaytariq لَا (jazm qiladi: لَا تَضْرِبْ). Sarf shakllarni, nahv ularning i'robini beradi."
       ],
       "savollar": [
         {
@@ -2390,12 +2390,12 @@
     "sarf-15": {
       "sharh": [
         "Bu dars — sarfning «namoyish stoli»: bitta masdar ضَرْب (urmoq) dan 12 shaklning har biri yonma-yon: ضَرَبَ (urdi) — يَضْرِبُ (uradi) — ضَارِب (uruvchi) — مَضْرُوب (urilgan) — لَمْ يَضْرِبْ (urmadi) — لَا يَضْرِبُ (urmaydi) — اِضْرِبْ (ur!) — لِيَضْرِبْ (ursin) — لَا تَضْرِبْ (urma!) — مَضْرِب (urish vaqti/joyi) — مِضْرَاب (urish asbobi) — أَضْرَب (ko'proq uruvchi).",
-        "Diqqat qiling: hammasida ض ر ب o'zagi bir xil, faqat harakatlar va qo'shimcha harflar o'zgaradi. Sarf — mana shu «bir o'zak, o'n ikki libos» san'ati. Ismi olat (مِضْرَاب) va ismi zamon/makon (مَضْرِب) farqi faqat birinchi harakatda: مِـ (kasra) — asbob, مَـ (fatha) — joy/vaqt.",
+        "Diqqat qiling: hammasida ض ر ب o'zagi bir xil, faqat harakatlar va qo'shimcha harflar o'zgaradi. Sarf — mana shu «bir o'zak, o'n ikki libos» san'ati. Ismi olat (مِضْرَاب) va ismi zamon/makon (مَضْرِب) ni ajratuvchi asosiy belgi — mimning harakati: مِـ (kasra) — asbob, مَـ (fatha) — joy/vaqt (bundan tashqari ismi olatda ro fathali va undan keyin alif bor: مِضْرَاب, ismi zamon/makonda esa ro kasrali: مَضْرِب).",
         "Keyingi darslar har shaklni 14 siyg'ada (shaxs, jins, son bo'yicha) to'liq tuslaydi. Bu jadval — xarita; ushbu 12 ta shaklni ضَرْب misolida yoddan aytishga urinib ko'ring."
       ],
       "savollar": [
         {
-          "savol": "«مِضْرَاب» (urish asboby) va «مَضْرِب» (urish joyi) qaysi harakat bilan farqlanadi?",
+          "savol": "«مِضْرَاب» (urish asbobi) va «مَضْرِب» (urish joyi) ni ajratuvchi asosiy harakat qaysi?",
           "variantlar": [
             "Birinchi harf: مِـ (kasra) — asbob, مَـ (fatha) — joy/vaqt",
             "Oxirgi harf bilan",
@@ -2815,7 +2815,7 @@
       "sharh": [
         "AMR (buyruq) ikki xil: LOMSIZ (amri hozir — «sen» ga: اِضْرِبْ) va LOMLI (amri g'oib — «u» ga: لِيَضْرِبْ, keyingi dars). Lomsiz amr muzori'ning MUXOTAB (sen/siz) siyg'alaridan yasaladi: تَضْرِبُ → اِضْرِبْ.",
         "Qadamlar: 1) muzoraat harfi تَـ ni tashlang: ضْرِبُ; 2) qolgan so'z SUKUNLI harf bilan boshlansa — boshiga vasl hamzasi qo'ying: ayn dammali bob (يَنْصُرُ) bo'lsa hamza DAMMALI — اُنْصُرْ، اُقْتُلْ; ayn fathali/kasrali bo'lsa hamza KASRALI — اِضْرِبْ، اِعْلَمْ; 3) oxirini JAZM qiling: sahih oxir — sukun (اِضْرِبْ); oxiri illatli — illat harfi tushadi (اِرْمِ، اُدْعُ، اِخْشَ); o'rtasi illatli (ajvaf) — o'rta harf tushadi (قُلْ، بِعْ); muzoaf (idg'omli) — fatha bilan (رُدَّ، فِرَّ).",
-        "Agar muzoraat harfidan keyingi harf HARAKATLI bo'lsa (قُلْ، بِعْ, mazid أَكْرِمْ — hamza bilan) hamza kerak emas — amr shu bilan tayyor. Lomsiz amr 6 siyg'ada: اِضْرِبْ، اِضْرِبَا، اِضْرِبُوا (erkak sen/ikki/sizlar), اِضْرِبِي، اِضْرِبَا، اِضْرِبْنَ (ayol)."
+        "Agar muzoraat harfidan keyingi harf HARAKATLI bo'lsa (تَقُولُ → قُلْ، تَبِيعُ → بِعْ) hamza kerak emas — amr shu bilan tayyor. أَفْعَلَ bobida (يُكْرِمُ، يُقِيمُ) esa muzoraat harfidan keyingi harf sokin bo'lsin, harakatli bo'lsin — boshiga FATHALI hamza qo'yiladi: أَكْرِمْ، أَقِمْ. Lomsiz amr 6 siyg'ada: اِضْرِبْ، اِضْرِبَا، اِضْرِبُوا (erkak sen/ikki/sizlar), اِضْرِبِي، اِضْرِبَا، اِضْرِبْنَ (ayol)."
       ],
       "savollar": [
         {
@@ -3201,7 +3201,7 @@
     "sarf-37": {
       "sharh": [
         "TA'KID NUNI — kelasi zamon fe'lining ma'nosini KUCHAYTIRISH uchun oxiriga qo'shiladigan nun: اِضْرِبْ (ur) → اِضْرِبَنَّ (albatta ur!). Ikki xil: XAFIFA — sukunli nun (اِضْرِبَنْ), SAQILA — shaddali nun (اِضْرِبَنَّ).",
-        "Qoidalar: 1) nun oldidagi sahih harf FATHALI bo'ladi (اِضْرِبْ → اِضْرِبَنْ); 2) oxiridan illat harfi tushgan fe'lda u QAYTIB kelib fathali bo'ladi: لَا تَرْمِ → لَا تَرْمِيَنَّ; 3) xafifa faqat BIRLIK va jam'i muzakkar siyg'alariga qo'shiladi (اِضْرِبَنْ، اِضْرِبُنْ، اِضْرِبِنْ), saqila esa HAMMA siyg'aga (اِضْرِبَنَّ، اِضْرِبَانِّ، اِضْرِبُنَّ، اِضْرِبِنَّ، اِضْرِبَانِّ، اِضْرِبْنَانِّ).",
+        "Qoidalar: 1) BIRLIK siyg'alarda oxirgi harfi sahih bo'lgan fe'l ta'kid nuni oldida FATHALI o'qiladi (اِضْرِبْ → اِضْرِبَنْ); 2) oxiridan illat harfi tushgan fe'lda u QAYTIB kelib fathali bo'ladi: لَا تَرْمِ → لَا تَرْمِيَنَّ; 3) xafifa faqat BIRLIK va jam'i muzakkar siyg'alariga qo'shiladi (اِضْرِبَنْ، اِضْرِبُنْ، اِضْرِبِنْ), saqila esa HAMMA siyg'aga (اِضْرِبَنَّ، اِضْرِبَانِّ، اِضْرِبُنَّ، اِضْرِبِنَّ، اِضْرِبَانِّ، اِضْرِبْنَانِّ).",
         "Amri g'oib va nahiyga ham xuddi shunday: لِيَضْرِبَنَّ (albatta ursin), لَا تَضْرِبَنَّ (aslo urma). Qur'onda ko'p uchraydi: لَيَنْصُرَنَّ (albatta yordam beradi)."
       ],
       "savollar": [
@@ -3542,11 +3542,11 @@
       ],
       "savollar": [
         {
-          "savol": "«لِتُفَرُّوا» (urilinglar — qochirilinglar) qanday olindi?",
+          "savol": "«لِتُفَرُّوا» (amri g'oib majhuli, jam'i muzakkar muxotab siyg'asi) qanday olindi?",
           "variantlar": [
             "تُفَرُّونَ oldiga lom, e'rob nuni tushdi",
             "فُرُّوا oldiga lom",
-            "تُفْرَرُوا dan"
+            "تُفَرُّونَ oldiga lom qo'yiladi, e'rob nuni saqlanib qoladi: لِتُفَرُّونَ"
           ],
           "togri": 0,
           "izoh": "«Lom»i jozima ushbu yetti siyg'alarning avaliga kelgandan keyin oxirlaridagi «nun»i e'robiyani tushiradi."
@@ -3566,7 +3566,7 @@
     "sarf-47": {
       "sharh": [
         "Muzoaf NAHIYSI — jahd bilan bir xil qoidalar (لَا + jazm): لَا تَفِرَّ، لَا تَفِرَّا، لَا تَفِرُّوا، لَا تَفِرِّي، لَا تَفِرَّا، لَا تَفْرِرْنَ; لَا يَفِرَّ…; لَا أَفِرَّ، لَا نَفِرَّ. Majhuli: لَا تُفَرَّ… Birlik siyg'alarida yana uch xil o'qish mumkin (fatha/kasra/asl).",
-        "Bu dars muzoaf (فَرَّ) turkumini yakunlaydi: keyingi bo'limlar ismi zamon/makon, olat, tafzil — ular ham idg'om bilan (مَفَرّ، مِفْرَار، أَفَرّ)."
+        "Bu dars muzoaf (فَرَّ) turkumini yakunlaydi: keyingi bo'limlar ismi zamon/makon, olat, tafzil. Ismi zamon/makon (مَفِرّ، asli مَفْرِر) va ismi tafzil (أَفَرّ) idg'om bilan; ismi olat (مِفْرَار) esa idg'omsiz — ikki ر orasiga yot harf (ا) kirgani uchun o'z aslida qoladi."
       ],
       "savollar": [
         {
@@ -4495,7 +4495,7 @@
     },
     "sarf-75": {
       "sharh": [
-        "Yana bir ilmiy tuzatish: مَاتَ ning asli مَيِتَ (ayn kasrali) deb yozilgan edi; sherigi Abdurazzoq Toshkandiy so'raganda muallif lug'atlarni tekshirib, aslida مَيَتَ (fathali) va مَاتَ – يَمُوتُ / يَمَاتُ ekanini topgan; misolni نَالَ (asli نَيِلَ — تَعِبَ bobidan, lug'atda bor) ga almashtirgan. Buxoro ustozlari 25 mashhur qoidani shu tartibda o'qitgan.",
+        "Yana bir ilmiy tuzatish: مَاتَ ning asli مَيِتَ (ayn kasrali) deb yozilgan edi; sherigi Abdurazzoq Toshkandiy so'raganda muallif lug'atlarni tekshirib, ayn kasrasi bilan kelmaganini — asli مَيَتَ (fathali) bo'lib, مَاتَ – يَمِيتُ kelganini (shuningdek مَاتَ – يَمُوتُ va يَمَاتُ – مَوْتًا ham bir ma'noda) topgan; misolni نَالَ (asli نَيِلَ — تَعِبَ bobidan, lug'atda bor) ga almashtirgan. Buxoro ustozlari 25 mashhur qoidani shu tartibda o'qitgan.",
         "2-bobning AJVAFI: دَامَ – يَدُومُ (davom etmoq), masdari دَوْم، دَوَام، مُدَام. 12 shakl: دَامَ، يَدُومُ، دَائِم، مَدُوم، لَمْ يَدُمْ، لَا يَدُومُ، دُمْ، لِيَدُمْ، لَا تَدُمْ، مَدَام، مِدَام، أَدْوَم. Diqqat: vovli ajvaf — بَاعَ (yoli) bilan bir xil qoidalar, lekin tushgan harf evaziga DAMMA (دُمْتُ), بَاعَ da kasra (بِعْتُ) edi."
       ],
       "savollar": [
@@ -4524,7 +4524,7 @@
     "sarf-76": {
       "sharh": [
         "دَامَ moziysi: دَامَ، دَامَا، دَامُوا، دَامَتْ، دَامَتَا (asli دَوَمَ — harakatli و, oldida fatha → alif), keyin 9 siyg'ada ayn tushgan: دُمْنَ، دُمْتَ … دُمْتُ، دُمْنَا. دُمْنَ asli دَوَمْنَ → و alifga → alif va م ikki sukun → alif tushdi → دَمْنَ → tushgan و ga ishora uchun د ga DAMMA → دُمْنَ. (بِعْنَ da tushgan ي ga ishora uchun kasra edi — mantiq bir xil.)",
-        "Majhuli: دَوَمَ → دَوِمَ → دُوِمَ → kasra و ga og'ir, د ga ko'chdi → دِوْمَ → sukunli و oldida kasra → ي: دِيمَ (davom ettirildi). Kitob boshqa fikrni («avval و ga damma berib, keyin naql») zaif deb belgilaydi."
+        "Majhuli: دَوَمَ → دَوِمَ → دُوِمَ → kasra و ga og'ir, د ga ko'chdi → دِوْمَ → sukunli و oldida kasra → ي: دِيمَ (davom ettirildi). (Eslatma: ma'lum دُمْنَ haqida ba'zilar «avval و ga damma berib, uni د ga naql qilamiz, so'ngra ikki sukun sababli و ni hazf qilamiz» deydi — kitob bu fikrni zaif deb belgilaydi.)"
       ],
       "savollar": [
         {
@@ -4623,7 +4623,7 @@
         {
           "savol": "«لَمْ يَدُمْ» va «لَمْ يَدُومَا» — nega birida و tushgan, birida yo'q?",
           "variantlar": [
-            "Birlikda oxir sukunli — ikki sukun to'qnashdi (و tushdi); ikkilikda harakatli alif bor — faqat naql",
+            "Birlikda oxir sukunli — ikki sukun to'qnashdi (و tushdi); ikkilikda م harakatli (tasniya alifidan oldin fatha) — ikki sukun yo'q, faqat naql",
             "Ikkilikda و doim qoladi",
             "Xato"
           ],
@@ -4689,7 +4689,7 @@
     },
     "sarf-82": {
       "sharh": [
-        "دَعَا moziysi: دَعَا (asli دَعَوَ — harakatli و, oldida fatha → alif), دَعَوَا (ikkilik — و saqlanadi, chunki keyin alif harakatli), دَعَوْا (asli دَعَوُوا → alif → ikki sukun → alif tushdi), دَعَتْ، دَعَتَا (alif tushgan), دَعَوْنَ، دَعَوْتَ … (و sukunli — saqlanadi).",
+        "دَعَا moziysi: دَعَا (asli دَعَوَ — harakatli و, oldida fatha → alif), دَعَوَا (ikkilik — و saqlanadi: keyin tasniya alifi bor; و alifga aylansa ikki alif to'qnashib biri tushar va tasniya belgisi yo'qolar edi), دَعَوْا (asli دَعَوُوا → alif → ikki sukun → alif tushdi), دَعَتْ، دَعَتَا (alif tushgan), دَعَوْنَ، دَعَوْتَ … (و sukunli — saqlanadi).",
         "IMLO QOIDASI: و dan aylangan alif ALIF shaklida yoziladi (دَعَا), ي dan aylangan alif ي (ى) shaklida yoziladi (رَمَى). Shuning uchun yozuvdan asl harfni bilib olasiz: ـا → و, ـى → ي. «Oriz — yo'qdek» (اَلْعَارِضُ كَالْمَعْدُومِ): دَعَتَا da ت ning fathasi keyin paydo bo'lgan (asli sukun) — shuning uchun alif baribir tushadi."
       ],
       "savollar": [
@@ -4849,7 +4849,7 @@
     },
     "sarf-89": {
       "sharh": [
-        "دَعَا ismlari: zamon/makon مَدْعًى (asli مَدْعَو — harakatli و, oldida fatha → alif → tanvin oldida alif tushdi; yozuvda ى, chunki ... aslida و dan — lekin kitob shu shaklni beradi), ko'pligi مَدَاعٍ (و 5-harf o'rnida → ي → damma tashlandi → tanvin oldida ي tushdi); olat مِدْعًى (xuddi shunday); tafzil أَدْعَى (asli أَدْعَوُ — و 4-harf o'rnida, damma yo'q → ي → alif), أَدْعَوْنَ; muannasi دُعْيَى (asli دُعْوَى — muzakkarga ergashib و → ي).",
+        "دَعَا ismlari: zamon/makon مَدْعًى (asli مَدْعَوٌ — harakatli و, oldida fatha → alif → tanvin oldida alif tushdi; yozuvda ى bilan, chunki و bu yerda 4-harf o'rnida — bunday و aslida avval ي ga, so'ng alifga aylanadi; kitob bu oraliq bosqichni qisqartirib, to'g'ridan-to'g'ri alif deydi), ko'pligi مَدَاعٍ (و 5-harf o'rnida → ي → damma tashlandi → tanvin oldida ي tushdi); olat مِدْعًى (xuddi shunday); tafzil أَدْعَى (asli أَدْعَوُ — و 4-harf o'rnida, damma yo'q → ي → alif), أَدْعَوْنَ; muannasi دُعْيَى (asli دُعْوَى — muzakkarga ergashib و → ي).",
         "Umumiy qoida: و so'zning 4- yoki undan keyingi harfi o'rnida bo'lsa va oldida damma bo'lmasa → ي ga aylanadi (أَدْعَى، يُدْعَى، مَدَاعٍ). Shu sababli vovli noqisning ko'p ismlari ي/ى bilan ko'rinadi."
       ],
       "savollar": [
@@ -4998,7 +4998,7 @@
     "sarf-94": {
       "sharh": [
         "4-bob MUZOAFI عَضَّ – يَعَضُّ: asli عَضِضَ — birinchi ض ning kasrasi tashlanib idg'om (عَضَّ); muzori' يَعْضَضُ → harakat ع ga → idg'om يَعَضُّ. Qolgani فَرَّ kabi. Amri عَضِّ (yoki عَضَّ، اِعْضَضْ).",
-        "MISOLI VOVIYSI: وَضِرَ – يَوْضَرُ (kir bo'lmoq) — bu yerda و TUSHMAYDI (يَوْضَرُ) — chunki muzori'da fatha ASLIY (4-bob), taqdiriy kasra emas; amr اِيضَرْ (asli اِوْضَرْ — kasra oldida و → ي). Lekin وَسِعَ – يَسَعُ da و TUSHADI — chunki ayn tomoq harfi (ع) bo'lib, fatha kasradan ko'chgan (taqdiriy kasra). Qoida: 4-bob misolida ayn/lom tomoq harfi bo'lsa و tushadi (وَسِعَ، وَجِلَ … qiyos), bo'lmasa qoladi (وَضِرَ). Kitobda وَضِرٌ «sifati mushabbaha» — ismi foil o'rnida (holat bildiruvchi sifat)."
+        "MISOLI VOVIYSI: وَضِرَ – يَوْضَرُ (kir bo'lmoq) — bu yerda و TUSHMAYDI (يَوْضَرُ) — chunki muzori'da fatha ASLIY (4-bob), taqdiriy kasra emas; amr اِيضَرْ (asli اِوْضَرْ — kasra oldida و → ي). Lekin وَسِعَ – يَسَعُ da و TUSHADI — chunki lomi tomoq harfi (ع) bo'lib, fatha kasradan ko'chgan (taqdiriy kasra). Qoida: 4-bob misolida ayn/lom tomoq harfi bo'lsa و tushadi (وَسِعَ – يَسَعُ، وَطِئَ – يَطَأُ), bo'lmasa qoladi (وَضِرَ – يَوْضَرُ، وَجِلَ – يَوْجَلُ). Kitobda وَضِرٌ «sifati mushabbaha» — ismi foil o'rnida (holat bildiruvchi sifat)."
       ],
       "savollar": [
         {

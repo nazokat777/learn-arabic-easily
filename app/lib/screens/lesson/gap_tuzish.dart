@@ -7,6 +7,7 @@ import '../../mashq/mukofot.dart' show Maqtov, Portlash;
 import '../../mashq/tovush.dart';
 import '../../services/tts.dart';
 import '../../theme.dart';
+import '../../widgets/entrance.dart';
 import '../../widgets/motion.dart';
 import '../../widgets/uz_text.dart';
 
@@ -20,10 +21,19 @@ import '../../widgets/uz_text.dart';
 /// Juftlar kitob mashqidan (o'zbekcha ↔ arabcha javob) — mazmun o'sha.
 class GapTuzish extends StatefulWidget {
   /// (o'zbekcha gap, arabcha javob) juftlari.
+  ///
+  /// O'zbekchasi BO'SH bo'lsa — «tinglab tuzish»: gap avval ovozda
+  /// eshittiriladi (o'zi ijro etiladi, qayta tinglash tugmasi bor), o'quvchi
+  /// eshitganini so'zlardan yig'adi. Bu quloq mashqi — yozuvsiz tushunish.
   final List<(String, String)> juftlar;
   final void Function(int ball) award;
   final VoidCallback onDone;
   final Random? rnd;
+
+  /// Tinglab tuzish rejimi: har gap avval ovozda eshittiriladi (o'zi ijro
+  /// etiladi, qayta tinglash tugmasi bor); o'zbekchasi bo'lsa — yordamchi
+  /// sifatida pastroqda ko'rsatiladi.
+  final bool tinglab;
 
   const GapTuzish({
     super.key,
@@ -31,6 +41,7 @@ class GapTuzish extends StatefulWidget {
     required this.award,
     required this.onDone,
     this.rnd,
+    this.tinglab = false,
   });
 
   /// So'zlarga bo'lish (bo'sh joy bo'yicha; tinish belgilari so'zga yopishiq).
@@ -58,7 +69,29 @@ class _GapTuzishState extends State<GapTuzish> {
     _yukla();
   }
 
+  @override
+  void dispose() {
+    Tts.instance.stop();
+    super.dispose();
+  }
+
+  bool get _tinglab =>
+      widget.tinglab || widget.juftlar[_i].$1.trim().isEmpty;
+
+  /// Tinglab tuzishda gap ochilishi bilan o'qiladi (kichik kechikish —
+  /// chip'lar chizilib bo'lsin).
+  void _avtoOqi() {
+    if (!_tinglab) return;
+    final i = _i;
+    Future.delayed(const Duration(milliseconds: 400), () {
+      if (mounted && _i == i && _natija == null) {
+        Tts.instance.speak(widget.juftlar[i].$2, id: 'gap-eshit-$i');
+      }
+    });
+  }
+
   void _yukla() {
+    _avtoOqi();
     _asl = GapTuzish.sozlar(widget.juftlar[_i].$2);
     var h = List.generate(_asl.length, (k) => k)..shuffle(_rnd);
     // Bir so'zli gap bo'lmasa, aralashgani asl bilan bir xil chiqmasin.
@@ -178,16 +211,19 @@ class _GapTuzishState extends State<GapTuzish> {
           background: AppColors.indigo.withValues(alpha: 0.12),
         ),
         const SizedBox(height: 14),
-        Text(
-          uz,
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontSize: 19,
-            fontWeight: FontWeight.w800,
-            color: AppColors.ink,
-            height: 1.3,
+        if (_tinglab) _EshitishTugmasi(text: ar, id: 'gap-eshit-$_i'),
+        if (_tinglab && uz.trim().isNotEmpty) const SizedBox(height: 10),
+        if (!_tinglab || uz.trim().isNotEmpty)
+          Text(
+            uz,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 19,
+              fontWeight: FontWeight.w800,
+              color: AppColors.ink,
+              height: 1.3,
+            ),
           ),
-        ),
         const SizedBox(height: 14),
         // Javob maydoni — tanlangan so'zlar (o'ngdan chapga).
         Portlash(
@@ -358,6 +394,61 @@ class _Chip extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+
+/// Tinglab tuzish rejimining «savoli»: gap yozuvsiz, faqat ovoz.
+class _EshitishTugmasi extends StatelessWidget {
+  final String text;
+  final String id;
+  const _EshitishTugmasi({required this.text, required this.id});
+
+  @override
+  Widget build(BuildContext context) {
+    return ValueListenableBuilder<String?>(
+      valueListenable: Tts.instance.speakingId,
+      builder: (context, speaking, _) {
+        final active = speaking == id;
+        return Center(
+          child: PressableScale(
+            child: Material(
+              color: active ? AppColors.gold : AppColors.indigo,
+              borderRadius: BorderRadius.circular(18),
+              child: InkWell(
+                borderRadius: BorderRadius.circular(18),
+                onTap: () => Tts.instance.speak(text, id: id),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 22,
+                    vertical: 14,
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(
+                        active ? Icons.graphic_eq_rounded : Icons.hearing_rounded,
+                        color: Colors.white,
+                        size: 28,
+                      ),
+                      const SizedBox(width: 10),
+                      const Text(
+                        'Tinglang va gapni tuzing',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w800,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+        );
+      },
     );
   }
 }

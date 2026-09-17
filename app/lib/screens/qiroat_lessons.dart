@@ -16,6 +16,8 @@ import '../widgets/rasm_belgi.dart';
 import '../widgets/yol.dart';
 import '../widgets/speak_button.dart';
 import 'bosh_joy.dart';
+import 'gap_tuzish_ekrani.dart';
+import 'lesson/harflab_yozish.dart';
 import 'qiroat_drill.dart';
 import 'tarjima_mashqi.dart';
 import 'qiroat_match.dart';
@@ -249,82 +251,8 @@ class QiroatLessonDetail extends StatelessWidget {
             // bo'lsin, o'quvchi «qaysi birini bosay» deb turmasin.
             _CompleteButton(lesson: lesson),
             const SizedBox(height: 14),
-            _BoshqaOyinlar(
-              children: [
-                _exerciseButton(
-                  context,
-                  color: AppColors.gold,
-                  icon: Icons.psychology_alt,
-                  label: "So'zlarni chuqur yodlash (6 usul)",
-                  page: MasterDrill(lesson: lesson),
-                ),
-                const SizedBox(height: 10),
-                _exerciseButton(
-                  context,
-                  color: AppColors.coral,
-                  icon: Icons.bolt,
-                  label: 'Tezkor mashq',
-                  page: QiroatVocabDrill(lesson: lesson),
-                ),
-                const SizedBox(height: 10),
-                _exerciseButton(
-                  context,
-                  color: AppColors.emerald,
-                  icon: Icons.extension,
-                  label: "Juftlash o'yini",
-                  page: QiroatMatchGame(lesson: lesson),
-                ),
-                if (BoshJoy.yasa(lesson).length >= 3) ...[
-                  const SizedBox(height: 10),
-                  _exerciseButton(
-                    context,
-                    color: AppColors.indigo,
-                    icon: Icons.space_bar_rounded,
-                    label: "Bo'sh joy — so'zni jumlada top",
-                    page: BoshJoyEkrani(lesson: lesson),
-                  ),
-                ],
-              ],
-            ),
+            DarsOyinlari(lesson: lesson),
           ],
-        ),
-      ),
-    );
-  }
-
-  Widget _exerciseButton(
-    BuildContext context, {
-    required Color color,
-    required IconData icon,
-    required String label,
-    required Widget page,
-  }) {
-    return PressableScale(
-      child: Material(
-        color: color,
-        borderRadius: BorderRadius.circular(14),
-        child: InkWell(
-          borderRadius: BorderRadius.circular(14),
-          onTap: () =>
-              Navigator.push(context, MaterialPageRoute(builder: (_) => page)),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 16),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(icon, color: Colors.white),
-                const SizedBox(width: 10),
-                Text(
-                  label,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w800,
-                    fontSize: 16,
-                  ),
-                ),
-              ],
-            ),
-          ),
         ),
       ),
     );
@@ -593,46 +521,164 @@ class QiroatMashqTugmasi extends StatelessWidget {
 /// Ular o'chirilmadi (foydali), lekin asosiy yo'ldan chetga olindi:
 /// ekranda beshta rangli tugma turganda test qaysi biri ekani
 /// bilinmay qolgan edi.
-class _BoshqaOyinlar extends StatefulWidget {
-  final List<Widget> children;
-  const _BoshqaOyinlar({required this.children});
+
+/// Darsning o'yinlari va mashqlari — kirish sahifasida ham, to'liq dars
+/// sahifasida ham DOIM ochiq ko'rinadi (yig'ma ro'yxatni o'quvchi sezmasdi).
+class DarsOyinlari extends StatelessWidget {
+  final QiroatLesson lesson;
+  const DarsOyinlari({super.key, required this.lesson});
 
   @override
-  State<_BoshqaOyinlar> createState() => _BoshqaOyinlarState();
+  Widget build(BuildContext context) {
+    return _BoshqaOyinlar(
+      children: [
+        _exerciseButton(
+          context,
+          color: AppColors.gold,
+          icon: Icons.psychology_alt,
+          label: "So'zlarni chuqur yodlash (6 usul)",
+          page: MasterDrill(lesson: lesson),
+        ),
+        const SizedBox(height: 10),
+        _exerciseButton(
+          context,
+          color: AppColors.coral,
+          icon: Icons.bolt,
+          label: 'Tezkor mashq',
+          page: QiroatVocabDrill(lesson: lesson),
+        ),
+        const SizedBox(height: 10),
+        _exerciseButton(
+          context,
+          color: AppColors.emerald,
+          icon: Icons.extension,
+          label: "Juftlash o'yini",
+          page: QiroatMatchGame(lesson: lesson),
+        ),
+        if (BoshJoy.yasa(lesson).length >= 3) ...[
+          const SizedBox(height: 10),
+          _exerciseButton(
+            context,
+            color: AppColors.indigo,
+            icon: Icons.space_bar_rounded,
+            label: "Bo'sh joy — so'zni jumlada top",
+            page: BoshJoyEkrani(lesson: lesson),
+          ),
+        ],
+        // O'qish matnining jumlalari asosida: tinglab gap tuzish.
+        if (splitSentences(lesson.reading).length >= 2) ...[
+          const SizedBox(height: 10),
+          _exerciseButtonAction(
+            context,
+            color: AppColors.indigo,
+            icon: Icons.hearing_rounded,
+            label: 'Jumla testi — tinglab tuzish',
+            onTap: () => jumlaTestiniOch(context, lesson),
+          ),
+        ],
+        if (HarflabYozishEkrani.sozlar(lesson).isNotEmpty) ...[
+          const SizedBox(height: 10),
+          _exerciseButton(
+            context,
+            color: AppColors.gold,
+            icon: Icons.spellcheck_rounded,
+            label: "Harflab yozish — so'zni harfma-harf",
+            page: HarflabYozishEkrani(lesson: lesson),
+          ),
+        ],
+      ],
+    );
+  }
+
+  Widget _exerciseButton(
+    BuildContext context, {
+    required Color color,
+    required IconData icon,
+    required String label,
+    required Widget page,
+  }) => _exerciseButtonAction(
+    context,
+    color: color,
+    icon: icon,
+    label: label,
+    onTap: () =>
+        Navigator.push(context, MaterialPageRoute(builder: (_) => page)),
+  );
+
+  Widget _exerciseButtonAction(
+    BuildContext context, {
+    required Color color,
+    required IconData icon,
+    required String label,
+    required VoidCallback onTap,
+  }) {
+    return PressableScale(
+      child: Material(
+        color: color,
+        borderRadius: BorderRadius.circular(14),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(14),
+          onTap: onTap,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(icon, color: Colors.white),
+                const SizedBox(width: 10),
+                Text(
+                  label,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w800,
+                    fontSize: 16,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
-class _BoshqaOyinlarState extends State<_BoshqaOyinlar> {
-  bool _ochiq = false;
+/// Darsning o'yinlari — DOIM ochiq ko'rinadi.
+///
+/// Ilgari yig'ma edi («Boshqa o'yinlar» tugmasi ostida) — o'quvchi
+/// o'yinlar borligini sezmay o'tib ketardi. Endi sarlavha ostida to'liq
+/// ro'yxat: har o'yin bir bosishda.
+class _BoshqaOyinlar extends StatelessWidget {
+  final List<Widget> children;
+  const _BoshqaOyinlar({required this.children});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        TextButton.icon(
-          onPressed: () => setState(() => _ochiq = !_ochiq),
-          icon: AnimatedRotation(
-            turns: _ochiq ? 0.5 : 0,
-            duration: const Duration(milliseconds: 250),
-            child: const Icon(Icons.expand_more_rounded),
-          ),
-          label: const Text(
-            "Boshqa o'yinlar",
-            style: TextStyle(fontWeight: FontWeight.w700),
-          ),
-          style: TextButton.styleFrom(foregroundColor: AppColors.matn2),
-        ),
-        AnimatedCrossFade(
-          duration: const Duration(milliseconds: 280),
-          crossFadeState: _ochiq
-              ? CrossFadeState.showSecond
-              : CrossFadeState.showFirst,
-          firstChild: const SizedBox(width: double.infinity),
-          secondChild: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: widget.children,
+        Padding(
+          padding: const EdgeInsets.fromLTRB(4, 10, 4, 10),
+          child: Row(
+            children: [
+              const Icon(
+                Icons.sports_esports_rounded,
+                size: 20,
+                color: AppColors.emerald,
+              ),
+              const SizedBox(width: 8),
+              Text(
+                "O'yinlar va mashqlar",
+                style: TextStyle(
+                  fontWeight: FontWeight.w800,
+                  fontSize: 16,
+                  color: AppColors.ink,
+                ),
+              ),
+            ],
           ),
         ),
+        ...children,
       ],
     );
   }

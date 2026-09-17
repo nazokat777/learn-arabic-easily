@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart' hide Text;
 
+import '../arabic.dart';
 import '../main.dart';
 import '../mashq/mukofot.dart' show BugunChizigi;
 import '../theme.dart';
@@ -40,7 +41,14 @@ List<(String, String)> _juftlar(dynamic l) {
 
 class GapTuzishEkrani extends StatefulWidget {
   final List<(String, String)> juftlar;
-  const GapTuzishEkrani({super.key, required this.juftlar});
+  final String title;
+  final bool tinglab;
+  const GapTuzishEkrani({
+    super.key,
+    required this.juftlar,
+    this.title = 'Gap tuzish',
+    this.tinglab = false,
+  });
 
   @override
   State<GapTuzishEkrani> createState() => _GapTuzishEkraniState();
@@ -53,7 +61,7 @@ class _GapTuzishEkraniState extends State<GapTuzishEkrani> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Gap tuzish')),
+      appBar: AppBar(title: Text(widget.title)),
       body: Center(
         child: ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 640),
@@ -73,6 +81,7 @@ class _GapTuzishEkraniState extends State<GapTuzishEkrani> {
                       ),
                       child: GapTuzish(
                         juftlar: widget.juftlar,
+                        tinglab: widget.tinglab,
                         award: (b) {
                           _ball += b;
                           progress.addXp(b);
@@ -152,6 +161,34 @@ class _GapTuzishEkraniState extends State<GapTuzishEkrani> {
           ),
         ),
       ],
+    ),
+  );
+}
+
+
+/// Qiroat darsining O'QISH MATNI jumlalaridan tinglab gap tuzish.
+///
+/// Har jumla avval ovozda eshittiriladi, o'quvchi so'zlardan yig'adi.
+/// O'zbekcha tarjima faqat jumlalar soni matn tarjimasi bilan aynan mos
+/// kelganda ko'rsatiladi — aks holda noto'g'ri jumla noto'g'ri tarjima
+/// bilan juftlashib qolishi mumkin (aniqlik birinchi o'rinda).
+void jumlaTestiniOch(BuildContext context, dynamic lesson) {
+  final ar = splitSentences(lesson.reading as String);
+  final uz = splitSentences(lesson.translation as String);
+  final mos = uz.length == ar.length;
+  final juftlar = <(String, String)>[
+    for (var i = 0; i < ar.length; i++)
+      if (GapTuzish.sozlar(ar[i]).length >= 2) (mos ? uz[i] : '', ar[i]),
+  ]..shuffle();
+  if (juftlar.isEmpty) return;
+  Navigator.push(
+    context,
+    MaterialPageRoute(
+      builder: (_) => GapTuzishEkrani(
+        juftlar: juftlar.take(12).toList(),
+        title: 'Jumla testi — tinglab tuzish',
+        tinglab: true,
+      ),
     ),
   );
 }

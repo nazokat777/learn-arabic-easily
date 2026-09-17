@@ -7,6 +7,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:learn_arabic/harflab.dart';
 import 'package:learn_arabic/arabic.dart';
 import 'package:learn_arabic/content.dart';
 import 'package:learn_arabic/main.dart' show progress, repo;
@@ -99,6 +100,10 @@ void main() {
     }
     for (final h in r.letters) {
       q(h.nameAr, 'harf nomi');
+    }
+    // Harflab aytishda 28 harfdan tashqari belgilar nomi (ة ء ى).
+    for (final ch in const ['ة', 'ء', 'ى']) {
+      q(harfNomi(ch)!, 'harflab belgi');
     }
     for (final st in r.ulashStages) {
       for (final w in st.words) {

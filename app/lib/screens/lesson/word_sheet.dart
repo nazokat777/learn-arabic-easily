@@ -8,6 +8,7 @@ import '../../progress.dart';
 import '../../widgets/motion.dart';
 import '../../services/tts.dart';
 import '../../theme.dart';
+import '../../widgets/harflab_qatori.dart';
 import '../../widgets/rasm_belgi.dart';
 
 /// Arabcha so'zga bosilganda ochiladigan interaktiv karta:
@@ -180,36 +181,13 @@ class _WordSheet extends StatelessWidget {
             if (lessonId != null) _xotiraKarta(lessonId!),
             // Grammatika
             _grammarCard(forms),
-            // Harflar
+            // Harflab: har harf bosilsa nomi aytiladi, ketma-ket tinglash
+            // oxirida so'zning o'zini o'qiydi.
             if (letters.isNotEmpty)
               _card(
                 icon: Icons.spellcheck_rounded,
-                label: 'Harflar',
-                child: Wrap(
-                  spacing: 8,
-                  runSpacing: 8,
-                  textDirection: TextDirection.rtl,
-                  children: letters
-                      .map(
-                        (c) => Container(
-                          width: 40,
-                          height: 44,
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                            color: AppColors.softGreen,
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Text(
-                            c,
-                            style: AppTheme.arabic(
-                              size: 24,
-                              color: AppColors.zumradMatn,
-                            ),
-                          ),
-                        ),
-                      )
-                      .toList(),
-                ),
+                label: 'Harflab',
+                child: HarflabQatori(soz: head, id: 'ws-$head'),
               ),
             // Misol jumla (matndan)
             if (example != null)

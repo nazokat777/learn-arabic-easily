@@ -8,7 +8,8 @@ import '../../services/tts.dart';
 import '../../theme.dart';
 import '../../widgets/motion.dart';
 import '../../widgets/ornament.dart';
-import '../qiroat_lessons.dart' show QiroatLessonDetail, QiroatMashqTugmasi;
+import '../qiroat_lessons.dart'
+    show QiroatLessonDetail, QiroatMashqTugmasi, DarsOyinlari;
 import '../../mashq/mukofot.dart' show BugunChizigi;
 import '../nishonlar_ekrani.dart';
 import 'master_drill.dart';
@@ -411,6 +412,9 @@ class _IntroView extends StatelessWidget {
             ),
           ),
         ),
+        const SizedBox(height: 12),
+        // O'yinlar shu yerda ham ko'rinsin — to'liq darsga kirmasdan.
+        DarsOyinlari(lesson: lesson),
       ],
     );
   }

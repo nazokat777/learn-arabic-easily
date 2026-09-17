@@ -73,6 +73,14 @@ class LettersLesson extends StatelessWidget {
                                 fontSize: 11,
                               ),
                             ),
+                            const SizedBox(height: 2),
+                            // Nomi kartaning o'zida eshitiladi — oynani
+                            // ochmasdan 28 harfni ketma-ket tinglash mumkin.
+                            SpeakButton(
+                              text: L.nameAr,
+                              id: 'harf-${L.ar}',
+                              size: 20,
+                            ),
                           ],
                         ),
                       ),

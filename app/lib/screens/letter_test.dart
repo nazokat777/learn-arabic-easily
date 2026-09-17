@@ -17,7 +17,13 @@ class LetterTest extends StatelessWidget {
     // testdan o'tib ketishi mumkin edi.
     final pick = List<Letter>.from(repo.letters)..shuffle(rnd);
 
+    // Ikki xil savol almashib keladi: ko'rib nomini topish va nomini
+    // ESHITIB harfni topish — ikkinchisi inson ovozidagi harf nomlari
+    // bilan quloqni o'rgatadi (faqat ko'z bilan tanish yetarli emas).
+    var n = 0;
     final questions = pick.map((L) {
+      final tinglash = (n++).isOdd;
+      if (tinglash) return _tinglashSavoli(L, rnd);
       // Chalg'ituvchi javoblar (boshqa harflar nomlari).
       //
       // Nomi bo'yicha solishtiramiz, id bo'yicha emas: ح va ه ning o'zbekcha
@@ -51,6 +57,30 @@ class LetterTest extends StatelessWidget {
       lessonId: 'letter_test',
       questions: questions,
       xpPerCorrect: 5,
+    );
+  }
+
+  /// «Tinglang — qaysi harf?»: nomi o'qiladi, variantlar arab harflari.
+  Question _tinglashSavoli(Letter L, Random rnd) {
+    final distractors = <String>[];
+    for (final x in List<Letter>.from(repo.letters)..shuffle(rnd)) {
+      if (distractors.length == 3) break;
+      if (x.ar != L.ar && !distractors.contains(x.ar)) distractors.add(x.ar);
+    }
+    final options = [L.ar, ...distractors]..shuffle(rnd);
+    return Question(
+      promptLabel: 'Tinglang: qaysi harf?',
+      prompt: const Icon(
+        Icons.hearing_rounded,
+        size: 72,
+        color: AppColors.emerald,
+      ),
+      options: options,
+      correct: options.indexOf(L.ar),
+      arabicOptions: true,
+      // Nom javobni oshkor qilmaydi — variantlar harflarning o'zi.
+      speak: L.nameAr,
+      speakOnShow: true,
     );
   }
 }

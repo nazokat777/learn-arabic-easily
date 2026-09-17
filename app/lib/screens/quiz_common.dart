@@ -33,6 +33,12 @@ class Question {
   /// uchun baribir foydali).
   final bool speakRevealsAnswer;
 
+  /// Savol ochilishi bilan ovoz o'zi o'qilsinmi.
+  ///
+  /// Tinglash savollari uchun: o'quvchi avval ESHITADI, keyin tanlaydi;
+  /// tugma bosishni kutsa, savolning mazmuni yo'qoladi.
+  final bool speakOnShow;
+
   Question({
     required this.prompt,
     required this.promptLabel,
@@ -41,6 +47,7 @@ class Question {
     this.speak,
     this.speakRevealsAnswer = false,
     this.arabicOptions = false,
+    this.speakOnShow = false,
   });
 }
 
@@ -97,6 +104,19 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
   void initState() {
     super.initState();
     _reset();
+    _speakOnShow();
+  }
+
+  /// Tinglash savoli ochilganda ovozni o'zi ijro etadi (qisqa kechikish —
+  /// sahifa chizilib bo'lsin).
+  void _speakOnShow() {
+    if (_queue.isEmpty || !_q.speakOnShow) return;
+    final q = _q;
+    Future.delayed(const Duration(milliseconds: 350), () {
+      if (mounted && identical(_queue.firstOrNull?.q, q)) {
+        Tts.instance.speak(q.speak!, id: 'q');
+      }
+    });
   }
 
   void _reset() {
@@ -125,6 +145,7 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
       speak: q.speak,
       speakRevealsAnswer: q.speakRevealsAnswer,
       arabicOptions: q.arabicOptions,
+      speakOnShow: q.speakOnShow,
     );
   }
 
@@ -184,7 +205,11 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
       _selected = null;
       _answered = false;
     });
-    if (_queue.isEmpty) _finish();
+    if (_queue.isEmpty) {
+      _finish();
+    } else {
+      _speakOnShow();
+    }
   }
 
   Future<void> _finish() async {

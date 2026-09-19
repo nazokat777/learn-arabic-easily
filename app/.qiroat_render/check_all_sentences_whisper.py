@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-"""Barcha jumla kliplarini (sentence_manifest) whisper bilan tekshirish.
+"""Bir to'plamning barcha kliplarini whisper bilan tekshirish.
 
-python .qiroat_render/check_all_sentences_whisper.py
+python .qiroat_render/check_all_sentences_whisper.py [toplam=sentence]  (sentence|sarf|mashq|vocab|word|extra)
 Natija: build/whisper_all.tsv  (o'xshashlik \t fayl \t matn \t eshitilgani),
 past o'xshashlik (< 0.55) — shubhali, qayta yasash uchun build/whisper_shubhali.txt.
 Davom etadigan: tekshirilgan fayllar tsv'da bo'lsa qayta tekshirilmaydi.
@@ -23,9 +23,12 @@ def norm(s):
     s = re.sub(r'[^ء-ي\s]', ' ', s)
     return ' '.join(s.split())
 
+TOPLAM = {'sentence': 'sentences', 'sarf': 'sarf', 'mashq': 'mashq', 'vocab': 'vocab', 'word': 'words', 'extra': 'extra'}
+
 def main():
-    sm = json.load(open(ROOT / 'assets/audio/sentence_manifest.json', encoding='utf-8'))
-    out = ROOT / 'build/whisper_all.tsv'
+    nom = sys.argv[1] if len(sys.argv) > 1 else 'sentence'
+    sm = json.load(open(ROOT / f'assets/audio/{nom}_manifest.json', encoding='utf-8'))
+    out = ROOT / ('build/whisper_all.tsv' if nom == 'sentence' else f'build/whisper_{nom}.tsv')
     done = {}
     if out.exists():
         for line in open(out, encoding='utf-8'):
@@ -36,7 +39,7 @@ def main():
     n = 0
     for text, f in sm.items():
         if f in done: continue
-        path = ROOT / 'assets/audio/sentences' / f
+        path = ROOT / 'assets/audio' / TOPLAM[nom] / f
         if not path.exists():
             fh.write(f'0.00\t{f}\t{text}\t(fayl yo\'q)\n'); continue
         try:
@@ -54,7 +57,7 @@ def main():
         p = line.rstrip('\n').split('\t')
         if len(p) >= 4: rows.append((float(p[0]), p[1], p[2], p[3]))
     rows.sort()
-    with open(ROOT / 'build/whisper_shubhali.txt', 'w', encoding='utf-8') as s:
+    with open(ROOT / ('build/whisper_shubhali.txt' if nom == 'sentence' else f'build/whisper_{nom}_shubhali.txt'), 'w', encoding='utf-8') as s:
         for r, f, t, h in rows:
             if r < CHEGARA: s.write(f'{r:.2f}\t{f}\t{t}\t{h}\n')
     print('jami', len(rows), 'shubhali', sum(1 for r in rows if r[0] < CHEGARA))

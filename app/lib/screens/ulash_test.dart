@@ -53,7 +53,26 @@ class UlashTest extends StatelessWidget {
     for (var i = 0; i < picked.length; i++) {
       final w = picked[i];
       // Savol turlari navbatlashadi — bittasi zeriktirmasin.
-      if (i.isEven) {
+      // Har uchinchisi TINGLASH: so'z (inson ovozi) eshitiladi, o'quvchi
+      // yozilgan so'zni topadi — quloq bilan ko'zni bog'lash.
+      if (i % 3 == 2) {
+        final opts = variantlar(w.ar, hammaAr);
+        questions.add(
+          Question(
+            promptLabel: "Tinglang: qaysi so'z?",
+            prompt: const Icon(
+              Icons.hearing_rounded,
+              size: 64,
+              color: AppColors.emerald,
+            ),
+            options: opts,
+            correct: opts.indexOf(w.ar),
+            arabicOptions: true,
+            speak: w.ar,
+            speakOnShow: true,
+          ),
+        );
+      } else if (i.isEven) {
         final opts = variantlar(w.ar, hammaAr);
         questions.add(
           Question(

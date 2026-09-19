@@ -104,6 +104,29 @@ class HarakatTest extends StatelessWidget {
       );
     }
 
+    // 3-tur: TINGLASH — bo'g'in eshitiladi (بَ/بِ/بُ…), o'quvchi yozilganini
+    // topadi. Harakatni eshitib ajratish — o'qishning teskari yo'li, u ham
+    // shart: diktant shu ko'nikmaga tayanadi.
+    final belgilar = bogin.map((h) => h.exampleAr).toList();
+    for (final h in bogin) {
+      final opts = variantlar(h.exampleAr, belgilar);
+      questions.add(
+        Question(
+          promptLabel: "Tinglang: qaysi bo'g'in?",
+          prompt: const Icon(
+            Icons.hearing_rounded,
+            size: 64,
+            color: AppColors.emerald,
+          ),
+          options: opts,
+          correct: opts.indexOf(h.exampleAr),
+          arabicOptions: true,
+          speak: h.exampleAr,
+          speakOnShow: true,
+        ),
+      );
+    }
+
     questions.shuffle(rnd);
     return MultipleChoiceQuiz(
       title: 'Harakatlar testi',

@@ -159,6 +159,10 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: app/build/web
+          # Artefakt faqat deploy uchun kerak (~640 MB); 90 kun saqlansa
+          # akkaunt kvotasini (500 MB) to'ldirib, boshqa repolarning CI'sini
+          # to'xtatadi (2026-09-19 da 18.8 GB yig'ilgan edi).
+          retention-days: 1
 
       - name: Pages'ga deploy
         id: deployment

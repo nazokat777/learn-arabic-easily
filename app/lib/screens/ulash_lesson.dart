@@ -8,6 +8,7 @@ import '../theme.dart';
 import '../widgets/mastery_badge.dart';
 import '../widgets/premium_tile.dart';
 import '../widgets/speak_button.dart';
+import 'lesson/harflab_yozish.dart';
 import 'ulash_test.dart';
 
 /// «Harflarni ulash» — arab yozuvidagi eng muhim ko'nikma.
@@ -193,6 +194,36 @@ class UlashStageScreen extends StatelessWidget {
           for (final w in stage.words)
             _WordCard(word: w, mad: stage.focus == 'mad'),
           const SizedBox(height: 16),
+          // Harflab yozish — so'zni harfma-harf yig'ish (har harf nomi
+          // inson ovozida, so'z ham inson ovozida). Testdan oldin mashq.
+          Padding(
+            padding: const EdgeInsets.only(bottom: 12),
+            child: OutlinedButton.icon(
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => HarflabYozishEkrani.royxat(
+                    sozRoyxati: HarflabYozishEkrani.ulashSozlari(
+                      stage.words.map((w) => (ar: w.ar, uz: w.uz)),
+                    ),
+                  ),
+                ),
+              ),
+              icon: const Icon(Icons.spellcheck_rounded, size: 20),
+              label: const Text(
+                "Harflab yozish — so'zni harfma-harf",
+                style: TextStyle(fontWeight: FontWeight.w800),
+              ),
+              style: OutlinedButton.styleFrom(
+                foregroundColor: AppColors.gold,
+                side: const BorderSide(color: AppColors.gold, width: 1.5),
+                padding: const EdgeInsets.symmetric(vertical: 14),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(14),
+                ),
+              ),
+            ),
+          ),
           MasteryCallToAction(
             lessonId: ulashLessonId(stage.num),
             what: "${stage.words.length} ta so'z",

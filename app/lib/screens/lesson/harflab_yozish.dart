@@ -24,8 +24,21 @@ import '../../widgets/uz_text.dart';
 /// bilim. Harfma-harf yig'ish imloni qo'l xotirasiga o'tkazadi; noto'g'ri
 /// harf jazosiz — faqat silkinadi, o'quvchi yana urinadi.
 class HarflabYozishEkrani extends StatefulWidget {
-  final QiroatLesson lesson;
-  const HarflabYozishEkrani({super.key, required this.lesson});
+  /// (arabcha so'z, ma'nosi) — Qiroat darsi lug'atidan yoki Ulash bosqichi
+  /// so'zlaridan.
+  final List<({String ar, String uz})> sozRoyxati;
+  HarflabYozishEkrani({super.key, required QiroatLesson lesson})
+    : sozRoyxati = sozlar(lesson);
+  const HarflabYozishEkrani.royxat({super.key, required this.sozRoyxati});
+
+  /// Ulash bosqichi so'zlari — 2–8 harflilari.
+  static List<({String ar, String uz})> ulashSozlari(
+    Iterable<({String ar, String uz})> words,
+  ) => [
+    for (final w in words)
+      if (harflab(w.ar).length >= 2 && harflab(w.ar).length <= 8)
+        (ar: w.ar, uz: w.uz),
+  ];
 
   /// Darsdan mashq uchun so'zlar: bosh shakl, 2–8 harfli (juda uzun so'z
   /// bir ekranga sig'maydi, bir harfli so'zda mashq yo'q).
@@ -51,7 +64,7 @@ class HarflabYozishEkrani extends StatefulWidget {
 class _HarflabYozishEkraniState extends State<HarflabYozishEkrani> {
   final _rnd = Random();
   late final List<({String ar, String uz})> _sozlar =
-      HarflabYozishEkrani.sozlar(widget.lesson)..shuffle(_rnd);
+      List.of(widget.sozRoyxati)..shuffle(_rnd);
   int _i = 0;
   late List<HarfBolagi> _asl;
   late List<HarfBolagi> _havza; // aralashgan harflar + chalg'ituvchilar

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart' hide Text;
 import 'package:flutter/services.dart'
     show KeyEvent, KeyDownEvent, LogicalKeyboardKey;
 import '../../widgets/uz_text.dart';
+import '../../widgets/koplik_qatori.dart';
 import '../../arabic.dart';
 import '../../content.dart';
 import '../../main.dart';
@@ -261,41 +262,48 @@ class _QuizStageState extends State<QuizStage> {
                   ],
                 ),
                 child: q.arToUz
-                    ? Row(
+                    ? Column(
                         mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Flexible(
-                            child: Directionality(
-                              textDirection: TextDirection.rtl,
-                              child: Text(
-                                head,
-                                textAlign: TextAlign.center,
-                                style: AppTheme.arabic(
-                                  size: 40,
-                                  color: AppColors.emerald,
+                          Row(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Flexible(
+                                child: Directionality(
+                                  textDirection: TextDirection.rtl,
+                                  child: Text(
+                                    head,
+                                    textAlign: TextAlign.center,
+                                    style: AppTheme.arabic(
+                                      size: 40,
+                                      color: AppColors.emerald,
+                                    ),
+                                  ),
                                 ),
                               ),
-                            ),
-                          ),
-                          const SizedBox(width: 8),
-                          Material(
-                            color: AppColors.emerald,
-                            shape: const CircleBorder(),
-                            child: InkWell(
-                              customBorder: const CircleBorder(),
-                              onTap: () => Tts.instance.speak(head, id: head),
-                              child: const SizedBox(
-                                width: 42,
-                                height: 42,
-                                child: Icon(
-                                  Icons.volume_up_rounded,
-                                  color: Colors.white,
-                                  size: 22,
+                              const SizedBox(width: 8),
+                              Material(
+                                color: AppColors.emerald,
+                                shape: const CircleBorder(),
+                                child: InkWell(
+                                  customBorder: const CircleBorder(),
+                                  onTap: () =>
+                                      Tts.instance.speak(head, id: head),
+                                  child: const SizedBox(
+                                    width: 42,
+                                    height: 42,
+                                    child: Icon(
+                                      Icons.volume_up_rounded,
+                                      color: Colors.white,
+                                      size: 22,
+                                    ),
+                                  ),
                                 ),
                               ),
-                            ),
+                            ],
                           ),
+                          KoplikQatori(v: q.word, idPrefix: 'qf'),
                         ],
                       )
                     : Text(

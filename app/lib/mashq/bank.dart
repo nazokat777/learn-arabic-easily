@@ -38,6 +38,7 @@ class MashqBank {
           darsId: l.completionId,
           tartib: l.book * 1000 + l.num,
           modul: 'Mabdaul qiroat',
+          pl: v.pl,
         ),
       );
     }

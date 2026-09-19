@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:flutter/material.dart' hide Text;
 import 'package:flutter/services.dart'
     show Clipboard, ClipboardData, KeyEvent, KeyDownEvent, LogicalKeyboardKey;
+import '../widgets/speak_button.dart';
 import '../widgets/uz_text.dart';
 
 import '../main.dart';
@@ -722,14 +723,14 @@ class _MashqEkranState extends State<MashqEkran> {
       case MashqTuri.manoTop:
         // Bosilsa qayta o'qiladi; kichik karnay belgisi — ovoz borligi ko'rinsin.
         ichi = e.ovoz.isEmpty
-            ? _arabchaMatn(e.ar)
+            ? _arabchaMatn(e)
             : InkWell(
                 borderRadius: BorderRadius.circular(12),
                 onTap: () => Tts.instance.speak(e.ovoz, id: e.kalit),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    _arabchaMatn(e.ar),
+                    _arabchaMatn(e),
                     const SizedBox(height: 4),
                     Icon(
                       Icons.volume_up_rounded,
@@ -788,7 +789,7 @@ class _MashqEkranState extends State<MashqEkran> {
       case MashqTuri.tugriMi:
         ichi = Column(
           children: [
-            _arabchaMatn(e.ar),
+            _arabchaMatn(e),
             const SizedBox(height: 10),
             const Icon(Icons.swap_vert_rounded, color: AppColors.gold),
             const SizedBox(height: 6),
@@ -856,13 +857,47 @@ class _MashqEkranState extends State<MashqEkran> {
     );
   }
 
-  Widget _arabchaMatn(String ar) => Directionality(
-    textDirection: TextDirection.rtl,
-    child: Text(
-      ar,
-      textAlign: TextAlign.center,
-      style: AppTheme.arabic(size: 34, color: AppColors.emerald),
-    ),
+  Widget _arabchaMatn(MashqElement e) => Column(
+    mainAxisSize: MainAxisSize.min,
+    children: [
+      Directionality(
+        textDirection: TextDirection.rtl,
+        child: Text(
+          e.ar,
+          textAlign: TextAlign.center,
+          style: AppTheme.arabic(size: 34, color: AppColors.emerald),
+        ),
+      ),
+      // Ko'pligi — kitob lug'atidagidek birlik bilan yonma-yon.
+      if (e.pl.isNotEmpty)
+        Padding(
+          padding: const EdgeInsets.only(top: 4),
+          child: Wrap(
+            alignment: WrapAlignment.center,
+            crossAxisAlignment: WrapCrossAlignment.center,
+            spacing: 4,
+            children: [
+              Text(
+                "ko'pligi:",
+                style: TextStyle(fontSize: 12.5, color: AppColors.matn3),
+              ),
+              Directionality(
+                textDirection: TextDirection.rtl,
+                child: Text(
+                  e.pl,
+                  style: AppTheme.arabic(
+                    size: 20,
+                    color: AppColors.gold,
+                    w: FontWeight.w600,
+                  ),
+                ),
+              ),
+              for (final sh in e.plShakllari)
+                SpeakButton(text: sh, id: 'me-pl-$sh', size: 15),
+            ],
+          ),
+        ),
+    ],
   );
 
   /// Terilgan harflar qatori — bo'sh kataklar bilan, o'ngdan chapga.

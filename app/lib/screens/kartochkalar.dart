@@ -263,6 +263,22 @@ class _KartochkalarEkraniState extends State<KartochkalarEkrani>
                             ),
                           ),
                         ),
+                        if (e.pl.isNotEmpty)
+                          Padding(
+                            padding: const EdgeInsets.only(top: 4),
+                            child: Directionality(
+                              textDirection: TextDirection.rtl,
+                              child: Text(
+                                "ko'pligi: ${e.pl}",
+                                textAlign: TextAlign.center,
+                                style: AppTheme.arabic(
+                                  size: 20,
+                                  color: AppColors.gold,
+                                  w: FontWeight.w600,
+                                ),
+                              ),
+                            ),
+                          ),
                         const SizedBox(height: 18),
                         if (e.ovoz.isNotEmpty)
                           IconButton(

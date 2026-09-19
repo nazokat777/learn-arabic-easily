@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart' hide Text;
 import '../widgets/uz_text.dart';
+import '../widgets/koplik_qatori.dart';
 import '../main.dart';
 import '../mashq/mukofot.dart';
 import '../content.dart';
@@ -322,13 +323,22 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
             ],
           ),
           child: q.arToUz
-              ? Directionality(
-                  textDirection: TextDirection.rtl,
-                  child: Text(
-                    q.word.ar,
-                    textAlign: TextAlign.center,
-                    style: AppTheme.arabic(size: 40, color: AppColors.emerald),
-                  ),
+              ? Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Directionality(
+                      textDirection: TextDirection.rtl,
+                      child: Text(
+                        q.word.ar,
+                        textAlign: TextAlign.center,
+                        style: AppTheme.arabic(
+                          size: 40,
+                          color: AppColors.emerald,
+                        ),
+                      ),
+                    ),
+                    KoplikQatori(v: q.word, idPrefix: 'qd'),
+                  ],
                 )
               : Text(
                   q.word.uz,

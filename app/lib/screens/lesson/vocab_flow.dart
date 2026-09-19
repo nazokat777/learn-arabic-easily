@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart' hide Text;
 import '../../widgets/uz_text.dart';
+import '../../widgets/koplik_qatori.dart';
 import '../../arabic.dart';
 import '../../rasm.dart';
 import '../../content.dart';
@@ -598,25 +599,31 @@ class _VocabStageState extends State<VocabStage> {
                     ),
                   ],
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Flexible(
-                      child: Directionality(
-                        textDirection: TextDirection.rtl,
-                        child: Text(
-                          splitForms(word.ar).first,
-                          textAlign: TextAlign.center,
-                          style: AppTheme.arabic(
-                            size: 40,
-                            color: AppColors.emerald,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Flexible(
+                          child: Directionality(
+                            textDirection: TextDirection.rtl,
+                            child: Text(
+                              splitForms(word.ar).first,
+                              textAlign: TextAlign.center,
+                              style: AppTheme.arabic(
+                                size: 40,
+                                color: AppColors.emerald,
+                              ),
+                            ),
                           ),
                         ),
-                      ),
+                        const SizedBox(width: 8),
+                        _RoundPlay(text: splitForms(word.ar).first),
+                      ],
                     ),
-                    const SizedBox(width: 8),
-                    _RoundPlay(text: splitForms(word.ar).first),
+                    KoplikQatori(v: word, idPrefix: 'vf'),
                   ],
                 ),
               ),

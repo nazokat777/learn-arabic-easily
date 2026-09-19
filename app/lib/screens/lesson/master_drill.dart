@@ -2,6 +2,7 @@ import 'dart:math';
 import '../../uz_yozuv.dart';
 import 'package:flutter/material.dart' hide Text;
 import '../../widgets/uz_text.dart';
+import '../../widgets/koplik_qatori.dart';
 import '../../arabic.dart';
 import '../../content.dart';
 import '../../main.dart';
@@ -561,7 +562,13 @@ class _MasterDrillState extends State<MasterDrill> {
       case 0:
         return _mcqBody(
           v,
-          prompt: _arWord(_head(v), play: true),
+          prompt: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              _arWord(_head(v), play: true),
+              KoplikQatori(v: v, idPrefix: 'md'),
+            ],
+          ),
           arabicOptions: false,
         );
       case 1:

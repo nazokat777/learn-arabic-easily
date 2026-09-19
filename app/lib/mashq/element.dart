@@ -46,6 +46,11 @@ class MashqElement {
   /// zamonda … dalolat qiladigan fe'l» ko'rsatiladi. Bo'sh bo'lishi mumkin.
   final String izoh;
 
+  /// Ko'pligi (kitobda berilgan bo'lsa; «=» / «،» bilan bir nechta shakl).
+  /// So'z ko'rsatilgan har joyda birlik bilan birga chiqadi — kitob
+  /// lug'ati ikkalasini birga beradi.
+  final String pl;
+
   const MashqElement({
     required this.kalit,
     required this.ar,
@@ -57,7 +62,15 @@ class MashqElement {
     this.turkum = false,
     this.guruh = '',
     this.izoh = '',
+    this.pl = '',
   }) : ovoz = ovoz ?? ar;
+
+  /// Ko'plikning o'qiladigan shakllari (qo'shimchagina bo'lsa — yo'q).
+  List<String> get plShakllari => pl
+      .split(RegExp(r'\s*[=،,]\s*'))
+      .map((s) => s.trim())
+      .where((s) => s.isNotEmpty && !s.startsWith('ـ'))
+      .toList();
 
   /// Element hozir qanchalik zaif (katta son = ko'proq mashq kerak).
   double get zaiflik => progress.zaiflik(kalit);

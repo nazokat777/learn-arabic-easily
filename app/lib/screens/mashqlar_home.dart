@@ -9,6 +9,8 @@ import '../widgets/mastery_badge.dart';
 import '../widgets/premium_tile.dart';
 import 'vocab_test.dart';
 import 'gap_tuzish_ekrani.dart';
+import 'imtihon_ekrani.dart';
+import '../content.dart';
 import 'kartochkalar.dart';
 import 'word_game.dart';
 
@@ -27,6 +29,7 @@ class MashqlarHome extends StatelessWidget {
           children: [
             _intro(),
             const SizedBox(height: 16),
+            _imtihonPlitka(context),
             _chaqmoqPlitka(context),
             PremiumTile(
               title: 'Tasnif mashqi',
@@ -83,6 +86,32 @@ class MashqlarHome extends StatelessWidget {
   /// Havza: o'quvchi allaqachon ko'rgan so'zlar (kamida bir marta to'g'ri
   /// javob berilgan); hali hech narsa ko'rmagan bo'lsa — alifbo va
   /// 1-kitob boshi. Tezkor raundda notanish so'z emas, TEZLIK sinaladi.
+  /// IMTIHON — oxirgi TUGATILGAN Qiroat darsigacha bo'lgan hamma lug'at.
+  /// Dars ichiga kirmasdan ham yetib boriladi; hali dars tugatilmagan
+  /// bo'lsa — 1-dars bilan boshlanadi.
+  Widget _imtihonPlitka(BuildContext context) {
+    QiroatLesson? oxirgi;
+    for (final l in repo.qiroatLessons) {
+      if (progress.isCompleted(l.completionId)) oxirgi = l;
+    }
+    final l = oxirgi ?? repo.qiroatLessons.first;
+    final nom = l.book == 1
+        ? '1–${l.num}-darslar'
+        : '${l.book}-kitob ${l.num}-darsgacha';
+    return PremiumTile(
+      title: 'Imtihon — $nom',
+      subtitle: oxirgi == null
+          ? "Hali dars tugatilmagan — 1-dars lug'atidan boshlang"
+          : "Shu darsgacha bo'lgan HAMMA so'z: harflab yozish, jumlalar, tinglash",
+      icon: Icons.workspace_premium_rounded,
+      accent: AppColors.coral,
+      onTap: () => Navigator.push(
+        context,
+        MaterialPageRoute(builder: (_) => ImtihonEkrani(lesson: l)),
+      ),
+    );
+  }
+
   Widget _chaqmoqPlitka(BuildContext context) {
     final rekord = progress.chaqmoqRekord;
     return PremiumTile(

@@ -3,7 +3,6 @@ import 'dart:math';
 import 'package:flutter/material.dart' hide Text;
 
 import '../arabic.dart';
-import '../harflab.dart';
 import '../main.dart';
 import '../mashq/mukofot.dart' show Portlash;
 import '../mashq/tovush.dart';
@@ -66,7 +65,12 @@ class _YozmaImtihonEkraniState extends State<YozmaImtihonEkrani> {
   int _silkin = 0;
   int _portlash = 0;
   bool _tugadi = false;
-  bool _harflabKetmoqda = false;
+
+  /// «Bilmadim» bosildi — javob ko'rsatildi (xato hisobida); so'z navbat
+  /// oxiriga BIR marta qaytadi — ko'rgach, keyinroq o'zi yozib ko'radi.
+  bool _korsatildi = false;
+  final List<YozmaTopshiriq> _bilmaganlar = [];
+  final Set<YozmaTopshiriq> _qaytarilgan = {};
 
   YozmaTopshiriq get _t => _navbat[_i];
 
@@ -119,29 +123,25 @@ class _YozmaImtihonEkraniState extends State<YozmaImtihonEkrani> {
     }
   }
 
-  /// «Bilmadim» — javob ko'rsatilmaydi; ovozda eshitiladi, o'quvchi
-  /// eshitganini yozishi mumkin. Xato hisoblanadi.
+  /// «Bilmadim» — javob KO'RSATILADI va o'qiladi (xato hisobida); so'z
+  /// navbat oxiriga bir marta qaytadi — ko'rib qo'ygach, keyinroq yodidan
+  /// yozib ko'radi. Karnay esa alohida: ko'rsatmasdan faqat eshitish uchun.
   void _bilmadim() {
-    if (_natija == true) return;
+    if (_natija == true || _korsatildi) return;
     if (_urinish == 0 && _t.kalit.isNotEmpty) {
       progress.bumpWord(_t.kalit, false);
     }
+    final t = _t;
+    if (!_bilmaganlar.contains(t)) _bilmaganlar.add(t);
+    if (!_qaytarilgan.contains(t)) {
+      _qaytarilgan.add(t);
+      _navbat.add(t);
+    }
     setState(() {
-      _urinish++;
+      _korsatildi = true;
       _natija = false;
     });
-    Tts.instance.speak(_t.ar, id: 'yz-$_i');
-  }
-
-  /// Harflab eshitish — harf NOMLARI ketma-ket (inson ovozi), ko'rsatilmaydi.
-  Future<void> _harflabEshit() async {
-    if (_harflabKetmoqda) return;
-    setState(() => _harflabKetmoqda = true);
-    for (final h in harflab(_t.ar)) {
-      if (!mounted) return;
-      await Tts.instance.speak(h.nom, id: 'yz-h');
-    }
-    if (mounted) setState(() => _harflabKetmoqda = false);
+    Tts.instance.speak(t.ar, id: 'yz-$_i');
   }
 
   void _keyingi() {
@@ -153,6 +153,7 @@ class _YozmaImtihonEkraniState extends State<YozmaImtihonEkrani> {
       _i++;
       _urinish = 0;
       _natija = null;
+      _korsatildi = false;
       _ctrl.clear();
     });
   }
@@ -367,12 +368,46 @@ class _YozmaImtihonEkraniState extends State<YozmaImtihonEkrani> {
             ),
           ),
         ),
+        // «Bilmadim» dan keyin — to'g'ri javob (imtihon shu so'z uchun
+        // tugadi; so'z keyinroq yana so'raladi).
+        if (_korsatildi)
+          Container(
+            margin: const EdgeInsets.only(top: 8),
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+            decoration: BoxDecoration(
+              color: AppColors.gold.withValues(alpha: 0.14),
+              borderRadius: BorderRadius.circular(14),
+            ),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Text(
+                    "To'g'ri javob — eslab qoling, keyinroq yana so'raladi:",
+                    style: TextStyle(fontSize: 12.5, color: AppColors.matn2),
+                  ),
+                ),
+                Directionality(
+                  textDirection: TextDirection.rtl,
+                  child: Text(
+                    t.ar,
+                    style: AppTheme.arabic(
+                      size: widget.jumla ? 22 : 30,
+                      color: AppColors.gold,
+                      w: FontWeight.w700,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
         const SizedBox(height: 6),
         Text(
           switch (_natija) {
             true => _urinish == 0 ? "To'g'ri! Birinchi urinishda." : "To'g'ri.",
             false =>
-              "Xato — yana urinib ko'ring. Bilmasangiz karnayni bosing yoki harflab eshiting.",
+              _korsatildi
+                  ? "Ko'rib qo'ying — keyin «Keyingisi»."
+                  : "Xato — yana urinib ko'ring. Eshitish uchun karnayni bosing.",
             null =>
               "Javob ko'rsatilmaydi — o'zingiz eslang va yozing. Harakatsiz yozsangiz ham bo'ladi.",
           },
@@ -383,7 +418,7 @@ class _YozmaImtihonEkraniState extends State<YozmaImtihonEkrani> {
           ),
         ),
         const SizedBox(height: 12),
-        if (_natija != true) ...[
+        if (_natija != true && !_korsatildi) ...[
           // Arab klaviaturasi — to'liq alifbo (variant emas).
           Directionality(
             textDirection: TextDirection.rtl,
@@ -432,27 +467,14 @@ class _YozmaImtihonEkraniState extends State<YozmaImtihonEkrani> {
             children: [
               TextButton.icon(
                 onPressed: _bilmadim,
-                icon: const Icon(Icons.volume_up_rounded, size: 18),
-                label: const Text('Bilmadim — eshitaman'),
+                icon: const Icon(Icons.visibility_rounded, size: 18),
+                label: const Text("Bilmadim — javobni ko'rsat"),
                 style: TextButton.styleFrom(foregroundColor: AppColors.gold),
               ),
-              if (!widget.jumla)
-                TextButton.icon(
-                  onPressed: _harflabKetmoqda ? null : _harflabEshit,
-                  icon: const Icon(Icons.spellcheck_rounded, size: 18),
-                  label: const Text('Harflab eshitish'),
-                  style: TextButton.styleFrom(foregroundColor: AppColors.gold),
-                ),
-              if (_urinish >= 2)
-                TextButton.icon(
-                  onPressed: _keyingi,
-                  icon: const Icon(Icons.skip_next_rounded, size: 18),
-                  label: const Text("O'tkazib yuborish"),
-                  style: TextButton.styleFrom(foregroundColor: AppColors.matn3),
-                ),
             ],
           ),
-        ] else
+        ],
+        if (_natija == true || _korsatildi)
           PressableScale(
             child: FilledButton.icon(
               onPressed: _keyingi,
@@ -511,6 +533,7 @@ class _YozmaImtihonEkraniState extends State<YozmaImtihonEkrani> {
     padding: const EdgeInsets.all(24),
     child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisSize: MainAxisSize.min,
       children: [
         Reveal(
           fromScale: 0.6,
@@ -534,6 +557,54 @@ class _YozmaImtihonEkraniState extends State<YozmaImtihonEkrani> {
           'Birinchi urinishda to\'g\'ri: $_togri / ${_navbat.length}',
           style: TextStyle(fontSize: 16, color: AppColors.matn2),
         ),
+        if (_bilmaganlar.isNotEmpty) ...[
+          const SizedBox(height: 16),
+          Text(
+            'Ishlash kerak (${_bilmaganlar.length}):',
+            style: TextStyle(fontWeight: FontWeight.w800, color: AppColors.ink),
+          ),
+          const SizedBox(height: 6),
+          Flexible(
+            child: ListView(
+              shrinkWrap: true,
+              children: [
+                for (final t in _bilmaganlar)
+                  Container(
+                    margin: const EdgeInsets.only(bottom: 6),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 12,
+                      vertical: 8,
+                    ),
+                    decoration: BoxDecoration(
+                      color: AppColors.coral.withValues(alpha: 0.10),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: Text(
+                            t.uz,
+                            style: TextStyle(color: AppColors.matn2),
+                          ),
+                        ),
+                        Directionality(
+                          textDirection: TextDirection.rtl,
+                          child: Text(
+                            t.ar,
+                            style: AppTheme.arabic(
+                              size: 22,
+                              color: AppColors.ink,
+                            ),
+                          ),
+                        ),
+                        SpeakButton(text: t.ar, id: 'yz-x-${t.ar}', size: 18),
+                      ],
+                    ),
+                  ),
+              ],
+            ),
+          ),
+        ],
         const SizedBox(height: 24),
         FilledButton(
           onPressed: () => Navigator.pop(context),

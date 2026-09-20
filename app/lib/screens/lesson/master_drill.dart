@@ -36,6 +36,7 @@ const List<(IconData, String, String)> _modeMeta = [
     'Harflarni tartib bilan bosib so\'zni yozing',
   ),
   (Icons.notes_rounded, 'Gap tuz', 'So\'zlarni tartiblab jumla tuzing'),
+  (Icons.filter_2_rounded, 'Ko\'plik', 'Bu so\'zning KO\'PLIGI qaysi?'),
 ];
 
 class _MasterDrillState extends State<MasterDrill> {
@@ -60,6 +61,9 @@ class _MasterDrillState extends State<MasterDrill> {
 
   QiroatVocab? _word;
   int _mode = 0;
+
+  /// Variantli usullar (0–3 va ko'plik 6).
+  bool get _mcq => _mode <= 3 || _mode == 6;
 
   // MCQ holati
   List<String> _options = [];
@@ -110,6 +114,9 @@ class _MasterDrillState extends State<MasterDrill> {
       modes.add(4); // harflardan tuz
     }
     if (_example(v) != null) modes.add(5); // gap tuz
+    // Ko'pligi bor so'z ko'pligi ham yodlanmaguncha «to'liq» sanalmaydi —
+    // kitob lug'ati juftlik, matnda ko'plik ishlatiladi.
+    if (v.plShakllari.isNotEmpty) modes.add(6);
     return modes;
   }
 
@@ -168,8 +175,10 @@ class _MasterDrillState extends State<MasterDrill> {
     _dk = false;
     _arrangeOk = null;
     _built.clear();
-    if (_mode <= 3) {
+    if (_mcq) {
       _buildMcq(v, _mode);
+    } else if (_mode == 6) {
+      _buildKoplik(v);
     } else if (_mode == 4) {
       _buildLetters(v);
     } else {
@@ -181,6 +190,26 @@ class _MasterDrillState extends State<MasterDrill> {
         (_) => Tts.instance.speak(_head(v), id: 'q'),
       );
     }
+  }
+
+  /// Ko'plik savoli: chalg'ituvchilar — boshqa so'zlarning ko'pliklari,
+  /// yetmasa birliklari.
+  void _buildKoplik(QiroatVocab word) {
+    final correctVal = word.plShakllari.first;
+    final distract = <String>{};
+    for (final v in _pool) {
+      if (v == word) continue;
+      for (final sh in v.plShakllari) {
+        if (sh != correctVal) distract.add(sh);
+      }
+    }
+    for (final v in _pool) {
+      if (distract.length >= 6) break;
+      if (v != word) distract.add(_head(v));
+    }
+    final ro = distract.toList()..shuffle(_rnd);
+    _options = <String>[correctVal, ...ro.take(3)]..shuffle(_rnd);
+    _correct = _options.indexOf(correctVal);
   }
 
   void _buildMcq(QiroatVocab word, int mode) {
@@ -261,7 +290,7 @@ class _MasterDrillState extends State<MasterDrill> {
   /// Bu usul «bajarilmagan» qoladi, so'z keyin yana keladi (jazolamaymiz).
   Future<void> _dontKnow() async {
     final v = _word!;
-    if (_mode <= 3) {
+    if (_mcq) {
       if (_answered) return;
       setState(() {
         _picked = null;
@@ -505,7 +534,7 @@ class _MasterDrillState extends State<MasterDrill> {
         Icon(_modeMeta[_mode].$1, size: 14, color: AppColors.emerald),
         const SizedBox(width: 5),
         Text(
-          '${_mode + 1}/6 · ${_modeMeta[_mode].$2}',
+          '${_mode + 1}/${_modeMeta.length} · ${_modeMeta[_mode].$2}',
           style: const TextStyle(
             fontSize: 11.5,
             fontWeight: FontWeight.w800,
@@ -522,7 +551,7 @@ class _MasterDrillState extends State<MasterDrill> {
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 2),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: List.generate(6, (i) {
+        children: List.generate(_modeMeta.length, (i) {
           final required = req.contains(i);
           final done = progress.isModeDone(_key(v), i);
           final cur = i == _mode;
@@ -577,6 +606,20 @@ class _MasterDrillState extends State<MasterDrill> {
         return _mcqBody(v, prompt: _listenPrompt(v), arabicOptions: false);
       case 3:
         return _findBody(v);
+      case 6:
+        // Ko'plik yashirin — u javob; so'z va ma'nosi ko'rsatiladi.
+        return _mcqBody(
+          v,
+          prompt: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              _arWord(_head(v), play: true),
+              const SizedBox(height: 4),
+              Text(v.uz, style: TextStyle(color: AppColors.matn2)),
+            ],
+          ),
+          arabicOptions: true,
+        );
       case 4:
       case 5:
         return _arrangeBody(v);
@@ -965,9 +1008,8 @@ class _MasterDrillState extends State<MasterDrill> {
       );
     }
     if (v == null) return const SizedBox(height: 58);
-    final ok =
-        !_dk && (_mode <= 3 ? _picked == _correct : (_arrangeOk ?? false));
-    final answer = _mode <= 3
+    final ok = !_dk && (_mcq ? _picked == _correct : (_arrangeOk ?? false));
+    final answer = _mcq
         ? _options[_correct]
         : _target.join(_mode == 5 ? ' ' : '');
     final color = _dk

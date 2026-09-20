@@ -16,6 +16,7 @@ import 'bosh_joy.dart';
 import 'gap_tuzish_ekrani.dart';
 import 'lesson/gap_tuzish.dart';
 import 'lesson/harflab_yozish.dart';
+import 'yozma_imtihon.dart';
 import '../harflab.dart';
 
 /// IMTIHON — shu darsgacha o'tilgan HAMMA lug'at (1-darsdan shu darsgacha,
@@ -113,6 +114,63 @@ class _ImtihonEkraniState extends State<ImtihonEkrani> {
       ),
     );
     if (mounted) setState(() {});
+  }
+
+  /// YOZMA — variantsiz: o'zbekchasi beriladi, arabchasini o'zi teradi
+  /// (birligi va ko'pligi). Javob ko'rsatilmaydi — faqat ovoz.
+  Future<void> _yozmaSozlar() async {
+    final tanlangan = _navbatdagi();
+    if (tanlangan.isEmpty) return;
+    final ro = <YozmaTopshiriq>[];
+    for (final e in tanlangan) {
+      if (e.ar.contains(' ')) continue;
+      ro.add(YozmaTopshiriq(uz: e.uz, ar: e.ar, kalit: e.kalit));
+      for (final pl in e.plShakllari) {
+        if (!pl.contains(' ')) {
+          ro.add(
+            YozmaTopshiriq(uz: "${e.uz} — KO'PLIGI", ar: pl, kalit: e.kalit),
+          );
+        }
+      }
+    }
+    if (ro.isEmpty) return;
+    await Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => YozmaImtihonEkrani(
+          topshiriqlar: ro,
+          sarlavha: 'Yozma imtihon — so\'zlar',
+        ),
+      ),
+    );
+    if (mounted) setState(() {});
+  }
+
+  /// YOZMA JUMLALAR — o'zbekcha jumla beriladi, arabchasini o'zi yozadi.
+  /// Faqat jumlalar soni tarjima bilan aynan mos darslardan (aniqlik).
+  void _yozmaJumlalar() {
+    final ro = <YozmaTopshiriq>[];
+    for (final l in _darslar) {
+      final ar = splitSentences(l.reading);
+      final uz = splitSentences(l.translation);
+      if (ar.length != uz.length) continue;
+      for (var i = 0; i < ar.length; i++) {
+        final n = GapTuzish.sozlar(ar[i]).length;
+        if (n >= 2 && n <= 8) ro.add(YozmaTopshiriq(uz: uz[i], ar: ar[i]));
+      }
+    }
+    if (ro.isEmpty) return;
+    ro.shuffle(_rnd);
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => YozmaImtihonEkrani(
+          topshiriqlar: ro.take(10).toList(),
+          sarlavha: 'Yozma imtihon — jumlalar',
+          jumla: true,
+        ),
+      ),
+    );
   }
 
   Future<void> _lugat() async {
@@ -262,6 +320,24 @@ class _ImtihonEkraniState extends State<ImtihonEkrani> {
               const SizedBox(height: 16),
               _tugma(
                 rang: AppColors.coral,
+                ikon: Icons.edit_rounded,
+                nom: "Yozma — so'zlar (variantsiz)",
+                izoh:
+                    "O'zbekchasi beriladi, arabchasini o'zingiz yozasiz — birligi va ko'pligi; javob ko'rsatilmaydi, faqat ovoz",
+                onTap: _yozmaSozlar,
+              ),
+              const SizedBox(height: 10),
+              _tugma(
+                rang: AppColors.coral,
+                ikon: Icons.edit_note_rounded,
+                nom: "Yozma — jumlalar (variantsiz)",
+                izoh:
+                    "O'zbekcha jumla beriladi, arabchasini o'zingiz yozasiz; bilmasangiz ovozda eshitasiz",
+                onTap: _yozmaJumlalar,
+              ),
+              const SizedBox(height: 10),
+              _tugma(
+                rang: AppColors.indigo,
                 ikon: Icons.spellcheck_rounded,
                 nom: zaif.isEmpty
                     ? "Harflab yozing — mustahkamlash (20 so'z)"

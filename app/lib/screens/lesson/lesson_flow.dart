@@ -654,7 +654,7 @@ class _DoneView extends StatelessWidget {
                         ),
                         icon: const Icon(Icons.psychology_alt, size: 20),
                         label: const Text(
-                          "So'zlarni chuqur yodlash (6 usul)",
+                          "So'zlarni chuqur yodlash (7 usul)",
                           style: TextStyle(fontWeight: FontWeight.w700),
                         ),
                         style: OutlinedButton.styleFrom(

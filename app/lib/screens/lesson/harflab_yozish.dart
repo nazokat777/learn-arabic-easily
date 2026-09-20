@@ -75,8 +75,8 @@ class HarflabYozishEkrani extends StatefulWidget {
 
 class _HarflabYozishEkraniState extends State<HarflabYozishEkrani> {
   final _rnd = Random();
-  late final List<({String ar, String uz})> _sozlar =
-      List.of(widget.sozRoyxati)..shuffle(_rnd);
+  late final List<({String ar, String uz})> _sozlar = List.of(widget.sozRoyxati)
+    ..shuffle(_rnd);
   int _i = 0;
   late List<HarfBolagi> _asl;
   late List<HarfBolagi> _havza; // aralashgan harflar + chalg'ituvchilar
@@ -105,11 +105,9 @@ class _HarflabYozishEkraniState extends State<HarflabYozishEkrani> {
     // Chalg'ituvchi: so'zda yo'q 2 ta harf — o'quvchi «qolgan harfni bos»
     // hiylasi bilan o'tib ketmasin.
     final bor = _asl.map((h) => h.harf).toSet();
-    final boshqa = repo.letters
-        .map((l) => l.ar)
-        .where((c) => !bor.contains(c))
-        .toList()
-      ..shuffle(_rnd);
+    final boshqa =
+        repo.letters.map((l) => l.ar).where((c) => !bor.contains(c)).toList()
+          ..shuffle(_rnd);
     _havza = [
       ..._asl,
       for (final c in boshqa.take(2)) HarfBolagi(c, harfNomi(c) ?? c),
@@ -117,11 +115,9 @@ class _HarflabYozishEkraniState extends State<HarflabYozishEkrani> {
     _tanlangan.clear();
     _xato = 0;
     _tugallandi = false;
-    // So'z avval eshittiriladi — o'quvchi eshitgan so'zini yozadi.
-    final i = _i;
-    Future.delayed(const Duration(milliseconds: 400), () {
-      if (mounted && _i == i) Tts.instance.speak(_sozlar[i].ar, id: 'hy-$i');
-    });
+    // Ovoz o'z-o'zidan chalinmaydi: o'quvchi avval O'ZI eslashga harakat
+    // qilsin (faol eslash), eslolmasa karnay tugmasini bosadi. Ovoz oldindan
+    // aytilsa, mashq «eshitganini yozish»ga aylanib, xotira ishlamaydi.
   }
 
   void _bos(int idx) {
@@ -297,8 +293,10 @@ class _HarflabYozishEkraniState extends State<HarflabYozishEkrani> {
         const SizedBox(height: 8),
         Text(
           _tugallandi
-              ? (_xato == 0 ? "Xatosiz! To'g'ri yozdingiz." : "To'g'ri yozdingiz.")
-              : "Harflarni tartib bilan bosing — har harf nomi aytiladi.",
+              ? (_xato == 0
+                    ? "Xatosiz! To'g'ri yozdingiz."
+                    : "To'g'ri yozdingiz.")
+              : "Avval o'zingiz eslang; eslolmasangiz karnayni bosing. Harflarni tartib bilan bosing — har harf nomi aytiladi.",
           textAlign: TextAlign.center,
           style: TextStyle(color: AppColors.matn2, fontSize: 13),
         ),

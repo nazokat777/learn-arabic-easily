@@ -115,6 +115,12 @@ enum MashqTuri {
   /// javob ko'z oldida turadi va xotira zo'riqmaydi; harflab yig'ishda esa
   /// so'zni o'zi qaytadan tuzadi — shundagina u faol xotiraga o'tadi.
   harflabYoz,
+
+  /// Birlik ko'rsatiladi → KO'PLIGI tanlanadi (kitob lug'ati juftligi).
+  ///
+  /// Ko'plikni faqat ko'rsatib qo'yish yodlatmaydi — so'ralsagina xotiraga
+  /// o'tadi. Chalg'ituvchilar — boshqa so'zlarning ko'pliklari.
+  koplikTop,
 }
 
 /// Bitta so'raladigan savol: element + qaysi turda so'ralishi.
@@ -141,7 +147,9 @@ class MashqSavol {
 
   /// Variantlar arabchami (chizishda o'ngdan chapga va Amiri kerak).
   bool get arabchaVariantlar =>
-      turi == MashqTuri.arabchaTop || turi == MashqTuri.tinglabTop;
+      turi == MashqTuri.arabchaTop ||
+      turi == MashqTuri.tinglabTop ||
+      turi == MashqTuri.koplikTop;
 }
 
 /// Elementlardan savol yasaydi.
@@ -162,8 +170,44 @@ class SavolYasagich {
       if (daraja >= 1) MashqTuri.arabchaTop,
       if (daraja >= 2 && ovozBor && e.ovoz.isNotEmpty) MashqTuri.tinglabTop,
       if (daraja >= 1) MashqTuri.tugriMi,
+      // Ko'pligi bor so'zda ko'plik savoli ikki marta kiradi — u kamdan-kam
+      // emas, muntazam so'ralsin.
+      if (e.pl.isNotEmpty) MashqTuri.koplikTop,
+      if (e.pl.isNotEmpty && daraja >= 1) MashqTuri.koplikTop,
     ];
     return turlar[_rnd.nextInt(turlar.length)];
+  }
+
+  /// Ko'plik savoli: to'g'ri javob — elementning birinchi ko'plik shakli,
+  /// chalg'ituvchilar — havzadagi boshqa so'zlarning ko'pliklari.
+  MashqSavol? _koplik(MashqElement e, List<MashqElement> havza) {
+    final shakllar = e.plShakllari;
+    if (shakllar.isEmpty) return null;
+    final togriJavob = shakllar.first;
+    final boshqalar = <String>{};
+    for (final x in havza) {
+      if (x.pl.isEmpty || x.uz.trim() == e.uz.trim()) continue;
+      for (final sh in x.plShakllari) {
+        if (sh != togriJavob && !shakllar.contains(sh)) boshqalar.add(sh);
+      }
+    }
+    // Ko'plik kam bo'lgan darsda boshqa so'zlarning BIRLIGI ham chalg'ituvchi
+    // bo'la oladi (ko'rinishi ko'plikka o'xshamaydi — lekin variant yetadi).
+    if (boshqalar.length < 3) {
+      for (final x in havza) {
+        if (x.uz.trim() != e.uz.trim() && x.ar != e.ar) boshqalar.add(x.ar);
+        if (boshqalar.length >= 6) break;
+      }
+    }
+    if (boshqalar.length < 3) return null;
+    final ro = boshqalar.toList()..shuffle(_rnd);
+    final variantlar = <String>[togriJavob, ...ro.take(3)]..shuffle(_rnd);
+    return MashqSavol(
+      element: e,
+      turi: MashqTuri.koplikTop,
+      variantlar: variantlar,
+      togri: variantlar.indexOf(togriJavob),
+    );
   }
 
   /// Bitta savol yasaydi. Chalg'ituvchilar [havza] dan olinadi.
@@ -174,6 +218,8 @@ class SavolYasagich {
   /// bo'lib qolardi.
   MashqSavol? yasa(MashqElement e, List<MashqElement> havza, {MashqTuri? tur}) {
     final turi = tur ?? turTanla(e);
+
+    if (turi == MashqTuri.koplikTop) return _koplik(e, havza);
 
     if (turi == MashqTuri.tugriMi) {
       // Yarmi to'g'ri, yarmi soxta juftlik.

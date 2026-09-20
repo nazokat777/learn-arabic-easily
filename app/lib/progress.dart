@@ -287,8 +287,11 @@ class Progress extends ChangeNotifier {
   /// Ko'p usulli yodlash: so'z HAR usulda kamida bir marta to'g'ri o'tilishi kerak.
   /// Har usul — bitta bit. So'z «to'liq yodlangan» = barcha usullar bitlari yoqilgan.
   static const int masterModeCount =
-      6; // tanish, teskari, eshit, top, harflar, gap
-  static const int allModesMask = (1 << masterModeCount) - 1; // 63
+      7; // tanish, teskari, eshit, top, harflar, gap, ko'plik
+  // isWordMastered faqat 6 asosiy usulga qaraydi: ko'plik usuli (7-bit)
+  // ko'pligi bo'lmagan so'zlarda umuman yo'q — MasterDrill so'zning o'z
+  // kerakli usullari niqobi bilan tekshiradi.
+  static const int allModesMask = (1 << 6) - 1; // 63
   final Map<String, int> _modeMask =
       {}; // darsId::arabcha -> bajarilgan usullar bitmaskasi
 

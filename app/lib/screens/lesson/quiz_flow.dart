@@ -42,7 +42,18 @@ class _QQ {
   final bool arToUz;
   final List<String> options;
   final int correct;
-  _QQ(this.word, this.arToUz, this.options, this.correct);
+
+  /// Ko'plik savoli: birlik ko'rsatiladi, variantlar — ko'pliklar (arabcha).
+  /// Kitob har otni birlik+ko'plik bilan beradi va matnda ko'plik ishlatiladi
+  /// (أَيْنَ الْمَسَاوِيكُ؟) — ko'plikni alohida so'ramasa, o'quvchi bilmaydi.
+  final bool koplik;
+  _QQ(
+    this.word,
+    this.arToUz,
+    this.options,
+    this.correct, {
+    this.koplik = false,
+  });
 }
 
 class _QuizStageState extends State<QuizStage> {
@@ -70,7 +81,12 @@ class _QuizStageState extends State<QuizStage> {
       if (v.ar.trim().isEmpty || v.uz.trim().isEmpty) continue;
       if (seen.add(v.uz)) _pool.add(v);
     }
-    _questions = _pool.map(_build).toList()..shuffle(_rnd);
+    _questions = [
+      ..._pool.map(_build),
+      // Ko'pligi bor har so'z uchun alohida ko'plik savoli.
+      for (final w in _pool)
+        if (w.plShakllari.isNotEmpty) ?_buildKoplik(w),
+    ]..shuffle(_rnd);
     if (_questions.isEmpty) {
       WidgetsBinding.instance.addPostFrameCallback(
         (_) => widget.onFinish(const [], 0),
@@ -94,6 +110,29 @@ class _QuizStageState extends State<QuizStage> {
           ..shuffle(_rnd);
     final options = <String>[correctVal, ...distract.take(3)]..shuffle(_rnd);
     return _QQ(word, arToUz, options, options.indexOf(correctVal));
+  }
+
+  /// Ko'plik savoli — chalg'ituvchilar: shu dars so'zlarining ko'pliklari,
+  /// yetmasa birliklari.
+  _QQ? _buildKoplik(QiroatVocab word) {
+    final correctVal = word.plShakllari.first;
+    final distract = <String>{};
+    for (final v in _pool) {
+      if (v == word) continue;
+      for (final sh in v.plShakllari) {
+        if (sh != correctVal) distract.add(sh);
+      }
+    }
+    if (distract.length < 3) {
+      for (final v in _pool) {
+        if (v != word) distract.add(splitForms(v.ar).first);
+        if (distract.length >= 6) break;
+      }
+    }
+    if (distract.length < 3) return null;
+    final ro = distract.toList()..shuffle(_rnd);
+    final options = <String>[correctVal, ...ro.take(3)]..shuffle(_rnd);
+    return _QQ(word, true, options, options.indexOf(correctVal), koplik: true);
   }
 
   Future<void> _answer(int i) async {
@@ -120,6 +159,7 @@ class _QuizStageState extends State<QuizStage> {
     } else if (!_missed.contains(q.word)) {
       _missed.add(q.word);
     }
+    if (q.koplik) Tts.instance.speak(q.options[q.correct], id: 'q-pl');
     await progress.bumpWord(_key(q.word), ok);
     Future.delayed(Duration(milliseconds: ok ? 650 : 1300), () {
       if (!mounted) return;
@@ -236,7 +276,9 @@ class _QuizStageState extends State<QuizStage> {
           ),
           const Spacer(),
           Text(
-            q.arToUz
+            q.koplik
+                ? "Bu so'zning KO'PLIGI qaysi?"
+                : q.arToUz
                 ? 'Bu so\'z nima degani?'
                 : 'Qaysi so\'z «${q.word.uz}» degani?',
             style: TextStyle(color: AppColors.matn2),
@@ -303,7 +345,8 @@ class _QuizStageState extends State<QuizStage> {
                               ),
                             ],
                           ),
-                          KoplikQatori(v: q.word, idPrefix: 'qf'),
+                          if (!q.koplik)
+                            KoplikQatori(v: q.word, idPrefix: 'qf'),
                         ],
                       )
                     : Text(
@@ -332,7 +375,7 @@ class _QuizStageState extends State<QuizStage> {
   }
 
   Widget _optTile(_QQ q, int i) {
-    final isArabic = !q.arToUz;
+    final isArabic = !q.arToUz || q.koplik;
     Color border = AppColors.chiziq2;
     Color bg = AppColors.karta;
     if (_answered) {

@@ -188,7 +188,9 @@ class _MashqEkranState extends State<MashqEkran> {
     // top» va «tinglab top» turlarida javobgacha jim (aks holda javob
     // aytilib qo'yiladi).
     final korsatiladi =
-        s.turi == MashqTuri.manoTop || s.turi == MashqTuri.tugriMi;
+        s.turi == MashqTuri.manoTop ||
+        s.turi == MashqTuri.tugriMi ||
+        s.turi == MashqTuri.koplikTop;
     if ((orgat || korsatiladi) && s.element.ovoz.isNotEmpty) {
       Tts.instance.speak(s.element.ovoz, id: s.element.kalit);
     }
@@ -279,6 +281,13 @@ class _MashqEkranState extends State<MashqEkran> {
         s0.element.ovoz.isNotEmpty) {
       Future.delayed(const Duration(milliseconds: 350), () {
         if (mounted) Tts.instance.speak(s0.element.ovoz, id: s0.element.kalit);
+      });
+    }
+    // Ko'plik savolida — to'g'ri ko'plik o'qiladi.
+    if (s0.turi == MashqTuri.koplikTop) {
+      final pl = s0.variantlar[s0.togri];
+      Future.delayed(const Duration(milliseconds: 350), () {
+        if (mounted) Tts.instance.speak(pl, id: 'pl-$pl');
       });
     }
 
@@ -716,6 +725,8 @@ class _MashqEkranState extends State<MashqEkran> {
             : "Bu juftlik to'g'rimi?";
       case MashqTuri.harflabYoz:
         korsatma = "Arabchasini harflab yozing";
+      case MashqTuri.koplikTop:
+        korsatma = "Bu so'zning KO'PLIGI qaysi?";
     }
 
     Widget ichi;
@@ -785,6 +796,23 @@ class _MashqEkranState extends State<MashqEkran> {
             const SizedBox(height: 14),
             _terilganQator(e),
           ],
+        );
+      case MashqTuri.koplikTop:
+        // Ko'plik yashiriladi — u javob.
+        ichi = InkWell(
+          borderRadius: BorderRadius.circular(12),
+          onTap: () => Tts.instance.speak(e.ovoz, id: e.kalit),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              _arabchaMatn(e, koplik: false),
+              const SizedBox(height: 4),
+              Text(
+                e.uz,
+                style: TextStyle(fontSize: 14, color: AppColors.matn2),
+              ),
+            ],
+          ),
         );
       case MashqTuri.tugriMi:
         ichi = Column(
@@ -857,7 +885,7 @@ class _MashqEkranState extends State<MashqEkran> {
     );
   }
 
-  Widget _arabchaMatn(MashqElement e) => Column(
+  Widget _arabchaMatn(MashqElement e, {bool koplik = true}) => Column(
     mainAxisSize: MainAxisSize.min,
     children: [
       Directionality(
@@ -869,7 +897,7 @@ class _MashqEkranState extends State<MashqEkran> {
         ),
       ),
       // Ko'pligi — kitob lug'atidagidek birlik bilan yonma-yon.
-      if (e.pl.isNotEmpty)
+      if (koplik && e.pl.isNotEmpty)
         Padding(
           padding: const EdgeInsets.only(top: 4),
           child: Wrap(

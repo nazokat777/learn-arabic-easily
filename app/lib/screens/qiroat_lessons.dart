@@ -18,6 +18,7 @@ import '../widgets/speak_button.dart';
 import 'bosh_joy.dart';
 import 'gap_tuzish_ekrani.dart';
 import 'imtihon_ekrani.dart';
+import 'yozma_imtihon.dart';
 import 'lesson/harflab_yozish.dart';
 import 'qiroat_drill.dart';
 import 'tarjima_mashqi.dart';
@@ -537,7 +538,7 @@ class DarsOyinlari extends StatelessWidget {
           context,
           color: AppColors.gold,
           icon: Icons.psychology_alt,
-          label: "So'zlarni chuqur yodlash (6 usul)",
+          label: "So'zlarni chuqur yodlash (7 usul)",
           page: MasterDrill(lesson: lesson),
         ),
         const SizedBox(height: 10),
@@ -587,6 +588,15 @@ class DarsOyinlari extends StatelessWidget {
             page: HarflabYozishEkrani(lesson: lesson),
           ),
         ],
+        const SizedBox(height: 10),
+        // YOZMA — variantsiz: o'zbekchasi beriladi, arabchasini o'zi yozadi.
+        _exerciseButtonAction(
+          context,
+          color: AppColors.coral,
+          icon: Icons.edit_rounded,
+          label: "Yozma mashq — o'zbekchadan arabchaga (variantsiz)",
+          onTap: () => yozmaMashqniOch(context, lesson),
+        ),
         // IMTIHON — shu darsgacha o'tilgan HAMMA lug'at bo'yicha (unutilgan
         // so'z qolib ketmasin): darsning yakuniy bo'limi.
         const SizedBox(height: 18),
@@ -767,4 +777,48 @@ class _FoldBlockState extends State<_FoldBlock> {
       ),
     );
   }
+}
+
+/// Bitta darsning yozma mashqi: lug'at (birlik + ko'plik) va jumlalar
+/// (tarjima mos bo'lsa) aralash — o'zbekchadan arabchaga, variantsiz.
+void yozmaMashqniOch(BuildContext context, QiroatLesson lesson) {
+  final ro = <YozmaTopshiriq>[];
+  for (final v in lesson.vocab) {
+    final head = splitForms(v.ar).isEmpty ? v.ar : splitForms(v.ar).first;
+    if (head.trim().isEmpty || v.uz.trim().isEmpty) continue;
+    ro.add(
+      YozmaTopshiriq(
+        uz: v.uz,
+        ar: head,
+        kalit: '${lesson.completionId}::${v.ar}',
+      ),
+    );
+    for (final pl in v.plShakllari) {
+      ro.add(
+        YozmaTopshiriq(
+          uz: "${v.uz} — KO'PLIGI",
+          ar: pl,
+          kalit: '${lesson.completionId}::${v.ar}',
+        ),
+      );
+    }
+  }
+  final ar = splitSentences(lesson.reading);
+  final uz = splitSentences(lesson.translation);
+  if (ar.length == uz.length) {
+    for (var i = 0; i < ar.length; i++) {
+      ro.add(YozmaTopshiriq(uz: uz[i], ar: ar[i]));
+    }
+  }
+  if (ro.isEmpty) return;
+  Navigator.push(
+    context,
+    MaterialPageRoute(
+      builder: (_) => YozmaImtihonEkrani(
+        topshiriqlar: ro,
+        sarlavha: '${lesson.num}-dars — yozma mashq',
+        jumla: true,
+      ),
+    ),
+  );
 }

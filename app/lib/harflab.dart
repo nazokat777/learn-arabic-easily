@@ -1,4 +1,3 @@
-import 'arabic.dart';
 import 'content.dart';
 import 'main.dart';
 
@@ -7,9 +6,18 @@ import 'main.dart';
 /// to'plamidan chiqadi; qolgan belgilar (ة، ء، ى) uchun nom matn bilan
 /// beriladi — ular kitobda ham shu nom bilan o'rgatiladi.
 class HarfBolagi {
+  /// Harfning o'zi (harakatsiz).
   final String harf;
+
+  /// Nomi (aytiladigan).
   final String nom;
-  const HarfBolagi(this.harf, this.nom);
+
+  /// Harf so'zdagi HARAKATI bilan (بَ، بِ، بُ، بْ، بَّ، بٌ …). Harflab
+  /// yozishda aynan shu ko'rsatiladi va shu bilan solishtiriladi — o'quvchi
+  /// harfni ham, harakatini ham eslasin (sukun, tashdid, tanvin ham).
+  final String shakl;
+  const HarfBolagi(this.harf, this.nom, [String? shakl])
+    : shakl = shakl ?? harf;
 }
 
 /// Hamzali shakllar asl harfiga keltiriladi — nomi o'sha harf nomi bilan
@@ -22,18 +30,42 @@ const _maxsus = {
   'ى': 'أَلِفٌ مَقْصُورَةٌ',
 };
 
-/// So'zni harflarga ajratadi (harakatsiz), har harfga nomini biriktiradi.
-/// Bo'sh joy va tinish belgilari tashlab yuboriladi.
+/// Harakat belgilari (fatha, kasra, damma, sukun, shadda, tanvinlar, alif
+/// xanjariya…) — harfga ergashadi.
+final RegExp _harakat = RegExp('[ً-ْٰ]');
+
+/// So'zni harflarga ajratadi, har harfga nomini va so'zdagi harakatli
+/// shaklini biriktiradi. Bo'sh joy va tinish belgilari tashlab yuboriladi.
 List<HarfBolagi> harflab(String soz) {
   final out = <HarfBolagi>[];
-  for (final ch in stripDiacritics(soz).split('')) {
-    if (ch.trim().isEmpty) continue;
+  final chars = soz.replaceAll('ـ', '').split('');
+  for (var i = 0; i < chars.length; i++) {
+    final ch = chars[i];
+    if (ch.trim().isEmpty || _harakat.hasMatch(ch)) continue;
     final nom = harfNomi(ch);
     if (nom == null) continue; // tinish belgisi, raqam va h.k.
-    out.add(HarfBolagi(ch, nom));
+    var shakl = ch;
+    var j = i + 1;
+    while (j < chars.length && _harakat.hasMatch(chars[j])) {
+      shakl += chars[j];
+      j++;
+    }
+    out.add(HarfBolagi(ch, nom, shakl));
   }
   return out;
 }
+
+/// Chalg'ituvchi harf uchun tasodifiy harakat (ko'rinishi so'z harflariga
+/// o'xshasin — harakatsiz chalg'ituvchi darrov bilinib qoladi).
+const harakatlar = [
+  '\u064E',
+  '\u0650',
+  '\u064F',
+  '\u0652',
+  '\u064B',
+  '\u064C',
+  '\u064D',
+];
 
 /// Bitta harfning aytiladigan nomi; harf bo'lmasa null.
 String? harfNomi(String ch) {

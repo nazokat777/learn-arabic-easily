@@ -96,7 +96,7 @@ class _HarflabQatoriState extends State<HarflabQatori> {
                       height: widget.harfOlchami + 20,
                       alignment: Alignment.center,
                       child: Text(
-                        _harflar[i].harf,
+                        _harflar[i].shakl,
                         style: AppTheme.arabic(
                           size: widget.harfOlchami,
                           color: _faol == i

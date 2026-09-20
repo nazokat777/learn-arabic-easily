@@ -110,7 +110,12 @@ class _HarflabYozishEkraniState extends State<HarflabYozishEkrani> {
           ..shuffle(_rnd);
     _havza = [
       ..._asl,
-      for (final c in boshqa.take(2)) HarfBolagi(c, harfNomi(c) ?? c),
+      for (final c in boshqa.take(2))
+        HarfBolagi(
+          c,
+          harfNomi(c) ?? c,
+          c + harakatlar[_rnd.nextInt(harakatlar.length)],
+        ),
     ]..shuffle(_rnd);
     _tanlangan.clear();
     _xato = 0;
@@ -125,7 +130,8 @@ class _HarflabYozishEkraniState extends State<HarflabYozishEkrani> {
     final k = _tanlangan.length;
     final kerak = _asl[k];
     final bosilgan = _havza[idx];
-    if (bosilgan.harf == kerak.harf && !_tanlangan.contains(idx)) {
+    // Harf ham, harakati ham mos bo'lishi kerak (sukun, tashdid, tanvin ham).
+    if (bosilgan.shakl == kerak.shakl && !_tanlangan.contains(idx)) {
       Haptic.tap();
       setState(() => _tanlangan.add(idx));
       Tts.instance.speak(bosilgan.nom, id: 'hy-h$k');
@@ -191,7 +197,7 @@ class _HarflabYozishEkraniState extends State<HarflabYozishEkrani> {
 
   Widget _mashq() {
     final s = _sozlar[_i];
-    final yigilgan = _tanlangan.map((i) => _havza[i].harf).join();
+    final yigilgan = _tanlangan.map((i) => _havza[i].shakl).join();
     return ListView(
       padding: const EdgeInsets.fromLTRB(20, 12, 20, 28),
       children: [
@@ -296,7 +302,7 @@ class _HarflabYozishEkraniState extends State<HarflabYozishEkrani> {
               ? (_xato == 0
                     ? "Xatosiz! To'g'ri yozdingiz."
                     : "To'g'ri yozdingiz.")
-              : "Avval o'zingiz eslang; eslolmasangiz karnayni bosing. Harflarni tartib bilan bosing — har harf nomi aytiladi.",
+              : "Avval o'zingiz eslang; eslolmasangiz karnayni bosing. Harflarni harakati bilan, tartib bo'yicha bosing.",
           textAlign: TextAlign.center,
           style: TextStyle(color: AppColors.matn2, fontSize: 13),
         ),
@@ -354,7 +360,7 @@ class _HarflabYozishEkraniState extends State<HarflabYozishEkrani> {
             height: 62,
             alignment: Alignment.center,
             child: Text(
-              h.harf,
+              h.shakl,
               style: AppTheme.arabic(
                 size: 32,
                 color: ishlatilgan ? AppColors.matn3 : AppColors.zumradMatn,

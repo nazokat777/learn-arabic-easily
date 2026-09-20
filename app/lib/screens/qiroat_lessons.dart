@@ -17,6 +17,7 @@ import '../widgets/yol.dart';
 import '../widgets/speak_button.dart';
 import 'bosh_joy.dart';
 import 'gap_tuzish_ekrani.dart';
+import 'imtihon_ekrani.dart';
 import 'lesson/harflab_yozish.dart';
 import 'qiroat_drill.dart';
 import 'tarjima_mashqi.dart';
@@ -586,6 +587,18 @@ class DarsOyinlari extends StatelessWidget {
             page: HarflabYozishEkrani(lesson: lesson),
           ),
         ],
+        // IMTIHON — shu darsgacha o'tilgan HAMMA lug'at bo'yicha (unutilgan
+        // so'z qolib ketmasin): darsning yakuniy bo'limi.
+        const SizedBox(height: 18),
+        _exerciseButton(
+          context,
+          color: AppColors.coral,
+          icon: Icons.workspace_premium_rounded,
+          label: lesson.book == 1
+              ? "IMTIHON — 1–${lesson.num}-darslar lug'ati"
+              : 'IMTIHON — ${lesson.book}-kitob ${lesson.num}-darsgacha',
+          page: ImtihonEkrani(lesson: lesson),
+        ),
       ],
     );
   }

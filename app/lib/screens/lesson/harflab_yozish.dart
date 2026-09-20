@@ -27,9 +27,21 @@ class HarflabYozishEkrani extends StatefulWidget {
   /// (arabcha so'z, ma'nosi) — Qiroat darsi lug'atidan yoki Ulash bosqichi
   /// so'zlaridan.
   final List<({String ar, String uz})> sozRoyxati;
+
+  /// So'z → xotira kaliti (progress.bumpWord). Berilsa, har so'zning
+  /// natijasi «yodlangan» hisobiga yoziladi (imtihon shunga tayanadi).
+  final Map<String, String> kalitlar;
+  final String sarlavha;
   HarflabYozishEkrani({super.key, required QiroatLesson lesson})
-    : sozRoyxati = sozlar(lesson);
-  const HarflabYozishEkrani.royxat({super.key, required this.sozRoyxati});
+    : sozRoyxati = sozlar(lesson),
+      kalitlar = const {},
+      sarlavha = 'Harflab yozish';
+  const HarflabYozishEkrani.royxat({
+    super.key,
+    required this.sozRoyxati,
+    this.kalitlar = const {},
+    this.sarlavha = 'Harflab yozish',
+  });
 
   /// Ulash bosqichi so'zlari — 2–8 harflilari.
   static List<({String ar, String uz})> ulashSozlari(
@@ -141,6 +153,8 @@ class _HarflabYozishEkraniState extends State<HarflabYozishEkrani> {
     Haptic.ok();
     Tovush.togri(_xato == 0 ? _togri : 0);
     progress.addXp(_xato == 0 ? 3 : 1);
+    final kalit = widget.kalitlar[_sozlar[_i].ar];
+    if (kalit != null) progress.bumpWord(kalit, _xato == 0);
     // Oxirgi harf nomi tugasin, keyin butun so'z o'qilsin.
     await Future.delayed(const Duration(milliseconds: 900));
     if (mounted && _tugallandi) {
@@ -162,7 +176,7 @@ class _HarflabYozishEkraniState extends State<HarflabYozishEkrani> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Harflab yozish')),
+      appBar: AppBar(title: Text(widget.sarlavha)),
       body: Center(
         child: ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 560),

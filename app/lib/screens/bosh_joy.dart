@@ -26,12 +26,14 @@ class BoshJoy {
   final String soz; // olib tashlangan so'z (matndagi shakli)
   final String keyin; // bo'sh joydan keyingi qism
   final QiroatVocab lugat; // qaysi lug'at so'zi
+  final String darsId; // so'z qaysi darsniki (xotira kaliti shu bilan)
   const BoshJoy({
     required this.jumla,
     required this.oldi,
     required this.soz,
     required this.keyin,
     required this.lugat,
+    required this.darsId,
   });
 
   /// Darsdan bo'sh joy topshiriqlari: har lug'at so'zi uchun matnda aynan
@@ -58,6 +60,7 @@ class BoshJoy {
             soz: t[i].text,
             keyin: t.sublist(i + 1).map((x) => x.text).join(),
             lugat: v,
+            darsId: l.completionId,
           );
           break;
         }
@@ -93,8 +96,19 @@ class BoshJoy {
 }
 
 class BoshJoyEkrani extends StatefulWidget {
-  final QiroatLesson lesson;
-  const BoshJoyEkrani({super.key, required this.lesson});
+  final QiroatLesson? lesson;
+
+  /// Tayyor ro'yxat (imtihon: bir nechta darsning jumlalari).
+  final List<BoshJoy>? royxat;
+  final String sarlavha;
+  const BoshJoyEkrani({super.key, required QiroatLesson this.lesson})
+    : royxat = null,
+      sarlavha = "Bo'sh joy";
+  const BoshJoyEkrani.royxat({
+    super.key,
+    required List<BoshJoy> this.royxat,
+    this.sarlavha = "Bo'sh joy",
+  }) : lesson = null;
 
   @override
   State<BoshJoyEkrani> createState() => _BoshJoyEkraniState();
@@ -119,7 +133,7 @@ class _BoshJoyEkraniState extends State<BoshJoyEkrani> {
   @override
   void initState() {
     super.initState();
-    _hammasi = BoshJoy.yasa(widget.lesson);
+    _hammasi = widget.royxat ?? BoshJoy.yasa(widget.lesson!);
     _navbat = List.of(_hammasi)..shuffle(_rnd);
     if (_navbat.isNotEmpty) _savolYasa();
   }
@@ -160,10 +174,7 @@ class _BoshJoyEkraniState extends State<BoshJoyEkrani> {
     if (ok) progress.addXp(2);
     // To'liq jumla o'qiladi — so'z o'z o'rnida eshitiladi.
     Tts.instance.speak(_joriy.jumla, id: 'bosh-joy');
-    await progress.bumpWord(
-      '${widget.lesson.completionId}::${_joriy.lugat.ar}',
-      ok,
-    );
+    await progress.bumpWord('${_joriy.darsId}::${_joriy.lugat.ar}', ok);
   }
 
   void _keyingi() {
@@ -178,7 +189,7 @@ class _BoshJoyEkraniState extends State<BoshJoyEkrani> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Bo'sh joy"),
+        title: Text(widget.sarlavha),
         actions: [
           if (_navbat.isNotEmpty && !_tugadi)
             Center(

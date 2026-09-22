@@ -198,6 +198,9 @@ class _YozmaImtihonEkraniState extends State<YozmaImtihonEkrani> {
     if (_natija == false) setState(() => _natija = null);
   }
 
+  /// Fatha, kasra, damma, sukun, shadda, tanvinlar.
+  static const _harakatlar = ['َ', 'ِ', 'ُ', 'ْ', 'ّ', 'ً', 'ٍ', 'ٌ'];
+
   static const _harflar = [
     'ا',
     'ب',
@@ -428,6 +431,10 @@ class _YozmaImtihonEkraniState extends State<YozmaImtihonEkrani> {
               runSpacing: 6,
               children: [
                 for (final h in _harflar) _tugma(h, () => _harfQosh(h)),
+                // Harakatlar — ixtiyoriy (tekshiruv harakatsiz ham qabul
+                // qiladi), lekin harakat bilan yozish odat bo'lsin.
+                for (final h in _harakatlar)
+                  _tugma('◌$h', () => _harfQosh(h), harakat: true),
                 _tugma(
                   ' ',
                   () => _harfQosh(' '),
@@ -503,9 +510,12 @@ class _YozmaImtihonEkraniState extends State<YozmaImtihonEkrani> {
     String h,
     VoidCallback onTap, {
     bool keng = false,
+    bool harakat = false,
     String? belgi,
   }) => Material(
-    color: AppColors.softGreen,
+    color: harakat
+        ? AppColors.gold.withValues(alpha: 0.16)
+        : AppColors.softGreen,
     borderRadius: BorderRadius.circular(10),
     child: InkWell(
       borderRadius: BorderRadius.circular(10),

@@ -36,6 +36,7 @@ import '../nishonlar.dart';
 import '../mashq/ultra.dart';
 import '../mashq/tovush.dart';
 import 'qiroat_lessons.dart';
+import 'ustoz_ekrani.dart';
 
 /// Bosh ekran — ilovaning «yuzi».
 ///
@@ -289,6 +290,23 @@ class HomeScreen extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(builder: (_) => const SarfHome()),
+                          ),
+                        ),
+                        const SizedBox(height: 14),
+                        // USTOZ — butun ilova bo'yicha savol-javob: tarjima
+                        // (ikki tomonga) va grammatika izohi, javob manbasi
+                        // bilan. Internet kerak emas.
+                        _ModuleCard(
+                          title: 'Ustoz — savol-javob',
+                          subtitle:
+                              "Tarjima qildiring, grammatikani so'rang — javob kitobdan",
+                          arabic: 'أُسْتَاذ',
+                          accent: AppColors.emerald,
+                          onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => const UstozEkrani(),
+                            ),
                           ),
                         ),
                       ],

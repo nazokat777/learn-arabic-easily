@@ -1,5 +1,4 @@
 import '../arabic.dart';
-import '../content.dart';
 import '../main.dart';
 
 /// Bilim bazasidagi bitta parcha: ilovadagi kitoblarning aniq joyidan.
@@ -26,18 +25,10 @@ class Parcha {
     this.ball = 0,
   });
 
-  Parcha nusxa(double yangiBall) => Parcha(
-    manba: manba,
-    darsId: darsId,
-    ar: ar,
-    uz: uz,
-    ball: yangiBall,
-  );
+  Parcha nusxa(double yangiBall) =>
+      Parcha(manba: manba, darsId: darsId, ar: ar, uz: uz, ball: yangiBall);
 
-  String get matn => [
-    if (ar.isNotEmpty) ar,
-    if (uz.isNotEmpty) uz,
-  ].join('\n');
+  String get matn => [if (ar.isNotEmpty) ar, if (uz.isNotEmpty) uz].join('\n');
 }
 
 /// Ilovadagi butun kitob matni ustidan qidiradigan baza.
@@ -136,9 +127,7 @@ class BilimBazasi {
         }
       }
       for (final e in l.exercise) {
-        _qosh(
-          Parcha(manba: '$manba (mashq)', darsId: id, ar: e.ar, uz: e.uz),
-        );
+        _qosh(Parcha(manba: '$manba (mashq)', darsId: id, ar: e.ar, uz: e.uz));
       }
     }
   }
@@ -203,16 +192,17 @@ class BilimBazasi {
     return t;
   }
 
-  static List<String> sozlar(String s) => normal(s)
-      .split(RegExp(r"[^ء-يa-z0-9']+"))
-      .where((w) => w.length > 1)
-      .toList();
+  static List<String> sozlar(String s) => normal(
+    s,
+  ).split(RegExp(r"[^ء-يa-z0-9']+")).where((w) => w.length > 1).toList();
 
   Iterable<String> _kalitlar(Parcha p) sync* {
     for (final w in sozlar('${p.ar} ${p.uz}')) {
       yield w;
       // Arabchada «al» artikli va old qo'shimchalarsiz shakl ham indekslanadi.
       if (w.startsWith('ال') && w.length > 3) yield w.substring(2);
+      // So'z boshi (4 harf) ham kalit: «kitob» so'rovi «kitoblar» ni topsin.
+      if (w.length >= 5) yield '~${w.substring(0, 4)}';
     }
   }
 
@@ -226,6 +216,7 @@ class BilimBazasi {
       final rowlar = <int>{
         ...?_indeks[k],
         if (k.startsWith('ال') && k.length > 3) ...?_indeks[k.substring(2)],
+        if (k.length >= 5) ...?_indeks['~${k.substring(0, 4)}'],
       };
       if (rowlar.isEmpty) continue;
       // Kam uchragan so'z qimmatroq (idf): «kitob» ko'p joyda, «majhul» kam.
@@ -251,19 +242,83 @@ class BilimBazasi {
     Parcha? eng;
     for (final p in _parchalar) {
       if (p.ar.isEmpty || p.uz.isEmpty) continue;
-      final pn = normal(p.ar)
-          .replaceAll(RegExp(r'[^ء-يa-z0-9 ]'), '')
-          .trim();
+      final pn = normal(p.ar).replaceAll(RegExp(r'[^ء-يa-z0-9 ]'), '').trim();
       if (pn == n) return p;
-      final un = normal(p.uz)
-          .replaceAll(RegExp(r'[^ء-يa-z0-9 ]'), '')
-          .trim();
+      final un = normal(p.uz).replaceAll(RegExp(r'[^ء-يa-z0-9 ]'), '').trim();
       if (un == n) return p;
       if (eng == null && pn.isNotEmpty && (pn.contains(n) || n.contains(pn))) {
         eng = p;
       }
     }
     return eng;
+  }
+
+  /// Eng yaqin jumla: so'zlar to'plami bo'yicha o'xshashlik (0..1).
+  ///
+  /// Nega kerak: kitob tarjimasida «qaerda» yozilgan bo'lishi mumkin, o'quvchi
+  /// esa «qayerda» deb yozadi — aynan moslik topilmaydi, lekin jumla o'sha.
+  (Parcha, double)? engMos(String matn) {
+    tayyorla();
+    final kalit = sozlar(matn).toSet();
+    if (kalit.isEmpty) return null;
+    // Nomzodlar: so'rov so'zlaridan (va so'z boshidan) indeks bo'yicha
+    // TO'G'RIDAN-TO'G'RI olinadi — qidiruv reytingiga ishonmaymiz, aks holda
+    // ko'p uchraydigan so'z («kitob») tufayli kerakli jumla ro'yxatga
+    // tushmay qolishi mumkin.
+    final nomzod = <int>{};
+    for (final k in kalit) {
+      nomzod.addAll(_indeks[k] ?? const <int>{});
+      if (k.length >= 5) {
+        nomzod.addAll(_indeks['~${k.substring(0, 4)}'] ?? const <int>{});
+      }
+      if (k.startsWith('ال') && k.length > 3) {
+        nomzod.addAll(_indeks[k.substring(2)] ?? const <int>{});
+      }
+      if (nomzod.length > 6000) break;
+    }
+    if (nomzod.isEmpty) return null;
+    Parcha? eng;
+    var engBall = 0.0;
+    for (final i in nomzod) {
+      final p = _parchalar[i];
+      if (p.ar.isEmpty || p.uz.isEmpty) continue;
+      for (final tomon in [p.ar, p.uz]) {
+        // Uzunlik jazosi: 2 so'zli so'rovga 1 so'zli lug'at maqolasi
+        // «yaqin» chiqib qolmasin (jumla so'ralgan bo'lsa, jumla topilsin).
+        final qs = kalit.length, ps = sozlar(tomon).length;
+        if (qs == 0 || ps == 0) continue;
+        final jazo = (qs < ps ? qs / ps : ps / qs);
+        final ball = _uchlikOxshash(matn, tomon) * jazo;
+        if (ball > engBall) {
+          engBall = ball;
+          eng = p;
+        }
+      }
+    }
+    if (eng == null) return null;
+    return (eng, engBall);
+  }
+
+  /// Uch harfli bo'laklar (trigram) bo'yicha o'xshashlik (0..1).
+  ///
+  /// So'z-so'zga solishtirish qo'pol: «kitoblar»/«kitob», «qaerda»/«qayerda»
+  /// — boshqa so'z sanaladi. Uch harfli bo'laklar esa bunday kichik farqni
+  /// kechiradi, lekin butunlay boshqa jumlani yaqin deb ko'rsatmaydi.
+  static double _uchlikOxshash(String a, String b) {
+    Set<String> uch(String s) {
+      final t =
+          ' ${normal(s).replaceAll(RegExp(r"[^ء-يa-z0-9 ]"), '').trim()} ';
+      final chiq = <String>{};
+      for (var i = 0; i + 3 <= t.length; i++) {
+        chiq.add(t.substring(i, i + 3));
+      }
+      return chiq;
+    }
+
+    final x = uch(a), y = uch(b);
+    if (x.isEmpty || y.isEmpty) return 0;
+    final umumiy = x.intersection(y).length;
+    return 2.0 * umumiy / (x.length + y.length);
   }
 
   /// Bitta so'zning kitoblardagi ma'nosi (lug'at + dars lug'atlari).

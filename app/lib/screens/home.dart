@@ -36,6 +36,8 @@ import '../nishonlar.dart';
 import '../mashq/ultra.dart';
 import '../mashq/tovush.dart';
 import 'qiroat_lessons.dart';
+import '../mnemonika/reja.dart';
+import 'mnemonika_ekrani.dart';
 import 'ustoz_ekrani.dart';
 
 /// Bosh ekran — ilovaning «yuzi».
@@ -213,6 +215,34 @@ class HomeScreen extends StatelessWidget {
                       start: const Duration(milliseconds: 220),
                       step: const Duration(milliseconds: 85),
                       children: [
+                        ListenableBuilder(
+                          listenable: RejaXotira.instance,
+                          builder: (context, _) {
+                            final x = RejaXotira.instance;
+                            final faol = x.rejalar.where((r) => !r.tugadi);
+                            final sub = faol.isEmpty
+                                ? "Kitobni kunlarga bo'lib yodlash: xarita, reja, kunlik cheklist"
+                                : [
+                                    if (x.bugunKutyapti) '⏰ Bugungi reja kutyapti',
+                                    if (!x.bugunKutyapti) '✅ Bugun bajarildi',
+                                    '${faol.length} ta reja',
+                                    if (x.zanjir > 0) '🔥 ${x.zanjir} kun',
+                                  ].join('  ·  ');
+                            return _ModuleCard(
+                              title: 'Mnemonika — yodlash xaritasi',
+                              subtitle: sub,
+                              arabic: 'ذَاكِرَة',
+                              accent: AppColors.gold,
+                              onTap: () => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (_) => const MnemonikaEkrani(),
+                                ),
+                              ),
+                            );
+                          },
+                        ),
+                        const SizedBox(height: 14),
                         _ModuleCard(
                           foiz: _foiz([
                             'letter_test',

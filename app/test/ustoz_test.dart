@@ -3,7 +3,6 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:learn_arabic/content.dart';
-import 'package:learn_arabic/main.dart' show repo;
 import 'package:learn_arabic/progress.dart';
 import 'package:learn_arabic/main.dart' as m;
 import 'package:learn_arabic/ustoz/javob_dvigateli.dart';

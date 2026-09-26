@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'content.dart';
 import 'mavzu.dart';
 import 'progress.dart';
+import 'mnemonika/reja.dart';
 import 'mashq/tovush.dart';
 import 'services/manzil.dart';
 import 'services/xabar.dart';
@@ -27,6 +28,8 @@ Future<void> main() async {
   progress = Progress();
   await repo.load();
   await progress.load();
+  await RejaXotira.instance.load(); // mnemonika rejalari
+  RejaXotira.instance.kuzatuvniBoshla();
   await UzYozuv.instance.load(); // lotin yoki kirill
   await Mavzu.instance.load(); // yorug' yoki qorong'u (palitrani ham o'rnatadi)
   await Tovush.load(); // mashq tovushlari yoqilgan/o'chiq

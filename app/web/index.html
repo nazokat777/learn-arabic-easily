@@ -128,8 +128,23 @@
       }
       window.addEventListener('error', function (e) { chiqar('JS: ' + (e.message || e) + ' @' + (e.filename || '') + ':' + (e.lineno || '')); });
       window.addEventListener('unhandledrejection', function (e) { chiqar('Promise: ' + (e.reason && (e.reason.stack || e.reason.message) || e.reason)); });
+      // TASHXIS (vaqtinchalik): 5 s ichida telefon holatini o'lchab chiqaradi.
+      (function () {
+        var raf = 0, t0 = Date.now(), ff = -1;
+        function tick() { raf++; if (Date.now() - t0 < 5000) requestAnimationFrame(tick); }
+        requestAnimationFrame(tick);
+        window.addEventListener('flutter-first-frame', function () { ff = Date.now() - t0; });
+        function gl(n) { try { var c = document.createElement('canvas'); return !!c.getContext(n); } catch (e) { return false; } }
+        setTimeout(function () {
+          chiqar('DIAG: rAF/5s=' + raf + ' firstFrame=' + ff + 'ms vis=' + document.visibilityState +
+            ' focus=' + document.hasFocus() + ' webgl1=' + gl('webgl') + ' webgl2=' + gl('webgl2') +
+            ' segmenter=' + (typeof Intl !== 'undefined' && !!Intl.Segmenter) +
+            ' wasm=' + (typeof WebAssembly !== 'undefined') + ' ' + window.innerWidth + 'x' + window.innerHeight +
+            ' dpr=' + window.devicePixelRatio + ' glass=' + document.querySelectorAll('flt-glass-pane,flutter-view').length);
+        }, 5200);
+      })();
       var ol = console.log, oe = console.error;
-      console.log = function () { var m = Array.prototype.join.call(arguments, ' '); if (m.indexOf('XATO:') === 0) chiqar(m); return ol.apply(console, arguments); };
+      console.log = function () { var m = Array.prototype.join.call(arguments, ' '); if (m.indexOf('XATO:') === 0 || m.indexOf('DIAG:') === 0) chiqar(m); return ol.apply(console, arguments); };
       console.error = function () { chiqar('console.error: ' + Array.prototype.join.call(arguments, ' ')); return oe.apply(console, arguments); };
     })();
   </script>

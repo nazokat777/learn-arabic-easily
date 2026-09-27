@@ -57,6 +57,19 @@ Future<void> main() async {
   final kirishKodi = await Kirish.kodniOqi();
   final darvozaKerak = await Kirish.kerakmi(kirishKodi);
   runApp(ArabApp(kirishKodi: kirishKodi, darvozaKerak: darvozaKerak));
+  // TASHXIS (vaqtinchalik): Flutter tomonida kadrlar chizilyaptimi.
+  var kadr = 0;
+  void sana(Duration _) {
+    kadr++;
+    WidgetsBinding.instance.addPostFrameCallback(sana);
+  }
+  WidgetsBinding.instance.addPostFrameCallback(sana);
+  Timer(const Duration(seconds: 5), () {
+    // ignore: avoid_print
+    print('DIAG: dartKadr/5s=$kadr lifecycle=${WidgetsBinding.instance.lifecycleState} '
+        'framesEnabled=${WidgetsBinding.instance.framesEnabled}');
+    WidgetsBinding.instance.scheduleFrame();
+  });
 }
 
 /// Ilova `#/modul/id` manzili bilan ochilgan bo'lsa (yangilash yoki

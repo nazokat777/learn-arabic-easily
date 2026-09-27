@@ -550,8 +550,8 @@
 },
 "أم": {
 "o": "am",
-"i": "am → yoki",
-"s": "Yo buni, am buni — YOKI."
+"i": "am",
+"s": "«Am» — YOKI: olmami, am nokmi?"
 },
 "أخ": {
 "o": "akh",
@@ -735,8 +735,8 @@
 },
 "الجنينة": {
 "o": "al-junayna",
-"i": "junun → jon",
-"s": "Jonga rohat beradigan KICHKINA BOG'CHA."
+"i": "juda",
+"s": "«Juda nay» chalinayotgan KICHKINA BOG'CHA."
 },
 "قمت": {
 "o": "qumtu",
@@ -810,8 +810,8 @@
 },
 "هم": {
 "o": "hamm",
-"i": "g'am → hamm",
-"s": "G'AM."
+"i": "hamma",
+"s": "Hammaning G'AMI."
 },
 "أنتم": {
 "o": "antum",
@@ -1055,8 +1055,8 @@
 },
 "يمين": {
 "o": "yamīn",
-"i": "yamin → yaman",
-"s": "O'NG qo'l bilan qasam (yamin)."
+"i": "yamin (qasam)",
+"s": "O'NG qo'lni ko'tarib qasam (yamin) ichyapti."
 },
 "شمال": {
 "o": "shimāl",
@@ -1310,13 +1310,13 @@
 },
 "ممقوت": {
 "o": "mamqūt",
-"i": "maqta → maqtovsiz",
-"s": "Hech kim maqtamaydigan — YOMON KO'RILGAN."
+"i": "maqta",
+"s": "Hech kim maqtamaydigan, YOMON KO'RILGAN odam."
 },
 "اليوم": {
 "o": "al-yawma",
-"i": "yavm → yovm",
-"s": "«Al-yavm» — BUGUN."
+"i": "yom",
+"s": "«Al-yom» — yorug' BUGUN."
 },
 "الليلة": {
 "o": "al-laylata",
@@ -1380,8 +1380,8 @@
 },
 "رطل": {
 "o": "ratl",
-"i": "ratl → ro'tl",
-"s": "Bir ratl (QADOQ) guruch tarozida."
+"i": "ratsiya",
+"s": "Tarozida bir QADOQ guruch, ratsiya bilan narxini aytishyapti."
 },
 "بكل سرور": {
 "o": "bi-kulli surūr",
@@ -1480,7 +1480,7 @@
 },
 "جنيه": {
 "o": "junayh",
-"i": "juna → jun",
+"i": "jun",
 "s": "Junli hamyondagi Misr SO'Mi."
 },
 "قيمة": {
@@ -1500,38 +1500,38 @@
 },
 "ثلاثون": {
 "o": "thalāthūna",
-"i": "salat → 3",
-"s": "Uch xil salat × o'n — O'TTIZ."
+"i": "salat",
+"s": "Uchta salat, har birida o'nta pomidor — O'TTIZ."
 },
 "أربعون": {
 "o": "arbaʿūna",
-"i": "arava → 4",
-"s": "To'rt arava × o'n — QIRQ."
+"i": "arava",
+"s": "To'rtta arava, har birida o'nta qop — QIRQ."
 },
 "خمسون": {
 "o": "khamsūna",
-"i": "Xamsa → 5",
-"s": "Xamsa (besh) × o'n — ELLIK."
+"i": "Xamsa",
+"s": "«Xamsa»ning besh dostoni, har biri o'n bob — ELLIK."
 },
 "ستون": {
 "o": "sittūna",
-"i": "sitora → 6",
-"s": "Olti sitora × o'n — OLTMISH."
+"i": "sitora",
+"s": "Olti sitora, har biri o'n nur sochyapti — OLTMISH."
 },
 "سبعون": {
 "o": "sabʿūna",
-"i": "sab'a → 7",
-"s": "Yetti × o'n — YETMISH."
+"i": "sabab",
+"s": "Yetti sabab, har biriga o'n dalil — YETMISH."
 },
 "ثمانون": {
 "o": "thamānūna",
-"i": "samoniy → 8",
-"s": "Sakkiz × o'n — SAKSON."
+"i": "saman",
+"s": "Sakkiz saman ot, har biri o'n qadam — SAKSON."
 },
 "تسعون": {
 "o": "tisʿūna",
-"i": "tish → 9",
-"s": "To'qqiz tish × o'n — TO'QSON."
+"i": "tish",
+"s": "To'qqiz tish, har biri o'n marta chaynadi — TO'QSON."
 },
 "مكتبة": {
 "o": "maktaba",
@@ -1655,8 +1655,8 @@
 },
 "فرشة": {
 "o": "fursha",
-"i": "furs → cho'tka",
-"s": "Tukli CHO'TKA."
+"i": "farrosh",
+"s": "Farrosh qo'lida CHO'TKA bilan gilam tozalayapti."
 },
 "صابون": {
 "o": "sābūn",
@@ -1665,8 +1665,8 @@
 },
 "طست": {
 "o": "tast",
-"i": "tas → tog'ora",
-"s": "Tas-tas suv sachrayotgan TOG'ORA."
+"i": "tas-tas",
+"s": "Suv «tas-tas» sachrayotgan TOG'ORA."
 },
 "وجه": {
 "o": "wajh",
@@ -1690,8 +1690,8 @@
 },
 "عصر": {
 "o": "ʿasara",
-"i": "asr → siqish",
-"s": "SIQDI."
+"i": "asr",
+"s": "Asr quyoshida limonni SIQDI."
 },
 "مغرب": {
 "o": "maghrib",
@@ -1965,7 +1965,7 @@
 },
 "كعب": {
 "o": "kaʿb",
-"i": "ka'b → kavush",
+"i": "kavush",
 "s": "Kavush tovonini ishqalagan TO'PIQ."
 },
 "ركبة": {
@@ -2030,8 +2030,8 @@
 },
 "أمس": {
 "o": "amsi",
-"i": "amas → emas",
-"s": "«Bugun emas» — KECHA."
+"i": "emas",
+"s": "«Bugun emas» — KECHA edi."
 },
 "كيف؟": {
 "o": "kayfa",
@@ -2055,8 +2055,8 @@
 },
 "عندي": {
 "o": "ʿindī",
-"i": "indamas → indi",
-"s": "MENING HUZURIMDA."
+"i": "indamay",
+"s": "Indamay turgan narsa — MENING HUZURIMDA."
 },
 "عندك": {
 "o": "ʿindaka",
@@ -2110,7 +2110,7 @@
 },
 "قرية": {
 "o": "qarya",
-"i": "qaryа → qariya",
+"i": "qariya",
 "s": "Qariyalar yashaydigan QISHLOQ."
 },
 "رخيص": {
@@ -2300,8 +2300,8 @@
 },
 "منديل": {
 "o": "mindīl",
-"i": "mindil → ro'mol",
-"s": "DASTRO'MOL, salfetka."
+"i": "Mindil (menga)",
+"s": "«Menga dil!» deb DASTRO'MOL uzatyapti."
 },
 "فراش": {
 "o": "firāsh",
@@ -2330,7 +2330,7 @@
 },
 "لوث": {
 "o": "lawwatha",
-"i": "lavsh → loy",
+"i": "loy",
 "s": "Loy surib IFLOS QILDI."
 },
 "كان": {
@@ -2455,13 +2455,13 @@
 },
 "لجام": {
 "o": "lijām",
-"i": "lijom → jilov",
-"s": "JILOV."
+"i": "lijom",
+"s": "Otning og'zidagi lijom — JILOV."
 },
 "سرج": {
 "o": "sarj",
-"i": "sarj → sarg'ish",
-"s": "Sarg'ish EGAR."
+"i": "sarg'ish",
+"s": "Sarg'ish charm EGAR."
 },
 "موسى": {
 "o": "mūsā",
@@ -2475,8 +2475,8 @@
 },
 "المصبوب": {
 "o": "al-masbūb",
-"i": "sabab → sib",
-"s": "Qolipga QUYILGAN."
+"i": "sabo",
+"s": "Sabo shamoli qotirgan, qolipga QUYILGAN metall."
 },
 "ماذا؟": {
 "o": "mādhā",
@@ -2640,23 +2640,23 @@
 },
 "عروة": {
 "o": "ʿurwa",
-"i": "urva → o'rab",
-"s": "TUGMA BOG'ICHI."
+"i": "urva (arqon)",
+"s": "Tugma urva-arqonchaga ilinadi — TUGMA BOG'ICHI."
 },
 "بنيقة": {
 "o": "banīqa",
-"i": "bayniq → bo'yin",
-"s": "Bo'yindagi YOQACHA."
+"i": "banogoh",
+"s": "Banogoh qarasa, bo'ynida oq YOQACHA."
 },
 "أربة": {
 "o": "urba",
-"i": "urba → o'rab",
-"s": "Bo'yinni o'rab turgan GALSTUK."
+"i": "urba",
+"s": "Bo'yinga urib bog'langan GALSTUK."
 },
 "جيب": {
 "o": "jayb",
-"i": "jayb → cho'ntak",
-"s": "Jaybi (CHO'NTAGI) to'la."
+"i": "jaybar",
+"s": "Jaybar (qalin) CHO'NTAKka pul solyapti."
 },
 "إمام": {
 "o": "imām",
@@ -2800,8 +2800,8 @@
 },
 "جدار": {
 "o": "jidār",
-"i": "jidd → devor",
-"s": "DEVOR."
+"i": "jiddiy",
+"s": "Jiddiy, qalin DEVOR."
 },
 "سقف": {
 "o": "saqf",
@@ -2870,8 +2870,8 @@
 },
 "مطر": {
 "o": "matar",
-"i": "matar → matal",
-"s": "YOMG'IR."
+"i": "matal",
+"s": "Matal aytib turganda YOMG'IR yog'ib qoldi."
 },
 "ثلج": {
 "o": "thalj",
@@ -2945,8 +2945,8 @@
 },
 "نضج": {
 "o": "nadija",
-"i": "nazij → nazokat",
-"s": "PISHDI."
+"i": "nozik",
+"s": "Nozik terisi yorilib qovun PISHDI."
 },
 "جمد": {
 "o": "jamada",
@@ -2985,13 +2985,13 @@
 },
 "منذ": {
 "o": "mundhu",
-"i": "mundoq → -dan beri",
-"s": "-DAN BERI."
+"i": "mundoq",
+"s": "«Mundoq — ertalabDAN BERI kutaman»."
 },
 "إذا": {
 "o": "idhā",
-"i": "izo → agar",
-"s": "AGAR, qachon."
+"i": "izzat",
+"s": "«Izzat qilsang — AGAR kelsang»."
 },
 "إذا جاء": {
 "o": "idhā jāʾa",
@@ -3025,8 +3025,8 @@
 },
 "عم": {
 "o": "ʿamm",
-"i": "amm → amaki",
-"s": "AMAKI."
+"i": "ammo",
+"s": "«Ammo AMAKIm ruxsat bermadi»."
 },
 "عمة": {
 "o": "ʿamma",
@@ -3055,8 +3055,8 @@
 },
 "زوج": {
 "o": "zawj",
-"i": "zavj → juft",
-"s": "ER (juft)."
+"i": "juft",
+"s": "Juft bo'lib yuradigan ER-XOTIN (zavj)."
 },
 "زوجة": {
 "o": "zawja",
@@ -3230,8 +3230,8 @@
 },
 "عجوز": {
 "o": "ʿajūz",
-"i": "ajuz → ojiz",
-"s": "Ojiz KAMPIR."
+"i": "ojiz",
+"s": "Ojiz KAMPIR hassaga suyanib turibdi."
 },
 "فتى": {
 "o": "fatā",
@@ -3355,8 +3355,8 @@
 },
 "كشتبان": {
 "o": "kushtubān",
-"i": "angishvona → kush",
-"s": "ANGISHVONA."
+"i": "kosh",
+"s": "«Kosh, ANGISHVONA taqqan bo'lsam!» — igna sanchildi."
 },
 "إبرة": {
 "o": "ibra",
@@ -3370,8 +3370,8 @@
 },
 "دبوس": {
 "o": "dabbūs",
-"i": "dabus → to'g'nag'ich",
-"s": "TO'G'NAG'ICH."
+"i": "dabdaba",
+"s": "Dabdabali kiyimga TO'G'NAG'ICH qadalgan."
 },
 "حلاق": {
 "o": "hallāq",
@@ -3390,13 +3390,13 @@
 },
 "راتب": {
 "o": "rātib",
-"i": "ratib → tartib",
-"s": "Tartib bilan beriladigan MAOSH."
+"i": "tartib",
+"s": "Tartib bilan oyma-oy beriladigan MAOSH."
 },
 "أحمر": {
 "o": "ahmar",
-"i": "Ahmar → Hamro",
-"s": "Hamro — QIZIL."
+"i": "Hamro",
+"s": "Hamro opaning QIZIL ro'moli."
 },
 "أصفر": {
 "o": "asfar",
@@ -3410,8 +3410,8 @@
 },
 "أزرق": {
 "o": "azraq",
-"i": "azraq → zangori",
-"s": "KO'K."
+"i": "zar",
+"s": "Zar bilan tikilgan KO'K kamzul."
 },
 "لمن؟": {
 "o": "li-man",
@@ -3435,8 +3435,8 @@
 },
 "محراث": {
 "o": "mihrāth",
-"i": "haris → hars",
-"s": "OMOCH."
+"i": "harsang",
+"s": "Harsangli yerni OMOCH bilan haydayapti."
 },
 "فلاح": {
 "o": "fallāh",
@@ -3450,8 +3450,8 @@
 },
 "شعير": {
 "o": "shaʿīr",
-"i": "sha'ir → sher",
-"s": "ARPA."
+"i": "sher",
+"s": "Sher ARPA dalasida yotibdi."
 },
 "دقيق": {
 "o": "daqīq",
@@ -3460,8 +3460,8 @@
 },
 "نخالة": {
 "o": "nukhāla",
-"i": "nuxala → nuxat",
-"s": "KEPAK."
+"i": "no'xat",
+"s": "No'xat bilan aralashgan KEPAK."
 },
 "حشيش": {
 "o": "hashīsh",
@@ -3605,18 +3605,18 @@
 },
 "عنزة": {
 "o": "ʿanza",
-"i": "anza → anzur",
-"s": "ECHKI."
+"i": "anjir",
+"s": "Anjir bargini kemirayotgan ECHKI."
 },
 "خروف": {
 "o": "kharūf",
-"i": "xarof → xarob",
-"s": "KO'ZICHOQ."
+"i": "xurofot",
+"s": "Xurofotga ishonmaydigan oppoq KO'ZICHOQ."
 },
 "كبش": {
 "o": "kabsh",
-"i": "kavsh → kavush",
-"s": "Kavush tepgan KO'CHQOR."
+"i": "kavush",
+"s": "Kavushni tepib uchirgan KO'CHQOR."
 },
 "جمل": {
 "o": "jamal",
@@ -3630,7 +3630,7 @@
 },
 "نمر": {
 "o": "namir",
-"i": "namir → nam",
+"i": "nam",
 "s": "Nam o'rmonda yashaydigan YO'LBARS."
 },
 "فهد": {
@@ -3740,8 +3740,8 @@
 },
 "رمان": {
 "o": "rummān",
-"i": "Rim → rumon",
-"s": "ANOR."
+"i": "ruhan",
+"s": "Ruhan tetiklashtiradigan ANOR."
 },
 "خيار": {
 "o": "khiyār",
@@ -3785,8 +3785,8 @@
 },
 "فلفل": {
 "o": "fulful",
-"i": "fulful → qalampir",
-"s": "QALAMPIR."
+"i": "fil",
+"s": "Fil QALAMPIR yeb, xartumidan olov chiqaryapti."
 },
 "بطاطس": {
 "o": "batātis",
@@ -3795,8 +3795,8 @@
 },
 "فجل": {
 "o": "fijl",
-"i": "fijl → fil",
-"s": "REDISKA."
+"i": "fil",
+"s": "Fil REDISKAni xartumi bilan uzyapti."
 },
 "سلطة": {
 "o": "sulta",
@@ -3850,8 +3850,8 @@
 },
 "بيض": {
 "o": "bayd",
-"i": "bayda → bayz",
-"s": "TUXUM."
+"i": "bayroq",
+"s": "Bayroq ustida turgan oq TUXUM."
 },
 "علف": {
 "o": "ʿalaf",
@@ -3880,8 +3880,8 @@
 },
 "أزعج": {
 "o": "azʿaja",
-"i": "zo'r → ze'",
-"s": "BEZOVTA QILDI."
+"i": "azob",
+"s": "Azob berib BEZOVTA QILDI."
 },
 "أخذ يقرأ": {
 "o": "akhadha yaqraʾu",
@@ -3935,7 +3935,7 @@
 },
 "أي؟": {
 "o": "ayyu",
-"i": "ayyu → oy",
+"i": "oy",
 "s": "«Qaysi oy?» — QAYSI?"
 },
 "أيهم؟": {
@@ -4165,8 +4165,8 @@
 },
 "قرب": {
 "o": "qurba",
-"i": "qurb → qarib",
-"s": "YAQINIDA."
+"i": "qarib",
+"s": "Qarib qolgan buvi uy YAQINIDA o'tiribdi."
 },
 "حين": {
 "o": "hīna",
@@ -4235,8 +4235,8 @@
 },
 "عدة": {
 "o": "ʿudda",
-"i": "uddа → udda",
-"s": "QUROL-YAROG'."
+"i": "udda",
+"s": "«Uddaladim!» — QUROL-YAROG' tayyor."
 },
 "سدى": {
 "o": "sudan",
@@ -4350,8 +4350,8 @@
 },
 "تعليق": {
 "o": "taʿlīq",
-"i": "ta'liq → iliq",
-"s": "OSISH, ilish."
+"i": "ta'liq (ilish)",
+"s": "Ko'ylakni ilgichga ta'liq — OSISH."
 },
 "بلغ": {
 "o": "balagha",
@@ -4380,8 +4380,8 @@
 },
 "عبر": {
 "o": "ʿabara",
-"i": "ibrat → ubur",
-"s": "O'TDI."
+"i": "ubur",
+"s": "«Ubur-ubur» ko'prikdan O'TDI."
 },
 "سالما": {
 "o": "sāliman",
@@ -4420,8 +4420,8 @@
 },
 "هول": {
 "o": "hawl",
-"i": "hol → hovl",
-"s": "DAHSHAT."
+"i": "hovli",
+"s": "Hovlida ko'rilgan DAHSHAT."
 },
 "فبينما": {
 "o": "fa-baynamā",
@@ -4500,8 +4500,8 @@
 },
 "همس": {
 "o": "hamasa",
-"i": "hamsa → hamshira",
-"s": "SHIVIRLADI."
+"i": "hamshira",
+"s": "Hamshira kasalning qulog'iga SHIVIRLADI."
 },
 "رافق": {
 "o": "rāfaqa",
@@ -4510,8 +4510,8 @@
 },
 "مرج": {
 "o": "marj",
-"i": "marj → marza",
-"s": "O'TLOQ."
+"i": "marza",
+"s": "Marzalar bilan bo'lingan O'TLOQ."
 },
 "صدى": {
 "o": "sadan",
@@ -4525,8 +4525,8 @@
 },
 "سوى": {
 "o": "siwā",
-"i": "sivo → sivoy",
-"s": "BOSHQASI."
+"i": "sivoy",
+"s": "Sivoy shamlardan BOSHQASI."
 },
 "قبل ذلك": {
 "o": "qabla dhālika",
@@ -4725,8 +4725,8 @@
 },
 "افترس": {
 "o": "iftarasa",
-"i": "firib → faris",
-"s": "OVLADI (yirtqich)."
+"i": "faris (ot)",
+"s": "Farisni (otni) OVLAB olgan sher."
 },
 "فكر": {
 "o": "fakkara",
@@ -4770,13 +4770,13 @@
 },
 "خد": {
 "o": "khadd",
-"i": "xad → xol",
-"s": "YONOQ."
+"i": "xol",
+"s": "Xoli bor YONOQ."
 },
 "ذقن": {
 "o": "dhaqn",
-"i": "zaqan → iyak",
-"s": "JAG'."
+"i": "zaqan",
+"s": "Zaqan (iyak) — JAG'."
 },
 "صدر": {
 "o": "sadr",
@@ -4850,8 +4850,8 @@
 },
 "جو": {
 "o": "jaww",
-"i": "javv → havo",
-"s": "OB-HAVO."
+"i": "javob",
+"s": "Osmon javob berdi — OB-HAVO o'zgardi."
 },
 "هوام": {
 "o": "hawāmm",
@@ -4880,7 +4880,7 @@
 },
 "يقظان": {
 "o": "yaqzān",
-"i": "yaqin → yaq!",
+"i": "yaq!",
 "s": "«Yaq!» deb sakrab turgan — UYG'OQ."
 },
 "مطبقتين": {
@@ -4940,7 +4940,7 @@
 },
 "لون": {
 "o": "lawn",
-"i": "lavn → lavha",
+"i": "lavha",
 "s": "Lavhadagi RANG."
 },
 "جنس": {
@@ -4960,8 +4960,8 @@
 },
 "جوف": {
 "o": "jawf",
-"i": "javf → jovdir",
-"s": "QORIN."
+"i": "jovdir",
+"s": "Jovdirab qolgan QORIN."
 },
 "حصرم": {
 "o": "hisrim",
@@ -5115,8 +5115,8 @@
 },
 "بطء": {
 "o": "butʾ",
-"i": "but → but-but",
-"s": "SEKINLIK."
+"i": "but",
+"s": "But-but qilib SEKIN yuradigan toshbaqa."
 },
 "أمل": {
 "o": "amal",
@@ -5130,8 +5130,8 @@
 },
 "خيبة": {
 "o": "khayba",
-"i": "xayba → xayf",
-"s": "UMIDSIZLIK."
+"i": "xayf (afsus)",
+"s": "«Xayf!» — UMIDSIZLIK."
 },
 "إذ": {
 "o": "idh",
@@ -5340,8 +5340,8 @@
 },
 "منقار": {
 "o": "minqār",
-"i": "naqr → nuqur",
-"s": "TUMSHUQ."
+"i": "nuqra",
+"s": "Nuqra (kumush) TUMSHUQli qush."
 },
 "عش": {
 "o": "ʿushsh",
@@ -5440,8 +5440,8 @@
 },
 "منخفض": {
 "o": "munkhafid",
-"i": "xafiz → xafa",
-"s": "PAST."
+"i": "xafa",
+"s": "Xafa bo'lib PAST egilgan."
 },
 "عكر": {
 "o": "ʿakkara",
@@ -5505,8 +5505,8 @@
 },
 "ألم": {
 "o": "alamma",
-"i": "ilm → alam",
-"s": "CHALINDI."
+"i": "alam",
+"s": "Alam CHALINDI."
 },
 "فرأى كل ما حصل": {
 "o": "fa-raʾā kulla mā hasala",
@@ -5560,8 +5560,8 @@
 },
 "عناء": {
 "o": "ʿanāʾ",
-"i": "ano → ona",
-"s": "MASHAQQAT."
+"i": "ona",
+"s": "Ona chekkan MASHAQQAT."
 },
 "أورث": {
 "o": "awratha",
@@ -5720,8 +5720,8 @@
 },
 "طياشة": {
 "o": "tayāsha",
-"i": "tayyor → tish",
-"s": "YENGILTAKLIK."
+"i": "tayyor",
+"s": "Tayyor bo'lmay chopqillagan YENGILTAK."
 },
 "أضاع": {
 "o": "adāʿa",
@@ -5885,8 +5885,8 @@
 },
 "غراب": {
 "o": "ghurāb",
-"i": "g'urob → g'arib",
-"s": "G'arib QARG'A «qarr»."
+"i": "g'arib",
+"s": "G'arib QARG'A «qarr» deb o'tiribdi."
 },
 "طار بها": {
 "o": "tāra bihā",
@@ -5915,8 +5915,8 @@
 },
 "غرد": {
 "o": "gharrada",
-"i": "g'ard → g'arr",
-"s": "SAYRADI."
+"i": "g'ard",
+"s": "Bulbul g'ard-g'ard SAYRADI."
 },
 "أطرب": {
 "o": "atrab",
@@ -5970,8 +5970,8 @@
 },
 "خالط": {
 "o": "khālata",
-"i": "xalta → aralash",
-"s": "ARALASHDI."
+"i": "xalta",
+"s": "Hamma narsani xaltaga solib ARALASHTIRDI."
 },
 "موقد": {
 "o": "mūqad",
@@ -6020,13 +6020,13 @@
 },
 "اضطجع": {
 "o": "idtajaʿa",
-"i": "zajr → zajiy",
-"s": "YONBOSHLAB YOTDI."
+"i": "zaji",
+"s": "Zajiy (charchab) YONBOSHLAB YOTDI."
 },
 "جحر": {
 "o": "juhr",
-"i": "jahr → jar",
-"s": "IN, teshik."
+"i": "jar",
+"s": "Jar yonidagi IN."
 },
 "الوصف": {
 "o": "al-wasf",
@@ -6040,8 +6040,8 @@
 },
 "مخلب": {
 "o": "mikhlab",
-"i": "xalab → xalq",
-"s": "YIRTQICH TIRNOG'I."
+"i": "xalq",
+"s": "Xalqni qo'rqitgan YIRTQICH TIRNOG'I."
 },
 "حيرة": {
 "o": "hayra",
@@ -6110,8 +6110,8 @@
 },
 "أفلت": {
 "o": "aflata",
-"i": "falat → falokat",
-"s": "QUTULDI."
+"i": "falokat",
+"s": "Falokatdan QUTULDI."
 },
 "رواح": {
 "o": "rawāh",
@@ -6130,8 +6130,8 @@
 },
 "المقاومة": {
 "o": "al-muqāwama",
-"i": "muqovama → qavm",
-"s": "KURASHISH."
+"i": "qavm",
+"s": "Qavm birlashib KURASHDI."
 },
 "المداومة": {
 "o": "al-mudāwama",
@@ -6190,8 +6190,8 @@
 },
 "أجرة": {
 "o": "ujra",
-"i": "ujra → ijara",
-"s": "ISH HAQI."
+"i": "ijara",
+"s": "Ijara haqi — ISH HAQI."
 },
 "انتظر": {
 "o": "intazara",
@@ -6740,8 +6740,8 @@
 },
 "المفقودا": {
 "o": "al-mafqūdā",
-"i": "mafqud → faqd",
-"s": "YO'Q BO'LGAN."
+"i": "faqat",
+"s": "Faqat — YO'Q BO'LGAN narsa qoldi."
 },
 "كركي": {
 "o": "kurkiy",
@@ -6835,8 +6835,8 @@
 },
 "فدعني": {
 "o": "fa-daʿnī",
-"i": "da' → qo'y",
-"s": "MENI TEK QO'Y."
+"i": "da'vo",
+"s": "«Da'vongni qo'y, MENI TEK QO'Y!»"
 },
 "إياه": {
 "o": "iyyāhu",
@@ -7005,8 +7005,8 @@
 },
 "عريش": {
 "o": "ʿarīsh",
-"i": "arish → ariq",
-"s": "ARIQ bo'yidagi KAPA."
+"i": "ariq",
+"s": "Ariq bo'yidagi KAPA."
 },
 "نحوها": {
 "o": "nahwahā",
@@ -7070,8 +7070,8 @@
 },
 "أومض": {
 "o": "awmada",
-"i": "vamz → yaltir",
-"s": "YALTIRADI."
+"i": "vamp",
+"s": "Chiroq «vamp» etib YALTIRADI."
 },
 "اطرح": {
 "o": "ittaraha",
@@ -7210,8 +7210,8 @@
 },
 "ريح": {
 "o": "rīh",
-"i": "rih → rahm",
-"s": "SHAMOL."
+"i": "rihla (sayohat)",
+"s": "Rihla (sayohat)dagi yelkanni SHAMOL to'ldiryapti."
 },
 "يراعة": {
 "o": "yarāʿa",
@@ -7245,8 +7245,8 @@
 },
 "دفأ": {
 "o": "daffaʾa",
-"i": "dafa → dof",
-"s": "ISITDI."
+"i": "dof",
+"s": "Dof oldida qo'lini ISITDI."
 },
 "نادى": {
 "o": "nādā",
@@ -7275,8 +7275,8 @@
 },
 "انحنى": {
 "o": "inhanā",
-"i": "hano → hon",
-"s": "EGILDI."
+"i": "hon",
+"s": "Hon oldida EGILDI."
 },
 "لا يعمل": {
 "o": "lā yuʿmalu",
@@ -7570,8 +7570,8 @@
 },
 "شاهق": {
 "o": "shāhiq",
-"i": "shohiq → shoh",
-"s": "YUKSAK."
+"i": "shoh",
+"s": "Shoh saroyidek YUKSAK."
 },
 "هوة": {
 "o": "huwwa",
@@ -7590,8 +7590,8 @@
 },
 "نصب": {
 "o": "nasab",
-"i": "nasab → nasib",
-"s": "MASHAQQAT."
+"i": "nasiba",
+"s": "Nasiba yo'lidagi MASHAQQAT."
 },
 "جبة": {
 "o": "jubba",
@@ -7640,8 +7640,8 @@
 },
 "لم يمض": {
 "o": "lam yamdi",
-"i": "imzo → mozi",
-"s": "O'TMADI."
+"i": "mozi",
+"s": "Mozi (o'tmish) bo'lmadi — O'TMADI."
 },
 "امتلأ": {
 "o": "imtalaʾa",
@@ -7680,8 +7680,8 @@
 },
 "معز": {
 "o": "maʿz",
-"i": "ma'z → me'",
-"s": "ECHKILAR «me'»."
+"i": "me'",
+"s": "ECHKILAR «me'-me'» deyapti."
 },
 "تصير": {
 "o": "tasīru",
@@ -7755,8 +7755,8 @@
 },
 "أسفنا": {
 "o": "asifnā",
-"i": "asaf → afsus",
-"s": "AFSUSLANDIK."
+"i": "asfalt",
+"s": "Asfaltga yiqilib AFSUSLANDIK."
 },
 "فبينما نحن كذلك": {
 "o": "fa-baynamā nahnu kadhālika",
@@ -7885,13 +7885,13 @@
 },
 "أن تجني": {
 "o": "an tajniya",
-"i": "janna → jon",
-"s": "YIG'MOQNI."
+"i": "jon",
+"s": "Jon-jahd bilan meva YIG'MOQ."
 },
 "بلا كلل": {
 "o": "bi-lā kalal",
-"i": "kalol → malol",
-"s": "CHARCHOQSIZ."
+"i": "kalla",
+"s": "Kallasi toliqmay — CHARCHOQSIZ."
 },
 "تلى": {
 "o": "talā",
@@ -7955,8 +7955,8 @@
 },
 "عودتها": {
 "o": "ʿawdatuhā",
-"i": "avdat → odat",
-"s": "QAYTGANIDA."
+"i": "avdat (odat)",
+"s": "Odatdagidek QAYTGANIDA."
 },
 "ثقب": {
 "o": "thuqb",
@@ -8025,8 +8025,8 @@
 },
 "لص": {
 "o": "liss",
-"i": "lis → lisp",
-"s": "O'G'RI."
+"i": "lis (tulki)",
+"s": "Tulkidek O'G'RI."
 },
 "مضى": {
 "o": "madā",
@@ -8235,8 +8235,8 @@
 },
 "حضن": {
 "o": "hadana",
-"i": "hazin → quchoq",
-"s": "TUXUM BOSDI."
+"i": "hazin",
+"s": "Hazin qush TUXUM BOSDI."
 },
 "أفرخت": {
 "o": "afrakhat",
@@ -8270,8 +8270,8 @@
 },
 "الصعود": {
 "o": "as-suʿūd",
-"i": "sa'y → su'ud",
-"s": "KO'TARILISH."
+"i": "su'd (baxt)",
+"s": "Baxt (su'd) sari KO'TARILISH."
 },
 "أمكنك": {
 "o": "amkanaka",
@@ -8285,8 +8285,8 @@
 },
 "شاطيء": {
 "o": "shātiʾ",
-"i": "shot → sohil",
-"s": "SOHIL."
+"i": "shoti",
+"s": "Shotini SOHILga qo'yib qayiqqa tushdi."
 },
 "جناحي": {
 "o": "janāhī",
@@ -8350,8 +8350,8 @@
 },
 "تمرن": {
 "o": "tamarrana",
-"i": "mashq → marrana",
-"s": "MASHQ QILDI."
+"i": "marra",
+"s": "Marraga yetish uchun MASHQ QILDI."
 },
 "مطول": {
 "o": "mutawwal",
@@ -8375,8 +8375,8 @@
 },
 "إسكاف": {
 "o": "iskāf",
-"i": "iskaf → kafsh",
-"s": "ETIKDO'Z."
+"i": "kafsh",
+"s": "Kafsh (kovush) tikadigan ETIKDO'Z."
 },
 "يدعى": {
 "o": "yudʿā",
@@ -8420,8 +8420,8 @@
 },
 "عقل": {
 "o": "ʿaqala",
-"i": "iqol → aql",
-"s": "BOG'LADI."
+"i": "aql",
+"s": "Aql bilan tuyani BOG'LADI."
 },
 "مكمن": {
 "o": "makman",
@@ -8520,8 +8520,8 @@
 },
 "استعان": {
 "o": "istaʿāna",
-"i": "iona → yordam",
-"s": "YORDAM OLDI."
+"i": "iona",
+"s": "Iona — YORDAM OLDI."
 },
 "جذب": {
 "o": "jadhaba",
@@ -8690,8 +8690,8 @@
 },
 "السابحة": {
 "o": "as-sābiha",
-"i": "sabah → suzish",
-"s": "SUZUVCHI."
+"i": "sabo",
+"s": "Sabo shamolida SUZUVCHI qayiq."
 },
 "فغر": {
 "o": "faghara",
@@ -8755,8 +8755,8 @@
 },
 "عياء": {
 "o": "ʿayāʾ",
-"i": "ayo → aya",
-"s": "TOYISH."
+"i": "aya",
+"s": "Aya charchab TOYDI."
 },
 "سيلان": {
 "o": "sayalān",
@@ -8765,8 +8765,8 @@
 },
 "عام": {
 "o": "ʿāma",
-"i": "om → umm",
-"s": "YUZAGA SUZIB CHIQDI."
+"i": "omad",
+"s": "Omad bilan suv yuziga SUZIB CHIQDI."
 },
 "شحم": {
 "o": "shahm",
@@ -8780,8 +8780,8 @@
 },
 "قارب": {
 "o": "qārib",
-"i": "qorib → qayiq",
-"s": "QAYIQ."
+"i": "qorib",
+"s": "Qorib (qariya) QAYIQda eshkak eshyapti."
 },
 "هبط": {
 "o": "habata",
@@ -8820,8 +8820,8 @@
 },
 "هرم": {
 "o": "harima",
-"i": "haram → harim",
-"s": "QARTAYDI."
+"i": "haram",
+"s": "Haram-xonada QARTAYGAN bobo."
 },
 "جوع": {
 "o": "jūʿ",
@@ -8835,8 +8835,8 @@
 },
 "كئيب": {
 "o": "kaʾīb",
-"i": "kaaba → kabob",
-"s": "G'AMGIN."
+"i": "kabob",
+"s": "Kabob kuyib ketib G'AMGIN."
 },
 "هنالك": {
 "o": "hunālika",
@@ -9420,8 +9420,8 @@
 },
 "بخار": {
 "o": "bukhār",
-"i": "bug' → Buxoro",
-"s": "BUG'."
+"i": "Buxoro",
+"s": "Buxoro choyxonasidagi samovar BUG'I."
 },
 "غيم": {
 "o": "ghaym",
@@ -9445,8 +9445,8 @@
 },
 "صادم": {
 "o": "sādama",
-"i": "zadama → zarb",
-"s": "TO'QNASHDI."
+"i": "sadama",
+"s": "«Sadama!» — ikki arava TO'QNASHDI."
 },
 "صادف": {
 "o": "sādafa",
@@ -9465,8 +9465,8 @@
 },
 "ارتوى": {
 "o": "irtawā",
-"i": "rivoyat → ravo",
-"s": "SUVGA QONDI."
+"i": "ravo",
+"s": "Ravo ko'rib suvga QONDI."
 },
 "النمير": {
 "o": "an-namīr",
@@ -9510,8 +9510,8 @@
 },
 "أنقذ": {
 "o": "anqadha",
-"i": "naqd → qutqar",
-"s": "QUTQARDI."
+"i": "naqd",
+"s": "Naqd pul berib QUTQARDI."
 },
 "مثوى": {
 "o": "mathwan",
@@ -9535,8 +9535,8 @@
 },
 "وهدة": {
 "o": "wahda",
-"i": "vahdat → vahm",
-"s": "JARLIK."
+"i": "vahm",
+"s": "Vahm soladigan JARLIK."
 },
 "الورقاء": {
 "o": "al-warqāʾ",
@@ -9625,8 +9625,8 @@
 },
 "زمجرة": {
 "o": "zamjara",
-"i": "zamzam → zam",
-"s": "BO'KIRISH."
+"i": "zambarak",
+"s": "Zambarakdek BO'KIRISH."
 },
 "اهتز": {
 "o": "ihtazza",
@@ -9645,8 +9645,8 @@
 },
 "تسور": {
 "o": "tasawwara",
-"i": "savr → sur",
-"s": "TIRMASHIB CHIQDI."
+"i": "savr (qo'rg'on)",
+"s": "Qo'rg'onga TIRMASHIB CHIQDI."
 },
 "خطف": {
 "o": "khatafa",
@@ -9775,8 +9775,8 @@
 },
 "قاسى": {
 "o": "qāsā",
-"i": "qasos → qiyin",
-"s": "CHIDADI."
+"i": "qasos",
+"s": "Qasos alamiga CHIDADI."
 },
 "أرضع": {
 "o": "ardaʿa",
@@ -9795,8 +9795,8 @@
 },
 "انحرف": {
 "o": "inharafa",
-"i": "inhiroq → harf",
-"s": "BETOB BO'LDI."
+"i": "harf",
+"s": "Harfdek egilib BETOB BO'LDI."
 },
 "نصب عينيك": {
 "o": "nusba ʿaynayka",
@@ -9815,8 +9815,8 @@
 },
 "إعالة": {
 "o": "iʿāla",
-"i": "ayol → ayolmand",
-"s": "TA'MINLASH."
+"i": "ayol",
+"s": "Ayol oilasini TA'MINLAYAPTI."
 },
 "أن تعق": {
 "o": "an taʿuqqa",
@@ -10005,8 +10005,8 @@
 },
 "توسم": {
 "o": "tawassama",
-"i": "vasm → siymo",
-"s": "TIKILIB QARADI."
+"i": "vasm",
+"s": "Vasma qo'ygan qoshga TIKILIB QARADI."
 },
 "متنكر": {
 "o": "mutanakkir",
@@ -10315,8 +10315,8 @@
 },
 "مغرمون به": {
 "o": "mughramūna bihi",
-"i": "g'aram → g'arq",
-"s": "UNGA ISHQIBOZLAR."
+"i": "g'arq",
+"s": "Ishqiga g'arq — ISHQIBOZLAR."
 },
 "قشر": {
 "o": "qishr",
@@ -10370,8 +10370,8 @@
 },
 "فاحشة": {
 "o": "fāhisha",
-"i": "fohish → fahsh",
-"s": "HADDAN TASHQARI."
+"i": "fosh",
+"s": "Fosh bo'lgan HADDAN TASHQARI narx."
 },
 "المغرب": {
 "o": "al-maghrib",
@@ -10465,8 +10465,8 @@
 },
 "زه": {
 "o": "zih",
-"i": "zeh → «zeh!»",
-"s": "«ZEH!» (ajablanish undovi)."
+"i": "zeh",
+"s": "«Zeh!» — ajablanish undovi."
 },
 "ما أعجل ما أثمر هذا النخل": {
 "o": "mā aʿjala mā athmara hādha n-nakhl",
@@ -10530,8 +10530,8 @@
 },
 "عزا": {
 "o": "ʿazā",
-"i": "aza → nisbat",
-"s": "NISBAT BERDI."
+"i": "aza",
+"s": "Azani kimga NISBAT BERDI."
 },
 "ولج": {
 "o": "walaja",
@@ -10655,8 +10655,8 @@
 },
 "يتلوه": {
 "o": "yatlūhu",
-"i": "tilovat → tola",
-"s": "UNDAN KEYINGISI."
+"i": "tola",
+"s": "Tola ipdek UNDAN KEYINGISI."
 },
 "ما وكل به": {
 "o": "mā wukkila bihi",
@@ -10770,8 +10770,8 @@
 },
 "استجار": {
 "o": "istajāra",
-"i": "jor → panoh",
-"s": "PANOH TOPDI."
+"i": "jor",
+"s": "Jor (qo'shni)dan PANOH TOPDI."
 },
 "طاغ": {
 "o": "tāghin",
@@ -10825,8 +10825,8 @@
 },
 "ملاح": {
 "o": "mallāh",
-"i": "mallah → milh",
-"s": "KEMACHI."
+"i": "malla",
+"s": "Malla soqolli KEMACHI."
 },
 "هاج": {
 "o": "hāja",
@@ -10845,8 +10845,8 @@
 },
 "البائس": {
 "o": "al-bāʾis",
-"i": "bas → bechora",
-"s": "BAXTSIZ."
+"i": "bas",
+"s": "«Bas!» deb yig'lagan BAXTSIZ."
 },
 "الملهوف": {
 "o": "al-malhūf",
@@ -10860,8 +10860,8 @@
 },
 "الساعد": {
 "o": "as-sāʿid",
-"i": "sa'd → soid",
-"s": "YELKA (bilak)."
+"i": "soat",
+"s": "Soat taqilgan BILAK."
 },
 "البنان": {
 "o": "al-banān",
@@ -10890,8 +10890,8 @@
 },
 "التاني": {
 "o": "at-taʾannī",
-"i": "aniq → onik",
-"s": "SHOSHMASLIK."
+"i": "tani",
+"s": "Tanini asrab SHOSHMASLIK."
 },
 "التعني": {
 "o": "at-taʿannī",
@@ -10970,8 +10970,8 @@
 },
 "لسع": {
 "o": "lasaʿu",
-"i": "lasa → las",
-"s": "CHAQISH."
+"i": "las",
+"s": "Ari «las» etib CHAQDI."
 },
 "قائمته الأمامية": {
 "o": "qāʾimatahu l-amāmiyya",
@@ -11020,8 +11020,8 @@
 },
 "الفقمة": {
 "o": "al-fuqma",
-"i": "fuqaro → fuq",
-"s": "TYULEN."
+"i": "fuqaro",
+"s": "Fuqarolar tomosha qilayotgan TYULEN."
 },
 "القارس": {
 "o": "al-qāris",
@@ -11185,8 +11185,8 @@
 },
 "الضباب": {
 "o": "ad-dabāb",
-"i": "zabob → dud",
-"s": "TUMAN."
+"i": "zabon",
+"s": "Zabon (til)dek oq TUMAN."
 },
 "الحالكة": {
 "o": "al-hālika",
@@ -11365,8 +11365,8 @@
 },
 "لم تعرج على شيء": {
 "o": "lam tuʿarrij ʿalā shayʾ",
-"i": "me'roj → ariq",
-"s": "HECH NARSAGA QAYRILMADI."
+"i": "ariq",
+"s": "Ariqqa ham QAYRILMADI."
 },
 "تهاون": {
 "o": "tahāwana",
@@ -11435,13 +11435,13 @@
 },
 "اللؤم": {
 "o": "al-luʾm",
-"i": "la'n → lu'm",
-"s": "PASTKASHLIK."
+"i": "lo'm",
+"s": "Lo'm (pastkash) — PASTKASHLIK."
 },
 "عرضه": {
 "o": "ʿirduhu",
-"i": "arz → or",
-"s": "OBRO'SI."
+"i": "arz",
+"s": "Arz qilgan OBRO'SI."
 },
 "في السعة": {
 "o": "fi s-saʿa",
@@ -11500,8 +11500,8 @@
 },
 "دميم": {
 "o": "damīm",
-"i": "dam → zamim",
-"s": "XUNUK."
+"i": "dam",
+"s": "Damini olgan XUNUK maxluq."
 },
 "مغارة": {
 "o": "maghāra",
@@ -11535,13 +11535,13 @@
 },
 "أفعى": {
 "o": "afʿā",
-"i": "af'i → afi",
-"s": "ILON."
+"i": "af'on",
+"s": "Af'on (xafa) ILON."
 },
 "غرة": {
 "o": "ghirra",
-"i": "g'irra → g'ofil",
-"s": "BEE'TIBORLIK."
+"i": "g'irrom",
+"s": "G'irrom o'yinda BEE'TIBORLIK."
 },
 "تلتف": {
 "o": "taltaffu",
@@ -11770,8 +11770,8 @@
 },
 "اللئام": {
 "o": "al-liʾām",
-"i": "la'in → lu'm",
-"s": "PASTKASHLAR."
+"i": "la'in",
+"s": "La'in PASTKASHLAR."
 },
 "انقاد": {
 "o": "inqāda",
@@ -11830,8 +11830,8 @@
 },
 "نصل": {
 "o": "nasl",
-"i": "nasl → nasr",
-"s": "TIG'."
+"i": "nasl",
+"s": "Naslli qilichning TIG'I."
 },
 "ألقط": {
 "o": "alqatu",
@@ -11865,8 +11865,8 @@
 },
 "أن يباريها": {
 "o": "an yubāriyahā",
-"i": "bar → bor",
-"s": "BELLASHMOQ."
+"i": "bor",
+"s": "«Bor, BELLASH!»"
 },
 "خص": {
 "o": "khassa",
@@ -12195,8 +12195,8 @@
 },
 "لا تعتدي": {
 "o": "lā taʿtadī",
-"i": "tajovuz → adv",
-"s": "HUJUM QILMAYDI."
+"i": "adovat",
+"s": "Adovat qilmaydi — HUJUM QILMAYDI."
 },
 "إذا لم يعتد عليها": {
 "o": "idhā lam yuʿtada ʿalayhā",
@@ -12685,8 +12685,8 @@
 },
 "الحضانة": {
 "o": "al-hidāna",
-"i": "hazin → hizona",
-"s": "BOLA OCHISH."
+"i": "hazin",
+"s": "Hazin ona qush BOLA OCHISHda."
 },
 "خشن": {
 "o": "khashuna",
@@ -12705,8 +12705,8 @@
 },
 "الفرصاد": {
 "o": "al-firsād",
-"i": "firs → fir",
-"s": "TUT MEVASI."
+"i": "firuza",
+"s": "Firuzadek TUT MEVASI."
 },
 "ثمر العليق": {
 "o": "thamaru l-ʿullayq",
@@ -13020,8 +13020,8 @@
 },
 "بدا": {
 "o": "badā",
-"i": "badiiy → ibtido",
-"s": "KO'RINDI."
+"i": "badiiy",
+"s": "Badiiy manzara KO'RINDI."
 },
 "امتزج": {
 "o": "imtazaja",
@@ -13270,8 +13270,8 @@
 },
 "حاك": {
 "o": "hāka",
-"i": "hikoya → to'qish",
-"s": "TO'QIDI."
+"i": "hikoya",
+"s": "Hikoya aytib gilam TO'QIDI."
 },
 "سؤدد": {
 "o": "suʾdad",
@@ -13715,8 +13715,8 @@
 },
 "أحصى": {
 "o": "ahsā",
-"i": "ehsof → hisob",
-"s": "SANADI."
+"i": "hisob",
+"s": "Hisob-kitob qilib SANADI."
 },
 "صداء": {
 "o": "saddāʾ",
@@ -13750,13 +13750,13 @@
 },
 "شيع": {
 "o": "shayyaʿa",
-"i": "shia → kuzat",
-"s": "KUZATDI."
+"i": "shiypon",
+"s": "Shiypongacha KUZATDI."
 },
 "يجبره": {
 "o": "yajbiruhu",
-"i": "jabr → tuzat",
-"s": "TUZATADI."
+"i": "jabr",
+"s": "Jabr ko'rgan suyakni TUZATADI."
 },
 "قناة": {
 "o": "qanāt",
@@ -13865,8 +13865,8 @@
 },
 "محدودبة": {
 "o": "muhdawdiba",
-"i": "hadab → dukur",
-"s": "QADDI BUKILGAN."
+"i": "hadya",
+"s": "Hadya ko'tarib QADDI BUKILGAN."
 },
 "أشوه": {
 "o": "ashwah",
@@ -13925,8 +13925,8 @@
 },
 "نفق": {
 "o": "nafaq",
-"i": "nafaqa → naqb",
-"s": "YER OSTI YO'LI."
+"i": "nafaqa",
+"s": "Nafaqa pulini yashirgan YER OSTI YO'LI."
 },
 "بنائين": {
 "o": "bannāʾīna",
@@ -14130,8 +14130,8 @@
 },
 "يبلى": {
 "o": "yablā",
-"i": "bali → balo",
-"s": "ESKIRADI."
+"i": "balo",
+"s": "Balo urgandek ESKIRADI."
 },
 "العهد": {
 "o": "al-ʿahd",
@@ -14175,8 +14175,8 @@
 },
 "زعزعة": {
 "o": "zaʿzaʿa",
-"i": "zilzila → za'za'",
-"s": "SILKINISH."
+"i": "zilzila",
+"s": "Zilziladek SILKINISH."
 },
 "أن يتميزوا": {
 "o": "an yatamayyazū",
@@ -14205,8 +14205,8 @@
 },
 "ما قاسوه": {
 "o": "mā qāsūhu",
-"i": "qasos → qiyin",
-"s": "TOTGAN AZOBLARI."
+"i": "qasos",
+"s": "Qasos alami — TOTGAN AZOBLARI."
 },
 "إربا إربا": {
 "o": "iraban iraban",
@@ -14285,8 +14285,8 @@
 },
 "حظ": {
 "o": "hazz",
-"i": "huzur → hazz",
-"s": "NASIBA."
+"i": "huzur",
+"s": "Huzur-halovat — NASIBA."
 },
 "وثاق": {
 "o": "withāq",
@@ -14325,8 +14325,8 @@
 },
 "النضار": {
 "o": "an-nidār",
-"i": "nazorat → nozir",
-"s": "SOF OLTIN."
+"i": "nazar",
+"s": "Nazar tushgan SOF OLTIN."
 },
 "ناقة": {
 "o": "nāqa",
@@ -14545,8 +14545,8 @@
 },
 "زور": {
 "o": "zūr",
-"i": "zo'r → zur",
-"s": "YOLG'ON."
+"i": "zo'r",
+"s": "Zo'rlab aytilgan YOLG'ON."
 },
 "بهتان": {
 "o": "buhtān",
@@ -14575,8 +14575,8 @@
 },
 "مضاعف": {
 "o": "mudāʿaf",
-"i": "zaif → izofa",
-"s": "IKKI BAROBAR."
+"i": "izofa",
+"s": "Izofa qilib IKKI BAROBAR."
 },
 "افتراء": {
 "o": "iftirāʾ",
@@ -14620,8 +14620,8 @@
 },
 "شاع": {
 "o": "shāʿa",
-"i": "shoe → shuhrat",
-"s": "TARQALDI."
+"i": "shuhrat",
+"s": "Shuhrat TARQALDI."
 },
 "زي": {
 "o": "ziyy",
@@ -14720,8 +14720,8 @@
 },
 "احتل": {
 "o": "ihtalla",
-"i": "ishg'ol → hal",
-"s": "EGALLANDI."
+"i": "hal",
+"s": "Hal qilinib EGALLANDI."
 },
 "جفا": {
 "o": "jafā",
@@ -14825,8 +14825,8 @@
 },
 "عقال": {
 "o": "ʿiqāl",
-"i": "iqol → aql",
-"s": "KISHAN."
+"i": "aql",
+"s": "Aqlni bog'lagan KISHAN."
 },
 "قيل وقال": {
 "o": "qīlun wa-qāl",
@@ -14870,8 +14870,8 @@
 },
 "وعى": {
 "o": "waʿā",
-"i": "vaqf → vo'y",
-"s": "FAHMLADI."
+"i": "vo'y",
+"s": "«Vo'y!» deb FAHMLADI."
 },
 "الأمثال": {
 "o": "al-amthāl",
@@ -14940,8 +14940,8 @@
 },
 "جدوى": {
 "o": "jadwā",
-"i": "jadval → jiddiy",
-"s": "USTUNLIK (foyda)."
+"i": "jadval",
+"s": "Jadvalda ko'ringan FOYDA."
 },
 "التوفيق": {
 "o": "at-tawfīq",

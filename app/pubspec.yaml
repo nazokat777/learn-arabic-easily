@@ -33,6 +33,7 @@ flutter:
     - assets/content/nahv_lessons.json
     - assets/content/ulash.json
     - assets/content/sharh.json
+    - assets/content/ilgak.json
     - assets/content/grammatika.json
     - assets/content/sarf_lessons.json
     - assets/content/version.json

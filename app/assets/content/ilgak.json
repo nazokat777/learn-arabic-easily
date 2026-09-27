@@ -1,0 +1,707 @@
+{
+"meta": {
+"izoh": "Mnemonik ilgaklar: o — o'qilishi, i — tovushdosh tanish so'z, s — sahna. Kitob matni emas, yodlash yordamchisi."
+},
+"sozlar": {
+"كتاب": {
+"o": "kitāb",
+"i": "kitob",
+"s": "O'zbekchadagi «kitob»ning o'zi — ulkan kitob ochilib, ichidan yana kitoblar uchib chiqyapti."
+},
+"لوح": {
+"o": "lawh",
+"i": "lavha",
+"s": "Devorga ilingan katta taxtacha lavha, ustida yozuv yaltirayapti."
+},
+"قلم": {
+"o": "qalam",
+"i": "qalam",
+"s": "O'zbekcha «qalam»ning aynan o'zi — qalam o'zi yurib, havoga yozyapti."
+},
+"مسطرة": {
+"o": "mistara",
+"i": "mister + tor",
+"s": "«Mister» chizg'ichni qo'liga olib, tor chiziq tortyapti."
+},
+"هذا": {
+"o": "hādhā",
+"i": "ha, zo'r",
+"s": "«Ha, zo'r — mana BU!» — erkak narsaga barmoq bilan ishora."
+},
+"هذه": {
+"o": "hādhihi",
+"i": "ha, zehni",
+"s": "Qizga ishora: «Ha, zehni o'tkir mana BU qiz!» (muannas)."
+},
+"أين؟": {
+"o": "ayna",
+"i": "oyna",
+"s": "Oynaga qarab: «Ko'zoynagim QAYERDA?»"
+},
+"ما؟": {
+"o": "mā",
+"i": "mo'",
+"s": "Hayron sigir «Mo'?» deb so'rayapti — «NIMA?»"
+},
+"هات": {
+"o": "hāti",
+"i": "hoy, ot",
+"s": "«Hoy, ot!» — kimdir qo'lini cho'zib: «BER! Keltir!»"
+},
+"محبرة": {
+"o": "mihbara",
+"i": "mehr + bor",
+"s": "Mehri bor siyohdon — undan siyoh o'rniga yurakchalar chiqyapti."
+},
+"سبورة": {
+"o": "sabbūra",
+"i": "sabr",
+"s": "Sabr bilan doskaga yozyapsiz, doska tugamayapti — DOSKA."
+},
+"دفتر": {
+"o": "daftar",
+"i": "daftar",
+"s": "O'zbekcha «daftar»ning o'zi — varaqlari qanot bo'lib uchyapti."
+},
+"ورق": {
+"o": "waraq",
+"i": "varaq",
+"s": "Oq varaqlar qordek yog'yapti — QOG'OZ."
+},
+"حبر": {
+"o": "hibr",
+"i": "hibir-hibir",
+"s": "Siyoh «hibir-hibir» qaynab, idishdan toshyapti — SIYOH."
+},
+"أخذ": {
+"o": "akhadha",
+"i": "axtar",
+"s": "Qo'l cho'zib axtarib, narsani OLDI."
+},
+"الريشة": {
+"o": "ar-rīsha",
+"i": "rishta",
+"s": "Pat rishta ipiga bog'langan, siyohga botirib yozyapsiz — PAT, PERO."
+},
+"قلم الحبر": {
+"o": "qalamu l-hibr",
+"i": "qalam + hibir",
+"s": "Qalam ichida siyoh «hibir-hibir» qaynayapti — SHARIKLI RUCHKA."
+},
+"قلم الرصاص": {
+"o": "qalamu r-rasās",
+"i": "qalam + rasa",
+"s": "Rasa og'ir, qo'rg'oshindan qalam — ODDIY QALAM."
+},
+"مسكة": {
+"o": "maska",
+"i": "maska",
+"s": "Eshik ushlagichiga maska kiydirilgan — USHLAGICH."
+},
+"نشافة الحبر": {
+"o": "nashshāfatu l-hibr",
+"i": "nash-nash + hibir",
+"s": "Nam siyohni «nash-nash» shimib quritayapti — SIYOH SHIMDIRGICH."
+},
+"معلم": {
+"o": "muʿallim",
+"i": "muallim",
+"s": "O'zbekcha «muallim» — O'QITUVCHI doska oldida."
+},
+"تلميذ": {
+"o": "tilmīdh",
+"i": "til + miz",
+"s": "Tilini chiqarib, mizda yozayotgan bola — O'QUVCHI."
+},
+"كرسي": {
+"o": "kursiy",
+"i": "kursi",
+"s": "O'zbekcha «kursi» — STUL o'zi yurib kelyapti."
+},
+"مدرسة": {
+"o": "madrasa",
+"i": "madrasa",
+"s": "Gumbazli madrasa — MAKTAB."
+},
+"فصل": {
+"o": "fasl",
+"i": "fasl",
+"s": "To'rt fasl rasmlari osilgan xona — SINF."
+},
+"مكتب": {
+"o": "maktab",
+"i": "maktab",
+"s": "Maktabdagi STOL: stol ustida butun maktab binosi turibdi."
+},
+"مكتب المعلم": {
+"o": "maktabu l-muʿallim",
+"i": "maktab + muallim",
+"s": "Muallim o'z stoli ustiga chiqib olgan — O'QITUVCHINING STOLI."
+},
+"مقعد التلميذ": {
+"o": "maqʿadu t-tilmīdh",
+"i": "maqsad + tilmiz",
+"s": "O'quvchining maqsadi — partada o'tirish: O'QUVCHI PARTASI."
+},
+"درس": {
+"o": "dars",
+"i": "dars",
+"s": "O'zbekcha «dars»ning o'zi."
+},
+"ممحاة": {
+"o": "mimhāt",
+"i": "mehmon + o'ch",
+"s": "Mehmon kelib hamma xatolarni o'chirib ketdi — O'CHIRG'ICH."
+},
+"ممسحة": {
+"o": "mimsaha",
+"i": "mum + sah",
+"s": "Latta bilan doskani mumdek silliq artyapsiz — LATTA."
+},
+"كتب": {
+"o": "kataba",
+"i": "kotib",
+"s": "Kotib YOZDI."
+},
+"قرأ": {
+"o": "qaraʾa",
+"i": "qara",
+"s": "«Qara!» — kitobga qarab O'QIDI."
+},
+"هنا": {
+"o": "hunā",
+"i": "huna (mana)",
+"s": "Oyog'ingiz ostini ko'rsatib: «huna — BU YERDA!»"
+},
+"هناك": {
+"o": "hunāka",
+"i": "huv, anakay",
+"s": "Uzoqni ko'rsatib: «huv anakay joyda — U YERDA!»"
+},
+"في": {
+"o": "fī",
+"i": "fil",
+"s": "Fil qutining ICHIDA o'tiribdi."
+},
+"محفظة": {
+"o": "mihfaza",
+"i": "muhofaza",
+"s": "Kitoblarni muhofaza qiladigan SUMKA."
+},
+"مبراة": {
+"o": "mibrāt",
+"i": "mo'ri + barot",
+"s": "Qalamni tarashlasangiz mo'ridan qirindi chiqyapti — QALAMTAROSH."
+},
+"مقلمة": {
+"o": "miqlama",
+"i": "mi + qalam",
+"s": "Qalamlarning uyi — QALAMDON, ichida qalamlar uxlayapti."
+},
+"شباك": {
+"o": "shubbāk",
+"i": "shu bok",
+"s": "«Shu bokka qara!» — DERAZAdan tashqariga qarayapsiz."
+},
+"مصباح": {
+"o": "misbāh",
+"i": "sabah",
+"s": "Sabah (tong)dek yorug' CHIROQ yondi."
+},
+"ساعة": {
+"o": "sāʿa",
+"i": "soat",
+"s": "O'zbekcha «soat»."
+},
+"كبريت": {
+"o": "kibrīt",
+"i": "kibr + it",
+"s": "Kibrli it GUGURT chaqib o'ynayapti."
+},
+"حجرة": {
+"o": "hujra",
+"i": "hujra",
+"s": "«Hujra» — kichik XONA."
+},
+"طباشير": {
+"o": "tabāshīr",
+"i": "tabassum",
+"s": "BO'R bilan doskaga tabassum chizyapsiz."
+},
+"دخل": {
+"o": "dakhala",
+"i": "daxl",
+"s": "Xonaga daxl qilib KIRIB keldi."
+},
+"فهم": {
+"o": "fahima",
+"i": "fahm",
+"s": "Fahmi yetdi — ANGLADI."
+},
+"قعد": {
+"o": "qaʿada",
+"i": "qoida",
+"s": "Qoidaga ko'ra joyiga O'TIRDI."
+},
+"حفظ": {
+"o": "hafiza",
+"i": "hofiz",
+"s": "Hofiz kitobni YODLADI."
+},
+"على": {
+"o": "ʿalā",
+"i": "a'lo",
+"s": "A'lo baho stolning USTIDA turibdi."
+},
+"من؟": {
+"o": "man",
+"i": "man",
+"s": "«Man kimman?» — KIM?"
+},
+"فنجان": {
+"o": "finjān",
+"i": "fincon",
+"s": "«Fincon» — PIYOLA choy."
+},
+"بيت": {
+"o": "bayt",
+"i": "bayt",
+"s": "Devoriga she'r bayti yozilgan UY."
+},
+"دار": {
+"o": "dār",
+"i": "dor",
+"s": "HOVLI o'rtasida dor tortilgan."
+},
+"رف": {
+"o": "raff",
+"i": "raf",
+"s": "TOKCHA (raf)ga kitoblar terilgan."
+},
+"ولد": {
+"o": "walad",
+"i": "valad",
+"s": "«Valadam!» — BOLA yugurib kelyapti."
+},
+"سخانة الماء": {
+"o": "sakhkhānatu l-māʾ",
+"i": "saxiy + mo'",
+"s": "Saxiy idish suvni isitib beryapti, sigir «mo'» deb ichyapti — SUV ISITGICH."
+},
+"إبريق الشاي": {
+"o": "ibrīqu sh-shāy",
+"i": "ibriq + choy",
+"s": "Ibriqdan choy quyilyapti — CHOYNAK."
+},
+"شاي": {
+"o": "shāy",
+"i": "shoyi",
+"s": "Shoyi dasturxonda CHOY."
+},
+"قهوة": {
+"o": "qahwa",
+"i": "qahva",
+"s": "O'zbekcha «qahva» — KOFE."
+},
+"سكر": {
+"o": "sukkar",
+"i": "shakar",
+"s": "«Sukkar» — «shakar»ning qarindoshi."
+},
+"طبيخ": {
+"o": "tabīkh",
+"i": "tabib + pish",
+"s": "Tabib qozonda OVQAT pishiryapti."
+},
+"شرب": {
+"o": "shariba",
+"i": "sharbat",
+"s": "Sharbat ICHDI."
+},
+"أكل": {
+"o": "akala",
+"i": "akal",
+"s": "Akam tinmay YEYAPTI."
+},
+"ب": {
+"o": "bi",
+"i": "bi(lan)",
+"s": "«Bi-lan» — bi = BILAN."
+},
+"يا": {
+"o": "yā",
+"i": "yo!",
+"s": "«Yo, Ali!» — EY deb chaqirish."
+},
+"خزانة": {
+"o": "khizāna",
+"i": "xazina",
+"s": "Ichida xazina saqlanadigan SHKAF."
+},
+"سرير": {
+"o": "sarīr",
+"i": "sarir (taxt)",
+"s": "Podsho taxtidek KARAVOT."
+},
+"مصلى": {
+"o": "muṣallā",
+"i": "musallo",
+"s": "«Musallo» — JOYNAMOZ."
+},
+"مسواك": {
+"o": "miswāk",
+"i": "misvok",
+"s": "O'zbekcha «misvok»."
+},
+"ردهة": {
+"o": "radha",
+"i": "rad",
+"s": "Dahlizda hammani rad etib turishibdi — ZAL, DAHLIZ."
+},
+"باب": {
+"o": "bāb",
+"i": "bob",
+"s": "Kitob bobidek ochiladigan ESHIK."
+},
+"لحم": {
+"o": "lahm",
+"i": "lahm",
+"s": "Lahm-lahm GO'SHT bo'laklari."
+},
+"خبز": {
+"o": "khubz",
+"i": "xub",
+"s": "«Xub NON!»"
+},
+"نام": {
+"o": "nāma",
+"i": "nom",
+"s": "Nomini aytib chaqirsangiz ham uyg'onmaydi — UXLADI."
+},
+"تعال": {
+"o": "taʿāla",
+"i": "ta'olo",
+"s": "Qo'l siltab: «KEL bu yoqqa!»"
+},
+"ثور": {
+"o": "thawr",
+"i": "savr (burj)",
+"s": "Savr burji — BUQA."
+},
+"بقرة": {
+"o": "baqara",
+"i": "baqir",
+"s": "SIGIR «baqir-baqir» ma'rayapti."
+},
+"عجل": {
+"o": "ʿijl",
+"i": "ijil-ijil",
+"s": "BUZOQ ijil-ijil sakrab yuribdi."
+},
+"فرس": {
+"o": "faras",
+"i": "farosat",
+"s": "Farosatli OT."
+},
+"مهر": {
+"o": "muhr",
+"i": "muhr",
+"s": "Peshonasiga muhr bosilgan TOYCHOQ."
+},
+"ديك": {
+"o": "dīk",
+"i": "diq-diq",
+"s": "XO'ROZ «diq-diq» qilib qichqiryapti."
+},
+"دجاجة": {
+"o": "dajāja",
+"i": "jo'ja",
+"s": "TOVUQ jo'jalarini ergashtirib yuribdi."
+},
+"كلب": {
+"o": "kalb",
+"i": "kalla",
+"s": "Kallasi katta IT."
+},
+"ركض": {
+"o": "rakada",
+"i": "raqs",
+"s": "Raqs tushgandek YUGURDI."
+},
+"صاح": {
+"o": "sāha",
+"i": "soh-soh",
+"s": "«Soh-soh!» deb QICHQIRDI."
+},
+"خرج": {
+"o": "kharaja",
+"i": "xarj",
+"s": "Pulni xarj qilib, do'kondan CHIQDI."
+},
+"أنا": {
+"o": "anā",
+"i": "ona",
+"s": "Bola onasiga: «Mana, MEN!»"
+},
+"أنت": {
+"o": "anta",
+"i": "ana, sen",
+"s": "Barmoq bilan ko'rsatib: «Ana, SEN!»"
+},
+"هو": {
+"o": "huwa",
+"i": "huv",
+"s": "Uzoqdagini ko'rsatib: «Huv, U!»"
+},
+"متى؟": {
+"o": "matā",
+"i": "mato",
+"s": "Mato do'koni QACHON ochiladi?"
+},
+"من": {
+"o": "min",
+"i": "mina",
+"s": "Minadan qochib chiqyapti — ...DAN."
+},
+"سكين": {
+"o": "sikkīn",
+"i": "sekin",
+"s": "PICHOQni sekin ushla!"
+},
+"كرة": {
+"o": "kura",
+"i": "kurak",
+"s": "Kurak bilan TO'P uryapsiz."
+},
+"سمك": {
+"o": "samak",
+"i": "samo",
+"s": "Samoda (osmonda) BALIQ suzib yuribdi."
+},
+"ماء": {
+"o": "māʾ",
+"i": "mo'",
+"s": "Sigir «mo'» deb SUV so'rayapti."
+},
+"لبن": {
+"o": "laban",
+"i": "lab",
+"s": "Labingizda SUT mo'ylovi."
+},
+"قنينة": {
+"o": "qinnīna",
+"i": "qin + nina",
+"s": "Qinida nina bor SHISHA GRAFIN."
+},
+"سبح": {
+"o": "sabaha",
+"i": "sabah (tong)",
+"s": "Tong saharda hovuzda SUZDI."
+},
+"نظر": {
+"o": "nazara",
+"i": "nazar",
+"s": "Nazar soldi — QARADI."
+},
+"قام": {
+"o": "qāma",
+"i": "qomat",
+"s": "Qomatini rostlab o'rnidan TURDI."
+},
+"لعب": {
+"o": "laʿiba",
+"i": "lab",
+"s": "Labini cho'chchaytirib O'YNAYAPTI."
+},
+"قبل": {
+"o": "qabla",
+"i": "qabul",
+"s": "Qabuldan OLDIN kutib turibsiz."
+},
+"بعد": {
+"o": "baʿda",
+"i": "ba'd",
+"s": "«Ba'dan» — KEYIN."
+},
+"هل؟": {
+"o": "hal",
+"i": "hal",
+"s": "«Masala hal bo'ldiMI?»"
+},
+"نعم": {
+"o": "naʿam",
+"i": "na'matak",
+"s": "Na'matak gulini berib: «HA!»"
+},
+"ابن": {
+"o": "ibn",
+"i": "Ibn Sino",
+"s": "Ibn Sino — Sinoning O'G'LI."
+},
+"بنت": {
+"o": "bint",
+"i": "bant",
+"s": "Boshida bant — QIZ."
+},
+"أب": {
+"o": "ab",
+"i": "aba",
+"s": "Bola «aba!» deb OTASIga yugurdi."
+},
+"أم": {
+"o": "umm",
+"i": "umm",
+"s": "ONA bolani «umm» deb o'pyapti."
+},
+"أخ": {
+"o": "akh",
+"i": "ax, akam",
+"s": "«Ax, akam!» — AKA-UKA."
+},
+"أخت": {
+"o": "ukht",
+"i": "uxt",
+"s": "OPA-SINGIL «uxt» deb uxlab qoldi."
+},
+"قلم محمود": {
+"o": "qalamu mahmūdin",
+"i": "qalam + Mahmud",
+"s": "Mahmud qalamini ko'tarib turibdi — MAHMUDNING QALAMI."
+},
+"لك": {
+"o": "laka",
+"i": "lak",
+"s": "Lak bilan «SENIKI» deb yozilgan."
+},
+"ه": {
+"o": "-hu",
+"i": "huv",
+"s": "«Huv, UNIKI» — UNING."
+},
+"ي": {
+"o": "-ī",
+"i": "i",
+"s": "«Meniki-i!» — MENING."
+},
+"أحب": {
+"o": "ahabba",
+"i": "habib",
+"s": "Habibini YAXSHI KO'RDI."
+},
+"أطاع": {
+"o": "atāʿa",
+"i": "itoat",
+"s": "ITOAT QILDI."
+},
+"حصان": {
+"o": "hisān",
+"i": "hisob",
+"s": "Hisobchi AYG'IRni minib keldi."
+},
+"حمار": {
+"o": "himār",
+"i": "humor",
+"s": "Humor bilan kulayotgan ESHAK."
+},
+"دب": {
+"o": "dubb",
+"i": "dub-dub",
+"s": "AYIQ «dub-dub» qadam tashlayapti."
+},
+"ذئب": {
+"o": "dhiʾb",
+"i": "zeb",
+"s": "Zeb berib olgan BO'RI."
+},
+"فأر": {
+"o": "faʾr",
+"i": "fara",
+"s": "SICHQON faraga (chiroqqa) yuguryapti."
+},
+"قط": {
+"o": "qitt",
+"i": "qit-qit",
+"s": "MUSHUK qitiqlab «qit-qit» o'ynayapti."
+},
+"هر": {
+"o": "hirr",
+"i": "hirr-hirr",
+"s": "MUSHUK «hirr-hirr» xurillayapti."
+},
+"غابة": {
+"o": "ghāba",
+"i": "g'oyib",
+"s": "O'RMONda g'oyib bo'ldi."
+},
+"حديقة": {
+"o": "hadīqa",
+"i": "hadya",
+"s": "BOG' gullarini hadya qilyapti."
+},
+"مكتوب": {
+"o": "maktūb",
+"i": "maktub",
+"s": "O'zbekcha «maktub» — XAT."
+},
+"ركب": {
+"o": "rakiba",
+"i": "rikob",
+"s": "Oyog'ini rikobga qo'yib otga MINDI."
+},
+"فتح": {
+"o": "fataha",
+"i": "fath",
+"s": "Fath qilib darvozani OCHDI."
+},
+"ذهب": {
+"o": "dhahaba",
+"i": "zahab (oltin)",
+"s": "Oltinni olib KETDI."
+},
+"يوجد": {
+"o": "yūjadu",
+"i": "vujud",
+"s": "Vujudi BOR — topiladi."
+},
+"إلى": {
+"o": "ilā",
+"i": "ilova",
+"s": "Ilovaga qarab ketyapsiz — ...GA."
+},
+"مركب": {
+"o": "markab",
+"i": "markab",
+"s": "O'zbekcha «markab» — ULOV."
+},
+"طبق": {
+"o": "tabaq",
+"i": "tabaq",
+"s": "O'zbekcha «tabaq» — LAGAN."
+},
+"ملعقة": {
+"o": "milʿaqa",
+"i": "mal'aka",
+"s": "Mal'aka QOSHIQ bilan osh yeyapti."
+},
+"شوكة": {
+"o": "shawka",
+"i": "shox",
+"s": "Tishlari shoxdek SANCHQI."
+},
+"ملح": {
+"o": "milh",
+"i": "mil-mil",
+"s": "TUZ mil-mil yaltirayapti."
+},
+"مملحة": {
+"o": "mimlaha",
+"i": "mil-mil",
+"s": "TUZ mil-mil to'kiladigan idish — TUZDON."
+},
+"طعام": {
+"o": "taʿām",
+"i": "ta'm",
+"s": "Ta'mi zo'r OVQAT."
+}
+}
+}

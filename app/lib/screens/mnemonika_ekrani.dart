@@ -3,6 +3,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart' hide Text;
 
+import 'package:url_launcher/url_launcher.dart';
+
 import '../arabic.dart';
 import '../main.dart';
 import '../mashq/element.dart';
@@ -16,6 +18,7 @@ import '../widgets/motion.dart';
 import '../widgets/uz_text.dart';
 import 'bosh_joy.dart';
 import 'gap_tuzish_ekrani.dart';
+import 'ilgak_mashqi.dart';
 import 'lesson/gap_tuzish.dart';
 import 'yozma_imtihon.dart';
 
@@ -639,7 +642,7 @@ class _VazifaQatori extends StatelessWidget {
     Vazifa.ilgak => (
       Icons.link_rounded,
       'Ilgak va obraz',
-      "Har so'z tovushini tanish so'zga ulang, g'alati sahna to'qing",
+      "Har so'zga tayyor ilgak va sahna — tasavvur qilib, keyin eslaysiz",
     ),
     Vazifa.qoida => (
       Icons.menu_book_rounded,
@@ -769,14 +772,26 @@ class _VazifaQatori extends StatelessWidget {
 
     switch (vazifa) {
       case Vazifa.hajm:
-      case Vazifa.ilgak:
         final r = await Navigator.push<bool>(
           context,
           MaterialPageRoute(
             builder: (_) => KunSozlariEkrani(
               sozlar: yangi,
-              ilgakRejimi: vazifa == Vazifa.ilgak,
-              sarlavha: '${kun + 1}-kun — ${vazifa == Vazifa.ilgak ? "ilgak va obraz" : "bugungi so'zlar"}',
+              ilgakRejimi: false,
+              sarlavha: "${kun + 1}-kun — bugungi so'zlar",
+            ),
+          ),
+        );
+        bajarildi = r ?? false;
+
+      case Vazifa.ilgak:
+        if (yangi.isEmpty) break;
+        final r = await Navigator.push<bool>(
+          context,
+          MaterialPageRoute(
+            builder: (_) => IlgakMashqi(
+              sozlar: yangi,
+              sarlavha: '${kun + 1}-kun — ilgak va sahna',
             ),
           ),
         );
@@ -1730,9 +1745,74 @@ class _UsullarQismi extends StatelessWidget {
     ),
   ];
 
+  /// Davronbek Turdievning video darslari (YouTube).
+  static const _videolar = <(String, String, String)>[
+    ('Wc7p4NgO_SU', "Xorijiy so'zlarni yodlashning ko'pchilik bilmaydigan usuli", '4 daq'),
+    ('dR-Q07BhKj8', 'Bir qarashda eslab qolish mumkinmi? 3 prinsip', '12 daq'),
+    ('n1MI3p0KpzY', "Chet tili so'zlarini eslab qolishning 7 qadamli algoritmi", '42 daq'),
+    ('fyxL4D1WF9M', "Til o'rganishda orqaga tortayotgan 9 ta xato", '59 daq'),
+    ('ruaSbmL9ErE', 'Xotirani kuchaytirish — 30 daqiqalik amaliy dars', '33 daq'),
+    ('hX_L9p8ZEIg', "1 kunda 1000 ta so'z yodlash rostdan ham mumkinmi?", '9 daq'),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return _markaz([
+      _karta(
+        chegara: AppColors.coral.withValues(alpha: 0.5),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                const Text('📺', style: TextStyle(fontSize: 22)),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: Text(
+                    'Mnemonika darsliklari',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w800,
+                      fontSize: 16,
+                      color: AppColors.ink,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 4),
+            Text(
+              "Mnemonika nima ekanini tushunmagan bo'lsangiz — shu videolardan "
+              "boshlang. Tavsiya: avval 3-video (7 qadamli algoritm).",
+              style: TextStyle(color: AppColors.matn2, fontSize: 13),
+            ),
+            const SizedBox(height: 8),
+            for (final (i, (id, nom, vaqt)) in _videolar.indexed)
+              ListTile(
+                contentPadding: EdgeInsets.zero,
+                dense: true,
+                leading: CircleAvatar(
+                  radius: 16,
+                  backgroundColor: AppColors.coral.withValues(alpha: 0.12),
+                  child: const Icon(
+                    Icons.play_arrow_rounded,
+                    color: AppColors.coral,
+                  ),
+                ),
+                title: Text(
+                  '${i + 1}. $nom',
+                  style: TextStyle(color: AppColors.ink, fontSize: 14),
+                ),
+                subtitle: Text('YouTube · $vaqt'),
+                trailing: const Icon(Icons.open_in_new_rounded, size: 18),
+                onTap: () => launchUrl(
+                  Uri.parse('https://youtu.be/$id'),
+                  mode: LaunchMode.externalApplication,
+                ),
+              ),
+          ],
+        ),
+      ),
+      const SizedBox(height: 10),
       for (final (ikon, nom, bandlar) in _bolimlar) ...[
         _karta(
           child: Column(

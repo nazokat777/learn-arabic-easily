@@ -4,7 +4,9 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../arabic.dart';
 import '../main.dart';
+import '../services/content_updater.dart';
 import '../mashq/element.dart';
 import '../services/eslatma.dart';
 import 'xarita.dart';
@@ -160,6 +162,15 @@ class Reja {
   );
 }
 
+/// Ilovaning tayyor mnemonik ilgagi: o'qilishi, tovushdosh tanish so'z,
+/// sahna. Kitob matni EMAS — yodlash yordamchisi (ilgak.json).
+class TayyorIlgak {
+  final String oqilishi;
+  final String ilgak;
+  final String sahna;
+  const TayyorIlgak(this.oqilishi, this.ilgak, this.sahna);
+}
+
 /// Rejalar, ilgaklar, zanjir va eslatma vaqtini saqlaydi.
 class RejaXotira extends ChangeNotifier {
   RejaXotira._();
@@ -170,6 +181,34 @@ class RejaXotira extends ChangeNotifier {
 
   /// So'z kaliti → o'quvchi o'zi to'qigan ilgak/sahna.
   final Map<String, String> ilgaklar = {};
+
+  /// Tayyor ilgaklar: harakatsiz arabcha → ilgak.
+  final Map<String, TayyorIlgak> _tayyor = {};
+
+  TayyorIlgak? tayyorIlgak(String ar) {
+    final k = stripDiacritics(splitForms(ar).first)
+        .replaceAll('؟', '')
+        .replaceAll('?', '')
+        .trim();
+    return _tayyor[k] ?? _tayyor['$k؟'];
+  }
+
+  Future<void> _tayyorYukla() async {
+    try {
+      final j =
+          jsonDecode(await ContentUpdater.instance.read('ilgak.json')) as Map;
+      _tayyor.clear();
+      for (final e in (j['sozlar'] as Map).entries) {
+        final v = e.value as Map;
+        final k = (e.key as String).replaceAll('؟', '').trim();
+        _tayyor[k] = TayyorIlgak(
+          v['o'] as String,
+          v['i'] as String,
+          v['s'] as String,
+        );
+      }
+    } catch (_) {}
+  }
 
   /// Kamida bitta reja-kuni tugatilgan kalendar kunlari.
   final Set<int> _faolKunlar = {};
@@ -200,6 +239,7 @@ class RejaXotira extends ChangeNotifier {
       ..clear()
       ..addAll((_p!.getStringList('mnem_faol') ?? []).map(int.parse));
     eslatmaDaqiqa = _p!.getInt('mnem_eslatma');
+    await _tayyorYukla();
     _eslatildi = _p!.getInt('mnem_eslatildi') ?? -1;
     notifyListeners();
   }

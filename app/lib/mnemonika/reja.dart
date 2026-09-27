@@ -186,7 +186,7 @@ class RejaXotira extends ChangeNotifier {
   final Map<String, TayyorIlgak> _tayyor = {};
 
   TayyorIlgak? tayyorIlgak(String ar) {
-    final k = stripDiacritics(splitForms(ar).first)
+    final k = stripDiacritics(splitForms(ar).first.split('=').first)
         .replaceAll('؟', '')
         .replaceAll('?', '')
         .trim();

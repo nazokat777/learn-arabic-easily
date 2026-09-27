@@ -444,9 +444,9 @@
 "s": "Bola onasiga: «Mana, MEN!»"
 },
 "أنت": {
-"o": "anta",
-"i": "ana, sen",
-"s": "Barmoq bilan ko'rsatib: «Ana, SEN!»"
+"o": "annat",
+"i": "ann",
+"s": "INGRADI."
 },
 "هو": {
 "o": "huwa",
@@ -514,14 +514,14 @@
 "s": "Labini cho'chchaytirib O'YNAYAPTI."
 },
 "قبل": {
-"o": "qabla",
-"i": "qabul",
-"s": "Qabuldan OLDIN kutib turibsiz."
+"o": "qibala",
+"i": "qibla",
+"s": "TOMON."
 },
 "بعد": {
-"o": "baʿda",
-"i": "ba'd",
-"s": "«Ba'dan» — KEYIN."
+"o": "buʿd",
+"i": "ba'id",
+"s": "MASOFA."
 },
 "هل؟": {
 "o": "hal",
@@ -604,9 +604,9 @@
 "s": "Humor bilan kulayotgan ESHAK."
 },
 "دب": {
-"o": "dubb",
-"i": "dub-dub",
-"s": "AYIQ «dub-dub» qadam tashlayapti."
+"o": "dabba",
+"i": "dab-dab",
+"s": "EMAKLADI."
 },
 "ذئب": {
 "o": "dhiʾb",
@@ -680,8 +680,8 @@
 },
 "ملعقة": {
 "o": "milʿaqa",
-"i": "mal'aka",
-"s": "Mal'aka QOSHIQ bilan osh yeyapti."
+"i": "mil + aqa",
+"s": "Mil-mil yaltiroq QOSHIQda osh ichyapsiz."
 },
 "شوكة": {
 "o": "shawka",
@@ -735,8 +735,8 @@
 },
 "الجنينة": {
 "o": "al-junayna",
-"i": "jannat",
-"s": "Kichkina jannatdek BOG'CHA."
+"i": "junun → jon",
+"s": "Jonga rohat beradigan KICHKINA BOG'CHA."
 },
 "قمت": {
 "o": "qumtu",
@@ -809,9 +809,9 @@
 "s": "Nahang (kit) ustida BIZ o'tiribmiz."
 },
 "هم": {
-"o": "hum",
-"i": "hum",
-"s": "Uzoqdagi to'da: «Hum — ULAR!» (erkak)."
+"o": "hamm",
+"i": "g'am → hamm",
+"s": "G'AM."
 },
 "أنتم": {
 "o": "antum",
@@ -869,9 +869,9 @@
 "s": "Sizlar sukut saqlab JIM TURASIZLAR."
 },
 "جد": {
-"o": "jadd",
-"i": "jadd (ajdod)",
-"s": "Ajdodlar boshi — BUVA."
+"o": "jidda",
+"i": "jiddiy",
+"s": "JIDDU-JAHD QIL."
 },
 "جدة": {
 "o": "jadda",
@@ -900,8 +900,8 @@
 },
 "أيها": {
 "o": "ayyuhā",
-"i": "ayyuhannos",
-"s": "«Ayyuhannos!» — EY (erkaklarga)."
+"i": "ayyuha",
+"s": "Murojaat: «Ayyuhan-nos — ey odamlar!» — EY (erkaklarga)."
 },
 "أيتها": {
 "o": "ayyatuhā",
@@ -944,9 +944,9 @@
 "s": "Mashq qilib piyoda YURDI."
 },
 "وضع": {
-"o": "wadaʿa",
-"i": "vazn",
-"s": "Vaznini tarozi ustiga QO'YDI."
+"o": "wadʿ",
+"i": "vaz'",
+"s": "HOLAT."
 },
 "برى": {
 "o": "barā",
@@ -969,9 +969,9 @@
 "s": "TA'LIM OLDI."
 },
 "صاحب": {
-"o": "sāhib",
+"o": "sāhaba",
 "i": "sohib",
-"s": "Sohibi — DO'ST, o'rtoq."
+"s": "DO'STLASHDI."
 },
 "باع": {
 "o": "bāʿa",
@@ -1135,8 +1135,8 @@
 },
 "كبير": {
 "o": "kabīr",
-"i": "kabir",
-"s": "«Allohu akbar» — kabir: KATTA."
+"i": "Kabir (ism)",
+"s": "Kabir ismli ulkan pahlavon — KATTA."
 },
 "صغير": {
 "o": "saghīr",
@@ -1264,9 +1264,9 @@
 "s": "Nashrdan oldin taxtani ARRALADI."
 },
 "ك": {
-"o": "-ki",
-"i": "ki (qiz)",
-"s": "Qizga: «-ki» — SENING (ayol)."
+"o": "ka",
+"i": "ka",
+"s": "«Ka» — KABI."
 },
 "سلم": {
 "o": "sullam",
@@ -1449,9 +1449,9 @@
 "s": "To'qqizta tish — TO'QQIZ."
 },
 "عشرة": {
-"o": "ʿashara",
-"i": "ashur(a)",
-"s": "O'n kunlik ashura — O'N."
+"o": "ʿishra",
+"i": "ishrat",
+"s": "DO'STLIK."
 },
 "مليم": {
 "o": "mallīm",
@@ -1480,8 +1480,8 @@
 },
 "جنيه": {
 "o": "junayh",
-"i": "jannat",
-"s": "Jannatdek qimmat Misr SO'Mi."
+"i": "juna → jun",
+"s": "Junli hamyondagi Misr SO'Mi."
 },
 "قيمة": {
 "o": "qīma",
@@ -1684,14 +1684,14 @@
 "s": "Fajr — tong: BOMDOD."
 },
 "ظهر": {
-"o": "zuhr",
-"i": "zuhur",
-"s": "Quyosh tepada zuhur — PESHIN."
+"o": "zahr",
+"i": "zahr",
+"s": "ORQA."
 },
 "عصر": {
-"o": "ʿasr",
-"i": "asr",
-"s": "O'zbekcha «asr» namozi."
+"o": "ʿasara",
+"i": "asr → siqish",
+"s": "SIQDI."
 },
 "مغرب": {
 "o": "maghrib",
@@ -1754,9 +1754,9 @@
 "s": "Ko'zni qo'riqlovchi hojib — QOSH."
 },
 "عين": {
-"o": "ʿayn",
-"i": "aynan",
-"s": "Aynan ko'rgan — KO'Z."
+"o": "ʿayyana",
+"i": "ta'yin",
+"s": "TA'YIN QILDI."
 },
 "أذن": {
 "o": "udhun",
@@ -1965,8 +1965,8 @@
 },
 "كعب": {
 "o": "kaʿb",
-"i": "Ka'ba",
-"s": "Ka'ba atrofida aylangan TO'PIQ."
+"i": "ka'b → kavush",
+"s": "Kavush tovonini ishqalagan TO'PIQ."
 },
 "ركبة": {
 "o": "rukba",
@@ -2009,9 +2009,9 @@
 "s": "Sekin temir (hadid) yo'l — TEMIR YO'L."
 },
 "مال": {
-"o": "māl",
-"i": "mol",
-"s": "O'zbekcha «mol-dunyo»."
+"o": "māla",
+"i": "moyil",
+"s": "MOYIL BO'LDI."
 },
 "صباحا": {
 "o": "sabāhan",
@@ -2045,8 +2045,8 @@
 },
 "حفظك الله": {
 "o": "hafizaka llāh",
-"i": "hofiz",
-"s": "Hofiz bo'lsin — ALLOH SENI ASRASIN."
+"i": "hifz (asrash)",
+"s": "«Hifz» — asrash: ALLOH SENI ASRASIN (duo)."
 },
 "سيدي": {
 "o": "sayyidī",
@@ -2241,7 +2241,7 @@
 "مائدة": {
 "o": "māʾida",
 "i": "moida",
-"s": "Moida (Qur'on surasi) — OVQAT STOLI."
+"s": "«Moida» — dasturxon yozilgan OVQAT STOLI."
 },
 "مرآة": {
 "o": "mirʾāt",
@@ -2289,9 +2289,9 @@
 "s": "Nozikdek pokiza — TOZA."
 },
 "وسخ": {
-"o": "wasikh",
+"o": "wassakha",
 "i": "vasvasa",
-"s": "Vasvasadek yopishgan KIR, IFLOS."
+"s": "KIR QILDI."
 },
 "لباس": {
 "o": "libās",
@@ -2350,8 +2350,8 @@
 },
 "حجر": {
 "o": "hajar",
-"i": "Hajarul asvad",
-"s": "Hajarul asvad — qora TOSH."
+"i": "hajm",
+"s": "Hajmi katta, og'ir TOSH."
 },
 "مهد": {
 "o": "mahd",
@@ -2404,9 +2404,9 @@
 "s": "Qamat-qamat YO'RGAKLADI."
 },
 "قدر": {
-"o": "qidr",
-"i": "qadr",
-"s": "Qadrli QOZON."
+"o": "qadar",
+"i": "qadar",
+"s": "MIQDOR."
 },
 "كماشة": {
 "o": "kammāsha",
@@ -2420,8 +2420,8 @@
 },
 "برميل": {
 "o": "barmīl",
-"i": "bar + mil",
-"s": "Mil-mil suv to'la BOCHKA."
+"i": "mil-mil",
+"s": "BOCHKA."
 },
 "مبرد": {
 "o": "mibrad",
@@ -2430,8 +2430,8 @@
 },
 "حديد": {
 "o": "hadīd",
-"i": "hadid",
-"s": "Hadid surasi — TEMIR."
+"i": "hadd + id",
+"s": "Haddan ziyod og'ir TEMIR."
 },
 "نحاس": {
 "o": "nuhās",
@@ -2465,8 +2465,8 @@
 },
 "موسى": {
 "o": "mūsā",
-"i": "Muso",
-"s": "Muso — USTARA."
+"i": "mo'y + so",
+"s": "Mo'ylarni oladigan USTARA."
 },
 "آلة": {
 "o": "āla",
@@ -2534,14 +2534,14 @@
 "s": "KURTKA."
 },
 "طربوش": {
-"o": "tarbūsh",
+"o": "turbūsh",
 "i": "tarbush",
-"s": "TARBUSH (qizil bosh kiyim)."
+"s": "BOSH KIYIM."
 },
 "قماش": {
-"o": "qumāsh",
+"o": "qimāsh",
 "i": "qumoq",
-"s": "Qumoq-qumoq GAZLAMA."
+"s": "GAZLAMA."
 },
 "غداء": {
 "o": "ghadāʾ",
@@ -2555,8 +2555,8 @@
 },
 "أكبر": {
 "o": "akbar",
-"i": "Allohu akbar",
-"s": "KATTAROQ."
+"i": "Akbar (ism)",
+"s": "Akbar ismli aka ukasidan KATTAROQ."
 },
 "أصغر": {
 "o": "asghar",
@@ -2904,9 +2904,9 @@
 "s": "ISSIQ."
 },
 "برد": {
-"o": "bard",
+"o": "barad",
 "i": "bard",
-"s": "Bard — SOVUQ."
+"s": "DO'L."
 },
 "شديد": {
 "o": "shadīd",
@@ -3630,8 +3630,8 @@
 },
 "نمر": {
 "o": "namir",
-"i": "namir → namoz",
-"s": "YO'LBARS."
+"i": "namir → nam",
+"s": "Nam o'rmonda yashaydigan YO'LBARS."
 },
 "فهد": {
 "o": "fahd",
@@ -3686,7 +3686,7 @@
 "ببغاء": {
 "o": "babghāʾ",
 "i": "bab-bag'",
-"s": "«Bab-bag'» deb gapiradigan TO'TI."
+"s": "TO'TI."
 },
 "عصفور": {
 "o": "ʿusfūr",
@@ -3720,8 +3720,8 @@
 },
 "تين": {
 "o": "tīn",
-"i": "Tin surasi",
-"s": "At-tin — ANJIR."
+"i": "tin",
+"s": "«Tin» — ANJIR; shirin anjir savatda."
 },
 "رطب": {
 "o": "rutab",
@@ -3935,8 +3935,8 @@
 },
 "أي؟": {
 "o": "ayyu",
-"i": "ayyuhannos",
-"s": "QAYSI?"
+"i": "ayyu → oy",
+"s": "«Qaysi oy?» — QAYSI?"
 },
 "أيهم؟": {
 "o": "ayyuhum",
@@ -3964,9 +3964,9 @@
 "s": "O'zbekcha «jami» — HAMMASI."
 },
 "جسر": {
-"o": "jisr",
+"o": "jasara",
 "i": "jasur",
-"s": "Jasur o'tgan KO'PRIK."
+"s": "JUR'AT QILDI."
 },
 "قطعة": {
 "o": "qitʿa",
@@ -4022,6 +4022,5651 @@
 "o": "ikhtatafa",
 "i": "xatar",
 "s": "Xatar bilan TORTIB OLDI."
+},
+"عمر": {
+"o": "ʿumr",
+"i": "umr",
+"s": "O'zbekcha «umr» — YOSH."
+},
+"تحب": {
+"o": "tuhibbu",
+"i": "habib",
+"s": "Qiz habibini YAXSHI KO'RADI."
+},
+"والد": {
+"o": "wālid",
+"i": "volid",
+"s": "Volid — OTA."
+},
+"مخزن": {
+"o": "makhzan",
+"i": "xazina",
+"s": "Xazinadek to'la DO'KON."
+},
+"مكث": {
+"o": "makatha",
+"i": "makon",
+"s": "Makonida TURDI."
+},
+"طول اليوم": {
+"o": "tūlu l-yawm",
+"i": "tavil + yom",
+"s": "Uzun kun — KUN BO'YI."
+},
+"والدة": {
+"o": "wālida",
+"i": "volida",
+"s": "O'zbekcha «volida» — ONA."
+},
+"بإدارة أمور البيت": {
+"o": "bi-idārati umūri l-bayt",
+"i": "idora + umur + bayt",
+"s": "UY ISHLARINI IDORA QILISH."
+},
+"لم يتعلم بعد": {
+"o": "lam yataʿallam baʿdu",
+"i": "lam + ta'lim",
+"s": "HANUZ TA'LIM OLMAGAN."
+},
+"شيء": {
+"o": "shayʾ",
+"i": "shay",
+"s": "Shay-shuy — NARSA."
+},
+"عزم": {
+"o": "ʿazama",
+"i": "azm",
+"s": "Azmu qaror — QASD QILDI."
+},
+"أرسل": {
+"o": "arsala",
+"i": "rasul (yuborilgan)",
+"s": "«Rasul» — yuborilgan degani: arsala — YUBORDI."
+},
+"كل واحد": {
+"o": "kullu wāhid",
+"i": "kul + vohid",
+"s": "HAR BIRI."
+},
+"بين هؤلاء": {
+"o": "bayna hāʾulāʾi",
+"i": "bayn + hovli",
+"s": "ANA BULAR ORASIDA."
+},
+"بعد هنيهة": {
+"o": "baʿda hunayha",
+"i": "ba'd + hunayha",
+"s": "BIROZDAN KEYIN."
+},
+"تعظيما له": {
+"o": "taʿzīman lahu",
+"i": "ta'zim",
+"s": "UNGA TA'ZIM QILGAN HOLDA."
+},
+"بديء": {
+"o": "budiʾa",
+"i": "ibtido",
+"s": "BOSHLANDI."
+},
+"درس الأمس": {
+"o": "darsu l-ams",
+"i": "dars + emas",
+"s": "KECHAGI DARS."
+},
+"الأولان": {
+"o": "al-awwalāni",
+"i": "avval",
+"s": "AVVALGI IKKI."
+},
+"أمره": {
+"o": "amarahu",
+"i": "amr",
+"s": "Amr qilib UNGA BUYURDI."
+},
+"أملى": {
+"o": "amlā",
+"i": "imlo",
+"s": "IMLO QILIB YOZDIRDI."
+},
+"عدة سطور": {
+"o": "ʿiddatu sutūr",
+"i": "iddat + satr",
+"s": "BIR NECHA SATRLAR."
+},
+"انتهى": {
+"o": "intahā",
+"i": "intiho",
+"s": "Intiho — TUGADI."
+},
+"انصرف": {
+"o": "insarafa",
+"i": "sarf",
+"s": "JO'NAB KETDI."
+},
+"كما": {
+"o": "kamā",
+"i": "kamo",
+"s": "-DEK, kabi."
+},
+"كلهم": {
+"o": "kulluhum",
+"i": "kul + hum",
+"s": "ULARNING BARCHASI."
+},
+"جرو": {
+"o": "jarw",
+"i": "jar",
+"s": "Jarda KUCHUKCHA."
+},
+"غير": {
+"o": "ghayra",
+"i": "g'ayri",
+"s": "G'ayri — BOSHQA."
+},
+"قرب": {
+"o": "qurba",
+"i": "qurb → qarib",
+"s": "YAQINIDA."
+},
+"حين": {
+"o": "hīna",
+"i": "hin",
+"s": "PAYT."
+},
+"مرة": {
+"o": "marra",
+"i": "marra",
+"s": "BIR GAL."
+},
+"سرح": {
+"o": "saraha",
+"i": "sarhad",
+"s": "Sarhadda O'TLADI."
+},
+"صار ينبح": {
+"o": "sāra yanbahu",
+"i": "sor + nab-nab",
+"s": "VOVILLAY BOSHLADI."
+},
+"لاحق": {
+"o": "lāhiq",
+"i": "loyiq",
+"s": "YETIB OLUVCHI."
+},
+"قدام": {
+"o": "quddām",
+"i": "qadam",
+"s": "OLD TOMON."
+},
+"أوصل": {
+"o": "awsala",
+"i": "vasl",
+"s": "Vaslga YETKAZDI."
+},
+"طار": {
+"o": "tāra",
+"i": "tayyora",
+"s": "UCHDI."
+},
+"تقويم": {
+"o": "taqwīm",
+"i": "taqvim",
+"s": "O'zbekcha «taqvim»."
+},
+"رفيق": {
+"o": "rafīq",
+"i": "rafiq",
+"s": "O'zbekcha «rafiq» — O'RTOQ."
+},
+"خريطة": {
+"o": "kharīta",
+"i": "xarita",
+"s": "O'zbekcha «xarita»."
+},
+"تلقى": {
+"o": "talaqqā",
+"i": "talqin",
+"s": "Talqinni QABUL QILDI."
+},
+"غير كبيرة": {
+"o": "ghayru kabīra",
+"i": "g'ayri + kabir",
+"s": "KATTA BO'LMAGAN."
+},
+"عدة": {
+"o": "ʿudda",
+"i": "uddа → udda",
+"s": "QUROL-YAROG'."
+},
+"سدى": {
+"o": "sudan",
+"i": "sado",
+"s": "Sadosiz — BEHUDA."
+},
+"استمع": {
+"o": "istamaʿa",
+"i": "samo",
+"s": "QULOQ TUTDI."
+},
+"فائز": {
+"o": "fāʾiz",
+"i": "foiz",
+"s": "Foizli G'OLIB."
+},
+"استحسن": {
+"o": "istahsana",
+"i": "tahsin",
+"s": "Tahsin — MA'QULLADI."
+},
+"صرف": {
+"o": "sarafa",
+"i": "sarf",
+"s": "SARFLADI."
+},
+"سر به": {
+"o": "surra bihi",
+"i": "surur",
+"s": "Surur — U SABABLI XURSAND BO'LDI."
+},
+"نال": {
+"o": "nāla",
+"i": "nail",
+"s": "Nail bo'ldi — ERISHDI."
+},
+"ضيع": {
+"o": "dayyaʿa",
+"i": "zoe",
+"s": "ZOE QILDI."
+},
+"حل": {
+"o": "halla",
+"i": "hal",
+"s": "Hal qildi — YECHDI."
+},
+"سيرة": {
+"o": "sīra",
+"i": "siyrat",
+"s": "XULQ."
+},
+"شرح": {
+"o": "sharaha",
+"i": "sharh",
+"s": "Sharh — TUSHUNTIRDI."
+},
+"جائزة": {
+"o": "jāʾiza",
+"i": "joiz",
+"s": "MUKOFOT."
+},
+"بقية": {
+"o": "baqiyya",
+"i": "boqiy",
+"s": "QOLGAN."
+},
+"منفعة": {
+"o": "manfaʿa",
+"i": "manfaat",
+"s": "O'zbekcha «manfaat»."
+},
+"ذات ليلة": {
+"o": "dhāta layla",
+"i": "zot + Layli",
+"s": "KECHALARNING BIRIDA."
+},
+"استعداد": {
+"o": "istiʿdād",
+"i": "iste'dod",
+"s": "TAYYORLANISH."
+},
+"طوى": {
+"o": "tawā",
+"i": "tavo",
+"s": "Taxlab YOPDI."
+},
+"لا بد": {
+"o": "lā budda",
+"i": "lobud",
+"s": "LOZIM, chorasiz."
+},
+"تخلية": {
+"o": "takhliya",
+"i": "xoli",
+"s": "XOLI QOLDIRISH."
+},
+"قضاء": {
+"o": "qadāʾ",
+"i": "qazo",
+"s": "Qazo — BAJARISH."
+},
+"حدوث": {
+"o": "hudūth",
+"i": "hodisa",
+"s": "YUZ BERISH."
+},
+"خطر": {
+"o": "khatar",
+"i": "xatar",
+"s": "O'zbekcha «xatar»."
+},
+"تعليق": {
+"o": "taʿlīq",
+"i": "ta'liq → iliq",
+"s": "OSISH, ilish."
+},
+"بلغ": {
+"o": "balagha",
+"i": "balog'at",
+"s": "Balog'atga YETDI."
+},
+"انكسر": {
+"o": "inkasara",
+"i": "kasr",
+"s": "SINDI."
+},
+"غرق": {
+"o": "gharq",
+"i": "g'arq",
+"s": "G'arq bo'lish — CHO'KISH."
+},
+"شغل": {
+"o": "shughl",
+"i": "shug'l",
+"s": "ISH, mashg'ulot."
+},
+"سائرا": {
+"o": "sāʾiran",
+"i": "sayr",
+"s": "SAYR QILGAN HOLDA."
+},
+"عبر": {
+"o": "ʿabara",
+"i": "ibrat → ubur",
+"s": "O'TDI."
+},
+"سالما": {
+"o": "sāliman",
+"i": "salomat",
+"s": "SOG'-OMON HOLDA."
+},
+"دأب": {
+"o": "daʾb",
+"i": "dab",
+"s": "ODAT."
+},
+"وحش": {
+"o": "wahsh",
+"i": "vahshiy",
+"s": "VAHSHIY HAYVON."
+},
+"بندقية": {
+"o": "bunduqiyya",
+"i": "bunduq (fundiq)",
+"s": "Fundiq otadigan MILTIQ."
+},
+"الرصاص": {
+"o": "ar-rasās",
+"i": "rasa",
+"s": "Rasa og'ir — O'Q."
+},
+"جثة": {
+"o": "juththa",
+"i": "jussa",
+"s": "O'zbekcha «jussa» — JASAD."
+},
+"دنيء": {
+"o": "danīʾ",
+"i": "dun (past)",
+"s": "PASTKASH."
+},
+"هول": {
+"o": "hawl",
+"i": "hol → hovl",
+"s": "DAHSHAT."
+},
+"فبينما": {
+"o": "fa-baynamā",
+"i": "bayn",
+"s": "SHU PAYT."
+},
+"في الحال": {
+"o": "fi l-hāl",
+"i": "hol",
+"s": "Shu holda — SHU ZAHOTI."
+},
+"ممازحا": {
+"o": "mumāzihan",
+"i": "mazah",
+"s": "Mazah qilgan HOLDA."
+},
+"فتش": {
+"o": "fattasha",
+"i": "taftish",
+"s": "Taftish — QIDIRDI."
+},
+"صاد": {
+"o": "sāda",
+"i": "sayd",
+"s": "Sayd — OVLADI."
+},
+"ألقى": {
+"o": "alqā",
+"i": "ilqo",
+"s": "TASHLADI."
+},
+"زحف": {
+"o": "zahafa",
+"i": "zahmat",
+"s": "Zahmat bilan SUDRALDI."
+},
+"صرخ": {
+"o": "sarakha",
+"i": "sarxush",
+"s": "QICHQIRDI."
+},
+"صوب": {
+"o": "sawwaba",
+"i": "savob",
+"s": "Savobga TO'G'RILADI."
+},
+"أطلق": {
+"o": "atlaqa",
+"i": "talaq (ozod)",
+"s": "OTDI (o'qni)."
+},
+"أخطأ": {
+"o": "akhtaʾa",
+"i": "xato",
+"s": "O'zbekcha «xato» — XATO QILDI."
+},
+"تماوت": {
+"o": "tamāwata",
+"i": "mot",
+"s": "O'ZINI O'LIKKA SOLDI."
+},
+"تنفس": {
+"o": "tanaffasa",
+"i": "nafas",
+"s": "NAFAS OLDI."
+},
+"شم": {
+"o": "shamma",
+"i": "shamma",
+"s": "HIDLADI."
+},
+"إضرار": {
+"o": "idrār",
+"i": "zarar",
+"s": "ZARAR KELTIRISH."
+},
+"همس": {
+"o": "hamasa",
+"i": "hamsa → hamshira",
+"s": "SHIVIRLADI."
+},
+"رافق": {
+"o": "rāfaqa",
+"i": "rafiq",
+"s": "O'RTOQ BO'LDI."
+},
+"مرج": {
+"o": "marj",
+"i": "marj → marza",
+"s": "O'TLOQ."
+},
+"صدى": {
+"o": "sadan",
+"i": "sado",
+"s": "AKS-SADO."
+},
+"غضب": {
+"o": "ghadab",
+"i": "g'azab",
+"s": "O'zbekcha «g'azab»."
+},
+"سوى": {
+"o": "siwā",
+"i": "sivo → sivoy",
+"s": "BOSHQASI."
+},
+"قبل ذلك": {
+"o": "qabla dhālika",
+"i": "qabul + zalik",
+"s": "BUNDAN OLDIN."
+},
+"عند ذلك": {
+"o": "ʿinda dhālika",
+"i": "indamay + zalik",
+"s": "SHU PAYT."
+},
+"فيما هو يلعب": {
+"o": "fīmā huwa yalʿabu",
+"i": "fil + lab",
+"s": "U O'YNAYOTGANIDA."
+},
+"بأعلى صوته": {
+"o": "bi-aʿlā sawtihi",
+"i": "a'lo + savt",
+"s": "BALAND OVOZDA."
+},
+"سب": {
+"o": "sabba",
+"i": "sabab",
+"s": "SO'KDI."
+},
+"شتم": {
+"o": "shatama",
+"i": "shatm",
+"s": "HAQORAT QILDI."
+},
+"شاتم": {
+"o": "shātama",
+"i": "shatm",
+"s": "O'ZARO SO'KISHDI."
+},
+"أعاد": {
+"o": "aʿāda",
+"i": "odat",
+"s": "TAKRORLADI."
+},
+"شكى": {
+"o": "shakā",
+"i": "shikoyat",
+"s": "SHIKOYAT QILDI."
+},
+"اختبأ": {
+"o": "ikhtabaʾa",
+"i": "xabar",
+"s": "YASHIRINDI."
+},
+"طرق": {
+"o": "taraqa",
+"i": "taraq",
+"s": "«Taraq-taraq» TAQILLATDI."
+},
+"فر": {
+"o": "farra",
+"i": "farrosh",
+"s": "QOCHDI."
+},
+"ألفة": {
+"o": "ulfa",
+"i": "ulfat",
+"s": "O'zbekcha «ulfat»."
+},
+"وسع": {
+"o": "wusʿ",
+"i": "vus'at",
+"s": "KUCH-QUVVAT."
+},
+"حشرة": {
+"o": "hashara",
+"i": "hasharot",
+"s": "HASHAROT."
+},
+"جهة": {
+"o": "jiha",
+"i": "jihat",
+"s": "TOMON."
+},
+"ذباب": {
+"o": "dhubāb",
+"i": "zubob",
+"s": "PASHSHA «zu-zu» uchyapti."
+},
+"المؤذية": {
+"o": "al-muʾdhiya",
+"i": "aziyat",
+"s": "OZOR BERUVCHI."
+},
+"على حسب عادته": {
+"o": "ʿalā hasbi ʿādatihi",
+"i": "hasb + odat",
+"s": "ODATIGA KO'RA."
+},
+"ليستريح": {
+"o": "li-yastarīha",
+"i": "rohat",
+"s": "DAM OLISH UCHUN."
+},
+"خير": {
+"o": "khayr",
+"i": "xayr",
+"s": "YAXSHI."
+},
+"ربى": {
+"o": "rabbā",
+"i": "murabbiy",
+"s": "TARBIYALADI."
+},
+"فارق": {
+"o": "fāraqa",
+"i": "farq",
+"s": "AJRALDI."
+},
+"بذل": {
+"o": "badhala",
+"i": "bazl",
+"s": "SARF QILDI."
+},
+"قتل": {
+"o": "qatala",
+"i": "qotil",
+"s": "O'LDIRDI."
+},
+"غار": {
+"o": "ghār",
+"i": "g'or",
+"s": "O'zbekcha «g'or»."
+},
+"أثر": {
+"o": "aththara",
+"i": "ta'sir",
+"s": "TA'SIR ETDI."
+},
+"أبو الحصين": {
+"o": "abu l-husayn",
+"i": "Abul Husayn",
+"s": "TULKINING LAQABI."
+},
+"تسليم": {
+"o": "taslīm",
+"i": "salom",
+"s": "SALOM BERISH."
+},
+"سلم عليه": {
+"o": "sallama ʿalayhi",
+"i": "salom",
+"s": "UNGA SALOM BERDI."
+},
+"مالك؟": {
+"o": "mā laka",
+"i": "mo' + laka",
+"s": "SENGA NIMA BO'LDI?"
+},
+"مالك لا تقرأ؟": {
+"o": "mā laka lā taqraʾu",
+"i": "mo' + lak + qara",
+"s": "NIMA BO'LDIKI, O'QIMAYSAN?"
+},
+"كلما": {
+"o": "kullamā",
+"i": "kul",
+"s": "HAR GAL."
+},
+"غير أن": {
+"o": "ghayra anna",
+"i": "g'ayri + anna",
+"s": "LEKIN."
+},
+"غير أنه": {
+"o": "ghayra annahu",
+"i": "g'ayri + anna + hu",
+"s": "LEKIN U."
+},
+"لا ينبغي": {
+"o": "lā yanbaghī",
+"i": "lo + nabog'",
+"s": "LOZIM EMAS."
+},
+"شاخ": {
+"o": "shākha",
+"i": "shayx",
+"s": "Shayxdek QARIDI."
+},
+"احتال": {
+"o": "ihtāla",
+"i": "hiyla",
+"s": "HIYLA QILDI."
+},
+"تمارض": {
+"o": "tamārada",
+"i": "mariz",
+"s": "O'ZINI KASALGA SOLDI."
+},
+"افترس": {
+"o": "iftarasa",
+"i": "firib → faris",
+"s": "OVLADI (yirtqich)."
+},
+"فكر": {
+"o": "fakkara",
+"i": "fikr",
+"s": "FIKRLADI."
+},
+"ميز": {
+"o": "mayyaza",
+"i": "tamiz",
+"s": "AJRATDI."
+},
+"أتى": {
+"o": "atā",
+"i": "ato",
+"s": "KELDI."
+},
+"مخاطبا": {
+"o": "mukhātiban",
+"i": "xitob",
+"s": "XITOB QILGAN HOLDA."
+},
+"شقيق": {
+"o": "shaqīq",
+"i": "shaqiq",
+"s": "TUG'ISHGAN."
+},
+"ضاحكا": {
+"o": "dāhikan",
+"i": "dahshat",
+"s": "KULGAN HOLDA."
+},
+"أصبت": {
+"o": "asabta",
+"i": "isobat",
+"s": "TO'G'RI TOPDING."
+},
+"فضلا عن ذلك": {
+"o": "fadlan ʿan dhālika",
+"i": "fazl + zalik",
+"s": "UNDAN TASHQARI."
+},
+"خد": {
+"o": "khadd",
+"i": "xad → xol",
+"s": "YONOQ."
+},
+"ذقن": {
+"o": "dhaqn",
+"i": "zaqan → iyak",
+"s": "JAG'."
+},
+"صدر": {
+"o": "sadr",
+"i": "sadr",
+"s": "KO'KRAK."
+},
+"ساق": {
+"o": "sāq",
+"i": "soq",
+"s": "BOLDIR."
+},
+"معدة": {
+"o": "miʿda",
+"i": "me'da",
+"s": "O'zbekcha «me'da»."
+},
+"عرق": {
+"o": "ʿaraq",
+"i": "araq",
+"s": "TER."
+},
+"الغرض": {
+"o": "al-gharad",
+"i": "g'araz",
+"s": "MAQSAD."
+},
+"غرض": {
+"o": "gharad",
+"i": "g'araz",
+"s": "MAQSAD."
+},
+"الأذى": {
+"o": "al-adhā",
+"i": "aziyat",
+"s": "AZIYAT."
+},
+"بشدة": {
+"o": "bi-shidda",
+"i": "shiddat",
+"s": "SHIDDAT BILAN."
+},
+"يسميها": {
+"o": "yusammīhā",
+"i": "ism",
+"s": "NOMLAYDI."
+},
+"غطى": {
+"o": "ghattā",
+"i": "g'itof",
+"s": "YOPDI."
+},
+"وقى": {
+"o": "waqā",
+"i": "viqoya",
+"s": "HIMOYA QILDI."
+},
+"انطبق": {
+"o": "intabaqa",
+"i": "tabaq",
+"s": "Tabaqdek YOPILDI."
+},
+"طرف": {
+"o": "taraf",
+"i": "taraf",
+"s": "O'zbekcha «taraf»."
+},
+"ذرة": {
+"o": "dharra",
+"i": "zarra",
+"s": "O'zbekcha «zarra»."
+},
+"جو": {
+"o": "jaww",
+"i": "javv → havo",
+"s": "OB-HAVO."
+},
+"هوام": {
+"o": "hawāmm",
+"i": "havom",
+"s": "HASHAROTLAR."
+},
+"حارس": {
+"o": "hāris",
+"i": "haras",
+"s": "QO'RIQCHI."
+},
+"تراب": {
+"o": "turāb",
+"i": "turob",
+"s": "TUPROQ."
+},
+"خشية": {
+"o": "khashya",
+"i": "xashyat",
+"s": "QO'RQUV."
+},
+"نابت": {
+"o": "nābit",
+"i": "nabotot",
+"s": "O'SUVCHI."
+},
+"يقظان": {
+"o": "yaqzān",
+"i": "yaqin → yaq!",
+"s": "«Yaq!» deb sakrab turgan — UYG'OQ."
+},
+"مطبقتين": {
+"o": "mutbaqatayni",
+"i": "tabaq",
+"s": "Ikki tabaqdek — YOPIQ (ikkalasi)."
+},
+"عندئذ": {
+"o": "ʿindaʾidhin",
+"i": "indamay + izi",
+"s": "ANA SHU PAYTDA."
+},
+"عندما يقرأ": {
+"o": "ʿindamā yaqraʾu",
+"i": "indamay + qara",
+"s": "O'QIGAN PAYTDA."
+},
+"كلا": {
+"o": "kallā",
+"i": "kalla",
+"s": "Kallasini chayqab: «YO'Q, YO'Q!»"
+},
+"ما": {
+"o": "mā",
+"i": "mo'",
+"s": "«Mo'» — NIMADIR."
+},
+"سريع": {
+"o": "sarīʿ",
+"i": "sur'at",
+"s": "Sur'atli — TEZ."
+},
+"نسي": {
+"o": "nasiya",
+"i": "nasiya",
+"s": "Nasiyani UNUTDI."
+},
+"استوقف": {
+"o": "istawqafa",
+"i": "vaqfa (to'xtash)",
+"s": "TO'XTATDI."
+},
+"تطاير": {
+"o": "tatāyara",
+"i": "tayyora",
+"s": "To'zib UCHIB YURDI."
+},
+"هدد": {
+"o": "haddada",
+"i": "tahdid",
+"s": "TAHDID SOLDI."
+},
+"نبه": {
+"o": "nabbaha",
+"i": "tanbeh",
+"s": "OGOHLANTIRDI."
+},
+"لون": {
+"o": "lawn",
+"i": "lavn → lavha",
+"s": "Lavhadagi RANG."
+},
+"جنس": {
+"o": "jins",
+"i": "jins",
+"s": "O'zbekcha «jins» — TURI."
+},
+"عنقود": {
+"o": "ʿunqūd",
+"i": "anqo",
+"s": "Anqo tumshug'idagi SHINGIL."
+},
+"تعب": {
+"o": "taʿiba",
+"i": "ta'b",
+"s": "CHARCHADI."
+},
+"جوف": {
+"o": "jawf",
+"i": "javf → jovdir",
+"s": "QORIN."
+},
+"حصرم": {
+"o": "hisrim",
+"i": "hasrat",
+"s": "Hasrat qildiradigan PISHMAGAN UZUM."
+},
+"حلب": {
+"o": "halab",
+"i": "Halab",
+"s": "HALAB shahri."
+},
+"لهب": {
+"o": "lahab",
+"i": "lov-lov",
+"s": "Lov-lov yongan ALANGA."
+},
+"مثلما أتى": {
+"o": "mithlamā atā",
+"i": "misl + ato",
+"s": "QANDAY KELGAN BO'LSA."
+},
+"شاهد": {
+"o": "shāhada",
+"i": "shohid",
+"s": "Shohid bo'lib KO'RIB QOLDI."
+},
+"بغى": {
+"o": "baghā",
+"i": "bog'",
+"s": "Bog' ISTADI."
+},
+"سعى": {
+"o": "saʿā",
+"i": "sa'y",
+"s": "Sa'y — HARAKAT QILDI."
+},
+"أودى": {
+"o": "awdā",
+"i": "vodiy",
+"s": "Vodiyga tashlab HALOK QILDI."
+},
+"أمكن": {
+"o": "amkana",
+"i": "imkon",
+"s": "IMKON TOPDI."
+},
+"راح": {
+"o": "rāha",
+"i": "rohat",
+"s": "Rohatlanib JO'NAB KETDI."
+},
+"خسأ": {
+"o": "khasaʾa",
+"i": "xas",
+"s": "«Xas!» — YO'QOL!"
+},
+"قفص": {
+"o": "qafas",
+"i": "qafas",
+"s": "O'zbekcha «qafas»."
+},
+"لعبة": {
+"o": "luʿba",
+"i": "lu'bat",
+"s": "Lu'bat — O'YINCHOQ."
+},
+"بذر": {
+"o": "badhr",
+"i": "bazr",
+"s": "URUG'."
+},
+"أليف": {
+"o": "alīf",
+"i": "ulfat",
+"s": "Ulfat bo'lgan — XONAKI."
+},
+"حول": {
+"o": "hawla",
+"i": "hovli",
+"s": "Hovli ATROFI."
+},
+"بما أنها": {
+"o": "bi-mā annahā",
+"i": "anna",
+"s": "SHUNDAY QILGANI SABAB."
+},
+"طارت فرحا": {
+"o": "tārat farahan",
+"i": "tayyora + farah",
+"s": "XURSANDLIKDAN UCHAYOZDI."
+},
+"يوم من الأيام": {
+"o": "yawmun mina l-ayyām",
+"i": "yom + ayyom",
+"s": "KUNLARDAN BIRIDA."
+},
+"طول النهار": {
+"o": "tūla n-nahār",
+"i": "tavil + nahor",
+"s": "KUN BO'YI."
+},
+"حينا بعد حين": {
+"o": "hīnan baʿda hīn",
+"i": "hin + ba'd",
+"s": "VAQTI-VAQTI BILAN."
+},
+"حزن": {
+"o": "huzn",
+"i": "hazin",
+"s": "Hazinlik — XAFALIK."
+},
+"ودع": {
+"o": "wadaʿa",
+"i": "vido",
+"s": "Vido' — QOLDIRDI."
+},
+"أرسلت": {
+"o": "arsalat",
+"i": "rasul",
+"s": "(Ayol) YUBORDI."
+},
+"أطعم": {
+"o": "atʿama",
+"i": "taom",
+"s": "Taom berib OVQATLANTIRDI."
+},
+"ترك": {
+"o": "taraka",
+"i": "tark",
+"s": "TARK QILDI."
+},
+"سلحفاة": {
+"o": "sulahfāt",
+"i": "sulh + fot",
+"s": "Sulh tuzgan TOSHBAQA."
+},
+"حد": {
+"o": "hadd",
+"i": "hadd",
+"s": "Hadd — CHEGARA."
+},
+"الأخرى": {
+"o": "al-ukhrā",
+"i": "oxir",
+"s": "BOSHQASI (ayol)."
+},
+"خفة": {
+"o": "khiffa",
+"i": "xiffat",
+"s": "YENGILLIK."
+},
+"بطء": {
+"o": "butʾ",
+"i": "but → but-but",
+"s": "SEKINLIK."
+},
+"أمل": {
+"o": "amal",
+"i": "amal",
+"s": "Amal — UMID."
+},
+"ندم": {
+"o": "nadima",
+"i": "nadomat",
+"s": "NADOMAT CHEKDI."
+},
+"خيبة": {
+"o": "khayba",
+"i": "xayba → xayf",
+"s": "UMIDSIZLIK."
+},
+"إذ": {
+"o": "idh",
+"i": "iz",
+"s": "SHU PAYT."
+},
+"رويدا": {
+"o": "ruwaydan",
+"i": "ravish",
+"s": "OHISTA."
+},
+"بكل جهد": {
+"o": "bi-kulli juhd",
+"i": "jahd",
+"s": "BOR KUCHI BILAN."
+},
+"تسابق": {
+"o": "tasābaqa",
+"i": "musobaqa",
+"s": "MUSOBAQA O'YNASHDI."
+},
+"اتفق": {
+"o": "ittafaqa",
+"i": "ittifoq",
+"s": "KELISHISHDI."
+},
+"اتكل": {
+"o": "ittakala",
+"i": "tavakkal",
+"s": "SUYANIB ISHONDI."
+},
+"توانى": {
+"o": "tawānā",
+"i": "tavon",
+"s": "HAFSALASIZLIK QILDI."
+},
+"فرط": {
+"o": "fart",
+"i": "ifrot",
+"s": "HADDAN TASHQARI."
+},
+"استمر": {
+"o": "istamarra",
+"i": "muttasil",
+"s": "DAVOM ETDI."
+},
+"استيقظ": {
+"o": "istayqaza",
+"i": "yaq!",
+"s": "UYG'ONDI."
+},
+"سبق": {
+"o": "sabaqa",
+"i": "sabaq",
+"s": "O'ZDI."
+},
+"جرى": {
+"o": "jarā",
+"i": "jarayon",
+"s": "YUGURISH."
+},
+"اضطر": {
+"o": "idtarra",
+"i": "zarur",
+"s": "MAJBUR BO'LDI."
+},
+"دفع": {
+"o": "dafaʿa",
+"i": "daf'",
+"s": "TO'LADI."
+},
+"قلم الأردواز": {
+"o": "qalamu l-ardwāz",
+"i": "qalam + ardovoz",
+"s": "TOSHQALAM."
+},
+"لوح الأردواز": {
+"o": "lawhu l-ardwāz",
+"i": "lavha + ardovoz",
+"s": "TOSHDOSKA."
+},
+"الإملاء": {
+"o": "al-imlāʾ",
+"i": "imlo",
+"s": "DIKTANT."
+},
+"شكل": {
+"o": "shakl",
+"i": "shakl",
+"s": "O'zbekcha «shakl»."
+},
+"خط": {
+"o": "khatt",
+"i": "xat",
+"s": "CHIZIQ."
+},
+"الصور المتحركة": {
+"o": "as-suwaru l-mutaharrika",
+"i": "surat + harakat",
+"s": "MULTFILM."
+},
+"عظيم": {
+"o": "ʿazīm",
+"i": "azim",
+"s": "JUDA SOZ."
+},
+"حاضر": {
+"o": "hādir",
+"i": "hozir",
+"s": "«Hozir!» — XO'P BO'LADI."
+},
+"لا يحسن": {
+"o": "lā yahsunu",
+"i": "lo + husn",
+"s": "YAXSHI BO'LMAYDI."
+},
+"وبخ": {
+"o": "wabbakha",
+"i": "vabo",
+"s": "TANBEH BERDI."
+},
+"رسم": {
+"o": "rasama",
+"i": "rasm",
+"s": "RASM CHIZDI."
+},
+"لزم": {
+"o": "lazima",
+"i": "lozim",
+"s": "LOZIM BO'LDI."
+},
+"فيما هما": {
+"o": "fīmā humā",
+"i": "fil + hum",
+"s": "BIR PAYT IKKOVLARI."
+},
+"ليت": {
+"o": "layta",
+"i": "layt",
+"s": "KOSHKI."
+},
+"ليتني": {
+"o": "laytanī",
+"i": "layt + ni",
+"s": "KOSHKI MEN."
+},
+"انبغى": {
+"o": "inbaghā",
+"i": "nabog'",
+"s": "LOZIM BO'LADI."
+},
+"بدون شغل": {
+"o": "bi-dūni shughl",
+"i": "dun + shug'l",
+"s": "ISHSIZ."
+},
+"غلط": {
+"o": "ghalita",
+"i": "g'alat",
+"s": "G'ALAT — YANGLISHDI."
+},
+"حامل": {
+"o": "hāmil",
+"i": "hammol",
+"s": "Hammol — KO'TARIB OLGAN."
+},
+"غزل": {
+"o": "ghazl",
+"i": "g'azal",
+"s": "G'azaldek ingichka IP."
+},
+"كي": {
+"o": "kay",
+"i": "kay",
+"s": "UCHUN."
+},
+"كي يكتب": {
+"o": "kay yaktuba",
+"i": "kay + kotib",
+"s": "YOZISH UCHUN."
+},
+"زهرة": {
+"o": "zahra",
+"i": "Zuhra",
+"s": "Zuhra — GUL."
+},
+"شمع": {
+"o": "shamʿ",
+"i": "sham",
+"s": "Sham yasaladigan MUM."
+},
+"استعدادا": {
+"o": "istiʿdādan",
+"i": "iste'dod",
+"s": "TAYYORGARLIK QILGAN HOLDA."
+},
+"بلا شك": {
+"o": "bi-lā shakk",
+"i": "shak",
+"s": "SHAK-SHUBHASIZ."
+},
+"كما رأيت": {
+"o": "kamā raʾayta",
+"i": "kamo + ra'y",
+"s": "KO'RGANINGDEK."
+},
+"منقار": {
+"o": "minqār",
+"i": "naqr → nuqur",
+"s": "TUMSHUQ."
+},
+"عش": {
+"o": "ʿushsh",
+"i": "ush",
+"s": "UYA."
+},
+"خليني": {
+"o": "khallīnī",
+"i": "xoli",
+"s": "MENI XOLI QOLDIR."
+},
+"ما أتم": {
+"o": "mā atamma",
+"i": "tamom",
+"s": "TUGATMASIDAN."
+},
+"ربض": {
+"o": "rabada",
+"i": "rabot",
+"s": "Rabotda CHO'ZILIB YOTDI."
+},
+"صفر": {
+"o": "safara",
+"i": "safir",
+"s": "HUSHTAK CHALDI."
+},
+"توجه نحوه": {
+"o": "tawajjaha nahwahu",
+"i": "tavajjuh + nahv",
+"s": "U TOMON YO'L OLDI."
+},
+"جانب": {
+"o": "jānib",
+"i": "jonib",
+"s": "YON TOMON."
+},
+"انطلق": {
+"o": "intalaqa",
+"i": "tolqin → talaq",
+"s": "JO'NADI."
+},
+"أخذت تنتقده": {
+"o": "akhadhat tantaqiduhu",
+"i": "axtar + tanqid",
+"s": "TANQID QILA BOSHLADI."
+},
+"لا يليق بك": {
+"o": "lā yalīqu bika",
+"i": "loyiq",
+"s": "SENGA LOYIQ EMAS."
+},
+"سير": {
+"o": "sayr",
+"i": "sayr",
+"s": "KAMAR, bog'ich."
+},
+"محلول": {
+"o": "mahlūl",
+"i": "hal",
+"s": "YECHILGAN."
+},
+"اقتدى": {
+"o": "iqtadā",
+"i": "iqtido",
+"s": "ERGASHDI."
+},
+"يعد": {
+"o": "yuʿaddu",
+"i": "adad",
+"s": "SANALADI."
+},
+"تحقير": {
+"o": "tahqīr",
+"i": "tahqir",
+"s": "TAHQIRLASH."
+},
+"الأشياء اللازمة": {
+"o": "al-ashyāʾu l-lāzima",
+"i": "ashyo + lozim",
+"s": "KERAKLI NARSALAR."
+},
+"محافظة": {
+"o": "muhāfaza",
+"i": "muhofaza",
+"s": "MUHOFAZA QILISH."
+},
+"اتعظ": {
+"o": "ittaʿaza",
+"i": "va'z",
+"s": "VA'Z-NASIHAT OLDI."
+},
+"مرتفع": {
+"o": "murtafiʿ",
+"i": "rafi'",
+"s": "BALAND."
+},
+"منخفض": {
+"o": "munkhafid",
+"i": "xafiz → xafa",
+"s": "PAST."
+},
+"عكر": {
+"o": "ʿakkara",
+"i": "akkor",
+"s": "LOYQALATDI."
+},
+"مع كونك": {
+"o": "maʿa kawnika",
+"i": "kavn",
+"s": "BO'LISHINGGA QARAMASDAN."
+},
+"الجهة العالية": {
+"o": "al-jihatu l-ʿāliya",
+"i": "jihat + oliy",
+"s": "BALAND TOMON."
+},
+"تكذبني": {
+"o": "tukadhdhibunī",
+"i": "kazzob",
+"s": "MENI YOLG'ONGA TUTYAPSAN."
+},
+"كنت تشتمني": {
+"o": "kunta tashtimunī",
+"i": "kon + shatm",
+"s": "MENI SO'KKANSAN."
+},
+"ما كنت ولدت": {
+"o": "mā kuntu wulidtu",
+"i": "valid",
+"s": "TUG'ILMAGAN EDIM."
+},
+"في العام الماضي": {
+"o": "fi l-ʿāmi l-mādī",
+"i": "om + moziy",
+"s": "O'TGAN YILI."
+},
+"فلا بد": {
+"o": "fa-lā budda",
+"i": "lobud",
+"s": "SHART."
+},
+"عقاب": {
+"o": "ʿiqāb",
+"i": "iqob",
+"s": "O'zbekcha «iqob» — JAZO."
+},
+"أبرز": {
+"o": "abraza",
+"i": "boriz",
+"s": "KO'RSATDI."
+},
+"لقمة": {
+"o": "luqma",
+"i": "luqma",
+"s": "O'zbekcha «luqma»."
+},
+"تناول": {
+"o": "tanāwala",
+"i": "tanovul",
+"s": "TANOVUL QILDI."
+},
+"ألم": {
+"o": "alamma",
+"i": "ilm → alam",
+"s": "CHALINDI."
+},
+"فرأى كل ما حصل": {
+"o": "fa-raʾā kulla mā hasala",
+"i": "ra'y + hosil",
+"s": "HAMMASINI KO'RDI."
+},
+"الثمن": {
+"o": "ath-thaman",
+"i": "saman",
+"s": "NARX."
+},
+"مد": {
+"o": "madda",
+"i": "madd",
+"s": "CHO'ZDI."
+},
+"دعا": {
+"o": "daʿā",
+"i": "duo",
+"s": "CHAQIRDI."
+},
+"كيف": {
+"o": "kayfa",
+"i": "kayf",
+"s": "QANDAY."
+},
+"أهلا": {
+"o": "ahlan",
+"i": "ahl",
+"s": "XUSH KELIBSAN."
+},
+"ومرحبا": {
+"o": "wa-marhaban",
+"i": "marhabo",
+"s": "MARHABO."
+},
+"هناء": {
+"o": "hanāʾ",
+"i": "hano",
+"s": "SHODLIK."
+},
+"طرب": {
+"o": "tarab",
+"i": "tarab",
+"s": "Tarabxona — XURSANDCHILIK."
+},
+"واجبات": {
+"o": "wājibāt",
+"i": "vojib",
+"s": "VAZIFALAR."
+},
+"عناء": {
+"o": "ʿanāʾ",
+"i": "ano → ona",
+"s": "MASHAQQAT."
+},
+"أورث": {
+"o": "awratha",
+"i": "meros",
+"s": "KELTIRDI (meros qoldirdi)."
+},
+"انقباض": {
+"o": "inqibād",
+"i": "qabz",
+"s": "ROHATSIZLIK."
+},
+"كمد": {
+"o": "kamad",
+"i": "kamad",
+"s": "QAYG'U."
+},
+"إراحة": {
+"o": "irāha",
+"i": "rohat",
+"s": "ROHATLANISH."
+},
+"بليد": {
+"o": "balīd",
+"i": "balo",
+"s": "ZEHNI PAST."
+},
+"مرام": {
+"o": "marām",
+"i": "marom",
+"s": "MAROM."
+},
+"كذاك": {
+"o": "kadhāka",
+"i": "kazo",
+"s": "SHUNINGDEK."
+},
+"إنما": {
+"o": "innamā",
+"i": "inna",
+"s": "HAM."
+},
+"إنما أنا ألعب": {
+"o": "innamā anā alʿabu",
+"i": "inna + ona + lab",
+"s": "MEN HAM O'YNAYMAN."
+},
+"شق": {
+"o": "shaqq",
+"i": "shaq",
+"s": "YORIQ."
+},
+"خشبة": {
+"o": "khashaba",
+"i": "xashak",
+"s": "YOG'OCH."
+},
+"راكب": {
+"o": "rākib",
+"i": "rikob",
+"s": "MINIB OLIB."
+},
+"وتد": {
+"o": "watid",
+"i": "vatad",
+"s": "PONA."
+},
+"أعجب": {
+"o": "aʿjaba",
+"i": "ajab",
+"s": "HAYRATLANTIRDI."
+},
+"ظهره": {
+"o": "zahrahu",
+"i": "zahr",
+"s": "ORQA TOMONI."
+},
+"تدلى": {
+"o": "tadallā",
+"i": "dalv",
+"s": "OSILIB TUSHDI."
+},
+"ذنبه": {
+"o": "dhanabuhu",
+"i": "zanb",
+"s": "UNING DUMI."
+},
+"صراخا هائلا": {
+"o": "surākhan hāʾilan",
+"i": "sarxush + hayol",
+"s": "QO'RQINCHLI BAQIRIQ."
+},
+"ضربا شديدا": {
+"o": "darban shadīdan",
+"i": "zarb + shiddat",
+"s": "QATTIQ URISH."
+},
+"غشي عليه": {
+"o": "ghushiya ʿalayhi",
+"i": "g'ash",
+"s": "HUSHIDAN KETDI."
+},
+"كاد يموت": {
+"o": "kāda yamūtu",
+"i": "kod + mot",
+"s": "O'LISHIGA OZ QOLDI."
+},
+"ما لقي": {
+"o": "mā laqiya",
+"i": "liqo",
+"s": "SODIR BO'LGAN NARSA."
+},
+"مشجب": {
+"o": "mishjab",
+"i": "shajar",
+"s": "ILGICH."
+},
+"علق": {
+"o": "ʿallaqa",
+"i": "ta'liq",
+"s": "ILDI."
+},
+"القاعدة": {
+"o": "al-qāʿida",
+"i": "qoida",
+"s": "O'zbekcha «qoida»."
+},
+"سطر": {
+"o": "satr",
+"i": "satr",
+"s": "CHIZIQ."
+},
+"دمع": {
+"o": "damʿ",
+"i": "dam",
+"s": "KO'Z YOSH."
+},
+"ضبط": {
+"o": "dabata",
+"i": "zabt",
+"s": "QO'LGA OLDI."
+},
+"فرفع صوته بالبكاء": {
+"o": "fa-rafaʿa sawtahu bi-l-bukāʾ",
+"i": "rafi' + savt + bak",
+"s": "YIG'LAB OVOZINI KO'TARDI."
+},
+"ماذا جرى لك؟": {
+"o": "mādhā jarā laka",
+"i": "mo' + jarayon",
+"s": "SENGA NIMA BO'LDI?"
+},
+"رق": {
+"o": "raqqa",
+"i": "raqiq",
+"s": "YUMSHADI."
+},
+"طياشة": {
+"o": "tayāsha",
+"i": "tayyor → tish",
+"s": "YENGILTAKLIK."
+},
+"أضاع": {
+"o": "adāʿa",
+"i": "zoe",
+"s": "ZOE QILDI."
+},
+"المعين": {
+"o": "al-muʿayyan",
+"i": "muayyan",
+"s": "O'zbekcha «muayyan»."
+},
+"تهيأ": {
+"o": "tahayyaʾa",
+"i": "hay'at",
+"s": "TAYYORGARLIK QILDI."
+},
+"آن": {
+"o": "āna",
+"i": "on",
+"s": "FURSATI KELDI."
+},
+"الزاد": {
+"o": "az-zād",
+"i": "zod",
+"s": "YO'L XALTASI."
+},
+"حالا": {
+"o": "hālan",
+"i": "hol",
+"s": "HOZIROQ."
+},
+"السلة": {
+"o": "as-salla",
+"i": "salla",
+"s": "SAVATCHA."
+},
+"عاجلا": {
+"o": "ʿājilan",
+"i": "ajal",
+"s": "ZUDLIK BILAN."
+},
+"سلسلة": {
+"o": "silsila",
+"i": "silsila",
+"s": "SERIYA."
+},
+"مضطربا": {
+"o": "mudtariban",
+"i": "iztirob",
+"s": "IZTIROBDA."
+},
+"قبل أن يفوت": {
+"o": "qabla an yafūta",
+"i": "qabul + favt",
+"s": "VAQT KETISHIDAN OLDIN."
+},
+"في أول خطوة": {
+"o": "fī awwali khutwa",
+"i": "avval + xatva",
+"s": "BIRINCHI QADAMDA."
+},
+"أعاقب": {
+"o": "uʿāqabu",
+"i": "iqob",
+"s": "JAZOLANAMAN."
+},
+"نهض": {
+"o": "nahada",
+"i": "nahzat",
+"s": "O'RNIDAN TURDI."
+},
+"التقط": {
+"o": "iltaqata",
+"i": "laqat",
+"s": "YERDAN OLDI."
+},
+"أدار": {
+"o": "adāra",
+"i": "davra",
+"s": "AYLANTIRDI."
+},
+"وجد": {
+"o": "wajada",
+"i": "vujud",
+"s": "TOPDI."
+},
+"أرملة": {
+"o": "armala",
+"i": "armon",
+"s": "Armon bilan yashayotgan BEVA XOTIN."
+},
+"مسكينة": {
+"o": "miskīna",
+"i": "miskin",
+"s": "O'zbekcha «miskin» — BECHORA."
+},
+"لتتعشى": {
+"o": "li-tataʿashshā",
+"i": "isho",
+"s": "KECHKI OVQATNI YEYISH UCHUN."
+},
+"يتيم": {
+"o": "yatīm",
+"i": "yetim",
+"s": "O'zbekcha «yetim»."
+},
+"تنازعا": {
+"o": "tanāzaʿā",
+"i": "nizo",
+"s": "Nizolashib TORTISHIB QOLISHDI."
+},
+"ليقضي": {
+"o": "li-yaqdiya",
+"i": "qozi",
+"s": "Qozi — HUKM CHIQARISH UCHUN."
+},
+"استحضر": {
+"o": "istahdara",
+"i": "hozir",
+"s": "Hozir qilib OLIB KELDI."
+},
+"كفة": {
+"o": "kiffa",
+"i": "kaft",
+"s": "Kaftdek TAROZI PALLASI."
+},
+"رجح": {
+"o": "rajaha",
+"i": "rujhon",
+"s": "Rujhon — OG'IR KELDI."
+},
+"ما بقي": {
+"o": "mā baqiya",
+"i": "boqiy",
+"s": "QOLGANI."
+},
+"العدل": {
+"o": "al-ʿadl",
+"i": "adl",
+"s": "ADOLAT."
+},
+"كادتا أن تتلاشيا": {
+"o": "kādatā an tatalāshayā",
+"i": "kod + talosh",
+"s": "TUGAB BITISHIGA OZ QOLDI."
+},
+"تعبي": {
+"o": "taʿabī",
+"i": "ta'b + i",
+"s": "CHARCHOG'IM."
+},
+"التقم": {
+"o": "iltaqama",
+"i": "luqma",
+"s": "Luqmadek YUTDI."
+},
+"الحكم": {
+"o": "al-hakam",
+"i": "hakam",
+"s": "O'zbekcha «hakam»."
+},
+"غراب": {
+"o": "ghurāb",
+"i": "g'urob → g'arib",
+"s": "G'arib QARG'A «qarr»."
+},
+"طار بها": {
+"o": "tāra bihā",
+"i": "tayyora",
+"s": "UNI OLIB UCHDI."
+},
+"بالحيلة": {
+"o": "bi-l-hīla",
+"i": "hiyla",
+"s": "HIYLA BILAN."
+},
+"معشر": {
+"o": "maʿshar",
+"i": "mahshar",
+"s": "JAMOA."
+},
+"منظر": {
+"o": "manzar",
+"i": "manzara",
+"s": "O'zbekcha «manzara»."
+},
+"اشتاق": {
+"o": "ishtāqa",
+"i": "mushtoq",
+"s": "MUSHTOQ BO'LDI."
+},
+"غرد": {
+"o": "gharrada",
+"i": "g'ard → g'arr",
+"s": "SAYRADI."
+},
+"أطرب": {
+"o": "atraba",
+"i": "tarab",
+"s": "XURSAND QILDI."
+},
+"جزيل الشكر": {
+"o": "jazīlu sh-shukr",
+"i": "jazil + shukr",
+"s": "KATTA RAHMAT."
+},
+"اغتر": {
+"o": "ightarra",
+"i": "g'urur",
+"s": "G'URURGA KETDI."
+},
+"كما وصف": {
+"o": "kamā wasafa",
+"i": "vasf",
+"s": "VASF QILGANDEK."
+},
+"ذو صوت": {
+"o": "dhū sawt",
+"i": "zu + savt",
+"s": "OVOZ SOHIBI."
+},
+"لم يملك": {
+"o": "lam yamlik",
+"i": "mulk",
+"s": "QURBI YETMADI."
+},
+"استأذن": {
+"o": "istaʾdhana",
+"i": "izn",
+"s": "IZN SO'RADI."
+},
+"معروفة": {
+"o": "maʿrūfa",
+"i": "ma'ruf",
+"s": "TANILGAN."
+},
+"خسة": {
+"o": "khissa",
+"i": "xasis",
+"s": "XASISLIK."
+},
+"دناءة": {
+"o": "danāʾa",
+"i": "dun",
+"s": "PASTKASHLIK."
+},
+"خالط": {
+"o": "khālata",
+"i": "xalta → aralash",
+"s": "ARALASHDI."
+},
+"موقد": {
+"o": "mūqad",
+"i": "vaqud",
+"s": "O'CHOQ."
+},
+"فحم": {
+"o": "fahm",
+"i": "fahm",
+"s": "Fahm bilan yoqilgan KO'MIR."
+},
+"امتنعت": {
+"o": "imtanaʿat",
+"i": "man'",
+"s": "BOSH TORTDI."
+},
+"نار": {
+"o": "nār",
+"i": "nor",
+"s": "Nordek qizil OLOV."
+},
+"اتسخ": {
+"o": "ittasakha",
+"i": "vasvasa",
+"s": "KIR BO'LDI."
+},
+"قرين": {
+"o": "qarīn",
+"i": "qarindosh",
+"s": "YO'LDOSH."
+},
+"سوء": {
+"o": "sūʾ",
+"i": "suiqasd",
+"s": "YOMON."
+},
+"طبع": {
+"o": "tabʿ",
+"i": "tab'",
+"s": "FE'L-ATVOR."
+},
+"شبل": {
+"o": "shibl",
+"i": "shib",
+"s": "ARSLON BOLASI."
+},
+"اضطجع": {
+"o": "idtajaʿa",
+"i": "zajr → zajiy",
+"s": "YONBOSHLAB YOTDI."
+},
+"جحر": {
+"o": "juhr",
+"i": "jahr → jar",
+"s": "IN, teshik."
+},
+"الوصف": {
+"o": "al-wasf",
+"i": "vasf",
+"s": "VASFI."
+},
+"نظرة": {
+"o": "nazra",
+"i": "nazar",
+"s": "BIR QARASH."
+},
+"مخلب": {
+"o": "mikhlab",
+"i": "xalab → xalq",
+"s": "YIRTQICH TIRNOG'I."
+},
+"حيرة": {
+"o": "hayra",
+"i": "hayrat",
+"s": "HAYRONLIK."
+},
+"هرب": {
+"o": "haraba",
+"i": "harb",
+"s": "Harbdan QOCHDI."
+},
+"سار": {
+"o": "sāra",
+"i": "sayr",
+"s": "YURDI."
+},
+"عطب": {
+"o": "ʿatab",
+"i": "atab",
+"s": "HALOKAT."
+},
+"شرك": {
+"o": "sharak",
+"i": "sharaf",
+"s": "TUZOQ."
+},
+"بقعة": {
+"o": "buqʿa",
+"i": "buq'a",
+"s": "BIR PARCHA YER."
+},
+"يا ترى": {
+"o": "yā turā",
+"i": "yo + tura",
+"s": "AYTINGCHI?"
+},
+"ملك": {
+"o": "malik",
+"i": "malik",
+"s": "O'zbekcha «malik» — PODSHOH."
+},
+"حياة": {
+"o": "hayāt",
+"i": "hayot",
+"s": "O'zbekcha «hayot»."
+},
+"انبرى يقرض": {
+"o": "inbarā yaqridu",
+"i": "qarz",
+"s": "KESA BOSHLADI."
+},
+"قرض": {
+"o": "qarada",
+"i": "qarz",
+"s": "KEMIRDI."
+},
+"احترك": {
+"o": "ihtaraka",
+"i": "harakat",
+"s": "HARAKATLANDI."
+},
+"جمعة": {
+"o": "jumʿa",
+"i": "juma",
+"s": "BIR HAFTA."
+},
+"أفلت": {
+"o": "aflata",
+"i": "falat → falokat",
+"s": "QUTULDI."
+},
+"رواح": {
+"o": "rawāh",
+"i": "ravon",
+"s": "KETISH."
+},
+"رتع": {
+"o": "rataʿa",
+"i": "rat",
+"s": "O'TLADI."
+},
+"مصرع": {
+"o": "masraʿ",
+"i": "sar'",
+"s": "HALOKAT."
+},
+"المقاومة": {
+"o": "al-muqāwama",
+"i": "muqovama → qavm",
+"s": "KURASHISH."
+},
+"المداومة": {
+"o": "al-mudāwama",
+"i": "davom",
+"s": "BARDAVOMLIK."
+},
+"بأس": {
+"o": "baʾs",
+"i": "bas",
+"s": "JASORAT."
+},
+"كيد": {
+"o": "kayd",
+"i": "kayd",
+"s": "HIYLA."
+},
+"آجلا": {
+"o": "ājilan",
+"i": "ajal",
+"s": "KELAJAKDA."
+},
+"لأجل": {
+"o": "li-ajli",
+"i": "ajal",
+"s": "UCHUN."
+},
+"أظن": {
+"o": "azunnu",
+"i": "zan",
+"s": "O'YLASHIMCHA."
+},
+"تلغراف": {
+"o": "tilghrāf",
+"i": "telegraf",
+"s": "TELEGRAMMA."
+},
+"مكتب التلغراف": {
+"o": "maktabu t-tilghrāf",
+"i": "maktab + telegraf",
+"s": "TELEGRAF."
+},
+"أريد أن أقوله": {
+"o": "urīdu an aqūlahu",
+"i": "iroda + qavl",
+"s": "UNGA AYTMOQCHI BO'LGANIM."
+},
+"في أقل من ساعة": {
+"o": "fī aqalla min sāʿa",
+"i": "qalil + soat",
+"s": "BIR SOATDAN OZDA."
+},
+"بدل": {
+"o": "badala",
+"i": "badal",
+"s": "O'RNIGA."
+},
+"أجرة": {
+"o": "ujra",
+"i": "ujra → ijara",
+"s": "ISH HAQI."
+},
+"انتظر": {
+"o": "intazara",
+"i": "intizor",
+"s": "KUTDI."
+},
+"أعد": {
+"o": "aʿuddu",
+"i": "adad",
+"s": "SANAYMAN."
+},
+"ما رأيته قط": {
+"o": "mā raʾaytuhu qattu",
+"i": "ra'y + qat'",
+"s": "UNI HECH KO'RMADIM."
+},
+"صرصور": {
+"o": "sursūr",
+"i": "sur-sur",
+"s": "«Sur-sur» CHIGIRTKA."
+},
+"نملة": {
+"o": "namla",
+"i": "naml",
+"s": "«Naml» — CHUMOLI; chumolilar qator yuribdi."
+},
+"قضى": {
+"o": "qadā",
+"i": "qazo",
+"s": "O'TKAZDI."
+},
+"ترنم": {
+"o": "tarannama",
+"i": "tarannum",
+"s": "SAYRADI."
+},
+"الغناء": {
+"o": "al-ghināʾ",
+"i": "g'ino",
+"s": "QO'SHIQ."
+},
+"ادخر": {
+"o": "iddakhara",
+"i": "zaxira",
+"s": "JAMG'ARDI."
+},
+"فأخذته الحيرة": {
+"o": "fa-akhadhathu l-hayra",
+"i": "hayrat",
+"s": "HAYRON BO'LDI."
+},
+"قوت": {
+"o": "qūt",
+"i": "quvvat",
+"s": "RIZQ."
+},
+"يوما فيوما": {
+"o": "yawman fa-yawman",
+"i": "yom",
+"s": "KUNDAN KUNGA."
+},
+"أتعب": {
+"o": "atʿaba",
+"i": "ta'b",
+"s": "CHARCHATDI."
+},
+"قفز": {
+"o": "qafaza",
+"i": "qafas",
+"s": "Qafasdan SAKRADI."
+},
+"هزل": {
+"o": "hazila",
+"i": "hazil",
+"s": "ORIQLADI."
+},
+"أن يقصد": {
+"o": "an yaqsuda",
+"i": "qasd",
+"s": "QASD QILMOQ."
+},
+"فخطر بباله": {
+"o": "fa-khatara bi-bālihi",
+"i": "xotir + bol",
+"s": "MIYASIGA FIKR KELDI."
+},
+"سد": {
+"o": "sadda",
+"i": "sadd",
+"s": "To'siq — TO'SDI."
+},
+"استعد": {
+"o": "istaʿadda",
+"i": "iste'dod",
+"s": "TAYYORLANDI."
+},
+"استقرض": {
+"o": "istaqrada",
+"i": "qarz",
+"s": "QARZ SO'RADI."
+},
+"أهزل": {
+"o": "ahzala",
+"i": "hazil",
+"s": "HOLDAN TOYDIRDI."
+},
+"مستهزئة": {
+"o": "mustahziʾatan",
+"i": "istehzo",
+"s": "ISTEHZO QILGAN HOLDA."
+},
+"لا يستحق": {
+"o": "lā yastahiqqu",
+"i": "haq",
+"s": "HAQLI BO'LMAYDI."
+},
+"ينبغي لك": {
+"o": "yanbaghī laka",
+"i": "nabog'",
+"s": "SENGA LOZIMKI."
+},
+"رقص": {
+"o": "raqasa",
+"i": "raqs",
+"s": "RAQSGA TUSHDI."
+},
+"ناسك": {
+"o": "nāsik",
+"i": "nosik",
+"s": "DARVESH."
+},
+"مكرة": {
+"o": "makara",
+"i": "makr",
+"s": "MAKKOR kishi."
+},
+"ليجعله قربانا": {
+"o": "li-yajʿalahu qurbānan",
+"i": "qurbon",
+"s": "QURBONLIK QILISH UCHUN."
+},
+"وفيما هو": {
+"o": "wa-fīmā huwa",
+"i": "fil + huv",
+"s": "U ...GAN PAYTDA."
+},
+"قاد": {
+"o": "qāda",
+"i": "qoid",
+"s": "HAYDAB BORDI."
+},
+"شأن": {
+"o": "shaʾn",
+"i": "shon",
+"s": "ISH, xususiyat."
+},
+"سمين": {
+"o": "samīn",
+"i": "semiz",
+"s": "SEMIZ."
+},
+"تشاور": {
+"o": "tashāwara",
+"i": "mashvarat",
+"s": "KENGASH QILDI."
+},
+"عرض": {
+"o": "ʿarada",
+"i": "arz",
+"s": "KO'RINDI."
+},
+"فعل": {
+"o": "fiʿl",
+"i": "fe'l",
+"s": "ISH."
+},
+"مجنون": {
+"o": "majnūn",
+"i": "Majnun",
+"s": "O'zbekcha «Majnun» — JINNI."
+},
+"يختالون": {
+"o": "yakhtālūna",
+"i": "hiyla",
+"s": "HIYLA QILADILAR."
+},
+"لم يشك": {
+"o": "lam yashukka",
+"i": "shak",
+"s": "SHAK QILMADI."
+},
+"سحر عينه": {
+"o": "sahara ʿaynahu",
+"i": "sehr + ayn",
+"s": "KO'ZINI SEHRLADI."
+},
+"غاب": {
+"o": "ghāba",
+"i": "g'oyib",
+"s": "G'OYIB BO'LDI."
+},
+"حيث شاءوا": {
+"o": "haythu shāʾū",
+"i": "hays + shoh",
+"s": "XOHLAGAN TOMONLARIGA."
+},
+"ساحة": {
+"o": "sāha",
+"i": "soha",
+"s": "MAYDON."
+},
+"بلعبة التفاحة": {
+"o": "bi-luʿbati t-tuffāha",
+"i": "lu'bat + tuffoh",
+"s": "OLMA O'YINI."
+},
+"نتبع": {
+"o": "nattabiʿu",
+"i": "tobe'",
+"s": "ERGASHAMIZ."
+},
+"الجانب الأكبر": {
+"o": "al-jāniba l-akbar",
+"i": "jonib + Akbar",
+"s": "Katta tomon — KO'PCHILIK TOMON."
+},
+"محل عال": {
+"o": "mahallun ʿālin",
+"i": "mahalla + oliy",
+"s": "BALAND O'RIN."
+},
+"في طرف الساحة": {
+"o": "fī tarafi s-sāha",
+"i": "taraf + soha",
+"s": "MAYDON TOMONDA."
+},
+"وأخذ يرمي": {
+"o": "wa-akhadha yarmī",
+"i": "axtar + ramiy",
+"s": "OTA BOSHLADI."
+},
+"فمن تلقاها": {
+"o": "fa-man talaqqāhā",
+"i": "man + talqin",
+"s": "KIM QO'LIGA OLSA."
+},
+"وعند انقضاء": {
+"o": "wa-ʿinda nqidāʾ",
+"i": "qazo",
+"s": "TUGAGAN PAYTDA."
+},
+"وقف": {
+"o": "waqafa",
+"i": "vaqf",
+"s": "O'RNIDAN TURDI."
+},
+"أقص": {
+"o": "aqussu",
+"i": "qissa",
+"s": "HIKOYA QILIB BERAMAN."
+},
+"هادئين": {
+"o": "hādiʾīna",
+"i": "hidoyat",
+"s": "TINCH turuvchilar."
+},
+"لا يتحركون": {
+"o": "lā yataharrakūna",
+"i": "harakat",
+"s": "HARAKATLANMASDAN."
+},
+"شاخصة": {
+"o": "shākhisa",
+"i": "shaxs",
+"s": "QARATILGAN."
+},
+"معلقة": {
+"o": "muʿallaqa",
+"i": "muallaq",
+"s": "O'zbekcha «muallaq»."
+},
+"مزينة": {
+"o": "muzayyana",
+"i": "ziynat",
+"s": "ZIYNATLANGAN."
+},
+"عالية": {
+"o": "ʿāliya",
+"i": "oliy",
+"s": "BALAND."
+},
+"وادي": {
+"o": "wādī",
+"i": "vodiy",
+"s": "O'zbekcha «vodiy»."
+},
+"عميقة": {
+"o": "ʿamīqa",
+"i": "amiq",
+"s": "CHUQUR."
+},
+"ومن الغريب": {
+"o": "wa-mina l-gharīb",
+"i": "g'arib",
+"s": "AJABLANARLISI."
+},
+"لا تسكن": {
+"o": "lā taskunu",
+"i": "sukunat",
+"s": "TO'XTAMAYDI."
+},
+"على الدوام": {
+"o": "ʿala d-dawām",
+"i": "davom",
+"s": "BARDAVOM."
+},
+"المروج": {
+"o": "al-murūj",
+"i": "marj",
+"s": "YAYLOVLAR."
+},
+"جمع": {
+"o": "jamaʿa",
+"i": "jam",
+"s": "TO'PLADI."
+},
+"ما أعظم أعمالك": {
+"o": "mā aʿzama aʿmālaka",
+"i": "azim + amal",
+"s": "ISHLARING MUNCHA ULKAN."
+},
+"بحكمة صنعت": {
+"o": "bi-hikmatin sanaʿta",
+"i": "hikmat + san'at",
+"s": "HIKMAT BILAN YARATGANSAN."
+},
+"جدول": {
+"o": "jadwal",
+"i": "jadval",
+"s": "Jadval chizig'idek SOY."
+},
+"شقيقة": {
+"o": "shaqīqa",
+"i": "shaqiq",
+"s": "TUG'ISHGAN (ayol)."
+},
+"لم تقدر": {
+"o": "lam taqdir",
+"i": "qudrat",
+"s": "QURBI YETMADI."
+},
+"رقد": {
+"o": "raqada",
+"i": "ruqud",
+"s": "UXLADI."
+},
+"أفرغت جميع الحيل": {
+"o": "afraghat jamīʿa l-hiyal",
+"i": "farog'at + hiyla",
+"s": "BARCHA HIYLANI QILDI."
+},
+"لم تستفد": {
+"o": "lam tastafid",
+"i": "foyda",
+"s": "FOYDA TOPMADI."
+},
+"دامت": {
+"o": "dāmat",
+"i": "davom",
+"s": "DAVOM ETDI."
+},
+"عالج": {
+"o": "ʿālaja",
+"i": "iloj",
+"s": "MUOLAJA QILDI."
+},
+"طاش": {
+"o": "tāsha",
+"i": "tish",
+"s": "YENGILTAKLIK QILDI."
+},
+"حث": {
+"o": "hath tha",
+"i": "hass",
+"s": "TEZ YURGIZDI."
+},
+"عن بغضاء": {
+"o": "ʿan baghdāʾ",
+"i": "bug'z",
+"s": "G'AZABDAN."
+},
+"عيد الأضحى": {
+"o": "ʿīdu l-adhā",
+"i": "iyd + azho",
+"s": "QURBON HAYITI."
+},
+"أهدى": {
+"o": "ahdā",
+"i": "hadya",
+"s": "HADYA QILDI."
+},
+"دهده": {
+"o": "dahdah",
+"i": "dah-dah",
+"s": "CHO'-CHO'LADI."
+},
+"وما زال كذلك": {
+"o": "wa-mā zāla kadhālika",
+"i": "zavol + kazo",
+"s": "SHUNDAY TURGANIDA."
+},
+"سوط": {
+"o": "sawt",
+"i": "savt",
+"s": "QAMCHI."
+},
+"انتبهت": {
+"o": "intabahat",
+"i": "tanbeh",
+"s": "OGOH BO'LDI."
+},
+"نظرة غضبى": {
+"o": "nazratan ghadbā",
+"i": "nazar + g'azab",
+"s": "G'AZABNOK QARASH."
+},
+"الحمى": {
+"o": "al-hummā",
+"i": "hummo",
+"s": "BEZGAK."
+},
+"خجل": {
+"o": "khajila",
+"i": "xijolat",
+"s": "XIJOLAT TORTDI."
+},
+"بجد ونشاط": {
+"o": "bi-jiddin wa-nashāt",
+"i": "jiddiy + nashot",
+"s": "JIDDIYAT VA FAOLLIK BILAN."
+},
+"شرع": {
+"o": "sharaʿa",
+"i": "shuru'",
+"s": "KIRISHDI."
+},
+"من قبله": {
+"o": "min qibalih",
+"i": "qibla",
+"s": "O'SHA TOMONDAN."
+},
+"رب": {
+"o": "rubba",
+"i": "rub'",
+"s": "KO'PINCHA."
+},
+"عيد الفطر": {
+"o": "ʿīdu l-fitr",
+"i": "iyd + fitr",
+"s": "RAMAZON HAYITI."
+},
+"الصياد": {
+"o": "as-sayyād",
+"i": "sayyod",
+"s": "O'zbekcha «sayyod» — OVCHI."
+},
+"اتفق الحال": {
+"o": "ittafaqa l-hāl",
+"i": "ittifoq + hol",
+"s": "HOLAT YUZAGA KELDI."
+},
+"الطعم": {
+"o": "at-tuʿm",
+"i": "ta'm",
+"s": "XO'RAK."
+},
+"حكم": {
+"o": "hakkama",
+"i": "mahkam",
+"s": "MAHKAMLADI."
+},
+"صنارة": {
+"o": "sinnāra",
+"i": "sinor",
+"s": "QARMOQ."
+},
+"استخارة": {
+"o": "istikhāra",
+"i": "istixora",
+"s": "MARHAMAT SO'RAB."
+},
+"فغطست": {
+"o": "fa-ghatasat",
+"i": "g'ut",
+"s": "SUVGA CHO'MDI."
+},
+"شبكت": {
+"o": "shabakat",
+"i": "shabaka",
+"s": "ILINTIRDI."
+},
+"ياليتما": {
+"o": "yā laytamā",
+"i": "layt",
+"s": "KOSHKI EDI."
+},
+"بدلتني": {
+"o": "baddaltanī",
+"i": "badal",
+"s": "MENI ALISHTIRSANG."
+},
+"ضفدع": {
+"o": "difdaʿ",
+"i": "zifda",
+"s": "QURBAQA."
+},
+"طمع": {
+"o": "tamaʿ",
+"i": "tama'",
+"s": "TAMA'."
+},
+"شبع": {
+"o": "shabaʿ",
+"i": "sheba → to'q",
+"s": "TO'YIMLILIK."
+},
+"خلى": {
+"o": "khallā",
+"i": "xoli",
+"s": "QO'YIB YUBORDI."
+},
+"سبيل": {
+"o": "sabīl",
+"i": "sabil",
+"s": "YO'L."
+},
+"عين الجاهل": {
+"o": "ʿaynu l-jāhil",
+"i": "ayn + johil",
+"s": "JOHILLIKNING AYNAN O'ZI."
+},
+"طماعة": {
+"o": "tamāʿatan",
+"i": "tama'",
+"s": "TAMA' QILGAN HOLDA."
+},
+"المفقودا": {
+"o": "al-mafqūdā",
+"i": "mafqud → faqd",
+"s": "YO'Q BO'LGAN."
+},
+"كركي": {
+"o": "kurkiy",
+"i": "kurk",
+"s": "TURNA."
+},
+"غدير": {
+"o": "ghadīr",
+"i": "g'adir-budir",
+"s": "G'adir-budir yo'l chetidagi KO'LMAK."
+},
+"بصوت رفيع": {
+"o": "bi-sawtin rafīʿ",
+"i": "savt + rafi'",
+"s": "BALAND OVOZ BILAN."
+},
+"خصلة": {
+"o": "khisla",
+"i": "xislat",
+"s": "O'zbekcha «xislat»."
+},
+"أبلد": {
+"o": "ablad",
+"i": "balo",
+"s": "Balodek TENTAK."
+},
+"افتخر": {
+"o": "iftakhara",
+"i": "iftixor",
+"s": "FAXRLANDI."
+},
+"بما لا يصح": {
+"o": "bi-mā lā yasihhu",
+"i": "sahih",
+"s": "DURUST BO'LMAGAN NARSA BILAN."
+},
+"أيل": {
+"o": "ayyil",
+"i": "oyil",
+"s": "Shoxli BUG'U."
+},
+"أتقن": {
+"o": "atqana",
+"i": "itqon",
+"s": "A'LO DARAJADA BAJARDI."
+},
+"لا يهنأ": {
+"o": "lā yahnaʾu",
+"i": "hano",
+"s": "ROHATLI BO'LMAYDI."
+},
+"عيش": {
+"o": "ʿaysh",
+"i": "aysh",
+"s": "Aysh-ishrat — YASHASH."
+},
+"تمد": {
+"o": "tamudda",
+"i": "madd",
+"s": "CHO'ZASAN."
+},
+"تحاول": {
+"o": "tuhāwila",
+"i": "havola",
+"s": "HARAKAT QILASAN."
+},
+"أن تقبض": {
+"o": "an taqbida",
+"i": "qabz",
+"s": "USHLAMOQNI."
+},
+"القدرة": {
+"o": "al-qudra",
+"i": "qudrat",
+"s": "KUCH."
+},
+"لكي تضر": {
+"o": "li-kay tadurra",
+"i": "zarar",
+"s": "ZARAR BERISH UCHUN."
+},
+"وهب": {
+"o": "wahaba",
+"i": "vahob",
+"s": "ATO QILDI."
+},
+"أحيا": {
+"o": "ahyā",
+"i": "hayot",
+"s": "YASHAYMAN."
+},
+"فدعني": {
+"o": "fa-daʿnī",
+"i": "da' → qo'y",
+"s": "MENI TEK QO'Y."
+},
+"إياه": {
+"o": "iyyāhu",
+"i": "iyyo + hu",
+"s": "UNI."
+},
+"بإمساكي": {
+"o": "bi-imsākī",
+"i": "imsok",
+"s": "MENI USHLASH BILAN."
+},
+"إلا": {
+"o": "illā",
+"i": "illo",
+"s": "FAQAT, -ganda."
+},
+"أقدر": {
+"o": "aqdiru",
+"i": "qudrat",
+"s": "QURBIM YETADI."
+},
+"بكل سهولة": {
+"o": "bi-kulli suhūla",
+"i": "sahl",
+"s": "OSONGINA."
+},
+"حالما": {
+"o": "hālamā",
+"i": "hol",
+"s": "ZAHOTI."
+},
+"أن تخفيها": {
+"o": "an tukhfiyahā",
+"i": "maxfiy",
+"s": "MAXFIY QILMOQNI."
+},
+"أهرب": {
+"o": "ahrubu",
+"i": "harb",
+"s": "QOCHAMAN."
+},
+"ثابتة": {
+"o": "thābita",
+"i": "sobit",
+"s": "Sobit — MUSTAHKAM."
+},
+"أخفى": {
+"o": "akhfā",
+"i": "maxfiy",
+"s": "YASHIRDI."
+},
+"مركبة": {
+"o": "murakkaba",
+"i": "murakkab",
+"s": "TARKIB TOPGAN."
+},
+"أسلم": {
+"o": "aslamu",
+"i": "salomat",
+"s": "OMON QOLAMAN."
+},
+"إلى حيث أشاء": {
+"o": "ilā haythu ashāʾu",
+"i": "hays + shoh",
+"s": "XOHLAGAN TOMONGA."
+},
+"أقع": {
+"o": "aqaʿu",
+"i": "voqe",
+"s": "QO'NAMAN."
+},
+"أطيب المأكولات": {
+"o": "atyabu l-maʾkūlāt",
+"i": "tayyib + akal",
+"s": "ENG MAZALI OVQATLAR."
+},
+"أحلى المشروبات": {
+"o": "ahla l-mashrūbāt",
+"i": "halvo + sharbat",
+"s": "ENG YOQIMLI ICHIMLIKLAR."
+},
+"دفعني": {
+"o": "dafaʿanī",
+"i": "daf'",
+"s": "MENI HAYDASA."
+},
+"جناحاي": {
+"o": "janāhāya",
+"i": "janoh",
+"s": "IKKI QANOTIM."
+},
+"طنين": {
+"o": "tanīn",
+"i": "tanin",
+"s": "«Tannn» — VIZILLASH."
+},
+"لا يحس": {
+"o": "lā yuhissu",
+"i": "his",
+"s": "HIS QILMAYDI."
+},
+"غاية الراحة": {
+"o": "ghāyatu r-rāha",
+"i": "g'oyat + rohat",
+"s": "BUTKUL ROHATDA."
+},
+"بدون انقطاع": {
+"o": "bi-dūni nqitāʿ",
+"i": "qat'",
+"s": "UZLUKSIZ."
+},
+"شكا": {
+"o": "shakā",
+"i": "shikoyat",
+"s": "SHIKOYAT QILDI."
+},
+"أن يرشده": {
+"o": "an yurshidahu",
+"i": "murshid",
+"s": "YO'L KO'RSATMOQ."
+},
+"خلص": {
+"o": "khalusa",
+"i": "xalos",
+"s": "XALOS BO'LDI."
+},
+"الرأي لك": {
+"o": "ar-raʾyu laka",
+"i": "ra'y",
+"s": "O'ZING BILASAN."
+},
+"تتمارض": {
+"o": "tatamārada",
+"i": "mariz",
+"s": "O'ZINI KASALLIKKA SOLISH."
+},
+"للحراثة": {
+"o": "li-l-hirātha",
+"i": "harsang",
+"s": "YER HAYDASH UCHUN."
+},
+"بإشارته": {
+"o": "bi-ishāratihi",
+"i": "ishora",
+"s": "UNING KO'RSATMASI BILAN."
+},
+"بدله": {
+"o": "badalahu",
+"i": "badal",
+"s": "UNING O'RNIGA."
+},
+"لئلا أخسر": {
+"o": "li-allā akhsara",
+"i": "xusron",
+"s": "ZARAR TOPMASLIK UCHUN."
+},
+"لئلا يحل": {
+"o": "li-allā yahulla",
+"i": "hal",
+"s": "TUSHMASLIGI UCHUN."
+},
+"أقام": {
+"o": "aqāma",
+"i": "iqomat",
+"s": "YASHADI."
+},
+"عريش": {
+"o": "ʿarīsh",
+"i": "arish → ariq",
+"s": "ARIQ bo'yidagi KAPA."
+},
+"نحوها": {
+"o": "nahwahā",
+"i": "nahv",
+"s": "U TOMON."
+},
+"ترعى": {
+"o": "tarʿā",
+"i": "ra'iyat",
+"s": "O'TLAB YURADI."
+},
+"صياح": {
+"o": "siyāh",
+"i": "soh-soh",
+"s": "QICHQIRIQ."
+},
+"مقترب": {
+"o": "muqtarib",
+"i": "qarib",
+"s": "YAQINLASHUVCHI."
+},
+"فصارت تتبعه": {
+"o": "fa-sārat tatbaʿuhu",
+"i": "tobe'",
+"s": "ERGASHA BOSHLADI."
+},
+"لا يلوي على شيء": {
+"o": "lā yalwī ʿalā shayʾ",
+"i": "lavv + shay",
+"s": "HECH NARSAGA QARAMASDAN."
+},
+"قتيل حمقها": {
+"o": "qatīla humqihā",
+"i": "qotil + ahmoq",
+"s": "AHMOQLIGI QURBONI."
+},
+"طارد": {
+"o": "tārada",
+"i": "tard",
+"s": "QUVDI."
+},
+"قاطع الطريق": {
+"o": "qātiʿu t-tarīq",
+"i": "qat' + tariq",
+"s": "Yo'lni kesuvchi — QAROQCHI."
+},
+"كل الجد": {
+"o": "kulla l-jidd",
+"i": "kul + jiddiy",
+"s": "BOR KUCH BILAN."
+},
+"تنل": {
+"o": "tanal",
+"i": "nail",
+"s": "YETISHASAN."
+},
+"روضة": {
+"o": "rawda",
+"i": "ravza",
+"s": "Ravza — BOG'."
+},
+"أومض": {
+"o": "awmada",
+"i": "vamz → yaltir",
+"s": "YALTIRADI."
+},
+"اطرح": {
+"o": "ittaraha",
+"i": "tarh",
+"s": "TASHLADI."
+},
+"لا تضيع": {
+"o": "lā tudayyiʿ",
+"i": "zoe",
+"s": "ZOE QILMA."
+},
+"شر الفشل": {
+"o": "sharra l-fashal",
+"i": "sharr + fashal",
+"s": "YOMON MUVAFFAQIYATSIZLIK."
+},
+"حصل": {
+"o": "hassala",
+"i": "tahsil",
+"s": "Tahsil — ILMNI QO'LGA KIRITDI."
+},
+"بادر": {
+"o": "bādara",
+"i": "bodir",
+"s": "OSHIQDI."
+},
+"تهجأ": {
+"o": "tahajjaʾa",
+"i": "hijo (bo'g'in)",
+"s": "BO'G'INLAB O'QIDI."
+},
+"انتهز": {
+"o": "intahaza",
+"i": "fursat",
+"s": "G'ANIMAT BILDI."
+},
+"لا تشكو": {
+"o": "lā tashkū",
+"i": "shikoyat",
+"s": "SHIKOYAT QILMA."
+},
+"ملل": {
+"o": "malal",
+"i": "malol",
+"s": "O'zbekcha «malol»."
+},
+"كيس فارغ": {
+"o": "kīsun fārigh",
+"i": "kisa + farog'",
+"s": "BO'M-BO'SH XALTA."
+},
+"أحرز": {
+"o": "ahraza",
+"i": "ehroz",
+"s": "QO'LGA KIRITDI."
+},
+"التمس": {
+"o": "iltamasa",
+"i": "iltimos",
+"s": "TALAB QILDI."
+},
+"حيلة": {
+"o": "hīla",
+"i": "hiyla",
+"s": "O'zbekcha «hiyla»."
+},
+"أوان": {
+"o": "awān",
+"i": "avon",
+"s": "FURSAT."
+},
+"لم تنتبه": {
+"o": "lam tantabih",
+"i": "tanbeh",
+"s": "OGOH BO'LMASANG."
+},
+"تحقر": {
+"o": "tuhqaru",
+"i": "tahqir",
+"s": "PAST SANALASAN."
+},
+"تذل": {
+"o": "tudhallu",
+"i": "zillat",
+"s": "XOR BO'LASAN."
+},
+"اصرفه": {
+"o": "isrifhu",
+"i": "sarf",
+"s": "UNI SARF QIL."
+},
+"الفخر الأجل": {
+"o": "al-fakhra l-ajal",
+"i": "faxr + ajal",
+"s": "KELAJAKDAGI FAXR."
+},
+"اللهو": {
+"o": "al-lahw",
+"i": "lahv",
+"s": "O'YIN-KULGU."
+},
+"اصطدت": {
+"o": "istadtu",
+"i": "sayd",
+"s": "OVLADIM."
+},
+"جيء به": {
+"o": "jiʾ bihi",
+"i": "joy",
+"s": "UNI KELTIR."
+},
+"كلبة": {
+"o": "kalba",
+"i": "kalla + a",
+"s": "ONA IT."
+},
+"عيرت": {
+"o": "ʿayyarat",
+"i": "ayb",
+"s": "AYBLADI."
+},
+"لبؤة": {
+"o": "labuʾa",
+"i": "lab",
+"s": "ONA SHER."
+},
+"لا تلدين": {
+"o": "lā talidīna",
+"i": "valid",
+"s": "TUG'MAYSAN."
+},
+"قرد": {
+"o": "qird",
+"i": "qirq",
+"s": "Qirq xil qiliq qiladigan MAYMUN."
+},
+"ريح": {
+"o": "rīh",
+"i": "rih → rahm",
+"s": "SHAMOL."
+},
+"يراعة": {
+"o": "yarāʿa",
+"i": "yaraq",
+"s": "Yaraqlagan TILLA QO'NG'IZ."
+},
+"شرارة": {
+"o": "sharāra",
+"i": "shar-shar",
+"s": "«Shar-shar» UCHQUN."
+},
+"حطب": {
+"o": "hatab",
+"i": "hatab",
+"s": "O'TIN."
+},
+"نفخ": {
+"o": "nafakha",
+"i": "nafas",
+"s": "PUFLADI."
+},
+"تروح": {
+"o": "tarawwaha",
+"i": "rohat",
+"s": "YELPINDI."
+},
+"أوقد": {
+"o": "awqada",
+"i": "vaqud",
+"s": "OLOVNI YOQDI."
+},
+"دفأ": {
+"o": "daffaʾa",
+"i": "dafa → dof",
+"s": "ISITDI."
+},
+"نادى": {
+"o": "nādā",
+"i": "nido",
+"s": "CHAQIRDI."
+},
+"بين": {
+"o": "bayyana",
+"i": "bayon",
+"s": "BAYON QILDI."
+},
+"قوم": {
+"o": "qawwama",
+"i": "qomat",
+"s": "TO'G'RILADI."
+},
+"استقام": {
+"o": "istaqāma",
+"i": "istiqomat",
+"s": "ROSTGO'Y bo'ldi."
+},
+"عود": {
+"o": "ʿūd",
+"i": "ud",
+"s": "Ud cholg'usidek NOVDA."
+},
+"انحنى": {
+"o": "inhanā",
+"i": "hano → hon",
+"s": "EGILDI."
+},
+"لا يعمل": {
+"o": "lā yuʿmalu",
+"i": "amal",
+"s": "YASAB BO'LMAYDI."
+},
+"قوس": {
+"o": "qaws",
+"i": "qavs",
+"s": "Qavsdek YOY."
+},
+"أبى": {
+"o": "abā",
+"i": "ibo",
+"s": "RAD QILDI."
+},
+"اختبى": {
+"o": "ikhtabā",
+"i": "xabar",
+"s": "YASHIRINDI."
+},
+"ظلام": {
+"o": "zalām",
+"i": "zulm",
+"s": "QORONG'ULIK."
+},
+"بلا احتشام": {
+"o": "bi-lā htishām",
+"i": "hashamat",
+"s": "UYALMASDAN."
+},
+"تارة": {
+"o": "tāratan",
+"i": "tor",
+"s": "GOHIDA."
+},
+"يابس": {
+"o": "yābis",
+"i": "yobis",
+"s": "QURIGAN."
+},
+"حرم": {
+"o": "harama",
+"i": "mahrum",
+"s": "MAHRUM QILDI."
+},
+"نفيسة": {
+"o": "nafīsa",
+"i": "nafis",
+"s": "QIMMATBAHO."
+},
+"أحس": {
+"o": "ahassa",
+"i": "his",
+"s": "HIS QILDI."
+},
+"غادر": {
+"o": "ghādara",
+"i": "g'adr",
+"s": "TASHLAB KETDI."
+},
+"وفر": {
+"o": "wafara",
+"i": "vafor",
+"s": "QOCHDI."
+},
+"ندامة": {
+"o": "nadāma",
+"i": "nadomat",
+"s": "AFSUS-NADOMAT."
+},
+"زبدة": {
+"o": "zubda",
+"i": "zubda",
+"s": "KAYMOQ."
+},
+"حليب": {
+"o": "halīb",
+"i": "halab",
+"s": "SUT."
+},
+"وقعت": {
+"o": "waqaʿat",
+"i": "voqe",
+"s": "QO'NDI."
+},
+"ثقل": {
+"o": "thaqqala",
+"i": "saqil",
+"s": "OG'IRLASHTIRDI."
+},
+"أعلم": {
+"o": "aʿlama",
+"i": "ilm",
+"s": "BILDIRDI."
+},
+"بنزولك": {
+"o": "bi-nuzūliki",
+"i": "nuzul",
+"s": "QO'NGANING."
+},
+"شعور": {
+"o": "shuʿūr",
+"i": "shuur",
+"s": "HIS."
+},
+"حتى يريحني": {
+"o": "hattā yurīhanī",
+"i": "rohat",
+"s": "TOKI MENI ROHATLANTIRSANG."
+},
+"فراقك": {
+"o": "firāquki",
+"i": "firoq",
+"s": "O'zbekcha «firoq» — AJRALISHING."
+},
+"دهاء": {
+"o": "dahāʾ",
+"i": "daho",
+"s": "AYYORLIK."
+},
+"ينسب": {
+"o": "yansubu",
+"i": "nisbat",
+"s": "NISBAT BERILADI."
+},
+"غير صحيحة": {
+"o": "ghayru sahīha",
+"i": "g'ayri + sahih",
+"s": "DURUST BO'LMAGAN."
+},
+"التقى": {
+"o": "iltaqā",
+"i": "liqo",
+"s": "UCHRASHDI."
+},
+"محل إقامته": {
+"o": "mahallu iqāmatihi",
+"i": "mahalla + iqomat",
+"s": "YASHASH O'RNI."
+},
+"امتص": {
+"o": "imtassa",
+"i": "mass",
+"s": "SO'RDI."
+},
+"قصب السكر": {
+"o": "qasabu s-sukkar",
+"i": "qasab + shakar",
+"s": "SHAKARQAMISH."
+},
+"أغنيك": {
+"o": "ughnīka",
+"i": "g'aniy",
+"s": "SENI BEHOJAT QILAMAN."
+},
+"تبع": {
+"o": "tabiʿa",
+"i": "tobe'",
+"s": "ERGASHDI."
+},
+"قطرة": {
+"o": "qatra",
+"i": "qatra",
+"s": "O'zbekcha «qatra»."
+},
+"بستاني": {
+"o": "bustāniy",
+"i": "bo'ston",
+"s": "BOG'BON."
+},
+"بستان": {
+"o": "bustān",
+"i": "bo'ston",
+"s": "O'zbekcha «bo'ston» — BOG'."
+},
+"شره": {
+"o": "sharah",
+"i": "sharah",
+"s": "OCHKO'ZLIK."
+},
+"هرول": {
+"o": "harwala",
+"i": "harvala",
+"s": "SHOSHIB YUGURDI."
+},
+"فلكونه غريب الدار": {
+"o": "fa-li-kawnihi gharība d-dār",
+"i": "g'arib + dor",
+"s": "DIYORDA NOTANISH BO'LGANI UCHUN."
+},
+"الملتقى": {
+"o": "al-multaqā",
+"i": "liqo",
+"s": "UCHRASHUV JOYI."
+},
+"ناداه": {
+"o": "nādāhu",
+"i": "nido",
+"s": "UNI CHAQIRDI."
+},
+"ذبح": {
+"o": "dhabaha",
+"i": "zabh",
+"s": "SO'YDI."
+},
+"سوق الفراء": {
+"o": "sūqu l-firāʾ",
+"i": "so'qi + farova",
+"s": "MO'YNA BOZORI."
+},
+"يعرض": {
+"o": "yuʿradu",
+"i": "arz",
+"s": "NAMOYISH QILINADI."
+},
+"سلخ": {
+"o": "salakha",
+"i": "salx",
+"s": "SHILDI."
+},
+"ناحية": {
+"o": "nāhiya",
+"i": "nohiya",
+"s": "O'zbekcha «nohiya» — TOMON."
+},
+"الجنوبية": {
+"o": "al-janūbiyya",
+"i": "janub",
+"s": "JANUBIY."
+},
+"إفريقية": {
+"o": "ifrīqiya",
+"i": "Afrika",
+"s": "AFRIKA."
+},
+"عن بعد": {
+"o": "ʿan buʿd",
+"i": "ba'id",
+"s": "UZOQDAN."
+},
+"واتفق": {
+"o": "wa-ttafaqa",
+"i": "ittifoq",
+"s": "TASODIFAN."
+},
+"جعل يتبعه": {
+"o": "jaʿala yatbaʿuhu",
+"i": "ja'l + tobe'",
+"s": "ERGASHA BOSHLADI."
+},
+"أبطأ": {
+"o": "abtaʾa",
+"i": "but",
+"s": "SEKINLADI."
+},
+"الظلام": {
+"o": "az-zalām",
+"i": "zulm",
+"s": "QORONG'ULIK."
+},
+"وثب": {
+"o": "wathaba",
+"i": "vasb",
+"s": "SAKRADI."
+},
+"من وجهه": {
+"o": "min wajhihi",
+"i": "vajh",
+"s": "KO'Z O'NGIDAN."
+},
+"أن يختال": {
+"o": "an yakhtāla",
+"i": "hiyla",
+"s": "HIYLA QILMOQNI."
+},
+"يهلكه": {
+"o": "yuhlikuhu",
+"i": "halokat",
+"s": "UNI HALOK QILADIGAN."
+},
+"يتخلص منه": {
+"o": "yatakhallasu minhu",
+"i": "xalos",
+"s": "UNDAN XALOS BO'LADIGAN."
+},
+"صخر": {
+"o": "sakhr",
+"i": "saxro",
+"s": "QOYA TOSH."
+},
+"شاهق": {
+"o": "shāhiq",
+"i": "shohiq → shoh",
+"s": "YUKSAK."
+},
+"هوة": {
+"o": "huwwa",
+"i": "huv",
+"s": "JARLIK."
+},
+"حافة": {
+"o": "hāffa",
+"i": "hof",
+"s": "CHET, qirg'oq."
+},
+"ضرس": {
+"o": "dirs",
+"i": "zirs",
+"s": "QOYA do'ngligi."
+},
+"نصب": {
+"o": "nasaba",
+"i": "nasb",
+"s": "TIK O'RNATDI."
+},
+"جبة": {
+"o": "jubba",
+"i": "jubba",
+"s": "O'zbekcha «jubba» — CHOPON."
+},
+"هيئة": {
+"o": "hayʾa",
+"i": "hay'at",
+"s": "QIYOFA."
+},
+"قادم إليه": {
+"o": "qādimun ilayhi",
+"i": "qadam",
+"s": "U TOMON KELAYOTGAN."
+},
+"سير الخائف": {
+"o": "sayra l-khāʾif",
+"i": "sayr + xavf",
+"s": "QO'RQUVCHINING YURISHIDEK."
+},
+"فريسة": {
+"o": "farīsa",
+"i": "faris",
+"s": "O'LJA."
+},
+"نفر": {
+"o": "nafara",
+"i": "nafrat",
+"s": "QOCHDI."
+},
+"تحطم": {
+"o": "tahattama",
+"i": "hatm",
+"s": "CHIL-CHIL BO'LDI."
+},
+"حاجة": {
+"o": "hāja",
+"i": "hojat",
+"s": "EHTIYOJ."
+},
+"الباقي": {
+"o": "al-bāqī",
+"i": "boqiy",
+"s": "QOLGANI."
+},
+"لم يمض": {
+"o": "lam yamdi",
+"i": "imzo → mozi",
+"s": "O'TMADI."
+},
+"امتلأ": {
+"o": "imtalaʾa",
+"i": "mul",
+"s": "TO'LDI."
+},
+"استلقى": {
+"o": "istalqā",
+"i": "lalqi",
+"s": "CHALQANCHA YOTDI."
+},
+"تفكر": {
+"o": "tafakkara",
+"i": "tafakkur",
+"s": "O'YLADI."
+},
+"عكاز": {
+"o": "ʿukkāz",
+"i": "akkoz",
+"s": "HASSA."
+},
+"ما في هذه الجرة": {
+"o": "mā fī hādhihi l-jarra",
+"i": "jarra (ko'za)",
+"s": "BU KO'ZANING ICHIDAGI NARSA."
+},
+"غلاء": {
+"o": "ghalāʾ",
+"i": "g'oliy",
+"s": "QIMMATCHILIK."
+},
+"حبل": {
+"o": "habila",
+"i": "habl",
+"s": "HOMILADOR BO'LDI."
+},
+"معز": {
+"o": "maʿz",
+"i": "ma'z → me'",
+"s": "ECHKILAR «me'»."
+},
+"تصير": {
+"o": "tasīru",
+"i": "sayr",
+"s": "AYLANADI."
+},
+"أكرة": {
+"o": "akara",
+"i": "akr",
+"s": "CHORAKORLIK."
+},
+"استأجر": {
+"o": "istaʾjara",
+"i": "ijara",
+"s": "IJARAGA OLDI."
+},
+"أنثى": {
+"o": "unthā",
+"i": "unsiya",
+"s": "URG'OCHI."
+},
+"فاخر": {
+"o": "fākhir",
+"i": "faxr",
+"s": "Faxrli — HASHAMATLI."
+},
+"أصيب": {
+"o": "uṣību",
+"i": "isobat",
+"s": "EGA BO'LAMAN."
+},
+"تحمل": {
+"o": "tahmilu",
+"i": "hammol",
+"s": "HOMILADOR BO'LADI."
+},
+"نجيب": {
+"o": "najīb",
+"i": "najib",
+"s": "NASLDOR, aqlli."
+},
+"وأشدد عليه": {
+"o": "wa-ushaddidu ʿalayhi",
+"i": "shiddat",
+"s": "UNGA QATTIQ TURAMAN."
+},
+"ترعرع": {
+"o": "taraʿraʿa",
+"i": "ra'no",
+"s": "O'SDI, ulg'aydi."
+},
+"سال": {
+"o": "sāla",
+"i": "sel",
+"s": "Sel bo'lib OQDI."
+},
+"اليمن": {
+"o": "al-yaman",
+"i": "Yaman",
+"s": "YAMAN."
+},
+"لنتعشى": {
+"o": "li-nataʿashshā",
+"i": "isho",
+"s": "KECHKI OVQAT UCHUN."
+},
+"كما هي": {
+"o": "kamā hiya",
+"i": "kamo",
+"s": "QANDAY BO'LSA SHUNDAY."
+},
+"أسفنا": {
+"o": "asifnā",
+"i": "asaf → afsus",
+"s": "AFSUSLANDIK."
+},
+"فبينما نحن كذلك": {
+"o": "fa-baynamā nahnu kadhālika",
+"i": "bayn + nahnu",
+"s": "BIZ SHU HOLDA TURGANIMIZDA."
+},
+"على مقربة منا": {
+"o": "ʿalā maqrubatin minnā",
+"i": "qarib",
+"s": "BIZGA YAQIN JOYDA."
+},
+"نحسبه": {
+"o": "nahsabuhu",
+"i": "hisob",
+"s": "DEB HISOBLADIK."
+},
+"خوان": {
+"o": "khuwān",
+"i": "xon (dasturxon)",
+"s": "PESHXON, stol."
+},
+"ليف": {
+"o": "līf",
+"i": "lif",
+"s": "MOCHALKA."
+},
+"هيأ": {
+"o": "hayyaʾa",
+"i": "hay'at",
+"s": "TAYYORLADI."
+},
+"خسرنا": {
+"o": "khasirnā",
+"i": "xusron",
+"s": "BOY BERDIK."
+},
+"نما": {
+"o": "namā",
+"i": "namo",
+"s": "UNDI."
+},
+"حب": {
+"o": "habb",
+"i": "habba",
+"s": "DON."
+},
+"واظب": {
+"o": "wāzaba",
+"i": "vazifa",
+"s": "BARDAVOM BO'LDI."
+},
+"أتلف": {
+"o": "atlafa",
+"i": "talaf",
+"s": "NOBUT QILDI."
+},
+"سنبل": {
+"o": "sunbul",
+"i": "sunbula",
+"s": "BOSHOQ."
+},
+"على حسب عادتها": {
+"o": "ʿalā hasabi ʿādatihā",
+"i": "hasb + odat",
+"s": "ODATIGA KO'RA."
+},
+"ليسلم": {
+"o": "li-yaslama",
+"i": "salomat",
+"s": "OMON QOLISH UCHUN."
+},
+"مطروحة": {
+"o": "matrūha",
+"i": "tarh",
+"s": "ITQITILGAN."
+},
+"استغرب": {
+"o": "istaghraba",
+"i": "g'arib",
+"s": "HAYRATGA TUSHDI."
+},
+"ما كان يعلم": {
+"o": "mā kāna yaʿlamu",
+"i": "kon + ilm",
+"s": "BILMAS EDI."
+},
+"ما حصل": {
+"o": "mā hasala",
+"i": "hosil",
+"s": "YUZ BERGAN NARSA."
+},
+"شر": {
+"o": "sharr",
+"i": "sharr",
+"s": "YOMON."
+},
+"أسفوا": {
+"o": "asifū",
+"i": "afsus",
+"s": "QAYG'URDILAR."
+},
+"أوقع": {
+"o": "awqaʿa",
+"i": "voqe",
+"s": "DUCHOR QILDI."
+},
+"شفيت": {
+"o": "shufiyat",
+"i": "shifo",
+"s": "SHIFO TOPDI."
+},
+"صارت تقول": {
+"o": "sārat taqūlu",
+"i": "qavl",
+"s": "AYTADIGAN BO'LDI."
+},
+"أن يبني": {
+"o": "an yabniya",
+"i": "bino",
+"s": "QURMOQNI."
+},
+"شاد": {
+"o": "shāda",
+"i": "shod",
+"s": "BARPO QILDI."
+},
+"أن تجني": {
+"o": "an tajniya",
+"i": "janna → jon",
+"s": "YIG'MOQNI."
+},
+"بلا كلل": {
+"o": "bi-lā kalal",
+"i": "kalol → malol",
+"s": "CHARCHOQSIZ."
+},
+"تلى": {
+"o": "talā",
+"i": "tilovat",
+"s": "KUYLADI."
+},
+"أطايب الغنا": {
+"o": "atāyiba l-ghinā",
+"i": "tayyib + g'ino",
+"s": "ENG YOQIMLI KUY."
+},
+"كل خاطر": {
+"o": "kullu khātir",
+"i": "xotir",
+"s": "HAR BIR KO'NGIL."
+},
+"بكل لحن": {
+"o": "bi-kulli lahn",
+"i": "lahn",
+"s": "BOR OHANG BILAN."
+},
+"وكر": {
+"o": "wakr",
+"i": "vakr",
+"s": "UYA."
+},
+"لحينه": {
+"o": "li-hīnihi",
+"i": "hin",
+"s": "BIR PAYT UCHUN."
+},
+"مرشد": {
+"o": "murshid",
+"i": "murshid",
+"s": "YO'L KO'RSATUVCHI."
+},
+"آملا": {
+"o": "āmilan",
+"i": "amal",
+"s": "ORZU QILGAN HOLDA."
+},
+"ما خاب": {
+"o": "mā khāba",
+"i": "xayba",
+"s": "PUCHGA CHIQMAYDI."
+},
+"لتحضر": {
+"o": "li-tuhdira",
+"i": "hozir",
+"s": "HOZIRLASH UCHUN."
+},
+"يسد جوعهم": {
+"o": "yasuddu jūʿahum",
+"i": "sadd + ju'",
+"s": "OCHLIKNI TO'SADI."
+},
+"أوصتهم": {
+"o": "awsathum",
+"i": "vasiyat",
+"s": "ULARGA VASIYAT QILDI."
+},
+"عودتها": {
+"o": "ʿawdatuhā",
+"i": "avdat → odat",
+"s": "QAYTGANIDA."
+},
+"ثقب": {
+"o": "thuqb",
+"i": "saqb",
+"s": "TESHIK."
+},
+"صبغ": {
+"o": "sabagha",
+"i": "sabg'",
+"s": "BO'YADI."
+},
+"تحققوا": {
+"o": "tahaqqaqū",
+"i": "tahqiq",
+"s": "ANIQLADILAR."
+},
+"مسرعا": {
+"o": "musriʿan",
+"i": "sur'at",
+"s": "SHOSHGAN HOLDA."
+},
+"اختفى": {
+"o": "ikhtafā",
+"i": "maxfiy",
+"s": "BEKINDI."
+},
+"جدي": {
+"o": "jady",
+"i": "jadiy",
+"s": "ULOQCHA."
+},
+"بما جرى": {
+"o": "bi-mā jarā",
+"i": "jarayon",
+"s": "YUZ BERGAN NARSA."
+},
+"كرب": {
+"o": "karb",
+"i": "karb",
+"s": "G'AM-ALAM."
+},
+"تساهل": {
+"o": "tasāhul",
+"i": "sahl",
+"s": "BEPARVOLIK."
+},
+"عدم تأمل": {
+"o": "ʿadamu taʾammul",
+"i": "adam + tafakkur",
+"s": "FIKRLAMASLIK."
+},
+"جواب": {
+"o": "jawāb",
+"i": "javob",
+"s": "O'zbekcha «javob»."
+},
+"أرشد": {
+"o": "arshada",
+"i": "murshid",
+"s": "YO'NALTIRDI."
+},
+"الخداع": {
+"o": "al-khidāʿ",
+"i": "xudo'",
+"s": "ALDOV."
+},
+"لص": {
+"o": "liss",
+"i": "lis → lisp",
+"s": "O'G'RI."
+},
+"مضى": {
+"o": "madā",
+"i": "mozi",
+"s": "OLIB BORDI."
+},
+"ليبيعه": {
+"o": "li-yabīʿahu",
+"i": "boy",
+"s": "SOTISH UCHUN."
+},
+"فقابله": {
+"o": "fa-qābalahu",
+"i": "muqobil",
+"s": "UNGA DUCH KELDI."
+},
+"صحفة": {
+"o": "sahfa",
+"i": "sahifa",
+"s": "LAGAN."
+},
+"أجربه": {
+"o": "ujarribahu",
+"i": "tajriba",
+"s": "UNI SINAB KO'RAMAN."
+},
+"ذهابا": {
+"o": "dhahāban",
+"i": "zahab",
+"s": "BORISH."
+},
+"إيابا": {
+"o": "iyāban",
+"i": "iyob",
+"s": "QAYTISH."
+},
+"ابتعد": {
+"o": "ibtaʿada",
+"i": "ba'id",
+"s": "UZOQLASHDI."
+},
+"زقاق": {
+"o": "zuqāq",
+"i": "zuqoq",
+"s": "TOR KO'CHA."
+},
+"الحيرة": {
+"o": "al-hīra",
+"i": "Hiyra",
+"s": "HIYRA shahri."
+},
+"برأس ماله": {
+"o": "bi-raʾsi mālihi",
+"i": "rais + mol",
+"s": "MOL BOSHIGA."
+},
+"ربح": {
+"o": "ribh",
+"i": "ribh",
+"s": "FOYDA."
+},
+"أشرس": {
+"o": "ashras",
+"i": "sharosat",
+"s": "YOVUZROQ."
+},
+"سبع": {
+"o": "sabʿ",
+"i": "sab'",
+"s": "YIRTQICH."
+},
+"أضرها": {
+"o": "adarrihā",
+"i": "zarar",
+"s": "ENG ZARARLISI."
+},
+"وجار": {
+"o": "wijār",
+"i": "vijor",
+"s": "BO'RI UYASI."
+},
+"طاف": {
+"o": "tāfa",
+"i": "tavof",
+"s": "AYLANIB CHIQDI."
+},
+"برية": {
+"o": "barriyya",
+"i": "bar",
+"s": "SAHRO."
+},
+"ليس له قوة تذكر": {
+"o": "laysa lahu quwwatun tudhkaru",
+"i": "lays + quvvat + zikr",
+"s": "AYTARLIK KUCHI YO'Q."
+},
+"شراسة": {
+"o": "sharāsa",
+"i": "sharosat",
+"s": "QO'POLLIK."
+},
+"قصد": {
+"o": "qasada",
+"i": "qasd",
+"s": "YO'L OLDI."
+},
+"هجم": {
+"o": "hajama",
+"i": "hujum",
+"s": "HUJUM QILDI."
+},
+"حاسة الشم": {
+"o": "hāssatu sh-shamm",
+"i": "his + shamma",
+"s": "HID BILISH SEZGISI."
+},
+"فرسخ": {
+"o": "farsakh",
+"i": "farsax",
+"s": "FARSAX (≈5,5 km)."
+},
+"انفرد": {
+"o": "infarada",
+"i": "fard",
+"s": "YAKKALANDI."
+},
+"ومن عجيب أمره": {
+"o": "wa-min ʿajībi amrihi",
+"i": "ajib + amr",
+"s": "AJOYIB ISHLARIDAN."
+},
+"عوى": {
+"o": "ʿawā",
+"i": "uv-uv",
+"s": "UVULLADI."
+},
+"تجاه": {
+"o": "tujāha",
+"i": "tujoh",
+"s": "RO'PARASI."
+},
+"ولى": {
+"o": "wallā",
+"i": "voli",
+"s": "YUZ O'GIRIB KETDI."
+},
+"شريف": {
+"o": "sharīf",
+"i": "sharif",
+"s": "ASLZODA."
+},
+"مركبة شتوية": {
+"o": "markabatun shatawiyya",
+"i": "markab + shito",
+"s": "QISHKI ARAVA."
+},
+"لحق": {
+"o": "lahiqa",
+"i": "lohiq",
+"s": "QUVIB YETDI."
+},
+"قطيع": {
+"o": "qatīʿ",
+"i": "qat'",
+"s": "PODA."
+},
+"سائق": {
+"o": "sāʾiq",
+"i": "soyiq",
+"s": "HAYDOVCHI."
+},
+"أن يخلي": {
+"o": "an yukhalliya",
+"i": "xoli",
+"s": "BO'SHATMOQ."
+},
+"استأنف": {
+"o": "istaʾnafa",
+"i": "anf",
+"s": "QAYTADAN BOSHLADI."
+},
+"سالمين": {
+"o": "sālimīna",
+"i": "salomat",
+"s": "SOG'-OMON."
+},
+"حمامة": {
+"o": "hamāma",
+"i": "hammom",
+"s": "KABUTAR."
+},
+"مالك الحزين": {
+"o": "māliku l-hazīn",
+"i": "malik + hazin",
+"s": "Hazin malik — QARQARA."
+},
+"تبيض": {
+"o": "tabīdu",
+"i": "bayz",
+"s": "TUXUM QO'YADI."
+},
+"نخلة": {
+"o": "nakhla",
+"i": "naxl",
+"s": "PALMA DARAXTI."
+},
+"حضن": {
+"o": "hadana",
+"i": "hazin → quchoq",
+"s": "TUXUM BOSDI."
+},
+"أفرخت": {
+"o": "afrakhat",
+"i": "farx",
+"s": "JO'JA OCHDI."
+},
+"أدرك": {
+"o": "adraka",
+"i": "idrok",
+"s": "VOYAGA YETDI."
+},
+"اعتاد": {
+"o": "iʿtāda",
+"i": "odat",
+"s": "ODATLANDI."
+},
+"حزينة": {
+"o": "hazīna",
+"i": "hazin",
+"s": "G'AMGIN."
+},
+"ابتليت": {
+"o": "ubtulītu",
+"i": "balo",
+"s": "BALOGA DUCHOR BO'LDIM."
+},
+"فهددني": {
+"o": "fa-haddadanī",
+"i": "tahdid",
+"s": "MENGA TAHDID QILDI."
+},
+"الصعود": {
+"o": "as-suʿūd",
+"i": "sa'y → su'ud",
+"s": "KO'TARILISH."
+},
+"أمكنك": {
+"o": "amkanaka",
+"i": "imkon",
+"s": "IMKONING BO'LSA."
+},
+"نجا": {
+"o": "najā",
+"i": "najot",
+"s": "NAJOT TOPDI."
+},
+"شاطيء": {
+"o": "shātiʾ",
+"i": "shot → sohil",
+"s": "SOHIL."
+},
+"جناحي": {
+"o": "janāhī",
+"i": "janoh",
+"s": "QANOTIM."
+},
+"ألا تريني": {
+"o": "a-lā turīnī",
+"i": "ra'y",
+"s": "MENGA KO'RSATMAYSANMI?"
+},
+"همز": {
+"o": "hamaza",
+"i": "hamza",
+"s": "NIQTADI."
+},
+"تعجز": {
+"o": "taʿjizu",
+"i": "ojiz",
+"s": "OJIZ BO'LASAN."
+},
+"اعتدل": {
+"o": "iʿtadala",
+"i": "mo'tadil",
+"s": "MO'TADIL BO'LDI."
+},
+"أبصر": {
+"o": "absara",
+"i": "basir",
+"s": "KO'RDI."
+},
+"دهى": {
+"o": "dahā",
+"i": "daho",
+"s": "CHULG'ADI."
+},
+"التفات": {
+"o": "iltifāt",
+"i": "iltifot",
+"s": "BURILISH."
+},
+"فات": {
+"o": "fāta",
+"i": "favt",
+"s": "O'TIB KETDI."
+},
+"تلفت": {
+"o": "talaffata",
+"i": "iltifot",
+"s": "BURILDI."
+},
+"أكد": {
+"o": "akkada",
+"i": "ta'kid",
+"s": "TA'KIDLADI."
+},
+"خاب": {
+"o": "khāba",
+"i": "xayba",
+"s": "PUCHGA CHIQDI."
+},
+"تمرن": {
+"o": "tamarrana",
+"i": "mashq → marrana",
+"s": "MASHQ QILDI."
+},
+"مطول": {
+"o": "mutawwal",
+"i": "tavil",
+"s": "UZUN."
+},
+"لم يعد يعرف": {
+"o": "lam yaʿud yaʿrifu",
+"i": "odat + orif",
+"s": "BILMAY QOLDI."
+},
+"الخالي": {
+"o": "al-khālī",
+"i": "xoli",
+"s": "BO'SH (mag'rur)."
+},
+"أعرابي": {
+"o": "aʿrābiy",
+"i": "a'robiy",
+"s": "BADAVIY arab."
+},
+"إسكاف": {
+"o": "iskāf",
+"i": "iskaf → kafsh",
+"s": "ETIKDO'Z."
+},
+"يدعى": {
+"o": "yudʿā",
+"i": "da'vat",
+"s": "NOMLANAR EDI."
+},
+"حنين": {
+"o": "hunayn",
+"i": "Hunayn",
+"s": "HUNAYN (ism)."
+},
+"ساوم": {
+"o": "sāwama",
+"i": "savdo",
+"s": "BAHOLASHDI."
+},
+"اغتاظ": {
+"o": "ightāza",
+"i": "g'ayz",
+"s": "G'AZABLANDI."
+},
+"أضمر": {
+"o": "admara",
+"i": "zamir",
+"s": "DILIGA TUGDI."
+},
+"طرح": {
+"o": "taraha",
+"i": "tarh",
+"s": "ITQITDI."
+},
+"ما أحسن": {
+"o": "mā ahsana",
+"i": "husn",
+"s": "MUNCHA HAM YAXSHI."
+},
+"ما أشبه": {
+"o": "mā ashbaha",
+"i": "shabah",
+"s": "MUNCHA HAM O'XSHASH."
+},
+"عقل": {
+"o": "ʿaqala",
+"i": "iqol → aql",
+"s": "BOG'LADI."
+},
+"مكمن": {
+"o": "makman",
+"i": "kamin",
+"s": "PISTIRMA."
+},
+"تأسف": {
+"o": "taʾassafa",
+"i": "afsus",
+"s": "AFSUSLANDI."
+},
+"مثلا يضرب": {
+"o": "mathalan yudrabu",
+"i": "masal + zarb",
+"s": "ZARBULMASAL QILINADI."
+},
+"خائب": {
+"o": "khāʾib",
+"i": "xayba",
+"s": "NOUMID."
+},
+"سعي": {
+"o": "saʿy",
+"i": "sa'y",
+"s": "HARAKAT."
+},
+"عريض": {
+"o": "ʿarīd",
+"i": "arz",
+"s": "KENG."
+},
+"حكى": {
+"o": "hakā",
+"i": "hikoya",
+"s": "BAYON QILDI."
+},
+"مرة بعد مرة": {
+"o": "marratan baʿda marra",
+"i": "marra",
+"s": "MUNTAZAM."
+},
+"اختلف": {
+"o": "ikhtalafa",
+"i": "ixtilof",
+"s": "FARQLI BO'LDI."
+},
+"كثيف": {
+"o": "kathīf",
+"i": "kasif",
+"s": "ZICH."
+},
+"سرب": {
+"o": "sirb",
+"i": "sirb",
+"s": "GALA."
+},
+"ضجيج": {
+"o": "dajīj",
+"i": "zaj-zaj",
+"s": "SHOVQIN."
+},
+"كرز البري": {
+"o": "karzu l-barriy",
+"i": "karz + bar",
+"s": "YOVVOYI OLCHA."
+},
+"يلذ": {
+"o": "yaladhdhu",
+"i": "lazzat",
+"s": "LAZZAT OLADI."
+},
+"نقر": {
+"o": "naqara",
+"i": "naqora",
+"s": "CHO'QIDI."
+},
+"لب": {
+"o": "lubb",
+"i": "lub",
+"s": "MAG'IZ."
+},
+"معقوف": {
+"o": "maʿqūf",
+"i": "aqf",
+"s": "EGIK."
+},
+"مفصلة": {
+"o": "mufassala",
+"i": "mufassal",
+"s": "AJRALGAN."
+},
+"مفصل": {
+"o": "mafsil",
+"i": "fasl",
+"s": "BO'G'IN."
+},
+"استعان": {
+"o": "istaʿāna",
+"i": "iona → yordam",
+"s": "YORDAM OLDI."
+},
+"جذب": {
+"o": "jadhaba",
+"i": "jazb",
+"s": "TORTDI."
+},
+"رقى": {
+"o": "raqā",
+"i": "taraqqiy",
+"s": "KO'TARILDI."
+},
+"استحمام": {
+"o": "istihmām",
+"i": "hammom",
+"s": "CHO'MILISH."
+},
+"وقع": {
+"o": "waqʿ",
+"i": "voqe",
+"s": "TA'SIR."
+},
+"تبرد": {
+"o": "tabarrada",
+"i": "bard",
+"s": "SOVUDI."
+},
+"جثم": {
+"o": "jathama",
+"i": "jussa",
+"s": "ENGASHIB TURDI."
+},
+"صفف": {
+"o": "saffafa",
+"i": "saf",
+"s": "SAF TORTDI."
+},
+"إلى أن تنشف": {
+"o": "ilā an tanshafa",
+"i": "nash-nash",
+"s": "TO QURIGUNCHA."
+},
+"هب": {
+"o": "habba",
+"i": "hab",
+"s": "UYG'ONDI."
+},
+"قيلولة": {
+"o": "qaylūla",
+"i": "qaylula",
+"s": "TUSHLIK UYQUSI."
+},
+"بات": {
+"o": "bāta",
+"i": "bayt",
+"s": "TUNADI."
+},
+"ازدحم": {
+"o": "izdahama",
+"i": "izdiham",
+"s": "TIQILINCH BO'LDI."
+},
+"ضاق": {
+"o": "dāqa",
+"i": "ziq",
+"s": "TOR BO'LDI."
+},
+"تعلق": {
+"o": "taʿallaqa",
+"i": "ta'liq",
+"s": "OSILDI."
+},
+"لحاء": {
+"o": "lihāʾ",
+"i": "lihof",
+"s": "PO'STLOQ."
+},
+"مبيت": {
+"o": "mabīt",
+"i": "bayt",
+"s": "YOTOQ."
+},
+"غاض": {
+"o": "ghāda",
+"i": "g'oz",
+"s": "KAMAYDI."
+},
+"وداع": {
+"o": "wadāʿ",
+"i": "vido",
+"s": "XAYRLASHUV."
+},
+"بان": {
+"o": "bāna",
+"i": "bayon",
+"s": "RAVSHAN BO'LDI."
+},
+"حيث كنتما": {
+"o": "haythu kuntumā",
+"i": "hays + kon",
+"s": "QAYERDA BO'LSANGIZ HAM."
+},
+"كيف السبيل": {
+"o": "kayfa s-sabīl",
+"i": "kayf + sabil",
+"s": "QANDAY YO'L BOR."
+},
+"طرفي": {
+"o": "tarafay",
+"i": "taraf",
+"s": "IKKI TOMONI."
+},
+"أن تنطقي": {
+"o": "an tantiqī",
+"i": "nutq",
+"s": "GAPIRMOQLIKDAN."
+},
+"فقأ": {
+"o": "faqaʾa",
+"i": "faqa",
+"s": "KO'ZINI O'YDI."
+},
+"حوت": {
+"o": "hūt",
+"i": "Hut (burj)",
+"s": "KIT."
+},
+"لأن يسع": {
+"o": "li-an yasaʿa",
+"i": "vus'at",
+"s": "SIG'DIRMOG'I."
+},
+"ذنب": {
+"o": "dhanab",
+"i": "zanb",
+"s": "DUM."
+},
+"زعنفة": {
+"o": "zaʿnafa",
+"i": "za'nafa",
+"s": "SUZG'ICH."
+},
+"لا يعد منها": {
+"o": "lā yuʿaddu minhā",
+"i": "adad",
+"s": "UNDAN HISOBLANMAYDI."
+},
+"فك": {
+"o": "fakk",
+"i": "fakk",
+"s": "JAG'."
+},
+"عظام دقيقة": {
+"o": "ʿizāmun daqīqa",
+"i": "azim + daqiq",
+"s": "NOZIK SUYAKCHALAR."
+},
+"مشتبكا بعضها ببعض": {
+"o": "mushtabikan baʿduhā bi-baʿd",
+"i": "shabaka + ba'z",
+"s": "BIR-BIRIGA KIRISHGAN."
+},
+"متدلية": {
+"o": "mutadalliya",
+"i": "dalv",
+"s": "OSILIB TURGAN."
+},
+"السابحة": {
+"o": "as-sābiha",
+"i": "sabah → suzish",
+"s": "SUZUVCHI."
+},
+"فغر": {
+"o": "faghara",
+"i": "fag'r",
+"s": "OG'IZNI OCHDI."
+},
+"شدق": {
+"o": "shidq",
+"i": "shidq",
+"s": "OG'IZ CHETI."
+},
+"مصفاة": {
+"o": "misfāt",
+"i": "safo",
+"s": "Safo qiladigan SUZG'ICH."
+},
+"ابتلع": {
+"o": "ibtalaʿa",
+"i": "bal'",
+"s": "YUTDI."
+},
+"مهل": {
+"o": "mahl",
+"i": "mahl",
+"s": "SHOSHMAY."
+},
+"جهز": {
+"o": "jahhaza",
+"i": "jihoz",
+"s": "JIHOZLADI."
+},
+"طعن": {
+"o": "taʿana",
+"i": "ta'na",
+"s": "SANCHDI."
+},
+"مطرد": {
+"o": "mitrad",
+"i": "tard",
+"s": "KICHIK NAYZA."
+},
+"حربة": {
+"o": "harba",
+"i": "harb",
+"s": "NAYZA."
+},
+"مشعبة": {
+"o": "mushaʿʿaba",
+"i": "shu'ba",
+"s": "SHOXLANGAN."
+},
+"غرز": {
+"o": "gharaza",
+"i": "g'araz",
+"s": "SANCHDI."
+},
+"أدمى": {
+"o": "admā",
+"i": "dam (qon)",
+"s": "QONATDI."
+},
+"عياء": {
+"o": "ʿayāʾ",
+"i": "ayo → aya",
+"s": "TOYISH."
+},
+"سيلان": {
+"o": "sayalān",
+"i": "sel",
+"s": "OQISH."
+},
+"عام": {
+"o": "ʿāma",
+"i": "om → umm",
+"s": "YUZAGA SUZIB CHIQDI."
+},
+"شحم": {
+"o": "shahm",
+"i": "shahm",
+"s": "HAYVON YOG'I."
+},
+"زيت": {
+"o": "zayt",
+"i": "zaytun",
+"s": "Zaytun YOG'I."
+},
+"قارب": {
+"o": "qārib",
+"i": "qorib → qayiq",
+"s": "QAYIQ."
+},
+"هبط": {
+"o": "habata",
+"i": "hubut",
+"s": "PASTLADI."
+},
+"قلب": {
+"o": "qalaba",
+"i": "qalb",
+"s": "AG'DARDI."
+},
+"علجوم": {
+"o": "ʿuljūm",
+"i": "ul + jum",
+"s": "QURBAQA (quruqlikdagi)."
+},
+"سرطان": {
+"o": "saratān",
+"i": "Saraton (burj)",
+"s": "QISQICHBAQA."
+},
+"عشش": {
+"o": "ʿashshasha",
+"i": "ush",
+"s": "UYA QURDI."
+},
+"أجمة": {
+"o": "ajama",
+"i": "ajam",
+"s": "QAMISHZOR."
+},
+"اقتات": {
+"o": "iqtāta",
+"i": "quvvat",
+"s": "OZUQALANDI."
+},
+"هرم": {
+"o": "harima",
+"i": "haram → harim",
+"s": "QARTAYDI."
+},
+"جوع": {
+"o": "jūʿ",
+"i": "ju'",
+"s": "OCHLIK."
+},
+"هزال": {
+"o": "huzāl",
+"i": "hazil",
+"s": "ORIQLIK."
+},
+"كئيب": {
+"o": "kaʾīb",
+"i": "kaaba → kabob",
+"s": "G'AMGIN."
+},
+"هنالك": {
+"o": "hunālika",
+"i": "huna + lik",
+"s": "U YER."
+},
+"هلاكي": {
+"o": "halākī",
+"i": "halok",
+"s": "HALOKATIM."
+},
+"نفاد مدتي": {
+"o": "nafādu muddatī",
+"i": "nafad + muddat",
+"s": "MUDDATIM TUGASHI."
+},
+"استشرن": {
+"o": "istasharna",
+"i": "mashvarat",
+"s": "MASLAHATLASHDILAR."
+},
+"كابر": {
+"o": "kābara",
+"i": "kibr",
+"s": "BAS KELDI."
+},
+"قصب": {
+"o": "qasab",
+"i": "qasab",
+"s": "QAMISH."
+},
+"انتقل": {
+"o": "intaqala",
+"i": "naql",
+"s": "KO'CHIB O'TDI."
+},
+"بمعونة": {
+"o": "bi-maʿūna",
+"i": "iona",
+"s": "YORDAM BILAN."
+},
+"تل": {
+"o": "tall",
+"i": "tal",
+"s": "TEPALIK."
+},
+"حبا وكرامة": {
+"o": "hubban wa-karāmatan",
+"i": "hubb + karomat",
+"s": "BAJONIDIL."
+},
+"احتمله": {
+"o": "ihtamalahu",
+"i": "hammol",
+"s": "UNI KO'TARDI."
+},
+"عظم": {
+"o": "ʿazm",
+"i": "azim",
+"s": "SUYAK."
+},
+"فأخذ يدبر": {
+"o": "fa-akhadha yudabbiru",
+"i": "tadbir",
+"s": "TADBIR QILA BOSHLADI."
+},
+"أهلك": {
+"o": "ahlaka",
+"i": "halok",
+"s": "HALOK QILDI."
+},
+"تمكن": {
+"o": "tamakkana",
+"i": "makon",
+"s": "EGALLADI."
+},
+"بكلبتين": {
+"o": "bi-kalbatayn",
+"i": "kalba",
+"s": "IKKI QISQICHI BILAN."
+},
+"فعاش بها ما عاش": {
+"o": "fa-ʿāsha bihā mā ʿāsha",
+"i": "aysh",
+"s": "TAQDIRDAGI UMRINI YASHADI."
+},
+"اصطحبا": {
+"o": "istahabā",
+"i": "sohib",
+"s": "YO'LDOSH BO'LDILAR."
+},
+"نتمنى": {
+"o": "natamannā",
+"i": "tamanno",
+"s": "ORZU QILAMIZ."
+},
+"ويحك!": {
+"o": "wayhaka",
+"i": "voy",
+"s": "HOLINGGA VOY!"
+},
+"تصايحا": {
+"o": "tasāyahā",
+"i": "soh-soh",
+"s": "O'ZARO BAQIRISHDI."
+},
+"تخاصما": {
+"o": "takhāsamā",
+"i": "xusumat",
+"s": "JANJALLASHDI."
+},
+"طوق": {
+"o": "tawq",
+"i": "tavq",
+"s": "YOQA."
+},
+"زق": {
+"o": "ziqq",
+"i": "ziq",
+"s": "MESH."
+},
+"صب": {
+"o": "sabba",
+"i": "sabb",
+"s": "TO'KDI."
+},
+"صب الله دمي": {
+"o": "sabba llāhu damī",
+"i": "sabb + dam",
+"s": "(Qasam iborasi) «Alloh qonimni oqizsin»."
+},
+"أوصى": {
+"o": "awsā",
+"i": "vasiyat",
+"s": "NASIHAT QILDI."
+},
+"عاد": {
+"o": "ʿāda",
+"i": "iyodat",
+"s": "KASALNI ZIYORAT QILDI."
+},
+"الوصية": {
+"o": "al-wasiyya",
+"i": "vasiyat",
+"s": "NASIHAT."
+},
+"سر": {
+"o": "sarra",
+"i": "surur",
+"s": "SHOD QILDI."
+},
+"أتحف": {
+"o": "athafa",
+"i": "tuhfa",
+"s": "TUHFA BERDI."
+},
+"على خلاف عادته": {
+"o": "ʿalā khilāfi ʿādatihi",
+"i": "xilof + odat",
+"s": "ODATIGA XILOF."
+},
+"قمنا لذلك الخبر وقعدنا": {
+"o": "qumnā li-dhālika l-khabari wa-qaʿadnā",
+"i": "qum + qoida",
+"s": "Turib-o'tirib — ALG'OV-DALG'OV BO'LDIK."
+},
+"مستعد": {
+"o": "mustaʿidd",
+"i": "iste'dod",
+"s": "TAYYOR."
+},
+"تخلف": {
+"o": "takhallafa",
+"i": "xalf",
+"s": "ORTDA QOLDI."
+},
+"ما تيسر": {
+"o": "mā tayassara",
+"i": "yusr",
+"s": "OSON BO'LMADI."
+},
+"أن أحل": {
+"o": "an ahulla",
+"i": "hal",
+"s": "YECHMOQ."
+},
+"تفرس": {
+"o": "tafarrasa",
+"i": "farosat",
+"s": "SEZIB QOLDI."
+},
+"لما نزل بي من الكآبة": {
+"o": "li-mā nazala bī mina l-kaʾāba",
+"i": "nozil + kaaba",
+"s": "YETGAN G'AMGINLIK."
+},
+"فطن": {
+"o": "fatina",
+"i": "fatonat",
+"s": "TUSHUNIB QOLDI."
+},
+"حساس": {
+"o": "hassās",
+"i": "hassos",
+"s": "O'zbekcha «hassos»."
+},
+"بعيد النظر": {
+"o": "baʿīdu n-nazar",
+"i": "ba'id + nazar",
+"s": "UZOQNI KO'RA OLADIGAN."
+},
+"سرد": {
+"o": "sarada",
+"i": "sard",
+"s": "HIKOYA QILDI."
+},
+"الملح": {
+"o": "al-mulah",
+"i": "malohat",
+"s": "QIZIQARLI GAPLAR."
+},
+"نجله": {
+"o": "nujilluhu",
+"i": "jalil",
+"s": "UNI ULUG'LAYMIZ."
+},
+"شفوق": {
+"o": "shafūq",
+"i": "shafqat",
+"s": "SHAFQATLI."
+},
+"قلما": {
+"o": "qallamā",
+"i": "qalil",
+"s": "KAMDAN-KAM."
+},
+"توا": {
+"o": "tawwan",
+"i": "tavv",
+"s": "DARHOL."
+},
+"عاينها": {
+"o": "ʿāyanahā",
+"i": "ayn",
+"s": "DAVOLADI (ko'rikdan o'tkazdi)."
+},
+"أتم": {
+"o": "atammu",
+"i": "tamom",
+"s": "MUKAMMALROQ."
+},
+"الصاعقة": {
+"o": "as-sāʿiqa",
+"i": "soiqa",
+"s": "MOMAQALDIROQ."
+},
+"لم نكن نعدل": {
+"o": "lam nakun naʿdilu",
+"i": "adl",
+"s": "TENGLASHTIRA OLMAYMIZ."
+},
+"الحيلة": {
+"o": "al-hīla",
+"i": "hiyla",
+"s": "HIYLA."
+},
+"كان ما كان": {
+"o": "kāna mā kāna",
+"i": "kon",
+"s": "BO'LAR ISH BO'LDI."
+},
+"المقدم ذكره": {
+"o": "al-muqaddamu dhikruhu",
+"i": "muqaddam + zikr",
+"s": "OLDIN ZIKR QILINGAN."
+},
+"تناوب": {
+"o": "tanāwaba",
+"i": "navbat",
+"s": "NAVBATMA-NAVBAT."
+},
+"اعتقد": {
+"o": "iʿtaqada",
+"i": "e'tiqod",
+"s": "E'TIQOD QILDI."
+},
+"حصلت": {
+"o": "hassaltu",
+"i": "tahsil",
+"s": "QO'LGA KIRITDIM."
+},
+"توسل": {
+"o": "tawassala",
+"i": "tavassul",
+"s": "O'TINDI."
+},
+"قرع": {
+"o": "qaraʿa",
+"i": "qur'a",
+"s": "TAQILLATDI."
+},
+"صاحبته": {
+"o": "sāhibatuhu",
+"i": "sohiba",
+"s": "UNING XOTINI."
+},
+"دهشة": {
+"o": "dahsha",
+"i": "dahshat",
+"s": "DAHSHAT."
+},
+"عاتق": {
+"o": "ʿātiq",
+"i": "otiq",
+"s": "ELKA."
+},
+"سررتني": {
+"o": "sarartanī",
+"i": "surur",
+"s": "MENI SHOD QILDING."
+},
+"جارية في مجراها": {
+"o": "jāriyatun fī majrāhā",
+"i": "jarayon",
+"s": "O'Z YO'NALISHIDA KETMOQDA."
+},
+"عند غيابي": {
+"o": "ʿinda ghiyābī",
+"i": "g'oyib",
+"s": "YO'QLIGIMDA."
+},
+"باغتني": {
+"o": "bāghatanī",
+"i": "bag'tatan",
+"s": "KUTILMAGANDA KELDI."
+},
+"فراق": {
+"o": "firāq",
+"i": "firoq",
+"s": "AJRALISH."
+},
+"بين ظهرانيكم": {
+"o": "bayna zahrānīkum",
+"i": "bayn + zahr",
+"s": "HUZURINGIZDA."
+},
+"أعظم مسل": {
+"o": "aʿzamu musallin",
+"i": "azim + tasalli",
+"s": "ENG ULKAN TASALLI."
+},
+"يذكرني": {
+"o": "yudhakkirunī",
+"i": "zikr",
+"s": "MENGA ESLATADI."
+},
+"صباح مساء": {
+"o": "sabāha masāʾa",
+"i": "sabah + masofa",
+"s": "ERTAYU-KECH."
+},
+"إتمامكم": {
+"o": "itmāmikum",
+"i": "tamom",
+"s": "TAMOMLAGANINGIZ."
+},
+"وأي حب": {
+"o": "wa-ayya hubb",
+"i": "hubb",
+"s": "QANDAY SEVGI!"
+},
+"منح": {
+"o": "manaha",
+"i": "minnat",
+"s": "BERDI."
+},
+"لم يتيسر لنا اللقاء": {
+"o": "lam yatayassar lana l-liqāʾ",
+"i": "yusr + liqo",
+"s": "UCHRASHISH NASIB ETMASA."
+},
+"أدبار الصلاة": {
+"o": "adbāra s-salāt",
+"i": "dubur + salot",
+"s": "NAMOZ KETIDAN."
+},
+"انحدر": {
+"o": "inhadara",
+"i": "hadr",
+"s": "OQIB TUSHDI."
+},
+"وجنة": {
+"o": "wajna",
+"i": "vajh",
+"s": "YUZ, bet."
+},
+"سهم": {
+"o": "sahm",
+"i": "sahm",
+"s": "KAMON O'QI."
+},
+"فلم يجاوز": {
+"o": "fa-lam yujāwiz",
+"i": "javoz",
+"s": "O'TMADI."
+},
+"خنزير بري": {
+"o": "khinzīrun barriy",
+"i": "xinzir + bar",
+"s": "YOVVOYI TO'NG'IZ."
+},
+"مقبلا عليه": {
+"o": "muqbilan ʿalayhi",
+"i": "iqbol",
+"s": "U TOMON KELAYOTGAN."
+},
+"نفذ": {
+"o": "nafadha",
+"i": "nufuz",
+"s": "AMALGA OSHIRDI."
+},
+"جرح": {
+"o": "jaraha",
+"i": "jarohat",
+"s": "JAROHATLADI."
+},
+"جرح بليغ": {
+"o": "jurhun balīgh",
+"i": "jarohat + balig'",
+"s": "O'TA QATTIQ JAROHAT."
+},
+"غيظ": {
+"o": "ghayz",
+"i": "g'ayz",
+"s": "ACHCHIQLANISH."
+},
+"حنق": {
+"o": "hanaq",
+"i": "hanaq",
+"s": "QAHR."
+},
+"ناب": {
+"o": "nāb",
+"i": "nob",
+"s": "OZIQ TISH."
+},
+"أطار": {
+"o": "atāra",
+"i": "tayyora",
+"s": "UCHIRIB YUBORDI."
+},
+"فطار فرحا": {
+"o": "fa-tāra farahan",
+"i": "tayyora + farah",
+"s": "SHODLIKDAN UCHAYOZDI."
+},
+"الوتر": {
+"o": "al-watar",
+"i": "vatar",
+"s": "KAMON IPI."
+},
+"أدخر": {
+"o": "addakhiru",
+"i": "zaxira",
+"s": "JAMG'ARIB QO'YAMAN."
+},
+"سية": {
+"o": "siya",
+"i": "siya",
+"s": "KAMON UCHI."
+},
+"حلق": {
+"o": "halq",
+"i": "halqum",
+"s": "BO'G'IZ."
+},
+"الشيخوخة": {
+"o": "ash-shaykhūkha",
+"i": "shayx",
+"s": "QARILIK."
+},
+"دنا": {
+"o": "danā",
+"i": "dunyo",
+"s": "YAQINLASHDI."
+},
+"قسم": {
+"o": "qassama",
+"i": "taqsim",
+"s": "TAQSIMLADI."
+},
+"جوهرة ثمينة": {
+"o": "jawharatun thamīna",
+"i": "gavhar + saman",
+"s": "QIMMATBAHO GAVHAR."
+},
+"مكافأة": {
+"o": "mukāfaʾa",
+"i": "mukofot",
+"s": "O'zbekcha «mukofot»."
+},
+"جليل": {
+"o": "jalīl",
+"i": "jalil",
+"s": "ULUG'."
+},
+"خلال": {
+"o": "khilāl",
+"i": "xilol",
+"s": "MOBAYNI."
+},
+"أستحق": {
+"o": "astahiqqu",
+"i": "haq",
+"s": "HAQLIMAN."
+},
+"أودع": {
+"o": "awdaʿa",
+"i": "vido",
+"s": "OMONATGA QO'YDI."
+},
+"وثيقة": {
+"o": "wathīqa",
+"i": "vasiqa",
+"s": "HUJJAT."
+},
+"سلمته": {
+"o": "sallamtuhu",
+"i": "taslim",
+"s": "UNI TOPSHIRDIM."
+},
+"يوجبه الله عليك": {
+"o": "yūjibuhu llāhu ʿalayka",
+"i": "vojib",
+"s": "Alloh senga uni VOJIB qilgan."
+},
+"خاطرت": {
+"o": "khātartu",
+"i": "xatar",
+"s": "XATARGA QO'YDIM."
+},
+"شفقة": {
+"o": "shafqa",
+"i": "shafqat",
+"s": "RAHM-SHAFQAT."
+},
+"غريزية": {
+"o": "gharīziyya",
+"i": "g'ariza",
+"s": "INSTINKT."
+},
+"أعدائي الألداء": {
+"o": "aʿdāʾiya l-aliddāʾ",
+"i": "adovat",
+"s": "ASHADDIY DUSHMANLARIM."
+},
+"تحرك": {
+"o": "taharraka",
+"i": "harakat",
+"s": "HARAKATLANDI."
+},
+"أدنى حركة": {
+"o": "adnā haraka",
+"i": "dun + harakat",
+"s": "BIROZ HARAKAT."
+},
+"بكيفية": {
+"o": "bi-kayfiyya",
+"i": "kayfiyat",
+"s": "O'SHA HOLATDA."
+},
+"فضمه إلى صدره": {
+"o": "fa-dammahu ilā sadrihi",
+"i": "zam + sadr",
+"s": "KO'KSIGA BOSDI."
+},
+"عفوت": {
+"o": "ʿafawta",
+"i": "afv",
+"s": "KECHIRDING."
+},
+"بخار": {
+"o": "bukhār",
+"i": "bug' → Buxoro",
+"s": "BUG'."
+},
+"غيم": {
+"o": "ghaym",
+"i": "g'aym",
+"s": "BULUT."
+},
+"القبة الزرقاء": {
+"o": "al-qubbatu z-zarqāʾ",
+"i": "qubba + zangor",
+"s": "OSMON GUMBAZI."
+},
+"منضم": {
+"o": "mundamm",
+"i": "zam",
+"s": "BIRLASHGAN."
+},
+"الهواء الكروي": {
+"o": "al-hawāʾu l-kurawiy",
+"i": "havo + kura",
+"s": "SHARSIMON HAVO."
+},
+"صادم": {
+"o": "sādama",
+"i": "zadama → zarb",
+"s": "TO'QNASHDI."
+},
+"صادف": {
+"o": "sādafa",
+"i": "tasodif",
+"s": "URILDI, duch keldi."
+},
+"السابح": {
+"o": "as-sābih",
+"i": "sabah",
+"s": "SUZUVCHI."
+},
+"مجرى": {
+"o": "majran",
+"i": "jarayon",
+"s": "YO'NALISH."
+},
+"ارتوى": {
+"o": "irtawā",
+"i": "rivoyat → ravo",
+"s": "SUVGA QONDI."
+},
+"النمير": {
+"o": "an-namīr",
+"i": "namir",
+"s": "BULOQ."
+},
+"حدق": {
+"o": "haddaqa",
+"i": "hadaqa",
+"s": "TIKILIB QARADI."
+},
+"مقلة": {
+"o": "muqla",
+"i": "muqla",
+"s": "KO'Z SOQQASI."
+},
+"نجلاء": {
+"o": "najlāʾ",
+"i": "najl",
+"s": "KENG, ko'rkam."
+},
+"خبط": {
+"o": "khabata",
+"i": "xabt",
+"s": "TAVAKKAL YURDI."
+},
+"العطف": {
+"o": "al-ʿatf",
+"i": "atfu",
+"s": "MEHR."
+},
+"مأخذا": {
+"o": "maʾkhadhan",
+"i": "axz",
+"s": "USHLADI."
+},
+"ابتدر": {
+"o": "ibtadara",
+"i": "bodir",
+"s": "SHOSHILDI."
+},
+"أنقذ": {
+"o": "anqadha",
+"i": "naqd → qutqar",
+"s": "QUTQARDI."
+},
+"مثوى": {
+"o": "mathwan",
+"i": "masvo",
+"s": "O'RIN."
+},
+"العطب": {
+"o": "al-ʿatab",
+"i": "atab",
+"s": "MASHAQQAT."
+},
+"تقاذف": {
+"o": "taqādhafa",
+"i": "qazf",
+"s": "OTDI."
+},
+"بيداء": {
+"o": "baydāʾ",
+"i": "bayda",
+"s": "SAHRO."
+},
+"وهدة": {
+"o": "wahda",
+"i": "vahdat → vahm",
+"s": "JARLIK."
+},
+"الورقاء": {
+"o": "al-warqāʾ",
+"i": "varaq",
+"s": "KAPTAR."
+},
+"موارد الفناء": {
+"o": "mawāridu l-fanāʾ",
+"i": "mavrid + fano",
+"s": "HALOKAT O'RNI."
+},
+"قرص": {
+"o": "qars",
+"i": "qars",
+"s": "CHIMCHILASH."
+},
+"قنص": {
+"o": "qanas",
+"i": "qanas",
+"s": "O'LJA."
+},
+"أوجز": {
+"o": "awjaza",
+"i": "vajiz",
+"s": "QISQA AYTDI."
+},
+"نجازى": {
+"o": "nujāzā",
+"i": "jazo",
+"s": "MUKOFOTLANAMIZ."
+},
+"يضرب بها المثل": {
+"o": "yudrabu biha l-mathal",
+"i": "zarb + masal",
+"s": "ZARBULMASAL QILINADI."
+},
+"كتف": {
+"o": "katif",
+"i": "kift",
+"s": "O'zbekcha «kift» — ELKA."
+},
+"لبدة": {
+"o": "libda",
+"i": "libos",
+"s": "Sherning YOLI."
+},
+"طول": {
+"o": "tūl",
+"i": "tavil",
+"s": "UZUNLIK."
+},
+"علو": {
+"o": "ʿuluww",
+"i": "oliy",
+"s": "BALANDLIK."
+},
+"إقليم": {
+"o": "iqlīm",
+"i": "iqlim",
+"s": "O'zbekcha «iqlim»."
+},
+"آسيا": {
+"o": "āsiyā",
+"i": "Osiyo",
+"s": "OSIYO."
+},
+"يعمر": {
+"o": "yuʿammaru",
+"i": "umr",
+"s": "UMR BERILADI."
+},
+"متلصص": {
+"o": "mutalassis",
+"i": "lis",
+"s": "YASHIRINCHA."
+},
+"خيمة": {
+"o": "khayma",
+"i": "xayma",
+"s": "O'zbekcha «xayma» — CHODIR."
+},
+"تشجع": {
+"o": "tashajjaʿa",
+"i": "shijoat",
+"s": "DADILLANDI."
+},
+"زمجرة": {
+"o": "zamjara",
+"i": "zamzam → zam",
+"s": "BO'KIRISH."
+},
+"اهتز": {
+"o": "ihtazza",
+"i": "hazz",
+"s": "LARZAGA KELDI."
+},
+"أكمة": {
+"o": "akama",
+"i": "akam",
+"s": "TEPALIK."
+},
+"أرعب": {
+"o": "arʿaba",
+"i": "ro'b",
+"s": "QO'RQITDI."
+},
+"تسور": {
+"o": "tasawwara",
+"i": "savr → sur",
+"s": "TIRMASHIB CHIQDI."
+},
+"خطف": {
+"o": "khatafa",
+"i": "xatar",
+"s": "O'G'IRLAB QOCHDI."
+},
+"عرين": {
+"o": "ʿarīn",
+"i": "arin",
+"s": "SHER UYASI."
+},
+"ظبي": {
+"o": "zaby",
+"i": "zabi",
+"s": "OHU."
+},
+"فلاة": {
+"o": "falāt",
+"i": "falak",
+"s": "BIYOBON."
 }
 }
 }

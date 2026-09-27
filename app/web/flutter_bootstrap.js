@@ -26,7 +26,11 @@ holat('Ilova yuklanmoqda…');
 _flutter.loader.load({
   // Diqqat: canvasKitBaseUrl shu yerda (loader config) berilishi shart —
   // initializeEngine'ga berilsa loader baribir gstatic'dan oladi.
-  config: { canvasKitBaseUrl: 'canvaskit/' },
+  // canvasKitVariant 'full': Chromium'da standart «chromium» varianti matnni
+  // bo'lishda brauzerning Intl.Segmenter'iga tayanadi — eski Android WebView
+  // (APK qobig'i) da u yo'q va kartalar bo'm-bo'sh chiziladi (2026-09-27).
+  // To'liq variant o'z ICU'si bilan keladi va hamma joyda ishlaydi.
+  config: { canvasKitBaseUrl: 'canvaskit/', canvasKitVariant: 'full' },
   onEntrypointLoaded: async function (engineInitializer) {
     holat('Chizish dvigateli tayyorlanmoqda…');
     var appRunner = await engineInitializer.initializeEngine();

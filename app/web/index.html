@@ -107,6 +107,32 @@
       }, 40000);
     })();
   </script>
+  <script>
+    // XATO OYNASI: telefondagi (APK) WebView'da konsol ko'rinmaydi, shuning
+    // uchun xatolar ekranning pastida chiqariladi — suratga olib yuborish uchun.
+    (function () {
+      var qator = [];
+      function chiqar(m) {
+        m = String(m || '').slice(0, 600);
+        if (!m) return;
+        qator.push(m);
+        var d = document.getElementById('xato-oyna');
+        if (!d) {
+          d = document.createElement('div');
+          d.id = 'xato-oyna';
+          d.style.cssText = 'position:fixed;left:0;right:0;bottom:0;max-height:45%;overflow:auto;z-index:99999;background:#300;color:#fff;font:11px/1.35 monospace;padding:8px 10px;white-space:pre-wrap;word-break:break-word';
+          d.onclick = function () { d.style.display = d.style.display === 'none' ? 'block' : 'none'; };
+          document.body.appendChild(d);
+        }
+        d.textContent = 'Xato (suratga olib yuboring):\n' + navigator.userAgent + '\n\n' + qator.slice(-8).join('\n---\n');
+      }
+      window.addEventListener('error', function (e) { chiqar('JS: ' + (e.message || e) + ' @' + (e.filename || '') + ':' + (e.lineno || '')); });
+      window.addEventListener('unhandledrejection', function (e) { chiqar('Promise: ' + (e.reason && (e.reason.stack || e.reason.message) || e.reason)); });
+      var ol = console.log, oe = console.error;
+      console.log = function () { var m = Array.prototype.join.call(arguments, ' '); if (m.indexOf('XATO:') === 0) chiqar(m); return ol.apply(console, arguments); };
+      console.error = function () { chiqar('console.error: ' + Array.prototype.join.call(arguments, ' ')); return oe.apply(console, arguments); };
+    })();
+  </script>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>

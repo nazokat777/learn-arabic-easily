@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:ui' show PlatformDispatcher;
 
 import 'package:flutter/material.dart';
 import 'content.dart';
@@ -24,6 +25,18 @@ late final Progress progress;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // Xatolarni konsolga «XATO:» bilan yozamiz — index.html ularni ekranda
+  // ko'rsatadi (telefondagi WebView'da konsolni ko'rib bo'lmaydi).
+  FlutterError.onError = (d) {
+    // ignore: avoid_print
+    print('XATO: ${d.exceptionAsString()}\n'
+        '${(d.stack?.toString() ?? '').split('\n').take(5).join('\n')}');
+  };
+  PlatformDispatcher.instance.onError = (e, st) {
+    // ignore: avoid_print
+    print('XATO: $e\n${st.toString().split('\n').take(5).join('\n')}');
+    return true;
+  };
   repo = ContentRepository();
   progress = Progress();
   await repo.load();

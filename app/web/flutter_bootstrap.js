@@ -30,7 +30,15 @@ _flutter.loader.load({
   // bo'lishda brauzerning Intl.Segmenter'iga tayanadi — eski Android WebView
   // (APK qobig'i) da u yo'q va kartalar bo'm-bo'sh chiziladi (2026-09-27).
   // To'liq variant o'z ICU'si bilan keladi va hamma joyda ishlaydi.
-  config: { canvasKitBaseUrl: 'canvaskit/', canvasKitVariant: 'full' },
+  // Android WebView (APK qobig'i; UA'da «; wv)» belgisi) da GPU orqali
+  // glif atlasi ishlamay, matn va ikonkalar umuman chizilmadi (bo'sh karta,
+  // 2026-09-28: Android 16, Chrome 153 WebView). CPU rejimida Skia hamma
+  // narsani o'zi chizadi — sekinroq, lekin ishonchli. Oddiy Chrome'ga tegmaydi.
+  config: {
+    canvasKitBaseUrl: 'canvaskit/',
+    canvasKitVariant: 'full',
+    canvasKitForceCpuOnly: /; wv\)/.test(navigator.userAgent),
+  },
   onEntrypointLoaded: async function (engineInitializer) {
     holat('Chizish dvigateli tayyorlanmoqda…');
     var appRunner = await engineInitializer.initializeEngine();

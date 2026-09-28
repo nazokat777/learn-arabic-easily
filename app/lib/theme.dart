@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 /// Ilova ranglari — islomiy/nafis: zumrad yashil + oltin.
 ///
@@ -108,7 +107,7 @@ class AppTheme {
       scaffoldBackgroundColor: AppColors.cream,
     );
     return base.copyWith(
-      textTheme: GoogleFonts.nunitoTextTheme(base.textTheme),
+      textTheme: base.textTheme.apply(fontFamily: 'Nunito'),
       appBarTheme: AppBarTheme(
         backgroundColor: Colors.transparent,
         elevation: 0,

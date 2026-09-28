@@ -135,6 +135,15 @@
         requestAnimationFrame(tick);
         window.addEventListener('flutter-first-frame', function () { ff = Date.now() - t0; });
         function gl(n) { try { var c = document.createElement('canvas'); return !!c.getContext(n); } catch (e) { return false; } }
+        // Shrift manbalari ochiladimi (gstatic — Google shriftlari; asset — sayt).
+        function sina(nom, u) {
+          var t = Date.now();
+          fetch(u, { mode: 'no-cors', cache: 'no-store' })
+            .then(function (r) { chiqar('DIAG: ' + nom + ' OK ' + (Date.now() - t) + 'ms status=' + r.status + ' type=' + r.type); })
+            .catch(function (e) { chiqar('DIAG: ' + nom + ' XATO ' + (Date.now() - t) + 'ms ' + e); });
+        }
+        sina('gstatic-font', 'https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDLshRTM.ttf');
+        sina('asset-font', 'assets/assets/fonts/Amiri-Regular.ttf');
         setTimeout(function () {
           chiqar('DIAG: rAF/5s=' + raf + ' firstFrame=' + ff + 'ms vis=' + document.visibilityState +
             ' focus=' + document.hasFocus() + ' webgl1=' + gl('webgl') + ' webgl2=' + gl('webgl2') +

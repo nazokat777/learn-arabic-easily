@@ -145,7 +145,7 @@
         sina('gstatic-font', 'https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDLshRTM.ttf');
         sina('asset-font', 'assets/assets/fonts/Amiri-Regular.ttf');
         setTimeout(function () {
-          chiqar('DIAG: rAF/5s=' + raf + ' firstFrame=' + ff + 'ms vis=' + document.visibilityState +
+          chiqar('DIAG: boot=' + window.BOOT_VER + ' rAF/5s=' + raf + ' firstFrame=' + ff + 'ms vis=' + document.visibilityState +
             ' focus=' + document.hasFocus() + ' webgl1=' + gl('webgl') + ' webgl2=' + gl('webgl2') +
             ' segmenter=' + (typeof Intl !== 'undefined' && !!Intl.Segmenter) +
             ' wasm=' + (typeof WebAssembly !== 'undefined') + ' ' + window.innerWidth + 'x' + window.innerHeight +

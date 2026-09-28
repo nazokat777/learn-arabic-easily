@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:ui' show PlatformDispatcher;
+import 'package:flutter/rendering.dart' show TextPainter;
 
 import 'package:flutter/material.dart';
 import 'content.dart';
@@ -68,6 +69,22 @@ Future<void> main() async {
     // ignore: avoid_print
     print('DIAG: dartKadr/5s=$kadr lifecycle=${WidgetsBinding.instance.lifecycleState} '
         'framesEnabled=${WidgetsBinding.instance.framesEnabled}');
+    // Matn o'lchovi: shrift glifi bormi (kenglik 0 bo'lsa — shrift yuklanmagan).
+    String olch(String? oila) {
+      final tp = TextPainter(
+        text: TextSpan(
+          text: 'Kirish',
+          style: TextStyle(fontFamily: oila, fontSize: 20),
+        ),
+        textDirection: TextDirection.ltr,
+      )..layout();
+      return '${tp.width.toStringAsFixed(1)}x${tp.height.toStringAsFixed(1)}';
+    }
+    final v = PlatformDispatcher.instance.views.first;
+    // ignore: avoid_print
+    print('DIAG: matn nunito=${olch('Nunito')} amiri=${olch('Amiri')} '
+        'default=${olch(null)} scale=${PlatformDispatcher.instance.textScaleFactor} '
+        'view=${v.physicalSize.width.toInt()}x${v.physicalSize.height.toInt()} dpr=${v.devicePixelRatio}');
     WidgetsBinding.instance.scheduleFrame();
   });
 }

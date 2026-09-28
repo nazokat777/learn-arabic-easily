@@ -23,6 +23,7 @@ function holat(m) { if (window.pardaHolat) window.pardaHolat(m); }
 // CanvasKit saytning o'zidan olinadi (gstatic CDN'ga bog'liq emas — ba'zi
 // tarmoqlarda u sekin yoki yopiq). Har bosqichda parda matni yangilanadi.
 holat('Ilova yuklanmoqda…');
+window.BOOT_VER = 'b3-cpu';
 _flutter.loader.load({
   // Diqqat: canvasKitBaseUrl shu yerda (loader config) berilishi shart —
   // initializeEngine'ga berilsa loader baribir gstatic'dan oladi.

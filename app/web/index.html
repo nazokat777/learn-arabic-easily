@@ -145,6 +145,26 @@
         sina('gstatic-font', 'https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDLshRTM.ttf');
         sina('asset-font', 'assets/assets/fonts/Amiri-Regular.ttf');
         setTimeout(function () {
+          try {
+            var c = document.createElement('canvas'); var g = c.getContext('webgl2') || c.getContext('webgl');
+            var dbg = g && g.getExtension('WEBGL_debug_renderer_info');
+            chiqar('DIAG: GL maxTex=' + (g && g.getParameter(g.MAX_TEXTURE_SIZE)) + ' maxRB=' + (g && g.getParameter(g.MAX_RENDERBUFFER_SIZE)) +
+              ' maxVP=' + (g && g.getParameter(g.MAX_VIEWPORT_DIMS)) + ' renderer=' + (dbg ? g.getParameter(dbg.UNMASKED_RENDERER_WEBGL) : '?'));
+            var ks = [];
+            var hamma = [];
+            (function yig(root) {
+              root.querySelectorAll('*').forEach(function (el) {
+                if (el.tagName === 'CANVAS') hamma.push(el);
+                if (el.shadowRoot) yig(el.shadowRoot);
+              });
+            })(document);
+            hamma.forEach(function (k) {
+              var t = 'no'; try { if (k.getContext('2d')) t = '2d'; } catch (e) {}
+              if (t === 'no') { try { if (k.getContext('webgl2') || k.getContext('webgl')) t = 'gl'; } catch (e) {} }
+              ks.push(k.width + 'x' + k.height + ':' + t);
+            });
+            chiqar('DIAG: canvaslar=' + ks.join(' '));
+          } catch (e) { chiqar('DIAG: GL xato ' + e); }
           chiqar('DIAG: boot=' + window.BOOT_VER + ' rAF/5s=' + raf + ' firstFrame=' + ff + 'ms vis=' + document.visibilityState +
             ' focus=' + document.hasFocus() + ' webgl1=' + gl('webgl') + ' webgl2=' + gl('webgl2') +
             ' segmenter=' + (typeof Intl !== 'undefined' && !!Intl.Segmenter) +

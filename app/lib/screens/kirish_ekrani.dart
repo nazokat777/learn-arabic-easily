@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart' hide Text;
+import 'package:flutter/rendering.dart';
 
 import '../services/kirish.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -54,6 +57,39 @@ class _KirishEkraniState extends State<KirishEkrani> {
   bool _xato = false;
   int _silkin = 0;
 
+  // TASHXIS (vaqtinchalik): karta ichidagi render daraxti — nima qanday
+  // o'lchamda va qayerda chizilmoqchi. Planshetdagi bo'sh karta uchun.
+  final _kartaKaliti = GlobalKey();
+
+  @override
+  void initState() {
+    super.initState();
+    Timer(const Duration(seconds: 6), () {
+      final ro = _kartaKaliti.currentContext?.findRenderObject();
+      if (ro == null) return;
+      final qatorlar = <String>[];
+      void yur(RenderObject r, int chuqur) {
+        if (qatorlar.length > 60 || chuqur > 14) return;
+        var nom = r.runtimeType.toString();
+        if (r is RenderParagraph) {
+          nom += '«${r.text.toPlainText().split(' ').take(2).join(' ')}»';
+        }
+        final o = r.parentData is BoxParentData
+            ? (r.parentData as BoxParentData).offset
+            : null;
+        qatorlar.add(
+          '${'.' * chuqur}$nom '
+          '${r.paintBounds.width.toInt()}x${r.paintBounds.height.toInt()}'
+          '${o == null ? '' : '@${o.dx.toInt()},${o.dy.toInt()}'}',
+        );
+        r.visitChildren((c) => yur(c, chuqur + 1));
+      }
+      yur(ro, 0);
+      // ignore: avoid_print
+      print('DIAG: daraxt\n${qatorlar.join('\n')}');
+    });
+  }
+
   @override
   void dispose() {
     _c.dispose();
@@ -92,6 +128,7 @@ class _KirishEkraniState extends State<KirishEkrani> {
                   constraints: const BoxConstraints(maxWidth: 420),
                   child: Reveal(
                     child: Container(
+                      key: _kartaKaliti,
                       padding: const EdgeInsets.fromLTRB(24, 28, 24, 24),
                       decoration: BoxDecoration(
                         color: AppColors.karta,

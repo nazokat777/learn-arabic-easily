@@ -120,11 +120,11 @@
         if (!d) {
           d = document.createElement('div');
           d.id = 'xato-oyna';
-          d.style.cssText = 'position:fixed;left:0;right:0;bottom:0;max-height:45%;overflow:auto;z-index:99999;background:#300;color:#fff;font:11px/1.35 monospace;padding:8px 10px;white-space:pre-wrap;word-break:break-word';
+          d.style.cssText = 'position:fixed;left:0;right:0;bottom:0;max-height:70%;overflow:auto;z-index:99999;background:#300;color:#fff;font:9px/1.25 monospace;padding:8px 10px;white-space:pre-wrap;word-break:break-word';
           d.onclick = function () { d.style.display = d.style.display === 'none' ? 'block' : 'none'; };
           document.body.appendChild(d);
         }
-        d.textContent = 'Xato (suratga olib yuboring):\n' + navigator.userAgent + '\n\n' + qator.slice(-8).join('\n---\n');
+        d.textContent = 'Xato (suratga olib yuboring):\n' + navigator.userAgent + '\n\n' + qator.slice(-14).join('\n---\n');
       }
       window.addEventListener('error', function (e) { chiqar('JS: ' + (e.message || e) + ' @' + (e.filename || '') + ':' + (e.lineno || '')); });
       window.addEventListener('unhandledrejection', function (e) { chiqar('Promise: ' + (e.reason && (e.reason.stack || e.reason.message) || e.reason)); });

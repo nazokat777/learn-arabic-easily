@@ -68,25 +68,32 @@ class _KirishEkraniState extends State<KirishEkrani> {
       final ro = _kartaKaliti.currentContext?.findRenderObject();
       if (ro == null) return;
       final qatorlar = <String>[];
-      void yur(RenderObject r, int chuqur) {
-        if (qatorlar.length > 60 || chuqur > 14) return;
-        var nom = r.runtimeType.toString();
+      void yur(RenderObject r) {
         if (r is RenderParagraph) {
-          nom += '«${r.text.toPlainText().split(' ').take(2).join(' ')}»';
+          final st = r.text.style;
+          qatorlar.add(
+            '«${r.text.toPlainText().split(' ').first}» '
+            '${r.size.width.toInt()}x${r.size.height.toInt()} '
+            'fs=${st?.fontSize} sc=${r.textScaler.scale(10)} '
+            'h=${st?.height} ff=${st?.fontFamily} '
+            'c=${st?.color?.toARGB32().toRadixString(16)}',
+          );
+        } else if (r is RenderEditable) {
+          qatorlar.add(
+            'EDIT ${r.size.width.toInt()}x${r.size.height.toInt()} '
+            'fs=${r.text?.style?.fontSize} sc=${r.textScaler.scale(10)} '
+            'pl=${r.preferredLineHeight.toStringAsFixed(1)}',
+          );
         }
-        final o = r.parentData is BoxParentData
-            ? (r.parentData as BoxParentData).offset
-            : null;
-        qatorlar.add(
-          '${'.' * chuqur}$nom '
-          '${r.paintBounds.width.toInt()}x${r.paintBounds.height.toInt()}'
-          '${o == null ? '' : '@${o.dx.toInt()},${o.dy.toInt()}'}',
-        );
-        r.visitChildren((c) => yur(c, chuqur + 1));
+        r.visitChildren(yur);
       }
-      yur(ro, 0);
+      yur(ro);
+      final mq = MediaQuery.of(context);
       // ignore: avoid_print
-      print('DIAG: daraxt\n${qatorlar.join('\n')}');
+      print('DIAG: karta=${ro.paintBounds.width.toInt()}x${ro.paintBounds.height.toInt()} '
+          'mqScale10=${mq.textScaler.scale(10)} mqSize=${mq.size.width.toInt()}x${mq.size.height.toInt()} '
+          'insets=${mq.viewInsets.bottom.toInt()} pad=${mq.padding.top.toInt()}\n'
+          '${qatorlar.join('\n')}');
     });
   }
 

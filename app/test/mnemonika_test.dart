@@ -89,4 +89,15 @@ void main() {
     expect(x.rejalar.single.tugaganKunlar, 1);
     expect(x.ilgaklar['k1'], 'sahna');
   });
+
+  test("ilgak: harakati bilan farq qiladigan so'zlar aralashmaydi", () async {
+    await RejaXotira.instance.load();
+    final kitob = RejaXotira.instance.tayyorIlgak('كِتَابٌ');
+    final kuttab = RejaXotira.instance.tayyorIlgak('كُتَّابٌ');
+    expect(kitob, isNotNull);
+    expect(kuttab, isNotNull);
+    expect(kitob!.oqilishi, 'kitāb');
+    expect(kuttab!.oqilishi, 'kuttāb');
+    expect(kitob.sahna == kuttab.sahna, false);
+  });
 }

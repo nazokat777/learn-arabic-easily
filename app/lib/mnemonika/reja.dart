@@ -182,15 +182,24 @@ class RejaXotira extends ChangeNotifier {
   /// So'z kaliti → o'quvchi o'zi to'qigan ilgak/sahna.
   final Map<String, String> ilgaklar = {};
 
-  /// Tayyor ilgaklar: harakatsiz arabcha → ilgak.
+  /// Tayyor ilgaklar: TO'LIQ (harakatli) arabcha → ilgak. Harakatsiz nusxa
+  /// faqat bir ma'noli bo'lsa saqlanadi (كِتَابٌ va كُتَّابٌ aralashmasin).
   final Map<String, TayyorIlgak> _tayyor = {};
+  final Map<String, TayyorIlgak> _tayyorHarakatsiz = {};
+
+  static String _tozala(String ar) => ar
+      .split(RegExp('[،,]'))
+      .first
+      .split('=')
+      .first
+      .replaceAll('؟', '')
+      .replaceAll('?', '')
+      .replaceAll('‍', '')
+      .trim();
 
   TayyorIlgak? tayyorIlgak(String ar) {
-    final k = stripDiacritics(splitForms(ar).first.split('=').first)
-        .replaceAll('؟', '')
-        .replaceAll('?', '')
-        .trim();
-    return _tayyor[k] ?? _tayyor['$k؟'];
+    final k = _tozala(ar);
+    return _tayyor[k] ?? _tayyorHarakatsiz[stripDiacritics(k)];
   }
 
   Future<void> _tayyorYukla() async {
@@ -198,14 +207,24 @@ class RejaXotira extends ChangeNotifier {
       final j =
           jsonDecode(await ContentUpdater.instance.read('ilgak.json')) as Map;
       _tayyor.clear();
+      _tayyorHarakatsiz.clear();
+      final sanoq = <String, int>{};
+      final oxirgi = <String, TayyorIlgak>{};
       for (final e in (j['sozlar'] as Map).entries) {
         final v = e.value as Map;
-        final k = (e.key as String).replaceAll('؟', '').trim();
-        _tayyor[k] = TayyorIlgak(
+        final t = TayyorIlgak(
           v['o'] as String,
           v['i'] as String,
           v['s'] as String,
         );
+        final k = _tozala(e.key as String);
+        _tayyor[k] = t;
+        final h = stripDiacritics(k);
+        sanoq[h] = (sanoq[h] ?? 0) + 1;
+        oxirgi[h] = t;
+      }
+      for (final e in sanoq.entries) {
+        if (e.value == 1) _tayyorHarakatsiz[e.key] = oxirgi[e.key]!;
       }
     } catch (_) {}
   }

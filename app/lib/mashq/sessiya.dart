@@ -192,7 +192,15 @@ class MashqSessiya {
   }
 
   /// Javobni qayd qiladi va kerak bo'lsa keyingi bosqichga o'tadi.
+  /// Butun mashq davomida kamida bir marta adashilgan elementlar (yakundagi
+  /// «yaxshi yodlanmadi» ro'yxati uchun; tur ichidagi xatolardan farqli).
+  final Set<String> butunXatolar = {};
+
   void javobBer(bool togri, {required bool birinchiUrinish}) {
+    if (!togri) {
+      final j = navbat.joriy;
+      if (j != null) butunXatolar.add(j.kalit);
+    }
     jamiSoralgan++;
     raunddaSoralgan++;
     if (togri && birinchiUrinish) {

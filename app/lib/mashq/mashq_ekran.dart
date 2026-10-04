@@ -17,6 +17,7 @@ import '../widgets/ornament.dart';
 import 'element.dart';
 import 'mukofot.dart';
 import 'sessiya.dart';
+import 'sozlar_royxati.dart';
 import 'tovush.dart';
 import 'ultra.dart';
 
@@ -64,7 +65,7 @@ class MashqEkran extends StatefulWidget {
   State<MashqEkran> createState() => _MashqEkranState();
 }
 
-enum _Korinish { savol, qiyinKarta, bekat, yakun }
+enum _Korinish { royxat, savol, qiyinKarta, bekat, yakun }
 
 class _MashqEkranState extends State<MashqEkran> {
   final _rnd = Random();
@@ -105,6 +106,9 @@ class _MashqEkranState extends State<MashqEkran> {
   bool _vaqtTugadi = false;
   bool _chaqmoqRekord = false;
 
+  // Yodlashdan oldin so'zlar ro'yxati ko'rsatiladimi (chaqmoq raundda yo'q).
+  bool _oldindan = false;
+
   // Harflab yozish uchun: aralashtirilgan harf tugmalari va terilgani.
   List<String> _harfTugmalari = const [];
   final List<int> _terilgan = [];
@@ -131,7 +135,14 @@ class _MashqEkranState extends State<MashqEkran> {
         }
       });
     }
-    _keyingi();
+    // Avval so'zlarning to'liq ro'yxati (tarjima, o'qilishi, ovoz), keyin
+    // yodlash. Chaqmoq raundda vaqt bosimi bor — ro'yxatsiz.
+    _oldindan = !widget.tezkor && widget.darsniki.isNotEmpty;
+    if (_oldindan) {
+      _korinish = _Korinish.royxat;
+    } else {
+      _keyingi();
+    }
   }
 
   @override
@@ -545,6 +556,14 @@ class _MashqEkranState extends State<MashqEkran> {
                         child: ConstrainedBox(
                           constraints: const BoxConstraints(maxWidth: 640),
                           child: switch (_korinish) {
+                            _Korinish.royxat => SozlarOldindanRoyxat(
+                              sozlar: widget.darsniki,
+                              onBoshla: () {
+                                _oldindan = false;
+                                Tts.instance.stop();
+                                _keyingi();
+                              },
+                            ),
                             _Korinish.yakun => _Yakun(
                               s: _s,
                               nom: widget.sarlavha,
@@ -1447,6 +1466,9 @@ class _Yakun extends StatelessWidget {
                   delay: const Duration(milliseconds: 340),
                   child: _ZaifRoyxat(zaiflar: zaiflar.take(6).toList()),
                 ),
+              // To'liq hisobot: qaysi so'zlar yaxshi yodlandi, qaysilari yo'q.
+              if (!tezkor)
+                SozlarNatijaRoyxati(sozlar: s.darsniki, xatolar: s.butunXatolar),
               // Shu sessiyada «qiyin» bo'lib qolganlar bo'lsa — ularni
               // darrov alohida mashq qilish imkoni. Aynan qiynalgan paytda
               // taklif qilinsa, o'quvchi uni kechiktirmaydi.

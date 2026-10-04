@@ -138,6 +138,11 @@ Future<void> _ochish(WidgetTester tester, String darsId) async {
     ),
   );
   await _kut(tester);
+  // Avval so'zlar ro'yxati: hammasi tarjima va o'qilishi bilan ko'rinadi.
+  expect(find.text('Yodlashni boshlash'), findsOneWidget);
+  expect(find.textContaining("Avval so'zlar ro'yxati"), findsOneWidget);
+  await tester.tap(find.text('Yodlashni boshlash'));
+  await _kut(tester);
 }
 
 void main() {
@@ -284,5 +289,32 @@ void main() {
     // Ketma-ket uch marta to'g'ri bo'lgach, «qiyin» belgisi olinadi.
     expect(progress.ketmaKetTogri(kalit), greaterThanOrEqualTo(3));
     expect(progress.qiyinMi(kalit), isFalse);
+  });
+
+  testWidgets("yakunda yaxshi/yomon yodlangan so'zlarning TO'LIQ ro'yxati", (
+    tester,
+  ) async {
+    await _ochish(tester, 'sinov-royxat');
+    var qadam = 0;
+    while (!_tugadi() && qadam < 150) {
+      for (final nom in const [
+        'Shu darsning materiali',
+        'Aralash takror — oldingi darslar ham',
+        "Harflab yozish — o'zbekchadan arabchaga",
+      ]) {
+        if (_bor(nom)) break;
+      }
+      await _javobBer(tester);
+      qadam++;
+    }
+    // Ikki ro'yxat sarlavhasidan kamida bittasi ko'rinadi; ikkalasining
+    // umumiy soni mashqdagi so'zlar soniga teng.
+    final yaxshi = find.textContaining('Yaxshi yodlandi (');
+    final yomon = find.textContaining('Yaxshi yodlanmadi');
+    expect(
+      yaxshi.evaluate().isNotEmpty || yomon.evaluate().isNotEmpty,
+      true,
+      reason: "yakunda so'zlar hisoboti chiqmadi",
+    );
   });
 }

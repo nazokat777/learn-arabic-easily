@@ -11,6 +11,7 @@ import '../../widgets/ornament.dart';
 import '../qiroat_lessons.dart'
     show QiroatLessonDetail, QiroatMashqTugmasi, DarsOyinlari;
 import '../../mashq/mukofot.dart' show BugunChizigi;
+import '../../mashq/sozlar_royxati.dart';
 import '../nishonlar_ekrani.dart';
 import 'master_drill.dart';
 import 'quiz_flow.dart';
@@ -29,7 +30,7 @@ class LessonFlow extends StatefulWidget {
   State<LessonFlow> createState() => _LessonFlowState();
 }
 
-enum _Step { intro, vocab, listen, read, tarjima, quiz, review, done }
+enum _Step { intro, royxat, vocab, listen, read, tarjima, quiz, review, done }
 
 class _LessonFlowState extends State<LessonFlow> {
   _Step _step = _Step.intro;
@@ -37,6 +38,19 @@ class _LessonFlowState extends State<LessonFlow> {
   List<QiroatVocab> _missed = const [];
   int _quizTotal =
       0; // oxirgi testdagi savollar soni (o'zlashtirishni hisoblash uchun)
+
+  // Dars boshidagi xato hisoblari: oxirida shu darsda adashilgan so'zlar
+  // (oldingi kunlardagi emas) aniqlanadi.
+  late final Map<String, int> _xatoBoshida = {
+    for (final e in darsSozlari(widget.lesson))
+      e.kalit: progress.xatoSoni(e.kalit),
+  };
+
+  Set<String> get _darsdaXatolar => {
+    for (final e in darsSozlari(widget.lesson))
+      if (progress.xatoSoni(e.kalit) > (_xatoBoshida[e.kalit] ?? 0)) e.kalit,
+    for (final v in _missed) '${widget.lesson.completionId}::${v.ar}',
+  };
 
   void _award(int xp) {
     progress.addXp(xp); // fon rejimida saqlanadi
@@ -109,7 +123,10 @@ class _LessonFlowState extends State<LessonFlow> {
       body: SafeArea(
         child: Column(
           children: [
-            if (_step != _Step.intro && _step != _Step.done) _stepStrip(),
+            if (_step != _Step.intro &&
+                _step != _Step.royxat &&
+                _step != _Step.done)
+              _stepStrip(),
             Expanded(child: _stageBody()),
           ],
         ),
@@ -233,7 +250,20 @@ class _LessonFlowState extends State<LessonFlow> {
       case _Step.intro:
         return _IntroView(
           lesson: l,
-          onStart: () => setState(() => _step = _Step.vocab),
+          onStart: () {
+            _xatoBoshida; // boshlang'ich hisoblarni shu zahoti oladi
+            setState(() => _step = _Step.royxat);
+          },
+        );
+      // Yodlashdan OLDIN: darsning hamma so'zi tarjima, o'qilishi va ovozi
+      // bilan to'liq ro'yxatda — o'quvchi avval ko'radi, eshitadi.
+      case _Step.royxat:
+        return SozlarOldindanRoyxat(
+          sozlar: darsSozlari(l),
+          onBoshla: () {
+            Tts.instance.stop();
+            setState(() => _step = _Step.vocab);
+          },
         );
       case _Step.vocab:
         return VocabStage(
@@ -280,7 +310,12 @@ class _LessonFlowState extends State<LessonFlow> {
       case _Step.review:
         return ReviewStage(lesson: l, missed: _missed, onDone: _goDone);
       case _Step.done:
-        return _DoneView(lesson: l, xp: _sessionXp, onRetakeQuiz: _retakeQuiz);
+        return _DoneView(
+          lesson: l,
+          xp: _sessionXp,
+          onRetakeQuiz: _retakeQuiz,
+          xatolar: _darsdaXatolar,
+        );
     }
   }
 }
@@ -448,10 +483,12 @@ class _DoneView extends StatelessWidget {
   final QiroatLesson lesson;
   final int xp;
   final VoidCallback onRetakeQuiz;
+  final Set<String> xatolar;
   const _DoneView({
     required this.lesson,
     required this.xp,
     required this.onRetakeQuiz,
+    required this.xatolar,
   });
 
   @override
@@ -613,6 +650,8 @@ class _DoneView extends StatelessWidget {
                   ),
                 ),
               ],
+              // To'liq hisobot: qaysi so'zlar yaxshi yodlandi, qaysilari yo'q.
+              SozlarNatijaRoyxati(sozlar: darsSozlari(lesson), xatolar: xatolar),
               const SizedBox(height: 26),
               Reveal(
                 delay: const Duration(milliseconds: 540),

@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart' hide Text;
 import 'package:flutter/rendering.dart';
 
@@ -64,6 +65,7 @@ class _KirishEkraniState extends State<KirishEkrani> {
   @override
   void initState() {
     super.initState();
+    if (!kIsWeb) return;
     Timer(const Duration(seconds: 6), () {
       final ro = _kartaKaliti.currentContext?.findRenderObject();
       if (ro == null) return;

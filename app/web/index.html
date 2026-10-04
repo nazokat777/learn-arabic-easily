@@ -112,9 +112,12 @@
     // uchun xatolar ekranning pastida chiqariladi — suratga olib yuborish uchun.
     (function () {
       var qator = [];
+      // Tashxis oynasi faqat APK (WebView) da yoki manzilga ?diag qo'shilganda
+      // ko'rinadi — oddiy foydalanuvchiga qizil oyna chiqmasin.
+      var tashxis = /; wv\)/.test(navigator.userAgent) || location.search.indexOf('diag') >= 0;
       function chiqar(m) {
         m = String(m || '').slice(0, 600);
-        if (!m) return;
+        if (!m || !tashxis) return;
         qator.push(m);
         var d = document.getElementById('xato-oyna');
         if (!d) {

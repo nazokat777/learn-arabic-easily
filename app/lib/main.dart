@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:ui' show PlatformDispatcher;
-import 'package:flutter/rendering.dart' show TextPainter;
 
 import 'package:flutter/material.dart';
 import 'content.dart';

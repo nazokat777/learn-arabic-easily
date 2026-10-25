@@ -1473,6 +1473,11 @@
 "i": "malham",
 "s": "Malhamdek mayda pul — TIYIN."
 },
+"مَلِّيمٌ وَاحِدٌ": {
+"o": "mallīm wāḥid",
+"i": "malham",
+"s": "Malhamdek mayda pul — BIR TIYIN."
+},
 "قِرْشٌ": {
 "o": "qirsh",
 "i": "qirq",
@@ -3888,8 +3893,8 @@
 "i": "fil",
 "s": "Fil REDISKAni xartumi bilan uzyapti."
 },
-"سَلَطَةٌ": {
-"o": "salata",
+"سَلَاطَةٌ": {
+"o": "salāta",
 "i": "salat",
 "s": "O'zbekcha «salat»."
 },
@@ -6523,8 +6528,8 @@
 "i": "Majnun",
 "s": "O'zbekcha «Majnun» — JINNI."
 },
-"يَخْتَالُونَ": {
-"o": "yakhtālūna",
+"يَحْتَالُونَ": {
+"o": "yahtālūna",
 "i": "hiyla",
 "s": "HIYLA QILADILAR."
 },
@@ -7733,8 +7738,8 @@
 "i": "vajh",
 "s": "Vajhidan — KO'Z O'NGIDAN."
 },
-"أَنْ يَخْتَالَ": {
-"o": "an yakhtāla",
+"أَنْ يَحْتَالَ": {
+"o": "an yahtāla",
 "i": "hiyla",
 "s": "HIYLA QILMOQNI."
 },
@@ -11363,7 +11368,7 @@
 "i": "rag'm",
 "s": "Rag'm — -GA QARAMASDAN."
 },
-"ضَحامَةٌ": {
+"ضَخامَةٌ": {
 "o": "dakhāma",
 "i": "zaxm",
 "s": "Zaxmdek ulkan — BAHAYBAT."
@@ -12293,7 +12298,7 @@
 "i": "mass",
 "s": "Mass — SO'RADI."
 },
-"فِي بادِئِي النَّظَرِ": {
+"فِي بادِئِ النَّظَرِ": {
 "o": "fī bādiʾi n-nazar",
 "i": "ibtido + nazar",
 "s": "Ibtido — nazar: BIRINCHI QARASHDA."
@@ -12817,11 +12822,6 @@
 "o": "muthkhanan",
 "i": "saxin",
 "s": "Saxin — JAROHATLANGAN."
-},
-"إِفْلاَتٌ": {
-"o": "iflāt",
-"i": "falat",
-"s": "Falokatdan — QOCHISH."
 },
 "فَضَلاَتٌ": {
 "o": "fadalāt",
@@ -13492,11 +13492,6 @@
 "o": "daran",
 "i": "daran",
 "s": "Daran — KIR."
-},
-"عُلُوقٌ": {
-"o": "ʿulūq",
-"i": "ilik",
-"s": "Ilik — YOPISHIB QOLISH."
 },
 "تَلَبَّدَ": {
 "o": "talabbada",
@@ -15393,8 +15388,8 @@
 "i": "fazl",
 "s": "Fazl — FAZILATLI."
 },
-"صَافَ": {
-"o": "sāfa",
+"صَافَى": {
+"o": "sāfā",
 "i": "safo",
 "s": "Safo — DO'ST BO'LDI."
 },

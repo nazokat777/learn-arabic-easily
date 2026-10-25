@@ -34,11 +34,11 @@ void main() {
     ]);
     final q1 = KitobXarita.top('qiroat-1')!;
     expect(q1.darslar.length, 52);
-    expect(q1.lugat, 873);
-    expect(q1.koplik, 340);
+    expect(q1.lugat, 876);
+    expect(q1.koplik, 341);
     expect(q1.qoida, 6);
     expect(KitobXarita.top('qiroat-2')!.lugat, 1159);
-    expect(KitobXarita.top('qiroat-3')!.lugat, 1423);
+    expect(KitobXarita.top('qiroat-3')!.lugat, 1421);
     expect(KitobXarita.top('nahv-4')!.qoida, 104);
     expect(KitobXarita.top('sarf')!.qoida, 102);
   });

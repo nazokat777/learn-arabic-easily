@@ -22,6 +22,7 @@ import 'yozma_imtihon.dart';
 import 'lesson/harflab_yozish.dart';
 import 'qiroat_drill.dart';
 import 'tarjima_mashqi.dart';
+import 'gapma_gap_tarjima.dart';
 import 'qiroat_match.dart';
 import 'lesson/lesson_flow.dart';
 import 'lesson/master_drill.dart';
@@ -218,7 +219,20 @@ class QiroatLessonDetail extends StatelessWidget {
             _sectionLabel(Icons.menu_book_rounded, 'O\'qish matni'),
             const SizedBox(height: 8),
             _ReadingBlock(lesson: lesson),
-            if (lesson.translation.isNotEmpty) ...[
+            // Tarjima: gapma-gap — har arabcha gap alohida, «Tarjima» bosilganda
+            // kitobdagi tarjimasi ochiladi. Butun matn ham yopiq blokda turadi.
+            if (lesson.tarjimaGuruhlari.isNotEmpty) ...[
+              const SizedBox(height: 12),
+              GapmaGapTarjima(lesson: lesson),
+              if (lesson.translation.isNotEmpty) ...[
+                const SizedBox(height: 8),
+                _FoldBlock(
+                  icon: Icons.translate_rounded,
+                  title: 'Butun tarjima (kitobdagidek)',
+                  text: lesson.translation,
+                ),
+              ],
+            ] else if (lesson.translation.isNotEmpty) ...[
               const SizedBox(height: 12),
               _FoldBlock(
                 icon: Icons.translate_rounded,

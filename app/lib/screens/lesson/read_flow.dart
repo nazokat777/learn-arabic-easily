@@ -5,6 +5,7 @@ import '../../content.dart';
 import '../../services/tts.dart';
 import '../../theme.dart';
 import '../../widgets/motion.dart';
+import '../gapma_gap_tarjima.dart' show TarjimaPaneli;
 import 'sentence_text.dart';
 import 'vocab_flow.dart' show AwardXp;
 
@@ -299,6 +300,9 @@ class ReadStage extends StatefulWidget {
 class _ReadStageState extends State<ReadStage> {
   late final List<String> _sentences = splitSentences(widget.lesson.reading);
   final Set<int> _done = {};
+
+  /// Tarjimasi ochilgan guruhlar (guruhning birinchi arabcha gapi bo'yicha).
+  final Set<int> _tarjimaOchiq = {};
   bool _awarded = false;
 
   @override
@@ -372,15 +376,26 @@ class _ReadStageState extends State<ReadStage> {
         Expanded(
           child: ListView.builder(
             padding: const EdgeInsets.fromLTRB(20, 4, 20, 16),
-            // Oxirgi element — yopiq tarjima kartasi: o'quvchi avval o'zi
-            // tushunadi, keyin tekshiradi (faol eslash).
+            // Tarjima har gap kartasida: o'quvchi avval o'zi tushunadi, keyin
+            // «Tarjima» bilan tekshiradi (faol eslash). Gapma-gap bo'lingan
+            // tarjima bo'lmasa — oxirida butun tarjimali yopiq karta.
             itemCount:
                 _sentences.length +
-                (widget.lesson.translation.isNotEmpty ? 1 : 0),
+                (widget.lesson.tarjimaGuruhlari.isEmpty &&
+                        widget.lesson.translation.isNotEmpty
+                    ? 1
+                    : 0),
             itemBuilder: (context, i) {
               if (i == _sentences.length) {
                 return _TarjimaKarta(matn: widget.lesson.translation);
               }
+              final guruh = widget.lesson.tarjimaGuruhi(i);
+              final tarjimaBor = guruh != null && guruh.matn.isNotEmpty;
+              // Ikki gapni qamragan tarjima faqat guruhning BIRINCHI gapida
+              // ochiladi (ikkinchisida qaytarilmaydi — shunchaki ishora).
+              final guruhBoshi = tarjimaBor && i == guruh.boshi;
+              final tarjimaOchiq =
+                  guruhBoshi && _tarjimaOchiq.contains(guruh.boshi);
               final done = _done.contains(i);
               return AnimatedContainer(
                 duration: const Duration(milliseconds: 250),
@@ -419,6 +434,26 @@ class _ReadStageState extends State<ReadStage> {
                           ),
                           visualDensity: VisualDensity.compact,
                         ),
+                        if (guruhBoshi && !tarjimaOchiq)
+                          TextButton.icon(
+                            key: ValueKey('read-tarjima-$i'),
+                            onPressed: () {
+                              Haptic.tap();
+                              setState(() => _tarjimaOchiq.add(guruh.boshi));
+                            },
+                            icon: const Icon(
+                              Icons.translate_rounded,
+                              size: 18,
+                              color: AppColors.indigo,
+                            ),
+                            label: const Text(
+                              'Tarjima',
+                              style: TextStyle(
+                                color: AppColors.indigo,
+                                fontWeight: FontWeight.w800,
+                              ),
+                            ),
+                          ),
                         const Spacer(),
                         TextButton.icon(
                           onPressed: () => _toggle(i),
@@ -439,6 +474,31 @@ class _ReadStageState extends State<ReadStage> {
                         ),
                       ],
                     ),
+                    if (tarjimaBor && !guruhBoshi)
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8, bottom: 6),
+                        child: Text(
+                          "Tarjimasi ${guruh.boshi + 1}-gap bilan birga "
+                          "berilgan (yuqorida)",
+                          style: TextStyle(
+                            fontSize: 11.5,
+                            color: AppColors.matn3,
+                            fontStyle: FontStyle.italic,
+                          ),
+                        ),
+                      ),
+                    if (tarjimaOchiq)
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 4),
+                        child: TarjimaPaneli(
+                          matn: guruh.matn,
+                          qoshimcha: guruh.qoshimcha,
+                          izoh: guruh.soni > 1
+                              ? '${guruh.boshi + 1}–${guruh.boshi + guruh.soni}'
+                                    "-gaplarning tarjimasi (kitobda birga berilgan)"
+                              : null,
+                        ),
+                      ),
                   ],
                 ),
               );

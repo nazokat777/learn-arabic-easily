@@ -279,9 +279,17 @@ class QiroatLesson {
   final List<QiroatVocab> vocab;
   final List<QiroatTable> tables;
 
-  /// O'qish matnining o'zbekcha tarjimasi (kitobning oxiridan, 1-kitob).
-  /// Bo'sh bo'lishi mumkin - 2 va 3-kitobda tarjima bo'limi yo'q.
+  /// O'qish matnining o'zbekcha tarjimasi (kitobning oxiridan) — kitobdagidek,
+  /// butun matn. Barcha 169 darsda bor; gapma-gap ko'rinishi [tarjimaGuruhlari].
   final String translation;
+
+  /// Tarjimaning o'zbekcha sarlavhasi (kitobda bo'lsa; 1-kitobda yo'q).
+  final String tarjimaSarlavha;
+
+  /// Kitob tarjimasi arabcha gaplarga bo'lingan: birinchi guruh — birinchi
+  /// arabcha gap(lar)ga va hokazo; [TarjimaGuruh.soni] yig'indisi
+  /// `splitSentences(reading).length` ga teng (test shuni tekshiradi).
+  final List<TarjimaGuruh> tarjimaGuruhlari;
 
   /// Darsdan keyingi mashq: o'zbekcha gaplarni arabchaga o'girish (1-kitob).
   final String exercise;
@@ -299,12 +307,22 @@ class QiroatLesson {
     required this.vocab,
     this.tables = const [],
     this.translation = '',
+    this.tarjimaSarlavha = '',
+    this.tarjimaGuruhlari = const [],
     this.exercise = '',
     this.exerciseAnswer = '',
   });
 
   /// Dars tugatilganini belgilash uchun noyob id (kitob + dars).
   String get completionId => book == 1 ? 'qiroat_$num' : 'qiroat_b${book}_$num';
+
+  /// [gap] (0 dan) arabcha gapni qamragan tarjima guruhi; yo'q bo'lsa null.
+  TarjimaGuruh? tarjimaGuruhi(int gap) {
+    for (final g in tarjimaGuruhlari) {
+      if (gap >= g.boshi && gap < g.boshi + g.soni) return g;
+    }
+    return null;
+  }
 
   factory QiroatLesson.fromJson(Map<String, dynamic> j) => QiroatLesson(
     book: j['book'] ?? 1,
@@ -316,9 +334,60 @@ class QiroatLesson {
         .map((e) => QiroatTable.fromJson(e as Map<String, dynamic>))
         .toList(),
     translation: j['translation'] ?? '',
+    tarjimaSarlavha: j['tarjimaSarlavha'] ?? '',
+    tarjimaGuruhlari: TarjimaGuruh.royxat(j['tarjimaGaplar'] as List?),
     exercise: j['exercise'] ?? '',
     exerciseAnswer: j['exerciseAnswer'] ?? '',
   );
+}
+
+/// Kitob tarjimasining bir bo'lagi: bir yoki bir necha ketma-ket arabcha
+/// gapga to'g'ri keladigan o'zbekcha matn. Tarjima kitobdagining o'zi; faqat
+/// qaysi arabcha gapga tegishli ekani aniqlangan (hamma darsda qo'lda
+/// tekshirilgan). Kitobning tarjimasi erkin — bitta o'zbekcha jumla ikki
+/// arabcha gapni birga qamrashi mumkin (shunda [soni] > 1).
+class TarjimaGuruh {
+  /// Birinchi arabcha gapning tartib raqami (0 dan) — `splitSentences(reading)`.
+  final int boshi;
+
+  /// Nechta ketma-ket arabcha gapni qamraydi (odatda 1).
+  final int soni;
+
+  /// O'zbekcha matn. Bo'sh — bu gapning tarjimasi yo'q (masalan, she'r
+  /// muallifining nomi).
+  final String matn;
+
+  /// true — kitobda bu gapning tarjimasi berilmagan, matnni ilova qo'shgan.
+  final bool qoshimcha;
+
+  const TarjimaGuruh({
+    required this.boshi,
+    required this.soni,
+    required this.matn,
+    this.qoshimcha = false,
+  });
+
+  /// JSON (`[{"t": matn, "n": soni, "q": 1}, ...]`) dan ro'yxat; `boshi`
+  /// ketma-ketlikdan hisoblanadi.
+  static List<TarjimaGuruh> royxat(List? xom) {
+    if (xom == null) return const [];
+    final out = <TarjimaGuruh>[];
+    var boshi = 0;
+    for (final e in xom) {
+      final m = e as Map<String, dynamic>;
+      final soni = (m['n'] as num?)?.toInt() ?? 1;
+      out.add(
+        TarjimaGuruh(
+          boshi: boshi,
+          soni: soni,
+          matn: m['t'] ?? '',
+          qoshimcha: m['q'] == 1,
+        ),
+      );
+      boshi += soni;
+    }
+    return out;
+  }
 }
 
 /// Barcha kontentni yuklaydigan repozitoriy.

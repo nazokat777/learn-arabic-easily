@@ -97,9 +97,25 @@ async def main() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8")) if MANIFEST.exists() else {}
 
+    # Matn tuzatilganda yangi jumla eski jumlaning fayl nomini (s0539.mp3 ...)
+    # meros olib, eskirgan ovozni «tayyor» deb o'tkazib yuborishi mumkin edi.
+    # Endi yangi jumla har doim hali band bo'lmagan yangi nom oladi; hozirgi
+    # jumlalarda ishlatilmaydigan manifest yozuvlari (eskirgan matnlar) tashlanadi.
+    live = set(sentences)
+    manifest = {s: n for s, n in manifest.items() if s in live}
+    used = set(manifest.values()) | {p.name for p in OUT_DIR.glob("s*.mp3")}
+    nxt = 1 + max([int(re.fullmatch(r"s(\d+)\.mp3", n).group(1)) for n in used
+                   if re.fullmatch(r"s(\d+)\.mp3", n)] or [-1])
+
     todo = []
     for i, s in enumerate(sentences):
-        name = manifest.get(s) or f"s{i:04d}.mp3"
+        name = manifest.get(s)
+        if not name:
+            name = f"s{i:04d}.mp3"
+            if name in used:
+                name = f"s{nxt:04d}.mp3"
+                nxt += 1
+            used.add(name)
         manifest[s] = name
         if not (OUT_DIR / name).exists():
             todo.append((s, OUT_DIR / name))
@@ -128,6 +144,13 @@ async def main() -> None:
     manifest = {s: n for s, n in manifest.items() if (OUT_DIR / n).exists()}
     MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=0),
                         encoding="utf-8", newline="\n")
+    # Manifestda yo'q (matni tuzatilgan/olib tashlangan) kliplar paketni shishirmasin.
+    keep = set(manifest.values())
+    orphans = [p for p in OUT_DIR.glob("*.mp3") if p.name not in keep]
+    for p in orphans:
+        p.unlink()
+    if orphans:
+        print(f"removed {len(orphans)} orphan clip(s): {[p.name for p in orphans]}")
     total = sum(f.stat().st_size for f in OUT_DIR.glob("*.mp3"))
     print(f"\nfiles: {len(manifest)}   size: {total/1048576:.1f} MB")
 

@@ -1,6 +1,6 @@
 {
-  "version": 21,
+  "version": 22,
   "note": "Kontent versiyasi. Darslar o'zgarganda bittaga oshiriladi — ilova saytdan yangisini yuklab oladi, APK qayta o'rnatilmaydi.",
-  "hash": "79b5989bae34baa013d21302cfda564bb0511e61b9b51ab375206c04c871ed4a",
+  "hash": "656d4f0e47f99c3b310d0258c2aba7ce9b29365d98d70c4529d11028b85dc64f",
   "hashNote": "Kontent fayllarining sha256 izi. Ilova shu iz o'zgarganda yangi darslarni yuklab oladi — 'version' raqamini oshirish esdan chiqsa ham. Avtomatik yoziladi: .qiroat_render/stamp_version.py"
 }

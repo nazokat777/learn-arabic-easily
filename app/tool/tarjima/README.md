@@ -16,7 +16,7 @@ Quvur (app/ papkasidan):
 4. `goster.py`, `ikki.py` — ko'zdan kechirish uchun chiqarish (arabcha gap va atomlar yonma-yon).
 5. `qol.py`       — qo'lda tuzatilgan munchoq qatorini `qol.json` ga yozadi (yig'indini tekshiradi).
                     `qol.json` `taklif.json` dan USTUN. 55 dars qo'lda tuzatilgan; qolganlari ko'rib tasdiqlangan.
-6. `qoshimcha.json` — kitob tarjima qilmagan 30 gap uchun ilova qo'shgan tarjimalar (UI'da «ilova qo'shgan»
+6. `qoshimcha.json` — kitob tarjima qilmagan 28 gap uchun ilova qo'shgan tarjimalar (UI'da «ilova qo'shgan»
                     deb belgilanadi); `null` — she'r muallifining nomi (tarjimasiz).
 7. `yoz.py`       — hammasini `assets/content/qiroat_lessons.json` ga yozadi va invariantlarni tekshiradi:
                     arabcha gaplar yig'indisi, kitob matni bilan bo'linish mosligi, tarjimasiz guruhlar ro'yxati.

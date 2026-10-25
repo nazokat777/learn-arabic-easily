@@ -51,7 +51,7 @@ void main() {
     },
   );
 
-  test("ilova qo'shgan tarjima — faqat bitta gapli, matni bor, 30 ta", () {
+  test("ilova qo'shgan tarjima — faqat bitta gapli, matni bor, 28 ta", () {
     var jami = 0;
     for (final l in darslar) {
       for (final g in l.tarjimaGuruhlari.where((g) => g.qoshimcha)) {
@@ -60,7 +60,7 @@ void main() {
         expect(g.matn.trim(), isNotEmpty, reason: l.completionId);
       }
     }
-    expect(jami, 30);
+    expect(jami, 28);
   });
 
   test("tarjimasiz guruh — faqat she'r muallifi nomi (qavs ichida)", () {

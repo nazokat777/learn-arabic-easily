@@ -35,7 +35,7 @@ class VocabAudio {
   /// uchun kesh chetlab o'tiladi. Oshirish esdan chiqmasligi uchun:
   /// ovoz commit'ida version.json bilan birga tekshiriladi.
   static const int audioVersion =
-      4; // 4: jumla kliplari whisper bilan tekshirilib 3 tasi qayta yasaldi (2026-09-18)
+      5; // 5: 1-21 dagi kesilgan jumla tuzatildi, s0539 qayta yasaldi (2026-10-25)
 
   /// Matn → fayl yo'li («vocab/0001.mp3»). Barcha to'plamlar shu yerda:
   /// lug'at, matn jumlalari, so'zlar, alifbo va qo'shimchalar.

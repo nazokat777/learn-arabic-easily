@@ -4,6 +4,7 @@ import 'package:flutter/material.dart' hide Text;
 
 import '../../main.dart';
 import '../../mashq/mukofot.dart' show Maqtov, Portlash;
+import '../../mashq/soz_lugat.dart';
 import '../../mashq/tovush.dart';
 import '../../services/tts.dart';
 import '../../theme.dart';
@@ -62,6 +63,7 @@ class _GapTuzishState extends State<GapTuzish> {
   int _togri = 0;
   int _portlash = 0;
   int _silkin = 0;
+  bool _tarjimaKorsat = true; // chip ostida so'z ma'nosi
 
   @override
   void initState() {
@@ -152,6 +154,103 @@ class _GapTuzishState extends State<GapTuzish> {
       Tovush.xato();
     }
     Tts.instance.speak(widget.juftlar[_i].$2, id: 'gap-$_i');
+  }
+
+  /// «Qanday tuziladi?» — to'g'ri tartib, har so'zning ma'nosi, qadamlar.
+  void _qanday(String uz, String ar) {
+    final sozlar = GapTuzish.sozlar(ar);
+    Tts.instance.speak(ar, id: 'gap-qanday-$_i');
+    showModalBottomSheet<void>(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: AppColors.karta,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(22)),
+      ),
+      builder: (ctx) => SafeArea(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+            maxHeight: MediaQuery.of(ctx).size.height * 0.85,
+          ),
+          child: ListView(
+            shrinkWrap: true,
+            padding: const EdgeInsets.fromLTRB(20, 18, 20, 20),
+            children: [
+              Text(
+                "Gapni qanday tuzamiz?",
+                style: TextStyle(
+                  fontWeight: FontWeight.w800,
+                  fontSize: 17,
+                  color: AppColors.ink,
+                ),
+              ),
+              const SizedBox(height: 10),
+              if (uz.trim().isNotEmpty)
+                Text(
+                  uz,
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w700,
+                    color: AppColors.indigo,
+                  ),
+                ),
+              const SizedBox(height: 10),
+              Text(
+                "Arabcha o'ngdan chapga o'qiladi. So'zlarni mana shu tartibda, "
+                "birinchisidan boshlab bosing:",
+                style: TextStyle(fontSize: 13, color: AppColors.matn3, height: 1.35),
+              ),
+              const SizedBox(height: 10),
+              for (final (k, w) in sozlar.indexed)
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 5),
+                  child: Row(
+                    children: [
+                      CircleAvatar(
+                        radius: 13,
+                        backgroundColor: AppColors.indigo.withValues(alpha: 0.14),
+                        child: Text(
+                          '${k + 1}',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w800,
+                            fontSize: 12.5,
+                            color: AppColors.indigo,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: Text(
+                          SozLugat.tarjima(w) ?? "(alohida ma'nosi lug'atda yo'q)",
+                          style: TextStyle(fontSize: 14, color: AppColors.ink),
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Text(
+                        w,
+                        textDirection: TextDirection.rtl,
+                        style: AppTheme.arabic(size: 24, color: AppColors.ink),
+                      ),
+                    ],
+                  ),
+                ),
+              const Divider(height: 24),
+              Text(
+                ar,
+                textAlign: TextAlign.center,
+                textDirection: TextDirection.rtl,
+                style: AppTheme.arabic(size: 24, color: AppColors.success),
+              ),
+              const SizedBox(height: 12),
+              FilledButton(
+                onPressed: () => Navigator.pop(ctx),
+                child: const Text('Tushundim'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 
   void _keyingi() {
@@ -265,6 +364,7 @@ class _GapTuzishState extends State<GapTuzish> {
                     for (final (pos, idx) in _tanlangan.indexed)
                       _Chip(
                         matn: _asl[idx],
+                        tarjima: _tarjimaKorsat ? SozLugat.tarjima(_asl[idx]) : null,
                         rang: rang,
                         tolgan: true,
                         onTap: () => _qaytar(pos),
@@ -293,6 +393,7 @@ class _GapTuzishState extends State<GapTuzish> {
                   if (!_tanlangan.contains(idx))
                     _Chip(
                       matn: _asl[idx],
+                      tarjima: _tarjimaKorsat ? SozLugat.tarjima(_asl[idx]) : null,
                       rang: AppColors.indigo,
                       tolgan: false,
                       onTap: () => _tanla(idx),
@@ -301,7 +402,33 @@ class _GapTuzishState extends State<GapTuzish> {
             ),
           ),
         ),
-        const SizedBox(height: 14),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextButton.icon(
+              onPressed: () => setState(() => _tarjimaKorsat = !_tarjimaKorsat),
+              icon: Icon(
+                _tarjimaKorsat
+                    ? Icons.visibility_rounded
+                    : Icons.visibility_off_rounded,
+                size: 18,
+              ),
+              label: Text(
+                _tarjimaKorsat ? "So'z ma'nolari: yoqiq" : "So'z ma'nolari: o'chiq",
+                style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 12.5),
+              ),
+            ),
+            TextButton.icon(
+              onPressed: () => _qanday(uz, ar),
+              icon: const Icon(Icons.lightbulb_rounded, size: 18),
+              label: const Text(
+                'Qanday tuziladi?',
+                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 12.5),
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 6),
         if (_natija != null) ...[
           Text(
             _natija!
@@ -361,8 +488,10 @@ class _Chip extends StatelessWidget {
   final String matn;
   final Color rang;
   final bool tolgan;
+  final String? tarjima;
   final VoidCallback onTap;
   const _Chip({
+    this.tarjima,
     required this.matn,
     required this.rang,
     required this.tolgan,
@@ -386,10 +515,31 @@ class _Chip extends StatelessWidget {
                 color: rang.withValues(alpha: tolgan ? 0.6 : 0.35),
               ),
             ),
-            child: Text(
-              matn,
-              textDirection: TextDirection.rtl,
-              style: AppTheme.arabic(size: 21, color: AppColors.ink),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  matn,
+                  textDirection: TextDirection.rtl,
+                  style: AppTheme.arabic(size: 21, color: AppColors.ink),
+                ),
+                if (tarjima != null)
+                  ConstrainedBox(
+                    constraints: const BoxConstraints(maxWidth: 110),
+                    child: Text(
+                      tarjima!,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 11,
+                        height: 1.15,
+                        color: AppColors.matn3,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+              ],
             ),
           ),
         ),

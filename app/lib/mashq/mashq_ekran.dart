@@ -682,7 +682,13 @@ class _MashqEkranState extends State<MashqEkran> {
                 key: ValueKey(
                   '${s.element.kalit}-${s.turi}-${_s.jamiSoralgan}',
                 ),
-                child: Column(children: [_savolKartasi(s), _javoblar(s)]),
+                child: Column(
+                  children: [
+                    _savolKartasi(s),
+                    _javoblar(s),
+                    if (!_javobBerildi && !_kutilmoqda) _tushuntirTugmasi(s),
+                  ],
+                ),
               ),
             ),
           ),
@@ -1086,6 +1092,96 @@ class _MashqEkranState extends State<MashqEkran> {
       children: [for (var i = 0; i < s.variantlar.length; i++) _variant(s, i)],
     );
   }
+
+  /// «Bilmayman — tushuntir»: so'z, ma'no va to'g'ri javob ko'rsatiladi;
+  /// oyna yopilgach savol «bilmadim» (xato) deb hisoblanadi — so'z qiyin
+  /// so'zlarga tushib, keyin qaytadi.
+  Future<void> _tushuntir(MashqSavol s) async {
+    final e = s.element;
+    final javob = s.variantlar[s.togri];
+    if (e.ovoz.isNotEmpty) Tts.instance.speak(e.ovoz, id: e.kalit);
+    await showModalBottomSheet<void>(
+      context: context,
+      backgroundColor: AppColors.karta,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(22)),
+      ),
+      builder: (ctx) => SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(22, 18, 22, 20),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Text(
+                'Tushuntiraman',
+                style: TextStyle(
+                  fontWeight: FontWeight.w800,
+                  fontSize: 17,
+                  color: AppColors.ink,
+                ),
+              ),
+              const SizedBox(height: 12),
+              if (e.ar.isNotEmpty)
+                Text(
+                  e.ar,
+                  textAlign: TextAlign.center,
+                  textDirection: TextDirection.rtl,
+                  style: AppTheme.arabic(size: 30, color: AppColors.ink),
+                ),
+              const SizedBox(height: 12),
+              Text(
+                "To'g'ri javob:",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 12.5, color: AppColors.matn3),
+              ),
+              const SizedBox(height: 4),
+              Text(
+                javob,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 19,
+                  fontWeight: FontWeight.w800,
+                  color: AppColors.success,
+                ),
+              ),
+              if (e.izoh.trim().isNotEmpty) ...[
+                const SizedBox(height: 12),
+                Text(
+                  e.izoh,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 14,
+                    height: 1.4,
+                    color: AppColors.ink,
+                  ),
+                ),
+              ],
+              const SizedBox(height: 16),
+              FilledButton(
+                onPressed: () => Navigator.pop(ctx),
+                child: const Text('Tushundim'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+    if (mounted && !_javobBerildi && !_kutilmoqda) _javob(false);
+  }
+
+  Widget _tushuntirTugmasi(MashqSavol s) => TextButton.icon(
+    onPressed: () => _tushuntir(s),
+    icon: const Icon(Icons.lightbulb_rounded, size: 18),
+    label: Text(
+      "Bilmayman — tushuntir",
+      style: TextStyle(
+        color: AppColors.matn3,
+        fontWeight: FontWeight.w700,
+        fontSize: 13,
+      ),
+    ),
+  );
 
   Widget _kattaTugma({
     required String matn,

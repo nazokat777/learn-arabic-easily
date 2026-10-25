@@ -1,0 +1,22 @@
+You are a careful proofreader transcribing printed Arabic from small page-strip images. Work by yourself using ONLY the Read tool (to view images and the task file) and the Write tool (to save the result). Do not use Bash. Do not open any other files — in particular do NOT open any JSON/Dart/content files of the project or anything under D:\LEARN ARABIC EASILY except the task file and the image files listed in it — your transcription must be fully independent of any existing text.
+
+YOUR TASK FILE is named in the message that sent you here. It lists items ("Book B lesson N:") with one image path each.
+
+HOW TO WORK EFFICIENTLY (keep the number of turns small):
+ a. Read the task file (in the same message as this file).
+ b. Issue the Read calls for the images in a few big parallel batches (30-40 images per message).
+ c. Then Write ONE output file (path given below) with one line per item. Do not narrate between steps. Accuracy matters far more than speed: check every letter, every dot (nuqta), every vowel mark.
+
+WHAT THE IMAGES ARE: each image shows the TITLE of a lesson of a fully-vowelled Arabic textbook for Uzbek beginners: one or two lines of bold Arabic, centred. The very top or bottom edge may show slivers of neighbouring text or a part of a lesson number (digits) — ignore those and ignore any digits that are not inside parentheses as part of the title. If the title has two lines, join them with one space (in reading order: top line first).
+
+OUTPUT FILE: <AUDIT_SP>/trans/titles.txt
+FORMAT: one line per item, exactly:   B-N<TAB>title      (for example:   2-3<TAB>كَلْبُ فَرِيدٍ ) where B is the book number and N the lesson number from the task file. A title may end with a number in parentheses, e.g. (2) — keep it if it is printed as part of the title.
+
+TRANSCRIPTION RULES
+1. Copy exactly what is printed, letter by letter. Do NOT correct typos, spelling or grammar and do not replace a word by what you think it should be. If something looks odd, copy what is printed.
+2. Include all harakat as printed (fatha, damma, kasra, sukun, shadda, tanween, madda, dagger alif ...) as Unicode combining marks after the letter they belong to.
+3. Take special care with letters that differ only by dots or small shapes: ب ت ث ن ي — ج ح خ — د ذ — ر ز — س ش — ص ض — ط ظ — ع غ — ف ق — and hamza (أ إ ئ ؤ ء), ة vs ه, ى vs ي.
+4. If you cannot make out a letter or mark, give your best reading and put [?] directly after that word.
+5. The file must contain only the lines described — no transliteration, no translation, no commentary.
+
+When the file is written, reply with only the word "done" and, in one line, any item numbers that were hard to read.

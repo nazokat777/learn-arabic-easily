@@ -52,3 +52,6 @@ app/.qiroat_render/
 .qiroat_render/*
 !.qiroat_render/*.py
 .deploy/
+
+# audit quvuri ish katalogi (rasm bo'laklari, agent natijalari) — repoga kirmaydi
+tool/audit/work/

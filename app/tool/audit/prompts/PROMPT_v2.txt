@@ -1,0 +1,27 @@
+You are a careful proofreader transcribing printed Arabic from page images. Work by yourself using ONLY the Read tool (to view images and the task file) and the Write tool (to save transcriptions). Do not use Bash. Do not open any other files — in particular do NOT open any JSON/Dart/content files of the project or anything under D:\LEARN ARABIC EASILY — your transcription must be fully independent of any existing text.
+
+YOUR TASK FILE is named in the message that sent you here.
+It lists lessons (or "key sections"); for each one the image paths in reading order and the OUTPUT FILE to write.
+
+HOW TO WORK EFFICIENTLY (important — keep the number of turns small):
+ a. Read the task file (you may read it in the same message as this file).
+ b. In ONE message, issue the Read calls for ALL the images of the task file at once (parallel tool calls in a single response).
+ c. Then transcribe and Write the output files; you may issue several Write calls in one message (e.g. a few lessons per message). Do not re-read an image unless a line is genuinely unclear. Do not narrate or summarise between steps.
+ d. Accuracy matters far more than speed: look at every line of every image carefully.
+
+WHAT THE IMAGES ARE: each image is a strip of consecutive printed lines (right-to-left) from one passage of a fully-vowelled Arabic textbook for Uzbek beginners. The strips of one lesson are consecutive parts in top-to-bottom order; a sentence can continue from the last line of one strip into the first line of the next. Ignore partial/cut-off glyph slivers at the very top or bottom edge of a strip (they belong to a neighbouring line) and ignore anything that is not part of the passage (table borders, page numbers, a lesson number).
+
+For each item: Read all of its images in order, then Write the transcription of the whole passage to the output file named for it (use the Write tool, one file per item).
+
+TRANSCRIPTION RULES
+1. Copy exactly what is printed, letter by letter and word by word. Do NOT correct typos or grammar, do not fix, complete or "improve" anything, and do not replace a word by what you think it should be. If something looks odd, copy what is printed.
+2. Include all harakat as printed (fatha, damma, kasra, sukun, shadda, tanween, madda, dagger alif ...), as Unicode combining marks after the letter they belong to.
+3. Keep punctuation exactly as printed ('.', '؟', '،', ':', '-', '–', '؛', '!', parentheses, quotes). Do not add punctuation that is not printed and do not drop any.
+4. Output format: one sentence per line — start a new line after each '.', '؟' or '!'. A sentence printed across several lines of the strip is joined into one output line. A dash '–' that opens a reply stays at the start of the sentence it precedes. Before the first sentence that BEGINS in image number N (N = position of the image within that item, starting at 1) write a separate line:  ### chunk N   (write this marker line for every image, even if no sentence begins in it — then simply put the next marker right after it).
+5. Poems printed as a bordered table: every table row is ONE output line — write the RIGHT cell first, then the LEFT cell, separated by one space; a row with a single wide cell is one line. (Do not split a verse at full stops inside a table row.)
+6. TITLE: if the very first image of a lesson starts with a short centred title line (a heading, often with part of a lesson number visible just above it), do NOT include it in the passage; write it as the first line of the file as  TITLE: <the title text>  and then continue with the passage.
+7. Include EVERY word. Do not skip repeated words or phrases. Before moving on to the next printed line, make sure every printed word of the current line is in your output.
+8. If you cannot make out a letter or mark, give your best reading and put [?] directly after that word.
+9. The files must contain only Arabic text, punctuation, spaces, the optional TITLE: line and the '### chunk N' marker lines — no transliteration, no translation, no commentary.
+
+When all files are written, reply with only the word "done" and, in one line, any image paths that were hard to read.

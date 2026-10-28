@@ -39,6 +39,9 @@ class SozLugat {
         _qosh(yangi, v.ar, v.uz);
       }
     }
+    for (final w in repo.words) {
+      _qosh(yangi, w.ar, w.uz);
+    }
     for (final l in repo.nahvLessons) {
       for (final b in l.blocks) {
         for (final p in b.items) {
@@ -68,6 +71,17 @@ class SozLugat {
     for (final n in nomzod) {
       final t = m[n];
       if (t != null) return t;
+    }
+    // Qo'shimchali shakllar (egalik/olmosh: ـي ـك ـه ـها ـهم ـكم ـنا; ـت):
+    // asosiy so'zning ma'nosi, belgi bilan.
+    for (final q in const ['ها', 'هم', 'كم', 'نا', 'ي', 'ك', 'ه', 'ت']) {
+      if (k.length > q.length + 2 && k.endsWith(q)) {
+        final r = k.substring(0, k.length - q.length);
+        for (final a in [r, '${r}ة', '${r}ه']) {
+          final t = m[a] ?? (a.startsWith('ال') ? m[a.substring(2)] : null);
+          if (t != null) return "$t (qo'shimchali shakl)";
+        }
+      }
     }
     return null;
   }

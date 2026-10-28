@@ -16,6 +16,7 @@ import 'services/kirish.dart';
 import 'services/tts.dart';
 import 'services/vocab_audio.dart';
 import 'theme.dart';
+import 'harf_olchami.dart';
 import 'uz_yozuv.dart';
 import 'screens/home.dart';
 import 'screens/kirish_ekrani.dart';
@@ -44,6 +45,7 @@ Future<void> main() async {
   await RejaXotira.instance.load(); // mnemonika rejalari
   RejaXotira.instance.kuzatuvniBoshla();
   await UzYozuv.instance.load(); // lotin yoki kirill
+  await HarfOlchami.instance.load(); // matn o'lchami
   await Mavzu.instance.load(); // yorug' yoki qorong'u (palitrani ham o'rnatadi)
   await Tovush.load(); // mashq tovushlari yoqilgan/o'chiq
   // Ovozni oldindan sozlaymiz — tugma bosilganda kutish bo'lmasin
@@ -149,6 +151,22 @@ class ArabApp extends StatelessWidget {
         scaffoldMessengerKey: xabarKaliti,
         navigatorObservers: [ManzilKuzatuvchi()],
         theme: AppTheme.light,
+        // Harf o'lchami: telefonning o'z shrift o'lchami ustiga ko'paytiriladi.
+        builder: (context, child) => ListenableBuilder(
+          listenable: HarfOlchami.instance,
+          builder: (context, _) {
+            final mq = MediaQuery.of(context);
+            return MediaQuery(
+              data: mq.copyWith(
+                textScaler: _KopaytirilganScaler(
+                  mq.textScaler,
+                  HarfOlchami.instance.koeff,
+                ),
+              ),
+              child: child!,
+            );
+          },
+        ),
         home: KirishDarvozasi(
           kod: kirishKodi,
           kerak: darvozaKerak,
@@ -157,4 +175,24 @@ class ArabApp extends StatelessWidget {
       ),
     );
   }
+}
+
+/// Tizim shrift o'lchamini [k] marta kattalashtiradi.
+class _KopaytirilganScaler extends TextScaler {
+  final TextScaler asos;
+  final double k;
+  const _KopaytirilganScaler(this.asos, this.k);
+
+  @override
+  double scale(double fontSize) => asos.scale(fontSize) * k;
+
+  @override
+  double get textScaleFactor => asos.scale(1) * k;
+
+  @override
+  bool operator ==(Object other) =>
+      other is _KopaytirilganScaler && other.asos == asos && other.k == k;
+
+  @override
+  int get hashCode => Object.hash(asos, k);
 }

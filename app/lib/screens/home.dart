@@ -6,6 +6,7 @@ import 'package:flutter/material.dart' hide Text;
 import '../widgets/uz_text.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../harf_olchami.dart';
 import '../main.dart';
 import '../progress.dart';
 import '../theme.dart';
@@ -560,6 +561,7 @@ class _Hero extends StatelessWidget {
                                   ? AppColors.coral
                                   : AppColors.coral.withValues(alpha: 0.55),
                             ),
+                            const _HarfTugmasi(),
                             const _YozuvTugmasi(),
                             const _MavzuTugmasi(),
                             const _OvozTugmasi(),
@@ -668,6 +670,49 @@ class _MavzuTugmasi extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _HarfTugmasi extends StatelessWidget {
+  const _HarfTugmasi();
+
+  @override
+  Widget build(BuildContext context) {
+    return ListenableBuilder(
+      listenable: HarfOlchami.instance,
+      builder: (context, _) => Tactile(
+        child: Material(
+          color: Colors.white.withValues(alpha: 0.14),
+          borderRadius: BorderRadius.circular(999),
+          child: InkWell(
+            borderRadius: BorderRadius.circular(999),
+            onTap: HarfOlchami.instance.almashtir,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Icon(
+                    Icons.format_size_rounded,
+                    size: 15,
+                    color: AppColors.goldLight,
+                  ),
+                  const SizedBox(width: 5),
+                  XomText(
+                    'Harf: ${HarfOlchami.instance.nomi}',
+                    style: const TextStyle(
+                      color: AppColors.goldLight,
+                      fontWeight: FontWeight.w800,
+                      fontSize: 12.5,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),

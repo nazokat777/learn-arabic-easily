@@ -21,6 +21,10 @@
 
   <link rel="icon" type="image/png" href="favicon.png"/>
 
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
   <title>Arab tilini oson o'rganamiz</title>
   <link rel="manifest" href="manifest.json">
 
@@ -31,6 +35,44 @@
     chizilgach (`flutter-first-frame`) parda erib yo'qoladi va ilovaning
     o'z ochilish sahnasi davom ettiradi.
   -->
+  <script>
+    // DOIM YANGI NUSXA: GitHub Pages fayllarga 10 daqiqalik brauzer keshi
+    // beradi, shuning uchun foydalanuvchi (istalgan brauzerda) eski index.html
+    // ni ko'rib qolishi mumkin. CI har buildga o'z belgisini (BUILD_ID) yozadi
+    // va build_id.txt qo'yadi. Shu yerda har ochilganda server belgisi (kesh
+    // o'tkazilmagan holda) olinadi; farq bo'lsa kesh tozalanib, sahifa yangi
+    // manzil (?v=belgi) bilan qayta ochiladi. Ko'pi bilan bir marta — halqa yo'q.
+    (function () {
+      var BUILD_ID = '__BUILD_ID__';
+      if (BUILD_ID.indexOf('__') === 0) return; // lokal build — tekshirilmaydi
+      window.BUILD_ID = BUILD_ID;
+      function tozala() {
+        var ish = [];
+        try {
+          if (navigator.serviceWorker) ish.push(navigator.serviceWorker.getRegistrations()
+            .then(function (r) { return Promise.all(r.map(function (x) { return x.unregister(); })); }));
+          if (window.caches) ish.push(caches.keys()
+            .then(function (k) { return Promise.all(k.map(function (x) { return caches.delete(x); })); }));
+        } catch (e) {}
+        return Promise.all(ish).catch(function () {});
+      }
+      fetch('build_id.txt?t=' + Date.now(), { cache: 'no-store' })
+        .then(function (r) { return r.ok ? r.text() : ''; })
+        .then(function (id) {
+          id = (id || '').trim();
+          if (!id || id === BUILD_ID) return;
+          var kalit = 'qayta_' + id, bor = false;
+          try { bor = sessionStorage.getItem(kalit) === '1'; sessionStorage.setItem(kalit, '1'); } catch (e) {}
+          if (bor) return;
+          tozala().then(function () {
+            var u = new URL(location.href);
+            u.searchParams.set('v', id);
+            location.replace(u.toString());
+          });
+        })
+        .catch(function () {});
+    })();
+  </script>
   <style>
     html, body { height: 100%; margin: 0; background: #07332B; }
     #parda {

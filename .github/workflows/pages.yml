@@ -57,6 +57,21 @@ jobs:
           flutter pub get
           flutter build web --release --base-href "/learn-arabic-easily/"
 
+      - name: Kesh belgisi (brauzer eski nusxada qolib ketmasin)
+        # GitHub Pages fayllarga 10 daqiqalik kesh beradi. Har buildga belgi
+        # (commit) yoziladi: index.html ichidagi BUILD_ID, bootstrap va
+        # main.dart.js manzillariga ?v=belgi, hamda build_id.txt. index.html
+        # ochilganda build_id.txt (keshsiz) bilan solishtirib, eskirgan bo'lsa
+        # keshni tozalab qayta ochadi.
+        working-directory: app
+        run: |
+          ID="${GITHUB_SHA:0:12}"
+          sed -i "s/__BUILD_ID__/$ID/" build/web/index.html
+          sed -i "s#src=\"flutter_bootstrap.js\"#src=\"flutter_bootstrap.js?v=$ID\"#" build/web/index.html
+          sed -i "s#\"mainJsPath\":\"main.dart.js\"#\"mainJsPath\":\"main.dart.js?v=$ID\"#" build/web/flutter_bootstrap.js
+          echo "$ID" > build/web/build_id.txt
+          grep -c "$ID" build/web/index.html build/web/flutter_bootstrap.js
+
       - name: Ovoz fayllarini saytga nusxalash
         # Kliplar (257 MB) Flutter asset'i EMAS - APK ichiga sig'masligi uchun
         # ular oddiy fayl bo'lib saytda turadi. Ilova ularni

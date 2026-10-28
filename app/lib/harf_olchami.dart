@@ -9,8 +9,8 @@ class HarfOlchami extends ValueNotifier<int> {
   static final HarfOlchami instance = HarfOlchami._();
 
   static const _kalit = 'harf_olchami';
-  static const darajalar = [1.0, 1.15, 1.3, 1.5];
-  static const nomlar = ['Oddiy', 'Katta', 'Kattaroq', 'Eng katta'];
+  static const darajalar = [1.0, 1.15, 1.3, 1.5, 1.75, 2.0];
+  static const nomlar = ['Oddiy', 'Katta', 'Kattaroq', 'Juda katta', 'Ulkan', 'Eng katta'];
 
   double get koeff => darajalar[value];
   String get nomi => nomlar[value];

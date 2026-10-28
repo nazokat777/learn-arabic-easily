@@ -77,7 +77,7 @@ class SozLugat {
     for (final q in const ['ها', 'هم', 'كم', 'نا', 'ي', 'ك', 'ه', 'ت']) {
       if (k.length > q.length + 2 && k.endsWith(q)) {
         final r = k.substring(0, k.length - q.length);
-        for (final a in [r, '${r}ة', '${r}ه']) {
+        for (final a in [r, '$rة', '$rه']) {
           final t = m[a] ?? (a.startsWith('ال') ? m[a.substring(2)] : null);
           if (t != null) return "$t (qo'shimchali shakl)";
         }

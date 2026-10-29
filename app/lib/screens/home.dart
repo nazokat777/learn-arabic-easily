@@ -324,6 +324,18 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 14),
+                        // KOMIL SARF — alohida ilova (o'z sayti), shu yerdan
+                        // bir bosishda ochiladi. Shu oynada ochiladi: APK
+                        // qobig'ida ham «orqaga» tugmasi qaytarib keladi.
+                        _ModuleCard(
+                          title: 'Komil sarf',
+                          subtitle:
+                              "Sherzod Mansur darsligi — 48 dars, kartalar, testlar, AI ustoz",
+                          arabic: 'صَرْفٌ كَامِلٌ',
+                          accent: AppColors.gold,
+                          onTap: komilSarfniOch,
+                        ),
+                        const SizedBox(height: 14),
                         // USTOZ — butun ilova bo'yicha savol-javob: tarjima
                         // (ikki tomonga) va grammatika izohi, javob manbasi
                         // bilan. Internet kerak emas.
@@ -928,12 +940,13 @@ class _TezYol extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bolimlar = <(String, String, Color, Widget Function())>[
+    final bolimlar = <(String, String, Color, Widget Function()?)>[
       ('Alifbo', 'أ', AppColors.emerald, () => const AlifboHome()),
       ('Qiroat', 'اِقْرَأْ', AppColors.teal, () => const QiroatBooksHome()),
       ('Mashqlar', 'تَمَارِين', AppColors.amber, () => const MashqlarHome()),
       ('Nahv', 'نَحْو', AppColors.coral, () => const NahvHome()),
       ('Sarf', 'صَرْف', AppColors.indigo, () => const SarfHome()),
+      ('Komil sarf', 'كَامِل', AppColors.gold, null), // alohida sayt
     ];
     return SizedBox(
       height: 44,
@@ -953,10 +966,12 @@ class _TezYol extends StatelessWidget {
                 borderRadius: BorderRadius.circular(999),
                 child: InkWell(
                   borderRadius: BorderRadius.circular(999),
-                  onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (_) => ekran()),
-                  ),
+                  onTap: ekran == null
+                      ? komilSarfniOch
+                      : () => Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => ekran()),
+                        ),
                   child: Container(
                     padding: const EdgeInsets.symmetric(horizontal: 14),
                     decoration: BoxDecoration(
@@ -3315,4 +3330,14 @@ class _ApkBanner extends StatelessWidget {
       ),
     );
   }
+}
+
+/// «Komil sarf» — alohida ilova (o'z sayti). Shu oynada ochiladi: brauzerda
+/// «orqaga» bu ilovaga qaytaradi, APK qobig'ida ham WebView o'sha oynada
+/// o'tadi va telefon «orqaga» tugmasi qaytarib keladi.
+void komilSarfniOch() {
+  launchUrl(
+    Uri.parse('https://komil-sarf.vercel.app/'),
+    webOnlyWindowName: '_self',
+  );
 }

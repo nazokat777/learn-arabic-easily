@@ -91,7 +91,10 @@ class _SaytEkraniState extends State<SaytEkrani> {
     if (platform is AndroidWebViewController) {
       platform.setMediaPlaybackRequiresUserGesture(false);
     }
-    _c.loadRequest(Uri.parse(saytManzili));
+    // Har ochilishda WebView keshi tozalanadi: GitHub Pages 10 daqiqalik kesh
+    // beradi, eski sahifa ko'rinib qolmasin. Sayt o'zi ham build_id.txt bilan
+    // yangilanishni tekshiradi; bu — qo'shimcha kafolat.
+    _c.clearCache().whenComplete(() => _c.loadRequest(Uri.parse(saytManzili)));
   }
 
   Future<void> _orqaga(bool didPop, Object? _) async {

@@ -336,6 +336,18 @@ class HomeScreen extends StatelessWidget {
                           onTap: komilSarfniOch,
                         ),
                         const SizedBox(height: 14),
+                        // MADINA DARSLIGI — alohida ilova (o'z sayti):
+                        // Durusul-lug'atil-arabiyya sahifama-sahifa, tarjima,
+                        // talaffuz, qoidalar. Shu oynada ochiladi.
+                        _ModuleCard(
+                          title: 'Madina darsligi',
+                          subtitle:
+                              "Durusul-lug'atil-arabiyya — sahifama-sahifa, tarjima, talaffuz, qoidalar",
+                          arabic: 'دُرُوسُ اللُّغَةِ',
+                          accent: AppColors.teal,
+                          onTap: madinaniOch,
+                        ),
+                        const SizedBox(height: 14),
                         // USTOZ — butun ilova bo'yicha savol-javob: tarjima
                         // (ikki tomonga) va grammatika izohi, javob manbasi
                         // bilan. Internet kerak emas.
@@ -947,6 +959,7 @@ class _TezYol extends StatelessWidget {
       ('Nahv', 'نَحْو', AppColors.coral, () => const NahvHome()),
       ('Sarf', 'صَرْف', AppColors.indigo, () => const SarfHome()),
       ('Komil sarf', 'كَامِل', AppColors.gold, null), // alohida sayt
+      ('Madina', 'دُرُوس', AppColors.teal, null), // alohida sayt
     ];
     return SizedBox(
       height: 44,
@@ -967,7 +980,7 @@ class _TezYol extends StatelessWidget {
                 child: InkWell(
                   borderRadius: BorderRadius.circular(999),
                   onTap: ekran == null
-                      ? komilSarfniOch
+                      ? (nom == 'Madina' ? madinaniOch : komilSarfniOch)
                       : () => Navigator.push(
                           context,
                           MaterialPageRoute(builder: (_) => ekran()),
@@ -3338,6 +3351,15 @@ class _ApkBanner extends StatelessWidget {
 void komilSarfniOch() {
   launchUrl(
     Uri.parse('https://komil-sarf.vercel.app/'),
+    webOnlyWindowName: '_self',
+  );
+}
+
+/// «Madina darsligi» — alohida ilova (o'z sayti), Komil sarf kabi shu
+/// oynada ochiladi.
+void madinaniOch() {
+  launchUrl(
+    Uri.parse('https://madina-darsligi.vercel.app/'),
     webOnlyWindowName: '_self',
   );
 }

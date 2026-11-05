@@ -24,6 +24,7 @@ import 'qiroat_drill.dart';
 import 'tarjima_mashqi.dart';
 import 'gapma_gap_tarjima.dart';
 import 'qiroat_match.dart';
+import 'sanoq_ekrani.dart';
 import 'lesson/lesson_flow.dart';
 import 'lesson/master_drill.dart';
 import 'lesson/sentence_text.dart';
@@ -548,6 +549,15 @@ class DarsOyinlari extends StatelessWidget {
   Widget build(BuildContext context) {
     return _BoshqaOyinlar(
       children: [
+        // SANOQ — matnni 33 marta (yoki o'zi belgilagan marta) o'qib yodlash.
+        _exerciseButton(
+          context,
+          color: AppColors.gold,
+          icon: Icons.repeat_rounded,
+          label: "Sanoq bilan yodlash — matnni 33 (yoki xohlagancha) marta o'qish",
+          page: SanoqEkrani(lesson: lesson),
+        ),
+        const SizedBox(height: 10),
         _exerciseButton(
           context,
           color: AppColors.gold,

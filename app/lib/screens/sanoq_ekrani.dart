@@ -1,0 +1,1016 @@
+import '../uz_yozuv.dart';
+import 'package:flutter/material.dart' hide Text;
+import 'package:shared_preferences/shared_preferences.dart';
+
+import '../arabic.dart';
+import '../content.dart';
+import '../main.dart';
+import '../services/tts.dart';
+import '../theme.dart';
+import '../widgets/motion.dart';
+import '../widgets/uz_text.dart';
+import 'lesson/quiz_flow.dart';
+import 'lesson/sentence_text.dart';
+
+/// «Sanoq bilan yodlash» — darsning TO'LIQ matni belgilangan marta (standart
+/// 33) ketma-ket chiqadi: o'quvchi har safar matnni o'qib, o'zi tarjima
+/// qiladi va «O'qidim» bosadi. Sanoq darsga bog'lab saqlanadi — ertaga
+/// davom etsa bo'ladi. Har 11-sanoqda va oxirida gap tekshiruvi, oxirida
+/// esa dars lug'ati testi.
+///
+/// Raund turlari: arabcha (matn → o'zi tarjima qiladi, tarjimani ochib
+/// tekshiradi) va o'zbekcha (tarjima → arabchasini o'zi aytadi, keyin
+/// ochadi). «Aralash» rejimida ikkisi navbatma-navbat keladi.
+class SanoqEkrani extends StatefulWidget {
+  final QiroatLesson lesson;
+  const SanoqEkrani({super.key, required this.lesson});
+
+  static const maqsadlar = [7, 11, 21, 33, 50, 100];
+  static const standartMaqsad = 33;
+
+  /// Har nechta sanoqda oraliq tekshiruv.
+  static const tekshiruvQadami = 11;
+
+  @override
+  State<SanoqEkrani> createState() => _SanoqEkraniState();
+}
+
+enum SanoqRejim { arabcha, ozbekcha, aralash }
+
+class _SanoqEkraniState extends State<SanoqEkrani> {
+  late final List<String> _gaplar = splitSentences(widget.lesson.reading);
+  int _sanoq = 0; // bajarilgan o'qishlar
+  int _maqsad = SanoqEkrani.standartMaqsad;
+  SanoqRejim _rejim = SanoqRejim.arabcha;
+  bool _ochiq = false; // joriy raundda yashirin tomon ochilganmi
+  bool _yuklandi = false;
+  final _skrol = ScrollController();
+
+  String get _kalit => 'sanoq_${widget.lesson.completionId}';
+
+  @override
+  void initState() {
+    super.initState();
+    _yukla();
+  }
+
+  @override
+  void dispose() {
+    _skrol.dispose();
+    Tts.instance.stop();
+    super.dispose();
+  }
+
+  Future<void> _yukla() async {
+    final p = await SharedPreferences.getInstance();
+    if (!mounted) return;
+    setState(() {
+      _sanoq = p.getInt('$_kalit.soni') ?? 0;
+      _maqsad = p.getInt('$_kalit.maqsad') ?? SanoqEkrani.standartMaqsad;
+      _rejim =
+          SanoqRejim.values[(p.getInt('$_kalit.rejim') ?? 0).clamp(
+            0,
+            SanoqRejim.values.length - 1,
+          )];
+      if (_sanoq > _maqsad) _sanoq = _maqsad;
+      _yuklandi = true;
+    });
+  }
+
+  Future<void> _saqla() async {
+    final p = await SharedPreferences.getInstance();
+    await p.setInt('$_kalit.soni', _sanoq);
+    await p.setInt('$_kalit.maqsad', _maqsad);
+    await p.setInt('$_kalit.rejim', _rejim.index);
+  }
+
+  /// Joriy raund o'zbekcha tomondan boshlanadimi.
+  bool get _ozbekchaRaund => switch (_rejim) {
+    SanoqRejim.arabcha => false,
+    SanoqRejim.ozbekcha => true,
+    SanoqRejim.aralash => _sanoq.isOdd,
+  };
+
+  bool get _tugadi => _sanoq >= _maqsad;
+
+  Future<void> _oqidim() async {
+    if (_tugadi) return;
+    Haptic.ok();
+    Tts.instance.stop();
+    setState(() {
+      _sanoq++;
+      _ochiq = false;
+    });
+    // Keyingi o'qish matn boshidan boshlanadi.
+    if (_skrol.hasClients) _skrol.jumpTo(0);
+    await _saqla();
+    progress.addXp(1);
+    final tekshiruv = _tugadi || _sanoq % SanoqEkrani.tekshiruvQadami == 0;
+    if (tekshiruv && _gaplar.length >= 2 && mounted) {
+      await _gapTekshiruvi();
+    }
+    if (_tugadi && mounted) await _yakun();
+  }
+
+  Future<void> _gapTekshiruvi() async {
+    final natija = await Navigator.of(context).push<int>(
+      MaterialPageRoute(
+        builder: (_) => _GapTekshiruvi(lesson: widget.lesson, gaplar: _gaplar),
+      ),
+    );
+    if (natija != null && natija > 0) progress.addXp(natija * 2);
+  }
+
+  Future<void> _yakun() async {
+    final bosildi = await showDialog<bool>(
+      context: context,
+      builder: (c) => AlertDialog(
+        title: Text('$_maqsad marta o\'qildi!'),
+        content: Text(
+          'Matn $_maqsad marta o\'qib chiqildi. Endi dars lug\'ati bo\'yicha '
+          'test — yodlanganini tekshiramiz.',
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(c, false),
+            child: Text('Keyinroq'),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.pop(c, true),
+            child: Text('Testni boshlash'),
+          ),
+        ],
+      ),
+    );
+    if (bosildi == true && mounted) {
+      await Navigator.of(context).push(
+        MaterialPageRoute(builder: (_) => _LugatTesti(lesson: widget.lesson)),
+      );
+    }
+  }
+
+  Future<void> _qaytaBoshla() async {
+    final ha = await showDialog<bool>(
+      context: context,
+      builder: (c) => AlertDialog(
+        title: Text('Sanoqni noldan boshlaymizmi?'),
+        content: Text('Hozirgi $_sanoq / $_maqsad sanoq o\'chadi.'),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(c, false),
+            child: Text('Yo\'q'),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.pop(c, true),
+            child: Text('Ha, noldan'),
+          ),
+        ],
+      ),
+    );
+    if (ha == true && mounted) {
+      setState(() {
+        _sanoq = 0;
+        _ochiq = false;
+      });
+      await _saqla();
+    }
+  }
+
+  Future<void> _maqsadniTanla() async {
+    final tanlov = await showModalBottomSheet<int>(
+      context: context,
+      showDragHandle: true,
+      builder: (c) => _MaqsadTanlash(joriy: _maqsad),
+    );
+    if (tanlov != null && tanlov > 0 && mounted) {
+      setState(() {
+        _maqsad = tanlov;
+        if (_sanoq > _maqsad) _sanoq = _maqsad;
+      });
+      await _saqla();
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final l = widget.lesson;
+    final ozbekcha = _ozbekchaRaund;
+    return Scaffold(
+      backgroundColor: AppColors.cream,
+      appBar: AppBar(
+        title: Text('Sanoq bilan yodlash — ${l.num}-dars'),
+        actions: [
+          IconButton(
+            key: const ValueKey('sanoq-yordam'),
+            tooltip: uz('Bu qanday ishlaydi?'),
+            onPressed: () => _yordam(context),
+            icon: const Icon(Icons.help_outline_rounded),
+          ),
+          IconButton(
+            tooltip: uz('Noldan boshlash'),
+            onPressed: _sanoq == 0 ? null : _qaytaBoshla,
+            icon: const Icon(Icons.restart_alt_rounded),
+          ),
+        ],
+      ),
+      body: !_yuklandi
+          ? const Center(child: CircularProgressIndicator())
+          : Column(
+              children: [
+                _sarlavha(),
+                Expanded(
+                  child: ListView(
+                    controller: _skrol,
+                    padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
+                    children: [
+                      if (_sanoq == 0 && !_tugadi) ...[
+                        _tanishuvKartasi(),
+                        const SizedBox(height: 14),
+                      ],
+                      _rejimTanlash(),
+                      const SizedBox(height: 14),
+                      if (_tugadi)
+                        _tugadiKartasi()
+                      else ...[
+                        _korsatma(ozbekcha),
+                        const SizedBox(height: 10),
+                        if (ozbekcha) ...[
+                          _ozbekchaMatn(),
+                          const SizedBox(height: 12),
+                          if (_ochiq)
+                            _arabchaMatn()
+                          else
+                            _ochishTugmasi('Arabchasini ko\'rsat'),
+                        ] else ...[
+                          _arabchaMatn(),
+                          const SizedBox(height: 12),
+                          if (_ochiq)
+                            _ozbekchaMatn()
+                          else
+                            _ochishTugmasi('Tarjimani ko\'rsat'),
+                        ],
+                      ],
+                    ],
+                  ),
+                ),
+                if (!_tugadi) _pastkiTugma(),
+              ],
+            ),
+    );
+  }
+
+  /// Yangi o'quvchiga oddiy tilda: nima qilish kerak.
+  Widget _tanishuvKartasi() {
+    return Container(
+      key: const ValueKey('sanoq-tanishuv'),
+      padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),
+      decoration: BoxDecoration(
+        color: AppColors.gold.withValues(alpha: 0.1),
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: AppColors.gold.withValues(alpha: 0.45)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              const Icon(Icons.lightbulb_rounded, color: AppColors.gold),
+              const SizedBox(width: 8),
+              Text(
+                'Bu qanday ishlaydi?',
+                style: TextStyle(
+                  fontWeight: FontWeight.w900,
+                  fontSize: 16,
+                  color: AppColors.ink,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 8),
+          Text(
+            "Matnni ko'p marta takror o'qisangiz, u yodda qoladi. Bu ekran "
+            "o'qishlaringizni siz uchun sanab boradi (standart: 33 marta).",
+            style: TextStyle(fontSize: 14, height: 1.45, color: AppColors.ink),
+          ),
+          const SizedBox(height: 10),
+          _qadam(
+            1,
+            "Pastdagi matnni ovoz chiqarib o'qing va o'zingiz "
+            'tarjima qiling.',
+          ),
+          _qadam(
+            2,
+            "«Tarjimani ko'rsat»ni bosib, to'g'ri aytganingizni "
+            'tekshiring.',
+          ),
+          _qadam(
+            3,
+            "«O'qidim» tugmasini bosing — sanoq 1 ga oshadi. "
+            "Shuni $_maqsad marta takrorlaysiz.",
+          ),
+          _qadam(
+            4,
+            "Har 11-o'qishdan keyin kichik test, oxirida esa "
+            "dars lug'ati testi chiqadi.",
+          ),
+          const SizedBox(height: 6),
+          Text(
+            "Bugun hammasini qilish shart emas: sanoq saqlanadi, ertaga "
+            "qolgan joyidan davom etasiz. Nechta marta o'qishni yuqoridagi "
+            "«$_maqsad marta» tugmasidan o'zgartirasiz.",
+            style: TextStyle(
+              fontSize: 12.5,
+              height: 1.4,
+              color: AppColors.matn2,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _qadam(int n, String matn) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 6),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            width: 22,
+            height: 22,
+            alignment: Alignment.center,
+            decoration: const BoxDecoration(
+              color: AppColors.gold,
+              shape: BoxShape.circle,
+            ),
+            child: Text(
+              '$n',
+              style: const TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.w900,
+                color: Color(0xFF0B1A17),
+              ),
+            ),
+          ),
+          const SizedBox(width: 8),
+          Expanded(
+            child: Text(
+              matn,
+              style: TextStyle(fontSize: 14, height: 1.4, color: AppColors.ink),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _yordam(BuildContext context) {
+    showModalBottomSheet<void>(
+      context: context,
+      showDragHandle: true,
+      builder: (_) => SingleChildScrollView(
+        padding: const EdgeInsets.fromLTRB(16, 0, 16, 24),
+        child: _tanishuvKartasi(),
+      ),
+    );
+  }
+
+  Widget _sarlavha() {
+    final ulush = _maqsad == 0 ? 0.0 : _sanoq / _maqsad;
+    return Container(
+      padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
+      color: AppColors.karta,
+      child: Row(
+        children: [
+          SizedBox(
+            width: 64,
+            height: 64,
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                CircularProgressIndicator(
+                  value: ulush,
+                  strokeWidth: 6,
+                  color: AppColors.gold,
+                  backgroundColor: AppColors.chiziq2,
+                ),
+                Text(
+                  '$_sanoq',
+                  key: const ValueKey('sanoq-soni'),
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w900,
+                    color: AppColors.ink,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(width: 14),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  '$_sanoq / $_maqsad marta o\'qildi',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w800,
+                    fontSize: 16,
+                    color: AppColors.ink,
+                  ),
+                ),
+                const SizedBox(height: 2),
+                Text(
+                  _tugadi
+                      ? 'Maqsadga yetildi'
+                      : 'Keyingi tekshiruv: '
+                            '${_keyingiTekshiruv()}-sanoqdan keyin',
+                  style: TextStyle(fontSize: 12.5, color: AppColors.matn2),
+                ),
+              ],
+            ),
+          ),
+          OutlinedButton.icon(
+            key: const ValueKey('sanoq-maqsad'),
+            onPressed: _maqsadniTanla,
+            icon: const Icon(Icons.tune_rounded, size: 18),
+            label: Text('$_maqsad marta'),
+            style: OutlinedButton.styleFrom(
+              foregroundColor: AppColors.gold,
+              side: const BorderSide(color: AppColors.gold),
+              visualDensity: VisualDensity.compact,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  int _keyingiTekshiruv() {
+    final q = SanoqEkrani.tekshiruvQadami;
+    final k = (_sanoq ~/ q + 1) * q;
+    return k > _maqsad ? _maqsad : k;
+  }
+
+  Widget _rejimTanlash() {
+    return SegmentedButton<SanoqRejim>(
+      segments: [
+        ButtonSegment(
+          value: SanoqRejim.arabcha,
+          label: Text('Arabcha'),
+          icon: const Icon(Icons.menu_book_rounded, size: 16),
+        ),
+        ButtonSegment(
+          value: SanoqRejim.ozbekcha,
+          label: Text('O\'zbekcha'),
+          icon: const Icon(Icons.translate_rounded, size: 16),
+        ),
+        ButtonSegment(
+          value: SanoqRejim.aralash,
+          label: Text('Aralash'),
+          icon: const Icon(Icons.swap_horiz_rounded, size: 16),
+        ),
+      ],
+      selected: {_rejim},
+      onSelectionChanged: (s) {
+        setState(() {
+          _rejim = s.first;
+          _ochiq = false;
+        });
+        _saqla();
+      },
+      style: SegmentedButton.styleFrom(
+        selectedBackgroundColor: AppColors.gold.withValues(alpha: 0.18),
+        selectedForegroundColor: AppColors.ink,
+      ),
+    );
+  }
+
+  Widget _korsatma(bool ozbekcha) {
+    return Text(
+      ozbekcha
+          ? '${_sanoq + 1}-o\'qish: o\'zbekchasini o\'qing, arabchasini '
+                'o\'zingiz ayting, keyin ochib solishtiring.'
+          : '${_sanoq + 1}-o\'qish: matnni ovoz chiqarib o\'qing va o\'zingiz '
+                'tarjima qiling, keyin tarjimani ochib tekshiring.',
+      style: TextStyle(
+        fontSize: 13.5,
+        color: AppColors.matn2,
+        fontWeight: FontWeight.w600,
+      ),
+    );
+  }
+
+  Widget _arabchaMatn() {
+    final l = widget.lesson;
+    return Container(
+      key: const ValueKey('sanoq-arabcha'),
+      width: double.infinity,
+      padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
+      decoration: BoxDecoration(
+        color: AppColors.karta,
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: AppColors.chiziq2),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Row(
+            children: [
+              Directionality(
+                textDirection: TextDirection.rtl,
+                child: Text(
+                  l.titleAr,
+                  style: AppTheme.arabic(size: 26, color: AppColors.gold),
+                ),
+              ),
+              const Spacer(),
+              IconButton(
+                tooltip: uz('Butun matnni tinglash'),
+                onPressed: () =>
+                    Tts.instance.speak(l.reading, id: 'sanoq-matn-$_sanoq'),
+                icon: const Icon(
+                  Icons.volume_up_rounded,
+                  color: AppColors.emerald,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 4),
+          for (var i = 0; i < _gaplar.length; i++)
+            Padding(
+              padding: const EdgeInsets.only(bottom: 6),
+              child: Directionality(
+                textDirection: TextDirection.rtl,
+                child: SentenceText(
+                  sentence: _gaplar[i],
+                  vocab: l.vocab,
+                  reading: l.reading,
+                  lessonId: l.completionId,
+                  size: 30,
+                ),
+              ),
+            ),
+        ],
+      ),
+    );
+  }
+
+  Widget _ozbekchaMatn() {
+    final l = widget.lesson;
+    final matn = l.translation.trim().isNotEmpty
+        ? l.translation.trim()
+        : l.tarjimaGuruhlari.map((g) => g.matn).join(' ');
+    return Container(
+      key: const ValueKey('sanoq-ozbekcha'),
+      width: double.infinity,
+      padding: const EdgeInsets.fromLTRB(16, 12, 16, 14),
+      decoration: BoxDecoration(
+        color: AppColors.indigo.withValues(alpha: 0.07),
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: AppColors.indigo.withValues(alpha: 0.35)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          if (l.tarjimaSarlavha.isNotEmpty)
+            Padding(
+              padding: const EdgeInsets.only(bottom: 6),
+              child: Text(
+                l.tarjimaSarlavha,
+                style: const TextStyle(
+                  fontWeight: FontWeight.w800,
+                  color: AppColors.indigo,
+                  fontSize: 16,
+                ),
+              ),
+            ),
+          Text(
+            matn,
+            style: TextStyle(fontSize: 17, height: 1.55, color: AppColors.ink),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _ochishTugmasi(String nomi) {
+    return OutlinedButton.icon(
+      key: const ValueKey('sanoq-och'),
+      onPressed: () {
+        Haptic.tap();
+        setState(() => _ochiq = true);
+      },
+      icon: const Icon(Icons.visibility_rounded, size: 18),
+      label: Text(nomi),
+      style: OutlinedButton.styleFrom(
+        foregroundColor: AppColors.indigo,
+        side: const BorderSide(color: AppColors.indigo),
+        padding: const EdgeInsets.symmetric(vertical: 12),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+      ),
+    );
+  }
+
+  Widget _pastkiTugma() {
+    return SafeArea(
+      top: false,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
+        child: SizedBox(
+          width: double.infinity,
+          child: FilledButton.icon(
+            key: const ValueKey('sanoq-oqidim'),
+            onPressed: _oqidim,
+            icon: const Icon(Icons.check_rounded),
+            label: Text(
+              'O\'qidim — ${_sanoq + 1} / $_maqsad',
+              style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16),
+            ),
+            style: FilledButton.styleFrom(
+              backgroundColor: AppColors.gold,
+              foregroundColor: const Color(0xFF0B1A17),
+              padding: const EdgeInsets.symmetric(vertical: 16),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _tugadiKartasi() {
+    return Container(
+      padding: const EdgeInsets.all(18),
+      decoration: BoxDecoration(
+        color: AppColors.success.withValues(alpha: 0.08),
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: AppColors.success.withValues(alpha: 0.4)),
+      ),
+      child: Column(
+        children: [
+          const Icon(
+            Icons.emoji_events_rounded,
+            color: AppColors.success,
+            size: 44,
+          ),
+          const SizedBox(height: 8),
+          Text(
+            'Matn $_maqsad marta o\'qildi',
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w900,
+              color: AppColors.ink,
+            ),
+          ),
+          const SizedBox(height: 12),
+          Wrap(
+            spacing: 10,
+            runSpacing: 8,
+            alignment: WrapAlignment.center,
+            children: [
+              FilledButton.icon(
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => _LugatTesti(lesson: widget.lesson),
+                  ),
+                ),
+                icon: const Icon(Icons.quiz_rounded),
+                label: Text('Lug\'at testi'),
+              ),
+              if (_gaplar.length >= 2)
+                OutlinedButton.icon(
+                  onPressed: _gapTekshiruvi,
+                  icon: const Icon(Icons.fact_check_rounded),
+                  label: Text('Gap tekshiruvi'),
+                ),
+              OutlinedButton.icon(
+                onPressed: _maqsadniTanla,
+                icon: const Icon(Icons.add_rounded),
+                label: Text('Maqsadni oshirish'),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// Maqsad tanlash varaqasi: tayyor sonlar yoki o'zi kiritadi.
+class _MaqsadTanlash extends StatefulWidget {
+  final int joriy;
+  const _MaqsadTanlash({required this.joriy});
+
+  @override
+  State<_MaqsadTanlash> createState() => _MaqsadTanlashState();
+}
+
+class _MaqsadTanlashState extends State<_MaqsadTanlash> {
+  late final _c = TextEditingController(text: '${widget.joriy}');
+
+  @override
+  void dispose() {
+    _c.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.fromLTRB(
+        20,
+        0,
+        20,
+        20 + MediaQuery.of(context).viewInsets.bottom,
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Matn necha marta o\'qilsin?',
+            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800),
+          ),
+          const SizedBox(height: 12),
+          Wrap(
+            spacing: 8,
+            runSpacing: 8,
+            children: [
+              for (final n in SanoqEkrani.maqsadlar)
+                ChoiceChip(
+                  key: ValueKey('maqsad-$n'),
+                  label: Text('$n'),
+                  selected: widget.joriy == n,
+                  onSelected: (_) => Navigator.pop(context, n),
+                ),
+            ],
+          ),
+          const SizedBox(height: 14),
+          Row(
+            children: [
+              Expanded(
+                child: TextField(
+                  key: const ValueKey('maqsad-kiritish'),
+                  controller: _c,
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(
+                    labelText: 'O\'zim belgilayman (1–500)',
+                    border: const OutlineInputBorder(),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 10),
+              FilledButton(
+                key: const ValueKey('maqsad-ok'),
+                onPressed: () {
+                  final n = int.tryParse(_c.text.trim());
+                  if (n == null || n < 1 || n > 500) return;
+                  Navigator.pop(context, n);
+                },
+                child: Text('Saqlash'),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// Gap tekshiruvi: tarjima guruhlari bo'yicha ikki yo'nalishda 4 variantli
+/// savollar — o'zbekcha → arabcha gap va arabcha → o'zbekcha tarjima.
+/// Variantlar shu darsning boshqa gaplaridan olinadi.
+class _GapTekshiruvi extends StatefulWidget {
+  final QiroatLesson lesson;
+  final List<String> gaplar;
+  const _GapTekshiruvi({required this.lesson, required this.gaplar});
+
+  @override
+  State<_GapTekshiruvi> createState() => _GapTekshiruviState();
+}
+
+class _GapSavol {
+  final bool arabchadan; // true: arabcha gap → o'zbekcha tarjima
+  final String savol;
+  final String togri;
+  final List<String> variantlar;
+  _GapSavol(this.arabchadan, this.savol, this.togri, this.variantlar);
+}
+
+class _GapTekshiruviState extends State<_GapTekshiruvi> {
+  late final List<_GapSavol> _savollar = _tuz();
+  int _i = 0;
+  int _togri = 0;
+  String? _tanlangan;
+
+  List<_GapSavol> _tuz() {
+    // Guruh: (arabcha matn, o'zbekcha tarjima) — tarjimasi bo'sh bo'lmagan
+    // va takrorlanmaydiganlar.
+    final juft = <(String, String)>[];
+    for (final g in widget.lesson.tarjimaGuruhlari) {
+      if (g.matn.trim().isEmpty) continue;
+      if (g.boshi + g.soni > widget.gaplar.length) continue;
+      final ar = widget.gaplar.sublist(g.boshi, g.boshi + g.soni).join(' ');
+      if (juft.any((j) => j.$1 == ar || j.$2 == g.matn)) continue;
+      juft.add((ar, g.matn));
+    }
+    if (juft.length < 2) return const [];
+    final r = juft.toList()..shuffle();
+    final savollar = <_GapSavol>[];
+    for (var k = 0; k < r.length; k++) {
+      final (ar, uzMatn) = r[k];
+      final boshqalar = juft.where((j) => j.$1 != ar).toList()..shuffle();
+      final arabchadan = k.isEven;
+      final togri = arabchadan ? uzMatn : ar;
+      final variantlar = [
+        togri,
+        for (final b in boshqalar.take(3)) arabchadan ? b.$2 : b.$1,
+      ]..shuffle();
+      savollar.add(
+        _GapSavol(arabchadan, arabchadan ? ar : uzMatn, togri, variantlar),
+      );
+    }
+    return savollar;
+  }
+
+  void _tanla(String v) {
+    if (_tanlangan != null) return;
+    final togri = v == _savollar[_i].togri;
+    togri ? Haptic.ok() : Haptic.wrong();
+    setState(() {
+      _tanlangan = v;
+      if (togri) _togri++;
+    });
+  }
+
+  void _keyingi() {
+    if (_i + 1 >= _savollar.length) {
+      Navigator.pop(context, _togri);
+      return;
+    }
+    setState(() {
+      _i++;
+      _tanlangan = null;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (_savollar.isEmpty) {
+      return Scaffold(
+        appBar: AppBar(title: Text('Gap tekshiruvi')),
+        body: Center(
+          child: Text('Bu darsda tekshiruv uchun gaplar yetarli emas.'),
+        ),
+      );
+    }
+    final s = _savollar[_i];
+    final l = widget.lesson;
+    return Scaffold(
+      backgroundColor: AppColors.cream,
+      appBar: AppBar(
+        title: Text('Gap tekshiruvi ${_i + 1} / ${_savollar.length}'),
+      ),
+      body: ListView(
+        padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
+        children: [
+          Text(
+            s.arabchadan
+                ? 'Bu gapning tarjimasi qaysi?'
+                : 'Bu tarjimaning arabchasi qaysi?',
+            style: TextStyle(
+              fontWeight: FontWeight.w700,
+              color: AppColors.matn2,
+              fontSize: 13.5,
+            ),
+          ),
+          const SizedBox(height: 8),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.all(14),
+            decoration: BoxDecoration(
+              color: AppColors.karta,
+              borderRadius: BorderRadius.circular(16),
+              border: Border.all(color: AppColors.chiziq2),
+            ),
+            child: s.arabchadan
+                ? Directionality(
+                    textDirection: TextDirection.rtl,
+                    child: SentenceText(
+                      sentence: s.savol,
+                      vocab: l.vocab,
+                      reading: l.reading,
+                      size: 28,
+                    ),
+                  )
+                : Text(
+                    s.savol,
+                    style: TextStyle(
+                      fontSize: 17,
+                      height: 1.5,
+                      color: AppColors.ink,
+                    ),
+                  ),
+          ),
+          const SizedBox(height: 14),
+          for (final v in s.variantlar) ...[
+            _variant(v, s),
+            const SizedBox(height: 8),
+          ],
+          if (_tanlangan != null) ...[
+            const SizedBox(height: 8),
+            FilledButton(
+              key: const ValueKey('gap-keyingi'),
+              onPressed: _keyingi,
+              child: Text(
+                _i + 1 >= _savollar.length
+                    ? 'Yakunlash — $_togri / ${_savollar.length}'
+                    : 'Keyingi',
+              ),
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+
+  Widget _variant(String v, _GapSavol s) {
+    final tanlangan = _tanlangan;
+    Color rang = AppColors.chiziq;
+    Color? fon;
+    if (tanlangan != null) {
+      if (v == s.togri) {
+        rang = AppColors.success;
+        fon = AppColors.success.withValues(alpha: 0.1);
+      } else if (v == tanlangan) {
+        rang = AppColors.coral;
+        fon = AppColors.coral.withValues(alpha: 0.1);
+      }
+    }
+    return InkWell(
+      key: ValueKey('gap-variant-${s.variantlar.indexOf(v)}'),
+      borderRadius: BorderRadius.circular(14),
+      onTap: () => _tanla(v),
+      child: Container(
+        width: double.infinity,
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+        decoration: BoxDecoration(
+          color: fon ?? AppColors.karta,
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(color: rang, width: tanlangan == null ? 1 : 1.6),
+        ),
+        child: s.arabchadan
+            ? Text(
+                v,
+                style: TextStyle(
+                  fontSize: 16,
+                  height: 1.45,
+                  color: AppColors.ink,
+                ),
+              )
+            : Directionality(
+                textDirection: TextDirection.rtl,
+                child: Text(v, style: AppTheme.arabic(size: 24, height: 1.8)),
+              ),
+      ),
+    );
+  }
+}
+
+/// Dars lug'ati testi — darsning asosiy [QuizStage] mustaqil ekranda.
+class _LugatTesti extends StatelessWidget {
+  final QiroatLesson lesson;
+  const _LugatTesti({required this.lesson});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppColors.cream,
+      appBar: AppBar(title: Text('Lug\'at testi — ${lesson.num}-dars')),
+      body: QuizStage(
+        lesson: lesson,
+        award: (xp) => progress.addXp(xp),
+        onFinish: (missed, total) {
+          final togri = total - missed.length;
+          if (total > 0) {
+            progress.recordAttempt(lesson.completionId, togri, total);
+          }
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(
+                missed.isEmpty
+                    ? 'Hammasi to\'g\'ri — dars yodlandi!'
+                    : 'Natija: $togri / $total. Xato so\'zlar: '
+                          '${missed.map((v) => v.ar).join('، ')}',
+              ),
+            ),
+          );
+          Navigator.of(context).pop();
+        },
+      ),
+    );
+  }
+}

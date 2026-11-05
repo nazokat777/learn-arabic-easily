@@ -92,6 +92,7 @@ class _HarflabYozishEkraniState extends State<HarflabYozishEkrani> {
   int _togri = 0; // birinchi urinishda xatosiz yig'ilganlar
   bool _tugadi = false;
   bool _tugallandi = false; // shu so'z yig'ildi
+  String? _izoh; // oxirgi xato tushuntirishi
 
   @override
   void initState() {
@@ -124,6 +125,7 @@ class _HarflabYozishEkraniState extends State<HarflabYozishEkrani> {
     ]..shuffle(_rnd);
     _tanlangan.clear();
     _xato = 0;
+    _izoh = null;
     _tugallandi = false;
     // Ovoz o'z-o'zidan chalinmaydi: o'quvchi avval O'ZI eslashga harakat
     // qilsin (faol eslash), eslolmasa karnay tugmasini bosadi. Ovoz oldindan
@@ -138,7 +140,10 @@ class _HarflabYozishEkraniState extends State<HarflabYozishEkrani> {
     // Harf ham, harakati ham mos bo'lishi kerak (sukun, tashdid, tanvin ham).
     if (bosilgan.shakl == kerak.shakl && !_tanlangan.contains(idx)) {
       Haptic.tap();
-      setState(() => _tanlangan.add(idx));
+      setState(() {
+        _tanlangan.add(idx);
+        _izoh = null;
+      });
       Tts.instance.speak(bosilgan.nom, id: 'hy-h$k');
       if (_tanlangan.length == _asl.length) _yakunla();
     } else {
@@ -147,6 +152,7 @@ class _HarflabYozishEkraniState extends State<HarflabYozishEkrani> {
       setState(() {
         _xato++;
         _silkin++;
+        _izoh = _xatoIzohi(bosilgan, k);
       });
     }
   }
@@ -198,6 +204,19 @@ class _HarflabYozishEkraniState extends State<HarflabYozishEkrani> {
         ),
       ),
     );
+  }
+
+  /// [k]-harf turgan so'zni topib, shu joy uchun tushuntirish yasaydi.
+  String _xatoIzohi(HarfBolagi bosilgan, int k) {
+    var bosh = 0;
+    for (final soz in _sozlar[_i].ar.split(RegExp(r'\s+'))) {
+      final h = harflab(soz);
+      if (k < bosh + h.length) {
+        return xatoIzohi(bosilgan, _asl[k], h, k - bosh);
+      }
+      bosh += h.length;
+    }
+    return xatoIzohi(bosilgan, _asl[k], _asl, k);
   }
 
   /// Bosilgan harflar; gapda so'zlar orasiga bo'sh joy qo'yiladi.
@@ -326,12 +345,41 @@ class _HarflabYozishEkraniState extends State<HarflabYozishEkrani> {
         Text(
           _tugallandi
               ? (_xato == 0
-                    ? "Xatosiz! To'g'ri yozdingiz."
-                    : "To'g'ri yozdingiz.")
+                    ? "To'g'ri! Xatosiz yozdingiz."
+                    : "To'g'ri bo'ldi. Bu yerda $_xato marta xato qildingiz.")
               : "Avval o'zingiz eslang; eslolmasangiz karnayni bosing. Harflarni harakati bilan, tartib bo'yicha bosing.",
           textAlign: TextAlign.center,
           style: TextStyle(color: AppColors.matn2, fontSize: 13),
         ),
+        if (_izoh != null) ...[
+          const SizedBox(height: 10),
+          Reveal(
+            key: ValueKey('hy-izoh-$_silkin'),
+            duration: const Duration(milliseconds: 350),
+            offsetY: 10,
+            child: Container(
+              key: const ValueKey('hy-izoh'),
+              width: double.infinity,
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: AppColors.coral.withValues(alpha: 0.09),
+                borderRadius: BorderRadius.circular(14),
+                border: Border.all(
+                  color: AppColors.coral.withValues(alpha: 0.4),
+                ),
+              ),
+              child: Text(
+                _izoh!,
+                style: TextStyle(
+                  fontSize: 15,
+                  height: 1.5,
+                  fontWeight: FontWeight.w600,
+                  color: AppColors.ink,
+                ),
+              ),
+            ),
+          ),
+        ],
         const SizedBox(height: 18),
         // Harflar havzasi
         Wrap(
@@ -428,7 +476,7 @@ class _HarflabYozishEkraniState extends State<HarflabYozishEkrani> {
         ),
         const SizedBox(height: 24),
         FilledButton(
-          onPressed: () => Navigator.pop(context),
+          onPressed: () => Navigator.pop(context, true),
           style: FilledButton.styleFrom(backgroundColor: AppColors.emerald),
           child: const Text('Darsga qaytish'),
         ),

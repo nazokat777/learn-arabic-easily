@@ -77,3 +77,77 @@ String? harfNomi(String ch) {
   }
   return null;
 }
+
+/// Harf shaklidagi belgilarning o'zbekcha tavsifi (fatha, shadda …).
+String harakatNomi(String shakl) {
+  final q = <String>[];
+  if (shakl.contains('ّ')) q.add('shadda (harf ikkilanadi)');
+  const nomlar = {
+    'َ': 'fatha («a»)',
+    'ِ': 'kasra («i»)',
+    'ُ': 'damma («u»)',
+    'ْ': 'sukun (unlisiz)',
+    'ً': 'tanvin («an»)',
+    'ٍ': 'tanvin («in»)',
+    'ٌ': 'tanvin («un»)',
+  };
+  nomlar.forEach((b, n) {
+    if (shakl.contains(b)) q.add(n);
+  });
+  return q.isEmpty ? 'harakatsiz' : q.join(' + ');
+}
+
+/// Xato bosilganda tushuntirish: nima bosildi, nima kerak edi va shu joyning
+/// yasalish qoidasi. [k] — so'zdagi (gapda: butun yozuvdagi) harf o'rni;
+/// [soz] — shu harf turgan so'z harflari, [i] — so'z ichidagi o'rni.
+String xatoIzohi(
+  HarfBolagi bosilgan,
+  HarfBolagi kerak,
+  List<HarfBolagi> soz,
+  int i,
+) {
+  final b = StringBuffer();
+  if (bosilgan.harf == kerak.harf) {
+    b.write(
+      'Harf to\'g\'ri, harakati xato: siz ${bosilgan.shakl} — '
+      '${harakatNomi(bosilgan.shakl)} bosdingiz. Bu yerda ${kerak.shakl} — '
+      '${harakatNomi(kerak.shakl)} kerak.',
+    );
+  } else {
+    b.write(
+      'Siz ${bosilgan.shakl} (${bosilgan.nom}) bosdingiz. Bu yerda '
+      '${kerak.shakl} (${kerak.nom}) — ${harakatNomi(kerak.shakl)} kerak.',
+    );
+  }
+  final q = _yasalishQoidasi(kerak, soz, i);
+  if (q != null) b.write('\n$q');
+  return b.toString();
+}
+
+String? _yasalishQoidasi(HarfBolagi h, List<HarfBolagi> soz, int i) {
+  final s = h.shakl;
+  final alBilan = soz.length > 2 && soz[0].harf == 'ا' && soz[1].harf == 'ل';
+  if (alBilan && i <= 1) {
+    return "«ال» — aniqlik qo'shimchasi, so'z boshiga qo'shiladi.";
+  }
+  if (h.harf == 'ة') {
+    return "«ة» (ta marbuta) so'z oxirida keladi, ko'pincha muannas belgisi.";
+  }
+  if (RegExp('[ً-ٍ]').hasMatch(s)) {
+    return "Tanvin so'z oxirida keladi va otning noaniqligini bildiradi.";
+  }
+  if (s.contains('ّ')) {
+    return 'Shadda: harf ikki marta aytiladi, lekin bir marta yoziladi.';
+  }
+  final oldingi = i > 0 ? soz[i - 1].shakl : '';
+  if (h.harf == 'ا' && s == 'ا' && oldingi.contains('َ')) {
+    return "Fathadan keyingi harakatsiz alif «a» tovushini cho'zadi.";
+  }
+  if (h.harf == 'و' && s == 'و' && oldingi.contains('ُ')) {
+    return "Dammadan keyingi harakatsiz vov «u» tovushini cho'zadi.";
+  }
+  if (h.harf == 'ي' && s == 'ي' && oldingi.contains('ِ')) {
+    return "Kasradan keyingi harakatsiz yo «i» tovushini cho'zadi.";
+  }
+  return null;
+}

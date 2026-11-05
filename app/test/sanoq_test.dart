@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:learn_arabic/arabic.dart';
 import 'package:learn_arabic/content.dart';
+import 'package:learn_arabic/harflab.dart';
 import 'package:learn_arabic/main.dart' show progress, repo;
 import 'package:learn_arabic/progress.dart';
 import 'package:learn_arabic/screens/gapma_gap_tarjima.dart' show TarjimaPaneli;
@@ -123,6 +124,30 @@ void main() {
     expect(find.byType(SentenceText), findsNWidgets(gapSoni));
   });
 
+  testWidgets("o'zbekcha rejim: sanoq faqat hammasi yozilgach oshadi", (
+    t,
+  ) async {
+    await och(t);
+    await t.tap(find.text('O\'zbekcha'));
+    await t.pumpAndSettle();
+    expect(find.textContaining('O\'qidim —'), findsNothing);
+    await t.tap(find.byKey(const ValueKey('sanoq-oqidim')));
+    await t.pumpAndSettle();
+    final nav = Navigator.of(
+      t.element(find.text('Arabchasini harflab yozing')),
+    );
+    // Yarim yo'lda chiqildi — hisoblanmaydi.
+    nav.pop();
+    await t.pumpAndSettle();
+    expect(find.text('0 / 33 marta o\'qildi'), findsOneWidget);
+
+    await t.tap(find.byKey(const ValueKey('sanoq-oqidim')));
+    await t.pumpAndSettle();
+    nav.pop(true); // oxirigacha yozildi
+    await t.pumpAndSettle();
+    expect(find.text('1 / 33 marta o\'qildi'), findsOneWidget);
+  });
+
   testWidgets('11-o\'qishdan keyin gap tekshiruvi; maqsadda lug\'at testi', (
     t,
   ) async {
@@ -170,6 +195,18 @@ void main() {
     expect(fel.felShakllari[1], 'يَقْعُدُ');
     const ot = QiroatVocab(ar: 'حُجْرَةٌ = غُرْفَةٌ', pl: '', uz: 'xona');
     expect(ot.felShakllari, isEmpty);
+  });
+
+  test("xato izohi: harakat, harf va yasalish qoidasi", () {
+    final soz = harflab('الْكِتَابُ');
+    final h = xatoIzohi(HarfBolagi('ك', 'كَاف', 'كَ'), soz[2], soz, 2);
+    expect(h, contains('harakati xato'));
+    expect(h, contains('kasra'));
+    final q = xatoIzohi(HarfBolagi('ب', 'بَاء', 'بَ'), soz[0], soz, 0);
+    expect(q, contains('aniqlik'));
+    final tanvin = harflab('كِتَابٌ');
+    final t = xatoIzohi(HarfBolagi('د', 'دَال', 'دَ'), tanvin[3], tanvin, 3);
+    expect(t, contains('noaniqligini'));
   });
 
   test('hamma darsda gap tekshiruvi uchun ≥2 juft bor (1-kitob)', () {

@@ -103,7 +103,16 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
 
   bool get _tugadi => _sanoq >= _maqsad;
 
-  Future<void> _oqidim() async {
+  /// O'zbekcha raundda sanoq «O'qidim» bilan emas, hamma gapni harfma-harf
+  /// yozib tugatgandagina oshadi (yarim yo'lda chiqilsa hisoblanmaydi).
+  bool get _yozibSanaladi => _ozbekchaRaund && _yozishGaplari.isNotEmpty;
+
+  Future<void> _yozibSana() async {
+    final tugatdi = await _harflabYoz();
+    if (tugatdi && mounted) await _oqidim(yozildi: true);
+  }
+
+  Future<void> _oqidim({bool yozildi = false}) async {
     if (_tugadi) return;
     Haptic.ok();
     Tts.instance.stop();
@@ -122,9 +131,9 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
     if (tekshiruv && _gaplar.length >= 2 && mounted) {
       await _gapTekshiruvi();
       // Oraliq tekshiruvda 3 ta gap; hamma gap oxirida yoziladi.
-      if (!_tugadi && mounted) await _harflabYoz(soni: 3);
+      if (!_tugadi && !yozildi && mounted) await _harflabYoz(soni: 3);
     }
-    if (_tugadi && mounted) await _yakun();
+    if (_tugadi && mounted) await _yakun(gaplarYozildi: yozildi);
   }
 
   /// O'zbekcha gap → arabchasini harfma-harf yozish uchun juftlar.
@@ -184,13 +193,14 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
     );
   }
 
-  Future<void> _harflabYoz({int? soni}) async {
+  /// Hamma topshiriq tugatilsa true.
+  Future<bool> _harflabYoz({int? soni}) async {
     var gaplar = _yozishGaplari;
-    if (gaplar.isEmpty) return;
+    if (gaplar.isEmpty) return false;
     if (soni != null && gaplar.length > soni) {
       gaplar = (gaplar..shuffle()).take(soni).toList();
     }
-    await Navigator.of(context).push(
+    final natija = await Navigator.of(context).push<bool>(
       MaterialPageRoute(
         builder: (_) => HarflabYozishEkrani.royxat(
           sozRoyxati: gaplar,
@@ -199,6 +209,7 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
         ),
       ),
     );
+    return natija == true;
   }
 
   Future<void> _gapTekshiruvi() async {
@@ -210,7 +221,7 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
     if (natija != null && natija > 0) progress.addXp(natija * 2);
   }
 
-  Future<void> _yakun() async {
+  Future<void> _yakun({bool gaplarYozildi = false}) async {
     final bosildi = await showDialog<bool>(
       context: context,
       builder: (c) => AlertDialog(
@@ -233,7 +244,7 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
       ),
     );
     if (bosildi == true && mounted) {
-      await _harflabYoz();
+      if (!gaplarYozildi) await _harflabYoz();
       if (!mounted) return;
       await _lugatYoz();
       if (!mounted) return;
@@ -334,19 +345,6 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
                         const SizedBox(height: 10),
                         _ochishTugmasi(ozbekcha),
                         const SizedBox(height: 10),
-                        // O'zbekcha raundda arabchasini harfma-harf yozish.
-                        if (ozbekcha && _yozishGaplari.isNotEmpty) ...[
-                          FilledButton.icon(
-                            key: const ValueKey('sanoq-harflab'),
-                            onPressed: _harflabYoz,
-                            icon: const Icon(Icons.spellcheck_rounded),
-                            label: Text('Arabchasini harfma-harf yozish'),
-                            style: FilledButton.styleFrom(
-                              backgroundColor: AppColors.indigo,
-                            ),
-                          ),
-                          const SizedBox(height: 10),
-                        ],
                         SlideSwitch(
                           child: KeyedSubtree(
                             key: ValueKey('$_sanoq-$ozbekcha'),
@@ -687,11 +685,15 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
 
   Widget _korsatma(bool ozbekcha) {
     return Text(
-      ozbekcha
-          ? '${_sanoq + 1}-o\'qish: o\'zbekchasini o\'qing, arabchasini '
-                'o\'zingiz ayting, keyin ochib solishtiring.'
-          : '${_sanoq + 1}-o\'qish: matnni ovoz chiqarib o\'qing va o\'zingiz '
-                'tarjima qiling, keyin har gap tagidagi tarjimani ochib tekshiring.',
+      (_rejim == SanoqRejim.aralash
+              ? 'Aralash: sanoqlar navbat bilan — bir safar arabcha o\'qish, '
+                    'bir safar o\'zbekchadan yozish.\n'
+              : '') +
+          (ozbekcha
+              ? '${_sanoq + 1}-sanoq: hamma gapni arabchada harfma-harf yozib '
+                    'chiqing. Hammasi tugagach sanoq 1 ga oshadi.'
+              : '${_sanoq + 1}-o\'qish: matnni ovoz chiqarib o\'qing va o\'zingiz '
+                    'tarjima qiling, keyin har gap tagidagi tarjimani ochib tekshiring.'),
       style: TextStyle(
         fontSize: 13.5,
         color: AppColors.matn2,
@@ -833,13 +835,14 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
   /// Asosiy tugma: oltin gradient, nurli soya, bosilganda jonli siqilish.
   Widget _pastkiTugma() {
     final radius = BorderRadius.circular(18);
+    final yozish = _yozibSanaladi;
     final tugma = Tactile(
       child: Material(
         color: Colors.transparent,
         child: InkWell(
           key: const ValueKey('sanoq-oqidim'),
           borderRadius: radius,
-          onTap: _oqidim,
+          onTap: yozish ? _yozibSana : _oqidim,
           child: Ink(
             decoration: BoxDecoration(
               gradient: const LinearGradient(
@@ -859,13 +862,16 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Icon(
-                    Icons.check_circle_rounded,
-                    color: Color(0xFF0B1A17),
+                  Icon(
+                    yozish
+                        ? Icons.spellcheck_rounded
+                        : Icons.check_circle_rounded,
+                    color: const Color(0xFF0B1A17),
                   ),
                   const SizedBox(width: 8),
                   Text(
-                    'O\'qidim — ${_sanoq + 1} / $_maqsad',
+                    '${yozish ? 'Harfma-harf yozish' : 'O\'qidim'} — '
+                    '${_sanoq + 1} / $_maqsad',
                     style: const TextStyle(
                       color: Color(0xFF0B1A17),
                       fontWeight: FontWeight.w900,
@@ -933,7 +939,7 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
                 if (_gaplar.length >= 2)
                   OutlinedButton.icon(
                     key: const ValueKey('sanoq-harflab'),
-                    onPressed: _harflabYoz,
+                    onPressed: () => _harflabYoz(),
                     icon: const Icon(Icons.spellcheck_rounded),
                     label: Text("O'zbekchadan arabchaga yozish"),
                   ),

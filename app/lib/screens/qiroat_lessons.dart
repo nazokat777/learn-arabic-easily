@@ -24,6 +24,7 @@ import 'qiroat_drill.dart';
 import 'tarjima_mashqi.dart';
 import 'gapma_gap_tarjima.dart';
 import 'qiroat_match.dart';
+import 'arabchadan_tarjima.dart';
 import 'rasmli_kartochka.dart';
 import 'sanoq_ekrani.dart';
 import 'lesson/lesson_flow.dart';
@@ -240,6 +241,24 @@ class QiroatLessonDetail extends StatelessWidget {
                 icon: Icons.translate_rounded,
                 title: 'Tarjimasi',
                 text: lesson.translation,
+              ),
+            ],
+            if (ArabchadanTarjima.topshiriqlar(lesson).isNotEmpty) ...[
+              const SizedBox(height: 12),
+              FilledButton.icon(
+                key: const ValueKey('mashq-arabchadan'),
+                onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => ArabchadanTarjimaEkrani(lesson: lesson),
+                  ),
+                ),
+                icon: const Icon(Icons.translate_rounded),
+                label: Text("Mashq: arabchadan o'zbekchaga"),
+                style: FilledButton.styleFrom(
+                  backgroundColor: AppColors.emerald,
+                  padding: const EdgeInsets.symmetric(vertical: 14),
+                ),
               ),
             ],
             // Kitobdagi tarjima mashqi — yig'ma blok emas, ochiq va

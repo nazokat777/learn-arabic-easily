@@ -13,6 +13,7 @@ import 'package:learn_arabic/main.dart' show progress, repo;
 import 'package:learn_arabic/progress.dart';
 import 'package:learn_arabic/screens/gapma_gap_tarjima.dart' show TarjimaPaneli;
 import 'package:learn_arabic/screens/lesson/sentence_text.dart';
+import 'package:learn_arabic/screens/arabchadan_tarjima.dart';
 import 'package:learn_arabic/screens/rasmli_kartochka.dart';
 import 'package:learn_arabic/screens/sanoq_ekrani.dart';
 import 'package:learn_arabic/screens/tarjima_mashqi.dart';
@@ -232,6 +233,48 @@ void main() {
     await t.tap(find.byKey(const ValueKey('karta-variant-0')));
     await t.pumpAndSettle();
     expect(find.byKey(const ValueKey('karta-keyingi')), findsOneWidget);
+  });
+
+  test("hamma 169 darsda arabchadan o'zbekchaga topshiriq bor", () {
+    expect(darslar.length, 169);
+    for (final l in darslar) {
+      final t = ArabchadanTarjima.topshiriqlar(l);
+      expect(t, isNotEmpty, reason: l.completionId);
+      for (final y in t) {
+        expect(y.ar, isNotEmpty, reason: l.completionId);
+      }
+    }
+  });
+
+  testWidgets("arabchadan o'zbekchaga: tanlash, xato qaytadi, tugaydi", (
+    t,
+  ) async {
+    var tugadi = false;
+    var ball = 0;
+    await t.pumpWidget(
+      MaterialApp(
+        home: Scaffold(
+          body: ArabchadanTarjima(
+            lesson: dars4,
+            award: (b) => ball += b,
+            onDone: () => tugadi = true,
+          ),
+        ),
+      ),
+    );
+    await t.pumpAndSettle();
+    final jami = ArabchadanTarjima.topshiriqlar(dars4).length;
+    expect(find.byKey(const ValueKey('at-variant-0')), findsOneWidget);
+    var bosish = 0;
+    while (!tugadi && bosish < jami * 12) {
+      await t.tap(find.byKey(const ValueKey('at-variant-0')));
+      await t.pump();
+      await t.tap(find.byKey(const ValueKey('at-keyingi')));
+      await t.pumpAndSettle();
+      bosish++;
+    }
+    expect(tugadi, isTrue);
+    expect(ball, jami * 2);
   });
 
   test('hamma darsda gap tekshiruvi uchun ≥2 juft bor (1-kitob)', () {

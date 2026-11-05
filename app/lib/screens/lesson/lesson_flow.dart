@@ -18,6 +18,7 @@ import 'quiz_flow.dart';
 import '../tarjima_mashqi.dart';
 import 'read_flow.dart';
 import 'vocab_flow.dart';
+import '../arabchadan_tarjima.dart';
 
 /// Bitta darsni «shaxsiy muallim» kabi bosqichma-bosqich o'rgatuvchi oqim:
 /// Kirish → Lug'at (5 tadan) → Tinglash → O'qish → Savollar → Xatolar → Tugatish.
@@ -30,7 +31,18 @@ class LessonFlow extends StatefulWidget {
   State<LessonFlow> createState() => _LessonFlowState();
 }
 
-enum _Step { intro, royxat, vocab, listen, read, tarjima, quiz, review, done }
+enum _Step {
+  intro,
+  royxat,
+  vocab,
+  listen,
+  read,
+  arabchadan,
+  tarjima,
+  quiz,
+  review,
+  done,
+}
 
 class _LessonFlowState extends State<LessonFlow> {
   _Step _step = _Step.intro;
@@ -137,19 +149,25 @@ class _LessonFlowState extends State<LessonFlow> {
   /// Bosqichlar yo'li — nuqtalar oddiy chiziq bilan emas, OQIB TO'LADIGAN
   /// yo'l bilan bog'langan. O'quvchi qaysi bosqichda ekanini bir qarashda
   /// ko'radi; hozirgi bosqich nur bilan ajralib turadi.
+  bool get _arabchadanBor =>
+      ArabchadanTarjima.topshiriqlar(widget.lesson).isNotEmpty;
+
   Widget _stepStrip() {
     final items = [
       (_Step.vocab, Icons.style_rounded, "Lug'at"),
       (_Step.listen, Icons.headphones_rounded, 'Tinglash'),
       (_Step.read, Icons.menu_book_rounded, "O'qish"),
+      if (_arabchadanBor)
+        (_Step.arabchadan, Icons.translate_rounded, 'Ar → Uz'),
       if (widget.lesson.exercise.isNotEmpty)
-        (_Step.tarjima, Icons.edit_note_rounded, 'Tarjima'),
+        (_Step.tarjima, Icons.edit_note_rounded, 'Uz → Ar'),
       (_Step.quiz, Icons.quiz_rounded, 'Savol'),
     ];
     final order = [
       _Step.vocab,
       _Step.listen,
       _Step.read,
+      if (_arabchadanBor) _Step.arabchadan,
       if (widget.lesson.exercise.isNotEmpty) _Step.tarjima,
       _Step.quiz,
       _Step.review,
@@ -282,6 +300,19 @@ class _LessonFlowState extends State<LessonFlow> {
           lesson: l,
           award: _award,
           onDone: () => setState(
+            () => _step = _arabchadanBor
+                ? _Step.arabchadan
+                : l.exercise.isNotEmpty
+                ? _Step.tarjima
+                : _Step.quiz,
+          ),
+        );
+      // Matn o'qilgach: kitobdagi arabcha gaplarni o'zbekchaga o'girish.
+      case _Step.arabchadan:
+        return ArabchadanTarjima(
+          lesson: l,
+          award: _award,
+          onDone: () => setState(
             () => _step = l.exercise.isNotEmpty ? _Step.tarjima : _Step.quiz,
           ),
         );
@@ -391,6 +422,10 @@ class _IntroView extends StatelessWidget {
               _row(
                 Icons.menu_book_rounded,
                 'Keyin matnni o\'zimiz o\'qib tushunamiz',
+              ),
+              _row(
+                Icons.translate_rounded,
+                "Arabcha gaplarni o'zbekchaga tarjima qilamiz",
               ),
               if (lesson.exercise.isNotEmpty)
                 _row(
@@ -651,7 +686,10 @@ class _DoneView extends StatelessWidget {
                 ),
               ],
               // To'liq hisobot: qaysi so'zlar yaxshi yodlandi, qaysilari yo'q.
-              SozlarNatijaRoyxati(sozlar: darsSozlari(lesson), xatolar: xatolar),
+              SozlarNatijaRoyxati(
+                sozlar: darsSozlari(lesson),
+                xatolar: xatolar,
+              ),
               const SizedBox(height: 26),
               Reveal(
                 delay: const Duration(milliseconds: 540),

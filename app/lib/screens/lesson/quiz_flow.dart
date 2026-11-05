@@ -47,12 +47,21 @@ class _QQ {
   /// Kitob har otni birlik+ko'plik bilan beradi va matnda ko'plik ishlatiladi
   /// (أَيْنَ الْمَسَاوِيكُ؟) — ko'plikni alohida so'ramasa, o'quvchi bilmaydi.
   final bool koplik;
+
+  /// Fe'l shakli savoli: asosiy shakl ko'rsatiladi, shu nomdagi shakl so'raladi.
+  final String? felShakl;
+
+  /// Savol kartasida ko'rsatiladigan arabcha (fe'l shakli savolida
+  /// faqat o'tgan zamon — boshqa shakllar javobni ochib qo'ymasin).
+  final String? korsatma;
   _QQ(
     this.word,
     this.arToUz,
     this.options,
     this.correct, {
     this.koplik = false,
+    this.felShakl,
+    this.korsatma,
   });
 }
 
@@ -75,17 +84,25 @@ class _QuizStageState extends State<QuizStage> {
   @override
   void initState() {
     super.initState();
+    // Bir xil ma'noli so'zlar ham qolib ketmasin: takror faqat arabchasi
+    // bir xil bo'lsa tashlanadi.
     final seen = <String>{};
     _pool = [];
     for (final v in widget.lesson.vocab) {
       if (v.ar.trim().isEmpty || v.uz.trim().isEmpty) continue;
-      if (seen.add(v.uz)) _pool.add(v);
+      if (seen.add(v.ar)) _pool.add(v);
     }
     _questions = [
       ..._pool.map(_build),
       // Ko'pligi bor har so'z uchun alohida ko'plik savoli.
       for (final w in _pool)
         if (w.plShakllari.isNotEmpty) ?_buildKoplik(w),
+      // Fe'llar ko'proq so'raladi: arabchasi va har bir shakli.
+      for (final w in _pool)
+        if (w.felShakllari.isNotEmpty) ...[
+          _build(w, teskari: true),
+          for (var i = 1; i < w.felShakllari.length; i++) _buildFel(w, i),
+        ],
     ]..shuffle(_rnd);
     if (_questions.isEmpty) {
       WidgetsBinding.instance.addPostFrameCallback(
@@ -94,15 +111,36 @@ class _QuizStageState extends State<QuizStage> {
     }
   }
 
-  _QQ _build(QiroatVocab word) {
+  /// Fe'lning [i]-shakli savoli. Chalg'ituvchilar: boshqa fe'llarning shu
+  /// shakli, yetmasa shu fe'lning boshqa shakllari.
+  _QQ _buildFel(QiroatVocab word, int i) {
+    final f = word.felShakllari;
+    final correctVal = f[i];
+    final boshqa = [
+      for (final v in _pool)
+        if (v != word && v.felShakllari.length > i) v.felShakllari[i],
+    ]..shuffle(_rnd);
+    final chalg = <String>{...boshqa.take(3), ...f}..remove(correctVal);
+    final options = <String>[correctVal, ...chalg.take(3)]..shuffle(_rnd);
+    return _QQ(
+      word,
+      true,
+      options,
+      options.indexOf(correctVal),
+      felShakl: QiroatVocab.felShaklNomlari[i],
+      korsatma: f.first,
+    );
+  }
+
+  _QQ _build(QiroatVocab word, {bool teskari = false}) {
     final head = splitForms(word.ar).first;
     final canReverse =
         !word.ar.contains('،') && stripDiacritics(head).length <= 12;
-    final arToUz = !canReverse || _rnd.nextBool();
+    final arToUz = !teskari && (!canReverse || _rnd.nextBool());
     final correctVal = arToUz ? word.uz : head;
     final distract =
         _pool
-            .where((v) => v != word)
+            .where((v) => v != word && v.uz != word.uz)
             .map((v) => arToUz ? v.uz : splitForms(v.ar).first)
             .where((s) => s != correctVal)
             .toSet()
@@ -159,7 +197,9 @@ class _QuizStageState extends State<QuizStage> {
     } else if (!_missed.contains(q.word)) {
       _missed.add(q.word);
     }
-    if (q.koplik) Tts.instance.speak(q.options[q.correct], id: 'q-pl');
+    if (q.koplik || q.felShakl != null) {
+      Tts.instance.speak(q.options[q.correct], id: 'q-pl');
+    }
     await progress.bumpWord(_key(q.word), ok);
     Future.delayed(Duration(milliseconds: ok ? 650 : 1300), () {
       if (!mounted) return;
@@ -276,7 +316,9 @@ class _QuizStageState extends State<QuizStage> {
           ),
           const Spacer(),
           Text(
-            q.koplik
+            q.felShakl != null
+                ? "Bu fe'lning shakli qaysi: ${q.felShakl}?"
+                : q.koplik
                 ? "Bu so'zning KO'PLIGI qaysi?"
                 : q.arToUz
                 ? 'Bu so\'z nima degani?'
@@ -345,7 +387,7 @@ class _QuizStageState extends State<QuizStage> {
                               ),
                             ],
                           ),
-                          if (!q.koplik)
+                          if (!q.koplik && q.felShakl == null)
                             KoplikQatori(v: q.word, idPrefix: 'qf'),
                         ],
                       )
@@ -375,7 +417,7 @@ class _QuizStageState extends State<QuizStage> {
   }
 
   Widget _optTile(_QQ q, int i) {
-    final isArabic = !q.arToUz || q.koplik;
+    final isArabic = !q.arToUz || q.koplik || q.felShakl != null;
     Color border = AppColors.chiziq2;
     Color bg = AppColors.karta;
     if (_answered) {

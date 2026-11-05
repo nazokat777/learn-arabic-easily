@@ -114,6 +114,27 @@ class QiroatVocab {
   factory QiroatVocab.fromJson(Map<String, dynamic> j) =>
       QiroatVocab(ar: j['ar'], pl: j['pl'] ?? '', uz: j['uz']);
 
+  /// Fe'l shakllari nomlari — [felShakllari] tartibida.
+  static const felShaklNomlari = [
+    "o'tgan zamon",
+    'hozirgi-kelasi zamon',
+    'buyruq',
+    'masdar',
+  ];
+
+  /// Fe'l bo'lsa uning shakllari (kitobda «قَرَأَ، يَقْرَأُ، اِقْرَأْ، قِرَاءَةٌ»
+  /// tartibida, «=» dan keyingi sinonim olinmaydi); fe'l bo'lmasa bo'sh.
+  List<String> get felShakllari {
+    final f = ar
+        .split('=')
+        .first
+        .split('،')
+        .map((e) => e.trim())
+        .where((e) => e.isNotEmpty)
+        .toList();
+    return f.length >= 3 && f.length <= 4 ? f : const [];
+  }
+
   /// Ko'plikning OVOZ uchun shakllari: kitobda «دَفَاتِرُ = كُرَّاسَةٌ» yoki
   /// «كُتَّابٌ، كَتَبَةٌ» kabi bir nechta shakl bo'ladi — har biri alohida
   /// o'qiladi (bittasi sifatida o'qilsa xato). Faqat qo'shimcha («ـات»)

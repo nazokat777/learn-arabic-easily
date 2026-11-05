@@ -32,15 +32,20 @@ class HarflabYozishEkrani extends StatefulWidget {
   /// natijasi «yodlangan» hisobiga yoziladi (imtihon shunga tayanadi).
   final Map<String, String> kalitlar;
   final String sarlavha;
+
+  /// true — butun GAP yoziladi (o'zbekcha tarjimasidan): rasm ko'rsatilmaydi.
+  final bool gapRejimi;
   HarflabYozishEkrani({super.key, required QiroatLesson lesson})
     : sozRoyxati = sozlar(lesson),
       kalitlar = const {},
-      sarlavha = 'Harflab yozish';
+      sarlavha = 'Harflab yozish',
+      gapRejimi = false;
   const HarflabYozishEkrani.royxat({
     super.key,
     required this.sozRoyxati,
     this.kalitlar = const {},
     this.sarlavha = 'Harflab yozish',
+    this.gapRejimi = false,
   });
 
   /// Ulash bosqichi so'zlari — 2–8 harflilari.
@@ -195,9 +200,25 @@ class _HarflabYozishEkraniState extends State<HarflabYozishEkrani> {
     );
   }
 
+  /// Bosilgan harflar; gapda so'zlar orasiga bo'sh joy qo'yiladi.
+  String _yigilgan(String ar) {
+    final b = StringBuffer();
+    var k = 0;
+    for (final soz in ar.split(RegExp(r'\s+'))) {
+      final n = harflab(soz).length;
+      if (n == 0) continue;
+      for (var j = 0; j < n && k < _tanlangan.length; j++, k++) {
+        b.write(_havza[_tanlangan[k]].shakl);
+      }
+      if (k >= _tanlangan.length) break;
+      b.write(' ');
+    }
+    return b.toString();
+  }
+
   Widget _mashq() {
     final s = _sozlar[_i];
-    final yigilgan = _tanlangan.map((i) => _havza[i].shakl).join();
+    final yigilgan = _yigilgan(s.ar);
     return ListView(
       padding: const EdgeInsets.fromLTRB(20, 12, 20, 28),
       children: [
@@ -209,15 +230,18 @@ class _HarflabYozishEkraniState extends State<HarflabYozishEkrani> {
               color: AppColors.indigo,
             ),
             const SizedBox(width: 6),
-            Text(
-              "So'zni harflab yozing",
-              style: TextStyle(
-                fontWeight: FontWeight.w800,
-                color: AppColors.ink,
-                fontSize: 15,
+            Expanded(
+              child: Text(
+                widget.gapRejimi
+                    ? "Arabchasini harflab yozing"
+                    : "So'zni harflab yozing",
+                style: TextStyle(
+                  fontWeight: FontWeight.w800,
+                  color: AppColors.ink,
+                  fontSize: 15,
+                ),
               ),
             ),
-            const Spacer(),
             Text(
               '${_i + 1} / ${_sozlar.length}',
               style: const TextStyle(
@@ -244,8 +268,10 @@ class _HarflabYozishEkraniState extends State<HarflabYozishEkrani> {
           ),
           child: Row(
             children: [
-              RasmBelgi(uz: s.uz, olcham: 44),
-              const SizedBox(width: 10),
+              if (!widget.gapRejimi) ...[
+                RasmBelgi(uz: s.uz, olcham: 44),
+                const SizedBox(width: 10),
+              ],
               Expanded(
                 child: Text(
                   s.uz,

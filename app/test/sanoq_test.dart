@@ -6,9 +6,12 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:learn_arabic/arabic.dart';
 import 'package:learn_arabic/content.dart';
 import 'package:learn_arabic/main.dart' show progress, repo;
 import 'package:learn_arabic/progress.dart';
+import 'package:learn_arabic/screens/gapma_gap_tarjima.dart' show TarjimaPaneli;
+import 'package:learn_arabic/screens/lesson/sentence_text.dart';
 import 'package:learn_arabic/screens/sanoq_ekrani.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -17,9 +20,26 @@ void main() {
   final darslar = (json.decode(raw)['lessons'] as List)
       .map((e) => QiroatLesson.fromJson(e as Map<String, dynamic>))
       .toList();
-  repo = ContentRepository()..qiroatLessons = darslar;
+  final harflar = json.decode(
+    File('assets/content/letters.json').readAsStringSync(),
+  );
+  repo = ContentRepository()
+    ..qiroatLessons = darslar
+    ..letters = (harflar['letters'] as List)
+        .map((e) => Letter.fromJson(e))
+        .toList();
   progress = Progress();
   final dars4 = darslar.firstWhere((l) => l.book == 1 && l.num == 4);
+  final gapSoni = splitSentences(dars4.reading).length;
+  final gaplar4 = splitSentences(dars4.reading);
+  final yozishSoni = dars4.tarjimaGuruhlari
+      .where((g) => g.matn.trim().isNotEmpty)
+      .map((g) => gaplar4.sublist(g.boshi, g.boshi + g.soni).join(' '))
+      .toSet()
+      .length;
+  final guruhSoni = dars4.tarjimaGuruhlari
+      .where((g) => g.matn.trim().isNotEmpty)
+      .length;
 
   setUp(() async {
     SharedPreferences.setMockInitialValues({});
@@ -27,7 +47,7 @@ void main() {
   });
 
   Future<void> och(WidgetTester t, {QiroatLesson? l}) async {
-    t.view.physicalSize = const Size(900, 3600);
+    t.view.physicalSize = const Size(900, 9000);
     t.view.devicePixelRatio = 1.0;
     addTearDown(t.view.resetPhysicalSize);
     await t.pumpWidget(MaterialApp(home: SanoqEkrani(lesson: l ?? dars4)));
@@ -40,12 +60,18 @@ void main() {
       await och(t);
       expect(find.byKey(const ValueKey('sanoq-tanishuv')), findsOneWidget);
       expect(find.text('0 / 33 marta o\'qildi'), findsOneWidget);
-      expect(find.byKey(const ValueKey('sanoq-arabcha')), findsOneWidget);
-      expect(find.byKey(const ValueKey('sanoq-ozbekcha')), findsNothing);
+      expect(find.byType(SentenceText), findsNWidgets(gapSoni));
+      expect(find.byType(TarjimaPaneli), findsNothing);
 
       await t.tap(find.byKey(const ValueKey('sanoq-och')));
       await t.pumpAndSettle();
-      expect(find.byKey(const ValueKey('sanoq-ozbekcha')), findsOneWidget);
+      // Har gap (guruh) tagida o'z tarjimasi, keyingi gapdan oldin.
+      expect(find.byType(TarjimaPaneli), findsNWidgets(guruhSoni));
+      final g = dars4.tarjimaGuruhlari.first;
+      double y(String k) => t.getTopLeft(find.byKey(ValueKey(k))).dy;
+      final tarjimaY = y('sanoq-tarjima-${g.boshi}');
+      expect(tarjimaY, greaterThan(y('sanoq-gap-${g.boshi + g.soni - 1}')));
+      expect(tarjimaY, lessThan(y('sanoq-gap-${g.boshi + g.soni}')));
     },
   );
 
@@ -88,8 +114,12 @@ void main() {
     await och(t);
     await t.tap(find.text('O\'zbekcha'));
     await t.pumpAndSettle();
-    expect(find.byKey(const ValueKey('sanoq-ozbekcha')), findsOneWidget);
-    expect(find.byKey(const ValueKey('sanoq-arabcha')), findsNothing);
+    expect(find.byType(TarjimaPaneli), findsNWidgets(guruhSoni));
+    expect(find.byType(SentenceText), findsNothing);
+
+    await t.tap(find.byKey(const ValueKey('sanoq-och')));
+    await t.pumpAndSettle();
+    expect(find.byType(SentenceText), findsNWidgets(gapSoni));
   });
 
   testWidgets('11-o\'qishdan keyin gap tekshiruvi; maqsadda lug\'at testi', (
@@ -113,10 +143,32 @@ void main() {
       await t.pumpAndSettle();
     }
     // Yakun dialogi → lug'at testi.
-    expect(find.text('Testni boshlash'), findsOneWidget);
-    await t.tap(find.text('Testni boshlash'));
+    expect(find.text('Yozishni boshlash'), findsOneWidget);
+    await t.tap(find.text('Yozishni boshlash'));
+    await t.pumpAndSettle();
+    // O'zbekcha gap beriladi, arabchasi harflab yoziladi.
+    expect(find.text("O'zbekchadan arabchaga"), findsOneWidget);
+    expect(find.text('Arabchasini harflab yozing'), findsOneWidget);
+    expect(find.text('1 / $yozishSoni'), findsOneWidget);
+    Navigator.of(t.element(find.text('Arabchasini harflab yozing'))).pop();
+    await t.pumpAndSettle();
+    // Keyin hamma lug'at harflab yoziladi.
+    expect(find.text("Lug'atni harflab yozish"), findsOneWidget);
+    Navigator.of(t.element(find.text('Arabchasini harflab yozing'))).pop();
     await t.pumpAndSettle();
     expect(find.textContaining('Lug\'at testi'), findsOneWidget);
+  });
+
+  test("fe'l shakllari: kitob tartibida, fe'l bo'lmagan so'zda bo'sh", () {
+    const fel = QiroatVocab(
+      ar: 'قَعَدَ، يَقْعُدُ، اُقْعُدْ، قُعُودٌ = جَلَسَ، يَجْلِسُ',
+      pl: '',
+      uz: "o'tirmoq",
+    );
+    expect(fel.felShakllari.length, 4);
+    expect(fel.felShakllari[1], 'يَقْعُدُ');
+    const ot = QiroatVocab(ar: 'حُجْرَةٌ = غُرْفَةٌ', pl: '', uz: 'xona');
+    expect(ot.felShakllari, isEmpty);
   });
 
   test('hamma darsda gap tekshiruvi uchun ≥2 juft bor (1-kitob)', () {

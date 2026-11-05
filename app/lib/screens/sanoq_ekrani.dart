@@ -4,11 +4,14 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../arabic.dart';
 import '../content.dart';
+import '../harflab.dart';
 import '../main.dart';
 import '../services/tts.dart';
 import '../theme.dart';
 import '../widgets/motion.dart';
 import '../widgets/uz_text.dart';
+import 'gapma_gap_tarjima.dart' show TarjimaPaneli;
+import 'lesson/harflab_yozish.dart';
 import 'lesson/quiz_flow.dart';
 import 'lesson/sentence_text.dart';
 
@@ -108,8 +111,84 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
     final tekshiruv = _tugadi || _sanoq % SanoqEkrani.tekshiruvQadami == 0;
     if (tekshiruv && _gaplar.length >= 2 && mounted) {
       await _gapTekshiruvi();
+      // Oraliq tekshiruvda 3 ta gap; hamma gap oxirida yoziladi.
+      if (!_tugadi && mounted) await _harflabYoz(soni: 3);
     }
     if (_tugadi && mounted) await _yakun();
+  }
+
+  /// O'zbekcha gap → arabchasini harfma-harf yozish uchun juftlar.
+  /// Har tarjima guruhi bitta topshiriq.
+  List<({String ar, String uz})> get _yozishGaplari {
+    final korilgan = <String>{};
+    return [
+      for (final g in widget.lesson.tarjimaGuruhlari)
+        if (g.matn.trim().isNotEmpty &&
+            g.boshi + g.soni <= _gaplar.length &&
+            harflab(_guruhArabchasi(g)).length >= 2 &&
+            korilgan.add(_guruhArabchasi(g)))
+          (ar: _guruhArabchasi(g), uz: g.matn.trim()),
+    ];
+  }
+
+  String _guruhArabchasi(TarjimaGuruh g) =>
+      _gaplar.sublist(g.boshi, g.boshi + g.soni).join(' ');
+
+  /// Darsning hamma lug'ati: o'zbekchadan arabchaga harfma-harf; fe'lning
+  /// har shakli alohida topshiriq. Takror arabcha bir marta.
+  List<({String ar, String uz})> get _yozishSozlari {
+    final korilgan = <String>{};
+    final out = <({String ar, String uz})>[];
+    void qosh(String ar, String uzMatn) {
+      if (harflab(ar).length >= 2 && korilgan.add(ar)) {
+        out.add((ar: ar, uz: uzMatn));
+      }
+    }
+
+    for (final v in widget.lesson.vocab) {
+      final f = v.felShakllari;
+      if (f.isEmpty) {
+        for (final s in v.ar.split('=').first.split('،')) {
+          qosh(s.trim(), v.uz);
+        }
+      } else {
+        for (var i = 0; i < f.length; i++) {
+          qosh(f[i], '${v.uz} — ${QiroatVocab.felShaklNomlari[i]}');
+        }
+      }
+    }
+    return out;
+  }
+
+  Future<void> _lugatYoz() async {
+    final sozlar = _yozishSozlari;
+    if (sozlar.isEmpty) return;
+    await Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (_) => HarflabYozishEkrani.royxat(
+          sozRoyxati: sozlar,
+          sarlavha: "Lug'atni harflab yozish",
+          gapRejimi: true,
+        ),
+      ),
+    );
+  }
+
+  Future<void> _harflabYoz({int? soni}) async {
+    var gaplar = _yozishGaplari;
+    if (gaplar.isEmpty) return;
+    if (soni != null && gaplar.length > soni) {
+      gaplar = (gaplar..shuffle()).take(soni).toList();
+    }
+    await Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (_) => HarflabYozishEkrani.royxat(
+          sozRoyxati: gaplar,
+          sarlavha: "O'zbekchadan arabchaga",
+          gapRejimi: true,
+        ),
+      ),
+    );
   }
 
   Future<void> _gapTekshiruvi() async {
@@ -127,8 +206,9 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
       builder: (c) => AlertDialog(
         title: Text('$_maqsad marta o\'qildi!'),
         content: Text(
-          'Matn $_maqsad marta o\'qib chiqildi. Endi dars lug\'ati bo\'yicha '
-          'test — yodlanganini tekshiramiz.',
+          'Matn $_maqsad marta o\'qib chiqildi. Endi har gap, keyin hamma '
+          'lug\'at va fe\'l shakllari o\'zbekcha beriladi — arabchasini '
+          'harfma-harf yozasiz. Oxirida lug\'at testi.',
         ),
         actions: [
           TextButton(
@@ -137,12 +217,16 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
           ),
           FilledButton(
             onPressed: () => Navigator.pop(c, true),
-            child: Text('Testni boshlash'),
+            child: Text('Yozishni boshlash'),
           ),
         ],
       ),
     );
     if (bosildi == true && mounted) {
+      await _harflabYoz();
+      if (!mounted) return;
+      await _lugatYoz();
+      if (!mounted) return;
       await Navigator.of(context).push(
         MaterialPageRoute(builder: (_) => _LugatTesti(lesson: widget.lesson)),
       );
@@ -234,21 +318,22 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
                       else ...[
                         _korsatma(ozbekcha),
                         const SizedBox(height: 10),
-                        if (ozbekcha) ...[
-                          _ozbekchaMatn(),
-                          const SizedBox(height: 12),
-                          if (_ochiq)
-                            _arabchaMatn()
-                          else
-                            _ochishTugmasi('Arabchasini ko\'rsat'),
-                        ] else ...[
-                          _arabchaMatn(),
-                          const SizedBox(height: 12),
-                          if (_ochiq)
-                            _ozbekchaMatn()
-                          else
-                            _ochishTugmasi('Tarjimani ko\'rsat'),
+                        _ochishTugmasi(ozbekcha),
+                        const SizedBox(height: 10),
+                        // O'zbekcha raundda arabchasini harfma-harf yozish.
+                        if (ozbekcha && _yozishGaplari.isNotEmpty) ...[
+                          FilledButton.icon(
+                            key: const ValueKey('sanoq-harflab'),
+                            onPressed: _harflabYoz,
+                            icon: const Icon(Icons.spellcheck_rounded),
+                            label: Text('Arabchasini harfma-harf yozish'),
+                            style: FilledButton.styleFrom(
+                              backgroundColor: AppColors.indigo,
+                            ),
+                          ),
+                          const SizedBox(height: 10),
                         ],
+                        _gapmaGap(ozbekcha),
                       ],
                     ],
                   ),
@@ -300,7 +385,7 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
           ),
           _qadam(
             2,
-            "«Tarjimani ko'rsat»ni bosib, to'g'ri aytganingizni "
+            "«Har gapning tarjimasini ko'rsat»ni bosib, to'g'ri aytganingizni "
             'tekshiring.',
           ),
           _qadam(
@@ -310,8 +395,8 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
           ),
           _qadam(
             4,
-            "Har 11-o'qishdan keyin kichik test, oxirida esa "
-            "dars lug'ati testi chiqadi.",
+            "Har 11-o'qishdan keyin kichik test. Oxirida o'zbekcha gapning "
+            "arabchasini harfma-harf yozasiz, keyin lug'at testi.",
           ),
           const SizedBox(height: 6),
           Text(
@@ -492,7 +577,7 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
           ? '${_sanoq + 1}-o\'qish: o\'zbekchasini o\'qing, arabchasini '
                 'o\'zingiz ayting, keyin ochib solishtiring.'
           : '${_sanoq + 1}-o\'qish: matnni ovoz chiqarib o\'qing va o\'zingiz '
-                'tarjima qiling, keyin tarjimani ochib tekshiring.',
+                'tarjima qiling, keyin har gap tagidagi tarjimani ochib tekshiring.',
       style: TextStyle(
         fontSize: 13.5,
         color: AppColors.matn2,
@@ -501,10 +586,61 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
     );
   }
 
-  Widget _arabchaMatn() {
+  /// Matn gapma-gap: har arabcha gap tagida o'z tarjimasi. Kitobda bitta
+  /// tarjima bir necha gapni qamragan bo'lsa ([TarjimaGuruh.soni] > 1), u
+  /// guruhning oxirgi gapi tagida bir marta chiqadi. O'zbekcha raundda
+  /// aksincha: avval tarjima, ochilganda tagida arabchasi.
+  Widget _gapmaGap(bool ozbekcha) {
     final l = widget.lesson;
+    Widget arabcha(int i) => Padding(
+      padding: const EdgeInsets.only(bottom: 4),
+      child: Directionality(
+        textDirection: TextDirection.rtl,
+        child: SentenceText(
+          key: ValueKey('sanoq-gap-$i'),
+          sentence: _gaplar[i],
+          vocab: l.vocab,
+          reading: l.reading,
+          lessonId: l.completionId,
+          size: 30,
+        ),
+      ),
+    );
+    Widget tarjima(TarjimaGuruh g) => Padding(
+      padding: const EdgeInsets.only(bottom: 10),
+      child: TarjimaPaneli(
+        key: ValueKey('sanoq-tarjima-${g.boshi}'),
+        matn: g.matn,
+        qoshimcha: g.qoshimcha,
+        izoh: g.soni > 1
+            ? '${g.boshi + 1}–${g.boshi + g.soni}-gaplarning tarjimasi '
+                  '(kitobda birga berilgan)'
+            : null,
+      ),
+    );
+
+    final qatorlar = <Widget>[];
+    for (var i = 0; i < _gaplar.length; i++) {
+      final g = l.tarjimaGuruhi(i);
+      final bor = g != null && g.matn.trim().isNotEmpty;
+      if (ozbekcha) {
+        if (bor && i == g.boshi) qatorlar.add(tarjima(g));
+        if (_ochiq || !bor) qatorlar.add(arabcha(i));
+      } else {
+        qatorlar.add(arabcha(i));
+        if (_ochiq && bor && i == g.boshi + g.soni - 1) {
+          qatorlar.add(tarjima(g));
+        }
+      }
+    }
+    // Gapma-gap tarjimasi yo'q dars bo'lsa — kitobdagi butun tarjima.
+    final butun = l.tarjimaGuruhlari.isEmpty && l.translation.trim().isNotEmpty;
+    if (butun && (_ochiq || ozbekcha)) {
+      qatorlar.add(TarjimaPaneli(matn: l.translation.trim()));
+    }
+
     return Container(
-      key: const ValueKey('sanoq-arabcha'),
+      key: const ValueKey('sanoq-matn'),
       width: double.infinity,
       padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
       decoration: BoxDecoration(
@@ -537,72 +673,27 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
             ],
           ),
           const SizedBox(height: 4),
-          for (var i = 0; i < _gaplar.length; i++)
-            Padding(
-              padding: const EdgeInsets.only(bottom: 6),
-              child: Directionality(
-                textDirection: TextDirection.rtl,
-                child: SentenceText(
-                  sentence: _gaplar[i],
-                  vocab: l.vocab,
-                  reading: l.reading,
-                  lessonId: l.completionId,
-                  size: 30,
-                ),
-              ),
-            ),
+          ...qatorlar,
         ],
       ),
     );
   }
 
-  Widget _ozbekchaMatn() {
-    final l = widget.lesson;
-    final matn = l.translation.trim().isNotEmpty
-        ? l.translation.trim()
-        : l.tarjimaGuruhlari.map((g) => g.matn).join(' ');
-    return Container(
-      key: const ValueKey('sanoq-ozbekcha'),
-      width: double.infinity,
-      padding: const EdgeInsets.fromLTRB(16, 12, 16, 14),
-      decoration: BoxDecoration(
-        color: AppColors.indigo.withValues(alpha: 0.07),
-        borderRadius: BorderRadius.circular(18),
-        border: Border.all(color: AppColors.indigo.withValues(alpha: 0.35)),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          if (l.tarjimaSarlavha.isNotEmpty)
-            Padding(
-              padding: const EdgeInsets.only(bottom: 6),
-              child: Text(
-                l.tarjimaSarlavha,
-                style: const TextStyle(
-                  fontWeight: FontWeight.w800,
-                  color: AppColors.indigo,
-                  fontSize: 16,
-                ),
-              ),
-            ),
-          Text(
-            matn,
-            style: TextStyle(fontSize: 17, height: 1.55, color: AppColors.ink),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _ochishTugmasi(String nomi) {
+  /// Hamma gapning yashirin tomonini ochadi/yopadi. Matn tepasida: uzun
+  /// matnda tugmani izlab pastga tushish shart emas.
+  Widget _ochishTugmasi(bool ozbekcha) {
+    final nomi = ozbekcha ? 'arabchasini' : 'tarjimasini';
     return OutlinedButton.icon(
       key: const ValueKey('sanoq-och'),
       onPressed: () {
         Haptic.tap();
-        setState(() => _ochiq = true);
+        setState(() => _ochiq = !_ochiq);
       },
-      icon: const Icon(Icons.visibility_rounded, size: 18),
-      label: Text(nomi),
+      icon: Icon(
+        _ochiq ? Icons.visibility_off_rounded : Icons.visibility_rounded,
+        size: 18,
+      ),
+      label: Text(_ochiq ? 'Yashirish' : "Har gapning $nomi ko'rsat"),
       style: OutlinedButton.styleFrom(
         foregroundColor: AppColors.indigo,
         side: const BorderSide(color: AppColors.indigo),
@@ -679,6 +770,19 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
                 ),
                 icon: const Icon(Icons.quiz_rounded),
                 label: Text('Lug\'at testi'),
+              ),
+              if (_gaplar.length >= 2)
+                OutlinedButton.icon(
+                  key: const ValueKey('sanoq-harflab'),
+                  onPressed: _harflabYoz,
+                  icon: const Icon(Icons.spellcheck_rounded),
+                  label: Text("O'zbekchadan arabchaga yozish"),
+                ),
+              OutlinedButton.icon(
+                key: const ValueKey('sanoq-lugat-yoz'),
+                onPressed: _lugatYoz,
+                icon: const Icon(Icons.edit_note_rounded),
+                label: Text("Lug'atni harflab yozish"),
               ),
               if (_gaplar.length >= 2)
                 OutlinedButton.icon(
@@ -793,11 +897,10 @@ class _GapTekshiruvi extends StatefulWidget {
 }
 
 class _GapSavol {
-  final bool arabchadan; // true: arabcha gap → o'zbekcha tarjima
   final String savol;
   final String togri;
   final List<String> variantlar;
-  _GapSavol(this.arabchadan, this.savol, this.togri, this.variantlar);
+  _GapSavol(this.savol, this.togri, this.variantlar);
 }
 
 class _GapTekshiruviState extends State<_GapTekshiruvi> {
@@ -823,15 +926,9 @@ class _GapTekshiruviState extends State<_GapTekshiruvi> {
     for (var k = 0; k < r.length; k++) {
       final (ar, uzMatn) = r[k];
       final boshqalar = juft.where((j) => j.$1 != ar).toList()..shuffle();
-      final arabchadan = k.isEven;
-      final togri = arabchadan ? uzMatn : ar;
-      final variantlar = [
-        togri,
-        for (final b in boshqalar.take(3)) arabchadan ? b.$2 : b.$1,
-      ]..shuffle();
-      savollar.add(
-        _GapSavol(arabchadan, arabchadan ? ar : uzMatn, togri, variantlar),
-      );
+      final variantlar = [uzMatn, for (final b in boshqalar.take(3)) b.$2]
+        ..shuffle();
+      savollar.add(_GapSavol(ar, uzMatn, variantlar));
     }
     return savollar;
   }
@@ -878,9 +975,7 @@ class _GapTekshiruviState extends State<_GapTekshiruvi> {
         padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
         children: [
           Text(
-            s.arabchadan
-                ? 'Bu gapning tarjimasi qaysi?'
-                : 'Bu tarjimaning arabchasi qaysi?',
+            'Bu gapning tarjimasi qaysi?',
             style: TextStyle(
               fontWeight: FontWeight.w700,
               color: AppColors.matn2,
@@ -896,24 +991,15 @@ class _GapTekshiruviState extends State<_GapTekshiruvi> {
               borderRadius: BorderRadius.circular(16),
               border: Border.all(color: AppColors.chiziq2),
             ),
-            child: s.arabchadan
-                ? Directionality(
-                    textDirection: TextDirection.rtl,
-                    child: SentenceText(
-                      sentence: s.savol,
-                      vocab: l.vocab,
-                      reading: l.reading,
-                      size: 28,
-                    ),
-                  )
-                : Text(
-                    s.savol,
-                    style: TextStyle(
-                      fontSize: 17,
-                      height: 1.5,
-                      color: AppColors.ink,
-                    ),
-                  ),
+            child: Directionality(
+              textDirection: TextDirection.rtl,
+              child: SentenceText(
+                sentence: s.savol,
+                vocab: l.vocab,
+                reading: l.reading,
+                size: 28,
+              ),
+            ),
           ),
           const SizedBox(height: 14),
           for (final v in s.variantlar) ...[
@@ -962,19 +1048,10 @@ class _GapTekshiruviState extends State<_GapTekshiruvi> {
           borderRadius: BorderRadius.circular(14),
           border: Border.all(color: rang, width: tanlangan == null ? 1 : 1.6),
         ),
-        child: s.arabchadan
-            ? Text(
-                v,
-                style: TextStyle(
-                  fontSize: 16,
-                  height: 1.45,
-                  color: AppColors.ink,
-                ),
-              )
-            : Directionality(
-                textDirection: TextDirection.rtl,
-                child: Text(v, style: AppTheme.arabic(size: 24, height: 1.8)),
-              ),
+        child: Text(
+          v,
+          style: TextStyle(fontSize: 16, height: 1.45, color: AppColors.ink),
+        ),
       ),
     );
   }

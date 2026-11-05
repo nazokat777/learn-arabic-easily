@@ -13,7 +13,9 @@ import 'package:learn_arabic/main.dart' show progress, repo;
 import 'package:learn_arabic/progress.dart';
 import 'package:learn_arabic/screens/gapma_gap_tarjima.dart' show TarjimaPaneli;
 import 'package:learn_arabic/screens/lesson/sentence_text.dart';
+import 'package:learn_arabic/screens/rasmli_kartochka.dart';
 import 'package:learn_arabic/screens/sanoq_ekrani.dart';
+import 'package:learn_arabic/screens/tarjima_mashqi.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
@@ -207,6 +209,29 @@ void main() {
     final tanvin = harflab('كِتَابٌ');
     final t = xatoIzohi(HarfBolagi('د', 'دَال', 'دَ'), tanvin[3], tanvin, 3);
     expect(t, contains('noaniqligini'));
+  });
+
+  test('mashq javobi bor har darsda harfma-harf topshiriq bor', () {
+    for (final l in darslar.where((l) => l.exerciseAnswer.trim().isNotEmpty)) {
+      if (l.exercise.trim().isEmpty) continue;
+      final t = TarjimaMashqi.yozish(l);
+      expect(t, isNotEmpty, reason: l.completionId);
+      for (final y in t) {
+        expect(harflab(y.ar), isNotEmpty, reason: l.completionId);
+      }
+    }
+  });
+
+  testWidgets("rasmli kartochka: rasm, o'zbekcha, 4 variant, oxirigacha", (
+    t,
+  ) async {
+    await t.pumpWidget(MaterialApp(home: RasmliKartochka(lesson: dars4)));
+    await t.pumpAndSettle();
+    expect(find.byKey(const ValueKey('karta-uz')), findsOneWidget);
+    expect(find.byKey(const ValueKey('karta-variant-3')), findsOneWidget);
+    await t.tap(find.byKey(const ValueKey('karta-variant-0')));
+    await t.pumpAndSettle();
+    expect(find.byKey(const ValueKey('karta-keyingi')), findsOneWidget);
   });
 
   test('hamma darsda gap tekshiruvi uchun ≥2 juft bor (1-kitob)', () {

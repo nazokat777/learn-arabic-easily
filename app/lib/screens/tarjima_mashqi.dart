@@ -6,6 +6,7 @@ import '../widgets/motion.dart';
 import '../widgets/speak_button.dart';
 import '../widgets/uz_text.dart';
 import 'lesson/gap_tuzish.dart';
+import 'lesson/harflab_yozish.dart';
 import 'lesson/sentence_text.dart';
 import 'lesson/vocab_flow.dart' show AwardXp;
 
@@ -27,6 +28,18 @@ class TarjimaMashqi extends StatefulWidget {
       .map((s) => s.trim())
       .where((s) => s.isNotEmpty)
       .toList();
+
+  /// Harfma-harf yozish topshiriqlari: jumlalar soni javob bilan mos bo'lsa
+  /// har biri alohida; mos kelmasa — noto'g'ri juftlamaslik uchun butun mashq
+  /// bitta topshiriq. Javobi kiritilmagan mashqda bo'sh.
+  static List<({String ar, String uz})> yozish(QiroatLesson l) {
+    final (_, uz, ar) = ajrat(l);
+    if (uz.isEmpty || l.exerciseAnswer.trim().isEmpty) return const [];
+    if (ar == null) {
+      return [(ar: l.exerciseAnswer.trim(), uz: uz.join(' '))];
+    }
+    return [for (final (i, u) in uz.indexed) (ar: ar[i], uz: u)];
+  }
 
   /// (ko'rsatma, o'zbekcha jumlalar, arabcha javoblar yoki null — mos kelmasa)
   static (String, List<String>, List<String>?) ajrat(QiroatLesson l) {
@@ -110,6 +123,24 @@ class _TarjimaMashqiState extends State<TarjimaMashqi> {
             ),
           ),
           const SizedBox(height: 10),
+          if (TarjimaMashqi.yozish(l).isNotEmpty) ...[
+            FilledButton.icon(
+              key: const ValueKey('mashq-harflab'),
+              onPressed: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => HarflabYozishEkrani.royxat(
+                    sozRoyxati: TarjimaMashqi.yozish(l),
+                    sarlavha: "O'zbekchadan arabchaga",
+                    gapRejimi: true,
+                  ),
+                ),
+              ),
+              icon: const Icon(Icons.spellcheck_rounded),
+              label: Text('Arabchasini harfma-harf yozish'),
+              style: FilledButton.styleFrom(backgroundColor: AppColors.indigo),
+            ),
+            const SizedBox(height: 10),
+          ],
           for (final (i, jumla) in uz.indexed)
             Padding(
               padding: const EdgeInsets.only(bottom: 8),

@@ -29,6 +29,7 @@ void main() {
         .map((e) => Letter.fromJson(e))
         .toList();
   progress = Progress();
+  SanoqEkrani.jonli = false;
   final dars4 = darslar.firstWhere((l) => l.book == 1 && l.num == 4);
   final gapSoni = splitSentences(dars4.reading).length;
   final gaplar4 = splitSentences(dars4.reading);

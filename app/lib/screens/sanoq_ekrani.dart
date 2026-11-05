@@ -1,4 +1,6 @@
 import '../uz_yozuv.dart';
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart' hide Text;
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -6,6 +8,7 @@ import '../arabic.dart';
 import '../content.dart';
 import '../harflab.dart';
 import '../main.dart';
+import '../mashq/mukofot.dart' show Portlash;
 import '../services/tts.dart';
 import '../theme.dart';
 import '../widgets/motion.dart';
@@ -31,6 +34,9 @@ class SanoqEkrani extends StatefulWidget {
   static const maqsadlar = [7, 11, 21, 33, 50, 100];
   static const standartMaqsad = 33;
 
+  /// Cheksiz fon harakatlari (test [pumpAndSettle] tugashi uchun o'chiriladi).
+  static bool jonli = true;
+
   /// Har nechta sanoqda oraliq tekshiruv.
   static const tekshiruvQadami = 11;
 
@@ -48,6 +54,7 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
   bool _ochiq = false; // joriy raundda yashirin tomon ochilganmi
   bool _yuklandi = false;
   final _skrol = ScrollController();
+  int _portlash = 0;
 
   String get _kalit => 'sanoq_${widget.lesson.completionId}';
 
@@ -103,6 +110,9 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
     setState(() {
       _sanoq++;
       _ochiq = false;
+      if (_sanoq % SanoqEkrani.tekshiruvQadami == 0 || _sanoq >= _maqsad) {
+        _portlash++;
+      }
     });
     // Keyingi o'qish matn boshidan boshlanadi.
     if (_skrol.hasClients) _skrol.jumpTo(0);
@@ -282,6 +292,10 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
     return Scaffold(
       backgroundColor: AppColors.cream,
       appBar: AppBar(
+        backgroundColor: AppColors.deep,
+        foregroundColor: Colors.white,
+        elevation: 0,
+        scrolledUnderElevation: 0,
         title: Text('Sanoq bilan yodlash — ${l.num}-dars'),
         actions: [
           IconButton(
@@ -333,7 +347,12 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
                           ),
                           const SizedBox(height: 10),
                         ],
-                        _gapmaGap(ozbekcha),
+                        SlideSwitch(
+                          child: KeyedSubtree(
+                            key: ValueKey('$_sanoq-$ozbekcha'),
+                            child: _gapmaGap(ozbekcha),
+                          ),
+                        ),
                       ],
                     ],
                   ),
@@ -460,70 +479,122 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
     );
   }
 
+  /// Tepadagi hero: to'q zumrad fon, suzuvchi nur va oltin sanoq halqasi.
   Widget _sarlavha() {
-    final ulush = _maqsad == 0 ? 0.0 : _sanoq / _maqsad;
+    final ulush = _maqsad == 0 ? 0.0 : (_sanoq / _maqsad).clamp(0.0, 1.0);
     return Container(
-      padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
-      color: AppColors.karta,
-      child: Row(
+      clipBehavior: Clip.antiAlias,
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [AppColors.deep, AppColors.emeraldDark],
+        ),
+        borderRadius: const BorderRadius.vertical(bottom: Radius.circular(28)),
+        boxShadow: [
+          BoxShadow(
+            color: AppColors.deep.withValues(alpha: 0.35),
+            blurRadius: 22,
+            offset: const Offset(0, 10),
+          ),
+        ],
+      ),
+      child: Stack(
         children: [
-          SizedBox(
-            width: 64,
-            height: 64,
-            child: Stack(
-              alignment: Alignment.center,
-              children: [
-                CircularProgressIndicator(
-                  value: ulush,
-                  strokeWidth: 6,
-                  color: AppColors.gold,
-                  backgroundColor: AppColors.chiziq2,
+          if (SanoqEkrani.jonli)
+            Positioned.fill(
+              child: IgnorePointer(
+                child: Aurora(
+                  colors: [
+                    AppColors.gold.withValues(alpha: 0.16),
+                    AppColors.emerald.withValues(alpha: 0.3),
+                  ],
                 ),
-                Text(
-                  '$_sanoq',
-                  key: const ValueKey('sanoq-soni'),
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w900,
-                    color: AppColors.ink,
+              ),
+            ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(18, 8, 16, 20),
+            child: Row(
+              children: [
+                Portlash(
+                  trigger: _portlash == 0 ? null : _portlash,
+                  child: Pulse(
+                    trigger: _sanoq,
+                    peak: 1.08,
+                    child: _SanoqHalqasi(ulush: ulush, sanoq: _sanoq),
+                  ),
+                ),
+                const SizedBox(width: 16),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        '$_sanoq / $_maqsad marta o\'qildi',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.w900,
+                          fontSize: 17,
+                          color: Colors.white,
+                          letterSpacing: -0.2,
+                        ),
+                      ),
+                      const SizedBox(height: 3),
+                      Text(
+                        _tugadi
+                            ? 'Maqsadga yetildi'
+                            : 'Keyingi tekshiruv: '
+                                  '${_keyingiTekshiruv()}-sanoqdan keyin',
+                        style: TextStyle(
+                          fontSize: 12.5,
+                          color: Colors.white.withValues(alpha: 0.7),
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      Tactile(
+                        child: InkWell(
+                          key: const ValueKey('sanoq-maqsad'),
+                          borderRadius: BorderRadius.circular(20),
+                          onTap: _maqsadniTanla,
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 12,
+                              vertical: 6,
+                            ),
+                            decoration: BoxDecoration(
+                              color: Colors.white.withValues(alpha: 0.1),
+                              borderRadius: BorderRadius.circular(20),
+                              border: Border.all(
+                                color: AppColors.goldLight.withValues(
+                                  alpha: 0.5,
+                                ),
+                              ),
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                const Icon(
+                                  Icons.tune_rounded,
+                                  size: 15,
+                                  color: AppColors.goldLight,
+                                ),
+                                const SizedBox(width: 6),
+                                Text(
+                                  '$_maqsad marta',
+                                  style: const TextStyle(
+                                    color: AppColors.goldLight,
+                                    fontWeight: FontWeight.w800,
+                                    fontSize: 13,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ],
-            ),
-          ),
-          const SizedBox(width: 14),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  '$_sanoq / $_maqsad marta o\'qildi',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w800,
-                    fontSize: 16,
-                    color: AppColors.ink,
-                  ),
-                ),
-                const SizedBox(height: 2),
-                Text(
-                  _tugadi
-                      ? 'Maqsadga yetildi'
-                      : 'Keyingi tekshiruv: '
-                            '${_keyingiTekshiruv()}-sanoqdan keyin',
-                  style: TextStyle(fontSize: 12.5, color: AppColors.matn2),
-                ),
-              ],
-            ),
-          ),
-          OutlinedButton.icon(
-            key: const ValueKey('sanoq-maqsad'),
-            onPressed: _maqsadniTanla,
-            icon: const Icon(Icons.tune_rounded, size: 18),
-            label: Text('$_maqsad marta'),
-            style: OutlinedButton.styleFrom(
-              foregroundColor: AppColors.gold,
-              side: const BorderSide(color: AppColors.gold),
-              visualDensity: VisualDensity.compact,
             ),
           ),
         ],
@@ -537,36 +608,79 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
     return k > _maqsad ? _maqsad : k;
   }
 
+  /// Rejim tanlash: tanlangan bo'lak ostida sirpanuvchi oltin indikator.
   Widget _rejimTanlash() {
-    return SegmentedButton<SanoqRejim>(
-      segments: [
-        ButtonSegment(
-          value: SanoqRejim.arabcha,
-          label: Text('Arabcha'),
-          icon: const Icon(Icons.menu_book_rounded, size: 16),
-        ),
-        ButtonSegment(
-          value: SanoqRejim.ozbekcha,
-          label: Text('O\'zbekcha'),
-          icon: const Icon(Icons.translate_rounded, size: 16),
-        ),
-        ButtonSegment(
-          value: SanoqRejim.aralash,
-          label: Text('Aralash'),
-          icon: const Icon(Icons.swap_horiz_rounded, size: 16),
-        ),
-      ],
-      selected: {_rejim},
-      onSelectionChanged: (s) {
-        setState(() {
-          _rejim = s.first;
-          _ochiq = false;
-        });
-        _saqla();
-      },
-      style: SegmentedButton.styleFrom(
-        selectedBackgroundColor: AppColors.gold.withValues(alpha: 0.18),
-        selectedForegroundColor: AppColors.ink,
+    const nomlar = {
+      SanoqRejim.arabcha: 'Arabcha',
+      SanoqRejim.ozbekcha: "O'zbekcha",
+      SanoqRejim.aralash: 'Aralash',
+    };
+    final n = SanoqRejim.values.length;
+    return Container(
+      height: 46,
+      padding: const EdgeInsets.all(4),
+      decoration: BoxDecoration(
+        color: AppColors.karta,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: AppColors.chiziq2),
+      ),
+      child: Stack(
+        children: [
+          AnimatedAlign(
+            duration: const Duration(milliseconds: 420),
+            curve: kExpoOut,
+            alignment: Alignment(-1 + 2 * _rejim.index / (n - 1), 0),
+            child: FractionallySizedBox(
+              widthFactor: 1 / n,
+              heightFactor: 1,
+              child: Container(
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(
+                    colors: [AppColors.goldLight, AppColors.gold],
+                  ),
+                  borderRadius: BorderRadius.circular(12),
+                  boxShadow: [
+                    BoxShadow(
+                      color: AppColors.gold.withValues(alpha: 0.4),
+                      blurRadius: 10,
+                      offset: const Offset(0, 3),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Row(
+            children: [
+              for (final r in SanoqRejim.values)
+                Expanded(
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(12),
+                    onTap: () {
+                      Haptic.tap();
+                      setState(() {
+                        _rejim = r;
+                        _ochiq = false;
+                      });
+                      _saqla();
+                    },
+                    child: Center(
+                      child: Text(
+                        nomlar[r]!,
+                        style: TextStyle(
+                          fontWeight: FontWeight.w800,
+                          fontSize: 13.5,
+                          color: r == _rejim
+                              ? const Color(0xFF0B1A17)
+                              : AppColors.matn2,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+            ],
+          ),
+        ],
       ),
     );
   }
@@ -606,16 +720,22 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
         ),
       ),
     );
-    Widget tarjima(TarjimaGuruh g) => Padding(
-      padding: const EdgeInsets.only(bottom: 10),
-      child: TarjimaPaneli(
-        key: ValueKey('sanoq-tarjima-${g.boshi}'),
-        matn: g.matn,
-        qoshimcha: g.qoshimcha,
-        izoh: g.soni > 1
-            ? '${g.boshi + 1}–${g.boshi + g.soni}-gaplarning tarjimasi '
-                  '(kitobda birga berilgan)'
-            : null,
+    Widget tarjima(TarjimaGuruh g) => Reveal(
+      key: ValueKey('sanoq-tarjima-kirish-${g.boshi}-$ozbekcha'),
+      delay: Duration(milliseconds: 30 * math.min(g.boshi, 10)),
+      duration: const Duration(milliseconds: 460),
+      offsetY: 12,
+      child: Padding(
+        padding: const EdgeInsets.only(bottom: 10),
+        child: TarjimaPaneli(
+          key: ValueKey('sanoq-tarjima-${g.boshi}'),
+          matn: g.matn,
+          qoshimcha: g.qoshimcha,
+          izoh: g.soni > 1
+              ? '${g.boshi + 1}–${g.boshi + g.soni}-gaplarning tarjimasi '
+                    '(kitobda birga berilgan)'
+              : null,
+        ),
       ),
     );
 
@@ -642,11 +762,18 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
     return Container(
       key: const ValueKey('sanoq-matn'),
       width: double.infinity,
-      padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
+      padding: const EdgeInsets.fromLTRB(18, 14, 18, 14),
       decoration: BoxDecoration(
         color: AppColors.karta,
-        borderRadius: BorderRadius.circular(18),
-        border: Border.all(color: AppColors.chiziq2),
+        borderRadius: BorderRadius.circular(24),
+        border: Border.all(color: AppColors.gold.withValues(alpha: 0.22)),
+        boxShadow: [
+          BoxShadow(
+            color: AppColors.deep.withValues(alpha: 0.08),
+            blurRadius: 26,
+            offset: const Offset(0, 12),
+          ),
+        ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -703,104 +830,225 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
     );
   }
 
+  /// Asosiy tugma: oltin gradient, nurli soya, bosilganda jonli siqilish.
   Widget _pastkiTugma() {
-    return SafeArea(
-      top: false,
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
-        child: SizedBox(
-          width: double.infinity,
-          child: FilledButton.icon(
-            key: const ValueKey('sanoq-oqidim'),
-            onPressed: _oqidim,
-            icon: const Icon(Icons.check_rounded),
-            label: Text(
-              'O\'qidim — ${_sanoq + 1} / $_maqsad',
-              style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16),
+    final radius = BorderRadius.circular(18);
+    final tugma = Tactile(
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          key: const ValueKey('sanoq-oqidim'),
+          borderRadius: radius,
+          onTap: _oqidim,
+          child: Ink(
+            decoration: BoxDecoration(
+              gradient: const LinearGradient(
+                colors: [AppColors.goldLight, AppColors.gold],
+              ),
+              borderRadius: radius,
+              boxShadow: [
+                BoxShadow(
+                  color: AppColors.gold.withValues(alpha: 0.45),
+                  blurRadius: 18,
+                  offset: const Offset(0, 8),
+                ),
+              ],
             ),
-            style: FilledButton.styleFrom(
-              backgroundColor: AppColors.gold,
-              foregroundColor: const Color(0xFF0B1A17),
-              padding: const EdgeInsets.symmetric(vertical: 16),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 17),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(
+                    Icons.check_circle_rounded,
+                    color: Color(0xFF0B1A17),
+                  ),
+                  const SizedBox(width: 8),
+                  Text(
+                    'O\'qidim — ${_sanoq + 1} / $_maqsad',
+                    style: const TextStyle(
+                      color: Color(0xFF0B1A17),
+                      fontWeight: FontWeight.w900,
+                      fontSize: 16.5,
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
         ),
       ),
     );
-  }
-
-  Widget _tugadiKartasi() {
-    return Container(
-      padding: const EdgeInsets.all(18),
-      decoration: BoxDecoration(
-        color: AppColors.success.withValues(alpha: 0.08),
-        borderRadius: BorderRadius.circular(18),
-        border: Border.all(color: AppColors.success.withValues(alpha: 0.4)),
-      ),
-      child: Column(
-        children: [
-          const Icon(
-            Icons.emoji_events_rounded,
-            color: AppColors.success,
-            size: 44,
-          ),
-          const SizedBox(height: 8),
-          Text(
-            'Matn $_maqsad marta o\'qildi',
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w900,
-              color: AppColors.ink,
-            ),
-          ),
-          const SizedBox(height: 12),
-          Wrap(
-            spacing: 10,
-            runSpacing: 8,
-            alignment: WrapAlignment.center,
-            children: [
-              FilledButton.icon(
-                onPressed: () => Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (_) => _LugatTesti(lesson: widget.lesson),
-                  ),
-                ),
-                icon: const Icon(Icons.quiz_rounded),
-                label: Text('Lug\'at testi'),
-              ),
-              if (_gaplar.length >= 2)
-                OutlinedButton.icon(
-                  key: const ValueKey('sanoq-harflab'),
-                  onPressed: _harflabYoz,
-                  icon: const Icon(Icons.spellcheck_rounded),
-                  label: Text("O'zbekchadan arabchaga yozish"),
-                ),
-              OutlinedButton.icon(
-                key: const ValueKey('sanoq-lugat-yoz'),
-                onPressed: _lugatYoz,
-                icon: const Icon(Icons.edit_note_rounded),
-                label: Text("Lug'atni harflab yozish"),
-              ),
-              if (_gaplar.length >= 2)
-                OutlinedButton.icon(
-                  onPressed: _gapTekshiruvi,
-                  icon: const Icon(Icons.fact_check_rounded),
-                  label: Text('Gap tekshiruvi'),
-                ),
-              OutlinedButton.icon(
-                onPressed: _maqsadniTanla,
-                icon: const Icon(Icons.add_rounded),
-                label: Text('Maqsadni oshirish'),
-              ),
-            ],
-          ),
-        ],
+    return SafeArea(
+      top: false,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(16, 8, 16, 14),
+        child: SanoqEkrani.jonli
+            ? Shine(borderRadius: radius, child: tugma)
+            : tugma,
       ),
     );
   }
+
+  Widget _tugadiKartasi() {
+    return Reveal(
+      child: Container(
+        padding: const EdgeInsets.all(18),
+        decoration: BoxDecoration(
+          color: AppColors.success.withValues(alpha: 0.08),
+          borderRadius: BorderRadius.circular(18),
+          border: Border.all(color: AppColors.success.withValues(alpha: 0.4)),
+        ),
+        child: Column(
+          children: [
+            const Icon(
+              Icons.emoji_events_rounded,
+              color: AppColors.success,
+              size: 44,
+            ),
+            const SizedBox(height: 8),
+            Text(
+              'Matn $_maqsad marta o\'qildi',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w900,
+                color: AppColors.ink,
+              ),
+            ),
+            const SizedBox(height: 12),
+            Wrap(
+              spacing: 10,
+              runSpacing: 8,
+              alignment: WrapAlignment.center,
+              children: [
+                FilledButton.icon(
+                  onPressed: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => _LugatTesti(lesson: widget.lesson),
+                    ),
+                  ),
+                  icon: const Icon(Icons.quiz_rounded),
+                  label: Text('Lug\'at testi'),
+                ),
+                if (_gaplar.length >= 2)
+                  OutlinedButton.icon(
+                    key: const ValueKey('sanoq-harflab'),
+                    onPressed: _harflabYoz,
+                    icon: const Icon(Icons.spellcheck_rounded),
+                    label: Text("O'zbekchadan arabchaga yozish"),
+                  ),
+                OutlinedButton.icon(
+                  key: const ValueKey('sanoq-lugat-yoz'),
+                  onPressed: _lugatYoz,
+                  icon: const Icon(Icons.edit_note_rounded),
+                  label: Text("Lug'atni harflab yozish"),
+                ),
+                if (_gaplar.length >= 2)
+                  OutlinedButton.icon(
+                    onPressed: _gapTekshiruvi,
+                    icon: const Icon(Icons.fact_check_rounded),
+                    label: Text('Gap tekshiruvi'),
+                  ),
+                OutlinedButton.icon(
+                  onPressed: _maqsadniTanla,
+                  icon: const Icon(Icons.add_rounded),
+                  label: Text('Maqsadni oshirish'),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// Oltin sanoq halqasi: qiymat o'zgarganda silliq to'ladi, raqam sanab o'tadi.
+class _SanoqHalqasi extends StatelessWidget {
+  final double ulush;
+  final int sanoq;
+  const _SanoqHalqasi({required this.ulush, required this.sanoq});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 104,
+      height: 104,
+      child: TweenAnimationBuilder<double>(
+        tween: Tween(end: ulush),
+        duration: const Duration(milliseconds: 800),
+        curve: kExpoOut,
+        builder: (_, q, child) =>
+            CustomPaint(painter: _HalqaRassomi(q), child: child),
+        child: Center(
+          child: CountUp(
+            key: const ValueKey('sanoq-soni'),
+            value: sanoq,
+            duration: const Duration(milliseconds: 500),
+            style: const TextStyle(
+              fontSize: 34,
+              fontWeight: FontWeight.w900,
+              color: Colors.white,
+              letterSpacing: -1,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _HalqaRassomi extends CustomPainter {
+  final double q;
+  const _HalqaRassomi(this.q);
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    const qalin = 9.0;
+    final doira = (Offset.zero & size).deflate(qalin / 2);
+    canvas.drawArc(
+      doira,
+      0,
+      2 * math.pi,
+      false,
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = qalin
+        ..color = Colors.white.withValues(alpha: 0.13),
+    );
+    if (q <= 0) return;
+    final yoy = 2 * math.pi * q;
+    final shader = const SweepGradient(
+      colors: [AppColors.gold, AppColors.goldLight, AppColors.gold],
+      transform: GradientRotation(-math.pi / 2),
+    ).createShader(doira);
+    // Nur (blursiz: web'da arzon) — keng va xira chiziq.
+    canvas.drawArc(
+      doira,
+      -math.pi / 2,
+      yoy,
+      false,
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeCap = StrokeCap.round
+        ..strokeWidth = qalin + 7
+        ..color = AppColors.gold.withValues(alpha: 0.2),
+    );
+    canvas.drawArc(
+      doira,
+      -math.pi / 2,
+      yoy,
+      false,
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeCap = StrokeCap.round
+        ..strokeWidth = qalin
+        ..shader = shader,
+    );
+  }
+
+  @override
+  bool shouldRepaint(_HalqaRassomi o) => o.q != q;
 }
 
 /// Maqsad tanlash varaqasi: tayyor sonlar yoki o'zi kiritadi.

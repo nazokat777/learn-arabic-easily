@@ -25,6 +25,7 @@ import 'tarjima_mashqi.dart';
 import 'gapma_gap_tarjima.dart';
 import 'qiroat_match.dart';
 import 'arabchadan_tarjima.dart';
+import 'lesson/birlik_koplik.dart';
 import 'rasmli_kartochka.dart';
 import 'sanoq_ekrani.dart';
 import 'lesson/lesson_flow.dart';
@@ -245,6 +246,24 @@ class QiroatLessonDetail extends StatelessWidget {
                 icon: Icons.translate_rounded,
                 title: 'Tarjimasi',
                 text: lesson.translation,
+              ),
+            ],
+            if (BirlikKoplikEkrani.sozlar(lesson).isNotEmpty) ...[
+              const SizedBox(height: 12),
+              FilledButton.icon(
+                key: const ValueKey('mashq-birlik-koplik'),
+                onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => BirlikKoplikEkrani(lesson: lesson),
+                  ),
+                ),
+                icon: const Icon(Icons.record_voice_over_rounded),
+                label: Text("Mashq: birligi va ko'pligini ayting"),
+                style: FilledButton.styleFrom(
+                  backgroundColor: AppColors.gold,
+                  padding: const EdgeInsets.symmetric(vertical: 14),
+                ),
               ),
             ],
             if (ArabchadanTarjima.topshiriqlar(lesson).isNotEmpty) ...[

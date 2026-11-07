@@ -13,6 +13,7 @@ import '../../mashq/mukofot.dart';
 import '../../mashq/tovush.dart';
 import '../../widgets/ornament.dart';
 import '../../widgets/rasm_belgi.dart';
+import 'birlik_koplik.dart';
 import 'word_sheet.dart';
 
 typedef AwardXp = void Function(int xp);
@@ -34,7 +35,7 @@ class VocabStage extends StatefulWidget {
   State<VocabStage> createState() => _VocabStageState();
 }
 
-enum _Phase { learn, practice }
+enum _Phase { learn, practice, ayt }
 
 class _VocabStageState extends State<VocabStage> {
   final _rnd = Random();
@@ -208,7 +209,10 @@ class _VocabStageState extends State<VocabStage> {
     }
   }
 
-  void _nextChunk() {
+  /// Guruh mashqidan keyin: har so'zning birligi va ko'pligi aytiladi.
+  void _nextChunk() => setState(() => _phase = _Phase.ayt);
+
+  void _guruhOt() {
     if (_ci + 1 < _chunks.length) {
       setState(() {
         _ci++;
@@ -229,7 +233,17 @@ class _VocabStageState extends State<VocabStage> {
       children: [
         _header(),
         Expanded(
-          child: _phase == _Phase.learn ? _learnView() : _practiceView(),
+          child: switch (_phase) {
+            _Phase.learn => _learnView(),
+            _Phase.practice => _practiceView(),
+            _Phase.ayt => BirlikKoplikAyt(
+              key: ValueKey('ayt-$_ci'),
+              sozlar: _chunk,
+              darsId: widget.lesson.completionId,
+              award: widget.award,
+              onDone: _guruhOt,
+            ),
+          },
         ),
       ],
     );
@@ -253,7 +267,11 @@ class _VocabStageState extends State<VocabStage> {
                 ),
               ),
               Text(
-                _phase == _Phase.learn ? 'Tanishuv' : 'Mashq',
+                switch (_phase) {
+                  _Phase.learn => 'Tanishuv',
+                  _Phase.practice => 'Mashq',
+                  _Phase.ayt => 'Ayting',
+                },
                 style: const TextStyle(
                   fontSize: 12.5,
                   color: AppColors.gold,
@@ -264,7 +282,7 @@ class _VocabStageState extends State<VocabStage> {
           ),
           const SizedBox(height: 6),
           AnimatedBar(
-            value: (_ci + (_phase == _Phase.practice ? 0.5 : 0.0)) / total,
+            value: (_ci + (_phase == _Phase.learn ? 0.0 : 0.5)) / total,
             height: 8,
             color: AppColors.emerald,
             background: AppColors.softGreen,

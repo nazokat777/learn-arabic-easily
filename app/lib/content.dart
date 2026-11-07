@@ -320,6 +320,9 @@ class QiroatLesson {
   /// uchun sahifa tasviridan o'qib kiritiladi (bosqichma-bosqich).
   final String exerciseAnswer;
 
+  /// Mashq gapma-gap: har o'zbekcha gap va uning arabcha tarjimasi.
+  final List<({String uz, String ar})> mashqJuftlar;
+
   const QiroatLesson({
     required this.book,
     required this.num,
@@ -332,6 +335,7 @@ class QiroatLesson {
     this.tarjimaGuruhlari = const [],
     this.exercise = '',
     this.exerciseAnswer = '',
+    this.mashqJuftlar = const [],
   });
 
   /// Dars tugatilganini belgilash uchun noyob id (kitob + dars).
@@ -359,6 +363,10 @@ class QiroatLesson {
     tarjimaGuruhlari: TarjimaGuruh.royxat(j['tarjimaGaplar'] as List?),
     exercise: j['exercise'] ?? '',
     exerciseAnswer: j['exerciseAnswer'] ?? '',
+    mashqJuftlar: [
+      for (final p in (j['mashqJuftlar'] as List?) ?? const [])
+        (uz: p['uz'] as String, ar: p['ar'] as String),
+    ],
   );
 }
 

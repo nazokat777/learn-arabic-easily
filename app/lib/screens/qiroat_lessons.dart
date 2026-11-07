@@ -221,7 +221,11 @@ class QiroatLessonDetail extends StatelessWidget {
             const SizedBox(height: 16),
             _sectionLabel(Icons.menu_book_rounded, 'O\'qish matni'),
             const SizedBox(height: 8),
-            _ReadingBlock(lesson: lesson),
+            // Gapma-gap blok matnni to'liq ko'rsatadi — bu yerda takrorlanmaydi.
+            _ReadingBlock(
+              lesson: lesson,
+              faqatTinglash: lesson.tarjimaGuruhlari.isNotEmpty,
+            ),
             // Tarjima: gapma-gap — har arabcha gap alohida, «Tarjima» bosilganda
             // kitobdagi tarjimasi ochiladi. Butun matn ham yopiq blokda turadi.
             if (lesson.tarjimaGuruhlari.isNotEmpty) ...[
@@ -315,7 +319,10 @@ class QiroatLessonDetail extends StatelessWidget {
 /// alohida ovoz tugmasi, va har bir so'z bosiladigan (ma'nosi + talaffuzi).
 class _ReadingBlock extends StatefulWidget {
   final QiroatLesson lesson;
-  const _ReadingBlock({required this.lesson});
+
+  /// true — faqat «Butun matnni tinglash»; gaplar gapma-gap blokda turadi.
+  final bool faqatTinglash;
+  const _ReadingBlock({required this.lesson, this.faqatTinglash = false});
 
   @override
   State<_ReadingBlock> createState() => _ReadingBlockState();
@@ -375,23 +382,24 @@ class _ReadingBlockState extends State<_ReadingBlock> {
             ),
           ),
           for (var i = 0; i < _sentences.length; i++)
-            Padding(
-              padding: const EdgeInsets.only(bottom: 6),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SpeakButton(text: _sentences[i], id: 'sent$i', size: 18),
-                  Expanded(
-                    child: SentenceText(
-                      sentence: _sentences[i],
-                      vocab: widget.lesson.vocab,
-                      reading: widget.lesson.reading,
-                      lessonId: widget.lesson.completionId,
+            if (!widget.faqatTinglash)
+              Padding(
+                padding: const EdgeInsets.only(bottom: 6),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SpeakButton(text: _sentences[i], id: 'sent$i', size: 18),
+                    Expanded(
+                      child: SentenceText(
+                        sentence: _sentences[i],
+                        vocab: widget.lesson.vocab,
+                        reading: widget.lesson.reading,
+                        lessonId: widget.lesson.completionId,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
         ],
       ),
     );
@@ -574,7 +582,8 @@ class DarsOyinlari extends StatelessWidget {
           context,
           color: AppColors.gold,
           icon: Icons.repeat_rounded,
-          label: "Sanoq bilan yodlash — matnni 33 (yoki xohlagancha) marta o'qish",
+          label:
+              "Sanoq bilan yodlash — matnni 33 (yoki xohlagancha) marta o'qish",
           page: SanoqEkrani(lesson: lesson),
         ),
         const SizedBox(height: 10),

@@ -90,8 +90,15 @@ void main() {
     tester.view.devicePixelRatio = 1;
     addTearDown(tester.view.resetPhysicalSize);
     addTearDown(tester.view.resetDevicePixelRatio);
-    final dars = darslar.firstWhere(
-      (l) => l.exercise.isNotEmpty && TarjimaMashqi.ajrat(l).$3 == null,
+    // Hamma kitob darsi endi juftlangan; zaxira yo'lni soxta dars tekshiradi.
+    const dars = QiroatLesson(
+      book: 1,
+      num: 1,
+      titleAr: '',
+      reading: '',
+      vocab: [],
+      exercise: 'Bir. Ikki.',
+      exerciseAnswer: 'هَذَا.',
     );
     await tester.pumpWidget(
       MaterialApp(

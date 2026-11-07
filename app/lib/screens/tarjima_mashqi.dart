@@ -41,8 +41,29 @@ class TarjimaMashqi extends StatefulWidget {
     return [for (final (i, u) in uz.indexed) (ar: ar[i], uz: u)];
   }
 
+  /// Gap tuzish o'yini uchun juftlar: arabchasi bitta jumla bo'lganlari.
+  static List<(String, String)> oyinJuftlari(QiroatLesson l) {
+    final (_, uz, ar) = ajrat(l);
+    if (ar == null) return const [];
+    return [
+      for (var i = 0; i < uz.length; i++)
+        if (jumlalar(ar[i]).length == 1) (uz[i], ar[i]),
+    ];
+  }
+
   /// (ko'rsatma, o'zbekcha jumlalar, arabcha javoblar yoki null — mos kelmasa)
   static (String, List<String>, List<String>?) ajrat(QiroatLesson l) {
+    if (l.mashqJuftlar.isNotEmpty) {
+      final bosh = l.exercise.indexOf('.');
+      final korsatma = l.exercise.toLowerCase().startsWith('quyidagi')
+          ? l.exercise.substring(0, bosh + 1)
+          : '';
+      return (
+        korsatma,
+        [for (final j in l.mashqJuftlar) j.uz],
+        [for (final j in l.mashqJuftlar) j.ar],
+      );
+    }
     var uz = jumlalar(l.exercise);
     var korsatma = '';
     if (uz.isNotEmpty && uz.first.toLowerCase().startsWith('quyidagi')) {
@@ -198,20 +219,31 @@ class _TarjimaMashqiState extends State<TarjimaMashqi> {
                   if (ar != null && _ochilgan.contains(i))
                     Padding(
                       padding: const EdgeInsets.only(left: 24, top: 4),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                      child: Column(
                         children: [
-                          SpeakButton(text: ar[i], id: 'tarjima-$i', size: 18),
-                          const SizedBox(width: 4),
-                          Expanded(
-                            child: SentenceText(
-                              sentence: ar[i],
-                              vocab: l.vocab,
-                              reading: l.reading,
-                              lessonId: l.completionId,
-                              size: 21,
+                          for (final (k, j) in TarjimaMashqi.jumlalar(
+                            ar[i],
+                          ).indexed)
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SpeakButton(
+                                  text: j,
+                                  id: 'tarjima-$i-$k',
+                                  size: 18,
+                                ),
+                                const SizedBox(width: 4),
+                                Expanded(
+                                  child: SentenceText(
+                                    sentence: j,
+                                    vocab: l.vocab,
+                                    reading: l.reading,
+                                    lessonId: l.completionId,
+                                    size: 21,
+                                  ),
+                                ),
+                              ],
                             ),
-                          ),
                         ],
                       ),
                     ),
@@ -295,11 +327,8 @@ class TarjimaStage extends StatefulWidget {
 class _TarjimaStageState extends State<TarjimaStage> {
   bool _oyinTugadi = false;
 
-  List<(String, String)> get _juftlar {
-    final (_, uz, ar) = TarjimaMashqi.ajrat(widget.lesson);
-    if (ar == null) return const [];
-    return [for (var i = 0; i < uz.length; i++) (uz[i], ar[i])];
-  }
+  List<(String, String)> get _juftlar =>
+      TarjimaMashqi.oyinJuftlari(widget.lesson);
 
   @override
   Widget build(BuildContext context) {

@@ -34,9 +34,7 @@ void gapTuzishniOch(BuildContext context) {
 }
 
 List<(String, String)> _juftlar(dynamic l) {
-  final (_, uz, ar) = TarjimaMashqi.ajrat(l);
-  if (ar == null) return const [];
-  return [for (var i = 0; i < uz.length; i++) (uz[i], ar[i])];
+  return TarjimaMashqi.oyinJuftlari(l);
 }
 
 class GapTuzishEkrani extends StatefulWidget {

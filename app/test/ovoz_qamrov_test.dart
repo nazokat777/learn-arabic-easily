@@ -88,7 +88,9 @@ void main() {
         }
       }
       final (_, _, ar) = TarjimaMashqi.ajrat(l);
-      for (final s in ar ?? TarjimaMashqi.jumlalar(l.exerciseAnswer)) {
+      for (final s in TarjimaMashqi.jumlalar(
+        ar?.join(' ') ?? l.exerciseAnswer,
+      )) {
         q(s, 'gap qiroat ${l.book}-${l.num}');
       }
       // Butun javob endi jumla-jumla o'qiladi — alohida klip kerak emas.

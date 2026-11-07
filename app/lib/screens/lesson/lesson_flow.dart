@@ -16,6 +16,7 @@ import '../nishonlar_ekrani.dart';
 import 'master_drill.dart';
 import 'quiz_flow.dart';
 import '../tarjima_mashqi.dart';
+import 'qiyin_sozlar.dart';
 import 'read_flow.dart';
 import 'vocab_flow.dart';
 import '../arabchadan_tarjima.dart';
@@ -719,6 +720,8 @@ class _DoneView extends StatelessWidget {
                       ),
                       const SizedBox(height: 10),
                     ],
+                    Tactile(child: QiyinSozlarTugmasi(lesson: lesson)),
+                    const SizedBox(height: 10),
                     Tactile(child: QiroatMashqTugmasi(lesson: lesson)),
                     const SizedBox(height: 10),
                     Tactile(

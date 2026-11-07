@@ -26,6 +26,7 @@ import 'gapma_gap_tarjima.dart';
 import 'qiroat_match.dart';
 import 'arabchadan_tarjima.dart';
 import 'lesson/birlik_koplik.dart';
+import 'lesson/qiyin_sozlar.dart';
 import 'rasmli_kartochka.dart';
 import 'sanoq_ekrani.dart';
 import 'lesson/lesson_flow.dart';
@@ -247,6 +248,10 @@ class QiroatLessonDetail extends StatelessWidget {
                 title: 'Tarjimasi',
                 text: lesson.translation,
               ),
+            ],
+            if (lesson.vocab.isNotEmpty) ...[
+              const SizedBox(height: 12),
+              QiyinSozlarTugmasi(lesson: lesson),
             ],
             if (BirlikKoplikEkrani.sozlar(lesson).isNotEmpty) ...[
               const SizedBox(height: 12),

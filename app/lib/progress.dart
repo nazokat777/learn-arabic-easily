@@ -324,6 +324,10 @@ class Progress extends ChangeNotifier {
   /// bo'lsagina so'z chindan o'rnashgan deb hisoblanadi.
   final Map<String, int> _ketma = {};
 
+  /// O'quvchi o'zi tanlagan qiyin so'zlar: darsId -> {ar, pl, uz} ro'yxati.
+  /// So'z gapdan ham olinishi mumkin, shuning uchun to'liq yozuv saqlanadi.
+  final Map<String, List<Map<String, String>>> _tanlangan = {};
+
   /// Shuncha xatodan keyin element «qiyin» hisoblanadi.
   static const int qiyinChegara = 3;
 
@@ -481,6 +485,14 @@ class Progress extends ChangeNotifier {
         (k, v) => _korilganKun[k as String] = (v as num).toInt(),
       );
     }
+    final tq = _prefs!.getString('tanlanganQiyin');
+    if (tq != null) {
+      (json.decode(tq) as Map).forEach((k, v) {
+        _tanlangan[k as String] = [
+          for (final m in v as List) Map<String, String>.from(m as Map),
+        ];
+      });
+    }
     final ks = _prefs!.getString('ketma');
     if (ks != null) {
       (json.decode(ks) as Map).forEach(
@@ -498,6 +510,27 @@ class Progress extends ChangeNotifier {
   bool isWordLearned(String key) => (_mastery[key] ?? 0) >= masteryGoal;
 
   /// To'g'ri javobda +1, xatoda -1 (0..masteryGoal orasida). Yangi darajani qaytaradi.
+  List<Map<String, String>> tanlanganlar(String darsId) =>
+      List.unmodifiable(_tanlangan[darsId] ?? const []);
+
+  bool tanlanganMi(String darsId, String ar) =>
+      (_tanlangan[darsId] ?? const []).any((m) => m['ar'] == ar);
+
+  /// Belgilangan bo'lsa olib tashlaydi, aks holda qo'shadi.
+  Future<void> tanlanganAlmashtir(
+    String darsId,
+    Map<String, String> soz,
+  ) async {
+    final ro = _tanlangan.putIfAbsent(darsId, () => []);
+    if (tanlanganMi(darsId, soz['ar']!)) {
+      ro.removeWhere((m) => m['ar'] == soz['ar']);
+      if (ro.isEmpty) _tanlangan.remove(darsId);
+    } else {
+      ro.add(soz);
+    }
+    await _save();
+  }
+
   Future<int> bumpWord(String key, bool correct) async {
     _kunlikQosh(togri: correct);
     final cur = _mastery[key] ?? 0;
@@ -930,6 +963,7 @@ class Progress extends ChangeNotifier {
     await p.setString('xato', json.encode(_xato));
     await p.setString('urinish', json.encode(_urinish));
     await p.setString('ketma', json.encode(_ketma));
+    await p.setString('tanlanganQiyin', json.encode(_tanlangan));
     await p.setString('korilganKun', json.encode(_korilganKun));
     if (_kunSana != null) await p.setString('kunSana', _kunSana!);
     await p.setInt('kunSoni', _kunSoni);

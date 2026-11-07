@@ -10,6 +10,7 @@ import '../../services/tts.dart';
 import '../../theme.dart';
 import '../../widgets/harflab_qatori.dart';
 import '../../widgets/rasm_belgi.dart';
+import 'qiyin_sozlar.dart';
 
 /// Arabcha so'zga bosilganda ochiladigan interaktiv karta:
 /// ma'no, taxminiy talaffuz, audio, harflar, grammatik shakllar (kitobdan),
@@ -24,6 +25,7 @@ void showWordSheet(
   String? reading,
   String? bosilgan,
   String? lessonId,
+  String? qiyinDarsId,
 }) {
   showModalBottomSheet(
     context: context,
@@ -34,8 +36,40 @@ void showWordSheet(
       reading: reading,
       bosilgan: bosilgan,
       lessonId: lessonId,
+      qiyinDarsId: qiyinDarsId ?? lessonId,
     ),
   );
+}
+
+/// So'z kartasidan bir bosishda «Qiyin so'zlarim»ga qo'shish.
+class _QiyinBelgi extends StatefulWidget {
+  final String darsId;
+  final QiroatVocab v;
+  const _QiyinBelgi({required this.darsId, required this.v});
+
+  @override
+  State<_QiyinBelgi> createState() => _QiyinBelgiState();
+}
+
+class _QiyinBelgiState extends State<_QiyinBelgi> {
+  @override
+  Widget build(BuildContext context) {
+    final bor = QiyinTanlov.bormi(widget.darsId, widget.v);
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 12),
+      child: OutlinedButton.icon(
+        key: const ValueKey('soz-qiyin'),
+        onPressed: () async {
+          await QiyinTanlov.almashtir(widget.darsId, widget.v);
+          if (mounted) setState(() {});
+        },
+        icon: Icon(bor ? Icons.flag_rounded : Icons.outlined_flag_rounded),
+        label: Text(
+          bor ? "Qiyin so'zlarimda bor" : "Qiyin so'zlarimga qo'shish",
+        ),
+      ),
+    );
+  }
 }
 
 class _WordSheet extends StatelessWidget {
@@ -45,11 +79,15 @@ class _WordSheet extends StatelessWidget {
 
   /// Dars id (completionId) — xotira kuchi shu dars kaliti bo'yicha.
   final String? lessonId;
+
+  /// «Qiyin so'zlarim»ga qo'shish uchun dars (so'z dars lug'atidan bo'lmasa ham).
+  final String? qiyinDarsId;
   const _WordSheet({
     required this.v,
     this.reading,
     this.bosilgan,
     this.lessonId,
+    this.qiyinDarsId,
   });
 
   @override
@@ -175,6 +213,7 @@ class _WordSheet extends StatelessWidget {
                 ),
               ),
             ),
+            if (qiyinDarsId != null) _QiyinBelgi(darsId: qiyinDarsId!, v: v),
             // Xotira kuchi — so'z qanchalik mustahkam, keyingi takror qachon.
             // Ko'rinadigan o'sish (progress bar) + «unutish egri chizig'i»
             // ma'nosida takror sanog'i: o'quvchi so'zni «tirik» deb his qiladi.

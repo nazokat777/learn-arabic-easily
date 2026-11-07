@@ -94,6 +94,7 @@ class SentenceText extends StatelessWidget {
                       reading: reading,
                       bosilgan: topilma.aynan ? null : t.text,
                       lessonId: vocab.contains(topilma.soz) ? lessonId : null,
+                      qiyinDarsId: lessonId,
                     );
                   } else {
                     Tts.instance.speak(t.text, id: t.text);

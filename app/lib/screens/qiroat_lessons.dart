@@ -612,29 +612,28 @@ class DarsOyinlari extends StatelessWidget {
   Widget build(BuildContext context) {
     return _BoshqaOyinlar(
       children: [
-        // Barcha o'yinlar bitta oqimda — savol turlari aralash.
+        // SANOQ — matnni 33 marta (yoki o'zi belgilagan marta) o'qib yodlash.
+        _exerciseButton(
+          context,
+          color: _Yorqin.binafsha,
+          icon: Icons.repeat_rounded,
+          label:
+              "Sanoq bilan yodlash — matnni 33 (yoki xohlagancha) marta o'qish",
+          page: SanoqEkrani(lesson: lesson),
+        ),
+        const SizedBox(height: 10),
+        // UMUMIY MASHQ — ro'yxatdagi hamma o'yin bitta oqimda aralash.
         _exerciseButton(
           context,
           color: _Yorqin.pushti,
           icon: Icons.shuffle_rounded,
-          label: 'Aralash mashq — hamma usul birga',
-          page: AralashMashqEkrani(lesson: lesson),
+          label: "Umumiy mashq — hamma o'yin bitta joyda",
+          page: AralashMashqEkrani(lesson: lesson, sarlavha: 'Umumiy mashq'),
         ),
         const SizedBox(height: 10),
-        QiyinSozlarTugmasi(lesson: lesson),
-        const SizedBox(height: 4),
         _AlohidaOyinlar(
           children: [
-            const SizedBox(height: 10),
-            // SANOQ — matnni 33 marta (yoki o'zi belgilagan marta) o'qib yodlash.
-            _exerciseButton(
-              context,
-              color: _Yorqin.binafsha,
-              icon: Icons.repeat_rounded,
-              label:
-                  "Sanoq bilan yodlash — matnni 33 (yoki xohlagancha) marta o'qish",
-              page: SanoqEkrani(lesson: lesson),
-            ),
+            QiyinSozlarTugmasi(lesson: lesson),
             const SizedBox(height: 10),
             _exerciseButton(
               context,
@@ -707,19 +706,19 @@ class DarsOyinlari extends StatelessWidget {
               label: "Yozma mashq — o'zbekchadan arabchaga (variantsiz)",
               onTap: () => yozmaMashqniOch(context, lesson),
             ),
-            // IMTIHON — shu darsgacha o'tilgan HAMMA lug'at bo'yicha (unutilgan
-            // so'z qolib ketmasin): darsning yakuniy bo'limi.
-            const SizedBox(height: 18),
-            _exerciseButton(
-              context,
-              color: _Yorqin.zargaldoq,
-              icon: Icons.workspace_premium_rounded,
-              label: lesson.book == 1
-                  ? "IMTIHON — 1–${lesson.num}-darslar lug'ati"
-                  : 'IMTIHON — ${lesson.book}-kitob ${lesson.num}-darsgacha',
-              page: ImtihonEkrani(lesson: lesson),
-            ),
           ],
+        ),
+        // IMTIHON — shu darsgacha o'tilgan HAMMA lug'at bo'yicha (unutilgan
+        // so'z qolib ketmasin): darsning yakuniy bo'limi.
+        const SizedBox(height: 10),
+        _exerciseButton(
+          context,
+          color: _Yorqin.zargaldoq,
+          icon: Icons.workspace_premium_rounded,
+          label: lesson.book == 1
+              ? "IMTIHON — 1–${lesson.num}-darslar lug'ati"
+              : 'IMTIHON — ${lesson.book}-kitob ${lesson.num}-darsgacha',
+          page: ImtihonEkrani(lesson: lesson),
         ),
       ],
     );
@@ -804,32 +803,53 @@ class _AlohidaOyinlar extends StatelessWidget {
   const _AlohidaOyinlar({required this.children});
 
   @override
-  Widget build(BuildContext context) => Theme(
-    data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
-    child: ExpansionTile(
-      key: const ValueKey('oyinlar-royxati'),
-      tilePadding: const EdgeInsets.symmetric(horizontal: 14),
-      backgroundColor: _Yorqin.binafsha.withValues(alpha: 0.08),
-      collapsedBackgroundColor: _Yorqin.binafsha,
-      iconColor: _Yorqin.binafsha,
-      collapsedIconColor: Colors.white,
-      textColor: _Yorqin.binafsha,
-      collapsedTextColor: Colors.white,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-      collapsedShape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(14),
+  Widget build(BuildContext context) => PressableScale(
+    child: Container(
+      decoration: BoxDecoration(
+        color: Color.lerp(_Yorqin.binafsha, Colors.black, 0.22),
+        borderRadius: BorderRadius.circular(16),
       ),
-      leading: const Icon(Icons.apps_rounded),
-      title: Text(
-        "Barcha o'yinlar va mashqlar",
-        style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16),
-      ),
-      children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: children,
+      padding: const EdgeInsets.only(bottom: 4),
+      child: Material(
+        color: _Yorqin.binafsha,
+        borderRadius: BorderRadius.circular(16),
+        child: InkWell(
+          key: const ValueKey('oyinlar-royxati'),
+          borderRadius: BorderRadius.circular(16),
+          onTap: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (_) => Scaffold(
+                appBar: AppBar(title: Text("Mashqlar va o'yinlar")),
+                body: ListView(
+                  padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
+                  children: children,
+                ),
+              ),
+            ),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Icon(Icons.sports_esports_rounded, color: Colors.white),
+                const SizedBox(width: 10),
+                Text(
+                  "Mashqlar va o'yinlar",
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w800,
+                    fontSize: 16,
+                  ),
+                ),
+                const SizedBox(width: 6),
+                const Icon(Icons.chevron_right_rounded, color: Colors.white),
+              ],
+            ),
+          ),
         ),
-      ],
+      ),
     ),
   );
 }

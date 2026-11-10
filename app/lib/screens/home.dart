@@ -26,6 +26,7 @@ import '../services/xabar.dart';
 import '../widgets/ornament.dart';
 import 'alifbo_home.dart';
 import 'davom.dart';
+import 'shaxsiy_mashq.dart';
 import '../content.dart';
 import 'imtihon_ekrani.dart';
 import 'mashqlar_home.dart';
@@ -161,7 +162,11 @@ class HomeScreen extends StatelessWidget {
                         delay: const Duration(milliseconds: 112),
                         child: _ImtihonTugma(lesson: l),
                       ),
+                      const SizedBox(height: 12),
+                      const ShaxsiyMashqKarta(),
                     ],
+                    const SizedBox(height: 12),
+                    const TaklifKarta(),
                     const SizedBox(height: 12),
                     const Reveal(
                       delay: Duration(milliseconds: 115),

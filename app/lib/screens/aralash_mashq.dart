@@ -360,7 +360,11 @@ class AralashMashqEkrani extends StatefulWidget {
     required this.lesson,
     this.faqat = const [],
     this.sarlavha = 'Aralash mashq',
+    this.darsIdlar = const {},
   });
+
+  /// So'z boshqa darsdan bo'lsa (shaxsiy mashq): arabcha → o'z dars id'si.
+  final Map<String, String> darsIdlar;
 
   @override
   State<AralashMashqEkrani> createState() => _AralashMashqEkraniState();
@@ -391,6 +395,12 @@ class _AralashMashqEkraniState extends State<AralashMashqEkrani> {
   String? _juftQizil;
 
   QiroatLesson get _l => widget.lesson;
+
+  String _kalit(QiroatVocab v) {
+    final id = widget.darsIdlar[v.ar];
+    return id == null ? AralashYasagich.kalit(_l, v) : QiyinTanlov.kalit(id, v);
+  }
+
   AralashSavol? get _s => _navbat.isEmpty ? null : _navbat.first;
 
   /// Joriy savol (test uchun).
@@ -477,7 +487,7 @@ class _AralashMashqEkraniState extends State<AralashMashqEkrani> {
     });
     if (ovoz != null) Tts.instance.speak(ovoz, id: 'ar-javob');
     if (s.tur != AralashTur.juftlash && s.v != null) {
-      await progress.bumpWord(AralashYasagich.kalit(_l, s.v!), ok);
+      await progress.bumpWord(_kalit(s.v!), ok);
     }
     if (ok) {
       await Future.delayed(const Duration(milliseconds: 900));
@@ -563,10 +573,7 @@ class _AralashMashqEkraniState extends State<AralashMashqEkrani> {
         _juftlangan.add(v.ar);
         _juftAr = null;
       });
-      progress.bumpWord(
-        AralashYasagich.kalit(_l, v),
-        !_juftXato.contains(v.ar),
-      );
+      progress.bumpWord(_kalit(v), !_juftXato.contains(v.ar));
       if (_juftlangan.length == s.juftlar.length) {
         _yakunla(_juftXato.isEmpty);
       }

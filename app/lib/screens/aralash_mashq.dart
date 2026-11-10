@@ -593,10 +593,13 @@ class _AralashMashqEkraniState extends State<AralashMashqEkrani> {
         title: Text(widget.sarlavha),
         actions: [
           if (widget.faqat.isEmpty)
-            IconButton(
+            TextButton.icon(
               key: const ValueKey('aralash-qiyin'),
-              tooltip: "Qiyin so'zlarim",
               icon: const Icon(Icons.flag_rounded),
+              label: Text(
+                "Qiyin so'zlarim",
+                style: const TextStyle(fontWeight: FontWeight.w800),
+              ),
               onPressed: () async {
                 await Navigator.push(
                   context,

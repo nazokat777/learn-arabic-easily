@@ -182,3 +182,6 @@ jobs:
       - name: Pages'ga deploy
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          # Sayt katta (ovozlar) — GitHub sekin paytda 10 daqiqa yetmaydi.
+          timeout: 2400000

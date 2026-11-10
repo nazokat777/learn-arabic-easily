@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart' hide Text;
@@ -32,6 +33,8 @@ enum AralashTur {
   juftlash, // 4 juftni moslash
   harflab, // harflardan so'z yig'ish
   jumlaTuz, // tinglab jumla tuzish
+  yozma, // o'zbekcha → arabchasini klaviaturada yozish (variantsiz)
+  tezkor, // vaqtli: «bu juftlik to'g'rimi?»
 }
 
 class AralashSavol {
@@ -189,6 +192,22 @@ class AralashYasagich {
           bolaklar: [...tartib, ...qosh]..shuffle(rnd),
           koplikMi: koplikMi,
         );
+      case AralashTur.yozma:
+        final pl = v.plShakllari.where((p) => !p.contains(' ')).toList();
+        final koplikMi = pl.isNotEmpty && (koplikga ?? rnd.nextBool());
+        final soz = koplikMi ? pl.first : ar;
+        if (soz.contains(' ')) return null;
+        return AralashSavol(tur: t, v: v, togri: soz, koplikMi: koplikMi);
+      case AralashTur.tezkor:
+        final togriMi = rnd.nextBool();
+        final boshqa = uzlar.toSet().toList()..shuffle(rnd);
+        if (!togriMi && boshqa.isEmpty) return null;
+        return AralashSavol(
+          tur: t,
+          v: v,
+          jumla: togriMi ? v.uz : boshqa.first,
+          togri: togriMi ? 'ha' : 'yoq',
+        );
       case AralashTur.boshJoy:
       case AralashTur.juftlash:
       case AralashTur.jumlaTuz:
@@ -201,11 +220,13 @@ class AralashYasagich {
     final oson = [
       AralashTur.manoTop,
       AralashTur.tinglab,
+      AralashTur.tezkor,
       if (Rasm.topish(v.uz) != null) AralashTur.rasmTop,
     ]..shuffle(rnd);
     final qiyin = [
       AralashTur.arabchaTop,
       AralashTur.harflab,
+      AralashTur.yozma,
       if (v.plShakllari.isNotEmpty) AralashTur.koplik,
     ]..shuffle(rnd);
     final r = <AralashSavol>[];
@@ -360,6 +381,10 @@ class _AralashMashqEkraniState extends State<AralashMashqEkrani> {
   bool? _natija; // null — javob hali yo'q
   String _fikr = '';
   final List<int> _terilgan = [];
+  String _yozuv = '';
+  Timer? _taymer;
+  int _qolgan = 0; // tezkor: qolgan o'ndan-soniyalar
+  static const _tezkorVaqt = 60; // 6 soniya
   String? _juftAr;
   final Set<String> _juftlangan = {};
   final Set<String> _juftXato = {};
@@ -392,6 +417,9 @@ class _AralashMashqEkraniState extends State<AralashMashqEkrani> {
     _natija = null;
     _fikr = '';
     _terilgan.clear();
+    _yozuv = '';
+    _taymer?.cancel();
+    _taymer = null;
     _juftAr = null;
     _juftlangan.clear();
     _juftXato.clear();
@@ -407,6 +435,17 @@ class _AralashMashqEkraniState extends State<AralashMashqEkrani> {
         Tts.instance.speak(AralashYasagich.bosh(s.v!), id: 'ar-savol');
       case AralashTur.jumlaTuz:
         Tts.instance.speak(s.jumla, id: 'ar-savol');
+      case AralashTur.tezkor:
+        Tts.instance.speak(AralashYasagich.bosh(s.v!), id: 'ar-savol');
+        _qolgan = _tezkorVaqt;
+        _taymer = Timer.periodic(const Duration(milliseconds: 100), (t) {
+          if (!mounted || _natija != null) return t.cancel();
+          setState(() => _qolgan--);
+          if (_qolgan <= 0) {
+            t.cancel();
+            _yakunla(false);
+          }
+        });
       default:
         break;
     }
@@ -414,6 +453,7 @@ class _AralashMashqEkraniState extends State<AralashMashqEkrani> {
 
   @override
   void dispose() {
+    _taymer?.cancel();
     Tts.instance.stop();
     super.dispose();
   }
@@ -467,6 +507,27 @@ class _AralashMashqEkraniState extends State<AralashMashqEkrani> {
           ? s.bj!.jumla
           : (arabcha ? s.togri : null),
     );
+  }
+
+  /// Harakatsiz, hamza shakllari bir xil — yozma imtihondagi qoida.
+  static String _norm(String s) {
+    var t = stripDiacritics(s);
+    t = t.replaceAll(RegExp('[أإآٱ]'), 'ا').replaceAll('ى', 'ي');
+    t = t.replaceAll(RegExp(r'[^ء-ي\s]'), ' ');
+    return t.split(RegExp(r'\s+')).where((w) => w.isNotEmpty).join(' ');
+  }
+
+  void _yozmaTekshir() {
+    if (_natija != null || _yozuv.trim().isEmpty) return;
+    final s = _s!;
+    _yakunla(_norm(_yozuv) == _norm(s.togri), ovoz: s.togri);
+  }
+
+  void _tezkorJavob(bool ha) {
+    if (_natija != null) return;
+    _taymer?.cancel();
+    final s = _s!;
+    _yakunla(ha == (s.togri == 'ha'), ovoz: AralashYasagich.bosh(s.v!));
   }
 
   void _bolak(int i) {
@@ -598,6 +659,8 @@ class _AralashMashqEkraniState extends State<AralashMashqEkrani> {
     AralashTur.tinglab ||
     AralashTur.boshJoy ||
     AralashTur.jumlaTuz => Color(0xFF2563EB),
+    AralashTur.yozma => Color(0xFF0891B2),
+    AralashTur.tezkor => Color(0xFFF97316),
   };
 
   String _korsatma(AralashSavol s) => switch (s.tur) {
@@ -612,6 +675,9 @@ class _AralashMashqEkraniState extends State<AralashMashqEkrani> {
     AralashTur.harflab =>
       s.koplikMi ? "Ko'pligini harflab yig'ing" : "Arabchasini harflab yig'ing",
     AralashTur.jumlaTuz => "Eshiting va jumlani tuzing",
+    AralashTur.yozma =>
+      s.koplikMi ? "Ko'pligini o'zingiz yozing" : "Arabchasini o'zingiz yozing",
+    AralashTur.tezkor => "Tez! Bu juftlik to'g'rimi?",
   };
 
   Widget _arabcha(String t, {double size = 34, Color? rang}) => Directionality(
@@ -732,6 +798,57 @@ class _AralashMashqEkraniState extends State<AralashMashqEkrani> {
           _bolaklar(s),
         ]);
         return Column(children: ustki);
+      case AralashTur.yozma:
+        ustki.addAll([
+          _uz(s.koplikMi ? "${v!.uz} — KO'PLIGI" : v!.uz),
+          const SizedBox(height: 14),
+          _yozmaQism(s),
+        ]);
+        return Column(children: ustki);
+      case AralashTur.tezkor:
+        ustki.addAll([
+          LinearProgressIndicator(
+            value: (_qolgan / _tezkorVaqt).clamp(0, 1).toDouble(),
+            minHeight: 8,
+            color: _rang(s.tur),
+            backgroundColor: _rang(s.tur).withValues(alpha: 0.15),
+            borderRadius: BorderRadius.circular(6),
+          ),
+          const SizedBox(height: 20),
+          _arabcha(AralashYasagich.bosh(v!), size: 40),
+          const SizedBox(height: 6),
+          const Icon(Icons.swap_vert_rounded),
+          _uz(s.jumla),
+          const SizedBox(height: 22),
+          Row(
+            children: [
+              for (final (ha, nom, rang) in [
+                (false, "Noto'g'ri", const Color(0xFFEC4899)),
+                (true, "To'g'ri", const Color(0xFF16A34A)),
+              ]) ...[
+                Expanded(
+                  child: FilledButton(
+                    key: ValueKey(ha ? 'tez-ha' : 'tez-yoq'),
+                    onPressed: () => _tezkorJavob(ha),
+                    style: FilledButton.styleFrom(
+                      backgroundColor: rang,
+                      padding: const EdgeInsets.symmetric(vertical: 18),
+                    ),
+                    child: Text(
+                      nom,
+                      style: const TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
+                  ),
+                ),
+                if (!ha) const SizedBox(width: 12),
+              ],
+            ],
+          ),
+        ]);
+        return Column(children: ustki);
     }
     return Column(
       children: [
@@ -839,6 +956,139 @@ class _AralashMashqEkraniState extends State<AralashMashqEkrani> {
             ),
         ],
       ),
+    );
+  }
+
+  static const _harflar = [
+    'ا',
+    'ب',
+    'ت',
+    'ث',
+    'ج',
+    'ح',
+    'خ',
+    'د',
+    'ذ',
+    'ر',
+    'ز',
+    'س',
+    'ش',
+    'ص',
+    'ض',
+    'ط',
+    'ظ',
+    'ع',
+    'غ',
+    'ف',
+    'ق',
+    'ك',
+    'ل',
+    'م',
+    'ن',
+    'ه',
+    'و',
+    'ي',
+    'ة',
+    'ء',
+    'ى',
+    'أ',
+    'إ',
+    'آ',
+    'ؤ',
+    'ئ',
+  ];
+  static const _harakatlar = ['َ', 'ِ', 'ُ', 'ْ', 'ّ', 'ً', 'ٍ', 'ٌ'];
+
+  /// To'liq arab klaviaturasi — variant yo'q, o'zi eslab yozadi.
+  Widget _yozmaQism(AralashSavol s) {
+    final rang = _rang(s.tur);
+    Widget tugma(
+      String h,
+      VoidCallback f, {
+      String? key,
+      bool harakat = false,
+    }) => Material(
+      color: harakat ? rang.withValues(alpha: 0.12) : rang,
+      borderRadius: BorderRadius.circular(10),
+      child: InkWell(
+        key: ValueKey(key ?? 'harf-$h'),
+        borderRadius: BorderRadius.circular(10),
+        onTap: _natija != null ? null : f,
+        child: SizedBox(
+          width: 40,
+          height: 44,
+          child: Center(
+            child: Text(
+              harakat ? '◌$h' : h,
+              style: AppTheme.arabic(
+                size: 22,
+                color: harakat ? rang : Colors.white,
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+    return Column(
+      children: [
+        Container(
+          width: double.infinity,
+          constraints: const BoxConstraints(minHeight: 64),
+          padding: const EdgeInsets.all(10),
+          decoration: BoxDecoration(
+            color: AppColors.karta,
+            borderRadius: BorderRadius.circular(14),
+            border: Border.all(
+              color: _natija == null
+                  ? rang
+                  : (_natija! ? AppColors.success : AppColors.coral),
+              width: 1.6,
+            ),
+          ),
+          child: _arabcha(_yozuv.isEmpty ? ' ' : _yozuv, size: 32),
+        ),
+        const SizedBox(height: 12),
+        if (_natija == null) ...[
+          Directionality(
+            textDirection: TextDirection.rtl,
+            child: Wrap(
+              alignment: WrapAlignment.center,
+              spacing: 6,
+              runSpacing: 6,
+              children: [
+                for (final h in _harflar)
+                  tugma(h, () => setState(() => _yozuv += h)),
+                for (final h in _harakatlar)
+                  tugma(h, () => setState(() => _yozuv += h), harakat: true),
+                tugma('⌫', () {
+                  if (_yozuv.isEmpty) return;
+                  setState(
+                    () => _yozuv = _yozuv.substring(0, _yozuv.length - 1),
+                  );
+                }, key: 'yozma-ochir'),
+              ],
+            ),
+          ),
+          const SizedBox(height: 12),
+          SizedBox(
+            width: double.infinity,
+            child: FilledButton.icon(
+              key: const ValueKey('yozma-tekshir'),
+              onPressed: _yozmaTekshir,
+              icon: const Icon(Icons.check_rounded),
+              label: Text('Tekshirish'),
+              style: FilledButton.styleFrom(
+                backgroundColor: rang,
+                padding: const EdgeInsets.symmetric(vertical: 14),
+              ),
+            ),
+          ),
+          TextButton(
+            onPressed: () => _yakunla(false, ovoz: s.togri),
+            child: Text("Bilmadim — javobni ko'rsat"),
+          ),
+        ],
+      ],
     );
   }
 

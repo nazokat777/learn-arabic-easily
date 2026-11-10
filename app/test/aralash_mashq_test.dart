@@ -87,6 +87,20 @@ void main() {
           await t.tap(find.byKey(ValueKey('juft-uz-${v.ar}')));
           await t.pump();
         }
+      } else if (s.tur == AralashTur.yozma) {
+        for (final ch in s.togri.split('')) {
+          final f = find.byKey(ValueKey('harf-$ch'));
+          if (f.evaluate().isEmpty) continue; // harakatsiz ham qabul
+          await t.tap(f);
+          await t.pump();
+        }
+        await t.tap(find.byKey(const ValueKey('yozma-tekshir')));
+        await t.pump();
+      } else if (s.tur == AralashTur.tezkor) {
+        await t.tap(
+          find.byKey(ValueKey(s.togri == 'ha' ? 'tez-ha' : 'tez-yoq')),
+        );
+        await t.pump();
       } else if (s.tartib.isNotEmpty) {
         final ishlatilgan = <int>{};
         for (final b in s.tartib) {

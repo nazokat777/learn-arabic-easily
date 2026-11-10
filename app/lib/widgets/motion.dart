@@ -1,4 +1,5 @@
 import 'dart:math' as math;
+import '../theme.dart';
 
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart' hide Text;
@@ -529,7 +530,7 @@ class _AuroraPainter extends CustomPainter {
       final paint = Paint()
         ..shader = RadialGradient(
           colors: [
-            colors[i].withValues(alpha: 0.16),
+            colors[i].withValues(alpha: AppColors.qorongu ? 0.30 : 0.34),
             colors[i].withValues(alpha: 0),
           ],
         ).createShader(Rect.fromCircle(center: Offset(cx, cy), radius: r));

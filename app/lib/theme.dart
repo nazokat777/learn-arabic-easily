@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
-/// Ilova ranglari — islomiy/nafis: zumrad yashil + oltin.
+/// Ilova ranglari — NEON + GLASS: yorqin binafsha, pushti, feruza,
+/// yashil; sirtlar yarim shaffof «shisha» (oq/qora tuman ustida).
+/// Nomlar tarixiy (emerald, gold…) — 300+ joyda ishlatiladi, shuning
+/// uchun qiymatlari almashtirildi, nomlari emas.
 ///
 /// Ikki qatlam: BREND ranglari (zumrad, oltin, marjon…) ikkala rejimda
 /// bir xil va `const`; SIRT ranglari (fon, karta, matn, chiziq) rejimga
@@ -9,11 +12,11 @@ import 'package:flutter/material.dart';
 /// har birini `Theme.of(context)` ga o'tkazishdan ko'ra, palitrani bir
 /// joyda almashtirib butun daraxtni qayta chizish arzon va xatosiz.
 class AppColors {
-  static const emerald = Color(0xFF0E7C66);
-  static const emeraldDark = Color(0xFF0A5C4B);
-  static const gold = Color(0xFFD4A537);
-  static const coral = Color(0xFFE0603A);
-  static const success = Color(0xFF2E9E5B);
+  static const emerald = Color(0xFF7C3AED);
+  static const emeraldDark = Color(0xFF5B21B6);
+  static const gold = Color(0xFFF59E0B);
+  static const coral = Color(0xFFEC4899);
+  static const success = Color(0xFF16A34A);
 
   // --- Rejimga bog'liq sirt ranglari (yorug' qiymatlar bilan boshlanadi) ---
 
@@ -21,7 +24,7 @@ class AppColors {
   static Color cream = _yorugCream;
 
   /// Karta va panellar sirti (yorug'da oq).
-  static Color karta = Colors.white;
+  static Color karta = const Color(0xB8FFFFFF); // shisha
 
   /// Asosiy matn.
   static Color ink = _yorugInk;
@@ -48,27 +51,27 @@ class AppColors {
 
   static bool qorongu = false;
 
-  static const _yorugCream = Color(0xFFF7F3E9);
-  static const _yorugInk = Color(0xFF1C2B27);
-  static const _yorugSoftGreen = Color(0xFFE3F0EB);
+  static const _yorugCream = Color(0xFFF3F0FF);
+  static const _yorugInk = Color(0xFF1E1B3A);
+  static const _yorugSoftGreen = Color(0xFFEDE9FE);
 
   /// Palitrani rejimga o'rnatadi. Qorong'u tuslar zumrad-qora: qora
   /// emas, ilovaning o'z to'q yashili — oltin va marjon unda yonadi.
   static void rejim(bool q) {
     qorongu = q;
     if (q) {
-      cream = const Color(0xFF0B1A17);
-      karta = const Color(0xFF14231F);
-      ink = const Color(0xFFEEE8D9);
-      matn2 = const Color(0xB3EEE8D9);
-      matn3 = const Color(0xA6EEE8D9);
+      cream = const Color(0xFF0E0B1F);
+      karta = const Color(0x99231C45); // to'q shisha
+      ink = const Color(0xFFEDE9FE);
+      matn2 = const Color(0xB3EDE9FE);
+      matn3 = const Color(0xA6EDE9FE);
       chiziq = const Color(0x38FFFFFF);
       chiziq2 = const Color(0x1FFFFFFF);
-      softGreen = const Color(0xFF1C332C);
-      zumradMatn = const Color(0xFF6FD8B8);
+      softGreen = const Color(0xFF2A2152);
+      zumradMatn = const Color(0xFFC4B5FD);
     } else {
       cream = _yorugCream;
-      karta = Colors.white;
+      karta = const Color(0xB8FFFFFF);
       ink = _yorugInk;
       matn2 = Colors.black54;
       matn3 = const Color(0x99000000);
@@ -81,15 +84,15 @@ class AppColors {
 
   // Har modulning o'z urg'u rangi — hammasi bir xil yashil bo'lsa ekran
   // «bir tekis» va zerikarli tuyuladi; farqli ranglar ko'zga yo'l ko'rsatadi.
-  static const teal = Color(0xFF1B8A9E);
-  static const indigo = Color(0xFF5B5BD6);
-  static const amber = Color(0xFFE39B1E);
+  static const teal = Color(0xFF06B6D4);
+  static const indigo = Color(0xFF4F46E5);
+  static const amber = Color(0xFFF97316);
 
   /// Hero va chuqur fonlar uchun eng to'q yashil.
-  static const deep = Color(0xFF07332B);
+  static const deep = Color(0xFF1E1B4B);
 
   /// Oltinning yorug' tusi — yaltiroq chiziqlar va urg'ular uchun.
-  static const goldLight = Color(0xFFF2D27A);
+  static const goldLight = Color(0xFFFCD34D);
 }
 
 class AppTheme {
@@ -104,9 +107,47 @@ class AppTheme {
         secondary: AppColors.gold,
         surface: AppColors.karta,
       ),
-      scaffoldBackgroundColor: AppColors.cream,
+      // Shaffof: ortidagi neon dog'lar (main.dart builder) ko'rinsin.
+      scaffoldBackgroundColor: Colors.transparent,
+    );
+    // Shisha karta: yarim shaffof sirt, oq yaltiroq hoshiya, binafsha nur.
+    final shisha = RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(18),
+      side: BorderSide(
+        color: AppColors.qorongu
+            ? const Color(0x33C4B5FD)
+            : const Color(0xB3FFFFFF),
+        width: 1.2,
+      ),
     );
     return base.copyWith(
+      cardTheme: CardThemeData(
+        color: AppColors.karta,
+        elevation: 6,
+        shadowColor: AppColors.emerald.withValues(alpha: 0.18),
+        shape: shisha,
+      ),
+      filledButtonTheme: FilledButtonThemeData(
+        style: FilledButton.styleFrom(
+          elevation: 6,
+          shadowColor: AppColors.emerald.withValues(alpha: 0.45),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
+        ),
+      ),
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: OutlinedButton.styleFrom(
+          backgroundColor: AppColors.karta,
+          side: BorderSide(
+            color: AppColors.emerald.withValues(alpha: 0.45),
+            width: 1.4,
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
+        ),
+      ),
       textTheme: base.textTheme.apply(fontFamily: 'Nunito'),
       appBarTheme: AppBarTheme(
         backgroundColor: Colors.transparent,

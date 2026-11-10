@@ -6,12 +6,12 @@ import 'package:learn_arabic/theme.dart';
 void main() {
   test("rejim almashganda sirt ranglari o'zgaradi, brend ranglari qoladi", () {
     AppColors.rejim(false);
-    expect(AppColors.karta, Colors.white);
+    expect(AppColors.karta, const Color(0xB8FFFFFF));
     expect(AppColors.qorongu, isFalse);
     final oldinEmerald = AppColors.emerald;
     AppColors.rejim(true);
     expect(AppColors.qorongu, isTrue);
-    expect(AppColors.karta, isNot(Colors.white));
+    expect(AppColors.karta, isNot(const Color(0xB8FFFFFF)));
     expect(
       AppColors.ink.computeLuminance(),
       greaterThan(0.5),

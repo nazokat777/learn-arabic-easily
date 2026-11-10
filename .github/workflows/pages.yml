@@ -78,11 +78,10 @@ jobs:
         # <sayt>/audio/... manzilidan yuklaydi (VocabAudio.baseUrl).
         working-directory: app
         run: |
-          mkdir -p build/web/audio
-          for d in vocab sentences words alifbo extra sarf mashq harf kalima; do
-            cp -r "assets/audio/$d" build/web/audio/
-          done
-          echo "ovoz: $(du -sh build/web/audio | cut -f1)"
+          # O'CHIRILDI (2026-11-10): 49 ming klip bilan Pages deploy
+          # sinxronlashda 10 daqiqadan oshib to'xtardi. Ilova kliplarni
+          # raw.githubusercontent.com dan oladi (VocabAudio.baseUrl).
+          echo "ovoz saytga nusxalanmaydi — ombordan yuklanadi"
 
       - name: Kontentni saytga nusxalash
         # APK ichidagi darslar eskirsa, ilova shu manzildan yangisini oladi

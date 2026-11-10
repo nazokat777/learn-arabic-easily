@@ -24,8 +24,11 @@ class VocabAudio {
   /// bilan keladi, fayllar esa shu manzildan yuklanadi. Web ham xuddi shu
   /// manzildan oladi (o'zining sayti), shuning uchun ikkala platformada
   /// bitta yo'l ishlaydi.
+  // Kliplar (49 mingdan ortiq fayl) Pages'ga nusxalanmaydi — ular bilan
+  // deploy GitHub'ning 10 daqiqalik chegarasidan o'tolmay qoldi
+  // (2026-11-10). To'g'ridan-to'g'ri ombordan (CORS ochiq) yuklanadi.
   static const String baseUrl =
-      'https://nazokat777.github.io/learn-arabic-easily/audio';
+      'https://raw.githubusercontent.com/nazokat777/learn-arabic-easily/main/app/assets/audio';
 
   /// Klip manzillariga qo'shiladigan versiya belgisi.
   ///

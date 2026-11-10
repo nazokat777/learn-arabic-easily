@@ -14,6 +14,7 @@ import 'sarf_home.dart';
 import '../mavzu.dart';
 import '../uz_yozuv.dart';
 import '../widgets/motion.dart';
+import '../widgets/entrance.dart' show PressableScale;
 import '../widgets/olov.dart';
 import '../widgets/wow.dart';
 import '../mashq/bank.dart';
@@ -25,6 +26,8 @@ import '../services/xabar.dart';
 import '../widgets/ornament.dart';
 import 'alifbo_home.dart';
 import 'davom.dart';
+import '../content.dart';
+import 'imtihon_ekrani.dart';
 import 'mashqlar_home.dart';
 import 'nahv_home.dart';
 import 'gap_tuzish_ekrani.dart';
@@ -152,6 +155,13 @@ class HomeScreen extends StatelessWidget {
                         child: _DavomKarta(nom: progress.oxirgiDarsNomi ?? ''),
                       ),
                     ],
+                    if (oxirgiQiroatDarsi() case final l?) ...[
+                      const SizedBox(height: 12),
+                      Reveal(
+                        delay: const Duration(milliseconds: 112),
+                        child: _ImtihonTugma(lesson: l),
+                      ),
+                    ],
                     const SizedBox(height: 12),
                     const Reveal(
                       delay: Duration(milliseconds: 115),
@@ -224,7 +234,8 @@ class HomeScreen extends StatelessWidget {
                             final sub = faol.isEmpty
                                 ? "Kitobni kunlarga bo'lib yodlash: xarita, reja, kunlik cheklist"
                                 : [
-                                    if (x.bugunKutyapti) '⏰ Bugungi reja kutyapti',
+                                    if (x.bugunKutyapti)
+                                      '⏰ Bugungi reja kutyapti',
                                     if (!x.bugunKutyapti) '✅ Bugun bajarildi',
                                     '${faol.length} ta reja',
                                     if (x.zanjir > 0) '🔥 ${x.zanjir} kun',
@@ -2954,6 +2965,64 @@ class _OlovEslatmasi extends StatelessWidget {
 ///
 /// Eng katta ishqalanish «qayerda qolgan edim?» degan qidiruv; bu karta
 /// uni yo'q qiladi. Faqat oxirgi dars ma'lum bo'lganda chiqadi.
+/// IMTIHON — oxirgi Qiroat darsigacha bo'lgan hamma lug'at.
+class _ImtihonTugma extends StatelessWidget {
+  final QiroatLesson lesson;
+  const _ImtihonTugma({required this.lesson});
+
+  @override
+  Widget build(BuildContext context) {
+    const rang = Color(0xFFF97316);
+    final l = lesson;
+    return PressableScale(
+      child: Container(
+        decoration: BoxDecoration(
+          color: Color.lerp(rang, Colors.black, 0.22),
+          borderRadius: BorderRadius.circular(16),
+        ),
+        padding: const EdgeInsets.only(bottom: 4),
+        child: Material(
+          color: rang,
+          borderRadius: BorderRadius.circular(16),
+          child: InkWell(
+            key: const ValueKey('bosh-imtihon'),
+            borderRadius: BorderRadius.circular(16),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => ImtihonEkrani(lesson: l)),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(
+                    Icons.workspace_premium_rounded,
+                    color: Colors.white,
+                  ),
+                  const SizedBox(width: 10),
+                  Flexible(
+                    child: Text(
+                      l.book == 1
+                          ? "IMTIHON — 1–${l.num}-darslar lug'ati"
+                          : 'IMTIHON — ${l.book}-kitob ${l.num}-darsgacha',
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w800,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 class _DavomKarta extends StatelessWidget {
   final String nom;
   const _DavomKarta({required this.nom});

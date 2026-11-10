@@ -377,6 +377,9 @@ class Progress extends ChangeNotifier {
   String? oxirgiDarsId;
   String? oxirgiDarsNomi;
 
+  /// Oxirgi ochilgan Qiroat darsi — bosh ekrandagi imtihon tugmasi uchun.
+  String? oxirgiQiroatId;
+
   /// Maqsad bajarilgan kunlar ('YYYY-MM-DD'). Haftalik ko'rinish
   /// uchun; eskilari kesilmaydi — bir yilda 365 ta qisqa satr, xolos.
   final Set<String> _maqsadKunlari = {};
@@ -479,6 +482,7 @@ class Progress extends ChangeNotifier {
     oxirgiModul = _prefs!.getString('oxirgiModul');
     oxirgiDarsId = _prefs!.getString('oxirgiDarsId');
     oxirgiDarsNomi = _prefs!.getString('oxirgiDarsNomi');
+    oxirgiQiroatId = _prefs!.getString('oxirgiQiroatId');
     final kk = _prefs!.getString('korilganKun');
     if (kk != null) {
       (json.decode(kk) as Map).forEach(
@@ -654,6 +658,7 @@ class Progress extends ChangeNotifier {
     oxirgiModul = modul;
     oxirgiDarsId = id;
     oxirgiDarsNomi = nom;
+    if (modul == 'qiroat') oxirgiQiroatId = id;
     await _save();
     notifyListeners();
   }
@@ -977,6 +982,9 @@ class Progress extends ChangeNotifier {
       await p.setString('oxirgiModul', oxirgiModul!);
       await p.setString('oxirgiDarsId', oxirgiDarsId ?? '');
       await p.setString('oxirgiDarsNomi', oxirgiDarsNomi ?? '');
+    }
+    if (oxirgiQiroatId != null) {
+      await p.setString('oxirgiQiroatId', oxirgiQiroatId!);
     }
   }
 }

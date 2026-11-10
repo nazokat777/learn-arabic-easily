@@ -1,10 +1,23 @@
 import 'package:flutter/material.dart';
 
+import '../content.dart';
 import '../main.dart';
 import 'alifbo_home.dart';
 import 'lesson/lesson_flow.dart';
 import 'nahv_home.dart';
 import 'sarf_home.dart';
+
+/// Oxirgi ochilgan Qiroat darsi (imtihon shu darsgacha). Topilmasa `null`.
+QiroatLesson? oxirgiQiroatDarsi() {
+  final id =
+      progress.oxirgiQiroatId ??
+      (progress.oxirgiModul == 'qiroat' ? progress.oxirgiDarsId : null);
+  if (id == null || id.isEmpty) return null;
+  for (final l in repo.qiroatLessons) {
+    if (l.completionId == id) return l;
+  }
+  return null;
+}
 
 /// Oxirgi ochilgan darsning ekrani — «Davom etish» uchun.
 ///

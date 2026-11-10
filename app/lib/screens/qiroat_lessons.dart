@@ -28,6 +28,7 @@ import 'arabchadan_tarjima.dart';
 import 'lesson/birlik_koplik.dart';
 import 'lesson/qiyin_sozlar.dart';
 import 'rasmli_kartochka.dart';
+import 'aralash_mashq.dart';
 import 'sanoq_ekrani.dart';
 import 'lesson/lesson_flow.dart';
 import 'lesson/master_drill.dart';
@@ -593,6 +594,16 @@ class QiroatMashqTugmasi extends StatelessWidget {
 
 /// Darsning o'yinlari va mashqlari — kirish sahifasida ham, to'liq dars
 /// sahifasida ham DOIM ochiq ko'rinadi (yig'ma ro'yxatni o'quvchi sezmasdi).
+/// O'yin tugmalari uchun yorqin palitra.
+class _Yorqin {
+  static const pushti = Color(0xFFEC4899);
+  static const binafsha = Color(0xFF7C3AED);
+  static const yashil = Color(0xFF16A34A);
+  static const kok = Color(0xFF2563EB);
+  static const zargaldoq = Color(0xFFF97316);
+  static const feruza = Color(0xFF0891B2);
+}
+
 class DarsOyinlari extends StatelessWidget {
   final QiroatLesson lesson;
   const DarsOyinlari({super.key, required this.lesson});
@@ -601,98 +612,114 @@ class DarsOyinlari extends StatelessWidget {
   Widget build(BuildContext context) {
     return _BoshqaOyinlar(
       children: [
-        // SANOQ — matnni 33 marta (yoki o'zi belgilagan marta) o'qib yodlash.
+        // Barcha o'yinlar bitta oqimda — savol turlari aralash.
         _exerciseButton(
           context,
-          color: AppColors.gold,
-          icon: Icons.repeat_rounded,
-          label:
-              "Sanoq bilan yodlash — matnni 33 (yoki xohlagancha) marta o'qish",
-          page: SanoqEkrani(lesson: lesson),
+          color: _Yorqin.pushti,
+          icon: Icons.shuffle_rounded,
+          label: 'Aralash mashq — hamma usul birga',
+          page: AralashMashqEkrani(lesson: lesson),
         ),
         const SizedBox(height: 10),
-        _exerciseButton(
-          context,
-          color: AppColors.emerald,
-          icon: Icons.image_rounded,
-          label: "Rasmli kartochka — arabchasini top",
-          page: RasmliKartochka(lesson: lesson),
-        ),
-        const SizedBox(height: 10),
-        _exerciseButton(
-          context,
-          color: AppColors.gold,
-          icon: Icons.psychology_alt,
-          label: "So'zlarni chuqur yodlash (7 usul)",
-          page: MasterDrill(lesson: lesson),
-        ),
-        const SizedBox(height: 10),
-        _exerciseButton(
-          context,
-          color: AppColors.coral,
-          icon: Icons.bolt,
-          label: 'Tezkor mashq',
-          page: QiroatVocabDrill(lesson: lesson),
-        ),
-        const SizedBox(height: 10),
-        _exerciseButton(
-          context,
-          color: AppColors.emerald,
-          icon: Icons.extension,
-          label: "Juftlash o'yini",
-          page: QiroatMatchGame(lesson: lesson),
-        ),
-        if (BoshJoy.yasa(lesson).length >= 3) ...[
-          const SizedBox(height: 10),
-          _exerciseButton(
-            context,
-            color: AppColors.indigo,
-            icon: Icons.space_bar_rounded,
-            label: "Bo'sh joy — so'zni jumlada top",
-            page: BoshJoyEkrani(lesson: lesson),
-          ),
-        ],
-        // O'qish matnining jumlalari asosida: tinglab gap tuzish.
-        if (splitSentences(lesson.reading).length >= 2) ...[
-          const SizedBox(height: 10),
-          _exerciseButtonAction(
-            context,
-            color: AppColors.indigo,
-            icon: Icons.hearing_rounded,
-            label: 'Jumla testi — tinglab tuzish',
-            onTap: () => jumlaTestiniOch(context, lesson),
-          ),
-        ],
-        if (HarflabYozishEkrani.sozlar(lesson).isNotEmpty) ...[
-          const SizedBox(height: 10),
-          _exerciseButton(
-            context,
-            color: AppColors.gold,
-            icon: Icons.spellcheck_rounded,
-            label: "Harflab yozish — so'zni harfma-harf",
-            page: HarflabYozishEkrani(lesson: lesson),
-          ),
-        ],
-        const SizedBox(height: 10),
-        // YOZMA — variantsiz: o'zbekchasi beriladi, arabchasini o'zi yozadi.
-        _exerciseButtonAction(
-          context,
-          color: AppColors.coral,
-          icon: Icons.edit_rounded,
-          label: "Yozma mashq — o'zbekchadan arabchaga (variantsiz)",
-          onTap: () => yozmaMashqniOch(context, lesson),
-        ),
-        // IMTIHON — shu darsgacha o'tilgan HAMMA lug'at bo'yicha (unutilgan
-        // so'z qolib ketmasin): darsning yakuniy bo'limi.
-        const SizedBox(height: 18),
-        _exerciseButton(
-          context,
-          color: AppColors.coral,
-          icon: Icons.workspace_premium_rounded,
-          label: lesson.book == 1
-              ? "IMTIHON — 1–${lesson.num}-darslar lug'ati"
-              : 'IMTIHON — ${lesson.book}-kitob ${lesson.num}-darsgacha',
-          page: ImtihonEkrani(lesson: lesson),
+        QiyinSozlarTugmasi(lesson: lesson),
+        const SizedBox(height: 4),
+        _AlohidaOyinlar(
+          children: [
+            const SizedBox(height: 10),
+            // SANOQ — matnni 33 marta (yoki o'zi belgilagan marta) o'qib yodlash.
+            _exerciseButton(
+              context,
+              color: _Yorqin.binafsha,
+              icon: Icons.repeat_rounded,
+              label:
+                  "Sanoq bilan yodlash — matnni 33 (yoki xohlagancha) marta o'qish",
+              page: SanoqEkrani(lesson: lesson),
+            ),
+            const SizedBox(height: 10),
+            _exerciseButton(
+              context,
+              color: _Yorqin.yashil,
+              icon: Icons.image_rounded,
+              label: "Rasmli kartochka — arabchasini top",
+              page: RasmliKartochka(lesson: lesson),
+            ),
+            const SizedBox(height: 10),
+            _exerciseButton(
+              context,
+              color: _Yorqin.kok,
+              icon: Icons.psychology_alt,
+              label: "So'zlarni chuqur yodlash (7 usul)",
+              page: MasterDrill(lesson: lesson),
+            ),
+            const SizedBox(height: 10),
+            _exerciseButton(
+              context,
+              color: _Yorqin.zargaldoq,
+              icon: Icons.bolt,
+              label: 'Tezkor mashq',
+              page: QiroatVocabDrill(lesson: lesson),
+            ),
+            const SizedBox(height: 10),
+            _exerciseButton(
+              context,
+              color: _Yorqin.feruza,
+              icon: Icons.extension,
+              label: "Juftlash o'yini",
+              page: QiroatMatchGame(lesson: lesson),
+            ),
+            if (BoshJoy.yasa(lesson).length >= 3) ...[
+              const SizedBox(height: 10),
+              _exerciseButton(
+                context,
+                color: _Yorqin.pushti,
+                icon: Icons.space_bar_rounded,
+                label: "Bo'sh joy — so'zni jumlada top",
+                page: BoshJoyEkrani(lesson: lesson),
+              ),
+            ],
+            // O'qish matnining jumlalari asosida: tinglab gap tuzish.
+            if (splitSentences(lesson.reading).length >= 2) ...[
+              const SizedBox(height: 10),
+              _exerciseButtonAction(
+                context,
+                color: _Yorqin.binafsha,
+                icon: Icons.hearing_rounded,
+                label: 'Jumla testi — tinglab tuzish',
+                onTap: () => jumlaTestiniOch(context, lesson),
+              ),
+            ],
+            if (HarflabYozishEkrani.sozlar(lesson).isNotEmpty) ...[
+              const SizedBox(height: 10),
+              _exerciseButton(
+                context,
+                color: _Yorqin.yashil,
+                icon: Icons.spellcheck_rounded,
+                label: "Harflab yozish — so'zni harfma-harf",
+                page: HarflabYozishEkrani(lesson: lesson),
+              ),
+            ],
+            const SizedBox(height: 10),
+            // YOZMA — variantsiz: o'zbekchasi beriladi, arabchasini o'zi yozadi.
+            _exerciseButtonAction(
+              context,
+              color: _Yorqin.kok,
+              icon: Icons.edit_rounded,
+              label: "Yozma mashq — o'zbekchadan arabchaga (variantsiz)",
+              onTap: () => yozmaMashqniOch(context, lesson),
+            ),
+            // IMTIHON — shu darsgacha o'tilgan HAMMA lug'at bo'yicha (unutilgan
+            // so'z qolib ketmasin): darsning yakuniy bo'limi.
+            const SizedBox(height: 18),
+            _exerciseButton(
+              context,
+              color: _Yorqin.zargaldoq,
+              icon: Icons.workspace_premium_rounded,
+              label: lesson.book == 1
+                  ? "IMTIHON — 1–${lesson.num}-darslar lug'ati"
+                  : 'IMTIHON — ${lesson.book}-kitob ${lesson.num}-darsgacha',
+              page: ImtihonEkrani(lesson: lesson),
+            ),
+          ],
         ),
       ],
     );
@@ -720,29 +747,44 @@ class DarsOyinlari extends StatelessWidget {
     required String label,
     required VoidCallback onTap,
   }) {
+    // 3D tugma: pastida to'qroq chekka.
     return PressableScale(
-      child: Material(
-        color: color,
-        borderRadius: BorderRadius.circular(14),
-        child: InkWell(
-          borderRadius: BorderRadius.circular(14),
-          onTap: onTap,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 16),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(icon, color: Colors.white),
-                const SizedBox(width: 10),
-                Text(
-                  label,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w800,
-                    fontSize: 16,
+      child: Container(
+        decoration: BoxDecoration(
+          color: Color.lerp(color, Colors.black, 0.22),
+          borderRadius: BorderRadius.circular(16),
+          boxShadow: [
+            BoxShadow(
+              color: color.withValues(alpha: 0.30),
+              blurRadius: 10,
+              offset: const Offset(0, 4),
+            ),
+          ],
+        ),
+        padding: const EdgeInsets.only(bottom: 4),
+        child: Material(
+          color: color,
+          borderRadius: BorderRadius.circular(16),
+          child: InkWell(
+            borderRadius: BorderRadius.circular(16),
+            onTap: onTap,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 16),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(icon, color: Colors.white),
+                  const SizedBox(width: 10),
+                  Text(
+                    label,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w800,
+                      fontSize: 16,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),
@@ -756,6 +798,42 @@ class DarsOyinlari extends StatelessWidget {
 /// Ilgari yig'ma edi («Boshqa o'yinlar» tugmasi ostida) — o'quvchi
 /// o'yinlar borligini sezmay o'tib ketardi. Endi sarlavha ostida to'liq
 /// ro'yxat: har o'yin bir bosishda.
+/// Hamma alohida o'yinlar bitta tugma ostida — bosilsa ro'yxat ochiladi: asosiy yo'l «Aralash mashq».
+class _AlohidaOyinlar extends StatelessWidget {
+  final List<Widget> children;
+  const _AlohidaOyinlar({required this.children});
+
+  @override
+  Widget build(BuildContext context) => Theme(
+    data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+    child: ExpansionTile(
+      key: const ValueKey('oyinlar-royxati'),
+      tilePadding: const EdgeInsets.symmetric(horizontal: 14),
+      backgroundColor: _Yorqin.binafsha.withValues(alpha: 0.08),
+      collapsedBackgroundColor: _Yorqin.binafsha,
+      iconColor: _Yorqin.binafsha,
+      collapsedIconColor: Colors.white,
+      textColor: _Yorqin.binafsha,
+      collapsedTextColor: Colors.white,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+      collapsedShape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(14),
+      ),
+      leading: const Icon(Icons.apps_rounded),
+      title: Text(
+        "Barcha o'yinlar va mashqlar",
+        style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16),
+      ),
+      children: [
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: children,
+        ),
+      ],
+    ),
+  );
+}
+
 class _BoshqaOyinlar extends StatelessWidget {
   final List<Widget> children;
   const _BoshqaOyinlar({required this.children});

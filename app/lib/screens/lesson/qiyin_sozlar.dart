@@ -11,6 +11,7 @@ import '../../mashq/mashq_ekran.dart';
 import '../../theme.dart';
 import '../../widgets/speak_button.dart';
 import '../../widgets/uz_text.dart';
+import '../aralash_mashq.dart';
 import '../bosh_joy.dart';
 import '../yozma_imtihon.dart';
 import 'birlik_koplik.dart';
@@ -188,6 +189,15 @@ class _QiyinSozlarEkraniState extends State<QiyinSozlarEkrani> {
   }
 
   List<(String, IconData, Widget? Function())> get _usullar => [
+    (
+      'Aralash',
+      Icons.shuffle_rounded,
+      () => AralashMashqEkrani(
+        lesson: _l,
+        faqat: _tanlangan,
+        sarlavha: "Qiyin so'zlarim — aralash",
+      ),
+    ),
     ('Test', Icons.quiz_rounded, () => _test()),
     ('Ayting', Icons.record_voice_over_rounded, () => _ayt()),
     ('Harflab', Icons.spellcheck_rounded, _harflab),

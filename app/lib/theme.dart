@@ -107,8 +107,7 @@ class AppTheme {
         secondary: AppColors.gold,
         surface: AppColors.karta,
       ),
-      // Shaffof: ortidagi neon dog'lar (main.dart builder) ko'rinsin.
-      scaffoldBackgroundColor: Colors.transparent,
+      scaffoldBackgroundColor: AppColors.cream,
     );
     // Shisha karta: yarim shaffof sirt, oq yaltiroq hoshiya, binafsha nur.
     final shisha = RoundedRectangleBorder(

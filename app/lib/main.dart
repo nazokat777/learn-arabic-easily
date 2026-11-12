@@ -16,7 +16,6 @@ import 'services/kirish.dart';
 import 'services/tts.dart';
 import 'services/vocab_audio.dart';
 import 'theme.dart';
-import 'widgets/motion.dart' show Aurora;
 import 'harf_olchami.dart';
 import 'uz_yozuv.dart';
 import 'screens/home.dart';
@@ -172,24 +171,7 @@ class ArabApp extends StatelessWidget {
                   HarfOlchami.instance.koeff,
                 ),
               ),
-              // Butun ilova foni: neon dog'lar — shisha kartalar ortidan
-              // ko'rinadi.
-              child: Stack(
-                children: [
-                  Positioned.fill(child: ColoredBox(color: AppColors.cream)),
-                  const Positioned.fill(
-                    child: Aurora(
-                      tinch: true,
-                      colors: [
-                        AppColors.emerald,
-                        AppColors.coral,
-                        AppColors.teal,
-                      ],
-                    ),
-                  ),
-                  RepaintBoundary(child: child!),
-                ],
-              ),
+              child: child!,
             );
           },
         ),

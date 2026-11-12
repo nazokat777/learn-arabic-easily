@@ -107,7 +107,8 @@ class AppTheme {
         secondary: AppColors.gold,
         surface: AppColors.karta,
       ),
-      scaffoldBackgroundColor: AppColors.cream,
+      // Shaffof: ilova foni (main.dart, IlovaFoniPainter) ko'rinsin.
+      scaffoldBackgroundColor: Colors.transparent,
     );
     // Shisha karta: yarim shaffof sirt, oq yaltiroq hoshiya, binafsha nur.
     final shisha = RoundedRectangleBorder(

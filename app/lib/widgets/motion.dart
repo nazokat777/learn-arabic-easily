@@ -537,6 +537,25 @@ class _AuroraState extends State<Aurora> with SingleTickerProviderStateMixin {
   }
 }
 
+/// Butun ilova foni: tinch neon dog'lar, ostiga bir tekis rang.
+/// CustomPaint'ning `painter`i sifatida bolasi ORTIGA chiziladi — alohida
+/// qatlam/Stack yo'q, bosishlarga hech narsa to'sqinlik qilmaydi.
+class IlovaFoniPainter extends CustomPainter {
+  final Color fon;
+  final List<Color> colors;
+  IlovaFoniPainter(this.fon, this.colors);
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    canvas.drawRect(Offset.zero & size, Paint()..color = fon);
+    _AuroraPainter(0.15, colors).paint(canvas, size);
+  }
+
+  @override
+  bool shouldRepaint(IlovaFoniPainter old) =>
+      old.fon != fon || old.colors != colors;
+}
+
 class _AuroraPainter extends CustomPainter {
   final double t;
   final List<Color> colors;

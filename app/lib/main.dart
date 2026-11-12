@@ -16,6 +16,7 @@ import 'services/kirish.dart';
 import 'services/tts.dart';
 import 'services/vocab_audio.dart';
 import 'theme.dart';
+import 'widgets/motion.dart' show IlovaFoniPainter;
 import 'harf_olchami.dart';
 import 'uz_yozuv.dart';
 import 'screens/home.dart';
@@ -171,7 +172,15 @@ class ArabApp extends StatelessWidget {
                   HarfOlchami.instance.koeff,
                 ),
               ),
-              child: child!,
+              // Butun ilova foni (neon dog'lar) — Navigator ORTIGA chiziladi.
+              child: CustomPaint(
+                painter: IlovaFoniPainter(AppColors.cream, const [
+                  AppColors.emerald,
+                  AppColors.coral,
+                  AppColors.teal,
+                ]),
+                child: child!,
+              ),
             );
           },
         ),

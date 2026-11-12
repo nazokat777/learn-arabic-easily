@@ -68,6 +68,7 @@ class HomeScreen extends StatelessWidget {
             // lekin diqqatni tortmaydi — shaffofligi juda past.
             const Positioned.fill(
               child: Aurora(
+                tinch: true,
                 colors: [AppColors.emerald, AppColors.coral, AppColors.teal],
               ),
             ),

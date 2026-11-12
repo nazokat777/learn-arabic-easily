@@ -31,8 +31,10 @@ Future<void> main() async {
   // ko'rsatadi (telefondagi WebView'da konsolni ko'rib bo'lmaydi).
   FlutterError.onError = (d) {
     // ignore: avoid_print
-    print('XATO: ${d.exceptionAsString()}\n'
-        '${(d.stack?.toString() ?? '').split('\n').take(5).join('\n')}');
+    print(
+      'XATO: ${d.exceptionAsString()}\n'
+      '${(d.stack?.toString() ?? '').split('\n').take(5).join('\n')}',
+    );
   };
   PlatformDispatcher.instance.onError = (e, st) {
     // ignore: avoid_print
@@ -66,11 +68,14 @@ Future<void> main() async {
     kadr++;
     WidgetsBinding.instance.addPostFrameCallback(sana);
   }
+
   WidgetsBinding.instance.addPostFrameCallback(sana);
   Timer(const Duration(seconds: 5), () {
     // ignore: avoid_print
-    print('DIAG: dartKadr/5s=$kadr lifecycle=${WidgetsBinding.instance.lifecycleState} '
-        'framesEnabled=${WidgetsBinding.instance.framesEnabled}');
+    print(
+      'DIAG: dartKadr/5s=$kadr lifecycle=${WidgetsBinding.instance.lifecycleState} '
+      'framesEnabled=${WidgetsBinding.instance.framesEnabled}',
+    );
     // Matn o'lchovi: shrift glifi bormi (kenglik 0 bo'lsa — shrift yuklanmagan).
     String olch(String? oila) {
       final tp = TextPainter(
@@ -82,11 +87,14 @@ Future<void> main() async {
       )..layout();
       return '${tp.width.toStringAsFixed(1)}x${tp.height.toStringAsFixed(1)}';
     }
+
     final v = PlatformDispatcher.instance.views.first;
     // ignore: avoid_print
-    print('DIAG: matn nunito=${olch('Nunito')} amiri=${olch('Amiri')} '
-        'default=${olch(null)} scale=${PlatformDispatcher.instance.textScaleFactor} '
-        'view=${v.physicalSize.width.toInt()}x${v.physicalSize.height.toInt()} dpr=${v.devicePixelRatio}');
+    print(
+      'DIAG: matn nunito=${olch('Nunito')} amiri=${olch('Amiri')} '
+      'default=${olch(null)} scale=${PlatformDispatcher.instance.textScaleFactor} '
+      'view=${v.physicalSize.width.toInt()}x${v.physicalSize.height.toInt()} dpr=${v.devicePixelRatio}',
+    );
     WidgetsBinding.instance.scheduleFrame();
   });
 }
@@ -171,6 +179,7 @@ class ArabApp extends StatelessWidget {
                   Positioned.fill(child: ColoredBox(color: AppColors.cream)),
                   const Positioned.fill(
                     child: Aurora(
+                      tinch: true,
                       colors: [
                         AppColors.emerald,
                         AppColors.coral,
@@ -178,7 +187,7 @@ class ArabApp extends StatelessWidget {
                       ],
                     ),
                   ),
-                  child!,
+                  RepaintBoundary(child: child!),
                 ],
               ),
             );

@@ -482,7 +482,11 @@ class _TactileState extends State<Tactile> {
 /// chiziladi, chekkasi o'zi yumshoq. Ekran «tirik» va chuqur tuyuladi.
 class Aurora extends StatefulWidget {
   final List<Color> colors;
-  const Aurora({super.key, required this.colors});
+
+  /// true — bir marta chiziladi, animatsiyasiz (butun ilova foni: har
+  /// kadrda qayta chizish telefonni sekinlashtiradi).
+  final bool tinch;
+  const Aurora({super.key, required this.colors, this.tinch = false});
 
   @override
   State<Aurora> createState() => _AuroraState();
@@ -492,7 +496,13 @@ class _AuroraState extends State<Aurora> with SingleTickerProviderStateMixin {
   late final AnimationController _c = AnimationController(
     vsync: this,
     duration: const Duration(seconds: 18),
-  )..repeat();
+  );
+
+  @override
+  void initState() {
+    super.initState();
+    if (!widget.tinch) _c.repeat();
+  }
 
   @override
   void dispose() {
@@ -502,6 +512,16 @@ class _AuroraState extends State<Aurora> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    if (widget.tinch) {
+      return IgnorePointer(
+        child: RepaintBoundary(
+          child: CustomPaint(
+            painter: _AuroraPainter(0.15, widget.colors),
+            size: Size.infinite,
+          ),
+        ),
+      );
+    }
     return IgnorePointer(
       child: AnimatedBuilder(
         animation: _c,

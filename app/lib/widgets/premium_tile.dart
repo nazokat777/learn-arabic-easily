@@ -70,8 +70,8 @@ class PremiumTile extends StatelessWidget {
               boxShadow: [
                 BoxShadow(
                   color: accent.withValues(alpha: enabled ? 0.13 : 0.04),
-                  blurRadius: 22,
-                  offset: const Offset(0, 10),
+                  blurRadius: 12,
+                  offset: const Offset(0, 6),
                 ),
               ],
             ),

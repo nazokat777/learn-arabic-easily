@@ -120,33 +120,42 @@ class QiroatLessonsList extends StatelessWidget {
       appBar: AppBar(title: Text('$book-kitob')),
       body: AnimatedBuilder(
         animation: progress,
-        builder: (context, _) => ListView(
-          padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
-          children: [
-            _intro(),
-            const SizedBox(height: 16),
-            ...lessons.asMap().entries.map(
-              (e) => EntranceFade(
-                // ilk ~12 karta ketma-ket, keyingilari birga (uzun quyruq bo'lmasin)
-                delay: Duration(
-                  milliseconds: 40 + (e.key < 12 ? e.key : 12) * 45,
-                ),
-                child: YolBand(
-                  rang: AppColors.teal,
-                  birinchi: e.key == 0,
-                  oxirgi: e.key == lessons.length - 1,
-                  bajarildi: progress.isMastered(e.value.completionId),
-                  joriy:
-                      e.key ==
-                      lessons.indexWhere(
-                        (l) => !progress.isMastered(l.completionId),
-                      ),
-                  child: _lessonTile(context, e.value),
-                ),
-              ),
-            ),
-          ],
-        ),
+        builder: (context, _) {
+          // Faqat ekranda ko'rinadigan kartalar chiziladi (ListView.builder):
+          // 60 ta kartani birdaniga chizish telefonda kitob ochilishini
+          // bir necha soniya qotirib, «bosilmayapti» tuyulardi.
+          final joriy = lessons.indexWhere(
+            (l) => !progress.isMastered(l.completionId),
+          );
+          return ListView.builder(
+            padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
+            itemCount: lessons.length + 1,
+            itemBuilder: (context, i) {
+              if (i == 0) {
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 16),
+                  child: _intro(),
+                );
+              }
+              final k = i - 1;
+              final l = lessons[k];
+              final tile = YolBand(
+                rang: AppColors.teal,
+                birinchi: k == 0,
+                oxirgi: k == lessons.length - 1,
+                bajarildi: progress.isMastered(l.completionId),
+                joriy: k == joriy,
+                child: _lessonTile(context, l),
+              );
+              return k < 8
+                  ? EntranceFade(
+                      delay: Duration(milliseconds: 40 + k * 45),
+                      child: tile,
+                    )
+                  : tile;
+            },
+          );
+        },
       ),
     );
   }

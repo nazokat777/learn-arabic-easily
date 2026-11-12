@@ -493,20 +493,23 @@ class Aurora extends StatefulWidget {
 }
 
 class _AuroraState extends State<Aurora> with SingleTickerProviderStateMixin {
-  late final AnimationController _c = AnimationController(
-    vsync: this,
-    duration: const Duration(seconds: 18),
-  );
+  AnimationController? _ctrl;
+  AnimationController get _c => _ctrl!;
 
   @override
   void initState() {
     super.initState();
-    if (!widget.tinch) _c.repeat();
+    if (!widget.tinch) {
+      _ctrl = AnimationController(
+        vsync: this,
+        duration: const Duration(seconds: 18),
+      )..repeat();
+    }
   }
 
   @override
   void dispose() {
-    _c.dispose();
+    _ctrl?.dispose();
     super.dispose();
   }
 

@@ -978,65 +978,66 @@ class _TezYol extends StatelessWidget {
       ('Komil sarf', 'كَامِل', AppColors.gold, null), // alohida sayt
       ('Madina', 'دُرُوس', AppColors.teal, null), // alohida sayt
     ];
-    return SizedBox(
-      height: 44,
-      child: ListView.separated(
-        scrollDirection: Axis.horizontal,
-        padding: const EdgeInsets.symmetric(horizontal: 2),
-        itemCount: bolimlar.length,
-        separatorBuilder: (_, _) => const SizedBox(width: 8),
-        itemBuilder: (context, i) {
-          final (nom, arab, rang, ekran) = bolimlar[i];
-          return Semantics(
-            button: true,
-            label: '$nom bo\'limi',
-            child: Tactile(
-              child: Material(
-                color: AppColors.karta,
-                borderRadius: BorderRadius.circular(999),
-                child: InkWell(
+    // Wrap — gorizontal aylantirish YO'Q: iPhone'da barmoq sal siljisa
+    // aylantirish bosishni «yutib» yuborardi va bo'lim ochilmasdi.
+    return Wrap(
+      spacing: 8,
+      runSpacing: 8,
+      children: [
+        for (final (nom, arab, rang, ekran) in bolimlar)
+          SizedBox(
+            height: 44,
+            child: Semantics(
+              button: true,
+              label: '$nom bo\'limi',
+              child: Tactile(
+                child: Material(
+                  color: AppColors.karta,
                   borderRadius: BorderRadius.circular(999),
-                  onTap: ekran == null
-                      ? (nom == 'Madina' ? madinaniOch : komilSarfniOch)
-                      : () => Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (_) => ekran()),
-                        ),
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 14),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(999),
-                      border: Border.all(color: rang.withValues(alpha: 0.45)),
-                    ),
-                    child: Row(
-                      children: [
-                        Text(
-                          arab,
-                          textDirection: TextDirection.rtl,
-                          style: AppTheme.arabic(
-                            size: 16,
-                            color: rang,
-                            w: FontWeight.w700,
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(999),
+                    onTap: ekran == null
+                        ? (nom == 'Madina' ? madinaniOch : komilSarfniOch)
+                        : () => Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (_) => ekran()),
                           ),
-                        ),
-                        const SizedBox(width: 7),
-                        Text(
-                          nom,
-                          style: TextStyle(
-                            fontWeight: FontWeight.w800,
-                            fontSize: 13,
-                            color: AppColors.ink,
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 14),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(999),
+                        border: Border.all(color: rang.withValues(alpha: 0.45)),
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            arab,
+                            textDirection: TextDirection.rtl,
+                            style: AppTheme.arabic(
+                              size: 16,
+                              color: rang,
+                              w: FontWeight.w700,
+                            ),
                           ),
-                        ),
-                      ],
+                          const SizedBox(width: 7),
+                          Text(
+                            nom,
+                            style: TextStyle(
+                              fontWeight: FontWeight.w800,
+                              fontSize: 13,
+                              color: AppColors.ink,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
               ),
             ),
-          );
-        },
-      ),
+          ),
+      ],
     );
   }
 }

@@ -32,9 +32,9 @@ class ImtihonEkrani extends StatefulWidget {
   final QiroatLesson lesson;
   const ImtihonEkrani({super.key, required this.lesson});
 
-  /// Bir kirishda nechta so'z so'raladi — ko'p bo'lsa charchatadi, oz bo'lsa
-  /// havza yopilmaydi; 20 — bir o'tirishda tugaydigan hajm.
-  static const int hajm = 20;
+  /// Bir kirishda nechta so'z so'raladi — ko'p bo'lsa charchatadi,
+  /// havza yopilmaydi; 50 — imtihonga yarasha keng qamrov.
+  static const int hajm = 50;
 
   @override
   State<ImtihonEkrani> createState() => _ImtihonEkraniState();
@@ -63,12 +63,12 @@ class _ImtihonEkraniState extends State<ImtihonEkrani> {
         : '${l.book}-kitob ${l.num}-darsgacha';
   }
 
-  /// Zaif so'zlardan (yodlanmaganlar) 20 tasi; hammasi yodlangan bo'lsa —
-  /// eng zaif 20 tasi (mustahkamlash).
+  /// Zaif so'zlardan (yodlanmaganlar) 50 tasi; hammasi yodlangan bo'lsa —
+  /// eng zaif 50 tasi (mustahkamlash).
   List<MashqElement> _navbatdagi() {
     final z = _zaiflar;
     if (z.length >= ImtihonEkrani.hajm) {
-      // Eng zaiflar orasidan tasodifiy — har safar bir xil 20 ta chiqmasin.
+      // Eng zaiflar orasidan tasodifiy — har safar bir xil 50 ta chiqmasin.
       final ustki = z.take(ImtihonEkrani.hajm * 2).toList()..shuffle(_rnd);
       return ustki.take(ImtihonEkrani.hajm).toList();
     }
@@ -165,7 +165,7 @@ class _ImtihonEkraniState extends State<ImtihonEkrani> {
       context,
       MaterialPageRoute(
         builder: (_) => YozmaImtihonEkrani(
-          topshiriqlar: ro.take(10).toList(),
+          topshiriqlar: ro.take(25).toList(),
           sarlavha: 'Yozma imtihon — jumlalar',
           jumla: true,
         ),
@@ -239,7 +239,7 @@ class _ImtihonEkraniState extends State<ImtihonEkrani> {
       context,
       MaterialPageRoute(
         builder: (_) => GapTuzishEkrani(
-          juftlar: juftlar.take(12).toList(),
+          juftlar: juftlar.take(30).toList(),
           title: 'Imtihon — tinglab tuzish',
           tinglab: true,
         ),

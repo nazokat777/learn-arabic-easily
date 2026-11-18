@@ -331,11 +331,11 @@ class AralashYasagich {
     final natija = [...bosh0, ...oxir];
 
     final qoshimcha = <AralashSavol>[
-      ..._boshJoylar({for (final v in sozlar) v.ar}).take(4),
-      if (faqat.isEmpty) ..._jumlalar(2),
+      ..._boshJoylar({for (final v in sozlar) v.ar}).take(8),
+      if (faqat.isEmpty) ..._jumlalar(4),
     ];
     // Juftlash — har 4 so'zga bitta.
-    for (var i = 0; i + 4 <= sozlar.length && i < 16; i += 4) {
+    for (var i = 0; i + 4 <= sozlar.length && i < 40; i += 4) {
       final j = sozlar.sublist(i, i + 4);
       if (j.map((x) => x.uz).toSet().length == 4) {
         qoshimcha.add(AralashSavol(tur: AralashTur.juftlash, juftlar: j));
@@ -345,6 +345,14 @@ class AralashYasagich {
       final o = natija.isEmpty ? 0 : 2 + rnd.nextInt(natija.length - 1);
       natija.insert(min(o, natija.length), q);
     }
+    // Chuqur yodlash: ikkinchi aylana — har so'z oxirida yana boshqa
+    // tartibda so'raladi (oraliqli takror: unutishga ulgurmasdan).
+    final takror = <AralashSavol>[];
+    for (final v in sozlar) {
+      takror.addAll(_sozSavollari(v));
+    }
+    takror.shuffle(rnd);
+    natija.addAll(takror);
     return natija;
   }
 }
@@ -497,8 +505,8 @@ class _AralashMashqEkraniState extends State<AralashMashqEkrani> {
 
   void _keyingi() {
     final s = _navbat.removeAt(0);
-    // Xato savol 3 savoldan keyin qaytadi (ko'pi bilan ikki marta).
-    if (_natija == false && (_qaytgan[s] ?? 0) < 2) {
+    // Xato savol 3 savoldan keyin qaytadi (ko'pi bilan to'rt marta).
+    if (_natija == false && (_qaytgan[s] ?? 0) < 4) {
       _qaytgan[s] = (_qaytgan[s] ?? 0) + 1;
       _navbat.insert(min(3, _navbat.length), s);
     }

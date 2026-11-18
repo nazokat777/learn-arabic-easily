@@ -19,7 +19,7 @@ import 'lesson/qiyin_sozlar.dart';
 class ShaxsiyReja {
   ShaxsiyReja._();
 
-  static const int hajm = 15;
+  static const int hajm = 30;
 
   static ({
     QiroatLesson dars,

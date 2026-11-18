@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'qiyin_barcha.dart';
 
 import 'package:flutter/foundation.dart'
     show kIsWeb, defaultTargetPlatform, TargetPlatform;
@@ -165,6 +166,8 @@ class HomeScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: 12),
                       const ShaxsiyMashqKarta(),
+                      const SizedBox(height: 12),
+                      const QiyinSozlarKarta(),
                     ],
                     const SizedBox(height: 12),
                     const TaklifKarta(),

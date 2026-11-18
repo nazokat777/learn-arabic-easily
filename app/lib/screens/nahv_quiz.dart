@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'qiyin_barcha.dart';
 
 import 'package:flutter/material.dart' hide Text;
 import '../widgets/uz_text.dart';
@@ -303,6 +304,7 @@ class _NahvQuizState extends State<NahvQuiz> {
     final q = _q;
     return Scaffold(
       appBar: AppBar(
+        actions: const [QiyinGlobalTugma()],
         title: Text('${widget.lesson.num}-dars — test'),
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(6),

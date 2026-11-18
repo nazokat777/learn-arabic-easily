@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart' hide Text;
+import 'qiyin_barcha.dart';
 import '../widgets/uz_text.dart';
 
 import '../content.dart';
@@ -28,7 +29,10 @@ class SarfHome extends StatelessWidget {
   Widget build(BuildContext context) {
     final darslar = repo.sarfLessons;
     return Scaffold(
-      appBar: AppBar(title: const Text('Sarf')),
+      appBar: AppBar(
+        actions: const [QiyinGlobalTugma()],
+        title: const Text('Sarf'),
+      ),
       body: Center(
         child: ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 820),
@@ -203,7 +207,10 @@ class _SarfLessonScreenState extends State<SarfLessonScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('${lesson.num}-dars')),
+      appBar: AppBar(
+        actions: const [QiyinGlobalTugma()],
+        title: Text('${lesson.num}-dars'),
+      ),
       // Matn ustuni cheklanadi — keng ekranda satr cho'zilib ketmasin.
       body: Center(
         child: ConstrainedBox(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart' hide Text;
+import 'qiyin_barcha.dart';
 
 import '../content.dart';
 import '../main.dart';
@@ -83,6 +84,7 @@ class _HarfChizishEkraniState extends State<HarfChizishEkrani> {
       appBar: AppBar(
         title: const Text('Harf chizish'),
         actions: [
+          const QiyinGlobalTugma(),
           Center(
             child: Padding(
               padding: const EdgeInsets.only(right: 12),

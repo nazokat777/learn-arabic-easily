@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'qiyin_barcha.dart';
 
 import 'package:flutter/material.dart' hide Text;
 
@@ -191,6 +192,7 @@ class _BoshJoyEkraniState extends State<BoshJoyEkrani> {
       appBar: AppBar(
         title: Text(widget.sarlavha),
         actions: [
+          const QiyinGlobalTugma(),
           if (_navbat.isNotEmpty && !_tugadi)
             Center(
               child: Padding(

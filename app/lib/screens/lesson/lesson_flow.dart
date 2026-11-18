@@ -1,4 +1,5 @@
 import '../../uz_yozuv.dart';
+import '../qiyin_barcha.dart';
 import 'package:flutter/material.dart' hide Text;
 import '../../widgets/uz_text.dart';
 import '../../arabic.dart';
@@ -115,6 +116,7 @@ class _LessonFlowState extends State<LessonFlow> {
       appBar: AppBar(
         title: Text('${widget.lesson.num}-dars'),
         actions: [
+          const QiyinGlobalTugma(),
           IconButton(
             tooltip: uz('To\'liq dars (matn + lug\'at)'),
             icon: const Icon(Icons.menu_book_rounded),

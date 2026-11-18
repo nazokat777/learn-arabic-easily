@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart' hide Text;
+import '../qiyin_barcha.dart';
 
 import '../../arabic.dart';
 import '../../content.dart';
@@ -123,7 +124,10 @@ class _QiyinSozlarEkraniState extends State<QiyinSozlarEkrani> {
 
   Widget _ayt() => Builder(
     builder: (c) => Scaffold(
-      appBar: AppBar(title: Text("Birligi va ko'pligi")),
+      appBar: AppBar(
+        actions: const [QiyinGlobalTugma()],
+        title: Text("Birligi va ko'pligi"),
+      ),
       body: BirlikKoplikAyt(
         sozlar: _tanlangan,
         darsId: 'qiroat::$_id',
@@ -322,7 +326,10 @@ class _QiyinSozlarEkraniState extends State<QiyinSozlarEkrani> {
   Widget build(BuildContext context) {
     final soni = _tanlangan.length;
     return Scaffold(
-      appBar: AppBar(title: Text("Qiyin so'zlarim")),
+      appBar: AppBar(
+        actions: const [QiyinGlobalTugma()],
+        title: Text("Qiyin so'zlarim"),
+      ),
       body: ListView(
         padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
         children: [

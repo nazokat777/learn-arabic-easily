@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart' hide Text;
+import 'qiyin_barcha.dart';
 import '../widgets/uz_text.dart';
 import '../main.dart';
 import '../arabic.dart';
@@ -17,7 +18,10 @@ class LettersLesson extends StatelessWidget {
   Widget build(BuildContext context) {
     final letters = repo.letters;
     return Scaffold(
-      appBar: AppBar(title: const Text('Harflar darsi')),
+      appBar: AppBar(
+        actions: const [QiyinGlobalTugma()],
+        title: const Text('Harflar darsi'),
+      ),
       // Panjara + pastda test chaqirig'i: harflarni ko'rib chiqish
       // o'rganish emas, mavzu testda xatosiz o'tilishi kerak.
       body: Column(

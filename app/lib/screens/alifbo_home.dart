@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart' hide Text;
+import 'qiyin_barcha.dart';
 import '../widgets/uz_text.dart';
 import '../main.dart';
 import '../mashq/bank.dart';
@@ -21,7 +22,10 @@ class AlifboHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Alifbo (Harflar)')),
+      appBar: AppBar(
+        actions: const [QiyinGlobalTugma()],
+        title: const Text('Alifbo (Harflar)'),
+      ),
       body: AnimatedBuilder(
         animation: progress,
         builder: (context, _) => ListView(

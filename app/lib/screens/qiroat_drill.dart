@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'qiyin_barcha.dart';
 import 'package:flutter/material.dart' hide Text;
 import '../widgets/uz_text.dart';
 import '../widgets/koplik_qatori.dart';
@@ -154,6 +155,7 @@ class _QiroatVocabDrillState extends State<QiroatVocabDrill> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: const [QiyinGlobalTugma()],
         title: Text('${widget.lesson.num}-dars — so\'zlarni yodlash'),
       ),
       body: SafeArea(child: _q == null ? _doneView() : _questionView()),

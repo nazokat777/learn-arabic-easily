@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart' hide Text;
+import 'qiyin_barcha.dart';
 
 import '../services/tts.dart';
 import '../theme.dart';
@@ -101,7 +102,10 @@ class _UstozEkraniState extends State<UstozEkrani> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Ustoz — savol-javob')),
+      appBar: AppBar(
+        actions: const [QiyinGlobalTugma()],
+        title: const Text('Ustoz — savol-javob'),
+      ),
       body: Column(
         children: [
           Expanded(

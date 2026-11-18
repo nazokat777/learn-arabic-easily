@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'qiyin_barcha.dart';
 import 'package:flutter/material.dart' hide Text;
 import 'package:flutter/services.dart'
     show KeyEvent, KeyDownEvent, LogicalKeyboardKey;
@@ -273,6 +274,7 @@ class _MultipleChoiceQuizState extends State<MultipleChoiceQuiz> {
       },
       child: Scaffold(
         appBar: AppBar(
+          actions: const [QiyinGlobalTugma()],
           title: Text(widget.title),
           bottom: PreferredSize(
             preferredSize: const Size.fromHeight(6),

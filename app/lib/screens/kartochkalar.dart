@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'qiyin_barcha.dart';
 
 import 'package:flutter/material.dart' hide Text;
 
@@ -141,6 +142,7 @@ class _KartochkalarEkraniState extends State<KartochkalarEkrani>
       appBar: AppBar(
         title: const Text('Kartochkalar'),
         actions: [
+          const QiyinGlobalTugma(),
           Center(
             child: Padding(
               padding: const EdgeInsets.only(right: 12),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart' hide Text;
+import 'qiyin_barcha.dart';
 import 'gap_tuzish_ekrani.dart';
 import '../widgets/sharh.dart';
 import '../widgets/uz_text.dart';
@@ -33,7 +34,10 @@ class NahvHome extends StatelessWidget {
   Widget build(BuildContext context) {
     final lessons = repo.nahvLessons;
     return Scaffold(
-      appBar: AppBar(title: const Text('Nahv')),
+      appBar: AppBar(
+        actions: const [QiyinGlobalTugma()],
+        title: const Text('Nahv'),
+      ),
       body: ListView(
         padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
         children: [
@@ -192,7 +196,10 @@ class _NahvLessonScreenState extends State<NahvLessonScreen> {
   Widget build(BuildContext context) {
     final y = _tarjimaYashirin;
     return Scaffold(
-      appBar: AppBar(title: Text('${lesson.num}-dars')),
+      appBar: AppBar(
+        actions: const [QiyinGlobalTugma()],
+        title: Text('${lesson.num}-dars'),
+      ),
       // Matn ustuni cheklanadi: keng ekranda (planshet, brauzer) arabcha
       // satrlar butun kenglikka cho'zilib ketadi va ko'z satr boshini
       // yo'qotadi — ayniqsa o'ngdan chapga o'qilganda.

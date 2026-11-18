@@ -1,4 +1,5 @@
 import 'dart:math';
+import '../qiyin_barcha.dart';
 import '../../uz_yozuv.dart';
 import 'package:flutter/material.dart' hide Text;
 import '../../widgets/uz_text.dart';
@@ -367,6 +368,7 @@ class _MasterDrillState extends State<MasterDrill> {
       appBar: AppBar(
         title: Text('${widget.lesson.num}-dars — chuqur yodlash'),
         actions: [
+          const QiyinGlobalTugma(),
           Center(
             child: Padding(
               padding: const EdgeInsets.only(right: 14),

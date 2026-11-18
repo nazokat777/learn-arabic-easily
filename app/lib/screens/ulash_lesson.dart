@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart' hide Text;
+import 'qiyin_barcha.dart';
 import '../widgets/uz_text.dart';
 
 import '../arabic.dart';
@@ -29,7 +30,10 @@ class UlashLesson extends StatelessWidget {
   Widget build(BuildContext context) {
     final stages = repo.ulashStages;
     return Scaffold(
-      appBar: AppBar(title: const Text('Harflarni ulash')),
+      appBar: AppBar(
+        actions: const [QiyinGlobalTugma()],
+        title: const Text('Harflarni ulash'),
+      ),
       body: ListView(
         padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
         children: [
@@ -150,7 +154,10 @@ class UlashStageScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('${stage.num}-bosqich')),
+      appBar: AppBar(
+        actions: const [QiyinGlobalTugma()],
+        title: Text('${stage.num}-bosqich'),
+      ),
       body: ListView(
         padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
         children: [

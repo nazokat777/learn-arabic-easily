@@ -1,4 +1,5 @@
 import '../uz_yozuv.dart';
+import 'qiyin_barcha.dart';
 import 'package:flutter/material.dart' hide Text;
 import '../widgets/uz_text.dart';
 import '../main.dart';
@@ -47,7 +48,10 @@ class QiroatBooksHome extends StatelessWidget {
     }
     final bookNums = books.keys.toList()..sort();
     return Scaffold(
-      appBar: AppBar(title: const Text('Mabdaul qiroat')),
+      appBar: AppBar(
+        actions: const [QiyinGlobalTugma()],
+        title: const Text('Mabdaul qiroat'),
+      ),
       body: AnimatedBuilder(
         animation: progress,
         builder: (context, _) => ListView(
@@ -117,7 +121,10 @@ class QiroatLessonsList extends StatelessWidget {
   Widget build(BuildContext context) {
     final lessons = repo.qiroatLessons.where((l) => l.book == book).toList();
     return Scaffold(
-      appBar: AppBar(title: Text('$book-kitob')),
+      appBar: AppBar(
+        actions: const [QiyinGlobalTugma()],
+        title: Text('$book-kitob'),
+      ),
       body: AnimatedBuilder(
         animation: progress,
         builder: (context, _) {
@@ -212,7 +219,10 @@ class QiroatLessonDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('${lesson.num}-dars')),
+      appBar: AppBar(
+        actions: const [QiyinGlobalTugma()],
+        title: Text('${lesson.num}-dars'),
+      ),
       body: AnimatedBuilder(
         animation: progress,
         builder: (context, _) => ListView(
@@ -832,7 +842,10 @@ class _AlohidaOyinlar extends StatelessWidget {
             context,
             MaterialPageRoute(
               builder: (_) => Scaffold(
-                appBar: AppBar(title: Text("Mashqlar va o'yinlar")),
+                appBar: AppBar(
+                  actions: const [QiyinGlobalTugma()],
+                  title: Text("Mashqlar va o'yinlar"),
+                ),
                 body: ListView(
                   padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
                   children: children,

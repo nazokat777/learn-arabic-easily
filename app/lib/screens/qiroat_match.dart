@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'qiyin_barcha.dart';
 import 'package:flutter/material.dart' hide Text;
 import '../widgets/uz_text.dart';
 import '../main.dart';
@@ -222,6 +223,7 @@ class _QiroatMatchGameState extends State<QiroatMatchGame> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: const [QiyinGlobalTugma()],
         title: Text('${widget.lesson.num}-dars — juftlash'),
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(6),

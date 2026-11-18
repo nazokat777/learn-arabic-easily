@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart' hide Text;
+import '../qiyin_barcha.dart';
 
 import '../../arabic.dart';
 import '../../content.dart';
@@ -213,7 +214,10 @@ class BirlikKoplikEkrani extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-    appBar: AppBar(title: Text("Birligi va ko'pligi")),
+    appBar: AppBar(
+      actions: const [QiyinGlobalTugma()],
+      title: Text("Birligi va ko'pligi"),
+    ),
     body: BirlikKoplikAyt(
       sozlar: sozlar(lesson),
       darsId: lesson.completionId,

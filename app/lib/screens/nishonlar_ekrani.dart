@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart' hide Text;
+import 'qiyin_barcha.dart';
 
 import '../main.dart';
 import '../mashq/tovush.dart';
@@ -17,7 +18,10 @@ class NishonlarEkrani extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Nishonlar')),
+      appBar: AppBar(
+        actions: const [QiyinGlobalTugma()],
+        title: const Text('Nishonlar'),
+      ),
       body: AnimatedBuilder(
         animation: progress,
         builder: (context, _) {

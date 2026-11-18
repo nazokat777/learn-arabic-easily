@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'qiyin_barcha.dart';
 import 'dart:math';
 
 import 'package:flutter/material.dart' hide Text;
@@ -55,6 +56,7 @@ class _MnemonikaEkraniState extends State<MnemonikaEkrani>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: const [QiyinGlobalTugma()],
         title: const Text('Mnemonika — yodlash xaritasi'),
         bottom: TabBar(
           controller: _tab,
@@ -117,8 +119,18 @@ String _oy(int kun) {
 String _sana(int kunRaqami) {
   final d = DateTime.utc(1970).add(Duration(days: kunRaqami));
   const oylar = [
-    'yanvar', 'fevral', 'mart', 'aprel', 'may', 'iyun',
-    'iyul', 'avgust', 'sentabr', 'oktabr', 'noyabr', 'dekabr',
+    'yanvar',
+    'fevral',
+    'mart',
+    'aprel',
+    'may',
+    'iyun',
+    'iyul',
+    'avgust',
+    'sentabr',
+    'oktabr',
+    'noyabr',
+    'dekabr',
   ];
   return '${d.day}-${oylar[d.month - 1]}';
 }
@@ -588,9 +600,11 @@ class _RejaKartasi extends StatelessWidget {
           Text(
             [
               if (k.lugatKitobi) "${yangi.length} ta yangi so'z",
-              if (!k.lugatKitobi) '${darslar.length} ta dars (${yangi.length} misol)',
+              if (!k.lugatKitobi)
+                '${darslar.length} ta dars (${yangi.length} misol)',
               if (k.lugatKitobi) '${darslar.length} ta dars matni',
-              if (qoidaSoni > 0 && k.lugatKitobi) '$qoidaSoni ta grammatika jadvali',
+              if (qoidaSoni > 0 && k.lugatKitobi)
+                '$qoidaSoni ta grammatika jadvali',
               "${takror.length} ta takrorlash",
             ].join('  ·  '),
             style: TextStyle(color: AppColors.matn2, fontSize: 13),
@@ -812,9 +826,7 @@ class _VazifaQatori extends StatelessWidget {
                   ListTile(
                     leading: const Icon(Icons.menu_book_rounded),
                     title: Text(d.nom),
-                    subtitle: d.lugat > 0
-                        ? Text("${d.lugat} lug'at")
-                        : null,
+                    subtitle: d.lugat > 0 ? Text("${d.lugat} lug'at") : null,
                     onTap: () => _ot(c, d.sahifa()),
                   ),
               ],
@@ -1052,7 +1064,10 @@ class _KunSozlariEkraniState extends State<KunSozlariEkrani> {
     return PopScope(
       onPopInvokedWithResult: (_, __) => _saqla(),
       child: Scaffold(
-        appBar: AppBar(title: Text(widget.sarlavha)),
+        appBar: AppBar(
+          actions: const [QiyinGlobalTugma()],
+          title: Text(widget.sarlavha),
+        ),
         body: _markaz([
           _karta(
             chegara: AppColors.gold.withValues(alpha: 0.6),
@@ -1351,7 +1366,11 @@ class _KitobKartasi extends StatelessWidget {
                       "${k.qoida > 0 ? "  ·  ${k.qoida} grammatika jadvali" : ""}\n"
                       "1 darsda o'rtacha $ortacha so'z"
                 : '$d dars  ·  ${k.qoida} qoida',
-            style: TextStyle(color: AppColors.matn2, height: 1.4, fontSize: 13.5),
+            style: TextStyle(
+              color: AppColors.matn2,
+              height: 1.4,
+              fontSize: 13.5,
+            ),
           ),
           if (reja != null)
             Padding(
@@ -1390,7 +1409,9 @@ class _KitobKartasi extends StatelessWidget {
                   if (boshlandi == true) rejaBoshlandi();
                 },
                 icon: const Icon(Icons.calendar_month_rounded, size: 18),
-                label: Text(reja == null ? 'Reja tuzish' : 'Rejani o\'zgartirish'),
+                label: Text(
+                  reja == null ? 'Reja tuzish' : 'Rejani o\'zgartirish',
+                ),
               ),
             ],
           ),
@@ -1409,7 +1430,7 @@ class KitobDarslariEkrani extends StatelessWidget {
   Widget build(BuildContext context) {
     final k = kitob;
     return Scaffold(
-      appBar: AppBar(title: Text(k.nom)),
+      appBar: AppBar(actions: const [QiyinGlobalTugma()], title: Text(k.nom)),
       body: Center(
         child: ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 680),
@@ -1504,9 +1525,13 @@ class _RejaTuzishEkraniState extends State<RejaTuzishEkrani> {
   /// «kuniga ~29 so'z · 1–2 dars» — kasr emas, butun son.
   String _kunlikMatn(int kunlar) {
     final x = _kunlik(kunlar);
-    final n = x >= 10 ? '${x.round()}' : x.toStringAsFixed(1).replaceAll('.0', '');
+    final n = x >= 10
+        ? '${x.round()}'
+        : x.toStringAsFixed(1).replaceAll('.0', '');
     if (!k.lugatKitobi) {
-      return x >= 1 ? 'kuniga ~$n dars (qoida)' : 'haftasiga ~${(x * 7).round()} dars (qoida)';
+      return x >= 1
+          ? 'kuniga ~$n dars (qoida)'
+          : 'haftasiga ~${(x * 7).round()} dars (qoida)';
     }
     final dars = k.darslar.length / kunlar;
     final d = dars >= 1
@@ -1528,7 +1553,10 @@ class _RejaTuzishEkraniState extends State<RejaTuzishEkrani> {
     final variantlar = _muddatlar.where((m) => m <= _birlik).toList();
 
     return Scaffold(
-      appBar: AppBar(title: Text('Reja — ${k.nom}')),
+      appBar: AppBar(
+        actions: const [QiyinGlobalTugma()],
+        title: Text('Reja — ${k.nom}'),
+      ),
       body: _markaz([
         _karta(
           child: Column(
@@ -1599,7 +1627,10 @@ class _RejaTuzishEkraniState extends State<RejaTuzishEkrani> {
                       Expanded(
                         child: Text(
                           '${_kunlikMatn(m)}  ·  ~${_daqiqa(m)} daqiqa',
-                          style: TextStyle(color: AppColors.matn2, fontSize: 13),
+                          style: TextStyle(
+                            color: AppColors.matn2,
+                            fontSize: 13,
+                          ),
                         ),
                       ),
                     ],
@@ -1626,9 +1657,8 @@ class _RejaTuzishEkraniState extends State<RejaTuzishEkrani> {
                 max: _maxKuniga.toDouble(),
                 divisions: max(1, _maxKuniga - 1),
                 label: '$_kuniga $_birlikNomi',
-                onChanged: (v) => setState(
-                  () => _kunlar = (_birlik / v.round()).ceil(),
-                ),
+                onChanged: (v) =>
+                    setState(() => _kunlar = (_birlik / v.round()).ceil()),
               ),
               Text(
                 '${_kunlikMatn(_kunlar)} — ${_oy(_kunlar)}da tugatasiz '
@@ -1646,7 +1676,11 @@ class _RejaTuzishEkraniState extends State<RejaTuzishEkrani> {
             "💡 Minimal planka: eng YOMON kuningizda ham bajara oladigan "
             "hajmni tanlang. Haftada 2 kun ko'p ishlagandan har kuni oz ishlash "
             "kuchliroq — bardavomlik intensivlikdan ustun.",
-            style: TextStyle(color: AppColors.ink, height: 1.45, fontSize: 13.5),
+            style: TextStyle(
+              color: AppColors.ink,
+              height: 1.45,
+              fontSize: 13.5,
+            ),
           ),
         ),
         if (mavjud != null) ...[
@@ -1747,12 +1781,28 @@ class _UsullarQismi extends StatelessWidget {
 
   /// Davronbek Turdievning video darslari (YouTube).
   static const _videolar = <(String, String, String)>[
-    ('Wc7p4NgO_SU', "Xorijiy so'zlarni yodlashning ko'pchilik bilmaydigan usuli", '4 daq'),
+    (
+      'Wc7p4NgO_SU',
+      "Xorijiy so'zlarni yodlashning ko'pchilik bilmaydigan usuli",
+      '4 daq',
+    ),
     ('dR-Q07BhKj8', 'Bir qarashda eslab qolish mumkinmi? 3 prinsip', '12 daq'),
-    ('n1MI3p0KpzY', "Chet tili so'zlarini eslab qolishning 7 qadamli algoritmi", '42 daq'),
+    (
+      'n1MI3p0KpzY',
+      "Chet tili so'zlarini eslab qolishning 7 qadamli algoritmi",
+      '42 daq',
+    ),
     ('fyxL4D1WF9M', "Til o'rganishda orqaga tortayotgan 9 ta xato", '59 daq'),
-    ('ruaSbmL9ErE', 'Xotirani kuchaytirish — 30 daqiqalik amaliy dars', '33 daq'),
-    ('hX_L9p8ZEIg', "1 kunda 1000 ta so'z yodlash rostdan ham mumkinmi?", '9 daq'),
+    (
+      'ruaSbmL9ErE',
+      'Xotirani kuchaytirish — 30 daqiqalik amaliy dars',
+      '33 daq',
+    ),
+    (
+      'hX_L9p8ZEIg',
+      "1 kunda 1000 ta so'z yodlash rostdan ham mumkinmi?",
+      '9 daq',
+    ),
   ];
 
   @override

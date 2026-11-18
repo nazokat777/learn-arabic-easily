@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'qiyin_barcha.dart';
 
 import 'package:flutter/material.dart' hide Text;
 
@@ -254,7 +255,10 @@ class _ImtihonEkraniState extends State<ImtihonEkrani> {
     final zaif = _zaiflar;
     final ulush = jami == 0 ? 0.0 : yod / jami;
     return Scaffold(
-      appBar: AppBar(title: Text('Imtihon — $_nom')),
+      appBar: AppBar(
+        actions: const [QiyinGlobalTugma()],
+        title: Text('Imtihon — $_nom'),
+      ),
       body: Center(
         child: ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 640),

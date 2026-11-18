@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'qiyin_barcha.dart';
 import 'package:flutter/material.dart' hide Text;
 import '../widgets/uz_text.dart';
 import '../main.dart';
@@ -97,7 +98,10 @@ class _WordGameState extends State<WordGame> {
   Widget build(BuildContext context) {
     final built = _picked.map((i) => _tiles[i].letter).join();
     return Scaffold(
-      appBar: AppBar(title: const Text('So\'z yasash o\'yini')),
+      appBar: AppBar(
+        actions: const [QiyinGlobalTugma()],
+        title: const Text('So\'z yasash o\'yini'),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(

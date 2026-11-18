@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart' hide Text;
+import 'qiyin_barcha.dart';
 import '../widgets/uz_text.dart';
 import '../main.dart';
 import '../content.dart';
@@ -13,7 +14,10 @@ class HarakatLesson extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Harakatlar darsi')),
+      appBar: AppBar(
+        actions: const [QiyinGlobalTugma()],
+        title: const Text('Harakatlar darsi'),
+      ),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [

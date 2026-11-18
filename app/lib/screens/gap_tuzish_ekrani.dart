@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart' hide Text;
+import 'qiyin_barcha.dart';
 
 import '../arabic.dart';
 import '../main.dart';
@@ -59,7 +60,10 @@ class _GapTuzishEkraniState extends State<GapTuzishEkrani> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(widget.title)),
+      appBar: AppBar(
+        actions: const [QiyinGlobalTugma()],
+        title: Text(widget.title),
+      ),
       body: Center(
         child: ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 640),
@@ -162,7 +166,6 @@ class _GapTuzishEkraniState extends State<GapTuzishEkrani> {
     ),
   );
 }
-
 
 /// Qiroat darsining O'QISH MATNI jumlalaridan tinglab gap tuzish.
 ///

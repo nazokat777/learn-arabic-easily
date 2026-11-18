@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'qiyin_barcha.dart';
 
 import 'package:flutter/material.dart' hide Text;
 
@@ -105,7 +106,10 @@ class _IlgakMashqiState extends State<IlgakMashqi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(widget.sarlavha)),
+      appBar: AppBar(
+        actions: const [QiyinGlobalTugma()],
+        title: Text(widget.sarlavha),
+      ),
       body: Center(
         child: ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 640),

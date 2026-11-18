@@ -1,4 +1,5 @@
 import '../uz_yozuv.dart';
+import 'qiyin_barcha.dart';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart' hide Text;
@@ -309,6 +310,7 @@ class _SanoqEkraniState extends State<SanoqEkrani> {
         scrolledUnderElevation: 0,
         title: Text('Sanoq bilan yodlash — ${l.num}-dars'),
         actions: [
+          const QiyinGlobalTugma(),
           IconButton(
             key: const ValueKey('sanoq-yordam'),
             tooltip: uz('Bu qanday ishlaydi?'),
@@ -1212,7 +1214,10 @@ class _GapTekshiruviState extends State<_GapTekshiruvi> {
   Widget build(BuildContext context) {
     if (_savollar.isEmpty) {
       return Scaffold(
-        appBar: AppBar(title: Text('Gap tekshiruvi')),
+        appBar: AppBar(
+          actions: const [QiyinGlobalTugma()],
+          title: Text('Gap tekshiruvi'),
+        ),
         body: Center(
           child: Text('Bu darsda tekshiruv uchun gaplar yetarli emas.'),
         ),
@@ -1223,6 +1228,7 @@ class _GapTekshiruviState extends State<_GapTekshiruvi> {
     return Scaffold(
       backgroundColor: AppColors.cream,
       appBar: AppBar(
+        actions: const [QiyinGlobalTugma()],
         title: Text('Gap tekshiruvi ${_i + 1} / ${_savollar.length}'),
       ),
       body: ListView(
@@ -1327,7 +1333,10 @@ class _LugatTesti extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.cream,
-      appBar: AppBar(title: Text('Lug\'at testi — ${lesson.num}-dars')),
+      appBar: AppBar(
+        actions: const [QiyinGlobalTugma()],
+        title: Text('Lug\'at testi — ${lesson.num}-dars'),
+      ),
       body: QuizStage(
         lesson: lesson,
         award: (xp) => progress.addXp(xp),

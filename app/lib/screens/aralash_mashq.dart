@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'qiyin_barcha.dart';
 import 'dart:math';
 
 import 'package:flutter/material.dart' hide Text;
@@ -607,6 +608,7 @@ class _AralashMashqEkraniState extends State<AralashMashqEkrani> {
       appBar: AppBar(
         title: Text(widget.sarlavha),
         actions: [
+          const QiyinGlobalTugma(),
           if (widget.faqat.isEmpty)
             TextButton.icon(
               key: const ValueKey('aralash-qiyin'),

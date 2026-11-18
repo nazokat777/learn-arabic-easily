@@ -514,6 +514,9 @@ class Progress extends ChangeNotifier {
   bool isWordLearned(String key) => (_mastery[key] ?? 0) >= masteryGoal;
 
   /// To'g'ri javobda +1, xatoda -1 (0..masteryGoal orasida). Yangi darajani qaytaradi.
+  /// Qiyin so'z tanlangan barcha darslar.
+  List<String> get tanlanganDarslar => _tanlangan.keys.toList();
+
   List<Map<String, String>> tanlanganlar(String darsId) =>
       List.unmodifiable(_tanlangan[darsId] ?? const []);
 

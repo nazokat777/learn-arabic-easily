@@ -1,4 +1,5 @@
 import 'dart:async';
+import '../screens/qiyin_barcha.dart';
 import 'dart:math';
 
 import 'package:flutter/material.dart' hide Text;
@@ -504,6 +505,7 @@ class _MashqEkranState extends State<MashqEkran> {
         appBar: AppBar(
           title: Text(widget.sarlavha),
           actions: [
+            const QiyinGlobalTugma(),
             Center(
               child: Padding(
                 padding: const EdgeInsets.only(right: 12),
@@ -1564,7 +1566,10 @@ class _Yakun extends StatelessWidget {
                 ),
               // To'liq hisobot: qaysi so'zlar yaxshi yodlandi, qaysilari yo'q.
               if (!tezkor)
-                SozlarNatijaRoyxati(sozlar: s.darsniki, xatolar: s.butunXatolar),
+                SozlarNatijaRoyxati(
+                  sozlar: s.darsniki,
+                  xatolar: s.butunXatolar,
+                ),
               // Shu sessiyada «qiyin» bo'lib qolganlar bo'lsa — ularni
               // darrov alohida mashq qilish imkoni. Aynan qiynalgan paytda
               // taklif qilinsa, o'quvchi uni kechiktirmaydi.

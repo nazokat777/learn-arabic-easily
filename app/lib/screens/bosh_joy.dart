@@ -155,7 +155,7 @@ class _BoshJoyEkraniState extends State<BoshJoyEkrani> {
 
   Future<void> _tanla(int i) async {
     if (_javobBerildi) return;
-    final ok = _variantlar[i] == _joriy.soz;
+    final ok = i >= 0 && _variantlar[i] == _joriy.soz;
     ok ? Haptic.ok() : Haptic.wrong();
     ok ? Tovush.togri(_ketmaKet + 1) : Tovush.xato();
     setState(() {
@@ -301,6 +301,13 @@ class _BoshJoyEkraniState extends State<BoshJoyEkrani> {
                       : (i == _tanlangan ? _Holat.xato : _Holat.xira),
                   onTap: () => _tanla(i),
                 ),
+              ),
+            if (!_javobBerildi)
+              TextButton.icon(
+                key: const ValueKey('bilmayman'),
+                onPressed: () => _tanla(-1),
+                icon: const Icon(Icons.help_outline_rounded),
+                label: Text("Bilmayman — javobni ko'rsat"),
               ),
             if (_javobBerildi) ...[
               const SizedBox(height: 6),

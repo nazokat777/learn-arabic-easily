@@ -157,6 +157,20 @@ class _HarflabYozishEkraniState extends State<HarflabYozishEkrani> {
     }
   }
 
+  /// «Bilmayman» — so'z to'liq ko'rsatiladi va o'qiladi, xato hisoblanadi.
+  void _bilmayman() {
+    if (_tugallandi) return;
+    setState(() {
+      _xato = _xato == 0 ? 1 : _xato;
+      _tanlangan
+        ..clear()
+        ..addAll([
+          for (final h in _asl) _havza.indexWhere((x) => identical(x, h)),
+        ]);
+    });
+    _yakunla();
+  }
+
   Future<void> _yakunla() async {
     setState(() {
       _tugallandi = true;
@@ -351,6 +365,13 @@ class _HarflabYozishEkraniState extends State<HarflabYozishEkrani> {
           textAlign: TextAlign.center,
           style: TextStyle(color: AppColors.matn2, fontSize: 13),
         ),
+        if (!_tugallandi)
+          TextButton.icon(
+            key: const ValueKey('hy-bilmayman'),
+            onPressed: _bilmayman,
+            icon: const Icon(Icons.help_outline_rounded),
+            label: Text("Bilmayman — javobni ko'rsat"),
+          ),
         if (_izoh != null) ...[
           const SizedBox(height: 10),
           Reveal(

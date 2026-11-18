@@ -335,6 +335,13 @@ class _NahvQuizState extends State<NahvQuiz> {
               child: ListView(
                 children: [
                   for (var i = 0; i < q.options.length; i++) _option(q, i),
+                  if (!_answered)
+                    TextButton.icon(
+                      key: const ValueKey('bilmayman'),
+                      onPressed: () => _choose(-1),
+                      icon: const Icon(Icons.help_outline_rounded),
+                      label: Text("Bilmayman — javobni ko'rsat"),
+                    ),
                 ],
               ),
             ),

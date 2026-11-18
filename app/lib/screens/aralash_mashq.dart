@@ -651,7 +651,28 @@ class _AralashMashqEkraniState extends State<AralashMashqEkrani> {
                 padding: const EdgeInsets.fromLTRB(20, 12, 20, 20),
                 child: KeyedSubtree(
                   key: ValueKey(identityHashCode(s)),
-                  child: _tana(s),
+                  child: Column(
+                    children: [
+                      _tana(s),
+                      // «Bilmayman» — har bir savol turida: javob ko'rsatiladi,
+                      // savol xato hisoblanib keyinroq qaytadi.
+                      if (_natija == null && s.tur != AralashTur.yozma)
+                        Padding(
+                          padding: const EdgeInsets.only(top: 14),
+                          child: OutlinedButton.icon(
+                            key: const ValueKey('bilmayman'),
+                            onPressed: () => _yakunla(
+                              false,
+                              ovoz: s.v != null
+                                  ? AralashYasagich.bosh(s.v!)
+                                  : null,
+                            ),
+                            icon: const Icon(Icons.help_outline_rounded),
+                            label: Text("Bilmayman — javobni ko'rsat"),
+                          ),
+                        ),
+                    ],
+                  ),
                 ),
               ),
             ),

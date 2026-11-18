@@ -1260,6 +1260,13 @@ class _GapTekshiruviState extends State<_GapTekshiruvi> {
             _variant(v, s),
             const SizedBox(height: 8),
           ],
+          if (_tanlangan == null)
+            TextButton.icon(
+              key: const ValueKey('bilmayman'),
+              onPressed: () => _tanla(' '),
+              icon: const Icon(Icons.help_outline_rounded),
+              label: Text("Bilmayman — javobni ko'rsat"),
+            ),
           if (_tanlangan != null) ...[
             const SizedBox(height: 8),
             FilledButton(
